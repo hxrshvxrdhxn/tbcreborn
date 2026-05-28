@@ -5,9 +5,22 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Slate — AI Executive Assistant",
   description:
-    "Beyond scheduling. Beyond email. A second intelligence for founders, CEOs and senior partners operating at decision speed.",
+    "Slate is an AI-powered executive assistant for founders and senior leaders. Calendar, email, research, decisions — intelligently managed.",
   alternates: {
     canonical: "/services/slate",
+  },
+  openGraph: {
+    title: "Slate — AI Executive Assistant",
+    description:
+      "Slate is an AI-powered executive assistant for founders and senior leaders. Calendar, email, research, decisions — intelligently managed.",
+    url: "https://turbobytesconsulting.com/services/slate",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Slate — AI Executive Assistant",
+    description:
+      "Slate is an AI-powered executive assistant for founders and senior leaders. Calendar, email, research, decisions — intelligently managed.",
   },
 };
 

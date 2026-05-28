@@ -9,7 +9,9 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   company: z.string().min(1, "Company name is required"),
   email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(),
   service: z.string().min(1, "Please select a service of interest"),
+  budget: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -17,11 +19,18 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const services = [
   "Social Media Management",
-  "Website Development",
+  "Web & App Development",
   "Custom LLM & AI",
   "Slate Executive Assistant",
-  "AI Capability Building",
-  "General Enquiry",
+  "AI Training",
+  "Other",
+];
+
+const budgetOptions = [
+  "Under ₹50,000",
+  "₹50,000–₹2,00,000",
+  "₹2,00,000–₹5,00,000",
+  "Above ₹5,00,000",
 ];
 
 export default function ContactClient() {
@@ -180,7 +189,7 @@ export default function ContactClient() {
                     Message sent.
                   </h3>
                   <p className="font-sans text-[15px] text-mid-grey mb-6">
-                    Thank you. We will respond within one business day.
+                    Thank you. We will be in touch within one business day.
                   </p>
                   <button
                     onClick={() => setFormState("idle")}
@@ -255,6 +264,21 @@ export default function ContactClient() {
                     )}
                   </div>
 
+                  {/* Phone (optional) */}
+                  <div>
+                    <label htmlFor="phone" className={labelBase}>
+                      Phone <span className="text-mid-grey font-normal">(optional)</span>
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      autoComplete="tel"
+                      placeholder="+91 98765 43210"
+                      {...register("phone")}
+                      className={inputBase}
+                    />
+                  </div>
+
                   {/* Service of Interest */}
                   <div>
                     <label htmlFor="service" className={labelBase}>
@@ -280,6 +304,24 @@ export default function ContactClient() {
                         {errors.service.message}
                       </p>
                     )}
+                  </div>
+
+                  {/* Budget (optional) */}
+                  <div>
+                    <label htmlFor="budget" className={labelBase}>
+                      Budget Range <span className="text-mid-grey font-normal">(optional)</span>
+                    </label>
+                    <select
+                      id="budget"
+                      {...register("budget")}
+                      className={inputBase}
+                      defaultValue=""
+                    >
+                      <option value="">Select a range</option>
+                      {budgetOptions.map((b) => (
+                        <option key={b} value={b}>{b}</option>
+                      ))}
+                    </select>
                   </div>
 
                   {/* Message */}

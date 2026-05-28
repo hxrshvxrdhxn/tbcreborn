@@ -2,11 +2,25 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Turbo Bytes Consulting",
+  title: "About Turbo Bytes Consulting | AI-Native Consultancy",
   description:
-    "TBC is an AI-native management and technology consultancy. We sit at the intersection of strategic consulting and AI implementation.",
+    "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
   alternates: {
     canonical: "/about",
+  },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "About Turbo Bytes Consulting | AI-Native Consultancy",
+    description:
+      "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
+    url: "https://turbobytesconsulting.com/about",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "About Turbo Bytes Consulting | AI-Native Consultancy",
+    description:
+      "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
   },
 };
 

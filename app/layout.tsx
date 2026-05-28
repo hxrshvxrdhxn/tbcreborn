@@ -5,6 +5,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,66 +22,61 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-XXXXXXXXXX";
-
 export const metadata: Metadata = {
   title: {
-    default: "Turbo Bytes Consulting · Intelligence. Precision. Growth.",
-    template: "%s · Turbo Bytes Consulting",
+    default: "AI Consulting & Strategy | Turbo Bytes Consulting",
+    template: "%s | Turbo Bytes Consulting",
   },
   description:
-    "An AI-native management and technology consultancy. We integrate AI into marketing, operations, and internal systems — completely, not partially.",
+    "Turbo Bytes Consulting is an AI-native management and technology consultancy. We integrate AI into your marketing, operations, and systems — completely.",
   metadataBase: new URL("https://turbobytesconsulting.com"),
   openGraph: {
     type: "website",
     siteName: "Turbo Bytes Consulting",
     locale: "en_IN",
-    url: "https://turbobytesconsulting.com",
-    title: "Turbo Bytes Consulting · Intelligence. Precision. Growth.",
-    description:
-      "An AI-native management and technology consultancy. We integrate AI into marketing, operations, and internal systems — completely, not partially.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@social_TBC",
     creator: "@social_TBC",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
-      <head>
-        {GA_ID !== "G-XXXXXXXXXX" && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}');
-              `}
-            </Script>
-          </>
-        )}
-      </head>
       <body className="bg-ivory text-ink antialiased">
         <Navigation />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <Analytics />
+        <SpeedInsights />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1H5E3Y9YRF"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">{`
+          window.dataLayer=window.dataLayer||[];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js',new Date());
+          gtag('config','G-1H5E3Y9YRF');
+        `}</Script>
+
+        {/* Microsoft Clarity */}
+        <Script id="clarity" strategy="afterInteractive">{`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window,document,"clarity","script","wy3ihoq9t1");
+        `}</Script>
       </body>
     </html>
   );

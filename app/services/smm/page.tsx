@@ -2,10 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Social Media Management",
+  title: "AI Social Media Management",
   description:
-    "Precision-engineered content. Platform-native strategy. AI-driven execution. Full annual content calendars across every platform.",
+    "Full-service social media management powered by AI. Annual content calendars, platform management, video and image creation. TBC.",
   alternates: { canonical: "/services/smm" },
+  openGraph: {
+    title: "AI Social Media Management",
+    description:
+      "Full-service social media management powered by AI. Annual content calendars, platform management, video and image creation. TBC.",
+    url: "https://turbobytesconsulting.com/services/smm",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "AI Social Media Management",
+    description:
+      "Full-service social media management powered by AI. Annual content calendars, platform management, video and image creation. TBC.",
+  },
 };
 
 const serviceSchema = {

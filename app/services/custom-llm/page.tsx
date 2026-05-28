@@ -2,10 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Custom LLM & On-Premise AI Deployment",
+  title: "Custom LLM Training & On-Premise AI Deployment",
   description:
-    "Your organisation's intelligence layer. Trained on your knowledge. Running on your infrastructure. Data never leaves your controlled environment.",
+    "Train a custom Large Language Model on your company data. Deployed on your infrastructure. Your data never leaves. Turbo Bytes Consulting.",
   alternates: { canonical: "/services/custom-llm" },
+  openGraph: {
+    title: "Custom LLM Training & On-Premise AI Deployment",
+    description:
+      "Train a custom Large Language Model on your company data. Deployed on your infrastructure. Your data never leaves. Turbo Bytes Consulting.",
+    url: "https://turbobytesconsulting.com/services/custom-llm",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Custom LLM Training & On-Premise AI Deployment",
+    description:
+      "Train a custom Large Language Model on your company data. Deployed on your infrastructure. Your data never leaves. Turbo Bytes Consulting.",
+  },
 };
 
 const serviceSchema = {

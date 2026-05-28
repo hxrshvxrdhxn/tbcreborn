@@ -6,7 +6,9 @@ const schema = z.object({
   name: z.string().min(2),
   company: z.string().min(1),
   email: z.string().email(),
+  phone: z.string().optional(),
   service: z.string().min(1),
+  budget: z.string().optional(),
   message: z.string().min(10),
 });
 
@@ -34,7 +36,9 @@ export async function POST(req: NextRequest) {
         <p><strong>Name:</strong> ${data.name}</p>
         <p><strong>Company:</strong> ${data.company}</p>
         <p><strong>Email:</strong> ${data.email}</p>
+        ${data.phone ? `<p><strong>Phone:</strong> ${data.phone}</p>` : ""}
         <p><strong>Service of Interest:</strong> ${data.service}</p>
+        ${data.budget ? `<p><strong>Budget Range:</strong> ${data.budget}</p>` : ""}
         <p><strong>Message:</strong></p>
         <p>${data.message.replace(/\n/g, "<br>")}</p>
       `,

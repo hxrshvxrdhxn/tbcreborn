@@ -2,11 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Capability Building & Automation",
+  title: "AI Training & Automation Workshops",
   description:
-    "Structured AI training programmes designed around your organisation's tools and workflows. Every programme concludes with an AI Action Plan.",
+    "Hands-on AI training and automation workshops for business teams. Custom programmes, action plans, and measurable outcomes. Turbo Bytes Consulting.",
   alternates: {
     canonical: "/services/ai-training",
+  },
+  openGraph: {
+    title: "AI Training & Automation Workshops",
+    description:
+      "Hands-on AI training and automation workshops for business teams. Custom programmes, action plans, and measurable outcomes. Turbo Bytes Consulting.",
+    url: "https://turbobytesconsulting.com/services/ai-training",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "AI Training & Automation Workshops",
+    description:
+      "Hands-on AI training and automation workshops for business teams. Custom programmes, action plans, and measurable outcomes. Turbo Bytes Consulting.",
   },
 };
 

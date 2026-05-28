@@ -2,10 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Website & Application Development",
+  title: "Website & Web Application Development",
   description:
-    "Architecturally sound. Conversion-optimised. Built to perform. Custom business websites, e-commerce, web applications, and post-launch support.",
+    "Custom websites and web applications built for performance and conversion. Next.js, mobile-first, SEO-optimised. Turbo Bytes Consulting.",
   alternates: { canonical: "/services/web-development" },
+  openGraph: {
+    title: "Website & Web Application Development",
+    description:
+      "Custom websites and web applications built for performance and conversion. Next.js, mobile-first, SEO-optimised. Turbo Bytes Consulting.",
+    url: "https://turbobytesconsulting.com/services/web-development",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Website & Web Application Development",
+    description:
+      "Custom websites and web applications built for performance and conversion. Next.js, mobile-first, SEO-optimised. Turbo Bytes Consulting.",
+  },
 };
 
 const serviceSchema = {

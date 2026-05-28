@@ -2,10 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services — Five Practice Areas",
+  title: "Our Services | AI Strategy, Web Development & More",
   description:
-    "Five integrated AI consultancy practices. Social Media, Web Development, Custom LLM, Slate AI Assistant, and AI Capability Building.",
+    "Five AI-powered practice areas: social media management, web development, custom LLM deployment, Slate AI assistant, and AI training. Turbo Bytes Consulting.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Our Services | AI Strategy, Web Development & More",
+    description:
+      "Five AI-powered practice areas: social media management, web development, custom LLM deployment, Slate AI assistant, and AI training. Turbo Bytes Consulting.",
+    url: "https://turbobytesconsulting.com/services",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Our Services | AI Strategy, Web Development & More",
+    description:
+      "Five AI-powered practice areas: social media management, web development, custom LLM deployment, Slate AI assistant, and AI training. Turbo Bytes Consulting.",
+  },
 };
 
 const practices = [

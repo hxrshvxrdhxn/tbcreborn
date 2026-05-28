@@ -3,10 +3,23 @@ import Link from "next/link";
 import { blogPosts } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Insight — AI Strategy, Thinking, Perspective",
+  title: "Insight & Thinking | Turbo Bytes Consulting Blog",
   description:
-    "TBC's thinking on AI, business strategy, and what comes next. Intelligence, framework, and perspective articles.",
+    "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
   alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Insight & Thinking | Turbo Bytes Consulting Blog",
+    description:
+      "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
+    url: "https://turbobytesconsulting.com/blog",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Insight & Thinking | Turbo Bytes Consulting Blog",
+    description:
+      "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
+  },
 };
 
 export default function BlogPage() {

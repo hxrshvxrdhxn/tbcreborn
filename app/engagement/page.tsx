@@ -4,9 +4,22 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Engagement Model & Pricing",
   description:
-    "TBC engagements are structured around client outcomes, not hours billed. Three consulting tiers.",
+    "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
   alternates: {
     canonical: "/engagement",
+  },
+  openGraph: {
+    title: "Engagement Model & Pricing",
+    description:
+      "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
+    url: "https://turbobytesconsulting.com/engagement",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Engagement Model & Pricing",
+    description:
+      "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
   },
 };
 

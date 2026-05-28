@@ -2,10 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Turbo Bytes Consulting · Intelligence. Precision. Growth.",
+  title: "AI Consulting & Strategy | Turbo Bytes Consulting",
   description:
-    "An AI-native management and technology consultancy. We integrate AI into marketing, operations, and internal systems — completely, not partially.",
+    "Turbo Bytes Consulting is an AI-native management and technology consultancy. We integrate AI into your marketing, operations, and systems — completely.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "AI Consulting & Strategy | Turbo Bytes Consulting",
+    description:
+      "Turbo Bytes Consulting is an AI-native management and technology consultancy. We integrate AI into your marketing, operations, and systems — completely.",
+    url: "https://turbobytesconsulting.com",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "AI Consulting & Strategy | Turbo Bytes Consulting",
+    description:
+      "Turbo Bytes Consulting is an AI-native management and technology consultancy.",
+  },
 };
 
 const localBusinessSchema = {
