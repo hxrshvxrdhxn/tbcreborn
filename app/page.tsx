@@ -1,101 +1,405 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Turbo Bytes Consulting · Intelligence. Precision. Growth.",
+  description:
+    "An AI-native management and technology consultancy. We integrate AI into marketing, operations, and internal systems — completely, not partially.",
+  alternates: { canonical: "/" },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Turbo Bytes Consulting",
+  alternateName: "TBC",
+  description: "AI-Native Management & Technology Consultancy",
+  url: "https://turbobytesconsulting.com",
+  telephone: "+91-93547-84377",
+  email: "info@turbobytesconsulting.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
+    addressLocality: "Greater Noida",
+    addressRegion: "Uttar Pradesh",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://instagram.com/turbobytesconsulting",
+    "https://x.com/social_TBC",
+  ],
+};
+
+const services = [
+  {
+    number: "01",
+    name: "Social Media Management",
+    description:
+      "Precision-engineered content. Platform-native strategy. AI-driven execution.",
+    href: "/services/smm",
+  },
+  {
+    number: "02",
+    name: "Website & Application Development",
+    description:
+      "Architecturally sound. Conversion-optimised. Built to perform.",
+    href: "/services/web-development",
+  },
+  {
+    number: "03",
+    name: "Custom LLM & On-Premise AI",
+    description:
+      "Your organisation's intelligence layer. Trained on your knowledge.",
+    href: "/services/custom-llm",
+  },
+  {
+    number: "04",
+    name: "Slate AI Executive Assistant",
+    description:
+      "Beyond scheduling. Beyond email. A second intelligence for leaders.",
+    href: "/services/slate",
+  },
+  {
+    number: "05",
+    name: "AI Capability Building",
+    description:
+      "Organisations that understand AI use it better. We build that understanding.",
+    href: "/services/ai-training",
+  },
+];
+
+const whyTbc = [
+  {
+    title: "AI-Native",
+    body: "We do not add AI on top of traditional consulting. AI is how we operate — in every workflow, every engagement, every output.",
+  },
+  {
+    title: "Complete Delivery",
+    body: "We design strategy and we build systems. Clients do not manage handoffs between an advisor and an agency. We do both.",
+  },
+  {
+    title: "Measurable Outcomes",
+    body: "Every engagement begins with a defined outcome. Our work is assessed against it. We do not invoice for activity — we invoice for results.",
+  },
+];
+
+const processSteps = [
+  {
+    number: "01",
+    name: "Discovery",
+    description:
+      "A focused conversation about your organisation, your challenges, and where AI can have the highest impact. No jargon. No sales process.",
+  },
+  {
+    number: "02",
+    name: "Proposal",
+    description:
+      "A precise written proposal delivered within 48 hours. Scope, methodology, timeline, and investment — all defined.",
+  },
+  {
+    number: "03",
+    name: "Engagement",
+    description:
+      "Work begins. Integrated with your team, your systems, and your pace. Regular structured updates.",
+  },
+  {
+    number: "04",
+    name: "Delivery",
+    description:
+      "The outcome we defined at the outset is achieved. Documented, measured, and handed over completely.",
+  },
+  {
+    number: "05",
+    name: "Partnership",
+    description:
+      "Many clients continue with an ongoing advisory retainer. We are designed to be a long-term intelligence partner.",
+  },
+];
+
+const insightPosts = [
+  {
+    category: "AI Strategy",
+    title: "The intelligence layer your competitors haven't found yet.",
+    date: "May 2026",
+    readTime: "6 min read",
+  },
+  {
+    category: "Framework",
+    title: "A 90-day diagnostic to find every AI lever inside a 50-person firm.",
+    date: "May 2026",
+    readTime: "9 min read",
+  },
+  {
+    category: "Perspective",
+    title:
+      "Why on-premise LLMs are about to become standard for professional services.",
+    date: "April 2026",
+    readTime: "7 min read",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* ── 1. HERO ── */}
+      <section className="bg-ink hero-grid relative overflow-hidden">
+        <div className="container-tbc py-28 md:py-36 lg:py-40">
+          <span className="eyebrow text-gold">TURBO BYTES CONSULTING</span>
+          <hr className="gold-rule mb-8" />
+          <h1 className="font-display font-bold text-white text-[clamp(36px,5vw,52px)] leading-[1.1] tracking-[-0.5px] max-w-3xl mb-6">
+            The intelligence layer your business has been missing.
+          </h1>
+          <p className="font-sans text-[18px] text-mid-grey leading-relaxed max-w-2xl mb-10">
+            Turbo Bytes Consulting is an AI-native consultancy. We integrate
+            artificial intelligence into your marketing, operations, and internal
+            systems — completely, not partially.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link href="/book-consultation" className="btn-primary">
+              Request a Consultation
+            </Link>
+            <Link href="/services" className="btn-ghost-gold">
+              Explore Our Services
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* ── 2. TRUST BAR ── */}
+      <section className="bg-ivory border-t border-b border-light-grey">
+        <div className="container-tbc py-4">
+          <ul className="flex flex-wrap items-center justify-center gap-x-0 gap-y-2 sm:gap-y-0">
+            {[
+              "MSME Registered",
+              "AI-Native",
+              "5 Practice Areas",
+              "Greater Noida, India",
+            ].map((item, i, arr) => (
+              <li key={item} className="flex items-center">
+                <span className="font-display font-semibold text-[13px] tracking-[1px] text-ink uppercase">
+                  {item}
+                </span>
+                {i < arr.length - 1 && (
+                  <span
+                    className="mx-4 text-gold font-bold text-lg leading-none select-none"
+                    aria-hidden="true"
+                  >
+                    ·
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── 3. WHO WE ARE ── */}
+      <section className="bg-ivory py-20">
+        <div className="container-tbc">
+          <span className="eyebrow">WHO WE ARE</span>
+          <hr className="gold-rule mb-6" />
+          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-3xl mb-6">
+            Not an agency. Not a software house. A consultancy built for the AI
+            era.
+          </h2>
+          <p className="font-sans text-[17px] text-mid-grey leading-relaxed max-w-2xl mb-14">
+            Turbo Bytes Consulting sits at the intersection of strategic
+            management consulting and artificial intelligence. We design the
+            strategy. We build the technology. We deploy it. We measure it. Our
+            clients do not receive a strategy deck and a goodbye — they receive
+            a working, measurable competitive advantage.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 lg:gap-16">
+            {[
+              {
+                label: "We Design",
+                body: "Strategy, decision frameworks, AI operating models.",
+              },
+              {
+                label: "We Build",
+                body: "Custom LLMs, applications, internal tools, content engines.",
+              },
+              {
+                label: "We Deploy",
+                body: "Inside your team. Your systems. Your pace. We stay.",
+              },
+            ].map((pillar) => (
+              <article key={pillar.label}>
+                <hr className="gold-rule mb-4" style={{ width: "32px" }} />
+                <h4 className="font-display font-bold text-[18px] text-ink mb-2">
+                  {pillar.label}
+                </h4>
+                <p className="font-sans text-[15px] text-mid-grey leading-relaxed">
+                  {pillar.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. SERVICES ── */}
+      <section className="bg-white py-20">
+        <div className="container-tbc">
+          <span className="eyebrow">WHAT WE DO</span>
+          <hr className="gold-rule mb-6" />
+          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-12">
+            Five practice areas. One integrated capability.
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((s) => (
+              <article
+                key={s.number}
+                className="bg-ivory rounded-[8px] border border-light-grey shadow-card hover:shadow-card-hover transition-shadow duration-200 ease-tbc p-7 flex flex-col"
+              >
+                <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-4">
+                  {s.number}
+                </span>
+                <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-3">
+                  {s.name}
+                </h3>
+                <p className="font-sans text-[15px] text-mid-grey leading-relaxed mb-6 flex-1">
+                  {s.description}
+                </p>
+                <Link
+                  href={s.href}
+                  className="font-display font-semibold text-[14px] text-royal hover:text-royal-mid transition-colors duration-150"
+                >
+                  Learn More →
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. WHY TBC ── */}
+      <section className="bg-ink py-20">
+        <div className="container-tbc">
+          <span className="eyebrow text-gold">WHY TBC</span>
+          <hr className="gold-rule mb-6" />
+          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-12">
+            The rigour of a consultancy. The speed of a technology firm.
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {whyTbc.map((card) => (
+              <article
+                key={card.title}
+                className="border-t-2 border-gold pt-6"
+              >
+                <h3 className="font-display font-bold text-[20px] text-white mb-3">
+                  {card.title}
+                </h3>
+                <p className="font-sans text-[15px] text-white/70 leading-relaxed">
+                  {card.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. PROCESS ── */}
+      <section className="bg-ivory py-20">
+        <div className="container-tbc">
+          <span className="eyebrow">OUR PROCESS</span>
+          <hr className="gold-rule mb-6" />
+          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-14">
+            A process designed for outcomes, not deliverables.
+          </h2>
+
+          <ol className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 lg:gap-8">
+            {processSteps.map((step, idx) => (
+              <li key={step.number} className="relative flex md:flex-col gap-5 md:gap-4">
+                {/* connector line (desktop) */}
+                {idx < processSteps.length - 1 && (
+                  <span
+                    className="hidden md:block absolute top-5 left-[calc(50%+20px)] right-[-50%] h-px bg-light-grey"
+                    aria-hidden="true"
+                  />
+                )}
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-gold flex items-center justify-center font-display font-bold text-[13px] text-ink">
+                  {step.number}
+                </span>
+                <div>
+                  <h3 className="font-display font-bold text-[17px] text-ink mb-2">
+                    {step.name}
+                  </h3>
+                  <p className="font-sans text-[14px] text-mid-grey leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ── 7. INSIGHT ── */}
+      <section className="bg-white py-20">
+        <div className="container-tbc">
+          <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
+            <div>
+              <span className="eyebrow">INSIGHT</span>
+              <hr className="gold-rule mb-4" />
+              <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-xl">
+                Thinking on AI, strategy, and what comes next.
+              </h2>
+            </div>
+            <Link
+              href="/blog"
+              className="font-display font-semibold text-[14px] text-royal hover:text-royal-mid transition-colors duration-150"
+            >
+              View all writing →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {insightPosts.map((post) => (
+              <article
+                key={post.title}
+                className="bg-ivory rounded-[8px] border border-light-grey p-7 flex flex-col"
+              >
+                <span className="font-display font-semibold text-[12px] text-royal uppercase tracking-[1.5px] mb-4">
+                  {post.category}
+                </span>
+                <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-auto">
+                  {post.title}
+                </h3>
+                <p className="font-sans text-[13px] text-mid-grey mt-6">
+                  {post.date} · {post.readTime}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. CTA BAND ── */}
+      <section className="bg-royal py-16 text-center">
+        <div className="container-tbc">
+          <hr className="gold-rule gold-rule--center mb-8" />
+          <h2 className="font-display font-bold text-[clamp(24px,3vw,36px)] text-white leading-[1.2] mb-4">
+            Ready to make AI work for your business?
+          </h2>
+          <p className="font-sans text-[17px] text-white/80 mb-10">
+            Request a consultation. We will respond within one business day.
+          </p>
+          <Link href="/book-consultation" className="btn-gold">
+            Request a Consultation
+          </Link>
+          <hr className="gold-rule gold-rule--center mt-10" />
+        </div>
+      </section>
+    </>
   );
 }
