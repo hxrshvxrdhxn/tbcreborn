@@ -48,10 +48,17 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
+    <html lang="en-IN" className={`${inter.variable} ${dmSans.variable}`}>
       <body className="bg-ivory text-ink antialiased">
+        {/* Skip-to-content — visible only on keyboard focus */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-gold focus:text-ink focus:font-display focus:font-semibold focus:text-sm focus:rounded focus:shadow-card"
+        >
+          Skip to main content
+        </a>
         <Navigation />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <WhatsAppButton />
         <Analytics />

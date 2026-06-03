@@ -214,6 +214,8 @@ export default function ContactClient() {
                       type="text"
                       autoComplete="name"
                       placeholder="Your full name"
+                      aria-required="true"
+                      aria-invalid={!!errors.name}
                       {...register("name")}
                       className={`${inputBase} ${errors.name ? inputError : ""}`}
                     />
@@ -234,6 +236,8 @@ export default function ContactClient() {
                       type="text"
                       autoComplete="organization"
                       placeholder="Your organisation"
+                      aria-required="true"
+                      aria-invalid={!!errors.company}
                       {...register("company")}
                       className={`${inputBase} ${errors.company ? inputError : ""}`}
                     />
@@ -254,6 +258,8 @@ export default function ContactClient() {
                       type="email"
                       autoComplete="email"
                       placeholder="you@company.com"
+                      aria-required="true"
+                      aria-invalid={!!errors.email}
                       {...register("email")}
                       className={`${inputBase} ${errors.email ? inputError : ""}`}
                     />
@@ -286,6 +292,8 @@ export default function ContactClient() {
                     </label>
                     <select
                       id="service"
+                      aria-required="true"
+                      aria-invalid={!!errors.service}
                       {...register("service")}
                       className={`${inputBase} ${errors.service ? inputError : ""}`}
                       defaultValue=""
@@ -333,6 +341,8 @@ export default function ContactClient() {
                       id="message"
                       rows={5}
                       placeholder="Tell us about your organisation, your challenges, and what you are hoping to achieve."
+                      aria-required="true"
+                      aria-invalid={!!errors.message}
                       {...register("message")}
                       className={`${inputBase} resize-none ${errors.message ? inputError : ""}`}
                     />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "AI Consulting & Strategy | Turbo Bytes Consulting",
@@ -163,17 +164,17 @@ export default function HomePage() {
       {/* ── 1. HERO ── */}
       <section className="bg-ink hero-grid relative overflow-hidden">
         <div className="container-tbc py-28 md:py-36 lg:py-40">
-          <span className="eyebrow text-gold">TURBO BYTES CONSULTING</span>
-          <hr className="gold-rule mb-8" />
-          <h1 className="font-display font-bold text-white text-[clamp(36px,5vw,52px)] leading-[1.1] tracking-[-0.5px] max-w-3xl mb-6">
+          <span className="eyebrow text-gold hero-1">TURBO BYTES CONSULTING</span>
+          <hr className="gold-rule mb-8 hero-1" />
+          <h1 className="font-display font-bold text-white text-[clamp(36px,5vw,52px)] leading-[1.1] tracking-[-0.5px] max-w-3xl mb-6 hero-2">
             The intelligence layer your business has been missing.
           </h1>
-          <p className="font-sans text-[18px] text-mid-grey leading-relaxed max-w-2xl mb-10">
+          <p className="font-sans text-[18px] text-mid-grey leading-relaxed max-w-2xl mb-10 hero-3">
             Turbo Bytes Consulting is an AI-native consultancy. We integrate
             artificial intelligence into your marketing, operations, and internal
             systems — completely, not partially.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 hero-4">
             <Link href="/book-consultation" className="btn-primary">
               Request a Consultation
             </Link>
@@ -215,19 +216,21 @@ export default function HomePage() {
       {/* ── 3. WHO WE ARE ── */}
       <section className="bg-ivory py-20">
         <div className="container-tbc">
-          <span className="eyebrow">WHO WE ARE</span>
-          <hr className="gold-rule mb-6" />
-          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-3xl mb-6">
-            Not an agency. Not a software house. A consultancy built for the AI
-            era.
-          </h2>
-          <p className="font-sans text-[17px] text-mid-grey leading-relaxed max-w-2xl mb-14">
-            Turbo Bytes Consulting sits at the intersection of strategic
-            management consulting and artificial intelligence. We design the
-            strategy. We build the technology. We deploy it. We measure it. Our
-            clients do not receive a strategy deck and a goodbye — they receive
-            a working, measurable competitive advantage.
-          </p>
+          <Reveal>
+            <span className="eyebrow">WHO WE ARE</span>
+            <hr className="gold-rule mb-6" />
+            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-3xl mb-6">
+              Not an agency. Not a software house. A consultancy built for the AI
+              era.
+            </h2>
+            <p className="font-sans text-[17px] text-mid-grey leading-relaxed max-w-2xl mb-14">
+              Turbo Bytes Consulting sits at the intersection of strategic
+              management consulting and artificial intelligence. We design the
+              strategy. We build the technology. We deploy it. We measure it. Our
+              clients do not receive a strategy deck and a goodbye — they receive
+              a working, measurable competitive advantage.
+            </p>
+          </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 lg:gap-16">
             {[
@@ -243,16 +246,18 @@ export default function HomePage() {
                 label: "We Deploy",
                 body: "Inside your team. Your systems. Your pace. We stay.",
               },
-            ].map((pillar) => (
-              <article key={pillar.label}>
-                <hr className="gold-rule mb-4" style={{ width: "32px" }} />
-                <h4 className="font-display font-bold text-[18px] text-ink mb-2">
-                  {pillar.label}
-                </h4>
-                <p className="font-sans text-[15px] text-mid-grey leading-relaxed">
-                  {pillar.body}
-                </p>
-              </article>
+            ].map((pillar, i) => (
+              <Reveal key={pillar.label} delay={i * 80}>
+                <article>
+                  <hr className="gold-rule mb-4" style={{ width: "32px" }} />
+                  <h4 className="font-display font-bold text-[18px] text-ink mb-2">
+                    {pillar.label}
+                  </h4>
+                  <p className="font-sans text-[15px] text-mid-grey leading-relaxed">
+                    {pillar.body}
+                  </p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -261,34 +266,36 @@ export default function HomePage() {
       {/* ── 4. SERVICES ── */}
       <section className="bg-white py-20">
         <div className="container-tbc">
-          <span className="eyebrow">WHAT WE DO</span>
-          <hr className="gold-rule mb-6" />
-          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-12">
-            Five practice areas. One integrated capability.
-          </h2>
+          <Reveal>
+            <span className="eyebrow">WHAT WE DO</span>
+            <hr className="gold-rule mb-6" />
+            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-12">
+              Five practice areas. One integrated capability.
+            </h2>
+          </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s) => (
-              <article
-                key={s.number}
-                className="bg-ivory rounded-[8px] border border-light-grey shadow-card hover:shadow-card-hover transition-shadow duration-200 ease-tbc p-7 flex flex-col"
-              >
-                <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-4">
-                  {s.number}
-                </span>
-                <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-3">
-                  {s.name}
-                </h3>
-                <p className="font-sans text-[15px] text-mid-grey leading-relaxed mb-6 flex-1">
-                  {s.description}
-                </p>
-                <Link
-                  href={s.href}
-                  className="font-display font-semibold text-[14px] text-royal hover:text-royal-mid transition-colors duration-150"
-                >
-                  Learn More →
-                </Link>
-              </article>
+            {services.map((s, i) => (
+              <Reveal key={s.number} delay={i * 60} className="flex">
+                <article className="bg-ivory rounded-[8px] border border-light-grey shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc p-7 flex flex-col w-full">
+                  <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-4">
+                    {s.number}
+                  </span>
+                  <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-3">
+                    {s.name}
+                  </h3>
+                  <p className="font-sans text-[15px] text-mid-grey leading-relaxed mb-6 flex-1">
+                    {s.description}
+                  </p>
+                  <Link
+                    href={s.href}
+                    className="group/arrow font-display font-semibold text-[14px] text-royal hover:text-royal-mid transition-colors duration-150 inline-flex items-center gap-1"
+                  >
+                    Learn More
+                    <span className="inline-block transition-transform duration-150 group-hover/arrow:translate-x-1">→</span>
+                  </Link>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -297,25 +304,26 @@ export default function HomePage() {
       {/* ── 5. WHY TBC ── */}
       <section className="bg-ink py-20">
         <div className="container-tbc">
-          <span className="eyebrow text-gold">WHY TBC</span>
-          <hr className="gold-rule mb-6" />
-          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-12">
-            The rigour of a consultancy. The speed of a technology firm.
-          </h2>
+          <Reveal>
+            <span className="eyebrow text-gold">WHY TBC</span>
+            <hr className="gold-rule mb-6" />
+            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-12">
+              The rigour of a consultancy. The speed of a technology firm.
+            </h2>
+          </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {whyTbc.map((card) => (
-              <article
-                key={card.title}
-                className="border-t-2 border-gold pt-6"
-              >
-                <h3 className="font-display font-bold text-[20px] text-white mb-3">
-                  {card.title}
-                </h3>
-                <p className="font-sans text-[15px] text-white/70 leading-relaxed">
-                  {card.body}
-                </p>
-              </article>
+            {whyTbc.map((card, i) => (
+              <Reveal key={card.title} delay={i * 90}>
+                <article className="border-t-2 border-gold pt-6">
+                  <h3 className="font-display font-bold text-[20px] text-white mb-3">
+                    {card.title}
+                  </h3>
+                  <p className="font-sans text-[15px] text-white/70 leading-relaxed">
+                    {card.body}
+                  </p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -324,12 +332,15 @@ export default function HomePage() {
       {/* ── 6. PROCESS ── */}
       <section className="bg-ivory py-20">
         <div className="container-tbc">
-          <span className="eyebrow">OUR PROCESS</span>
-          <hr className="gold-rule mb-6" />
-          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-14">
-            A process designed for outcomes, not deliverables.
-          </h2>
+          <Reveal>
+            <span className="eyebrow">OUR PROCESS</span>
+            <hr className="gold-rule mb-6" />
+            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-14">
+              A process designed for outcomes, not deliverables.
+            </h2>
+          </Reveal>
 
+          <Reveal>
           <ol className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 lg:gap-8">
             {processSteps.map((step, idx) => (
               <li key={step.number} className="relative flex md:flex-col gap-5 md:gap-4">
@@ -354,44 +365,47 @@ export default function HomePage() {
               </li>
             ))}
           </ol>
+          </Reveal>
         </div>
       </section>
 
       {/* ── 7. INSIGHT ── */}
       <section className="bg-white py-20">
         <div className="container-tbc">
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
-            <div>
-              <span className="eyebrow">INSIGHT</span>
-              <hr className="gold-rule mb-4" />
-              <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-xl">
-                Thinking on AI, strategy, and what comes next.
-              </h2>
+          <Reveal>
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
+              <div>
+                <span className="eyebrow">INSIGHT</span>
+                <hr className="gold-rule mb-4" />
+                <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-xl">
+                  Thinking on AI, strategy, and what comes next.
+                </h2>
+              </div>
+              <Link
+                href="/blog"
+                className="group/arrow font-display font-semibold text-[14px] text-royal hover:text-royal-mid transition-colors duration-150 inline-flex items-center gap-1"
+              >
+                View all writing
+                <span className="inline-block transition-transform duration-150 group-hover/arrow:translate-x-1">→</span>
+              </Link>
             </div>
-            <Link
-              href="/blog"
-              className="font-display font-semibold text-[14px] text-royal hover:text-royal-mid transition-colors duration-150"
-            >
-              View all writing →
-            </Link>
-          </div>
+          </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {insightPosts.map((post) => (
-              <article
-                key={post.title}
-                className="bg-ivory rounded-[8px] border border-light-grey p-7 flex flex-col"
-              >
-                <span className="font-display font-semibold text-[12px] text-royal uppercase tracking-[1.5px] mb-4">
-                  {post.category}
-                </span>
-                <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-auto">
-                  {post.title}
-                </h3>
-                <p className="font-sans text-[13px] text-mid-grey mt-6">
-                  {post.date} · {post.readTime}
-                </p>
-              </article>
+            {insightPosts.map((post, i) => (
+              <Reveal key={post.title} delay={i * 70} className="flex">
+                <article className="bg-ivory rounded-[8px] border border-light-grey hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc p-7 flex flex-col w-full">
+                  <span className="font-display font-semibold text-[12px] text-royal uppercase tracking-[1.5px] mb-4">
+                    {post.category}
+                  </span>
+                  <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-auto">
+                    {post.title}
+                  </h3>
+                  <p className="font-sans text-[13px] text-mid-grey mt-6">
+                    {post.date} · {post.readTime}
+                  </p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -400,17 +414,19 @@ export default function HomePage() {
       {/* ── 8. CTA BAND ── */}
       <section className="bg-royal py-16 text-center">
         <div className="container-tbc">
-          <hr className="gold-rule gold-rule--center mb-8" />
-          <h2 className="font-display font-bold text-[clamp(24px,3vw,36px)] text-white leading-[1.2] mb-4">
-            Ready to make AI work for your business?
-          </h2>
-          <p className="font-sans text-[17px] text-white/80 mb-10">
-            Request a consultation. We will respond within one business day.
-          </p>
-          <Link href="/book-consultation" className="btn-gold">
-            Request a Consultation
-          </Link>
-          <hr className="gold-rule gold-rule--center mt-10" />
+          <Reveal>
+            <hr className="gold-rule gold-rule--center mb-8" />
+            <h2 className="font-display font-bold text-[clamp(24px,3vw,36px)] text-white leading-[1.2] mb-4">
+              Ready to make AI work for your business?
+            </h2>
+            <p className="font-sans text-[17px] text-white/80 mb-10">
+              Request a consultation. We will respond within one business day.
+            </p>
+            <Link href="/book-consultation" className="btn-gold">
+              Request a Consultation
+            </Link>
+            <hr className="gold-rule gold-rule--center mt-10" />
+          </Reveal>
         </div>
       </section>
     </>

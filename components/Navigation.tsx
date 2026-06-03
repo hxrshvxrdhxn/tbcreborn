@@ -84,7 +84,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-ink border-t border-white/10">
+        <div className="lg:hidden bg-ink border-t border-white/10 menu-enter">
           <div className="container-tbc py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
