@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "@/lib/content";
+import { getAllPosts } from "@/lib/posts";
+
+export const revalidate = 3600; // ISR — re-check for new posts every hour
 
 export const metadata: Metadata = {
   title: "Insight & Thinking | Turbo Bytes Consulting Blog",
@@ -22,7 +24,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllPosts();
+
   return (
     <>
       {/* ── HERO ── */}
@@ -43,10 +47,10 @@ export default function BlogPage() {
       <section className="bg-ivory py-20">
         <div className="container-tbc">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((post) => (
+            {posts.map((post) => (
               <article
                 key={post.slug}
-                className="bg-white border border-light-grey rounded-[8px] shadow-card hover:shadow-card-hover transition-shadow duration-200 ease-tbc flex flex-col"
+                className="bg-white border border-light-grey rounded-[8px] shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc flex flex-col"
               >
                 <Link
                   href={`/blog/${post.slug}`}
@@ -55,9 +59,9 @@ export default function BlogPage() {
                   <span className="font-display font-bold text-[12px] text-royal uppercase tracking-[1.5px] mb-4">
                     {post.category}
                   </span>
-                  <h3 className="font-display font-bold text-[19px] text-ink leading-snug mb-3 group-hover:text-royal transition-colors duration-150">
+                  <h2 className="font-display font-bold text-[19px] text-ink leading-snug mb-3 group-hover:text-royal transition-colors duration-150">
                     {post.title}
-                  </h3>
+                  </h2>
                   <p className="font-sans text-[15px] text-mid-grey leading-relaxed mb-auto">
                     {post.excerpt}
                   </p>

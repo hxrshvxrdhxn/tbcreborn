@@ -1,50 +1,56 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts } from "@/lib/content";
+import { getAllPosts, getPostBySlug } from "@/lib/posts";
+
+export const revalidate = 3600;
 
 interface Props {
   params: { slug: string };
 }
 
-export function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = await getPostBySlug(params.slug);
   if (!post) return {};
   return {
     title: post.title,
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://turbobytesconsulting.com/blog/${post.slug}`,
+      images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: Props) {
+  const post = await getPostBySlug(params.slug);
   if (!post) notFound();
 
   return (
     <>
       {/* ── BREADCRUMB ── */}
-      <nav
-        aria-label="Breadcrumb"
-        className="bg-ivory border-b border-light-grey"
-      >
+      <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
           <ol className="flex items-center gap-2 font-sans text-[13px] text-mid-grey">
             <li>
-              <Link
-                href="/blog"
-                className="hover:text-royal transition-colors duration-150"
-              >
+              <Link href="/blog" className="hover:text-royal transition-colors duration-150">
                 Insight
               </Link>
             </li>
-            <li aria-hidden="true" className="text-light-grey select-none">
-              /
-            </li>
+            <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li className="text-ink font-semibold truncate max-w-[240px]">
               {post.category}
             </li>
@@ -81,13 +87,14 @@ export default function BlogPostPage({ params }: Props) {
               [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-6 [&_ul_li]:mb-2
               [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-6 [&_ol_li]:mb-2
               [&_blockquote]:border-l-4 [&_blockquote]:border-gold [&_blockquote]:pl-5 [&_blockquote]:italic [&_blockquote]:text-mid-grey [&_blockquote]:my-8
+              [&_hr]:border-light-grey [&_hr]:my-10
             "
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
       </section>
 
-      {/* ── CTA BAND ── */}
+      {/* ── CTA ── */}
       <section className="bg-royal py-16 text-center">
         <div className="container-tbc">
           <hr className="gold-rule gold-rule--center mb-8" />
