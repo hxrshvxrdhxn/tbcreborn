@@ -85,6 +85,16 @@ export async function POST(req: NextRequest) {
       `,
     });
 
+    // ── Google Sheets CRM (fire-and-forget, never blocks the response) ──────
+    const sheetsWebhook = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+    if (sheetsWebhook) {
+      fetch(sheetsWebhook, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }).catch(() => {/* non-fatal — log silently */});
+    }
+
     return NextResponse.json({ success: true });
   } catch (err) {
     if (err instanceof z.ZodError) {
