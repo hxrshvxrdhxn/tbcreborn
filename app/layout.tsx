@@ -84,6 +84,30 @@ export default function RootLayout({
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window,document,"clarity","script","wy3ihoq9t1");
         `}</Script>
+
+        {/* Global JSON-LD Schema for GEO/SEO */}
+        <Script id="schema-org" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["Organization", "ProfessionalService"],
+            "name": "Turbo Bytes Consulting",
+            "url": "https://turbobytesconsulting.com",
+            "logo": "https://turbobytesconsulting.com/og-default.png",
+            "telephone": "+919354784377",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
+              "addressLocality": "Greater Noida",
+              "addressRegion": "Uttar Pradesh",
+              "postalCode": "201310",
+              "addressCountry": "IN"
+            },
+            "sameAs": [
+              "https://x.com/social_TBC",
+              "https://instagram.com/turbobytesconsulting"
+            ]
+          })
+        }} />
       </body>
     </html>
   );

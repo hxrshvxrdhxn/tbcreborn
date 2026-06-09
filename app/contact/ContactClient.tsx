@@ -100,14 +100,14 @@ export default function ContactClient() {
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left: Contact details */}
-            <div>
+            <div className="flex flex-col h-full">
               <span className="eyebrow">REACH US</span>
               <hr className="gold-rule mb-6" />
               <h2 className="font-display font-bold text-[26px] text-ink leading-[1.25] mb-8">
                 We respond within one business day.
               </h2>
 
-              <ul className="space-y-6">
+              <ul className="space-y-6 flex-1 flex flex-col">
                 <li>
                   <p className="font-display font-semibold text-[12px] text-mid-grey uppercase tracking-[1.5px] mb-1.5">
                     Phone
@@ -143,11 +143,11 @@ export default function ContactClient() {
                     +91 93547 84377
                   </a>
                 </li>
-                <li>
+                <li className="flex-1 flex flex-col">
                   <p className="font-display font-semibold text-[12px] text-mid-grey uppercase tracking-[1.5px] mb-1.5">
                     Address
                   </p>
-                  <address className="font-sans text-[16px] text-ink not-italic leading-relaxed">
+                  <address className="font-sans text-[16px] text-ink not-italic leading-relaxed mb-6">
                     Kasana Tower, Alfa Marg,
                     <br />
                     Alpha-I Commercial Belt, Block A,
@@ -156,6 +156,22 @@ export default function ContactClient() {
                     <br />
                     Uttar Pradesh, India
                   </address>
+                  
+                  {/* Mini Map */}
+                  <div className="w-full mt-auto flex-1 min-h-[220px] rounded-[6px] overflow-hidden shadow-card border border-light-grey relative group">
+                    <div className="absolute inset-0 bg-ink/5 pointer-events-none group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.757887711463!2d77.514013!3d28.48425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea7ab55191b9%3A0x6a2c3a5180f121d5!2sKasana%20Tower!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0, filter: "grayscale(100%) contrast(1.1) opacity(0.9)" }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Turbo Bytes Consulting Location"
+                      className="relative z-0 group-hover:filter-none transition-all duration-500"
+                    ></iframe>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -406,6 +422,7 @@ export default function ContactClient() {
           </div>
         </div>
       </section>
+
     </>
   );
 }

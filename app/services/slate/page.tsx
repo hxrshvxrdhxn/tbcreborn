@@ -129,7 +129,7 @@ export default function SlatePage() {
       <section className="bg-ink text-white py-24" aria-labelledby="slate-hero-heading">
         <div className="container-tbc">
           <p className="font-display font-bold text-gold text-sm tracking-widest uppercase mb-4">
-            Practice 04
+            Practice 05
           </p>
           <h1
             id="slate-hero-heading"

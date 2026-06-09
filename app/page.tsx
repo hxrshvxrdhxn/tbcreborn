@@ -48,38 +48,38 @@ const localBusinessSchema = {
 const services = [
   {
     number: "01",
-    name: "Social Media Management",
-    description:
-      "Precision-engineered content. Platform-native strategy. AI-driven execution.",
-    href: "/services/smm",
-  },
-  {
-    number: "02",
-    name: "Website & Application Development",
-    description:
-      "Architecturally sound. Conversion-optimised. Built to perform.",
-    href: "/services/web-development",
-  },
-  {
-    number: "03",
     name: "Custom LLM & On-Premise AI",
     description:
       "Your organisation's intelligence layer. Trained on your knowledge.",
     href: "/services/custom-llm",
   },
   {
-    number: "04",
-    name: "Slate AI Executive Assistant",
-    description:
-      "Beyond scheduling. Beyond email. A second intelligence for leaders.",
-    href: "/services/slate",
-  },
-  {
-    number: "05",
+    number: "02",
     name: "AI Capability Building",
     description:
       "Organisations that understand AI use it better. We build that understanding.",
     href: "/services/ai-training",
+  },
+  {
+    number: "03",
+    name: "Website & Application Development",
+    description:
+      "Architecturally sound. Conversion-optimised. Built to perform.",
+    href: "/services/web-development",
+  },
+  {
+    number: "04",
+    name: "Social Media Management",
+    description:
+      "Precision-engineered content. Platform-native strategy. AI-driven execution.",
+    href: "/services/smm",
+  },
+  {
+    number: "05",
+    name: "Slate AI Executive Assistant",
+    description:
+      "Beyond scheduling. Beyond email. A second intelligence for leaders.",
+    href: "/services/slate",
   },
 ];
 
@@ -193,7 +193,6 @@ export default function HomePage() {
               "MSME Registered",
               "AI-Native",
               "5 Practice Areas",
-              "Greater Noida, India",
             ].map((item, i, arr) => (
               <li key={item} className="flex items-center">
                 <span className="font-display font-semibold text-[13px] tracking-[1px] text-ink uppercase">
@@ -220,7 +219,7 @@ export default function HomePage() {
             <span className="eyebrow">WHO WE ARE</span>
             <hr className="gold-rule mb-6" />
             <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-3xl mb-6">
-              Not an agency. Not a software house. A consultancy built for the AI
+              Not an agency. Not a software house.<br />A consultancy built for the AI
               era.
             </h2>
             <p className="font-sans text-[17px] text-mid-grey leading-relaxed max-w-2xl mb-14">
@@ -270,31 +269,33 @@ export default function HomePage() {
             <span className="eyebrow">WHAT WE DO</span>
             <hr className="gold-rule mb-6" />
             <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-12">
-              Five practice areas. One integrated capability.
+              Five practice areas.<br />One integrated capability.
             </h2>
           </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <Reveal key={s.number} delay={i * 60} className="flex">
-                <article className="bg-ivory rounded-[8px] border border-light-grey shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc p-7 flex flex-col w-full">
+                <Link
+                  href={s.href}
+                  className="bg-ivory rounded-[8px] border border-light-grey shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc p-7 flex flex-col w-full group/card"
+                >
                   <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-4">
                     {s.number}
                   </span>
-                  <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-3">
+                  <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-3 group-hover/card:text-royal transition-colors duration-150">
                     {s.name}
                   </h3>
                   <p className="font-sans text-[15px] text-mid-grey leading-relaxed mb-6 flex-1">
                     {s.description}
                   </p>
-                  <Link
-                    href={s.href}
-                    className="group/arrow font-display font-semibold text-[14px] text-royal hover:text-royal-mid transition-colors duration-150 inline-flex items-center gap-1"
+                  <span
+                    className="font-display font-semibold text-[14px] text-royal group-hover/card:text-royal-mid transition-colors duration-150 inline-flex items-center gap-1"
                   >
                     Learn More
-                    <span className="inline-block transition-transform duration-150 group-hover/arrow:translate-x-1">→</span>
-                  </Link>
-                </article>
+                    <span className="inline-block transition-transform duration-150 group-hover/card:translate-x-1">→</span>
+                  </span>
+                </Link>
               </Reveal>
             ))}
           </div>
@@ -308,7 +309,7 @@ export default function HomePage() {
             <span className="eyebrow text-gold">WHY TBC</span>
             <hr className="gold-rule mb-6" />
             <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-12">
-              The rigour of a consultancy. The speed of a technology firm.
+              The rigour of a consultancy.<br />The speed of a technology firm.
             </h2>
           </Reveal>
 
@@ -336,7 +337,7 @@ export default function HomePage() {
             <span className="eyebrow">OUR PROCESS</span>
             <hr className="gold-rule mb-6" />
             <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-14">
-              A process designed for outcomes, not deliverables.
+              A process designed for outcomes,<br />not deliverables.
             </h2>
           </Reveal>
 

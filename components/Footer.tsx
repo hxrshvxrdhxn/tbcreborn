@@ -1,14 +1,15 @@
 import Link from "next/link";
 
 const serviceLinks = [
-  { href: "/services/smm", label: "Social Media Management" },
-  { href: "/services/web-development", label: "Website & App Development" },
   { href: "/services/custom-llm", label: "Custom LLM & On-Prem AI" },
-  { href: "/services/slate", label: "Slate Executive Assistant" },
   { href: "/services/ai-training", label: "AI Capability Building" },
+  { href: "/services/web-development", label: "Website & App Development" },
+  { href: "/services/smm", label: "Social Media Management" },
+  { href: "/services/slate", label: "Slate Executive Assistant" },
 ];
 
 const companyLinks = [
+  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
@@ -24,7 +25,7 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div>
-            <div className="flex items-baseline gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-4">
               <span
                 className="font-display font-bold text-2xl text-white"
                 style={{ letterSpacing: "3px" }}

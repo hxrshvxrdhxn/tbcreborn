@@ -4,12 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Our Services | AI Strategy, Web Development & More",
   description:
-    "Five AI-powered practice areas: social media management, web development, custom LLM deployment, Slate AI assistant, and AI training. Turbo Bytes Consulting.",
+    "Five AI-powered practice areas: custom LLM deployment, AI capability building, web development, social media management, and Slate AI assistant. Turbo Bytes Consulting.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Our Services | AI Strategy, Web Development & More",
     description:
-      "Five AI-powered practice areas: social media management, web development, custom LLM deployment, Slate AI assistant, and AI training. Turbo Bytes Consulting.",
+      "Five AI-powered practice areas: custom LLM deployment, AI capability building, web development, social media management, and Slate AI assistant. Turbo Bytes Consulting.",
     url: "https://turbobytesconsulting.com/services",
     images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
@@ -17,41 +17,13 @@ export const metadata: Metadata = {
     card: "summary_large_image" as const,
     title: "Our Services | AI Strategy, Web Development & More",
     description:
-      "Five AI-powered practice areas: social media management, web development, custom LLM deployment, Slate AI assistant, and AI training. Turbo Bytes Consulting.",
+      "Five AI-powered practice areas: custom LLM deployment, AI capability building, web development, social media management, and Slate AI assistant. Turbo Bytes Consulting.",
   },
 };
 
 const practices = [
   {
     number: "01",
-    name: "Social Media Management",
-    description:
-      "Precision-engineered content. Platform-native strategy. AI-driven execution.",
-    timeline: "Onboarding 5 days · First calendar in 10 days",
-    deliverables: [
-      "Full annual content strategy and calendar",
-      "AI-powered content creation across formats",
-      "Active management of every platform",
-      "Monthly analytics and strategy recalibration",
-    ],
-    href: "/services/smm",
-  },
-  {
-    number: "02",
-    name: "Website & Application Development",
-    description:
-      "Architecturally sound. Conversion-optimised. Built to perform.",
-    timeline: "Sites 2–3 weeks · Apps 4–8 weeks",
-    deliverables: [
-      "Custom business and e-commerce sites",
-      "Web applications and internal tools",
-      "API integrations and hosting architecture",
-      "Post-launch support retainers",
-    ],
-    href: "/services/web-development",
-  },
-  {
-    number: "03",
     name: "Custom LLM & On-Premise AI",
     description:
       "Your organisation's intelligence layer. Trained on your knowledge.",
@@ -65,21 +37,7 @@ const practices = [
     href: "/services/custom-llm",
   },
   {
-    number: "04",
-    name: "Slate AI Executive Assistant",
-    description:
-      "Beyond scheduling. Beyond email. A second intelligence for leaders.",
-    timeline: "Setup 48 hours · Full calibration 2–4 weeks",
-    deliverables: [
-      "Intelligent calendar and email management",
-      "Meeting prep, agendas, and briefings",
-      "Continuous research and daily briefings",
-      "Deep tool integration: Gmail, Slack, Notion, Asana",
-    ],
-    href: "/services/slate",
-  },
-  {
-    number: "05",
+    number: "02",
     name: "AI Capability Building",
     description:
       "Organisations that understand AI use it better. We build that understanding.",
@@ -92,6 +50,48 @@ const practices = [
     ],
     href: "/services/ai-training",
   },
+  {
+    number: "03",
+    name: "Website & Application Development",
+    description:
+      "Architecturally sound. Conversion-optimised. Built to perform.",
+    timeline: "Sites 2–3 weeks · Apps 4–8 weeks",
+    deliverables: [
+      "Custom business and e-commerce sites",
+      "Web applications and internal tools",
+      "API integrations and hosting architecture",
+      "Post-launch support retainers",
+    ],
+    href: "/services/web-development",
+  },
+  {
+    number: "04",
+    name: "Social Media Management",
+    description:
+      "Precision-engineered content. Platform-native strategy. AI-driven execution.",
+    timeline: "Onboarding 5 days · First calendar in 10 days",
+    deliverables: [
+      "Full annual content strategy and calendar",
+      "AI-powered content creation across formats",
+      "Active management of every platform",
+      "Monthly analytics and strategy recalibration",
+    ],
+    href: "/services/smm",
+  },
+  {
+    number: "05",
+    name: "Slate AI Executive Assistant",
+    description:
+      "Beyond scheduling. Beyond email. A second intelligence for leaders.",
+    timeline: "Setup 48 hours · Full calibration 2–4 weeks",
+    deliverables: [
+      "Intelligent calendar and email management",
+      "Meeting prep, agendas, and briefings",
+      "Continuous research and daily briefings",
+      "Deep tool integration: Gmail, Slack, Notion, Asana",
+    ],
+    href: "/services/slate",
+  },
 ];
 
 export default function ServicesPage() {
@@ -103,7 +103,7 @@ export default function ServicesPage() {
           <span className="eyebrow text-gold">SERVICES</span>
           <hr className="gold-rule mb-6" />
           <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-3xl mb-6">
-            Five practice areas. One integrated capability.
+            Five practice areas.<br />One integrated capability.
           </h1>
           <p className="font-sans text-[18px] text-white/70 leading-relaxed max-w-2xl">
             Each practice is complete in its own right. Deployed in combination,

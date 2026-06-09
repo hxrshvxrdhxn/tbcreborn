@@ -17,17 +17,33 @@ export default function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // eslint-disable-next-line prefer-const
+    let fallbackTimeout: NodeJS.Timeout;
+
+    // Use IntersectionObserver with a very low threshold (1%) to trigger immediately when entering viewport
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
           obs.disconnect();
+          if (fallbackTimeout) clearTimeout(fallbackTimeout);
         }
       },
-      { threshold: 0.08, rootMargin: "0px 0px -32px 0px" }
+      { threshold: 0.01, rootMargin: "0px 0px -10px 0px" }
     );
     obs.observe(el);
-    return () => obs.disconnect();
+
+    // Fallback: force visibility after 1 second in case observer fails to trigger
+    fallbackTimeout = setTimeout(() => {
+      setVisible(true);
+      obs.disconnect();
+    }, 1000);
+
+    return () => {
+      obs.disconnect();
+      if (fallbackTimeout) clearTimeout(fallbackTimeout);
+    };
   }, []);
 
   return (

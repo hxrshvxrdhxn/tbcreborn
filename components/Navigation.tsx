@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
   { href: "/engagement", label: "Engagement" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navigation() {
@@ -21,7 +22,7 @@ export default function Navigation() {
       <div className="container-tbc">
         <nav className="flex items-center justify-between h-16" aria-label="Main navigation">
           {/* Logo */}
-          <Link href="/" className="flex items-baseline gap-2 group" aria-label="Turbo Bytes Consulting — home">
+          <Link href="/" className="flex items-center gap-2 group" aria-label="Turbo Bytes Consulting — home">
             <span
               className="font-display font-bold text-2xl text-white tracking-wider group-hover:text-gold transition-colors duration-150"
               style={{ letterSpacing: "3px" }}

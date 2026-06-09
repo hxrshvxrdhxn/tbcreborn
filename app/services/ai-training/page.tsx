@@ -135,7 +135,7 @@ export default function AITrainingPage() {
       <section className="bg-ink text-white py-24" aria-labelledby="ai-training-hero-heading">
         <div className="container-tbc">
           <p className="font-display font-bold text-gold text-sm tracking-widest uppercase mb-4">
-            Practice 05
+            Practice 02
           </p>
           <h1
             id="ai-training-hero-heading"
