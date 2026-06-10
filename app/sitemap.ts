@@ -1,9 +1,9 @@
 import { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/content";
+import { getAllSlugs } from "@/lib/posts";
 
 const BASE = "https://turbobytesconsulting.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     { url: BASE, priority: 1.0, changeFrequency: "weekly" as const },
     { url: `${BASE}/services`, priority: 0.9, changeFrequency: "monthly" as const },
@@ -22,8 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/terms`, priority: 0.3, changeFrequency: "yearly" as const },
   ].map((r) => ({ ...r, lastModified: new Date() }));
 
-  const blogRoutes = blogPosts.map((post) => ({
-    url: `${BASE}/blog/${post.slug}`,
+  const slugs = await getAllSlugs();
+  const blogRoutes = slugs.map((slug) => ({
+    url: `${BASE}/blog/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,

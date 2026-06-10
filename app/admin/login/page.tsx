@@ -9,7 +9,8 @@ function LoginForm() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const params = useSearchParams();
-  const from = params.get("from") || "/admin";
+  const fromParam = params.get("from");
+  const safeTo = fromParam && fromParam.startsWith("/") && !fromParam.startsWith("//") ? fromParam : "/admin";
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -23,7 +24,7 @@ function LoginForm() {
     });
 
     if (res.ok) {
-      router.push(from);
+      router.push(safeTo);
       router.refresh();
     } else {
       setError("Incorrect password.");

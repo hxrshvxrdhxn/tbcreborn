@@ -20,6 +20,13 @@ const nextConfig = {
           },
           // DNS prefetch
           { key: "X-DNS-Prefetch-Control", value: "on" },
+          // HSTS
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          // Content Security Policy
+          {
+            key: "Content-Security-Policy",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://assets.calendly.com; style-src 'self' 'unsafe-inline'; frame-src https://calendly.com https://www.google.com; img-src 'self' data: https: blob:; connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com;"
+          },
         ],
       },
     ];

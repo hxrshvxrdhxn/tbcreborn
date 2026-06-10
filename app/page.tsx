@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "AI Consulting & Strategy | Turbo Bytes Consulting",
@@ -131,29 +132,12 @@ const processSteps = [
   },
 ];
 
-const insightPosts = [
-  {
-    category: "AI Strategy",
-    title: "The intelligence layer your competitors haven't found yet.",
-    date: "May 2026",
-    readTime: "6 min read",
-  },
-  {
-    category: "Framework",
-    title: "A 90-day diagnostic to find every AI lever inside a 50-person firm.",
-    date: "May 2026",
-    readTime: "9 min read",
-  },
-  {
-    category: "Perspective",
-    title:
-      "Why on-premise LLMs are about to become standard for professional services.",
-    date: "April 2026",
-    readTime: "7 min read",
-  },
-];
+export const revalidate = 3600;
 
-export default function HomePage() {
+export default async function HomePage() {
+  const posts = await getAllPosts();
+  const insightPosts = posts.slice(0, 3);
+
   return (
     <>
       <script
@@ -394,18 +378,18 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {insightPosts.map((post, i) => (
-              <Reveal key={post.title} delay={i * 70} className="flex">
-                <article className="bg-ivory rounded-[8px] border border-light-grey hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc p-7 flex flex-col w-full">
+              <Reveal key={post.slug} delay={i * 70} className="flex">
+                <Link href={`/blog/${post.slug}`} className="bg-ivory rounded-[8px] border border-light-grey hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc p-7 flex flex-col w-full group/card block">
                   <span className="font-display font-semibold text-[12px] text-royal uppercase tracking-[1.5px] mb-4">
                     {post.category}
                   </span>
-                  <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-auto">
+                  <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-auto group-hover/card:text-royal transition-colors">
                     {post.title}
                   </h3>
                   <p className="font-sans text-[13px] text-mid-grey mt-6">
                     {post.date} · {post.readTime}
                   </p>
-                </article>
+                </Link>
               </Reveal>
             ))}
           </div>

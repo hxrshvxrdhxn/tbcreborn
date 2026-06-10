@@ -3,11 +3,12 @@ import { getRawPost } from "@/lib/posts";
 import AdminPostEditor from "@/components/AdminPostEditor";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function EditPostPage({ params }: Props) {
-  const post = getRawPost(params.slug);
+export default async function EditPostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = await getRawPost(slug);
   if (!post) notFound();
 
   const { frontmatter: fm, body } = post;
@@ -15,7 +16,7 @@ export default function EditPostPage({ params }: Props) {
   return (
     <AdminPostEditor
       isEdit
-      initialSlug={params.slug}
+      initialSlug={slug}
       initialTitle={fm.title ?? ""}
       initialExcerpt={fm.excerpt ?? ""}
       initialCategory={fm.category ?? "Strategy"}

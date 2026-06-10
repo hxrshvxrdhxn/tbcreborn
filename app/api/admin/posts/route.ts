@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-
-const POSTS_DIR = path.join(process.cwd(), "content", "posts");
+import { prisma } from "@/lib/prisma";
+import { isValidSession } from "@/lib/redis";
 
 function slugify(title: string): string {
   return title
@@ -13,24 +11,11 @@ function slugify(title: string): string {
     .replace(/-+/g, "-");
 }
 
-function buildFrontmatter(data: Record<string, string>): string {
-  const lines = ["---"];
-  const keys = ["title", "date", "category", "readTime", "excerpt", "status", "publishedAt"];
-  for (const key of keys) {
-    if (data[key] !== undefined && data[key] !== "") {
-      // Wrap strings with special chars in quotes
-      const val = data[key].includes('"') ? `'${data[key]}'` : `"${data[key]}"`;
-      lines.push(`${key}: ${val}`);
-    }
-  }
-  lines.push("---");
-  return lines.join("\n");
-}
-
 export async function POST(req: NextRequest) {
-  // Auth check (double-check beyond middleware)
+  // Auth check
   const session = req.cookies.get("admin_session")?.value;
-  if (!session || session !== process.env.ADMIN_PASSWORD) {
+  const valid = session ? await isValidSession(session) : false;
+  if (!valid) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -42,8 +27,6 @@ export async function POST(req: NextRequest) {
   }
 
   const slug = providedSlug || slugify(title);
-  const fileName = `${slug}.mdx`;
-  const filePath = path.join(POSTS_DIR, fileName);
 
   // Auto-set date if not provided
   if (!meta.date) {
@@ -54,28 +37,56 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  if (!fs.existsSync(POSTS_DIR)) {
-    fs.mkdirSync(POSTS_DIR, { recursive: true });
+  try {
+    // Upsert the post
+    await prisma.post.upsert({
+      where: { slug },
+      update: {
+        title,
+        content: content.trim(),
+        date: meta.date,
+        category: meta.category || "Insight",
+        readTime: meta.readTime || "5 min read",
+        excerpt: meta.excerpt || "",
+        status: meta.status || "published",
+        publishedAt: meta.publishedAt || null,
+      },
+      create: {
+        slug,
+        title,
+        content: content.trim(),
+        date: meta.date,
+        category: meta.category || "Insight",
+        readTime: meta.readTime || "5 min read",
+        excerpt: meta.excerpt || "",
+        status: meta.status || "published",
+        publishedAt: meta.publishedAt || null,
+      }
+    });
+
+    return NextResponse.json({ success: true, slug });
+  } catch (error) {
+    console.error("Failed to save post:", error);
+    return NextResponse.json({ error: "Failed to save to database." }, { status: 500 });
   }
-
-  const fileContent = `${buildFrontmatter({ title, ...meta })}\n\n${content.trim()}\n`;
-  fs.writeFileSync(filePath, fileContent, "utf8");
-
-  return NextResponse.json({ success: true, slug });
 }
 
 export async function DELETE(req: NextRequest) {
   const session = req.cookies.get("admin_session")?.value;
-  if (!session || session !== process.env.ADMIN_PASSWORD) {
+  const valid = session ? await isValidSession(session) : false;
+  if (!valid) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const { slug } = await req.json();
-  const filePath = path.join(POSTS_DIR, `${slug}.mdx`);
 
-  if (fs.existsSync(filePath)) {
-    fs.unlinkSync(filePath);
+  try {
+    await prisma.post.delete({
+      where: { slug }
+    });
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Failed to delete post:", error);
+    return NextResponse.json({ error: "Failed to delete from database." }, { status: 500 });
   }
-
-  return NextResponse.json({ success: true });
 }

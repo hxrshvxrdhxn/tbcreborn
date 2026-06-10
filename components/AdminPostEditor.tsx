@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { marked } from "marked";
+import DOMPurify from "isomorphic-dompurify";
 
 const CATEGORIES = [
   "AI Strategy",
@@ -126,11 +128,16 @@ export default function AdminPostEditor({
   async function handleDelete() {
     if (!confirm(`Delete "${title}"? This cannot be undone.`)) return;
     setDeleting(true);
-    await fetch("/api/admin/posts", {
+    const res = await fetch("/api/admin/posts", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ slug }),
     });
+    if (!res.ok) {
+      setError("Failed to delete post.");
+      setDeleting(false);
+      return;
+    }
     router.push("/admin");
     router.refresh();
   }
@@ -259,15 +266,7 @@ export default function AdminPostEditor({
                     "
                     dangerouslySetInnerHTML={{
                       __html: body
-                        ? body
-                            .replace(/^## (.+)$/gm, "<h2>$1</h2>")
-                            .replace(/^### (.+)$/gm, "<h3>$1</h3>")
-                            .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-                            .replace(/`(.+?)`/g, "<code>$1</code>")
-                            .replace(/^- (.+)$/gm, "<li>$1</li>")
-                            .replace(/(<li>.*<\/li>)/gs, "<ul>$1</ul>")
-                            .replace(/^(?!<[h|u|o|l|b])(.*\S.*)$/gm, "<p>$1</p>")
-                            .replace(/\n{3,}/g, "\n")
+                        ? DOMPurify.sanitize(marked.parse(body) as string)
                         : "<p class='text-mid-grey'>Nothing to preview yet…</p>",
                     }}
                   />

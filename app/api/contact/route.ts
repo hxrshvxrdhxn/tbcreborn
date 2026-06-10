@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
+import { prisma } from "@/lib/prisma";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 
 // ── HTML entity escaper (prevents XSS in email body) ──────────────────────────
 function esc(str: string): string {
@@ -17,7 +20,24 @@ const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
 
-function isRateLimited(ip: string): boolean {
+let upstashRatelimit: Ratelimit | null = null;
+if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+  upstashRatelimit = new Ratelimit({
+    redis: Redis.fromEnv(),
+    limiter: Ratelimit.slidingWindow(5, "10 m"),
+  });
+}
+
+async function isRateLimited(ip: string): Promise<boolean> {
+  if (upstashRatelimit) {
+    try {
+      const { success } = await upstashRatelimit.limit(`contact_${ip}`);
+      return !success;
+    } catch (e) {
+      console.error("Upstash rate limit failed, falling back to local", e);
+    }
+  }
+
   const now = Date.now();
   const entry = rateLimitMap.get(ip);
   if (!entry || now > entry.resetAt) {
@@ -47,7 +67,7 @@ export async function POST(req: NextRequest) {
     req.headers.get("x-real-ip") ??
     "unknown";
 
-  if (isRateLimited(ip)) {
+  if (await isRateLimited(ip)) {
     return NextResponse.json(
       { error: "Too many requests. Please try again later." },
       { status: 429 }
@@ -93,6 +113,24 @@ export async function POST(req: NextRequest) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       }).catch(() => {/* non-fatal — log silently */});
+    }
+
+    // ── Save to Database ────────────────────────────────────────────────────
+    try {
+      await prisma.contactQuery.create({
+        data: {
+          name: data.name,
+          company: data.company,
+          email: data.email,
+          phone: data.phone || null,
+          service: data.service,
+          budget: data.budget || null,
+          message: data.message,
+        }
+      });
+    } catch (dbErr) {
+      console.error("Failed to save query to DB:", dbErr);
+      // Non-fatal, we still sent the email.
     }
 
     return NextResponse.json({ success: true });

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { isValidSession } from "./lib/redis";
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Only protect /admin routes (not /admin/login or /api/admin/auth)
@@ -10,9 +11,9 @@ export function middleware(req: NextRequest) {
     !pathname.startsWith("/api/admin/auth")
   ) {
     const session = req.cookies.get("admin_session")?.value;
-    const pwd = process.env.ADMIN_PASSWORD;
+    const valid = session ? await isValidSession(session) : false;
 
-    if (!pwd || session !== pwd) {
+    if (!valid) {
       const loginUrl = new URL("/admin/login", req.url);
       loginUrl.searchParams.set("from", pathname);
       return NextResponse.redirect(loginUrl);
