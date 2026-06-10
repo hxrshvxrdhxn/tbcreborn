@@ -1,7 +1,10 @@
 import { SignJWT, jwtVerify } from "jose";
 
-// Fallback to jose JWTs for local development without Upstash
-const secret = new TextEncoder().encode(process.env.ADMIN_PASSWORD || "fallback_secret_do_not_use_in_prod");
+const secretValue = process.env.ADMIN_PASSWORD ?? process.env.LOCAL_SESSION_SECRET;
+if (!secretValue && process.env.NODE_ENV !== "test") {
+  throw new Error("No session secret configured.");
+}
+const secret = new TextEncoder().encode(secretValue || "test-secret");
 
 export async function addSession(token: string): Promise<string> {
   if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
