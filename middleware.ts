@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(req: NextRequest) {
+import { isValidSession } from '@/lib/redis';
+
+export async function middleware(req: NextRequest) {
   const url = req.nextUrl;
   const hostname = req.headers.get('host') || '';
 
@@ -14,16 +16,47 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // Rewrite for Admin Subdomain
+  // Handle .com redirects for subdomains
+  if (hostname.endsWith('.com')) {
+    if (hostname.startsWith('admin.') || hostname.startsWith('blog.')) {
+      return NextResponse.redirect(new URL('/', 'https://turbobytesconsulting.com'), 308);
+    }
+  }
+
+  // Helper to check auth
+  async function checkAuth() {
+    const token = req.cookies.get("admin_session")?.value;
+    if (!token) return false;
+    return await isValidSession(token);
+  }
+
+  // 1. Direct path access protection
+  if (url.pathname.startsWith('/admin') && url.pathname !== '/admin/login') {
+    if (!(await checkAuth())) {
+      return NextResponse.redirect(new URL('/admin/login', req.url));
+    }
+  }
+  if (url.pathname.startsWith('/blog-admin') && url.pathname !== '/blog-admin/login') {
+    if (!(await checkAuth())) {
+      return NextResponse.redirect(new URL('/blog-admin/login', req.url));
+    }
+  }
+
+  // 2. Subdomain routing and protection
   if (hostname.startsWith('admin.')) {
     if (!url.pathname.startsWith('/admin')) {
+      if (url.pathname !== '/login' && !(await checkAuth())) {
+        return NextResponse.redirect(new URL('/login', req.url));
+      }
       return NextResponse.rewrite(new URL(`/admin${url.pathname === '/' ? '' : url.pathname}`, req.url));
     }
   } 
-  // Rewrite for Blog Subdomain
   else if (hostname.startsWith('blog.')) {
-    if (!url.pathname.startsWith('/blog')) {
-      return NextResponse.rewrite(new URL(`/blog${url.pathname === '/' ? '' : url.pathname}`, req.url));
+    if (!url.pathname.startsWith('/blog-admin')) {
+      if (url.pathname !== '/login' && !(await checkAuth())) {
+        return NextResponse.redirect(new URL('/login', req.url));
+      }
+      return NextResponse.rewrite(new URL(`/blog-admin${url.pathname === '/' ? '' : url.pathname}`, req.url));
     }
   }
 

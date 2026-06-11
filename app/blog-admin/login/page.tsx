@@ -45,8 +45,8 @@ function LoginForm() {
           </span>
         </div>
 
-        <h1 className="font-display font-bold text-white text-2xl mb-2">Leads Inbox</h1>
-        <p className="font-sans text-[15px] text-mid-grey mb-8">Sign in to view contact queries.</p>
+        <h1 className="font-display font-bold text-white text-2xl mb-2">Content Studio</h1>
+        <p className="font-sans text-[15px] text-mid-grey mb-8">Sign in to manage blog posts.</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

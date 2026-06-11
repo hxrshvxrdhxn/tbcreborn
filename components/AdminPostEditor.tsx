@@ -115,46 +115,46 @@ export default function AdminPostEditor({
       }),
     });
 
-    if (res.ok) {
-      router.push("/admin");
+      if (res.ok) {
+        router.push("/blog-admin");
+        router.refresh();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setError((data as { error?: string }).error ?? "Failed to save post.");
+        setSaving(false);
+      }
+    }
+  
+    async function handleDelete() {
+      if (!confirm(`Delete "${title}"? This cannot be undone.`)) return;
+      setDeleting(true);
+      const res = await fetch("/api/admin/posts", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug }),
+      });
+      if (!res.ok) {
+        setError("Failed to delete post.");
+        setDeleting(false);
+        return;
+      }
+      router.push("/blog-admin");
       router.refresh();
-    } else {
-      const data = await res.json().catch(() => ({}));
-      setError((data as { error?: string }).error ?? "Failed to save post.");
-      setSaving(false);
     }
-  }
-
-  async function handleDelete() {
-    if (!confirm(`Delete "${title}"? This cannot be undone.`)) return;
-    setDeleting(true);
-    const res = await fetch("/api/admin/posts", {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ slug }),
-    });
-    if (!res.ok) {
-      setError("Failed to delete post.");
-      setDeleting(false);
-      return;
-    }
-    router.push("/admin");
-    router.refresh();
-  }
-
-  const inputBase =
-    "w-full font-sans text-[15px] text-ink bg-white border border-light-grey rounded-[8px] px-4 py-3 placeholder-mid-grey/60 outline-none transition-colors focus:border-royal focus:ring-2 focus:ring-royal/10";
-  const labelBase = "block font-display font-semibold text-[13px] text-ink mb-1.5";
-
-  return (
-    <div className="min-h-screen bg-ivory">
-      {/* ── Top bar ── */}
-      <header className="bg-ink border-b-2 border-gold sticky top-0 z-40">
-        <div className="container-tbc h-14 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <Link href="/admin" className="font-display font-semibold text-[13px] text-white/60 hover:text-white transition-colors">
-              ← Posts
-            </Link>
+  
+    const inputBase =
+      "w-full font-sans text-[15px] text-ink bg-white border border-light-grey rounded-[8px] px-4 py-3 placeholder-mid-grey/60 outline-none transition-colors focus:border-royal focus:ring-2 focus:ring-royal/10";
+    const labelBase = "block font-display font-semibold text-[13px] text-ink mb-1.5";
+  
+    return (
+      <div className="min-h-screen bg-ivory">
+        {/* ── Top bar ── */}
+        <header className="bg-ink border-b-2 border-gold sticky top-0 z-40">
+          <div className="container-tbc h-14 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <Link href="/blog-admin" className="font-display font-semibold text-[13px] text-white/60 hover:text-white transition-colors">
+                ← Posts
+              </Link>
             <span className="text-white/20">|</span>
             <span className="font-display font-semibold text-[14px] text-white truncate max-w-[280px]">
               {title || "New Post"}
