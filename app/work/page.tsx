@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
+import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
   title: "Our Work & Client Outcomes | Turbo Bytes Consulting",
@@ -209,153 +211,157 @@ export default function WorkPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ivory py-20 border-b border-light-grey">
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <span className="font-display font-bold text-[13px] text-gold tracking-[1px] uppercase block mb-4">
-            Work
-          </span>
-          <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-ink leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6">
-            Outcomes, documented.
-          </h1>
-          <p className="font-sans text-[18px] text-mid-grey leading-relaxed max-w-3xl">
-            Selected client engagements. Names are anonymised where confidentiality is preserved by mandate. Every outcome below is measured and verifiable on request.
-          </p>
+          <Reveal>
+            <span className="eyebrow">Work</span>
+            <hr className="gold-rule mb-6" />
+            <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-ink leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6">
+              Outcomes, documented.
+            </h1>
+            <p className="font-sans text-[18px] text-mid-grey leading-relaxed max-w-3xl">
+              Selected client engagements. Names are anonymised where confidentiality is preserved by mandate. Every outcome below is measured and verifiable on request.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       {/* ── CASE STUDIES FEED ── */}
-      <section className="bg-white py-10 lg:py-20">
+      <section className="bg-white py-s7">
         <div className="container-tbc">
-          <div className="space-y-16 lg:space-y-24 max-w-6xl mx-auto">
+          <div className="space-y-s8 max-w-6xl mx-auto">
             {caseStudies.map((study) => (
-              <article key={study.number} className="group relative border-t border-light-grey pt-12 lg:pt-16">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-                  
-                  {/* Left Column: Number, Title, Metadata */}
-                  <div className="lg:col-span-4 flex flex-col">
-                    <div className="mb-6">
-                      <span className="font-display font-bold text-[14px] text-gold tracking-[1px] mb-3 block">
-                        CASE {study.number}
-                      </span>
-                      <h2 className="font-display font-bold text-[clamp(24px,2.5vw,32px)] text-ink leading-[1.2] mb-3">
-                        {study.title}
-                      </h2>
-                      <p className="font-sans text-[15px] font-medium text-ink/80 leading-relaxed border-l-2 border-gold pl-4 mt-4">
-                        {study.subtitle}
-                      </p>
-                    </div>
+              <Reveal key={study.number}>
+                <article className="group relative border-t border-light-grey pt-12 lg:pt-16">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+                    
+                    {/* Left Column: Number, Title, Metadata */}
+                    <div className="lg:col-span-4 flex flex-col">
+                      <div className="mb-6">
+                        <span className="font-display font-bold text-[14px] text-gold tracking-[1px] mb-3 block">
+                          CASE {study.number}
+                        </span>
+                        <h2 className="font-display font-bold text-[clamp(24px,2.5vw,32px)] text-ink leading-[1.2] mb-3">
+                          {study.title}
+                        </h2>
+                        <p className="font-sans text-[15px] font-medium text-ink/80 leading-relaxed border-l-2 border-gold pl-4 mt-4">
+                          {study.subtitle}
+                        </p>
+                      </div>
 
-                    <div className="mt-auto hidden lg:block">
-                      <hr className="gold-rule mb-4" />
-                      <ul className="space-y-2">
-                        {study.meta.map((m, idx) => (
-                          <li key={idx} className="font-sans text-[13px] text-mid-grey">
-                            {m}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Right Column: Context, Solution, Outcomes */}
-                  <div className="lg:col-span-8">
-                    {/* The Context */}
-                    <div className="mb-10">
-                      <h3 className="font-display font-bold text-[13px] text-mid-grey tracking-widest uppercase mb-4">The Context</h3>
-                      <div className="space-y-4">
-                        {study.context.map((para, idx) => (
-                          <p key={idx} className="font-sans text-[17px] text-ink leading-relaxed">
-                            {para}
-                          </p>
-                        ))}
+                      <div className="mt-auto hidden lg:block">
+                        <hr className="gold-rule mb-4" />
+                        <ul className="space-y-2">
+                          {study.meta.map((m, idx) => (
+                            <li key={idx} className="font-sans text-[13px] text-mid-grey">
+                              {m}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
 
-                    {/* The Work */}
-                    <div className="mb-10">
-                      <h3 className="font-display font-bold text-[13px] text-mid-grey tracking-widest uppercase mb-4">The Work</h3>
-                      <p className="font-sans text-[17px] text-ink leading-relaxed">
-                        {study.solution}
-                      </p>
-                    </div>
+                    {/* Right Column: Context, Solution, Outcomes */}
+                    <div className="lg:col-span-8">
+                      {/* The Context */}
+                      <div className="mb-10">
+                        <h3 className="font-display font-bold text-[13px] text-mid-grey tracking-widest uppercase mb-4">The Context</h3>
+                        <div className="space-y-4">
+                          {study.context.map((para, idx) => (
+                            <p key={idx} className="font-sans text-[17px] text-ink leading-relaxed">
+                              {para}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
 
-                    {/* The Outcomes */}
-                    <div className="bg-ivory border border-light-grey rounded-lg p-6 sm:p-8 shadow-sm group-hover:shadow-card transition-shadow duration-300">
-                      <h3 className="font-display font-bold text-[13px] text-gold tracking-widest uppercase mb-6 flex items-center gap-3">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                        Measured Outcomes
-                      </h3>
-                      <ul className="space-y-4">
-                        {study.outcomes.map((outcome, idx) => {
-                          const [metric, ...rest] = outcome.split(':');
-                          const value = rest.join(':');
-                          
-                          if (value) {
+                      {/* The Work */}
+                      <div className="mb-10">
+                        <h3 className="font-display font-bold text-[13px] text-mid-grey tracking-widest uppercase mb-4">The Work</h3>
+                        <p className="font-sans text-[17px] text-ink leading-relaxed">
+                          {study.solution}
+                        </p>
+                      </div>
+
+                      {/* The Outcomes */}
+                      <div className="bg-ivory border border-light-grey rounded p-6 sm:p-8 shadow-card">
+                        <h3 className="font-display font-bold text-[13px] text-gold tracking-widest uppercase mb-6 flex items-center gap-3">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                          </svg>
+                          Measured Outcomes
+                        </h3>
+                        <ul className="space-y-4">
+                          {study.outcomes.map((outcome, idx) => {
+                            const [metric, ...rest] = outcome.split(':');
+                            const value = rest.join(':');
+                            
+                            if (value) {
+                              return (
+                                <li key={idx} className="flex items-start gap-3">
+                                  <span className="mt-[6px] w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
+                                  <span className="font-sans text-[16px] leading-relaxed text-ink">
+                                    <strong>{metric}:</strong> <span className="text-royal font-medium">{value}</span>
+                                  </span>
+                                </li>
+                              );
+                            }
                             return (
                               <li key={idx} className="flex items-start gap-3">
                                 <span className="mt-[6px] w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
-                                <span className="font-sans text-[16px] leading-relaxed text-ink">
-                                  <strong>{metric}:</strong> <span className="text-royal font-medium">{value}</span>
+                                <span className="font-sans text-[16px] leading-relaxed text-ink font-medium">
+                                  {outcome}
                                 </span>
                               </li>
                             );
-                          }
-                          return (
-                            <li key={idx} className="flex items-start gap-3">
-                              <span className="mt-[6px] w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
-                              <span className="font-sans text-[16px] leading-relaxed text-ink font-medium">
-                                {outcome}
-                              </span>
+                          })}
+                        </ul>
+                      </div>
+
+                      {/* Mobile Meta Block */}
+                      <div className="mt-10 block lg:hidden">
+                        <hr className="gold-rule mb-4" />
+                        <ul className="space-y-2">
+                          {study.meta.map((m, idx) => (
+                            <li key={idx} className="font-sans text-[13px] text-mid-grey">
+                              {m}
                             </li>
-                          );
-                        })}
-                      </ul>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
 
-                    {/* Mobile Meta Block */}
-                    <div className="mt-10 block lg:hidden">
-                      <hr className="gold-rule mb-4" />
-                      <ul className="space-y-2">
-                        {study.meta.map((m, idx) => (
-                          <li key={idx} className="font-sans text-[13px] text-mid-grey">
-                            {m}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
-
-                </div>
-              </article>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
-      <section className="bg-ink text-white py-20 text-center">
+      <SectionInk className="text-center">
         <div className="container-tbc">
-          <span className="eyebrow text-gold">NEXT STEPS</span>
-          <hr className="gold-rule gold-rule--center mb-8" />
-          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] max-w-3xl mx-auto mb-6">
-            Every engagement begins with a defined outcome.
-          </h2>
-          <div className="max-w-2xl mx-auto text-white/70 font-sans text-[16px] leading-relaxed space-y-4 mb-10">
-            <p>
-              We do not start work until we agree on what success looks like — in specific, measurable terms. That agreement drives every decision from the first day to the last.
-            </p>
-            <p>
-              If you do not know yet exactly what success looks like for your organisation, that is where we start. Defining it is part of the work.
-            </p>
-          </div>
-          <Link href="/book-consultation" className="btn-gold px-10 py-4.5 text-[16px]">
-            Start a Conversation →
-          </Link>
-          <hr className="gold-rule gold-rule--center mt-12" />
+          <Reveal>
+            <span className="eyebrow text-gold">NEXT STEPS</span>
+            <hr className="gold-rule gold-rule--center mb-8" />
+            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] max-w-3xl mx-auto mb-6">
+              Every engagement begins with a defined outcome.
+            </h2>
+            <div className="max-w-2xl mx-auto text-white/70 font-sans text-[16px] leading-relaxed space-y-4 mb-10">
+              <p>
+                We do not start work until we agree on what success looks like — in specific, measurable terms. That agreement drives every decision from the first day to the last.
+              </p>
+              <p>
+                If you do not know yet exactly what success looks like for your organisation, that is where we start. Defining it is part of the work.
+              </p>
+            </div>
+            <Link href="/book-consultation" className="btn-gold px-10 py-4.5 text-[16px]">
+              Start a Conversation →
+            </Link>
+          </Reveal>
         </div>
-      </section>
+      </SectionInk>
     </>
   );
 }

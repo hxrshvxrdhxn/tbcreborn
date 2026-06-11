@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import Reveal from "@/components/Reveal";
+import SectionInk from "@/components/SectionInk";
+import ProcessTimeline from "@/components/ProcessTimeline";
 
 export const metadata: Metadata = {
   title: "Website & Web Application Development | Turbo Bytes Consulting",
@@ -11,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Architecturally sound. Conversion-optimised. Built to perform. Custom websites and enterprise web applications designed for commercial results. Turbo Bytes Consulting.",
     url: "https://turbobytesconsulting.com/services/web-development",
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
@@ -203,25 +207,29 @@ const includedFeatures = [
 
 const timelineSteps = [
   {
-    phase: "Week 1",
+    number: "01",
+    caption: "Week 1",
     title: "Discovery & Architecture",
     description:
       "We spend the first week understanding your business, your audience, and your commercial objectives in detail. We design the information architecture, define the technology stack, and produce wireframes for every key page. Nothing moves to design until architecture is reviewed and approved.",
   },
   {
-    phase: "Week 2",
+    number: "02",
+    caption: "Week 2",
     title: "Design",
     description:
       "Full design produced in Figma. Desktop and mobile viewports for every template. Brand design system documented. Interactive prototype for stakeholder reviews and feedback. Revisions completed within this phase.",
   },
   {
-    phase: "Week 3 (Sites) / 3–6 (Apps)",
+    number: "03",
+    caption: "Week 3 (Sites) / 3–6 (Apps)",
     title: "Development & Integration",
     description:
       "Front-end and back-end development. CMS integration. Third-party integrations (CRM, payment processors). Internal testing against Core Web Vitals and SEO specifications. Cross-browser and cross-device testing.",
   },
   {
-    phase: "Final Week",
+    number: "04",
+    caption: "Final Week",
     title: "QA, Content & Launch",
     description:
       "Content population by our team or yours. Final QA verification pass. Hosting configuration, DNS pointing, and live launch. Editorial team training. Post-launch hypercare period begins.",
@@ -357,128 +365,121 @@ export default function WebDevelopmentPage() {
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 font-sans text-[13px] text-mid-grey">
+          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
             <li>
-              <Link href="/" className="hover:text-ink transition-colors duration-150">
-                Home
-              </Link>
+              <Link href="/" className="hover:text-ink transition-colors">Home</Link>
             </li>
-            <li aria-hidden="true" className="text-light-grey select-none">
-              /
-            </li>
+            <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li>
-              <Link href="/services" className="hover:text-ink transition-colors duration-150">
-                Services
-              </Link>
+              <Link href="/services" className="hover:text-ink transition-colors">Services</Link>
             </li>
-            <li aria-hidden="true" className="text-light-grey select-none">
-              /
-            </li>
-            <li className="text-ink font-semibold">
-              Website &amp; Application Development
-            </li>
+            <li aria-hidden="true" className="text-light-grey select-none">/</li>
+            <li className="text-ink font-bold" aria-current="page">Web Development</li>
           </ol>
         </div>
       </nav>
 
       {/* ── PAGE HERO ── */}
-      <section className="bg-ivory py-20 border-b border-light-grey">
-        <div className="container-tbc">
-          <span className="font-display font-bold text-[13px] text-gold tracking-[1px] uppercase block mb-4">
-            Practice 03
-          </span>
-          <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-ink leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
-            Website &amp;<br />Application Development
-          </h1>
-          <p className="font-sans text-[18px] text-mid-grey leading-relaxed max-w-3xl mb-8">
-            Architecturally sound. Conversion-optimised. Built to perform.
-          </p>
-          <div className="inline-flex flex-wrap items-center gap-3 bg-white border border-light-grey rounded-lg px-4 py-3 shadow-card">
-            <span
-              className="w-2.5 h-2.5 rounded-full bg-gold flex-shrink-0"
-              aria-hidden="true"
-            />
-            <span className="font-display font-semibold text-[13px] text-ink">
-              Websites: 2–3 weeks
-            </span>
-            <span className="text-light-grey">|</span>
-            <span className="font-display font-semibold text-[13px] text-ink">
-              Applications: 4–8 weeks
-            </span>
-            <span className="text-light-grey">|</span>
-            <span className="font-display font-semibold text-[13px] text-ink">
-              Retainers available post-launch
-            </span>
-          </div>
+      <section className="relative bg-ink overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
+        {/* Full-bleed background image band */}
+        <div className="absolute inset-0 z-0">
+          <Image src="/img/hero-service-web.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
+        </div>
+
+        <div className="container-tbc py-s6 relative z-10">
+          <Reveal>
+            <span className="eyebrow text-gold">PRACTICE 03</span>
+            <hr className="gold-rule mb-6" />
+            <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
+              Website &amp; Application Development
+            </h1>
+            <p className="text-body text-white/70 leading-relaxed max-w-3xl mb-8 text-pretty">
+              Architecturally sound. Conversion-optimised. Built to perform. Custom websites and enterprise web applications designed for commercial results.
+            </p>
+            <div className="inline-flex flex-wrap items-center gap-3 bg-white/10 backdrop-blur border border-white/20 rounded px-4 py-3 shadow-sm">
+              <span className="w-2.5 h-2.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
+              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">
+                Websites: 2–3 weeks
+              </span>
+              <span className="text-white/30">|</span>
+              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">
+                Applications: 4–8 weeks
+              </span>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── WHAT THIS IS ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            <div className="lg:col-span-4">
-              <span className="eyebrow">OVERVIEW</span>
-              <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
-                What This Is
-              </h2>
-              <hr className="gold-rule" />
-            </div>
-            <div className="lg:col-span-8 space-y-6">
-              <p className="font-sans text-[17px] text-mid-grey leading-relaxed">
-                Your digital presence is not a brochure. It is a commercial argument — made silently, in under three seconds, before a single word is read.
-              </p>
-              <p className="font-sans text-[17px] text-mid-grey leading-relaxed">
-                Most business websites fail that argument. Not because they look bad. Because they were built for aesthetics rather than performance — slow to load, structurally unclear, technically incomplete, and impossible to update without calling a developer.
-              </p>
-              <p className="font-sans text-[17px] text-mid-grey leading-relaxed">
-                We build differently. Every site and application we deliver is architecturally deliberate, conversion-optimised from the first wireframe, technically complete on delivery, and designed to perform commercially for years — not months.
-              </p>
-              <div className="bg-ivory border-l-4 border-gold p-6 rounded-r-lg mt-8">
-                <p className="font-sans text-[16px] text-ink leading-relaxed font-medium">
-                  Architecture decisions made at build time define your ceiling. We make them with that in mind.
+          <Reveal>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+              <div className="lg:col-span-4">
+                <span className="eyebrow">OVERVIEW</span>
+                <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
+                  What This Is
+                </h2>
+                <hr className="gold-rule" />
+              </div>
+              <div className="lg:col-span-8 space-y-6">
+                <p className="text-body text-mid-grey leading-relaxed text-pretty">
+                  Your digital presence is not a brochure. It is a commercial argument — made silently, in under three seconds, before a single word is read.
                 </p>
+                <p className="text-body text-mid-grey leading-relaxed text-pretty">
+                  Most business websites fail that argument. Not because they look bad. Because they were built for aesthetics rather than performance — slow to load, structurally unclear, technically incomplete, and impossible to update without calling a developer.
+                </p>
+                <p className="text-body text-mid-grey leading-relaxed text-pretty">
+                  We build differently. Every site and application we deliver is architecturally deliberate, conversion-optimised from the first wireframe, technically complete on delivery, and designed to perform commercially for years — not months.
+                </p>
+                <div className="bg-ivory border-l-4 border-gold p-6 rounded-r mt-8">
+                  <p className="font-sans text-[16px] text-ink leading-relaxed font-medium">
+                    Architecture decisions made at build time define your ceiling. We make them with that in mind.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── THE PROBLEM IT SOLVES ── */}
-      <section className="bg-ivory py-20 border-b border-light-grey">
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5 flex flex-col justify-between">
-              <div>
-                <span className="eyebrow">THE FRICTION</span>
-                <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
-                  The Problem It Solves
-                </h2>
-                <hr className="gold-rule mb-8" />
-              </div>
-              <div className="bg-white border border-light-grey rounded-lg p-8 shadow-card mb-8 lg:mb-0">
-                <p className="font-display font-bold text-[20px] text-ink leading-snug mb-3">
-                  A Website &amp; Application Development build eliminates all four problems simultaneously.
-                </p>
-                <div className="w-12 h-1 bg-royal mt-4"></div>
-              </div>
+              <Reveal>
+                <div>
+                  <span className="eyebrow">THE FRICTION</span>
+                  <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
+                    The Problem It Solves
+                  </h2>
+                  <hr className="gold-rule mb-8" />
+                </div>
+                <div className="bg-white border border-light-grey rounded p-8 shadow-card mb-8 lg:mb-0">
+                  <p className="font-display font-bold text-[20px] text-ink leading-snug mb-3">
+                    A Website &amp; Application Development build eliminates all four problems simultaneously.
+                  </p>
+                  <div className="w-12 h-1 bg-gold mt-4"></div>
+                </div>
+              </Reveal>
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {problems.map((prob, i) => (
-                <div
-                  key={prob.title}
-                  className="bg-white border border-light-grey rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-200"
-                >
-                  <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-3 block">
-                    0{i + 1}
-                  </span>
-                  <h3 className="font-display font-bold text-[17px] text-ink leading-snug mb-2">
-                    {prob.title}
-                  </h3>
-                  <p className="font-sans text-[14px] text-mid-grey leading-relaxed">
-                    {prob.description}
-                  </p>
-                </div>
+                <Reveal key={prob.title} delay={i * 50}>
+                  <div className="bg-white border border-light-grey rounded p-6 shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
+                    <span className="font-display font-bold text-[13px] text-gold tracking-widest mb-3 block">
+                      0{i + 1}
+                    </span>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3">
+                      {prob.title}
+                    </h3>
+                    <p className="text-body text-mid-grey">
+                      {prob.description}
+                    </p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -486,152 +487,122 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* ── WHAT'S INCLUDED ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">THE CAPABILITIES</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              What&apos;s Included
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">THE CAPABILITIES</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                What&apos;s Included
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {includedFeatures.map((feat) => (
-              <article
-                key={feat.title}
-                className="bg-ivory border border-light-grey rounded-lg p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
-              >
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="p-2 bg-white rounded border border-light-grey shadow-sm">
-                    {feat.icon}
+            {includedFeatures.map((feat, i) => (
+              <Reveal key={feat.title} delay={i * 30}>
+                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="p-2 bg-white rounded border border-light-grey shadow-sm">
+                      {feat.icon}
+                    </div>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">
+                      {feat.title}
+                    </h3>
                   </div>
-                  <h3 className="font-display font-bold text-[16px] text-ink leading-snug">
-                    {feat.title}
-                  </h3>
-                </div>
-                <ul className="space-y-3">
-                  {feat.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2.5 font-sans text-[13.5px] text-mid-grey leading-relaxed"
-                    >
-                      <span
-                        className="mt-[7px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold"
-                        aria-hidden="true"
-                      />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </article>
+                  <ul className="space-y-3 flex-1">
+                    {feat.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
+                        <span className="text-body text-mid-grey text-pretty">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── HOW IT WORKS (TIMELINE) ── */}
-      <section className="bg-ivory py-20 border-b border-light-grey">
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">PROCESS</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              How It Works
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">PROCESS</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                How It Works
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
-
-          <div className="max-w-4xl mx-auto relative pl-8 border-l-2 border-gold/30 space-y-10">
-            {timelineSteps.map((step, i) => (
-              <div key={step.title} className="relative group">
-                <span className="absolute -left-[38px] top-1.5 w-4.5 h-4.5 rounded-full border-4 border-ivory bg-gold flex items-center justify-center shadow-sm" />
-                <div className="bg-white border border-light-grey rounded-lg p-6 md:p-8 shadow-card group-hover:shadow-card-hover transition-all duration-200">
-                  <div className="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-                    <span className="font-display font-bold text-[13px] text-gold tracking-[1px] uppercase">
-                      {step.phase}
-                    </span>
-                    <span className="font-display font-semibold text-[11px] text-mid-grey/60">
-                      Phase 0{i + 1}
-                    </span>
-                  </div>
-                  <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="font-sans text-[15px] text-mid-grey leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProcessTimeline steps={timelineSteps} />
         </div>
       </section>
 
       {/* ── TECHNOLOGY STACK ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">TECHNOLOGY STACK</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              Technology We Work With
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">TECHNOLOGY STACK</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                Technology We Work With
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            {technologyStack.map((stack) => (
-              <div
-                key={stack.category}
-                className="bg-ivory border border-light-grey rounded-lg p-6 shadow-sm hover:shadow-card transition-shadow duration-150"
-              >
-                <h3 className="font-display font-bold text-[15px] text-gold uppercase tracking-[1px] mb-4">
-                  {stack.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {stack.techs.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-white border border-light-grey text-ink font-sans text-xs font-semibold rounded px-3 py-1.5"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+            {technologyStack.map((stack, i) => (
+              <Reveal key={stack.category} delay={i * 30}>
+                <div className="bg-ivory border border-light-grey rounded p-6 shadow-sm hover:shadow-card transition-shadow duration-300 h-full">
+                  <h3 className="font-display font-bold text-[14px] text-gold uppercase tracking-widest mb-4">
+                    {stack.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {stack.techs.map((tech) => (
+                      <span key={tech} className="bg-white border border-light-grey text-ink font-sans text-[13px] font-medium rounded px-3 py-1.5">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── WHAT SEPARATES A TBC BUILD ── */}
-      <section className="bg-ink text-white py-20 border-b-2 border-gold">
+      <section className="bg-ink text-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
-              <span className="eyebrow text-gold">THE DIFFERENCE</span>
-              <h2 className="font-display font-bold text-[clamp(28px,3.5vw,38px)] text-white leading-[1.15] mb-6">
-                What Separates a TBC Build
-              </h2>
-              <hr className="gold-rule mb-8" />
+              <Reveal>
+                <span className="eyebrow text-gold">THE DIFFERENCE</span>
+                <h2 className="font-display font-bold text-[clamp(28px,3.5vw,38px)] text-white leading-[1.15] mb-6">
+                  What Separates a TBC Build
+                </h2>
+                <hr className="gold-rule mb-8" />
+              </Reveal>
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {tbcSeparators.map((sep) => (
-                <div
-                  key={sep.title}
-                  className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-colors duration-150"
-                >
-                  <div className="flex items-center gap-2 mb-3 text-gold">
-                    <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <h3 className="font-display font-bold text-[15px] tracking-wide text-white leading-snug">
-                      {sep.title}
-                    </h3>
+              {tbcSeparators.map((sep, i) => (
+                <Reveal key={sep.title} delay={i * 30}>
+                  <div className="bg-white/5 border border-white/10 rounded p-6 hover:bg-white/10 transition-colors duration-300 h-full">
+                    <div className="flex items-center gap-3 mb-4 text-gold">
+                      <h3 className="font-display font-bold text-[18px] tracking-wide text-white leading-snug">
+                        {sep.title}
+                      </h3>
+                    </div>
+                    <p className="text-body text-white/60">
+                      {sep.description}
+                    </p>
                   </div>
-                  <p className="font-sans text-[13.5px] text-white/60 leading-relaxed">
-                    {sep.description}
-                  </p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -639,97 +610,98 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* ── WHO THIS IS FOR ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">TARGET AUDIENCE</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              Who This Is For
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">TARGET AUDIENCE</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                Who This Is For
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {targetAudience.map((audience) => (
-              <article
-                key={audience.title}
-                className="bg-ivory border border-light-grey rounded-lg p-8 shadow-card hover:shadow-card-hover transition-shadow duration-200"
-              >
-                <span className="font-display font-bold text-[11px] text-gold tracking-[1px] uppercase block mb-1">
-                  {audience.subtitle}
-                </span>
-                <h3 className="font-display font-bold text-[17px] text-ink leading-snug mb-3">
-                  {audience.title}
-                </h3>
-                <hr className="gold-rule mb-4" />
-                <p className="font-sans text-[14px] text-mid-grey leading-relaxed">
-                  {audience.description}
-                </p>
-              </article>
+            {targetAudience.map((audience, i) => (
+              <Reveal key={audience.title} delay={i * 50}>
+                <article className="bg-white border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-shadow duration-300 h-full">
+                  <span className="font-display font-bold text-[11px] text-gold tracking-widest uppercase block mb-2">
+                    {audience.subtitle}
+                  </span>
+                  <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-4">
+                    {audience.title}
+                  </h3>
+                  <hr className="gold-rule mb-5" />
+                  <p className="text-body text-mid-grey">
+                    {audience.description}
+                  </p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── FREQUENTLY ASKED QUESTIONS ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">FAQ</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              Frequently Asked Questions
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">FAQ</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                Frequently Asked Questions
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-2">
+          <div className="max-w-3xl mx-auto space-y-3">
             {faqs.map((faq, i) => (
-              <details
-                key={i}
-                className="group border border-light-grey rounded-lg bg-ivory/20 [&_summary::-webkit-details-marker]:hidden"
-              >
-                <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[16px] md:text-[17px] hover:bg-ivory/50 select-none rounded-t-lg transition-colors">
-                  <span>{faq.q}</span>
-                  <span className="text-gold group-open:rotate-180 transition-transform duration-200">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </span>
-                </summary>
-                <div className="p-6 pt-0 border-t border-light-grey/40 font-sans text-[15px] text-mid-grey leading-relaxed bg-white rounded-b-lg">
-                  {faq.a}
-                </div>
-              </details>
+              <Reveal key={i} delay={i * 30}>
+                <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
+                    <span>{faq.q}</span>
+                    <span className="text-gold group-open:rotate-180 transition-transform duration-300">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b">
+                    {faq.a}
+                  </div>
+                </details>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
-      <section className="bg-ink text-white py-20 text-center">
+      <SectionInk className="text-center" aria-labelledby="web-cta-heading">
         <div className="container-tbc">
-          <span className="eyebrow text-gold">ENGAGEMENT MODEL</span>
-          <hr className="gold-rule gold-rule--center mb-8" />
-          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] max-w-3xl mx-auto mb-6">
-            Ready to build your competitive digital presence?
-          </h2>
-          <div className="max-w-2xl mx-auto text-white/70 font-sans text-[16px] leading-relaxed space-y-4 mb-10">
-            <p>
-              Website and application projects are scoped individually. Every business has different requirements, and we do not believe in fixed-price packages that force your needs into a predetermined box.
-            </p>
-            <p>
-              The process begins with a consultation — typically 45 minutes. We understand your objectives, your current situation, and your constraints. A detailed proposal covering scope, timeline, technology, and investment is delivered within 48 hours.
-            </p>
-            <p className="font-medium text-gold">
-              There is no obligation after the consultation. We will tell you clearly what is required to achieve what you are trying to achieve — and what it will cost.
-            </p>
-          </div>
-          <Link href="/book-consultation" className="btn-gold px-10 py-4.5 text-[16px]">
-            Request a Consultation &rarr;
-          </Link>
-          <hr className="gold-rule gold-rule--center mt-12" />
+          <Reveal>
+            <h2 id="web-cta-heading" className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] max-w-3xl mx-auto mb-6">
+              Ready to build your competitive digital presence?
+            </h2>
+            <div className="max-w-2xl mx-auto text-white/70 text-body space-y-4 mb-10 text-pretty">
+              <p>
+                Website and application projects are scoped individually. Every business has different requirements, and we do not believe in fixed-price packages that force your needs into a predetermined box.
+              </p>
+              <p>
+                The process begins with a consultation — typically 45 minutes. We understand your objectives, your current situation, and your constraints. A detailed proposal covering scope, timeline, technology, and investment is delivered within 48 hours.
+              </p>
+              <p className="font-medium text-gold">
+                There is no obligation after the consultation. We will tell you clearly what is required to achieve what you are trying to achieve — and what it will cost.
+              </p>
+            </div>
+            <Link href="/book-consultation" className="btn-gold px-10 py-4.5 text-[16px]">
+              Request a Consultation →
+            </Link>
+          </Reveal>
         </div>
-      </section>
+      </SectionInk>
     </>
   );
 }

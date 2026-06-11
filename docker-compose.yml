@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=file:/app/data/prod.db
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - CRON_SECRET=${CRON_SECRET}
+    volumes:
+      - tbc_data:/app/data
+
+volumes:
+  tbc_data:

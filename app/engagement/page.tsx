@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
+import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Engagement Model & Pricing",
+  title: "Engagement Model & Pricing | Turbo Bytes Consulting",
   description:
     "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
   alternates: {
     canonical: "/engagement",
   },
   openGraph: {
-    title: "Engagement Model & Pricing",
+    title: "Engagement Model & Pricing | Turbo Bytes Consulting",
     description:
       "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
     url: "https://turbobytesconsulting.com/engagement",
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Engagement Model & Pricing",
+    title: "Engagement Model & Pricing | Turbo Bytes Consulting",
     description:
       "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
   },
@@ -95,177 +97,194 @@ const processSteps = [
 export default function EngagementPage() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="bg-ink py-24" aria-labelledby="engagement-hero-heading">
-        <div className="container-tbc">
-          <span className="eyebrow">Engagement</span>
-          <h1
-            id="engagement-hero-heading"
-            className="font-display font-bold text-h1 text-white mb-6 text-balance"
-            style={{ maxWidth: "700px" }}
-          >
-            Structured around outcomes, not hours.
-          </h1>
-          <p
-            className="font-sans text-body-lg text-white/70"
-            style={{ maxWidth: "620px" }}
-          >
-            We define what success looks like at the outset of every
-            engagement, and we structure our work around achieving it.
-          </p>
+      {/* ── BREADCRUMB ── */}
+      <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
+        <div className="container-tbc py-3">
+          <ol className="flex items-center gap-2 font-sans text-[13px] text-mid-grey">
+            <li>
+              <Link href="/" className="hover:text-ink transition-colors duration-150">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-light-grey select-none">
+              /
+            </li>
+            <li className="text-ink font-semibold">
+              Engagement Model
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* ── HERO ── */}
+      <section className="bg-ink py-s7 relative overflow-hidden min-h-[350px] flex items-center border-b border-light-grey">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-ink via-ink to-royal/20" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
+        </div>
+
+        <div className="container-tbc relative z-10">
+          <Reveal>
+            <span className="eyebrow text-gold">ENGAGEMENT</span>
+            <hr className="gold-rule mb-6" />
+            <h1 className="font-display font-bold text-white text-[clamp(32px,4.5vw,48px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-5">
+              Structured around outcomes, not hours.
+            </h1>
+            <p className="font-sans text-[17px] text-white/70 leading-relaxed max-w-2xl">
+              We define what success looks like at the outset of every
+              engagement, and we structure our work around achieving it.
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      {/* ── Consulting Tiers ── */}
-      <section className="bg-ivory py-20" aria-labelledby="consulting-tiers-heading">
+      {/* ── CONSULTING TIERS ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="consulting-tiers-heading">
         <div className="container-tbc">
-          <span className="eyebrow">Consulting Tiers</span>
-          <h2
-            id="consulting-tiers-heading"
-            className="section-heading font-display font-bold mb-12"
-          >
-            Three ways to engage.
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            {pricingTiers.map((tier) => (
-              <article
-                key={tier.tier}
-                className={`rounded-lg flex flex-col ${
-                  tier.featured
-                    ? "bg-royal text-white shadow-card-hover"
-                    : "bg-white border border-light-grey text-ink shadow-card"
-                }`}
-              >
-                <div className="p-8 flex flex-col gap-5 flex-1">
-                  {/* Tier name */}
-                  <div>
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">CONSULTING TIERS</span>
+              <h2 id="consulting-tiers-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                Three ways to engage.
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+            {pricingTiers.map((tier, i) => (
+              <Reveal key={tier.tier} delay={i * 30}>
+                <article
+                  className={`rounded-[8px] flex flex-col h-full ${
+                    tier.featured
+                      ? "bg-ink text-white shadow-card-hover relative overflow-hidden"
+                      : "bg-white border border-light-grey text-ink shadow-card"
+                  }`}
+                >
+                  {tier.featured && (
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none" />
+                  )}
+
+                  <div className={`p-8 flex flex-col gap-6 flex-1 relative z-10 ${tier.featured ? "border border-royal-light/20 rounded-[8px]" : ""}`}>
+                    {/* Tier name */}
+                    <div>
+                      <p className="font-display font-bold text-[12px] tracking-[1.5px] uppercase mb-4 text-gold">
+                        {tier.tier}
+                      </p>
+                      <hr className={tier.featured ? "gold-rule" : "w-12 border-light-grey mb-6"} />
+                    </div>
+
+                    {/* Price + duration */}
+                    <div>
+                      <p
+                        className={`font-display font-bold leading-none mb-2 ${
+                          tier.featured ? "text-white" : "text-ink"
+                        }`}
+                        style={{ fontSize: "36px" }}
+                      >
+                        {tier.price}
+                      </p>
+                      <p
+                        className={`font-sans text-[14px] ${
+                          tier.featured ? "text-white/60" : "text-mid-grey"
+                        }`}
+                      >
+                        {tier.duration}
+                      </p>
+                    </div>
+
+                    {/* Body */}
                     <p
-                      className={`font-display font-bold text-xs tracking-widest uppercase mb-3 ${
-                        tier.featured ? "text-gold" : "text-gold"
+                      className={`font-sans text-[15px] leading-relaxed flex-1 ${
+                        tier.featured ? "text-white/80" : "text-mid-grey"
                       }`}
                     >
-                      {tier.tier}
+                      {tier.body}
                     </p>
-                    <hr
-                      className="gold-rule"
-                      style={{ marginBottom: "20px" }}
-                    />
-                  </div>
 
-                  {/* Price + duration */}
-                  <div>
-                    <p
-                      className={`font-display font-bold leading-none mb-1 ${
-                        tier.featured ? "text-white" : "text-ink"
-                      }`}
-                      style={{ fontSize: "36px" }}
-                    >
-                      {tier.price}
-                    </p>
-                    <p
-                      className={`font-sans text-sm ${
-                        tier.featured ? "text-white/60" : "text-mid-grey"
-                      }`}
-                    >
-                      {tier.duration}
-                    </p>
+                    {/* CTA */}
+                    <div className="mt-6">
+                      <Link
+                        href="/book-consultation"
+                        className={tier.featured ? "btn-gold w-full justify-center" : "btn-primary w-full justify-center"}
+                      >
+                        {tier.cta}
+                      </Link>
+                    </div>
                   </div>
-
-                  {/* Body */}
-                  <p
-                    className={`font-sans text-body leading-relaxed flex-1 ${
-                      tier.featured ? "text-white/80" : "text-mid-grey"
-                    }`}
-                  >
-                    {tier.body}
-                  </p>
-
-                  {/* CTA */}
-                  <div className="mt-4">
-                    <Link
-                      href="/book-consultation"
-                      className={tier.featured ? "btn-gold w-full justify-center" : "btn-primary w-full justify-center"}
-                    >
-                      {tier.cta}
-                    </Link>
-                  </div>
-                </div>
-              </article>
+                </article>
+              </Reveal>
             ))}
           </div>
 
           {/* Disclaimer */}
-          <p className="font-sans text-caption text-mid-grey text-center mt-10 leading-relaxed" style={{ maxWidth: "760px", margin: "40px auto 0" }}>
-            All other service engagements (Social Media Management, Web
-            Development, Custom LLM, Slate, AI Training) are priced on a
-            project and retainer basis, scoped after an initial consultation. A
-            detailed proposal is delivered within 48 hours of the discovery
-            call.
-          </p>
+          <Reveal delay={150}>
+            <p className="font-sans text-[14px] text-mid-grey text-center leading-relaxed max-w-3xl mx-auto mt-12 bg-white/50 px-6 py-4 rounded-[8px] border border-light-grey">
+              <strong>Note:</strong> All other service engagements (Social Media Management, Web
+              Development, Custom LLM, Slate, AI Training) are priced on a
+              project and retainer basis, scoped after an initial consultation. A
+              detailed proposal is delivered within 48 hours of the discovery
+              call.
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      {/* ── How We Work ── */}
-      <section className="bg-white py-16" aria-labelledby="process-heading">
+      {/* ── HOW WE WORK ── */}
+      <section className="bg-white py-s7 border-b border-light-grey" aria-labelledby="process-heading">
         <div className="container-tbc">
-          <span className="eyebrow">How We Work</span>
-          <h2
-            id="process-heading"
-            className="section-heading font-display font-bold mb-12"
-          >
-            From first conversation to final outcome.
-          </h2>
+          <Reveal>
+            <span className="eyebrow">HOW WE WORK</span>
+            <h2 id="process-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+              From first conversation to final outcome.
+            </h2>
+            <hr className="gold-rule mb-12" />
+          </Reveal>
+
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
-              <li key={step.step} className="flex flex-col gap-4">
-                <div className="flex items-center gap-3">
-                  <span
-                    className="font-display font-bold text-gold text-sm tracking-widest"
-                    aria-hidden="true"
-                  >
-                    {step.step}
-                  </span>
-                  {index < processSteps.length - 1 && (
-                    <span
-                      className="hidden lg:block flex-1 h-px bg-light-grey"
-                      aria-hidden="true"
-                    />
-                  )}
-                </div>
-                <hr className="gold-rule" />
-                <h3 className="font-display font-semibold text-ink" style={{ fontSize: "17px" }}>
-                  {step.title}
-                </h3>
-                <p className="font-sans text-body text-mid-grey leading-relaxed">
-                  {step.description}
-                </p>
-              </li>
+              <Reveal key={step.step} delay={index * 30}>
+                <li className="flex flex-col gap-5">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-ivory border border-light-grey flex items-center justify-center shadow-sm">
+                      <span className="font-display font-bold text-gold text-[13px] tracking-widest" aria-hidden="true">
+                        {step.step}
+                      </span>
+                    </div>
+                    {index < processSteps.length - 1 && (
+                      <span className="hidden lg:block flex-1 h-px bg-light-grey" aria-hidden="true" />
+                    )}
+                  </div>
+                  <h3 className="font-display font-bold text-[18px] text-ink">
+                    {step.title}
+                  </h3>
+                  <p className="font-sans text-[15px] text-mid-grey leading-relaxed text-pretty">
+                    {step.description}
+                  </p>
+                </li>
+              </Reveal>
             ))}
           </ol>
         </div>
       </section>
 
-      {/* ── CTA Band ── */}
-      <section className="bg-royal py-16" aria-labelledby="engagement-cta-heading">
-        <div className="container-tbc text-center">
-          <h2
-            id="engagement-cta-heading"
-            className="font-display font-bold text-h2 text-white mb-4 text-balance"
-          >
-            Begin with a discovery call.
-          </h2>
-          <p
-            className="font-sans text-body text-white/70 mb-8"
-            style={{ maxWidth: "480px", margin: "0 auto 2rem" }}
-          >
-            30 minutes. No obligation. We will tell you honestly whether and
-            how we can help.
-          </p>
-          <Link href="/book-consultation" className="btn-gold">
-            Book a Discovery Call
-          </Link>
+      {/* ── CTA BAND ── */}
+      <SectionInk className="text-center" aria-labelledby="engagement-cta-heading">
+        <div className="container-tbc">
+          <Reveal>
+            <h2 id="engagement-cta-heading" className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] mb-6 text-balance">
+              Begin with a discovery call.
+            </h2>
+            <p className="text-body text-white/70 max-w-lg mx-auto mb-10 text-pretty">
+              30 minutes. No obligation. We will tell you honestly whether and
+              how we can help.
+            </p>
+            <Link href="/book-consultation" className="btn-gold px-10 py-4.5 text-[16px]">
+              Book a Discovery Call →
+            </Link>
+          </Reveal>
         </div>
-      </section>
+      </SectionInk>
     </>
   );
 }

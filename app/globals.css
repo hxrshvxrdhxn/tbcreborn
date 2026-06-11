@@ -156,6 +156,9 @@
   .text-balance {
     text-wrap: balance;
   }
+  .measure-68 {
+    max-width: 68ch;
+  }
 }
 
 /* ── MICRO-ANIMATIONS ── */

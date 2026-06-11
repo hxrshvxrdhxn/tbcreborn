@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import Reveal from "@/components/Reveal";
+import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
   title: "AI Training & Automation Workshops",
@@ -13,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Hands-on AI training and automation workshops for business teams. Custom programmes, action plans, and measurable outcomes. Turbo Bytes Consulting.",
     url: "https://turbobytesconsulting.com/services/ai-training",
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
@@ -109,184 +112,174 @@ export default function AITrainingPage() {
   return (
     <>
       {/* ── Breadcrumb ── */}
-      <nav aria-label="Breadcrumb" className="bg-ink border-b border-white/10">
+      <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 text-xs font-sans text-white/50">
+          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
             <li>
-              <Link href="/" className="hover:text-white/80 transition-colors">
-                Home
-              </Link>
+              <Link href="/" className="hover:text-ink transition-colors">Home</Link>
             </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
+            <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li>
-              <Link href="/services" className="hover:text-white/80 transition-colors">
-                Services
-              </Link>
+              <Link href="/services" className="hover:text-ink transition-colors">Services</Link>
             </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li className="text-white/80" aria-current="page">
-              AI Capability Building
-            </li>
+            <li aria-hidden="true" className="text-light-grey select-none">/</li>
+            <li className="text-ink font-bold" aria-current="page">AI Capability Building</li>
           </ol>
         </div>
       </nav>
 
-      {/* ── Hero ── */}
-      <section className="bg-ink text-white py-24" aria-labelledby="ai-training-hero-heading">
-        <div className="container-tbc">
-          <p className="font-display font-bold text-gold text-sm tracking-widest uppercase mb-4">
-            Practice 02
-          </p>
-          <h1
-            id="ai-training-hero-heading"
-            className="font-display font-bold text-h1 text-white mb-6 text-balance"
-            style={{ maxWidth: "760px" }}
-          >
-            AI Capability Building &amp; Automation
-          </h1>
-          <p
-            className="font-sans text-body-lg text-white/70 mb-8"
-            style={{ maxWidth: "600px" }}
-          >
-            Organisations that understand AI use it better. We build that
-            understanding.
-          </p>
-          <div className="inline-flex items-center gap-3 border border-gold/40 rounded px-5 py-3">
-            <span className="block w-2 h-2 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
-            <span className="font-display font-semibold text-gold text-sm tracking-wide">
-              Sessions bookable with 5 business days notice
-            </span>
-          </div>
+      {/* ── PAGE HERO ── */}
+      <section className="relative bg-ink overflow-hidden min-h-[400px] flex items-center border-b border-light-grey" aria-labelledby="ai-training-hero-heading">
+        {/* Full-bleed background image band */}
+        <div className="absolute inset-0 z-0">
+          <Image src="/img/hero-service-ai-training.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
+        </div>
+
+        <div className="container-tbc py-s6 relative z-10">
+          <Reveal>
+            <span className="eyebrow text-gold">PRACTICE 02</span>
+            <hr className="gold-rule mb-6" />
+            <h1 id="ai-training-hero-heading" className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
+              AI Capability Building &amp;<br />Automation Workshops
+            </h1>
+            <p className="text-body text-white/70 leading-relaxed max-w-3xl mb-8 text-pretty">
+              Organisations that understand AI use it better. We build that understanding.
+            </p>
+            <div className="inline-flex flex-wrap items-center gap-3 bg-white/10 backdrop-blur border border-white/20 rounded px-4 py-3 shadow-sm">
+              <span className="w-2.5 h-2.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
+              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">
+                Sessions bookable with 5 business days notice
+              </span>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── Curriculum ── */}
-      <section className="bg-ivory py-16" aria-labelledby="curriculum-heading">
+      <section className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="curriculum-heading">
         <div className="container-tbc">
-          <span className="eyebrow">What We Teach</span>
-          <h2
-            id="curriculum-heading"
-            className="section-heading font-display font-bold mb-12"
-          >
-            A curriculum built around your tools, your team, and your goals.
-          </h2>
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">What We Teach</span>
+              <h2 id="curriculum-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                A curriculum built around your tools, your team, and your goals.
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
+          </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {curriculumItems.map((item) => (
-              <article
-                key={item.number}
-                className="bg-white border border-light-grey rounded-lg p-8 shadow-card hover:shadow-card-hover transition-shadow duration-300"
-              >
-                <span
-                  className="font-display font-bold text-gold/60 text-sm tracking-widest mb-3 block"
-                  aria-hidden="true"
-                >
-                  {item.number}
-                </span>
-                <hr className="gold-rule mb-5" />
-                <h3 className="font-display font-bold text-h3 text-ink mb-3">
-                  {item.title}
-                </h3>
-                <p className="font-sans text-body text-mid-grey leading-relaxed">
-                  {item.description}
-                </p>
-              </article>
+            {curriculumItems.map((item, i) => (
+              <Reveal key={item.number} delay={i * 50}>
+                <article className="bg-white border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-shadow duration-300 h-full">
+                  <span className="font-display font-bold text-gold/60 text-[13px] tracking-widest mb-3 block" aria-hidden="true">
+                    {item.number}
+                  </span>
+                  <hr className="gold-rule mb-5" />
+                  <h3 className="font-display font-bold text-[18px] text-ink mb-3 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-body text-mid-grey text-pretty">
+                    {item.description}
+                  </p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── Delivery Formats ── */}
-      <section className="bg-white py-12" aria-labelledby="delivery-formats-heading">
+      <section className="bg-white py-s7 border-b border-light-grey" aria-labelledby="delivery-formats-heading">
         <div className="container-tbc">
-          <span className="eyebrow">Delivery Formats</span>
-          <h2
-            id="delivery-formats-heading"
-            className="section-heading font-display font-bold mb-10"
-          >
-            Training delivered the way your organisation works.
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {deliveryFormats.map((format) => (
-              <div key={format.title} className="flex flex-col gap-4">
-                <div className="text-royal" aria-hidden="true">
-                  {format.icon}
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">Delivery Formats</span>
+              <h2 id="delivery-formats-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                Training delivered the way your organisation works.
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {deliveryFormats.map((format, i) => (
+              <Reveal key={format.title} delay={i * 50}>
+                <div className="flex flex-col gap-4 h-full">
+                  <div className="text-gold" aria-hidden="true">
+                    {format.icon}
+                  </div>
+                  <h3 className="font-display font-bold text-[17px] text-ink leading-snug">
+                    {format.title}
+                  </h3>
+                  <p className="text-body text-mid-grey">
+                    {format.description}
+                  </p>
                 </div>
-                <h3 className="font-display font-semibold text-ink" style={{ fontSize: "17px" }}>
-                  {format.title}
-                </h3>
-                <p className="font-sans text-body text-mid-grey leading-relaxed">
-                  {format.description}
-                </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── AI Action Plan ── */}
-      <section
-        className="py-12"
-        style={{ backgroundColor: "#FFF8E1" }}
-        aria-labelledby="action-plan-heading"
-      >
+      <section className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="action-plan-heading">
         <div className="container-tbc">
-          <div
-            className="bg-white border border-gold/30 rounded-lg p-10 shadow-card"
-            style={{ maxWidth: "860px" }}
-          >
-            <span className="eyebrow">Programme Deliverable</span>
-            <h2
-              id="action-plan-heading"
-              className="font-display font-bold text-h2 text-ink mb-5"
-            >
-              Every programme concludes with an AI Action Plan.
-            </h2>
-            <p className="font-sans text-body-lg text-ink leading-relaxed">
-              Every programme we deliver concludes with an organisation-specific
-              AI Action Plan — automation opportunities ranked by impact,
-              recommended tools, and projected outcomes. Your team leaves with
-              both the knowledge and the roadmap to act immediately.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              {[
-                "Automation opportunities ranked by impact",
-                "Recommended tools and stack",
-                "Projected outcomes and timelines",
-              ].map((point) => (
-                <span
-                  key={point}
-                  className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-ink font-sans text-sm font-medium rounded px-4 py-2"
-                >
-                  <span className="block w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
-                  {point}
-                </span>
-              ))}
+          <Reveal>
+            <div className="bg-white border border-light-grey rounded p-10 shadow-card max-w-4xl mx-auto relative overflow-hidden">
+              {/* Subtle gold accent line */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gold"></div>
+              
+              <span className="eyebrow">Programme Deliverable</span>
+              <h2 id="action-plan-heading" className="font-display font-bold text-[clamp(26px,3vw,32px)] text-ink mb-5 leading-[1.2] text-balance">
+                Every programme concludes with an AI Action Plan.
+              </h2>
+              <p className="text-body text-mid-grey mb-8 text-pretty">
+                Every programme we deliver concludes with an organisation-specific
+                AI Action Plan — automation opportunities ranked by impact,
+                recommended tools, and projected outcomes. Your team leaves with
+                both the knowledge and the roadmap to act immediately.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                {[
+                  "Automation opportunities ranked by impact",
+                  "Recommended tools and stack",
+                  "Projected outcomes and timelines",
+                ].map((point, i) => (
+                  <div key={i} className="flex-1 bg-ivory border border-light-grey rounded p-4 flex flex-col gap-3">
+                    <span className="w-6 h-6 rounded-full bg-gold/10 text-gold flex items-center justify-center font-display font-bold text-[11px]">
+                      {i + 1}
+                    </span>
+                    <span className="font-sans text-[14px] text-ink font-medium leading-tight">
+                      {point}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── CTA Band ── */}
-      <section className="bg-royal py-16" aria-labelledby="ai-training-cta-heading">
-        <div className="container-tbc text-center">
-          <h2
-            id="ai-training-cta-heading"
-            className="font-display font-bold text-h2 text-white mb-4 text-balance"
-          >
-            Ready to build your team&apos;s AI capability?
-          </h2>
-          <p
-            className="font-sans text-body text-white/70 mb-8"
-            style={{ maxWidth: "520px", margin: "0 auto 2rem" }}
-          >
-            Every programme is scoped around your specific tools, team, and
-            objectives. Discovery calls are complimentary.
-          </p>
-          <Link href="/book-consultation" className="btn-gold">
-            Book a Discovery Call
-          </Link>
+      <SectionInk className="text-center" aria-labelledby="ai-training-cta-heading">
+        <div className="container-tbc">
+          <Reveal>
+            <h2 id="ai-training-cta-heading" className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] mb-4 text-balance">
+              Ready to build your team&apos;s AI capability?
+            </h2>
+            <p className="text-body text-white/70 mb-10 text-pretty max-w-2xl mx-auto">
+              Every programme is scoped around your specific tools, team, and
+              objectives. Discovery calls are complimentary.
+            </p>
+            <Link href="/book-consultation" className="btn-gold">
+              Book a Discovery Call
+            </Link>
+          </Reveal>
         </div>
-      </section>
+      </SectionInk>
     </>
   );
 }

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import ServiceCard from "@/components/ServiceCard";
+import SectionInk from "@/components/SectionInk";
+import ProcessTimeline from "@/components/ProcessTimeline";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
@@ -11,9 +15,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Consulting & Strategy | Turbo Bytes Consulting",
     description:
-      "Turbo Bytes Consulting is an AI-native management and technology consultancy. We integrate AI into your marketing, operations, and systems — completely.",
+      "Turbo Bytes Consulting is an AI-native management and technology consultancy.",
     url: "https://turbobytesconsulting.com",
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
@@ -24,6 +28,7 @@ export const metadata: Metadata = {
 };
 
 const localBusinessSchema = {
+  // ... (keep same schema as before)
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Turbo Bytes Consulting",
@@ -34,53 +39,58 @@ const localBusinessSchema = {
   email: "info@turbobytesconsulting.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress:
-      "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
+    streetAddress: "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
     addressLocality: "Greater Noida",
     addressRegion: "Uttar Pradesh",
     addressCountry: "IN",
   },
-  sameAs: [
-    "https://instagram.com/turbobytesconsulting",
-    "https://x.com/social_TBC",
-  ],
 };
 
 const services = [
   {
     number: "01",
-    name: "Custom LLM & On-Premise AI",
-    description:
-      "Your organisation's intelligence layer. Trained on your knowledge.",
+    title: "Custom LLM & On-Premise AI",
+    description: "Your organisation's intelligence layer. Trained on your knowledge.",
     href: "/services/custom-llm",
+    setupTime: "4–8 wks",
+    roi: "60–90 days",
+    imageSrc: "/img/hero-service-llm.png",
   },
   {
     number: "02",
-    name: "AI Capability Building",
-    description:
-      "Organisations that understand AI use it better. We build that understanding.",
+    title: "AI Capability Building",
+    description: "Organisations that understand AI use it better. We build that understanding.",
     href: "/services/ai-training",
+    setupTime: "2–4 wks",
+    roi: "Immediate",
+    imageSrc: "/img/hero-service-ai-training.png",
   },
   {
     number: "03",
-    name: "Website & Application Development",
-    description:
-      "Architecturally sound. Conversion-optimised. Built to perform.",
+    title: "Website & Application Development",
+    description: "Architecturally sound. Conversion-optimised. Built to perform.",
     href: "/services/web-development",
+    setupTime: "6–12 wks",
+    roi: "90 days",
+    imageSrc: "/img/hero-service-web-development.png",
   },
   {
     number: "04",
-    name: "Social Media Management",
-    description:
-      "Precision-engineered content. Platform-native strategy. AI-driven execution.",
+    title: "Social Media Management",
+    description: "Precision-engineered content. Platform-native strategy. AI-driven execution.",
     href: "/services/smm",
+    setupTime: "2 wks",
+    roi: "Ongoing",
+    imageSrc: "/img/hero-service-smm.png",
   },
   {
     number: "05",
-    name: "Slate AI Executive Assistant",
-    description:
-      "Beyond scheduling. Beyond email. A second intelligence for leaders.",
+    title: "Slate AI Executive Assistant",
+    description: "Beyond scheduling. Beyond email. A second intelligence for leaders.",
     href: "/services/slate",
+    setupTime: "1 wk",
+    roi: "Immediate",
+    imageSrc: "/img/hero-service-slate.png",
   },
 ];
 
@@ -102,33 +112,28 @@ const whyTbc = [
 const processSteps = [
   {
     number: "01",
-    name: "Discovery",
-    description:
-      "A focused conversation about your organisation, your challenges, and where AI can have the highest impact. No jargon. No sales process.",
+    title: "Discovery",
+    description: "A focused conversation about your organisation, your challenges, and where AI can have the highest impact. No jargon. No sales process.",
   },
   {
     number: "02",
-    name: "Proposal",
-    description:
-      "A precise written proposal delivered within 48 hours. Scope, methodology, timeline, and investment — all defined.",
+    title: "Proposal",
+    description: "A precise written proposal delivered within 48 hours. Scope, methodology, timeline, and investment — all defined.",
   },
   {
     number: "03",
-    name: "Engagement",
-    description:
-      "Work begins. Integrated with your team, your systems, and your pace. Regular structured updates.",
+    title: "Engagement",
+    description: "Work begins. Integrated with your team, your systems, and your pace. Regular structured updates.",
   },
   {
     number: "04",
-    name: "Delivery",
-    description:
-      "The outcome we defined at the outset is achieved. Documented, measured, and handed over completely.",
+    title: "Delivery",
+    description: "The outcome we defined at the outset is achieved. Documented, measured, and handed over completely.",
   },
   {
     number: "05",
-    name: "Partnership",
-    description:
-      "Many clients continue with an ongoing advisory retainer. We are designed to be a long-term intelligence partner.",
+    title: "Partnership",
+    description: "Many clients continue with an ongoing advisory retainer. We are designed to be a long-term intelligence partner.",
   },
 ];
 
@@ -146,31 +151,45 @@ export default async function HomePage() {
       />
 
       {/* ── 1. HERO ── */}
-      <section className="bg-ink hero-grid relative overflow-hidden">
-        <div className="container-tbc py-28 md:py-36 lg:py-40">
-          <span className="eyebrow text-gold hero-1">TURBO BYTES CONSULTING</span>
-          <hr className="gold-rule mb-8 hero-1" />
-          <h1 className="font-display font-bold text-white text-[clamp(36px,5vw,52px)] leading-[1.1] tracking-[-0.5px] max-w-3xl mb-6 hero-2">
-            The intelligence layer your business has been missing.
-          </h1>
-          <p className="font-sans text-[18px] text-mid-grey leading-relaxed max-w-2xl mb-10 hero-3">
-            Turbo Bytes Consulting is an AI-native consultancy. We integrate
-            artificial intelligence into your marketing, operations, and internal
-            systems — completely, not partially.
-          </p>
-          <div className="flex flex-wrap gap-4 hero-4">
-            <Link href="/book-consultation" className="btn-primary">
-              Request a Consultation
-            </Link>
-            <Link href="/services" className="btn-ghost-gold">
-              Explore Our Services
-            </Link>
+      <section className="relative bg-ink overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+        {/* Mobile image band (shows below content on small screens, hidden on md+) */}
+        <div className="md:hidden relative w-full h-[220px] order-last">
+          <Image src="/img/hero-home.png" alt="" fill className="object-cover object-top opacity-80" priority aria-hidden="true" />
+        </div>
+
+        {/* Desktop full-bleed right half image (hidden on mobile) */}
+        <div className="hidden md:block absolute right-0 top-0 w-1/2 h-full z-0">
+          <Image src="/img/hero-home.png" alt="" fill className="object-cover object-left opacity-90" priority aria-hidden="true" />
+          {/* Gradient fade to blend image into the solid left side */}
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
+        </div>
+
+        <div className="container-tbc py-s7 relative z-10 flex-1 flex flex-col justify-center order-first">
+          <div className="max-w-[620px]">
+            <span className="eyebrow text-gold hero-1">TURBO BYTES CONSULTING</span>
+            <hr className="gold-rule mb-8 hero-1" />
+            <h1 className="font-display font-bold text-white text-[clamp(36px,5vw,52px)] leading-[1.1] tracking-[-0.5px] mb-6 hero-2 text-balance">
+              The intelligence layer your business has been missing.
+            </h1>
+            <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
+              Turbo Bytes Consulting is an AI-native consultancy. We integrate
+              artificial intelligence into your marketing, operations, and internal
+              systems — completely, not partially.
+            </p>
+            <div className="flex flex-wrap gap-4 hero-4">
+              <Link href="/book-consultation" className="btn-primary">
+                Request a Consultation
+              </Link>
+              <Link href="/services" className="btn-ghost-gold">
+                Explore Our Services
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── 2. TRUST BAR ── */}
-      <section className="bg-ivory border-t border-b border-light-grey">
+      <section className="bg-ivory border-y border-light-grey">
         <div className="container-tbc py-4">
           <ul className="flex flex-wrap items-center justify-center gap-x-0 gap-y-2 sm:gap-y-0">
             {[
@@ -179,7 +198,7 @@ export default async function HomePage() {
               "5 Practice Areas",
             ].map((item, i, arr) => (
               <li key={item} className="flex items-center">
-                <span className="font-display font-semibold text-[13px] tracking-[1px] text-ink uppercase">
+                <span className="font-display font-semibold text-caption tracking-[1px] text-ink uppercase">
                   {item}
                 </span>
                 {i < arr.length - 1 && (
@@ -197,16 +216,15 @@ export default async function HomePage() {
       </section>
 
       {/* ── 3. WHO WE ARE ── */}
-      <section className="bg-ivory py-20">
+      <section className="bg-ivory py-s7">
         <div className="container-tbc">
           <Reveal>
             <span className="eyebrow">WHO WE ARE</span>
-            <hr className="gold-rule mb-6" />
-            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-3xl mb-6">
-              Not an agency. Not a software house.<br />A consultancy built for the AI
-              era.
+            <hr className="gold-rule mb-s5" />
+            <h2 className="section-heading mb-6 text-balance">
+              Not an agency. Not a software house.<br />A consultancy built for the AI era.
             </h2>
-            <p className="font-sans text-[17px] text-mid-grey leading-relaxed max-w-2xl mb-14">
+            <p className="text-body text-mid-grey measure-68 mb-14 text-pretty">
               Turbo Bytes Consulting sits at the intersection of strategic
               management consulting and artificial intelligence. We design the
               strategy. We build the technology. We deploy it. We measure it. Our
@@ -215,7 +233,7 @@ export default async function HomePage() {
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 lg:gap-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[
               {
                 label: "We Design",
@@ -231,12 +249,11 @@ export default async function HomePage() {
               },
             ].map((pillar, i) => (
               <Reveal key={pillar.label} delay={i * 80}>
-                <article>
-                  <hr className="gold-rule mb-4" style={{ width: "32px" }} />
+                <article className="bg-white p-6 rounded shadow-card border-t-[3px] border-t-gold border border-x-light-grey border-b-light-grey h-full">
                   <h4 className="font-display font-bold text-[18px] text-ink mb-2">
                     {pillar.label}
                   </h4>
-                  <p className="font-sans text-[15px] text-mid-grey leading-relaxed">
+                  <p className="text-body text-mid-grey">
                     {pillar.body}
                   </p>
                 </article>
@@ -247,64 +264,46 @@ export default async function HomePage() {
       </section>
 
       {/* ── 4. SERVICES ── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-s7 border-y border-light-grey">
         <div className="container-tbc">
           <Reveal>
             <span className="eyebrow">WHAT WE DO</span>
-            <hr className="gold-rule mb-6" />
-            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-12">
+            <hr className="gold-rule mb-s5" />
+            <h2 className="section-heading mb-12 text-balance">
               Five practice areas.<br />One integrated capability.
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 5-card grid (2 up top, 3 below, auto-fits well) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
-              <Reveal key={s.number} delay={i * 60} className="flex">
-                <Link
-                  href={s.href}
-                  className="bg-ivory rounded-[8px] border border-light-grey shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc p-7 flex flex-col w-full group/card"
-                >
-                  <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-4">
-                    {s.number}
-                  </span>
-                  <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-3 group-hover/card:text-royal transition-colors duration-150">
-                    {s.name}
-                  </h3>
-                  <p className="font-sans text-[15px] text-mid-grey leading-relaxed mb-6 flex-1">
-                    {s.description}
-                  </p>
-                  <span
-                    className="font-display font-semibold text-[14px] text-royal group-hover/card:text-royal-mid transition-colors duration-150 inline-flex items-center gap-1"
-                  >
-                    Learn More
-                    <span className="inline-block transition-transform duration-150 group-hover/card:translate-x-1">→</span>
-                  </span>
-                </Link>
+              <Reveal key={s.number} delay={i * 60} className={i < 2 ? "lg:col-span-1" : "lg:col-span-1"}>
+                <ServiceCard {...s} className="h-full" />
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 5. WHY TBC ── */}
-      <section className="bg-ink py-20">
+      {/* ── 5. WHY TBC (Dark Section) ── */}
+      <SectionInk>
         <div className="container-tbc">
           <Reveal>
             <span className="eyebrow text-gold">WHY TBC</span>
-            <hr className="gold-rule mb-6" />
-            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-12">
+            <hr className="gold-rule mb-s5" />
+            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-12 text-balance">
               The rigour of a consultancy.<br />The speed of a technology firm.
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {whyTbc.map((card, i) => (
               <Reveal key={card.title} delay={i * 90}>
                 <article className="border-t-2 border-gold pt-6">
                   <h3 className="font-display font-bold text-[20px] text-white mb-3">
                     {card.title}
                   </h3>
-                  <p className="font-sans text-[15px] text-white/70 leading-relaxed">
+                  <p className="text-body text-white/70 measure-68">
                     {card.body}
                   </p>
                 </article>
@@ -312,57 +311,34 @@ export default async function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </SectionInk>
 
       {/* ── 6. PROCESS ── */}
-      <section className="bg-ivory py-20">
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <Reveal>
             <span className="eyebrow">OUR PROCESS</span>
-            <hr className="gold-rule mb-6" />
-            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-2xl mb-14">
+            <hr className="gold-rule mb-s5" />
+            <h2 className="section-heading mb-14 text-balance">
               A process designed for outcomes,<br />not deliverables.
             </h2>
           </Reveal>
 
           <Reveal>
-          <ol className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 lg:gap-8">
-            {processSteps.map((step, idx) => (
-              <li key={step.number} className="relative flex md:flex-col gap-5 md:gap-4">
-                {/* connector line (desktop) */}
-                {idx < processSteps.length - 1 && (
-                  <span
-                    className="hidden md:block absolute top-5 left-[calc(50%+20px)] right-[-50%] h-px bg-light-grey"
-                    aria-hidden="true"
-                  />
-                )}
-                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-gold flex items-center justify-center font-display font-bold text-[13px] text-ink">
-                  {step.number}
-                </span>
-                <div>
-                  <h3 className="font-display font-bold text-[17px] text-ink mb-2">
-                    {step.name}
-                  </h3>
-                  <p className="font-sans text-[14px] text-mid-grey leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
+            <ProcessTimeline steps={processSteps} />
           </Reveal>
         </div>
       </section>
 
       {/* ── 7. INSIGHT ── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-s7">
         <div className="container-tbc">
           <Reveal>
             <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
               <div>
                 <span className="eyebrow">INSIGHT</span>
-                <hr className="gold-rule mb-4" />
-                <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-ink leading-[1.2] max-w-xl">
+                <hr className="gold-rule mb-s5" />
+                <h2 className="section-heading text-balance">
                   Thinking on AI, strategy, and what comes next.
                 </h2>
               </div>
@@ -379,16 +355,21 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {insightPosts.map((post, i) => (
               <Reveal key={post.slug} delay={i * 70} className="flex">
-                <Link href={`/blog/${post.slug}`} className="bg-ivory rounded-[8px] border border-light-grey hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc p-7 flex flex-col w-full group/card block">
-                  <span className="font-display font-semibold text-[12px] text-royal uppercase tracking-[1.5px] mb-4">
-                    {post.category}
-                  </span>
-                  <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-auto group-hover/card:text-royal transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="font-sans text-[13px] text-mid-grey mt-6">
-                    {post.date} · {post.readTime}
-                  </p>
+                <Link href={`/blog/${post.slug}`} className="bg-white rounded shadow-card border border-light-grey hover:shadow-card-hover hover:-translate-y-1 transition-all duration-tbc flex flex-col w-full overflow-hidden group/card block">
+                  {/* Category swatch tile to avoid pure text card */}
+                  <div className="h-16 bg-ink flex items-center px-6 border-b-[3px] border-gold">
+                    <span className="font-display font-semibold text-caption text-white uppercase tracking-[1.5px]">
+                      {post.category}
+                    </span>
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-auto group-hover/card:text-royal transition-colors text-balance">
+                      {post.title}
+                    </h3>
+                    <p className="font-sans text-caption text-mid-grey mt-6 uppercase tracking-[1px]">
+                      {post.date} · {post.readTime}
+                    </p>
+                  </div>
                 </Link>
               </Reveal>
             ))}
@@ -397,14 +378,14 @@ export default async function HomePage() {
       </section>
 
       {/* ── 8. CTA BAND ── */}
-      <section className="bg-royal py-16 text-center">
+      <section className="bg-royal py-s7 text-center">
         <div className="container-tbc">
           <Reveal>
             <hr className="gold-rule gold-rule--center mb-8" />
-            <h2 className="font-display font-bold text-[clamp(24px,3vw,36px)] text-white leading-[1.2] mb-4">
+            <h2 className="font-display font-bold text-[clamp(24px,3vw,36px)] text-white leading-[1.2] mb-4 text-balance">
               Ready to make AI work for your business?
             </h2>
-            <p className="font-sans text-[17px] text-white/80 mb-10">
+            <p className="text-body text-white/80 mb-10 text-pretty max-w-2xl mx-auto">
               Request a consultation. We will respond within one business day.
             </p>
             <Link href="/book-consultation" className="btn-gold">
@@ -417,3 +398,4 @@ export default async function HomePage() {
     </>
   );
 }
+

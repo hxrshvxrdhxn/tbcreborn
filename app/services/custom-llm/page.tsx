@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import Reveal from "@/components/Reveal";
+import ProcessTimeline from "@/components/ProcessTimeline";
+import { PullStat } from "@/components/StatBlock";
+import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
   title: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting",
@@ -11,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Your organisation's intelligence layer. Train a custom Large Language Model on your company data. Deployed on-premise or in your private cloud. Data never leaves your controlled environment.",
     url: "https://turbobytesconsulting.com/services/custom-llm",
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
@@ -136,34 +141,34 @@ const includedFeatures = [
 
 const timelineSteps = [
   {
-    phase: "Week 1–2",
-    title: "Discovery & Architecture",
-    description:
-      "We audit your existing knowledge assets. Identify what exists, where it lives, what format it is in, and what is missing. We design the knowledge taxonomy and data ingestion architecture. We agree the deployment model — on-premise, private cloud, or hybrid.",
+    number: "01",
+    caption: "Week 1–2",
+    title: "Discovery",
+    description: "Audit knowledge assets, define taxonomy, design ingestion architecture, and agree on deployment model.",
   },
   {
-    phase: "Week 3–4",
-    title: "Ingestion & Preparation",
-    description:
-      "All identified knowledge assets are ingested, cleaned, structured, and prepared for model training. We identify gaps and work with your team to fill them. The training dataset is reviewed and approved before model training begins.",
+    number: "02",
+    caption: "Week 3–4",
+    title: "Ingestion",
+    description: "Knowledge assets are ingested, cleaned, and prepared. Fill critical gaps with your team before training.",
   },
   {
-    phase: "Week 5–6",
-    title: "Model Training & Testing",
-    description:
-      "The model is trained on your prepared knowledge base. Internal testing with representative queries from each team. Accuracy benchmarking. Iterative refinement based on test results.",
+    number: "03",
+    caption: "Week 5–6",
+    title: "Training",
+    description: "Model is trained on your prepared knowledge base. Internal testing and accuracy benchmarking.",
   },
   {
-    phase: "Week 7–8",
-    title: "Deployment & Launch",
-    description:
-      "Deployment to your infrastructure. Access configuration, role-based permissions, and integration with existing tools. Team training — typically two hours per department. Go-live with full monitoring.",
+    number: "04",
+    caption: "Week 7–8",
+    title: "Deployment",
+    description: "Deploy to infrastructure, configure access control, integrate tools, and run team training.",
   },
   {
-    phase: "Ongoing",
-    title: "Continuous Improvement",
-    description:
-      "Monthly check-ins. Quarterly knowledge reviews. Model updates on an agreed schedule. ROI reporting every 30 days.",
+    number: "05",
+    caption: "Ongoing",
+    title: "Improvement",
+    description: "Monthly check-ins, quarterly knowledge reviews, and model updates based on query logs.",
   },
 ];
 
@@ -172,31 +177,31 @@ const targetAudience = [
     title: "Founder-Led & Family Businesses",
     subtitle: "10–200 Employees",
     description:
-      "Where critical knowledge is concentrated in a small number of people and the founder is frequently the single point of failure for decisions that should not require them.",
+      "Where critical knowledge is concentrated in a small number of people and the founder is frequently the single point of failure.",
   },
   {
     title: "Professional Services Firms",
     subtitle: "Law, CA, & Consulting",
     description:
-      "Where deep expertise, regulatory knowledge, and case history are the core product and need to be accessible instantly across the entire team.",
+      "Where deep expertise, regulatory knowledge, and case history are the core product and need to be accessible instantly.",
   },
   {
     title: "Manufacturing & Industrials",
     subtitle: "Operations & Specifications",
     description:
-      "Where product specifications, compliance documentation, and operational procedures are extensive, critical, and frequently misapplied due to inaccessibility.",
+      "Where product specifications, compliance documentation, and operational procedures are extensive and critical.",
   },
   {
     title: "Rapidly Scaling Teams",
     subtitle: "Accelerated Onboarding",
     description:
-      "Growing businesses undergoing rapid hiring where onboarding speed and consistency directly affect sales conversion and client experience.",
+      "Growing businesses undergoing rapid hiring where onboarding speed directly affects client experience.",
   },
   {
     title: "Succession & Transition",
     subtitle: "Preserving Institutional Knowledge",
     description:
-      "Organisations preparing for succession or leadership transition where institutional knowledge needs to be documented, systematised, and made independent of individuals.",
+      "Organisations preparing for succession where institutional knowledge needs to be documented and systematised.",
   },
 ];
 
@@ -225,10 +230,10 @@ const onPremiseProps = [
 
 const resultsTable = [
   { metric: "Onboarding time reduction", range: "60–80%" },
-  { metric: "Internal meetings eliminated", range: "25–40% of recurring knowledge-transfer meetings" },
-  { metric: "Query response time vs. manual search", range: "15 minutes → under 30 seconds" },
-  { metric: "Knowledge base utilisation increase", range: "From 12% to 80%+ of documented assets actively used" },
-  { metric: "ROI timeline", range: "Visible within 60–90 days" },
+  { metric: "Internal meetings eliminated", range: "25–40% reduction" },
+  { metric: "Query response time", range: "Under 30s" },
+  { metric: "Knowledge base utilisation", range: "80%+ active use" },
+  { metric: "ROI timeline", range: "60–90 days" },
 ];
 
 const faqs = [
@@ -269,127 +274,118 @@ export default function CustomLLMPage() {
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 font-sans text-[13px] text-mid-grey">
+          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
             <li>
-              <Link href="/" className="hover:text-ink transition-colors duration-150">
-                Home
-              </Link>
+              <Link href="/" className="hover:text-ink transition-colors duration-150">Home</Link>
             </li>
-            <li aria-hidden="true" className="text-light-grey select-none">
-              /
-            </li>
+            <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li>
-              <Link href="/services" className="hover:text-ink transition-colors duration-150">
-                Services
-              </Link>
+              <Link href="/services" className="hover:text-ink transition-colors duration-150">Services</Link>
             </li>
-            <li aria-hidden="true" className="text-light-grey select-none">
-              /
-            </li>
-            <li className="text-ink font-semibold">
-              Custom LLM &amp; On-Premise AI
-            </li>
+            <li aria-hidden="true" className="text-light-grey select-none">/</li>
+            <li className="text-ink font-bold">Custom LLM</li>
           </ol>
         </div>
       </nav>
 
       {/* ── PAGE HERO ── */}
-      <section className="bg-ivory py-20 border-b border-light-grey">
-        <div className="container-tbc">
-          <span className="font-display font-bold text-[13px] text-gold tracking-[1px] uppercase block mb-4">
-            Practice 01
-          </span>
-          <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-ink leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
-            Custom LLM &amp;<br />On-Premise AI Deployment
-          </h1>
-          <p className="font-sans text-[18px] text-mid-grey leading-relaxed max-w-3xl mb-8">
-            Your organisation&apos;s intelligence layer. Trained on your knowledge.
-            Running on your infrastructure. Data never leaves your controlled
-            environment.
-          </p>
-          <div className="inline-flex flex-wrap items-center gap-3 bg-white border border-light-grey rounded-lg px-4 py-3 shadow-card">
-            <span
-              className="w-2.5 h-2.5 rounded-full bg-gold flex-shrink-0"
-              aria-hidden="true"
-            />
-            <span className="font-display font-semibold text-[13px] text-ink">
-              Setup: 4–8 weeks
-            </span>
-            <span className="text-light-grey">|</span>
-            <span className="font-display font-semibold text-[13px] text-ink">
-              ROI visible within 60–90 days
-            </span>
-            <span className="text-light-grey">|</span>
-            <span className="font-display font-semibold text-[13px] text-ink">
-              Ongoing model updates included
-            </span>
-          </div>
+      <section className="relative bg-ink overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
+        {/* Full-bleed background image band */}
+        <div className="absolute inset-0 z-0">
+          <Image src="/img/hero-service-llm.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
+        </div>
+
+        <div className="container-tbc py-s6 relative z-10">
+          <Reveal>
+            <span className="eyebrow text-gold">PRACTICE 01</span>
+            <hr className="gold-rule mb-6" />
+            <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
+              Custom LLM &amp;<br />On-Premise AI Deployment
+            </h1>
+            <p className="text-body text-white/70 leading-relaxed max-w-3xl mb-8 text-pretty">
+              Your organisation&apos;s intelligence layer. Trained on your knowledge.
+              Running on your infrastructure. Data never leaves your controlled
+              environment.
+            </p>
+            <div className="inline-flex flex-wrap items-center gap-3 bg-white/10 backdrop-blur border border-white/20 rounded px-4 py-3 shadow-sm">
+              <span className="w-2.5 h-2.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
+              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">Setup: 4–8 weeks</span>
+              <span className="text-white/30">|</span>
+              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">ROI: 60–90 days</span>
+              <span className="text-white/30">|</span>
+              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">Ongoing updates included</span>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── WHAT THIS IS ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div className="lg:col-span-4">
-              <span className="eyebrow">OVERVIEW</span>
-              <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
-                What This Is
-              </h2>
-              <hr className="gold-rule" />
+              <Reveal>
+                <span className="eyebrow">OVERVIEW</span>
+                <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
+                  What This Is
+                </h2>
+                <hr className="gold-rule" />
+              </Reveal>
             </div>
             <div className="lg:col-span-8 space-y-6">
-              <p className="font-sans text-[17px] text-mid-grey leading-relaxed">
-                Most organisations have spent years accumulating knowledge — procedures, client histories, compliance frameworks, product specifications, training materials, meeting notes, contracts. That knowledge exists in documents, folders, and email threads that almost nobody reads.
-              </p>
-              <p className="font-sans text-[17px] text-mid-grey leading-relaxed">
-                A Custom LLM transforms that accumulated knowledge into an always-available, instantly-queryable intelligence layer accessible to every member of your team, every hour of the day.
-              </p>
-              <div className="bg-ivory border-l-4 border-gold p-6 rounded-r-lg mt-8">
-                <p className="font-sans text-[16px] text-ink leading-relaxed font-medium">
-                  It is not a chatbot. It is not a generic AI tool with your company name on the login screen. It is a language model trained specifically on your organisation&apos;s knowledge base — deployed on your infrastructure, governed by your policies, and producing answers that reflect your actual expertise.
+              <Reveal delay={100}>
+                <p className="text-body text-mid-grey leading-relaxed text-pretty">
+                  Most organisations have spent years accumulating knowledge — procedures, client histories, compliance frameworks, product specifications, training materials, meeting notes, contracts. That knowledge exists in documents, folders, and email threads that almost nobody reads.
                 </p>
-              </div>
+                <p className="text-body text-mid-grey leading-relaxed text-pretty mt-4">
+                  A Custom LLM transforms that accumulated knowledge into an always-available, instantly-queryable intelligence layer accessible to every member of your team, every hour of the day.
+                </p>
+                <div className="bg-ivory border-l-4 border-gold p-6 rounded-r mt-8 shadow-sm">
+                  <p className="text-body text-ink leading-relaxed font-medium text-balance">
+                    It is not a chatbot. It is not a generic AI tool with your company name on the login screen. It is a language model trained specifically on your organisation&apos;s knowledge base — deployed on your infrastructure, governed by your policies, and producing answers that reflect your actual expertise.
+                  </p>
+                </div>
+              </Reveal>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── THE PROBLEM IT SOLVES ── */}
-      <section className="bg-ivory py-20 border-b border-light-grey">
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5 flex flex-col justify-between">
-              <div>
+              <Reveal>
                 <span className="eyebrow">THE FRICTION</span>
                 <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
                   The Problem It Solves
                 </h2>
                 <hr className="gold-rule mb-8" />
-              </div>
-              <div className="bg-white border border-light-grey rounded-lg p-8 shadow-card mb-8 lg:mb-0">
-                <p className="font-display font-bold text-[20px] text-ink leading-snug mb-3">
-                  A Custom LLM eliminates all four problems simultaneously.
-                </p>
-                <div className="w-12 h-1 bg-royal mt-4"></div>
-              </div>
+                <div className="bg-white border border-light-grey rounded p-8 shadow-card mb-8 lg:mb-0">
+                  <p className="font-display font-bold text-[20px] text-ink leading-snug mb-3">
+                    A Custom LLM eliminates all four problems simultaneously.
+                  </p>
+                  <div className="w-12 h-1 bg-royal mt-4"></div>
+                </div>
+              </Reveal>
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {problems.map((prob, i) => (
-                <div
-                  key={prob.title}
-                  className="bg-white border border-light-grey rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-200"
-                >
-                  <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-3 block">
-                    0{i + 1}
-                  </span>
-                  <h3 className="font-display font-bold text-[17px] text-ink leading-snug mb-2">
-                    {prob.title}
-                  </h3>
-                  <p className="font-sans text-[14px] text-mid-grey leading-relaxed">
-                    {prob.description}
-                  </p>
-                </div>
+                <Reveal key={prob.title} delay={i * 50}>
+                  <div className="bg-white border border-light-grey rounded p-6 shadow-card hover:shadow-card-hover transition-all duration-200 h-full">
+                    <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-3 block">
+                      0{i + 1}
+                    </span>
+                    <h3 className="font-display font-bold text-[17px] text-ink leading-snug mb-2">
+                      {prob.title}
+                    </h3>
+                    <p className="text-body text-mid-grey">
+                      {prob.description}
+                    </p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -397,120 +393,125 @@ export default function CustomLLMPage() {
       </section>
 
       {/* ── WHAT'S INCLUDED ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">THE CAPABILITIES</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              What&apos;s Included
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s5">
+            <Reveal>
+              <span className="eyebrow">THE CAPABILITIES</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                What&apos;s Included
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {includedFeatures.map((feat) => (
-              <article
-                key={feat.title}
-                className="bg-ivory border border-light-grey rounded-lg p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
-              >
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="p-2 bg-white rounded border border-light-grey shadow-sm">
-                    {feat.icon}
+            {includedFeatures.map((feat, i) => (
+              <Reveal key={feat.title} delay={i * 50} className={i >= 3 ? "lg:col-span-1" : ""}>
+                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 h-full">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="p-2 bg-white rounded border border-light-grey shadow-sm">
+                      {feat.icon}
+                    </div>
+                    <h3 className="font-display font-bold text-[17px] text-ink leading-snug">
+                      {feat.title}
+                    </h3>
                   </div>
-                  <h3 className="font-display font-bold text-[17px] text-ink leading-snug">
-                    {feat.title}
-                  </h3>
-                </div>
-                <ul className="space-y-3">
-                  {feat.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2.5 font-sans text-[14px] text-mid-grey leading-relaxed"
-                    >
-                      <span
-                        className="mt-[7px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold"
-                        aria-hidden="true"
-                      />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </article>
+                  <ul className="space-y-3">
+                    {feat.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-body text-mid-grey">
+                        <span className="mt-[7px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── HOW IT WORKS (TIMELINE) ── */}
-      <section className="bg-ivory py-20 border-b border-light-grey">
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">PROCESS</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              How It Works
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s6">
+            <Reveal>
+              <span className="eyebrow">PROCESS</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                How It Works
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
-
-          <div className="max-w-4xl mx-auto relative pl-8 border-l-2 border-gold/30 space-y-10">
-            {timelineSteps.map((step, i) => (
-              <div key={step.title} className="relative group">
-                {/* timeline dot */}
-                <span className="absolute -left-[38px] top-1.5 w-4.5 h-4.5 rounded-full border-4 border-ivory bg-gold flex items-center justify-center shadow-sm" />
-                <div className="bg-white border border-light-grey rounded-lg p-6 md:p-8 shadow-card group-hover:shadow-card-hover transition-all duration-200">
-                  <div className="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-                    <span className="font-display font-bold text-[13px] text-gold tracking-[1px] uppercase">
-                      {step.phase}
-                    </span>
-                    <span className="font-display font-semibold text-[11px] text-mid-grey/60">
-                      Phase 0{i + 1}
-                    </span>
-                  </div>
-                  <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="font-sans text-[15px] text-mid-grey leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          
+          <Reveal>
+            <ProcessTimeline steps={timelineSteps} />
+          </Reveal>
         </div>
       </section>
 
       {/* ── WHY ON-PREMISE MATTERS ── */}
-      <section className="bg-ink text-white py-20 border-b-2 border-gold">
+      <SectionInk>
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
-              <span className="eyebrow text-gold">SECURITY FIRST</span>
-              <h2 className="font-display font-bold text-[clamp(28px,3.5vw,38px)] text-white leading-[1.15] mb-6">
-                Why On-Premise Matters
-              </h2>
-              <hr className="gold-rule mb-8" />
-              <p className="font-sans text-[16px] text-white/70 leading-relaxed mb-8">
-                The alternative to on-premise deployment is sending your organisation&apos;s knowledge — your procedures, your client data, your competitive intelligence — to a third-party cloud. For many organisations, particularly those in financial services, legal, healthcare, manufacturing, or defence-adjacent sectors, this is not a viable option.
-              </p>
+              <Reveal>
+                <span className="eyebrow text-gold">SECURITY FIRST</span>
+                <h2 className="font-display font-bold text-[clamp(28px,3.5vw,38px)] text-white leading-[1.15] mb-6 text-balance">
+                  Why On-Premise Matters
+                </h2>
+                <hr className="gold-rule mb-8" />
+                <p className="text-body text-white/70 leading-relaxed mb-8 text-pretty">
+                  The alternative to on-premise deployment is sending your organisation&apos;s knowledge — your procedures, your client data, your competitive intelligence — to a third-party cloud. For many organisations, particularly those in financial services, legal, healthcare, manufacturing, or defence-adjacent sectors, this is not a viable option.
+                </p>
+              </Reveal>
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {onPremiseProps.map((prop) => (
-                <div
-                  key={prop.title}
-                  className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-colors duration-150"
-                >
-                  <div className="flex items-center gap-2 mb-3 text-gold">
-                    <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <h3 className="font-display font-bold text-[15px] tracking-wide text-white leading-snug">
-                      {prop.title}
-                    </h3>
+              {onPremiseProps.map((prop, i) => (
+                <Reveal key={prop.title} delay={i * 50}>
+                  <div className="bg-white/5 border border-white/10 rounded p-6 hover:bg-white/10 transition-colors duration-150 h-full">
+                    <div className="flex items-center gap-2 mb-3 text-gold">
+                      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <h3 className="font-display font-bold text-[15px] tracking-wide text-white leading-snug">
+                        {prop.title}
+                      </h3>
+                    </div>
+                    <p className="text-body text-white/60 leading-relaxed">
+                      {prop.description}
+                    </p>
                   </div>
-                  <p className="font-sans text-[13.5px] text-white/60 leading-relaxed">
-                    {prop.description}
-                  </p>
-                </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </SectionInk>
+
+      {/* ── RESULTS YOU CAN EXPECT ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-s5">
+              <Reveal>
+                <span className="eyebrow">OUTCOMES</span>
+                <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-4">
+                  Results You Can Expect
+                </h2>
+                <hr className="gold-rule gold-rule--center mb-4" />
+                <p className="text-body text-mid-grey leading-relaxed text-balance">
+                  These are directional benchmarks from comparable deployments. Outcomes vary by organisation size, knowledge base complexity, and usecase constraints.
+                </p>
+              </Reveal>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
+              {resultsTable.map((row, i) => (
+                <Reveal key={row.metric} delay={i * 50} className={i === 4 ? "col-span-2 lg:col-span-1" : ""}>
+                  <PullStat value={row.range} label={row.metric} />
+                </Reveal>
               ))}
             </div>
           </div>
@@ -518,131 +519,101 @@ export default function CustomLLMPage() {
       </section>
 
       {/* ── WHO THIS IS FOR ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">TARGET AUDIENCE</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              Who This Is For
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s5">
+            <Reveal>
+              <span className="eyebrow">TARGET AUDIENCE</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                Who This Is For
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {targetAudience.map((audience) => (
-              <article
-                key={audience.title}
-                className="bg-ivory border border-light-grey rounded-lg p-8 shadow-card hover:shadow-card-hover transition-shadow duration-200"
-              >
-                <span className="font-display font-bold text-[11px] text-gold tracking-[1px] uppercase block mb-1">
-                  {audience.subtitle}
-                </span>
-                <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3">
-                  {audience.title}
-                </h3>
-                <hr className="gold-rule mb-4" />
-                <p className="font-sans text-[14.5px] text-mid-grey leading-relaxed">
-                  {audience.description}
-                </p>
-              </article>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {targetAudience.map((audience, i) => (
+              <Reveal key={audience.title} delay={i * 50}>
+                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-shadow duration-200 h-full">
+                  <span className="font-display font-bold text-caption text-gold tracking-widest uppercase block mb-1">
+                    {audience.subtitle}
+                  </span>
+                  <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3 text-balance">
+                    {audience.title}
+                  </h3>
+                  <hr className="gold-rule mb-4" />
+                  <p className="text-body text-mid-grey text-pretty">
+                    {audience.description}
+                  </p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── RESULTS YOU CAN EXPECT ── */}
-      <section className="bg-ivory py-20 border-b border-light-grey">
-        <div className="container-tbc">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow">OUTCOMES</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-4">
-              Results You Can Expect
-            </h2>
-            <p className="font-sans text-[16px] text-mid-grey leading-relaxed mb-8">
-              These are directional benchmarks from comparable deployments. Outcomes vary by organisation size, knowledge base complexity, and usecase constraints.
-            </p>
-
-            <div className="overflow-x-auto border border-light-grey rounded-lg shadow-card">
-              <table className="w-full text-left border-collapse bg-white">
-                <thead>
-                  <tr className="bg-ink text-white font-display font-semibold text-[13px] tracking-wider uppercase border-b border-light-grey">
-                    <th className="py-4 px-6">Metric</th>
-                    <th className="py-4 px-6">Typical Range</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-light-grey font-sans text-[15px] text-ink">
-                  {resultsTable.map((row) => (
-                    <tr key={row.metric} className="hover:bg-ivory/40 transition-colors">
-                      <td className="py-4 px-6 font-medium">{row.metric}</td>
-                      <td className="py-4 px-6 text-gold font-semibold">{row.range}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── FREQUENTLY ASKED QUESTIONS ── */}
-      <section className="bg-white py-20 border-b border-light-grey">
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">FAQ</span>
-            <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-              Frequently Asked Questions
-            </h2>
-            <hr className="gold-rule gold-rule--center" />
+          <div className="text-center max-w-2xl mx-auto mb-s5">
+            <Reveal>
+              <span className="eyebrow">FAQ</span>
+              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+                Frequently Asked Questions
+              </h2>
+              <hr className="gold-rule gold-rule--center" />
+            </Reveal>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-2">
+          <div className="max-w-3xl mx-auto space-y-3">
             {faqs.map((faq, i) => (
-              <details
-                key={i}
-                className="group border border-light-grey rounded-lg bg-ivory/20 [&_summary::-webkit-details-marker]:hidden"
-              >
-                <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[16px] md:text-[17px] hover:bg-ivory/50 select-none rounded-t-lg transition-colors">
-                  <span>{faq.q}</span>
-                  <span className="text-gold group-open:rotate-180 transition-transform duration-200">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </span>
-                </summary>
-                <div className="p-6 pt-0 border-t border-light-grey/40 font-sans text-[15px] text-mid-grey leading-relaxed bg-white rounded-b-lg">
-                  {faq.a}
-                </div>
-              </details>
+              <Reveal key={i} delay={i * 40}>
+                <details className="group border border-light-grey rounded bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[16px] md:text-[17px] hover:bg-ivory/50 select-none transition-colors">
+                    <span>{faq.q}</span>
+                    <span className="text-gold group-open:rotate-180 transition-transform duration-200 flex-shrink-0 ml-4">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="p-6 pt-0 border-t border-light-grey/20 text-body text-mid-grey bg-white rounded-b">
+                    {faq.a}
+                  </div>
+                </details>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
-      <section className="bg-ink text-white py-20 text-center">
+      <SectionInk className="text-center">
         <div className="container-tbc">
-          <span className="eyebrow text-gold">ENGAGEMENT MODEL</span>
-          <hr className="gold-rule gold-rule--center mb-8" />
-          <h2 className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] max-w-3xl mx-auto mb-6">
-            Ready to deploy your organisation&apos;s intelligence layer?
-          </h2>
-          <div className="max-w-2xl mx-auto text-white/70 font-sans text-[16px] leading-relaxed space-y-4 mb-10">
-            <p>
-              Custom LLM deployments are scoped individually. Every organisation has a different knowledge base, different infrastructure constraints, and different use cases.
-            </p>
-            <p>
-              The process begins with a consultation. We assess your knowledge assets, your infrastructure, your team size, and the specific outcomes you need. A detailed proposal — covering scope, timeline, investment, and expected ROI — is delivered within 48 hours of that conversation.
-            </p>
-            <p className="font-medium text-gold">
-              There is no obligation after the consultation. We will tell you honestly whether this is the right solution for your organisation, and if it is not, we will tell you what is.
-            </p>
-          </div>
-          <Link href="/book-consultation" className="btn-gold px-10 py-4.5 text-[16px]">
-            Request a Consultation
-          </Link>
-          <hr className="gold-rule gold-rule--center mt-12" />
+          <Reveal>
+            <span className="eyebrow text-gold">ENGAGEMENT MODEL</span>
+            <hr className="gold-rule gold-rule--center mb-8" />
+            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] max-w-3xl mx-auto mb-6 text-balance">
+              Ready to deploy your organisation&apos;s intelligence layer?
+            </h2>
+            <div className="max-w-2xl mx-auto text-white/70 text-body space-y-4 mb-10 text-pretty">
+              <p>
+                Custom LLM deployments are scoped individually. Every organisation has a different knowledge base, different infrastructure constraints, and different use cases.
+              </p>
+              <p>
+                The process begins with a consultation. We assess your knowledge assets, your infrastructure, your team size, and the specific outcomes you need. A detailed proposal — covering scope, timeline, investment, and expected ROI — is delivered within 48 hours of that conversation.
+              </p>
+              <p className="font-medium text-gold">
+                There is no obligation after the consultation. We will tell you honestly whether this is the right solution for your organisation, and if it is not, we will tell you what is.
+              </p>
+            </div>
+            <Link href="/book-consultation" className="btn-gold">
+              Request a Consultation
+            </Link>
+            <hr className="gold-rule gold-rule--center mt-12" />
+          </Reveal>
         </div>
-      </section>
+      </SectionInk>
     </>
   );
 }

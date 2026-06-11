@@ -3,19 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 6969",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.82",
+    "@ai-sdk/openai": "^3.0.69",
     "@hookform/resolvers": "^5.4.0",
     "@prisma/client": "^5.14.0",
     "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.38.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
+    "ai": "^6.0.199",
     "gray-matter": "^4.0.3",
     "isomorphic-dompurify": "^3.16.0",
     "jose": "^6.2.3",
