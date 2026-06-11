@@ -64,7 +64,7 @@ export default function Navigation() {
               Request a Consultation
             </Link>
             <button
-              className="lg:hidden text-white p-2"
+              className="lg:hidden text-white p-3 -mr-3"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               onClick={() => setOpen(!open)}

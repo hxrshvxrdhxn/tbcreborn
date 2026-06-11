@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 };
 
 const localBusinessSchema = {
-  // ... (keep same schema as before)
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Turbo Bytes Consulting",
@@ -44,6 +43,45 @@ const localBusinessSchema = {
     addressRegion: "Uttar Pradesh",
     addressCountry: "IN",
   },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Turbo Bytes Consulting",
+  url: "https://turbobytesconsulting.com",
+};
+
+const faqs = [
+  {
+    question: "What exactly does an AI-native consultancy do?",
+    answer: "We don't just provide slide decks about AI. We integrate artificial intelligence into your core business — from custom Large Language Models (LLMs) and internal tools to training your team on how to actually use them. We design the strategy and build the technology.",
+  },
+  {
+    question: "How long does an engagement typically take?",
+    answer: "We are built for speed. Most strategy and AI discovery phases conclude in 2-4 weeks. Full implementation of Custom LLMs or internal tools takes 6-12 weeks, depending on complexity.",
+  },
+  {
+    question: "Do you work with startups or enterprises?",
+    answer: "Both. We scale our solutions to match the operational maturity of the organization. For startups, we build lean, fast systems. For enterprises, we ensure compliance, security, and integration with legacy infrastructure.",
+  },
+  {
+    question: "What is your pricing model?",
+    answer: "We scope engagements around outcomes, not hourly rates. Every proposal includes a defined timeline, deliverable, and investment required. We also offer retained advisory services for long-term intelligence partnership.",
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(faq => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer
+    }
+  }))
 };
 
 const services = [
@@ -147,7 +185,7 @@ export default async function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, websiteSchema, faqSchema]) }}
       />
 
       {/* ── 1. HERO ── */}
@@ -164,11 +202,11 @@ export default async function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         </div>
 
-        <div className="container-tbc py-s7 relative z-10 flex-1 flex flex-col justify-center order-first">
+        <div className="container-tbc py-s5 md:py-s7 relative z-10 flex-1 flex flex-col justify-center order-first">
           <div className="max-w-[620px]">
             <span className="eyebrow text-gold hero-1">TURBO BYTES CONSULTING</span>
             <hr className="gold-rule mb-8 hero-1" />
-            <h1 className="font-display font-bold text-white text-[clamp(36px,5vw,52px)] leading-[1.1] tracking-[-0.5px] mb-6 hero-2 text-balance">
+            <h1 className="font-display font-bold text-white text-[clamp(32px,8vw,52px)] leading-[1.1] tracking-[-0.5px] mb-6 hero-2 text-balance">
               The intelligence layer your business has been missing.
             </h1>
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
@@ -176,11 +214,11 @@ export default async function HomePage() {
               artificial intelligence into your marketing, operations, and internal
               systems — completely, not partially.
             </p>
-            <div className="flex flex-wrap gap-4 hero-4">
-              <Link href="/book-consultation" className="btn-primary">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 hero-4">
+              <Link href="/book-consultation" className="btn-primary w-full sm:w-auto">
                 Request a Consultation
               </Link>
-              <Link href="/services" className="btn-ghost-gold">
+              <Link href="/services" className="btn-ghost-gold w-full sm:w-auto">
                 Explore Our Services
               </Link>
             </div>
@@ -198,12 +236,12 @@ export default async function HomePage() {
               "5 Practice Areas",
             ].map((item, i, arr) => (
               <li key={item} className="flex items-center">
-                <span className="font-display font-semibold text-caption tracking-[1px] text-ink uppercase">
+                <span className="font-display font-semibold text-caption tracking-[1px] text-ink uppercase text-center w-full sm:w-auto">
                   {item}
                 </span>
                 {i < arr.length - 1 && (
                   <span
-                    className="mx-4 text-gold font-bold text-lg leading-none select-none"
+                    className="hidden sm:inline-block mx-4 text-gold font-bold text-lg leading-none select-none"
                     aria-hidden="true"
                   >
                     ·
@@ -216,15 +254,15 @@ export default async function HomePage() {
       </section>
 
       {/* ── 3. WHO WE ARE ── */}
-      <section className="bg-ivory py-s7">
+      <section className="bg-ivory py-s5 md:py-s7">
         <div className="container-tbc">
           <Reveal>
             <span className="eyebrow">WHO WE ARE</span>
-            <hr className="gold-rule mb-s5" />
+            <hr className="gold-rule mb-8 md:mb-s5" />
             <h2 className="section-heading mb-6 text-balance">
               Not an agency. Not a software house.<br />A consultancy built for the AI era.
             </h2>
-            <p className="text-body text-mid-grey measure-68 mb-14 text-pretty">
+            <p className="text-body text-mid-grey measure-68 mb-10 md:mb-14 text-pretty">
               Turbo Bytes Consulting sits at the intersection of strategic
               management consulting and artificial intelligence. We design the
               strategy. We build the technology. We deploy it. We measure it. Our
@@ -233,7 +271,7 @@ export default async function HomePage() {
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 label: "We Design",
@@ -264,12 +302,12 @@ export default async function HomePage() {
       </section>
 
       {/* ── 4. SERVICES ── */}
-      <section className="bg-white py-s7 border-y border-light-grey">
+      <section className="bg-white py-s5 md:py-s7 border-y border-light-grey">
         <div className="container-tbc">
           <Reveal>
             <span className="eyebrow">WHAT WE DO</span>
-            <hr className="gold-rule mb-s5" />
-            <h2 className="section-heading mb-12 text-balance">
+            <hr className="gold-rule mb-8 md:mb-s5" />
+            <h2 className="section-heading mb-10 md:mb-12 text-balance">
               Five practice areas.<br />One integrated capability.
             </h2>
           </Reveal>
@@ -287,16 +325,16 @@ export default async function HomePage() {
 
       {/* ── 5. WHY TBC (Dark Section) ── */}
       <SectionInk>
-        <div className="container-tbc">
+        <div className="container-tbc py-s5 md:py-s7">
           <Reveal>
             <span className="eyebrow text-gold">WHY TBC</span>
-            <hr className="gold-rule mb-s5" />
-            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-12 text-balance">
+            <hr className="gold-rule mb-8 md:mb-s5" />
+            <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-10 md:mb-12 text-balance">
               The rigour of a consultancy.<br />The speed of a technology firm.
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
             {whyTbc.map((card, i) => (
               <Reveal key={card.title} delay={i * 90}>
                 <article className="border-t-2 border-gold pt-6">
@@ -314,12 +352,12 @@ export default async function HomePage() {
       </SectionInk>
 
       {/* ── 6. PROCESS ── */}
-      <section className="bg-ivory py-s7 border-b border-light-grey">
+      <section className="bg-ivory py-s5 md:py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <Reveal>
             <span className="eyebrow">OUR PROCESS</span>
-            <hr className="gold-rule mb-s5" />
-            <h2 className="section-heading mb-14 text-balance">
+            <hr className="gold-rule mb-8 md:mb-s5" />
+            <h2 className="section-heading mb-10 md:mb-14 text-balance">
               A process designed for outcomes,<br />not deliverables.
             </h2>
           </Reveal>
@@ -330,14 +368,38 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 7. INSIGHT ── */}
-      <section className="bg-white py-s7">
+      {/* ── 7. FAQ ── */}
+      <section className="bg-white py-s5 md:py-s7 border-b border-light-grey">
+        <div className="container-tbc max-w-3xl">
+          <Reveal>
+            <span className="eyebrow text-center">FAQ</span>
+            <hr className="gold-rule gold-rule--center mb-8 md:mb-s5" />
+            <h2 className="section-heading text-center mb-10 md:mb-14 text-balance mx-auto">
+              Common Questions
+            </h2>
+          </Reveal>
+
+          <div className="space-y-6">
+            {faqs.map((faq, i) => (
+              <Reveal key={i} delay={i * 60}>
+                <article className="bg-ivory p-6 rounded-[8px] border border-light-grey shadow-sm">
+                  <h3 className="font-display font-bold text-[18px] text-ink mb-3">{faq.question}</h3>
+                  <p className="text-body text-mid-grey">{faq.answer}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. INSIGHT ── */}
+      <section className="bg-white py-s5 md:py-s7">
         <div className="container-tbc">
           <Reveal>
-            <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
               <div>
                 <span className="eyebrow">INSIGHT</span>
-                <hr className="gold-rule mb-s5" />
+                <hr className="gold-rule mb-6 md:mb-s5" />
                 <h2 className="section-heading text-balance">
                   Thinking on AI, strategy, and what comes next.
                 </h2>
@@ -377,8 +439,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 8. CTA BAND ── */}
-      <section className="bg-royal py-s7 text-center">
+      {/* ── 9. CTA BAND ── */}
+      <section className="bg-royal py-s5 md:py-s7 text-center">
         <div className="container-tbc">
           <Reveal>
             <hr className="gold-rule gold-rule--center mb-8" />
@@ -388,7 +450,7 @@ export default async function HomePage() {
             <p className="text-body text-white/80 mb-10 text-pretty max-w-2xl mx-auto">
               Request a consultation. We will respond within one business day.
             </p>
-            <Link href="/book-consultation" className="btn-gold">
+            <Link href="/book-consultation" className="btn-gold w-full sm:w-auto">
               Request a Consultation
             </Link>
             <hr className="gold-rule gold-rule--center mt-10" />
@@ -398,4 +460,3 @@ export default async function HomePage() {
     </>
   );
 }
-
