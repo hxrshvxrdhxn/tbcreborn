@@ -47,9 +47,9 @@ export async function GET(req: NextRequest) {
       apiKey: process.env.ANTHROPIC_API_KEY || "",
     });
 
-    // Call Anthropic Claude 3 Haiku
+    // Call Anthropic Claude Sonnet 4.6
     const { object } = await generateObject({
-      model: anthropic("claude-3-haiku-20240307"),
+      model: anthropic("claude-sonnet-4-6"),
       system: systemPrompt,
       prompt: "Generate the next blog post for Turbo Bytes Consulting.",
       schema: z.object({
