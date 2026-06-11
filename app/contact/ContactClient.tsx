@@ -188,7 +188,7 @@ export default function ContactClient() {
 
             {/* Right: Contact form */}
             <div>
-              <Reveal delay={200}>
+              <Reveal delay={0.20}>
                 <span className="eyebrow">SEND A MESSAGE</span>
                 <hr className="gold-rule mb-6" />
                 <h2 className="font-display font-bold text-[26px] text-ink leading-[1.25] mb-8">

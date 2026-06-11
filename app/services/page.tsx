@@ -138,7 +138,7 @@ export default function ServicesPage() {
         <div className="container-tbc">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {practices.map((p, i) => (
-              <Reveal key={p.number} delay={i * 60} className={i < 2 ? "lg:col-span-1" : "lg:col-span-1"}>
+              <Reveal key={p.number} delay={i * 0.12} className={i < 2 ? "lg:col-span-1" : "lg:col-span-1"}>
                 <div className="flex flex-col h-full bg-white rounded shadow-card border border-light-grey overflow-hidden group">
                   <ServiceCard 
                     number={p.number}

@@ -153,7 +153,7 @@ export default function EngagementPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
             {pricingTiers.map((tier, i) => (
-              <Reveal key={tier.tier} delay={i * 30}>
+              <Reveal key={tier.tier} delay={i * 0.06}>
                 <article
                   className={`rounded-[8px] flex flex-col h-full ${
                     tier.featured
@@ -218,7 +218,7 @@ export default function EngagementPage() {
           </div>
 
           {/* Disclaimer */}
-          <Reveal delay={150}>
+          <Reveal delay={0.15}>
             <p className="font-sans text-[14px] text-mid-grey text-center leading-relaxed max-w-3xl mx-auto mt-12 bg-white/50 px-6 py-4 rounded-[8px] border border-light-grey">
               <strong>Note:</strong> All other service engagements (Social Media Management, Web
               Development, Custom LLM, Slate, AI Training) are priced on a
@@ -243,7 +243,7 @@ export default function EngagementPage() {
 
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
-              <Reveal key={step.step} delay={index * 30}>
+              <Reveal key={step.step} delay={index * 0.06}>
                 <li className="flex flex-col gap-5">
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-ivory border border-light-grey flex items-center justify-center shadow-sm">

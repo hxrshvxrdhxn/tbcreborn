@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import ServiceFooter from "@/components/ServiceFooter";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import { PullStat } from "@/components/StatBlock";
 import SectionInk from "@/components/SectionInk";
@@ -334,7 +335,7 @@ export default function CustomLLMPage() {
               </Reveal>
             </div>
             <div className="lg:col-span-8 space-y-6">
-              <Reveal delay={100}>
+              <Reveal delay={0.10}>
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
                   Most organisations have spent years accumulating knowledge — procedures, client histories, compliance frameworks, product specifications, training materials, meeting notes, contracts. That knowledge exists in documents, folders, and email threads that almost nobody reads.
                 </p>
@@ -373,7 +374,7 @@ export default function CustomLLMPage() {
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {problems.map((prob, i) => (
-                <Reveal key={prob.title} delay={i * 50}>
+                <Reveal key={prob.title} delay={i * 0.10}>
                   <div className="bg-white border border-light-grey rounded p-6 shadow-card hover:shadow-card-hover transition-all duration-200 h-full">
                     <span className="font-display font-bold text-[13px] text-gold tracking-[1px] mb-3 block">
                       0{i + 1}
@@ -407,7 +408,7 @@ export default function CustomLLMPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {includedFeatures.map((feat, i) => (
-              <Reveal key={feat.title} delay={i * 50} className={i >= 3 ? "lg:col-span-1" : ""}>
+              <Reveal key={feat.title} delay={i * 0.10} className={i >= 3 ? "lg:col-span-1" : ""}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 h-full">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="p-2 bg-white rounded border border-light-grey shadow-sm">
@@ -452,6 +453,8 @@ export default function CustomLLMPage() {
       </section>
 
       {/* ── WHY ON-PREMISE MATTERS ── */}
+      <ServiceFooter />
+
       <SectionInk>
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -469,7 +472,7 @@ export default function CustomLLMPage() {
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {onPremiseProps.map((prop, i) => (
-                <Reveal key={prop.title} delay={i * 50}>
+                <Reveal key={prop.title} delay={i * 0.10}>
                   <div className="bg-white/5 border border-white/10 rounded p-6 hover:bg-white/10 transition-colors duration-150 h-full">
                     <div className="flex items-center gap-2 mb-3 text-gold">
                       <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -507,9 +510,9 @@ export default function CustomLLMPage() {
               </Reveal>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-wrap lg:justify-center gap-6 lg:gap-8">
               {resultsTable.map((row, i) => (
-                <Reveal key={row.metric} delay={i * 50} className={i === 4 ? "col-span-2 lg:col-span-1" : ""}>
+                <Reveal key={row.metric} delay={i * 0.10} className={`flex-1 min-w-[160px] ${i === 4 ? "col-span-2 lg:col-span-1" : ""}`}>
                   <PullStat value={row.range} label={row.metric} />
                 </Reveal>
               ))}
@@ -533,7 +536,7 @@ export default function CustomLLMPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {targetAudience.map((audience, i) => (
-              <Reveal key={audience.title} delay={i * 50}>
+              <Reveal key={audience.title} delay={i * 0.10}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-shadow duration-200 h-full">
                   <span className="font-display font-bold text-caption text-gold tracking-widest uppercase block mb-1">
                     {audience.subtitle}
@@ -567,7 +570,7 @@ export default function CustomLLMPage() {
 
           <div className="max-w-3xl mx-auto space-y-3">
             {faqs.map((faq, i) => (
-              <Reveal key={i} delay={i * 40}>
+              <Reveal key={i} delay={i * 0.08}>
                 <details className="group border border-light-grey rounded bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[16px] md:text-[17px] hover:bg-ivory/50 select-none transition-colors">
                     <span>{faq.q}</span>
@@ -588,6 +591,8 @@ export default function CustomLLMPage() {
       </section>
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
+      <ServiceFooter />
+
       <SectionInk className="text-center">
         <div className="container-tbc">
           <Reveal>

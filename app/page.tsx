@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import ServiceCard from "@/components/ServiceCard";
 import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
+import FreeAnalysisForm from "@/components/FreeAnalysisForm";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
@@ -286,7 +287,7 @@ export default async function HomePage() {
                 body: "Inside your team. Your systems. Your pace. We stay.",
               },
             ].map((pillar, i) => (
-              <Reveal key={pillar.label} delay={i * 80}>
+              <Reveal key={pillar.label} delay={i * 0.1}>
                 <article className="bg-white p-6 rounded shadow-card border-t-[3px] border-t-gold border border-x-light-grey border-b-light-grey h-full">
                   <h4 className="font-display font-bold text-[18px] text-ink mb-2">
                     {pillar.label}
@@ -315,7 +316,7 @@ export default async function HomePage() {
           {/* 5-card grid (2 up top, 3 below, auto-fits well) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
-              <Reveal key={s.number} delay={i * 60} className={i < 2 ? "lg:col-span-1" : "lg:col-span-1"}>
+              <Reveal key={s.number} delay={i * 0.1} className={i < 2 ? "lg:col-span-1" : "lg:col-span-1"}>
                 <ServiceCard {...s} className="h-full" />
               </Reveal>
             ))}
@@ -336,7 +337,7 @@ export default async function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
             {whyTbc.map((card, i) => (
-              <Reveal key={card.title} delay={i * 90}>
+              <Reveal key={card.title} delay={i * 0.15}>
                 <article className="border-t-2 border-gold pt-6">
                   <h3 className="font-display font-bold text-[20px] text-white mb-3">
                     {card.title}
@@ -381,7 +382,7 @@ export default async function HomePage() {
 
           <div className="space-y-6">
             {faqs.map((faq, i) => (
-              <Reveal key={i} delay={i * 60}>
+              <Reveal key={i} delay={i * 0.08}>
                 <article className="bg-ivory p-6 rounded-[8px] border border-light-grey shadow-sm">
                   <h3 className="font-display font-bold text-[18px] text-ink mb-3">{faq.question}</h3>
                   <p className="text-body text-mid-grey">{faq.answer}</p>
@@ -416,7 +417,7 @@ export default async function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {insightPosts.map((post, i) => (
-              <Reveal key={post.slug} delay={i * 70} className="flex">
+              <Reveal key={post.slug} delay={i * 0.1} className="flex">
                 <Link href={`/blog/${post.slug}`} className="bg-white rounded shadow-card border border-light-grey hover:shadow-card-hover hover:-translate-y-1 transition-all duration-tbc flex flex-col w-full overflow-hidden group/card block">
                   {/* Category swatch tile to avoid pure text card */}
                   <div className="h-16 bg-ink flex items-center px-6 border-b-[3px] border-gold">
@@ -439,7 +440,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 9. CTA BAND ── */}
+      {/* ── 9. FREE ANALYSIS LEAD MAGNET ── */}
+      <FreeAnalysisForm />
+
+      {/* ── 10. CTA BAND ── */}
       <section className="bg-royal py-s5 md:py-s7 text-center">
         <div className="container-tbc">
           <Reveal>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import ServiceFooter from "@/components/ServiceFooter";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
@@ -174,7 +175,7 @@ export default function SlatePage() {
             style={{ maxWidth: "960px" }}
           >
             {slateCapabilities.map((item, index) => (
-              <Reveal key={index} delay={index * 30}>
+              <Reveal key={index} delay={index * 0.06}>
                 <li className="flex items-start gap-4">
                   <span
                     className="flex-shrink-0 mt-1 w-6 h-6 rounded-full bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-[11px]"
@@ -210,7 +211,7 @@ export default function SlatePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {audienceCards.map((card, i) => (
-              <Reveal key={card.title} delay={i * 50}>
+              <Reveal key={card.title} delay={i * 0.10}>
                 <article
                   className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-shadow duration-300 h-full"
                 >
@@ -232,6 +233,8 @@ export default function SlatePage() {
       </section>
 
       {/* ── CTA Band ── */}
+      <ServiceFooter />
+
       <SectionInk className="text-center" aria-labelledby="slate-cta-heading">
         <div className="container-tbc">
           <Reveal>

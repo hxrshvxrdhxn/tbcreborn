@@ -38,12 +38,12 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-8 h-full">
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <li key={link.href} className="relative group h-full flex items-center">
                 <Link
                   href={link.href}
-                  className={`font-display font-medium text-sm tracking-wide transition-colors duration-150 ${
+                  className={`font-display font-medium text-sm tracking-wide transition-colors duration-150 py-5 ${
                     pathname.startsWith(link.href)
                       ? "text-gold"
                       : "text-white hover:text-gold"
@@ -51,6 +51,39 @@ export default function Navigation() {
                 >
                   {link.label}
                 </Link>
+                
+                {/* Services Dropdown */}
+                {link.label === "Services" && (
+                  <div className="absolute top-full left-0 hidden group-hover:block z-50 min-w-[240px] pt-1">
+                    <ul className="bg-white border border-light-grey rounded-[6px] shadow-lg py-2 flex flex-col">
+                      <li>
+                        <Link href="/services/custom-llm" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
+                          Custom LLM & AI
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/ai-training" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
+                          AI Capability Building
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/web-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
+                          Web & App Development
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/smm" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
+                          Social Media Management
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/slate" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
+                          Slate Executive Assistant
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </li>
             ))}
           </ul>

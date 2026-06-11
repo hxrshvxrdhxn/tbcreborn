@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import ServiceFooter from "@/components/ServiceFooter";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
@@ -171,7 +172,7 @@ export default function AITrainingPage() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {curriculumItems.map((item, i) => (
-              <Reveal key={item.number} delay={i * 50}>
+              <Reveal key={item.number} delay={i * 0.10}>
                 <article className="bg-white border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-shadow duration-300 h-full">
                   <span className="font-display font-bold text-gold/60 text-[13px] tracking-widest mb-3 block" aria-hidden="true">
                     {item.number}
@@ -205,7 +206,7 @@ export default function AITrainingPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {deliveryFormats.map((format, i) => (
-              <Reveal key={format.title} delay={i * 50}>
+              <Reveal key={format.title} delay={i * 0.10}>
                 <div className="flex flex-col gap-4 h-full">
                   <div className="text-gold" aria-hidden="true">
                     {format.icon}
@@ -264,6 +265,8 @@ export default function AITrainingPage() {
       </section>
 
       {/* ── CTA Band ── */}
+      <ServiceFooter />
+
       <SectionInk className="text-center" aria-labelledby="ai-training-cta-heading">
         <div className="container-tbc">
           <Reveal>

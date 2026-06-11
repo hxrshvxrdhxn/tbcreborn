@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import ServiceFooter from "@/components/ServiceFooter";
 import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
 
@@ -467,7 +468,7 @@ export default function WebDevelopmentPage() {
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {problems.map((prob, i) => (
-                <Reveal key={prob.title} delay={i * 50}>
+                <Reveal key={prob.title} delay={i * 0.10}>
                   <div className="bg-white border border-light-grey rounded p-6 shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                     <span className="font-display font-bold text-[13px] text-gold tracking-widest mb-3 block">
                       0{i + 1}
@@ -501,7 +502,7 @@ export default function WebDevelopmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {includedFeatures.map((feat, i) => (
-              <Reveal key={feat.title} delay={i * 30}>
+              <Reveal key={feat.title} delay={i * 0.06}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="p-2 bg-white rounded border border-light-grey shadow-sm">
@@ -557,7 +558,7 @@ export default function WebDevelopmentPage() {
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             {technologyStack.map((stack, i) => (
-              <Reveal key={stack.category} delay={i * 30}>
+              <Reveal key={stack.category} delay={i * 0.06}>
                 <div className="bg-ivory border border-light-grey rounded p-6 shadow-sm hover:shadow-card transition-shadow duration-300 h-full">
                   <h3 className="font-display font-bold text-[14px] text-gold uppercase tracking-widest mb-4">
                     {stack.category}
@@ -591,7 +592,7 @@ export default function WebDevelopmentPage() {
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {tbcSeparators.map((sep, i) => (
-                <Reveal key={sep.title} delay={i * 30}>
+                <Reveal key={sep.title} delay={i * 0.06}>
                   <div className="bg-white/5 border border-white/10 rounded p-6 hover:bg-white/10 transition-colors duration-300 h-full">
                     <div className="flex items-center gap-3 mb-4 text-gold">
                       <h3 className="font-display font-bold text-[18px] tracking-wide text-white leading-snug">
@@ -624,7 +625,7 @@ export default function WebDevelopmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {targetAudience.map((audience, i) => (
-              <Reveal key={audience.title} delay={i * 50}>
+              <Reveal key={audience.title} delay={i * 0.10}>
                 <article className="bg-white border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-shadow duration-300 h-full">
                   <span className="font-display font-bold text-[11px] text-gold tracking-widest uppercase block mb-2">
                     {audience.subtitle}
@@ -658,7 +659,7 @@ export default function WebDevelopmentPage() {
 
           <div className="max-w-3xl mx-auto space-y-3">
             {faqs.map((faq, i) => (
-              <Reveal key={i} delay={i * 30}>
+              <Reveal key={i} delay={i * 0.06}>
                 <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
                     <span>{faq.q}</span>
@@ -679,6 +680,8 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
+      <ServiceFooter />
+
       <SectionInk className="text-center" aria-labelledby="web-cta-heading">
         <div className="container-tbc">
           <Reveal>

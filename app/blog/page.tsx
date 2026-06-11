@@ -75,7 +75,7 @@ export default async function BlogPage() {
         <div className="container-tbc">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, i) => (
-              <Reveal key={post.slug} delay={i * 30}>
+              <Reveal key={post.slug} delay={i * 0.06}>
                 <article
                   className="bg-white border border-light-grey rounded-[8px] shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc flex flex-col h-full"
                 >

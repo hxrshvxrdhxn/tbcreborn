@@ -185,7 +185,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {values.map((value, i) => (
-              <Reveal key={value.title} delay={i * 30}>
+              <Reveal key={value.title} delay={i * 0.06}>
                 <article className="flex flex-col gap-4">
                   <div className="w-8 h-1 bg-gold mb-2"></div>
                   <h3 className="font-display font-bold text-[20px] text-white">
