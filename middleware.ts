@@ -1,22 +1,29 @@
-import { NextRequest, NextResponse } from "next/server";
-import { isValidSession } from "./lib/redis";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export async function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+export function middleware(req: NextRequest) {
+  const url = req.nextUrl;
+  const hostname = req.headers.get('host') || '';
 
-  // Only protect /admin routes (not /admin/login or /api/admin/auth)
+  // Bypass if it's an API route or static asset
   if (
-    pathname.startsWith("/admin") &&
-    !pathname.startsWith("/admin/login") &&
-    !pathname.startsWith("/api/admin/auth")
+    url.pathname.startsWith('/api') || 
+    url.pathname.startsWith('/_next') || 
+    url.pathname.includes('.')
   ) {
-    const session = req.cookies.get("admin_session")?.value;
-    const valid = session ? await isValidSession(session) : false;
+    return NextResponse.next();
+  }
 
-    if (!valid) {
-      const loginUrl = new URL("/admin/login", req.url);
-      loginUrl.searchParams.set("from", pathname);
-      return NextResponse.redirect(loginUrl);
+  // Rewrite for Admin Subdomain
+  if (hostname.startsWith('admin.')) {
+    if (!url.pathname.startsWith('/admin')) {
+      return NextResponse.rewrite(new URL(`/admin${url.pathname === '/' ? '' : url.pathname}`, req.url));
+    }
+  } 
+  // Rewrite for Blog Subdomain
+  else if (hostname.startsWith('blog.')) {
+    if (!url.pathname.startsWith('/blog')) {
+      return NextResponse.rewrite(new URL(`/blog${url.pathname === '/' ? '' : url.pathname}`, req.url));
     }
   }
 
@@ -24,5 +31,8 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: [
+    // Skip static files, api routes (since we bypass them explicitly anyway, this is a safety net)
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+  ],
 };
