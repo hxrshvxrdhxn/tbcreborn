@@ -29,7 +29,7 @@ export default function FreeAnalysisForm() {
               </h2>
               <p className="text-body text-mid-grey leading-relaxed mb-6 text-pretty">
                 Wondering where AI can actually reduce costs or drive revenue in your specific operations? 
-                Provide us with a few details, and our experts will prepare a preliminary analysis of your business's AI potential.
+                Provide us with a few details, and our experts will prepare a preliminary analysis of your business&apos;s AI potential.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
@@ -58,7 +58,7 @@ export default function FreeAnalysisForm() {
                     </div>
                     <h3 className="font-display font-bold text-[24px] text-ink mb-3">Request Received</h3>
                     <p className="text-body text-mid-grey">
-                      We're putting together your custom analysis. It will be delivered to the address provided shortly.
+                      We&apos;re putting together your custom analysis. It will be delivered to the address provided shortly.
                     </p>
                   </div>
                 ) : (
