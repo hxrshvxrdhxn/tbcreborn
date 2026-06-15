@@ -7,7 +7,7 @@ const nextConfig = {
         source: "/(.*)",
         headers: [
           // Prevent clickjacking
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Frame-Options", value: "DENY" },
           // Prevent MIME-type sniffing
           { key: "X-Content-Type-Options", value: "nosniff" },
           // Legacy XSS filter (belt-and-braces)

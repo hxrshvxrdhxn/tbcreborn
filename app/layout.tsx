@@ -86,6 +86,18 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Content Protection Script */}
+        <Script id="content-protection" strategy="afterInteractive">
+          {`
+            document.addEventListener('contextmenu', event => event.preventDefault());
+            document.addEventListener('keydown', event => {
+              if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'C' || event.key === 'J'))) {
+                event.preventDefault();
+              }
+            });
+          `}
+        </Script>
+
         {/* Global JSON-LD Schema for GEO/SEO */}
         <Script id="schema-org" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
           __html: JSON.stringify({

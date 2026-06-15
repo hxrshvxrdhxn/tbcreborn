@@ -4,27 +4,23 @@ import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
+import DOMPurify from "isomorphic-dompurify";
 
 // ── HTML entity escaper (prevents XSS in email body) ──────────────────────────
 function esc(str: string): string {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#x27;");
+  return DOMPurify.sanitize(str);
 }
 
-// ── Simple in-memory rate limiter: max 5 submissions per IP per 10 minutes ────
+// ── Simple in-memory rate limiter: max 5 submissions per IP per 1 hour ────
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
-const RATE_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 
 let upstashRatelimit: Ratelimit | null = null;
 if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
   upstashRatelimit = new Ratelimit({
     redis: Redis.fromEnv(),
-    limiter: Ratelimit.slidingWindow(5, "10 m"),
+    limiter: Ratelimit.slidingWindow(5, "1 h"),
   });
 }
 
@@ -58,25 +54,40 @@ const schema = z.object({
   service: z.string().min(1).max(100),
   budget: z.string().max(50).optional(),
   message: z.string().min(10).max(5000),
+  website: z.string().optional(), // honeypot
 });
 
 export async function POST(req: NextRequest) {
-  // Rate limiting
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
-    req.headers.get("x-real-ip") ??
-    "unknown";
-
-  if (await isRateLimited(ip)) {
-    return NextResponse.json(
-      { error: "Too many requests. Please try again later." },
-      { status: 429 }
-    );
-  }
-
   try {
+    // Basic CSRF Protection: Validate Origin / Referer
+    const origin = req.headers.get("origin") || req.headers.get("referer") || "";
+    if (!origin.includes("localhost") && !origin.includes("turbobytesconsulting.com") && !origin.includes("vercel.app")) {
+      console.error("CSRF Blocked: Invalid Origin", origin);
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    }
+
     const body = await req.json();
     const data = schema.parse(body);
+
+    // Honeypot check: If a bot fills out the visually hidden "website" field,
+    // silently drop the request but return a success to fool the bot.
+    if (data.website) {
+      console.log("Honeypot triggered, silently ignoring request.");
+      return NextResponse.json({ success: true });
+    }
+
+    // Rate limiting (only after honeypot check to save Redis hits from dumb bots)
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+      req.headers.get("x-real-ip") ??
+      "unknown";
+
+    if (await isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
 
     if (!process.env.RESEND_API_KEY) {
       return NextResponse.json(

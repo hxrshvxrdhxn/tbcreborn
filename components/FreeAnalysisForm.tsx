@@ -63,6 +63,18 @@ export default function FreeAnalysisForm() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
+                    {/* Honeypot field (hidden from real users) */}
+                    <div style={{ display: "none" }} aria-hidden="true">
+                      <label htmlFor="website">Website</label>
+                      <input
+                        id="website"
+                        name="website"
+                        type="text"
+                        autoComplete="off"
+                        tabIndex={-1}
+                      />
+                    </div>
+                    
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
                         <label htmlFor="name" className="text-[13px] font-bold text-ink uppercase tracking-wide">Full Name</label>

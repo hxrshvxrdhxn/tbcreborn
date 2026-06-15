@@ -231,6 +231,18 @@ export default function ContactClient() {
                     noValidate
                     className="bg-white border border-light-grey rounded-[8px] shadow-card p-7 space-y-5"
                   >
+                    {/* Honeypot field (hidden from real users) */}
+                    <div style={{ display: "none" }} aria-hidden="true">
+                      <label htmlFor="website">Website</label>
+                      <input
+                        id="website"
+                        type="text"
+                        autoComplete="off"
+                        tabIndex={-1}
+                        {...register("website" as keyof ContactFormData)}
+                      />
+                    </div>
+
                     {/* Name */}
                     <div>
                       <label htmlFor="name" className={labelBase}>

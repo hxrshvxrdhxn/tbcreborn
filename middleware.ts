@@ -7,12 +7,32 @@ export async function middleware(req: NextRequest) {
   const url = req.nextUrl;
   const hostname = req.headers.get('host') || '';
 
-  // Bypass if it's an API route or static asset
+  // Bypass if it's a public API route or static asset
   if (
-    url.pathname.startsWith('/api') || 
     url.pathname.startsWith('/_next') || 
     url.pathname.includes('.')
   ) {
+    return NextResponse.next();
+  }
+
+  // Helper to check auth
+  async function checkAuth() {
+    const token = req.cookies.get("admin_session")?.value;
+    if (!token) return false;
+    return await isValidSession(token);
+  }
+
+  // Protect admin API routes
+  if (url.pathname.startsWith('/api/admin') || url.pathname.startsWith('/api/blog-admin')) {
+    if (url.pathname !== '/api/admin/login' && url.pathname !== '/api/blog-admin/login') {
+      if (!(await checkAuth())) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      }
+    }
+  }
+
+  // Bypass other public API routes
+  if (url.pathname.startsWith('/api')) {
     return NextResponse.next();
   }
 
@@ -23,12 +43,6 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  // Helper to check auth
-  async function checkAuth() {
-    const token = req.cookies.get("admin_session")?.value;
-    if (!token) return false;
-    return await isValidSession(token);
-  }
 
   // 1. Direct path access protection
   if (url.pathname.startsWith('/admin') && url.pathname !== '/admin/login') {
