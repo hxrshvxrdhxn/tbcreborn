@@ -4,11 +4,17 @@ import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
-import DOMPurify from "isomorphic-dompurify";
-
-// ── HTML entity escaper (prevents XSS in email body) ──────────────────────────
 function esc(str: string): string {
-  return DOMPurify.sanitize(str);
+  if (!str) return "";
+  return str.replace(/[&<>"']/g, function(m) {
+    return {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    }[m] as string;
+  });
 }
 
 // ── Simple in-memory rate limiter: max 5 submissions per IP per 1 hour ────
