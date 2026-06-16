@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { Ratelimit } from "@upstash/ratelimit";
@@ -95,7 +96,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const nodemailer = require("nodemailer");
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: 465,
