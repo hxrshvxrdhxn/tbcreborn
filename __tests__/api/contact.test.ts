@@ -9,11 +9,11 @@ jest.mock("@/lib/prisma", () => ({
   },
 }));
 
-jest.mock("resend", () => {
+jest.mock("nodemailer", () => {
   return {
-    Resend: jest.fn().mockImplementation(() => ({
-      emails: { send: jest.fn().mockResolvedValue({}) },
-    })),
+    createTransport: jest.fn().mockReturnValue({
+      sendMail: jest.fn().mockResolvedValue({}),
+    }),
   };
 });
 
@@ -31,7 +31,9 @@ describe("Contact API validation", () => {
   };
 
   beforeEach(() => {
-    process.env.RESEND_API_KEY = "test_key";
+    process.env.SMTP_USER = "test_user";
+    process.env.SMTP_PASS = "test_pass";
+    process.env.SMTP_HOST = "test_host";
   });
 
   it("succeeds with valid data", async () => {

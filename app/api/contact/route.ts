@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { Ratelimit } from "@upstash/ratelimit";
@@ -89,18 +88,27 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (!process.env.RESEND_API_KEY) {
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_HOST) {
       return NextResponse.json(
         { error: "Email service not configured." },
         { status: 500 }
       );
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const nodemailer = require("nodemailer");
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
 
-    await resend.emails.send({
-      from: "TBC Website <noreply@turbobytesconsulting.com>",
-      to: "info@turbobytesconsulting.com",
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
+      to: "harshvardhan@turbobytesconsulting.com",
       replyTo: data.email,
       subject: `New enquiry from ${esc(data.name)} — ${esc(data.company)}`,
       html: `
