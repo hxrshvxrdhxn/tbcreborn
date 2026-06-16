@@ -109,7 +109,6 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail({
       from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
       to: "harshvardhan@turbobytesconsulting.com",
-      replyTo: data.email,
       subject: `New enquiry from ${esc(data.name)} — ${esc(data.company)}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -154,11 +153,12 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (err) {
+    console.error("Contact form error:", err);
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: "Invalid form data." }, { status: 400 });
     }
     return NextResponse.json(
-      { error: "Failed to send message." },
+      { error: "Failed to send message. Reason: " + (err instanceof Error ? err.message : "Unknown error") },
       { status: 500 }
     );
   }
