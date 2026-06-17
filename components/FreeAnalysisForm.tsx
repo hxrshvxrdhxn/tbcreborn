@@ -4,15 +4,42 @@ import { useState } from "react";
 import Reveal from "@/components/Reveal";
 
 export default function FreeAnalysisForm() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("submitting");
-    // Simulate API call
-    setTimeout(() => {
+    setErrorMessage("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      company: formData.get("company"),
+      address: formData.get("address"),
+      request: formData.get("request"),
+      website: formData.get("website"),
+    };
+
+    try {
+      const res = await fetch("/api/analysis", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error || "Failed to submit request.");
+      
       setStatus("success");
-    }, 1500);
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+      setErrorMessage(err instanceof Error ? err.message : "An error occurred.");
+    }
   };
 
   return (
@@ -75,36 +102,42 @@ export default function FreeAnalysisForm() {
                       />
                     </div>
                     
+                    {status === "error" && (
+                      <div className="bg-red-50 text-red-600 p-4 rounded text-sm mb-4">
+                        {errorMessage}
+                      </div>
+                    )}
+                    
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
                         <label htmlFor="name" className="text-[13px] font-bold text-ink uppercase tracking-wide">Full Name</label>
-                        <input id="name" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="Jane Doe" />
+                        <input id="name" name="name" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="Jane Doe" />
                       </div>
                       <div className="space-y-1.5">
                         <label htmlFor="email" className="text-[13px] font-bold text-ink uppercase tracking-wide">Work Email</label>
-                        <input id="email" type="email" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="jane@company.com" />
+                        <input id="email" name="email" type="email" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="jane@company.com" />
                       </div>
                     </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
                         <label htmlFor="phone" className="text-[13px] font-bold text-ink uppercase tracking-wide">Phone Number</label>
-                        <input id="phone" type="tel" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="+1 (555) 000-0000" />
+                        <input id="phone" name="phone" type="tel" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="+1 (555) 000-0000" />
                       </div>
                       <div className="space-y-1.5">
                         <label htmlFor="company" className="text-[13px] font-bold text-ink uppercase tracking-wide">Company Name</label>
-                        <input id="company" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="Acme Corp" />
+                        <input id="company" name="company" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="Acme Corp" />
                       </div>
                     </div>
 
                     <div className="space-y-1.5">
                       <label htmlFor="address" className="text-[13px] font-bold text-ink uppercase tracking-wide">Office Delivery Address</label>
-                      <input id="address" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="123 Business Rd, Suite 100, City, Country" />
+                      <input id="address" name="address" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="123 Business Rd, Suite 100, City, Country" />
                     </div>
 
                     <div className="space-y-1.5">
                       <label htmlFor="request" className="text-[13px] font-bold text-ink uppercase tracking-wide">Any Specific Focus Areas?</label>
-                      <textarea id="request" rows={3} className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50 resize-none" placeholder="e.g., We spend too much time on manual data entry..." />
+                      <textarea id="request" name="request" rows={3} className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50 resize-none" placeholder="e.g., We spend too much time on manual data entry..." />
                     </div>
 
                     <button 

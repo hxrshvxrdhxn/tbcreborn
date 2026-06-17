@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { marked } from "marked";
-import DOMPurify from "isomorphic-dompurify";
+import sanitizeHtml from "sanitize-html";
 
 const CATEGORIES = [
   "AI Strategy",
@@ -266,7 +266,13 @@ export default function AdminPostEditor({
                     "
                     dangerouslySetInnerHTML={{
                       __html: body
-                        ? DOMPurify.sanitize(marked.parse(body) as string)
+                        ? sanitizeHtml(marked.parse(body) as string, {
+                            allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img", "h1", "h2", "iframe"]),
+                            allowedAttributes: {
+                              ...sanitizeHtml.defaults.allowedAttributes,
+                              "*": ["class", "id"],
+                            },
+                          })
                         : "<p class='text-mid-grey'>Nothing to preview yet…</p>",
                     }}
                   />
