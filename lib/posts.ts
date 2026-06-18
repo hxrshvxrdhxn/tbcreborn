@@ -49,23 +49,6 @@ export async function getLocalMdxPosts(): Promise<ManagedPost[]> {
           return null;
         }
 
-        const rawHtml = (
-          await remark().use(remarkHtml).process(content)
-        ).toString();
-        
-        const html = sanitizeHtml(rawHtml, {
-          allowedTags: sanitizeHtml.defaults.allowedTags.concat([
-            "img",
-            "h1",
-            "h2",
-            "iframe",
-          ]),
-          allowedAttributes: {
-            ...sanitizeHtml.defaults.allowedAttributes,
-            "*": ["class", "id"], // Allow class and id everywhere
-          },
-        });
-
         return {
           id: filename,
           slug: filename.replace(/\.mdx$/, ""),
@@ -74,7 +57,7 @@ export async function getLocalMdxPosts(): Promise<ManagedPost[]> {
           category: data.category || "Uncategorized",
           readTime: data.readTime || "5 min read",
           excerpt: data.excerpt || "",
-          content: html,
+          content: content,
           status: (data.status as PostStatus) || "published",
           publishedAt: data.publishedAt || data.date || null,
           isManaged: false, // from filesystem
@@ -107,23 +90,6 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         return null;
       }
 
-      const rawHtml = (
-        await remark().use(remarkHtml).process(post.content)
-      ).toString();
-      
-      const html = sanitizeHtml(rawHtml, {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat([
-          "img",
-          "h1",
-          "h2",
-          "iframe",
-        ]),
-        allowedAttributes: {
-            ...sanitizeHtml.defaults.allowedAttributes,
-            "*": ["class", "id"],
-        },
-      });
-
       return {
         id: post.id,
         slug: post.slug,
@@ -132,7 +98,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         category: post.category,
         readTime: post.readTime,
         excerpt: post.excerpt,
-        content: html,
+        content: post.content,
         status: post.status as PostStatus,
         publishedAt: post.publishedAt,
         isManaged: true,
@@ -184,7 +150,27 @@ export async function getPostBySlug(
   slug: string
 ): Promise<BlogPost | undefined> {
   const all = await getAllPosts();
-  return all.find((p) => p.slug === slug);
+  const post = all.find((p) => p.slug === slug);
+  if (!post) return undefined;
+
+  const rawHtml = (
+    await remark().use(remarkHtml).process(post.content)
+  ).toString();
+  
+  const html = sanitizeHtml(rawHtml, {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+      "img",
+      "h1",
+      "h2",
+      "iframe",
+    ]),
+    allowedAttributes: {
+        ...sanitizeHtml.defaults.allowedAttributes,
+        "*": ["class", "id"],
+    },
+  });
+
+  return { ...post, content: html };
 }
 
 export async function getAllSlugs(): Promise<string[]> {
@@ -203,23 +189,6 @@ export async function getAdminPosts(): Promise<ManagedPost[]> {
 
   const posts = await Promise.all(
     dbPosts.map(async (post) => {
-      const rawHtml = (
-        await remark().use(remarkHtml).process(post.content)
-      ).toString();
-      
-      const html = sanitizeHtml(rawHtml, {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat([
-          "img",
-          "h1",
-          "h2",
-          "iframe",
-        ]),
-        allowedAttributes: {
-            ...sanitizeHtml.defaults.allowedAttributes,
-            "*": ["class", "id"],
-        },
-      });
-
       return {
         id: post.id,
         slug: post.slug,
@@ -228,7 +197,7 @@ export async function getAdminPosts(): Promise<ManagedPost[]> {
         category: post.category,
         readTime: post.readTime,
         excerpt: post.excerpt,
-        content: html,
+        content: post.content,
         status: post.status as PostStatus,
         publishedAt: post.publishedAt,
         isManaged: true,
