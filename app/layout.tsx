@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import BackToTop from "@/components/BackToTop";
