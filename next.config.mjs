@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "standalone",
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client', 'prisma'],
+    outputFileTracingIncludes: {
+      '/*': ['./prisma/dev.db'],
+      '/api/*': ['./prisma/dev.db']
+    }
+  },
   async headers() {
     return [
       {
