@@ -45,9 +45,6 @@ export const metadata: Metadata = {
     site: "@social_TBC",
     creator: "@social_TBC",
   },
-  icons: {
-    icon: "/icon.svg?v=2",
-  },
   robots: { index: true, follow: true },
 };
 
