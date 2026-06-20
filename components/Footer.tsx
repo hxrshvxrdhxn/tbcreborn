@@ -15,6 +15,7 @@ const companyLinks = [
   { href: "/blog", label: "Blog" },
   { href: "/engagement", label: "Engagement" },
   { href: "/contact", label: "Contact" },
+  { href: "/brand-guidelines", label: "Brand Guidelines" },
 ];
 
 export default function Footer() {
