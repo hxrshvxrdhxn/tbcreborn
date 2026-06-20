@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import Reveal from "@/components/Reveal";
 
-export const revalidate = 3600; // ISR — re-check for new posts every hour
+export const dynamic = 'force-dynamic'; // Always render on request so scheduled blogs appear immediately
 
 export const metadata: Metadata = {
   title: "Insight & Thinking | Turbo Bytes Consulting Blog",
