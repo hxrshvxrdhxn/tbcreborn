@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
 import { getAllPosts } from "@/lib/posts";
 
 export const maxDuration = 60; // Max duration for Vercel
