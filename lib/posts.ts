@@ -202,6 +202,7 @@ export async function getPostBySlug(
     if (staticPost) {
       post = {
         ...staticPost,
+        id: staticPost.slug,
         status: "published",
         publishedAt: staticPost.date,
         isManaged: false,
