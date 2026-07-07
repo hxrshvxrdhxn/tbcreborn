@@ -1,0 +1,180 @@
+TYPE: guide
+SLUG: how-to-set-up-a-production-planning-system-that-reduces-chaos
+PILLAR: P2
+TITLE: How to set up a production planning system that reduces chaos
+CONTENT: In most Indian manufacturing SMEs, production planning lives in one person's head — usually a senior operator or the production manager. When that person is absent, the plant runs reactively. When orders surge, priorities collide and promises are missed. A basic production planning system fixes this.  Production planning has three components: demand (what needs to be produced and when), capacity (what can you actually produce given your machines, manpower, and materials), and scheduling (which j
+
+TYPE: guide
+SLUG: how-to-reduce-raw-material-waste-in-your-production-process
+PILLAR: P2
+TITLE: How to reduce raw material waste in your production process
+CONTENT: Raw material waste in Indian manufacturing is often treated as an unavoidable cost of production. In most plants, it's actually a controllable variable — and reducing it by even 2–3 percentage points can add lakhs to the bottom line annually without increasing revenue.  Measure waste before you try to [reduce](/how-to/how-to-reduce-electricity-costs-in-a-manufacturing-plant) it. You need to know your current material yield — what percentage of input material ends up in saleable output. If you're
+
+TYPE: guide
+SLUG: how-to-manage-a-factory-shift-system-without-productivity-dropping-on-night-shifts
+PILLAR: P2
+TITLE: How to manage a factory shift system without productivity dropping on night shifts
+CONTENT: Night shift productivity in Indian manufacturing plants is almost always lower than day shift — by 10–25% in most operations. Some of this is physiological (human alertness patterns), but most of it is structural: less supervision, weaker planning, and the assumption that night shift workers are less capable. Fix the structure and the productivity gap closes.  Supervision is the biggest factor. If your plant has strong supervisors during the day and whoever's available at night, the output diffe
+
+TYPE: guide
+SLUG: how-to-build-a-supply-chain-that-doesn-t-collapse-when-one-supplier-fails
+PILLAR: P1
+TITLE: How to build a supply chain that doesn't collapse when one supplier fails
+CONTENT: The pandemic exposed the single-supplier dependency that most [Indian](/blog/ai-retail-what-indian-retailers-can-deploy-today) manufacturers had built over years of optimising for price. A supplier who gives you the best rate but is your only source for a critical component is not a good supplier — they're a risk you're not pricing.  Map your supply chain before you redesign it. For every critical input — raw materials, components, packaging — identify your current supplier, your current lead ti
+
+TYPE: guide
+SLUG: how-to-negotiate-better-terms-with-your-raw-material-suppliers
+PILLAR: P1
+TITLE: How to negotiate better terms with your raw material suppliers
+CONTENT: Most Indian SME buyers accept supplier terms [without](/how-to/how-to-use-email-marketing-to-nurture-b2b-leads-without-spamming-people) negotiation because they assume the price and terms are fixed, or because they don't want to damage the relationship. Both assumptions are wrong. Suppliers expect negotiation, and a well-handled negotiation strengthens rather than damages relationships.  Know your leverage before you negotiate. Your leverage is: your volume (actual and potential), your payment r
+
+TYPE: guide
+SLUG: how-to-reduce-lead-times-from-your-suppliers
+PILLAR: P1
+TITLE: How to reduce lead times from your suppliers
+CONTENT: Long supplier lead times force you to carry more inventory, make less accurate delivery promises to your clients, and respond slowly to demand changes. Reducing lead times is not just an operational improvement — it's a competitive advantage.  Understand what drives your suppliers' lead times. Lead time has three components: order processing time (how long it takes them to acknowledge and plan your order), production or sourcing time (how long to make or procure what you've ordered), and deliver
+
+TYPE: guide
+SLUG: how-to-manage-import-logistics-without-a-dedicated-team
+PILLAR: P1
+TITLE: How to manage import logistics without a dedicated team
+CONTENT: Importing raw materials or components is essential for many Indian manufacturers, but the logistics, compliance, and documentation overhead can consume significant management time. Companies without a dedicated import team often lose money through delays, duty miscalculations, and compliance errors.  Understand your total landed cost, not just the CIF price. Landed cost includes: CIF (cost + insurance + freight), basic customs duty, IGST, any anti-dumping or safeguard duties, customs handling ch
+
+TYPE: guide
+SLUG: how-to-choose-between-making-a-component-in-house-versus-buying-it
+PILLAR: P7
+TITLE: How to choose between making a component in-house versus buying it
+CONTENT: The make-vs-buy decision is one of the most consequential and least rigorously made decisions in Indian manufacturing. Most companies make it based on intuition or historical practice — 'we've always made this' or 'we've always bought this' — without [[actually](/how-to/how-to-design-an-esop-plan-that-actually-retains-your-best-people)](/blog/what-does-tbc-actually-do-our-multi-disciplinary-approach) running the numbers.  The financial analysis starts with total cost comparison. Make cost includ
+
+TYPE: guide
+SLUG: how-to-start-exporting-from-india-without-a-dedicated-export-team
+PILLAR: P3
+TITLE: How to start exporting from India without a dedicated export team
+CONTENT: Indian manufacturers who have never exported often assume it requires a dedicated team, complex compliance, and significant upfront investment. For most product categories, the first export order is simpler than it looks — the complexity compounds with scale, not from day one.  Start with demand, not compliance. Before understanding export procedures, understand whether there is a viable international market for your product. The best way to find out: look for your product on global B2B platform
+
+TYPE: guide
+SLUG: how-to-find-genuine-international-buyers-for-your-products
+PILLAR: P2
+TITLE: How to find genuine international buyers for your products
+CONTENT: The biggest challenge for Indian exporters is not production or compliance — it's finding real, creditworthy international buyers. The internet is full of leads that turn into nothing; the skill is knowing where genuine buyers actually are and how to reach them.  B2B platforms are a starting point, not an end point. Alibaba, Global Sources, and TradeIndia do generate enquiries — but most serious buyers in developed markets don't source exclusively through these platforms. Use them to generate in
+
+TYPE: guide
+SLUG: how-to-price-your-product-for-export-without-undervaluing-it
+PILLAR: P7
+TITLE: How to price your product for export without undervaluing it
+CONTENT: Indian exporters systematically underprice their products in international markets — usually because they're comparing to their India price, not to the international market price. This is one of the most expensive mistakes an exporter can make, and it compounds because buyers remember what they paid.  Start with the international market price, not your cost. What does a comparable product sell for in your target market? Check international e-commerce platforms, distributor catalogues, and compet
+
+TYPE: guide
+SLUG: how-to-manage-export-payment-risk-and-get-paid-reliably
+PILLAR: P1
+TITLE: How to manage export payment risk and get paid reliably
+CONTENT: Payment risk in export is higher than in domestic trade because your legal recourse if a buyer defaults is complicated by jurisdiction, currency, and distance. Getting this right is not optional — a single large payment default can damage a small exporter's cash flow for a year.  Letters of Credit (LC) are the gold standard for payment security. An LC is a commitment from the buyer's bank to pay you, provided you present the correct shipping documents. The buyer's ability or willingness to pay i
+
+TYPE: guide
+SLUG: how-to-get-your-products-certified-for-international-markets
+PILLAR: P2
+TITLE: How to get your products certified for international markets
+CONTENT: Certification requirements are the biggest practical barrier for Indian SMEs entering international markets. CE marking for Europe, FDA approval for the US, BIS for specific categories — the requirements vary by product and market, and getting this wrong means your shipment gets stopped at the border.  Start with the destination market and product category. Certification requirements are market-specific and product-specific. A machine exported to Germany needs CE marking; the same machine export
+
+TYPE: guide
+SLUG: how-to-set-up-a-purchase-order-system-that-prevents-maverick-spending
+PILLAR: P1
+TITLE: How to set up a purchase order system that prevents maverick spending
+CONTENT: Maverick spending — purchasing outside approved processes, vendors, or budgets — is one of the most common financial leakages in growing Indian companies. It happens because the procurement process is either nonexistent or so cumbersome that people bypass it. The solution is a process that's controlled without being slow.  Define what requires a purchase order. Not every small purchase needs a PO — that creates unnecessary overhead. Set a threshold (commonly ₹5,000–10,000) above which a PO is re
+
+TYPE: guide
+SLUG: how-to-evaluate-and-onboard-new-suppliers-systematically
+PILLAR: P1
+TITLE: How to evaluate and onboard new suppliers systematically
+CONTENT: Most Indian companies onboard suppliers based on a recommendation, a price quote, and a gut feel. This works sometimes and fails expensively at others. A systematic supplier evaluation takes 2–3 hours and prevents months of supply problems.  Define your evaluation criteria before you start looking. The criteria should cover: quality (do they meet your specifications? what is their rejection rate with other clients?), delivery reliability (what is their on-time delivery track record?), financial
+
+TYPE: guide
+SLUG: how-to-manage-procurement-for-a-project-based-business
+PILLAR: P1
+TITLE: How to manage procurement for a project-based business
+CONTENT: Project-based businesses — construction, engineering, IT implementation, manufacturing of custom orders — have procurement challenges that differ from continuous production. You're buying for a specific scope, on a specific timeline, with costs that directly affect your project margin.  Build a Bill of Materials (BOM) or procurement schedule for every significant project, before procurement starts. This forces the project team to think through every item they'll need, and allows procurement to p
+
+TYPE: guide
+SLUG: how-to-get-iso-9001-certified-without-disrupting-your-operations
+PILLAR: P2
+TITLE: How to get ISO 9001 certified without disrupting your operations
+CONTENT: ISO 9001 certification is often perceived as a bureaucratic exercise — a lot of documentation produced for auditors that nobody uses in real operations. That's what happens when companies implement ISO for the certificate rather than the system. Done right, ISO 9001 is a framework that forces you to document, measure, and improve your processes.  Understand what ISO 9001 actually requires. At its core, it requires you to: define your processes and document how they work, identify customer requir
+
+TYPE: guide
+SLUG: how-to-handle-a-major-customer-complaint-without-losing-the-relationship
+PILLAR: P1
+TITLE: How to handle a major customer complaint without losing the relationship
+CONTENT: A major customer complaint — a defective batch, a missed delivery, a service failure — is a test of your company's character. How you respond in the first 24–48 hours determines whether the relationship survives and strengthens, or ends with resentment.  Acknowledge first, investigate second. The worst response to a customer complaint is defensiveness or delay while you investigate internally. Acknowledge the problem immediately: 'We've received your report of [issue] and we're treating it as ou
+
+TYPE: guide
+SLUG: how-to-build-a-culture-of-quality-in-a-production-team
+PILLAR: P2
+TITLE: How to build a culture of quality in a production team
+CONTENT: Quality systems and inspection processes catch defects. Quality culture prevents them. The difference is between a team that produces quality because someone is checking, and a team that produces quality because they care. Building the latter takes deliberate and consistent leadership behaviour.  Quality culture starts with the founder and senior management. If leadership talks about quality but accepts shortcuts under delivery pressure, the team learns that quality is secondary to schedule. Eve
+
+TYPE: guide
+SLUG: how-to-reduce-dead-stock-without-damaging-supplier-relationships
+PILLAR: P1
+TITLE: How to reduce dead stock without damaging supplier relationships
+CONTENT: Dead stock — inventory that hasn't moved in 6 months or more — is a financial drain that most companies underestimate. It ties up working capital, occupies warehouse space, and often deteriorates in value. Getting rid of it and preventing it are both solvable problems.  First, quantify it. Pull your inventory aging report — how much of your current stock has been sitting for more than 90 days? More than 180 days? Most companies that do this exercise are surprised by how large the number is. In [
+
+TYPE: guide
+SLUG: how-to-set-the-right-reorder-points-for-your-key-materials
+PILLAR: P2
+TITLE: How to set the right reorder points for your key materials
+CONTENT: Running out of raw material mid-production is one of the most avoidable operational disruptions in manufacturing. It almost always happens not because of unforeseeable supply problems, but because no one has defined when to reorder — so they reorder based on memory and gut feel, and eventually get it wrong.  A reorder point (ROP) is the inventory level at which you place a new order. It's calculated as: (average daily usage × supplier lead time in days) + safety stock. This ensures you don't run
+
+TYPE: guide
+SLUG: how-to-conduct-a-physical-stock-audit-without-shutting-down-operations
+PILLAR: P2
+TITLE: How to conduct a physical stock audit without shutting down operations
+CONTENT: Most Indian manufacturers conduct a physical stock audit once a year — usually at financial year end — and discover significant discrepancies between book stock and physical stock. By then, the discrepancy has been accumulating for 12 months and is difficult to trace. More frequent audits with less disruption is a better model.  Cycle counting replaces or supplements the annual full stocktake. Instead of counting everything once a year, you count different sections of your inventory on a rotatin
+
+TYPE: guide
+SLUG: how-to-manage-seasonal-inventory-without-tying-up-all-your-cash
+PILLAR: P1
+TITLE: How to manage seasonal inventory without tying up all your cash
+CONTENT: Seasonal businesses face a recurring dilemma: you need to build inventory before the season to meet demand, but building inventory early ties up cash before revenue comes in. Mismanaging this cycle is one of the most common cash flow problems in Indian manufacturing and trading businesses.  Forecast demand accurately before you build inventory. Your seasonal inventory build should be based on a realistic demand forecast — historical sales, adjusting for market changes, confirmed orders, and prom
+
+TYPE: guide
+SLUG: how-to-implement-a-warehouse-management-system-on-a-limited-budget
+PILLAR: P1
+TITLE: How to implement a warehouse management system on a limited budget
+CONTENT: A warehouse management system (WMS) doesn't have to be expensive software. For most Indian SMEs, the problem isn't the software — it's the process discipline. A well-run manual system beats a poorly-run digital system every time.  Before buying any software, establish the basics: every item in your warehouse should have a defined location (bin, rack, row). Items should be stored consistently in their defined location — not wherever there's space. Receiving and dispatch should be documented for e
+
+TYPE: guide
+SLUG: how-to-forecast-demand-more-accurately-for-production-planning
+PILLAR: P2
+TITLE: How to forecast demand more accurately for production planning
+CONTENT: Poor demand forecasting is the root cause of two equally damaging problems: stockouts (you don't have enough, you miss sales and disappoint customers) and overstock (you have too much, your cash is tied up in [inventory](/how-to/how-to-[manage](/how-to/how-to-manage-co-founder-conflict-before-it-damages-the-business)-spare-parts-inventory-for-your-production-equipment)). Improving your forecast accuracy is one of the highest-leverage operational improvements you can make.  Start with historical
+
+TYPE: guide
+SLUG: how-to-reduce-your-freight-costs-without-switching-logistics-partners
+PILLAR: P1
+TITLE: How to reduce your freight costs without switching logistics partners
+CONTENT: Freight costs for Indian manufacturers and distributors can represent 3–8% of revenue — and most companies accept their current costs as a given without actively managing them. There is almost always 10–20% reduction available without changing your logistics partner.  Consolidate shipments. Sending 5 small shipments per week is significantly more expensive per unit than sending 2 larger consolidated shipments. If your customers will accept 2-day instead of next-day delivery, consolidation can cu
+
+TYPE: guide
+SLUG: how-to-set-up-a-distribution-network-for-a-new-product
+PILLAR: P1
+TITLE: How to set up a distribution network for a new product
+CONTENT: Distribution is the bridge between your product and your customer. Getting the distribution model right for a new product determines whether it reaches the market efficiently — or whether you spend years rebuilding a channel that doesn't fit your product.  Define your target customer first, then work backwards to the channel. Who buys your product? Where do they currently buy similar products? What's their purchase journey? A product for small retailers is distributed differently from a product
+
+TYPE: guide
+SLUG: how-to-manage-a-third-party-logistics-3pl-provider-effectively
+PILLAR: P1
+TITLE: How to manage a third-party logistics (3PL) provider effectively
+CONTENT: Outsourcing warehousing and logistics to a 3PL is the right decision for many Indian SMEs — it converts fixed infrastructure costs into variable costs, provides expertise you don't have to build, and allows you to scale up or down without capital investment. But a poorly managed 3PL relationship delivers the worst of both worlds: external costs with internal chaos.  Define your requirements precisely before you sign a contract. Throughput volume (units per day/month), storage requirements (total
+
+TYPE: guide
+SLUG: how-to-reduce-electricity-costs-in-a-manufacturing-plant
+PILLAR: P2
+TITLE: How to reduce electricity costs in a manufacturing plant
+CONTENT: Electricity is one of the largest controllable costs in Indian manufacturing — and in most plants, 15–25% of electricity consumption is waste that can be eliminated without affecting output. The investment required to capture these savings is usually recovered within 12–18 months.  Start with an energy audit. A professional energy audit (available through BEE — Bureau of Energy Efficiency — empanelled auditors) will identify exactly where your electricity is being consumed and where the highest-
+
+TYPE: guide
+SLUG: how-to-evaluate-whether-solar-power-makes-financial-sense-for-your-factory
+PILLAR: P2
+TITLE: How to evaluate whether solar power makes financial sense for your factory
+CONTENT: Solar power for Indian industrial consumers has reached genuine financial attractiveness — not because of government incentives (though those exist), but because the economics now work without them in many situations. The question is not 'is solar a good idea in general' but 'does it make financial sense for my specific situation'?  The core calculation: what is your current industrial electricity tariff (typically ₹7–12 per unit in most Indian states for HT/LT industrial consumers)? What would
+

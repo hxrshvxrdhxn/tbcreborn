@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -6,11 +6,11 @@ import sanitizeHtml from 'sanitize-html';
 import { marked } from 'marked';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const prisma = new PrismaClient();
+  
   const guide = await prisma.howToGuide.findUnique({
     where: { slug: params.slug },
   });
-  await prisma.$disconnect();
+  
 
   if (!guide) {
     return { title: 'Guide Not Found' };
@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export const revalidate = 3600;
 
 export default async function HowToGuidePage({ params }: { params: { slug: string } }) {
-  const prisma = new PrismaClient();
+  
   const guide = await prisma.howToGuide.findUnique({
     where: { slug: params.slug },
   });
-  await prisma.$disconnect();
+  
 
   if (!guide) {
     notFound();

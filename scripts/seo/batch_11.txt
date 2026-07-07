@@ -1,0 +1,180 @@
+TYPE: guide
+SLUG: how-to-design-a-leave-policy-that-balances-employee-needs-and-business-continuity
+PILLAR: P7
+TITLE: How to design a leave policy that balances employee needs and business continuity
+CONTENT: A leave policy is one of the most read HR documents in any company — yet most Indian SME leave policies are either too restrictive (creating resentment) or too vague (creating confusion and inconsistency). A clear, fair, and consistently applied leave policy reduces HR overhead significantly.  Statutory minimum leave entitlement varies by applicable legislation. Under most state shops and establishments acts, employees are entitled to 1 day of earned leave per every 20 days of work (approximatel
+
+TYPE: guide
+SLUG: how-to-manage-maternity-leave-compliantly-and-supportively
+PILLAR: P7
+TITLE: How to manage maternity leave compliantly and supportively
+CONTENT: The Maternity Benefit Act 1961 (as amended in 2017) provides some of the most generous maternity protections in the world — 26 weeks of fully paid leave for the first two children, 12 weeks for subsequent children, and additional protections for nursing mothers and women who adopt. Compliance is mandatory; a supportive implementation builds employer brand and retention.  Who is covered: all women employed in establishments with 10 or more employees. The [employee](/how-to/how-to-manage-employee-
+
+TYPE: guide
+SLUG: how-to-build-an-onboarding-process-that-gets-new-employees-productive-faster
+PILLAR: P2
+TITLE: How to build an onboarding process that gets new employees productive faster
+CONTENT: The first 90 days determine whether a new employee becomes a high performer, a satisfactory contributor, or an early exit. Companies that invest in structured onboarding see 50–70% higher productivity in new hires at the 90-day mark. Companies that have no onboarding programme wonder why attrition in the first year is high.  Day 1 experience: the administrative parts of day 1 — laptop, access cards, email account, system credentials, a desk — should be ready before the employee arrives. A new em
+
+TYPE: guide
+SLUG: how-to-conduct-exit-interviews-that-give-you-useful-information
+PILLAR: P2
+TITLE: How to conduct exit interviews that give you useful information
+CONTENT: Exit interviews are one of the most valuable and most wasted sources of HR intelligence in Indian companies. When done correctly, they reveal the real reasons people are leaving — which is often very different from the reasons given in resignation letters. When done incorrectly (by the direct manager, immediately after resignation, with no structure), they produce polished non-answers that tell you nothing.  Timing and person matter enormously. The exit interview should not be conducted by the d
+
+TYPE: guide
+SLUG: how-to-build-an-hr-dashboard-that-gives-you-real-visibility-into-your-workforce
+PILLAR: P2
+TITLE: How to build an HR dashboard that gives you real visibility into your workforce
+CONTENT: Most Indian founders who ask 'how is our team doing?' get a qualitative answer from their HR manager based on feel. An HR dashboard replaces feel with data — giving you objective visibility into the metrics that predict HR problems before they become operational ones.  The 8 metrics every growing company should track monthly: headcount by department (and change from last month), attrition rate (annualised: departures in the month / average headcount × 12 — target below 15% for most industries),
+
+TYPE: guide
+SLUG: how-to-run-a-salary-benchmarking-exercise-for-your-industry
+PILLAR: P2
+TITLE: How to run a salary benchmarking exercise for your industry
+CONTENT: Salary benchmarking — comparing your compensation levels to the market for similar roles in similar companies — is the foundation of any credible compensation strategy. [Without](/how-to/how-to-[manage](/how-to/how-to-manage-gratuity-obligations-as-your-team-grows)-subcontractors-without-losing-quality-control) it, you're either overpaying (which is a cost problem) or underpaying (which is an attrition problem) without knowing which.  Sources of salary benchmarking data for Indian companies: the
+
+TYPE: guide
+SLUG: how-to-implement-a-360-degree-feedback-process-that-actually-improves-performance
+PILLAR: P2
+TITLE: How to implement a 360-degree feedback process that actually improves performance
+CONTENT: 360-degree feedback — where an employee receives performance feedback from their manager, their peers, and their direct reports — is widely discussed and poorly implemented. Done well, it provides insight that a manager-only review can never give. Done poorly, it becomes a political exercise that damages trust and provides no useful information.  The purpose must be clear before you design the process. 360-feedback serves two distinct purposes that require different designs: developmental feedba
+
+TYPE: guide
+SLUG: how-to-manage-gratuity-obligations-as-your-team-grows
+PILLAR: P3
+TITLE: How to manage gratuity obligations as your team grows
+CONTENT: Gratuity is one of the most significant long-term employment liabilities for Indian companies and one of the least actively managed. By the time your long-serving employees reach 5 years, you need either cash reserves or an insurance policy to fund the obligation — not a year-end surprise on your balance sheet.  The legal framework: the Payment of Gratuity Act applies to establishments with 10 or more employees. Any employee who has completed 5 or more years of continuous service is entitled to
+
+TYPE: guide
+SLUG: how-to-handle-disciplinary-action-without-creating-legal-liability
+PILLAR: P7
+TITLE: How to handle disciplinary action without creating legal liability
+CONTENT: Disciplinary action — written warnings, suspension, and termination for misconduct — is a necessary management tool, but poorly managed disciplinary processes create significant legal risk, particularly for employees who qualify as workmen under the Industrial Disputes Act. The key principle: the process matters as much as the outcome.  The principles of natural justice must be followed: the employee must be informed of the charge against them, given an opportunity to present their side, and the
+
+TYPE: guide
+SLUG: how-to-manage-the-shops-and-establishments-act-compliance-for-your-office
+PILLAR: P2
+TITLE: How to manage the Shops and Establishments Act compliance for your office
+CONTENT: The Shops and Establishments Act is state-specific legislation that regulates working conditions in commercial establishments — offices, shops, hotels, and similar premises. Every state has its own version with its own requirements, and every commercial establishment must register under the applicable state act.  Registration: register your establishment with the local labour department under the applicable state shops and establishments act. The registration certificate must be displayed at the
+
+TYPE: guide
+SLUG: how-to-implement-a-non-solicitation-and-confidentiality-policy-that-actually-works
+PILLAR: P7
+TITLE: How to implement a non-solicitation and confidentiality policy that actually works
+CONTENT: Protecting your client relationships and confidential information when employees leave is one of the most important operational protections a growing company can build. Non-compete clauses are largely unenforceable in India — but non-solicitation and confidentiality protections are enforceable if properly drafted and implemented.  Non-solicitation clauses: a clause in the employment contract that prohibits a departing employee from soliciting your clients or your employees for a defined period a
+
+TYPE: guide
+SLUG: how-to-handle-tds-on-salary-correctly-the-most-common-payroll-mistakes
+PILLAR: P4
+TITLE: How to handle TDS on salary correctly — the most common payroll mistakes
+CONTENT: TDS (Tax Deducted at Source) on salary under Section 192 of the Income Tax Act is the most significant payroll compliance obligation for most Indian employers. Errors in TDS computation — either over-deduction or under-deduction — create [problems](/how-to/how-to-evaluate-and-use-invoice-discounting-to-solve-cash-flow-problems) for both the employer and the employee. The most common mistakes are predictable and preventable.  Mistake 1: not collecting investment declaration from employees at the
+
+TYPE: guide
+SLUG: how-to-manage-payroll-for-contractual-and-part-time-staff
+PILLAR: P4
+TITLE: How to manage payroll for contractual and part-time staff
+CONTENT: Contractual and part-time employees — engaged for fixed periods or fixed hours — require the same statutory compliance as regular full-time employees in most respects, but the calculations and some provisions differ. Many Indian companies handle this incorrectly, creating compliance gaps.  PF for contractual employees: if the employment period is more than 60 days and the employee earns below the wage ceiling, PF deductions apply. Short-term engagements below 60 days are generally exempt. For em
+
+TYPE: guide
+SLUG: how-to-set-the-esop-exercise-price-and-fair-market-value
+PILLAR: P1
+TITLE: How to set the ESOP exercise price and fair market value
+CONTENT: The exercise price — the price at which employees can buy shares when exercising their options — and the process for establishing fair market value (FMV) are two of the most important and most commonly confused aspects of ESOP design. Getting these wrong has tax consequences for employees and legal consequences for the company.  For listed companies, FMV is straightforward — it's the market price of the share on the relevant date. For private companies (most [Indian](/blog/ai-transformation-road
+
+TYPE: guide
+SLUG: how-to-run-an-esop-buyback-or-secondary-transaction
+PILLAR: P7
+TITLE: How to run an ESOP buyback or secondary transaction
+CONTENT: Most Indian SME ESOPs are illiquid — there's no market to sell the shares, and the only exit event is a fundraise, an acquisition, or an IPO. This illiquidity undermines the retention value of ESOPs for employees who need liquidity. A structured ESOP buyback or secondary transaction can address this.  ESOP buyback: the company repurchases shares from employees who have exercised their options. This provides liquidity to employees and is a strong retention and motivation signal. Legal structure:
+
+TYPE: guide
+SLUG: how-to-handle-pf-inspection-and-audit-by-epfo-officers
+PILLAR: P7
+TITLE: How to handle PF inspection and audit by EPFO officers
+CONTENT: EPFO (Employees' Provident Fund Organisation) enforcement officers conduct inspections of establishments to verify compliance with PF regulations. Most inspections are triggered by complaints, non-filing of returns, or discrepancies in ECR (Electronic Challan cum Return) data. Knowing what to expect and being prepared reduces the risk of penalties.  What inspectors verify: whether all eligible employees are enrolled in PF (including contract workers and casual workers who meet the eligibility cr
+
+TYPE: guide
+SLUG: how-to-manage-employees-who-refuse-to-enrol-in-pf
+PILLAR: P2
+TITLE: How to manage employees who refuse to enrol in PF
+CONTENT: Some employees — particularly those earning above the wage ceiling and those who have had PF before and prefer to manage their savings independently — may resist PF enrolment. Understanding the law on this is important: there is no legal right for an eligible [employee](/how-to/how-to-have-a-performance-conversation-with-a-senior-employee-who-is-underperforming) to opt out of PF in India.  PF enrolment is mandatory for all employees earning up to ₹15,000 per month (basic + DA) in an establishmen
+
+TYPE: guide
+SLUG: how-to-choose-and-implement-an-hrms-for-a-50-200-person-company
+PILLAR: P2
+TITLE: How to choose and implement an HRMS for a 50–200 person company
+CONTENT: A Human Resource Management System (HRMS) is the software platform that manages your [employee](/how-to/how-to-reduce-employee-attrition-when-you-can-t-match-mnc-salaries) data, payroll, attendance, leave, and often performance management. For companies growing from 50 toward 200 people, implementing an HRMS transforms HR from a manual, error-prone operation to a scalable, data-driven function.  When you need an HRMS: when managing employee data in spreadsheets is causing errors or taking more t
+
+TYPE: guide
+SLUG: how-to-run-an-internal-hr-audit-to-identify-compliance-gaps
+PILLAR: P2
+TITLE: How to run an internal HR audit to identify compliance gaps
+CONTENT: An internal HR audit — a systematic review of your HR policies, practices, and documentation against legal requirements and internal standards — is the most effective way to identify compliance gaps before a labour inspector, ESIC/EPFO officer, or court case does it for you.  The scope of a comprehensive HR audit: statutory registrations and returns (PF, ESIC, professional tax, shops and establishments, contract labour), employment documentation (employment contracts for all [employees](/how-to/
+
+TYPE: guide
+SLUG: how-to-manage-hr-during-a-period-of-rapid-headcount-growth
+PILLAR: P2
+TITLE: How to manage HR during a period of rapid headcount growth
+CONTENT: Growing headcount fast — doubling from 30 to 60, or 80 to 160 — creates HR operational stress that most companies underestimate. Processes that worked for 30 people break at 60, and the damage shows up as hiring errors, onboarding failures, compliance backlogs, and team [culture](/blog/the-architecture-of-culture-in-a-rapidly-growing-team) dilution.  The HR function needs to scale before the headcount, not after. If you plan to grow from 50 to 100 people over the next 12 months, your HR capacity
+
+TYPE: guide
+SLUG: how-to-create-a-career-framework-that-gives-employees-clarity-on-growth
+PILLAR: P2
+TITLE: How to create a career framework that gives employees clarity on growth
+CONTENT: A career framework — a documented structure of roles, levels, and progression criteria within your [company](/how-to/how-to-build-a-company-culture-that-becomes-a-competitive-advantage) — is one of the highest-leverage HR investments you can make. It answers the question every ambitious [employee](/how-to/how-to-handle-esops-when-an-employee-leaves) has: 'How do I grow here?' When employees can't see a path forward, they find one elsewhere.  The structure: a career framework organises roles into
+
+TYPE: guide
+SLUG: how-to-manage-an-underperforming-hr-manager
+PILLAR: P2
+TITLE: How to manage an underperforming HR manager
+CONTENT: The HR manager is the person responsible for the people systems in your company. When they're underperforming, the impact cascades — compliance gaps, poor hiring decisions, team dissatisfaction, and operational HR failures that the founder ends up resolving personally. Managing this situation requires clarity and directness.  Define the performance problem specifically before addressing it. 'The HR team isn't great' is a feeling. 'PF filings were late for 3 consecutive months, the last 2 hires f
+
+TYPE: guide
+SLUG: how-to-manage-remote-contractors-based-outside-india
+PILLAR: P2
+TITLE: How to manage remote contractors based outside India
+CONTENT: Engaging contractors who are based outside India — for software development, design, research, or other services — introduces cross-border compliance complexity around foreign payments, tax deduction, and FEMA regulations. Getting this right protects both the [company](/how-to/how-to-structure-a-compensation-and-benefits-policy-for-a-50-person-company) and the relationship.  Foreign remittance under FEMA: payments to overseas contractors must comply with FEMA (Foreign Exchange Management Act). P
+
+TYPE: guide
+SLUG: how-to-handle-a-situation-where-a-contractor-claims-to-be-an-employee
+PILLAR: P1
+TITLE: How to handle a situation where a contractor claims to be an employee
+CONTENT: If a contractor believes they have been treated as an employee — and therefore should receive employee benefits (PF, gratuity, ESIC, regularisation) — they may file a claim before a labour court or the appropriate authority. This situation, while uncomfortable, is manageable if you've maintained the right practices and documentation.  The legal test: Indian courts and labour authorities look at the substance of the relationship, not the label. The factors considered: who controls how the work is
+
+TYPE: guide
+SLUG: how-to-design-and-communicate-a-flexible-benefits-programme
+PILLAR: P7
+TITLE: How to design and communicate a flexible benefits programme
+CONTENT: A Flexible Benefits Programme (FBP) allows [employees](/how-to/how-to-manage-esic-claims-and-ensure-your-employees-can-access-benefits) to choose how a portion of their CTC is structured across eligible allowance components — maximising their individual tax efficiency based on their personal circumstances. An employee who rents a home benefits from higher HRA; one who doesn't needs alternatives. FBP solves this [without](/how-to/how-to-negotiate-a-commercial-lease-without-overpaying) increasing
+
+TYPE: guide
+SLUG: how-to-manage-employee-loans-and-advances-correctly
+PILLAR: P7
+TITLE: How to manage employee loans and advances correctly
+CONTENT: Many Indian companies provide short-term advances or salary loans to employees — especially for personal emergencies, medical needs, or festival season cash needs. Managing these correctly prevents both financial leakage and HR conflict.  A clear policy before you start: define what's available (advance salary — next month's salary paid early vs. a formal loan repaid over time), the eligibility criteria (typically employees who have completed their probation), the maximum amount (typically 1–3 m
+
+TYPE: guide
+SLUG: how-to-build-a-learning-and-development-programme-on-a-limited-budget
+PILLAR: P7
+TITLE: How to build a learning and development programme on a limited budget
+CONTENT: Learning and development (L&D) is consistently cited by Indian employees as one of the top factors in their decision to stay with a company. Yet most Indian SMEs invest almost nothing in it — because they assume L&D requires expensive training courses and outside trainers. Most of the highest-impact L&D is free or nearly free.  Internal knowledge transfer is the cheapest and most contextual form of L&D. Every week, someone in your company knows something valuable that the rest of the team would
+
+TYPE: guide
+SLUG: how-to-reduce-employee-attrition-when-you-can-t-match-mnc-salaries
+PILLAR: P3
+TITLE: How to reduce employee attrition when you can't match MNC salaries
+CONTENT: Attrition in SMEs is almost never purely about money. The top three real reasons employees leave established but growing companies: no clear career path, a bad direct manager, and the feeling that the company is stagnant. Fix those before touching compensation.  Career path first. Sit down and map out what growth looks like for your top 10 employees over the next 2 years. Not vague promises — actual role titles, responsibilities, and salary bands they're moving toward. Put it in writing. Most SM
+
+TYPE: guide
+SLUG: how-to-structure-a-compensation-and-benefits-policy-for-a-50-person-company
+PILLAR: P3
+TITLE: How to structure a compensation and benefits policy for a 50-person company
+CONTENT: At 50 people, ad hoc salary decisions start to create serious problems — people find out each other's salaries, resentment builds, your best performers feel undervalued, and your weakest performers feel overpaid. You need a comp policy before you hit 50, not after.  Step 1: Define salary bands per role level. You don't need a Big 4 compensation study. Look at comparable companies on Naukri, LinkedIn, and AmbitionBox. Build 3–4 bands per function (junior, mid, [senior](/blog/senior-hire-changes-e
+
+TYPE: guide
+SLUG: how-to-legally-terminate-an-employee-in-india
+PILLAR: P3
+TITLE: How to legally terminate an employee in India
+CONTENT: Wrongful termination is one of the biggest legal risks for Indian SMEs. Getting it wrong can lead to labour court cases, reinstatement orders, and reputational damage. Getting it right is straightforward if you follow a process.  First, understand the category. Is this a workman (as defined under the Industrial Disputes Act, 1947 — broadly, anyone not in a managerial or supervisory role earning under a threshold) or a non-workman? Workmen have significantly more legal protection including mandat
+

@@ -1,0 +1,180 @@
+TYPE: guide
+SLUG: how-to-build-a-performance-review-system-that-employees-don-t-hate
+PILLAR: P3
+TITLE: How to build a performance review system that employees don't hate
+CONTENT: Most performance reviews in Indian SMEs are either nonexistent or a meaningless annual ritual that managers dread and employees distrust. Both outcomes hurt your business. A good review system is simple, consistent, and actually connected to outcomes.  The problem with complex frameworks: if your managers spend more time filling forms than having conversations, the system has failed. Keep it to: what was expected, what was delivered, what was good, what needs to change, and what's next.  Structu
+
+TYPE: guide
+SLUG: how-to-set-up-a-monthly-mis-report-your-cfo-or-you-will-actually-use
+PILLAR: P5
+TITLE: How to set up a monthly MIS report your CFO (or you) will actually use
+CONTENT: A Management Information System (MIS) report is your company's financial dashboard. Most growing companies either have no MIS, or have one so complex it takes 3 days to compile and no one reads it. Neither works.  A functional MIS for a 20–200 person company should cover five things, monthly, within 10 days of month close: Revenue (actual vs. budget, by segment or product line), Expenses (actual vs. budget, by department), Cash position (bank balances, receivables, payables), Key operational met
+
+TYPE: guide
+SLUG: how-to-reduce-your-company-s-tax-liability-legally
+PILLAR: P5
+TITLE: How to reduce your company's tax liability legally
+CONTENT: Tax planning for an established Indian company is not about tricks — it's about using the provisions in the Income Tax Act that already exist for businesses like yours. Most SMEs overpay tax because they don't plan ahead and don't use available deductions systematically.  Key deductions most SMEs underutilise: Section 37(1) allows deduction of all business expenses that are wholly and exclusively for the business — make sure every legitimate business expense is documented and claimed. Section 35
+
+TYPE: guide
+SLUG: how-to-manage-cash-flow-when-your-clients-pay-late
+PILLAR: P5
+TITLE: How to manage cash flow when your clients pay late
+CONTENT: Late client payments are the single biggest cash flow killer for Indian SMEs. The good news: most of it is solvable without chasing every invoice manually.  Prevention first. Your payment terms live in your contract and your invoice. If your contract says 'payment within 30 days' but you're not following up until day 45, you've trained your client to pay late. Start following up on day 31, not day 60.  Invoice hygiene: most Indian SME invoices get delayed not because clients don't want to pay, b
+
+TYPE: guide
+SLUG: how-to-build-a-budget-that-your-department-heads-will-actually-follow
+PILLAR: P5
+TITLE: How to build a budget that your department heads will actually follow
+CONTENT: Most company budgets fail for one of three reasons: they're built top-down with no input from the people spending the money, they're too detailed to be useful, or they're filed in April and forgotten by June. Here's how to build one that works.  Start with a revenue plan, not an expense plan. Your budget is only as credible as your revenue assumptions. Work with your sales and business leadership to build a realistic revenue forecast — conservative, base, and stretch cases. Everything else flows
+
+TYPE: guide
+SLUG: how-to-evaluate-whether-to-hire-a-full-time-cfo-or-outsource-the-function
+PILLAR: P5
+TITLE: How to evaluate whether to hire a full-time CFO or outsource the function
+CONTENT: This is one of the most consequential financial decisions a growing company makes — and most founders make it too late or too early.  You probably don't need a full-time CFO yet if: your revenue is under ₹10Cr, your finance function is primarily bookkeeping and compliance, you don't have external investors who require board-level reporting, and your business model is relatively straightforward.  You probably do need a full-time CFO if: you're raising a significant round and need investor relatio
+
+TYPE: guide
+SLUG: how-to-document-your-business-processes-before-they-live-only-in-people-s-heads
+PILLAR: P2
+TITLE: How to document your business processes before they live only in people's heads
+CONTENT: The moment your company depends on one person's tribal knowledge to run a critical process, you have a single point of failure. That person resigns, gets sick, or burns out — and the process breaks. Process documentation is not bureaucracy; it's insurance.  Start with the processes that would hurt most if they broke: client onboarding, invoicing, vendor payments, hiring, and your core delivery process. Don't try to document everything at once — pick the top 5 and do them well.  For each process,
+
+TYPE: guide
+SLUG: how-to-choose-and-implement-a-crm-without-wasting-six-months
+PILLAR: P6
+TITLE: How to choose and implement a CRM without wasting six months
+CONTENT: Most CRM implementations fail not because the software is bad, but because companies try to implement too much too soon, or choose a tool that doesn't match how they actually sell.  Step 1: Define your sales process before you open a single product demo. How do leads come in? What are the stages from first contact to signed contract? Who owns each stage? How long is your typical sales cycle? If you can't answer these questions, no CRM will help you — you'll just be digitising confusion.  Step 2:
+
+TYPE: guide
+SLUG: how-to-reduce-operational-costs-without-cutting-team-or-quality
+PILLAR: P2
+TITLE: How to reduce operational costs without cutting team or quality
+CONTENT: Most founders, when asked to cut costs, immediately think headcount. That's usually the wrong starting point — it damages morale, loses institutional knowledge, and often saves less than you think after severance and rehiring costs. [Start](/how-to/how-to-start-exporting-from-india-without-a-dedicated-export-team) elsewhere.  Vendor and subscription audit first. Pull your last 3 months of bank statements and credit card statements. List every recurring expense — software subscriptions, vendor co
+
+TYPE: guide
+SLUG: how-to-set-up-internal-controls-to-prevent-financial-fraud-as-you-scale
+PILLAR: P5
+TITLE: How to set up internal controls to prevent financial fraud as you scale
+CONTENT: Financial fraud in growing Indian companies is more common than founders realise, and it almost never happens in companies with basic internal controls. It happens in companies where one person controls too many steps in a process.  The core principle: segregation of duties. The person who approves a payment should not be the same person who initiates it. The person who receives vendor invoices should not be the same person who authorises payment. The person who reconciles bank accounts should n
+
+TYPE: guide
+SLUG: how-to-build-a-vendor-management-process-that-reduces-dependency-and-cost
+PILLAR: P1
+TITLE: How to build a vendor management process that reduces dependency and cost
+CONTENT: Most growing companies have a vendor problem they don't know they have: critical services concentrated in 1–2 vendors, no documented agreements, no performance tracking, and no leverage when it's time to renegotiate.  Start with a vendor audit. List every vendor you use, what you pay them, what they deliver, and your contract status. Classify them: strategic (critical to your delivery), operational (important but replaceable), and transactional (commoditised). Your energy should go toward strate
+
+TYPE: guide
+SLUG: how-to-build-a-b2b-sales-process-that-scales-beyond-the-founder
+PILLAR: P2
+TITLE: How to build a B2B sales process that scales beyond the founder
+CONTENT: In most early-stage Indian companies, the founder is the sales team. That works until it doesn't. The moment you want to grow faster than your own bandwidth, you need a repeatable sales process that others can execute.  Document the current process first — yours, as it actually works. What do you do from first contact to signed deal? What do you say in the first meeting? What objections come up and how do you handle them? What materials do you use? This becomes your sales playbook.  [Build](/how
+
+TYPE: guide
+SLUG: how-to-expand-into-a-new-city-without-opening-a-full-office
+PILLAR: P7
+TITLE: How to expand into a new city without opening a full office
+CONTENT: Physical office expansion is expensive, slow, and often unnecessary for the first 12–18 months in a new market. Most Indian B2B companies can establish a meaningful presence in a new city before they sign a single lease.  Start with a sales relationship, not a real estate decision. Hire one senior [business](/how-to/how-to-co-market-with-a-complementary-business-to-reach-new-clients) development person in the target city — someone who knows the market and has relationships. Give them 6–12 months
+
+TYPE: guide
+SLUG: how-to-retain-your-top-clients-when-a-competitor-is-undercutting-you-on-price
+PILLAR: P1
+TITLE: How to retain your top clients when a competitor is undercutting you on price
+CONTENT: If a client is threatening to leave because a competitor has offered a lower price, the conversation has shifted to price — and that usually means one of two things: either they're genuinely price-constrained and need a solution, or they feel they're not getting enough value for what they're paying. These require different responses.  First, find out which it is. Have an honest conversation: 'Help me understand what's driving this. Is this purely about the budget, or is there something about our
+
+TYPE: guide
+SLUG: how-to-price-your-services-when-you-re-moving-upmarket
+PILLAR: P6
+TITLE: How to price your services when you're moving upmarket
+CONTENT: Moving from SME clients to mid-market or enterprise clients is not just a sales challenge — it's a pricing and positioning challenge. If you keep your SME pricing when talking to larger buyers, you signal that you're an SME vendor. Larger clients want to buy from vendors who understand their [scale](/how-to/how-to-set-up-internal-controls-to-prevent-financial-fraud-as-you-scale).  Anchor on value, not cost. Enterprise buyers don't want to know your cost structure. They want to know what problem
+
+TYPE: guide
+SLUG: how-to-build-a-referral-programme-that-generates-consistent-leads
+PILLAR: P6
+TITLE: How to build a referral programme that generates consistent leads
+CONTENT: Referrals are the highest-quality lead source for most Indian B2B companies — higher trust, shorter sales cycles, better conversion rates. But most companies get referrals by accident. Building a system makes them predictable.  The first step is knowing who refers you now. For the last 12 months, map every new client: how did they first hear about you? Who made the introduction? You'll find 80% of your referrals come from 20% of your relationships. That 20% is your referral network — invest in i
+
+TYPE: guide
+SLUG: how-to-structure-contracts-with-clients-to-protect-yourself
+PILLAR: P3
+TITLE: How to structure contracts with clients to protect yourself
+CONTENT: Most Indian SMEs use contracts that were drafted for them by someone else, have never been reviewed by a lawyer, and leave significant commercial and legal risk on the table. A properly structured client contract is not bureaucracy — it's the foundation of a healthy business relationship.  The key clauses every service contract needs: Scope of work (detailed, specific, and with a defined change management process so scope creep has a price tag), Payment terms (amounts, milestones, invoicing sche
+
+TYPE: guide
+SLUG: how-to-handle-a-client-who-refuses-to-pay
+PILLAR: P2
+TITLE: How to handle a client who refuses to pay
+CONTENT: Non-payment by clients is a painful but common reality for Indian [service](/how-to/how-to-build-a-partner-ecosystem-around-your-product-or-service) businesses. Your ability to recover depends largely on what you did before the dispute — your contract, your documentation, and your invoice process.  Step 1: Escalate within the client organisation. If your primary contact is not responding to invoices, go above them. Send a formal email to their Finance or CEO level, referencing the contract, the
+
+TYPE: guide
+SLUG: how-to-protect-your-company-s-intellectual-property
+PILLAR: P2
+TITLE: How to protect your company's intellectual property
+CONTENT: Most Indian founders think IP protection means filing a patent. For the vast majority of businesses, that's not the most important or urgent form of IP protection. Here's what [actually](/how-to/how-to-run-effective-all-hands-meetings-that-your-team-actually-values) matters.  Trade secrets and confidential information: your processes, client lists, pricing models, and methods of delivery are almost certainly your most valuable IP. Protect them through: NDAs with all employees and contractors (fr
+
+TYPE: guide
+SLUG: how-to-set-up-a-proper-shareholder-agreement-before-your-first-investor
+PILLAR: P5
+TITLE: How to set up a proper shareholder agreement before your first investor
+CONTENT: Most Indian founders who raise their first institutional round or bring in a co-[investor](/how-to/how-to-prepare-for-an-investor-due-diligence-process) are unprepared for the legal complexity of that conversation. The time to set up a proper shareholder agreement is before you need one — not in the middle of a negotiation.  What a shareholder agreement covers: equity percentages and cap table, voting rights and reserved matters (decisions that require unanimous or supermajority approval), board
+
+TYPE: guide
+SLUG: how-to-stay-gst-compliant-without-it-consuming-your-finance-team
+PILLAR: P3
+TITLE: How to stay GST compliant without it consuming your finance team
+CONTENT: GST compliance for a growing Indian company involves more than just filing returns. The companies that get into trouble are almost always those where compliance has become reactive — they file to avoid penalties, but they've never built a systematic process.  The minimum GST compliance calendar: GSTR-1 (outward supplies) — 11th of every month. GSTR-3B (summary return and payment) — 20th of every month. GSTR-2B reconciliation — do this by the 14th, before you file GSTR-3B. Annual return GSTR-9 —
+
+TYPE: guide
+SLUG: how-to-delegate-effectively-when-you-ve-been-doing-everything-yourself
+PILLAR: P3
+TITLE: How to delegate effectively when you've been doing everything yourself
+CONTENT: Delegation is the hardest skill for founder-operators to build, because the instinct that made them successful — owning every detail — [becomes](/how-to/how-to-restructure-your-business-debt-when-it-becomes-unmanageable) the bottleneck that limits growth. The shift is not about letting go of standards; it's about moving your involvement from doing to directing.  The reason most delegation fails: the founder delegates the task but not the context. They hand someone a job without explaining what s
+
+TYPE: guide
+SLUG: how-to-have-a-performance-conversation-with-a-senior-employee-who-is-underperforming
+PILLAR: P3
+TITLE: How to have a performance conversation with a senior employee who is underperforming
+CONTENT: This is one of the most avoided conversations in Indian SMEs. Founders tolerate underperformance from senior people far longer than they should — because they've been with the company a long time, because replacing them feels expensive, or because the conversation feels uncomfortable. The cost of avoiding it is always higher than the conversation itself.  Prepare before you speak. Be specific about what underperformance means. 'You've not been great lately' is a feeling, not a performance issue.
+
+TYPE: guide
+SLUG: how-to-build-a-senior-leadership-team-as-you-scale-past-50-people
+PILLAR: P3
+TITLE: How to build a senior leadership team as you scale past 50 people
+CONTENT: The organisational structure that works at 15 people is almost always wrong at 50, and definitely wrong at 100. At 50 people, you need a real leadership layer between you and your team — not just loyal lieutenants, but people with the skill and authority to run functions independently.  The common mistake: promoting the longest-serving employees into senior roles. Loyalty is valuable. But running a function — leading a team, making hiring decisions, managing budgets, and representing the departm
+
+TYPE: guide
+SLUG: how-to-manage-co-founder-conflict-before-it-damages-the-business
+PILLAR: P3
+TITLE: How to manage co-founder conflict before it damages the business
+CONTENT: Co-[founder](/blog/the-turbo-bytes-manifesto-scaling-beyond-the-founder) conflict is one of the top reasons early and growth-stage companies fail in India. And most of it is predictable and preventable — not because founders stop liking each other, but because roles, decision-making, and equity were never clearly defined from the [start](/how-to/how-to-start-exporting-from-india-without-a-dedicated-export-team).  The most common sources of co-founder conflict: unequal contribution over time (one
+
+TYPE: guide
+SLUG: how-to-run-effective-all-hands-meetings-that-your-team-actually-values
+PILLAR: P3
+TITLE: How to run effective all-hands meetings that your team actually values
+CONTENT: All-hands meetings in most Indian companies are either missing entirely, or they're a 2-hour information dump where leadership talks at the team, nobody asks real questions, and everyone goes back to work having learned nothing they didn't already know. Done well, an all-hands is one of the highest-leverage leadership tools you have.  Frequency: monthly for companies under 100 people; quarterly for companies above. Monthly is often the right cadence at the growth stage because things are changin
+
+TYPE: guide
+SLUG: how-to-choose-business-software-without-buying-things-you-don-t-need
+PILLAR: P7
+TITLE: How to choose business software without buying things you don't need
+CONTENT: Indian SMEs are sold a lot of software. ERP systems, HRMS platforms, project management tools, CRMs, collaboration suites — the demos are all impressive and the contracts are all long. Most companies end up paying for 5 tools and properly using 2.  Start with a pain inventory, not a demo. What takes too long? What gets done wrong because it's manual? Where does information get lost? The software you need is the software that solves those specific problems — not the software with the most feature
+
+TYPE: guide
+SLUG: how-to-use-ai-tools-to-make-your-team-more-productive-without-risking-data
+PILLAR: P1
+TITLE: How to use AI tools to make your team more productive without risking data
+CONTENT: AI tools are genuinely useful for growing companies — not as a replacement for thinking, but as a multiplier for writing, research, summarisation, and analysis. The founders who benefit most are those who are systematic about adoption rather than random.  The highest-value use cases for most Indian SMEs right now: drafting emails, proposals, and documents (saves 30–60 minutes per person per day for anyone who writes a lot), summarising meetings and calls, generating first drafts of SOPs and temp
+
+TYPE: guide
+SLUG: how-to-protect-your-company-from-a-cyber-attack
+PILLAR: P2
+TITLE: How to protect your company from a cyber attack
+CONTENT: Cyber attacks on Indian SMEs have risen sharply. You don't need to be a large enterprise to be a target — in fact, mid-sized companies are often preferred targets precisely because they have valuable data but weaker security than large enterprises.  The most common attack vectors against Indian SMEs: phishing emails (someone clicks a link and gives credentials), compromised passwords (weak or reused passwords across services), ransomware delivered via email attachments, and insider threats (disg
+
+TYPE: guide
+SLUG: how-to-build-a-company-website-that-actually-generates-leads
+PILLAR: P6
+TITLE: How to build a company website that actually generates leads
+CONTENT: Most Indian B2B company websites are built to satisfy the founder's sense of how their company should look online — not to generate leads. They're beautiful, vague, and ineffective. Here's what actually works.  The single most important question your website must answer immediately: what do you do, for whom, and why should they care? If a visitor can't answer those three questions within 10 seconds of landing on your homepage, you're losing them.  For a B2B service company, your website's job is
+

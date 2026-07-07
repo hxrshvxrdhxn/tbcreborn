@@ -1,0 +1,180 @@
+TYPE: blog
+SLUG: reporting-revolution-data-dumps-to-decision-support
+PILLAR: P2
+TITLE: The Reporting Revolution: From Data Dumps to Decision Support
+CONTENT: Business reporting is one of the most time-consuming and least effective activities in most organisations. Time-consuming because producing reports manually — extracting data from multiple systems, compiling it, formatting it, distributing it — absorbs significant hours of skilled time every week. Least effective because most of the reports produced are read at best partially, acted upon rarely, and quickly superseded by the next report in the cycle. The information exists. The reports exist. Th
+
+TYPE: blog
+SLUG: language-of-ai-key-terms-business-leaders-should-understand
+PILLAR: P1
+TITLE: The Language of AI: Key Terms Every Business Leader Should Actually Understand
+CONTENT: The language of AI creates unnecessary barriers [between](/how-to/how-to-choose-between-a-term-loan-overdraft-and-cash-credit-facility) business leaders and the decisions they need to make [about](/blog/turbo-bytes-consulting-how-we-think-about-ai-strategy) AI. Technical terms are used in vendor conversations, [implementation](/blog/the-execution-gap-why-great-strategies-fail-in-implementation) discussions, and strategy documents in ways that assume familiarity that most business leaders do not
+
+TYPE: blog
+SLUG: exit-preparation-founder-thinks-about-too-late
+PILLAR: P4
+TITLE: The Exit Preparation No Founder Thinks About Until It Is Too Late
+CONTENT: Exit preparation is consistently treated as a topic relevant only to founders who are actively planning to sell, retire, or transfer their business. This framing misses the more important point: the practices that make a business exit-ready are the same practices that make a business well-run, resilient, and valuable at any stage of its development. A business prepared for exit is a business whose value is clearly documentable, whose operations do not depend on any single individual, and whose s
+
+TYPE: blog
+SLUG: ai-hr-people-operations-where-intelligence-helps
+PILLAR: P1
+TITLE: AI for HR and People Operations: Where Intelligence Helps and Where It Should Not Go
+CONTENT: Human resources and people operations sit at the intersection of two things that AI handles very differently: administrative processes, which AI handles well, and human judgment calls about people, which AI does not replace and should not be asked to. Understanding where that line is — not philosophically but practically — is essential for any organisation considering AI in their people operations. The applications that deliver value are specific and accessible. The applications that create risk
+
+TYPE: blog
+SLUG: art-of-saying-no-senior-leaders-protect-strategic-focus
+PILLAR: P4
+TITLE: The Art of Saying No: How Senior Leaders Protect Strategic Focus
+CONTENT: The word no is disproportionately difficult for [senior](/blog/senior-hire-changes-everything-how-to-get-right) leaders, and the difficulty is not personal weakness. It is structural. Leaders operate in an environment where saying yes is rewarded — by the person whose request is approved, by the team that sees action being taken, by the feeling of helpfulness that yes generates. Saying no carries immediate costs in the relationship with the person whose request is declined and deferred rewards i
+
+TYPE: blog
+SLUG: compound-effect-ai-advantage-grows-over-time
+PILLAR: P1
+TITLE: The Compound Effect of AI: Why the Advantage Grows Over Time
+CONTENT: The most important characteristic of AI advantage in business is that it compounds. This is different from most categories of competitive advantage, which are static or decay over time. A price advantage is replicated when a competitor matches pricing. A product advantage erodes as the product is copied or improved upon. Even a brand advantage, built over years, can be damaged in weeks by a reputational event. AI advantage, when built correctly, compounds because the asset that underlies it — or
+
+TYPE: guide
+SLUG: how-to-implement-5s-in-your-factory-without-it-becoming-a-one-time-exercise
+PILLAR: P2
+TITLE: How to implement 5S in your factory without it becoming a one-time exercise
+CONTENT: 5S — Sort, Set in Order, Shine, Standardise, Sustain — is one of the most widely adopted and most poorly executed improvement methodologies in Indian manufacturing. Most plants do a 5S launch, spend a weekend cleaning and labelling, take photos for the MD, and return to the previous state within 60 days. The problem is Sustain — the fifth S that determines whether the other four stick.  The right way to start: don't start with the whole factory. Pick one area — one production cell, one section o
+
+TYPE: guide
+SLUG: how-to-reduce-production-downtime-without-expensive-equipment-upgrades
+PILLAR: P2
+TITLE: How to reduce production downtime without expensive equipment upgrades
+CONTENT: Unplanned downtime is one of the most expensive problems in Indian manufacturing — and most of it is predictable and preventable with basic systems, not capital investment. The companies that run tight operations don't necessarily have newer machines; they have better maintenance discipline.  Start by measuring downtime accurately. Most plants track it loosely — 'the machine was down for a few hours.' [Build](/how-to/how-to-build-a-b2b-sales-process-that-scales-beyond-the-founder) a downtime log
+
+TYPE: guide
+SLUG: how-to-negotiate-a-commercial-lease-without-overpaying
+PILLAR: P7
+TITLE: How to negotiate a commercial lease without overpaying
+CONTENT: When you're taking new office or warehouse space, the landlord's first offer is never the best offer. Most Indian commercial landlords expect negotiation and build margin into their opening terms. The founders who pay market rate are those who negotiate; those who accept the first number almost always overpay.  Before you negotiate, do your homework. What are comparable spaces in the same area renting for? Talk to two or three property brokers even if you don't intend to use them — they'll give
+
+TYPE: guide
+SLUG: how-to-get-your-company-website-to-rank-on-google-without-hiring-an-seo-agency
+PILLAR: P6
+TITLE: How to get your company website to rank on Google without hiring an SEO agency
+CONTENT: Most Indian B2B companies either ignore SEO entirely or pay an agency ₹20,000–50,000 per month for vague deliverables and no measurable results. The truth is that 80% of what makes a website rank is straightforward and doable without specialist help — if you understand what actually matters.  Google ranks pages that best answer a specific search query. Everything in SEO flows from this: identify the exact phrases your target clients type into Google, create pages that answer those queries better
+
+TYPE: guide
+SLUG: how-to-design-an-esop-plan-that-actually-retains-your-best-people
+PILLAR: P1
+TITLE: How to design an ESOP plan that actually retains your best people
+CONTENT: An Employee Stock Option Plan (ESOP) is the most powerful long-term retention tool available to a growing Indian company — but most ESOPs are poorly designed and achieve far less than they should. The design determines whether your team sees ESOPs as a meaningful wealth-creation opportunity or as a complicated piece of paper they don't understand.  The core principle: ESOPs only retain people if they believe the options will be worth something. If your team doesn't understand the equity story —
+
+TYPE: guide
+SLUG: how-to-hire-your-first-hr-manager-without-overpaying
+PILLAR: P3
+TITLE: How to hire your first HR manager without overpaying
+CONTENT: Most founders delay hiring HR because they assume it means a bloated salary. It doesn't. The right first HR hire for a 30–100 person company is a generalist with compliance depth — someone who can run payroll, draft offer letters, manage PF/ESIC filings, and handle grievances. You don't need a Head of People yet.  Start by mapping your current HR pain. Is it hiring speed, attrition, compliance gaps, or just admin overload? That tells you the profile. A compliance-heavy business (manufacturing, s
+
+TYPE: guide
+SLUG: how-to-manage-subcontractors-without-losing-quality-control
+PILLAR: P2
+TITLE: How to manage subcontractors without losing quality control
+CONTENT: Subcontracting parts of your production — to job workers, processing units, or component manufacturers — is common in Indian manufacturing. It adds flexibility and capacity but introduces quality and delivery risk. The companies that use subcontracting effectively treat subcontractors as an extension of their own production, not as an external variable they can't control.  Define quality standards before you send work out. Your subcontractor cannot meet standards they haven't been given. Every j
+
+TYPE: guide
+SLUG: how-to-calculate-and-improve-your-product-margins-accurately
+PILLAR: P5
+TITLE: How to calculate and improve your product margins accurately
+CONTENT: Many Indian manufacturers know their total business profitability but not their product-level profitability. They know the [company](/how-to/how-to-protect-your-company-from-a-cyber-attack) made ₹50L last year, but they don't know which products made money and which lost it. Product-level margin analysis often reveals that 20–30% of a company's product range is loss-making — and the rest of the business is subsidising it.  Build a product cost model. For each product, calculate: direct material
+
+TYPE: guide
+SLUG: how-to-manage-supplier-price-increases-without-passing-them-all-to-your-customers
+PILLAR: P1
+TITLE: How to manage supplier price increases without passing them all to your customers
+CONTENT: Commodity and raw material price increases are a recurring challenge for Indian manufacturers. The reflex is to pass them through to customers — but that's not always possible, and doing it poorly can damage your most important relationships. A structured approach to managing input cost increases is more effective than reactive price discussions.  Separate structural increases from temporary spikes. Commodity prices fluctuate. Before you change your pricing or renegotiate with suppliers, underst
+
+TYPE: guide
+SLUG: how-to-implement-a-vendor-scorecard-system
+PILLAR: P1
+TITLE: How to implement a vendor scorecard system
+CONTENT: A vendor scorecard is a structured, periodic evaluation of your suppliers against defined performance criteria. It converts your intuitive sense of 'this supplier is giving us problems' into data — which allows objective conversations, fair comparison, and systematic improvement.  Define four to six KPIs per vendor category. For manufacturing suppliers, common KPIs are: on-time delivery rate (deliveries on or before the agreed date, target 95%+), quality acceptance rate (percentage of incoming m
+
+TYPE: guide
+SLUG: how-to-calculate-the-true-cost-of-holding-inventory
+PILLAR: P1
+TITLE: How to calculate the true cost of holding inventory
+CONTENT: Most Indian manufacturers and distributors think of inventory cost as the purchase price of the goods. The true cost of holding inventory is substantially higher — typically 20–30% of inventory value per year — and understanding this changes how you make stocking decisions.  Inventory carrying cost has five components: capital cost (the interest you pay on the money tied up in inventory, or the return you're forgoing — typically 10–14% in India), storage cost (warehouse space, utilities, materia
+
+TYPE: guide
+SLUG: how-to-use-government-export-incentives-and-schemes-effectively
+PILLAR: P2
+TITLE: How to use government export incentives and schemes effectively
+CONTENT: Indian exporters have access to a range of government incentive schemes that can significantly improve export profitability — but many SMEs either don't know about them or find the compliance requirements too complex to navigate. The savings are real and worth the effort.  RoDTEP (Remission of Duties and Taxes on Exported Products) replaced the MEIS scheme and is the primary export incentive for most categories. It provides a percentage rebate on FOB export value — the rate varies by HS code, ty
+
+TYPE: guide
+SLUG: how-to-package-your-product-for-international-markets
+PILLAR: P2
+TITLE: How to package your product for international markets
+CONTENT: Packaging is where many Indian exporters lose orders they should win. The product is good; the packaging communicates low quality, provides inadequate protection, or fails to meet the destination market's labelling requirements. International buyers make quick judgments about production quality based on packaging quality.  Outer packaging must survive the export journey. International shipments face more handling, more transit time, and more environmental variation than domestic shipments. Your
+
+TYPE: guide
+SLUG: how-to-build-a-spend-analysis-and-find-where-your-money-is-really-going
+PILLAR: P2
+TITLE: How to build a spend analysis and find where your money is really going
+CONTENT: Most growing companies have a poor understanding of their actual procurement spend — they know the big categories but not the detail, and they almost certainly have significant spend that is neither managed nor optimised. A spend analysis is the starting point for any serious procurement improvement.  Pull your spend data from three sources: your accounting [system](/how-to/how-to-build-a-performance-review-system-that-employees-don-t-hate) (all purchase invoices, categorised by vendor and expen
+
+TYPE: guide
+SLUG: how-to-handle-a-critical-supplier-who-is-delivering-late-consistently
+PILLAR: P1
+TITLE: How to handle a critical supplier who is delivering late consistently
+CONTENT: A supplier who is consistently delivering late is not just an operational inconvenience — they're a strategic risk that will eventually cause you a customer-facing failure. The question is not whether to address it but how to address it effectively.  Start with a data-driven conversation. Before confronting the supplier, compile the delivery data: how many orders in the last 3–6 months, what the agreed lead time was, what the actual delivery time was, and what impact the delays caused (productio
+
+TYPE: guide
+SLUG: how-to-prepare-for-a-customer-quality-audit
+PILLAR: P2
+TITLE: How to prepare for a customer quality audit
+CONTENT: Customer quality audits — where a large buyer sends their quality team to assess your manufacturing facility before or during a supply relationship — are increasingly common as Indian manufacturers supply to organised retail, international buyers, and large domestic corporates. Passing one convincingly opens doors; failing one closes them for years.  Understand what they're auditing before they arrive. Ask your customer for the audit checklist or standard they'll use. Most large buyers use estab
+
+TYPE: guide
+SLUG: how-to-reduce-the-cost-of-quality-in-your-business
+PILLAR: P2
+TITLE: How to reduce the cost of quality in your business
+CONTENT: The 'cost of quality' is a financial framework that makes visible what poor quality actually costs your business. It includes: prevention costs (training, process design, equipment maintenance — done to prevent defects), appraisal costs (inspection, testing, audits — done to detect defects), and failure costs (internal failures like scrap and rework, external failures like customer returns, warranty costs, and complaint handling). In most manufacturing companies, failure costs are 3–5x preventio
+
+TYPE: guide
+SLUG: how-to-manage-calibration-of-measuring-instruments-in-your-plant
+PILLAR: P2
+TITLE: How to manage calibration of measuring instruments in your plant
+CONTENT: Measuring instrument calibration is one of those quality system requirements that is either taken seriously or completely neglected in Indian manufacturing plants. When it's neglected, your quality decisions — accept or reject — are based on measurements that might be wrong. Every quality [audit](/how-to/how-to-run-an-internal-hr-audit-to-identify-compliance-gaps) and customer quality requirement will check calibration.  [Build](/blog/resilient-organisation-build-business-survives-disruption) a
+
+TYPE: guide
+SLUG: how-to-manage-last-mile-delivery-for-b2b-customers
+PILLAR: P6
+TITLE: How to manage last-mile delivery for B2B customers
+CONTENT: Last-mile delivery — the final leg from your warehouse or depot to the customer's door — is often the most expensive and most visible part of your logistics chain. For B2B customers, it's also the part that most directly affects their perception of your service quality.  Delivery windows matter more than speed for most B2B customers. A customer who needs material to arrive before their 8 AM production start doesn't need next-day delivery — they need reliable delivery before 8 AM. Understanding y
+
+TYPE: guide
+SLUG: how-to-build-a-reverse-logistics-process-for-returns-and-replacements
+PILLAR: P1
+TITLE: How to build a reverse logistics process for returns and replacements
+CONTENT: Returns management is an afterthought in most Indian B2B companies — there's no defined process, returns come in whenever they come in, disposition decisions are made inconsistently, and the financial impact is poorly tracked. Building a proper reverse logistics process is a competitive differentiator and a significant cost reduction opportunity.  Define your returns policy clearly and document it. What qualifies for return — defective product, wrong product shipped, overstocked customer, damage
+
+TYPE: guide
+SLUG: how-to-set-up-a-distributor-incentive-programme-that-actually-drives-sales
+PILLAR: P1
+TITLE: How to set up a distributor incentive programme that actually drives sales
+CONTENT: Most distributor incentive programmes in India are poorly designed — they reward volume without building capability, create perverse incentives (channel stuffing at quarter-end), and cost a significant percentage of revenue without proportionate impact on sell-through. A well-designed programme changes distributor behaviour in ways that build your market sustainably.  Separate primary sales (your sell-in to distributors) from secondary sales (distributor sell-through to retailers or end customer
+
+TYPE: guide
+SLUG: how-to-manage-water-and-waste-costs-in-a-manufacturing-facility
+PILLAR: P5
+TITLE: How to manage water and waste costs in a manufacturing facility
+CONTENT: Water and waste management are operational costs that receive much less attention than electricity in most Indian manufacturing facilities — but for many industries (food processing, textiles, chemicals, packaging), they represent significant and growing costs. They're also increasingly a compliance and reputational issue.  Water consumption: the first step is measurement. If you don't have a water meter on your production facility, install one. Understanding how much water you use, by process a
+
+TYPE: guide
+SLUG: how-to-manage-spare-parts-inventory-for-your-production-equipment
+PILLAR: P2
+TITLE: How to manage spare parts inventory for your production equipment
+CONTENT: Spare parts inventory is one of the most neglected areas of inventory management in Indian manufacturing. When a critical machine breaks down and the required spare part isn't available, the cost — in production downtime, expediting, and customer delays — can be enormous. When too many spare parts are stocked, capital is tied up unnecessarily.  Classify your spares by criticality and failure frequency. Critical spares are parts whose failure causes production downtime and which have long procure
+
+TYPE: guide
+SLUG: how-to-implement-quality-control-without-a-dedicated-qc-department
+PILLAR: P2
+TITLE: How to implement quality control without a dedicated QC department
+CONTENT: Most small and mid-sized Indian manufacturers believe quality control requires a separate department with inspectors and labs. For companies under 200 [people](/blog/handoff-problem-work-gets-lost-between-people-[teams](/blog/culture-is-architecture-how-growing-teams-lose-it)), that's rarely the right structure. Quality built into the production process is cheaper, faster, and more effective than quality inspected at the end.  Shift from end-of-line inspection to in-process quality checks. Train
+

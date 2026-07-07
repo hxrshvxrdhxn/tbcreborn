@@ -1,0 +1,84 @@
+TYPE: guide
+SLUG: how-to-raise-debt-financing-when-you-don-t-want-to-dilute-equity
+PILLAR: P1
+TITLE: How to raise debt financing when you don't want to dilute equity
+CONTENT: Equity is the most expensive capital you can raise because it never has to be paid back — which means you pay for it with ownership, forever. For many growing companies, debt is a better answer than equity, and it's more accessible than most founders realise.  Types of debt available to established Indian SMEs: term loans (traditional bank loans for capex or working capital), working capital facilities (overdraft against receivables, a cash credit limit), invoice discounting (advance against out
+
+TYPE: guide
+SLUG: how-to-prepare-for-an-investor-due-diligence-process
+PILLAR: P2
+TITLE: How to prepare for an investor due diligence process
+CONTENT: Most founders who have raised a round informally are not prepared for the rigour of formal investor due diligence. It is not a sign of distrust — it's a standard process. But an unprepared founder in due diligence looks disorganised, and investors price uncertainty into their valuation or terms.  Investors will look at: corporate documents (certificate of incorporation, MOA, AOA, all shareholder resolutions, current cap table), financial statements (last 3 years audited, current year management
+
+TYPE: guide
+SLUG: how-to-negotiate-with-a-strategic-investor-without-losing-control
+PILLAR: P5
+TITLE: How to negotiate with a strategic investor without losing control
+CONTENT: A strategic investor — typically a larger company investing in you for commercial reasons, not just financial return — comes with different dynamics than a financial investor. The upside is real: distribution, credibility, and sometimes revenue. The risks are also real: conflicts of interest, information access, and potential loss of independence.  Before you take strategic money, answer honestly: what do they get out of this? If their reason for investing is to get a view into your technology,
+
+TYPE: guide
+SLUG: how-to-build-a-content-marketing-strategy-that-generates-leads-without-a-big-budget
+PILLAR: P5
+TITLE: How to build a content marketing strategy that generates leads without a big budget
+CONTENT: Content marketing works for B2B Indian companies, but most companies doing it are producing content that's too generic to rank and too vague to convert. The companies that generate real leads from content do one thing differently: they answer specific questions their buyers are already asking.  Start with the questions your clients ask you. In every sales conversation, proposal, and client call, there are questions being asked. Write down the 20 most common ones. Those are your first 20 pieces o
+
+TYPE: guide
+SLUG: how-to-position-your-company-when-you-do-everything-for-everyone
+PILLAR: P6
+TITLE: How to position your company when you do everything for everyone
+CONTENT: The most common positioning problem for Indian SMEs is trying to serve everyone: 'We work with companies of all sizes across all industries.' That's not positioning — that's a description of having no positioning. And it makes you harder to buy, not easier.  The counterintuitive truth: the more specific your positioning, the more broadly you'll actually sell. A firm that says 'we help mid-sized manufacturing companies in India reduce compliance risk' will win more manufacturing clients than one
+
+TYPE: guide
+SLUG: how-to-use-linkedin-effectively-to-build-business-relationships
+PILLAR: P6
+TITLE: How to use LinkedIn effectively to build business relationships
+CONTENT: LinkedIn is the highest-quality B2B relationship-building platform available to Indian founders. Most are either not using it or using it in ways that don't generate business — either broadcasting corporate announcements or sending generic connection requests.  Founder visibility drives company credibility. Your potential clients will look you up. What they find on your LinkedIn profile either builds or undermines trust. Your profile should answer: who are you, what problem do you solve, who do
+
+TYPE: guide
+SLUG: how-to-build-a-business-that-can-be-sold-in-5-years
+PILLAR: P2
+TITLE: How to build a business that can be sold in 5 years
+CONTENT: Most founders don't think about exit until they want one. By then, it's often too late to fix the things that make a business difficult to sell. If you want the option to sell your business in 5 years — whether or not you exercise it — start building for it now.  What buyers pay for: recurring revenue (predictable, contracted, not one-time), customer concentration below 30% in any single client, a management team that can run the business without the founder, documented and repeatable processes,
+
+TYPE: guide
+SLUG: how-to-plan-succession-if-you-want-to-step-back-from-day-to-day-operations
+PILLAR: P2
+TITLE: How to plan succession if you want to step back from day-to-day operations
+CONTENT: Stepping back from a company you've built is not about giving up — it's about building something resilient enough to not need you to run it. For many founders, it's the most important thing they can do for the long-term health of the business.  The first question is: step back to what? Many founders who step back too quickly realise they haven't defined their continued role — board chair, investor, strategic advisor — and either get pulled back in or lose connection entirely. Define your post-op
+
+TYPE: guide
+SLUG: how-to-run-a-strategy-review-that-leads-to-actual-decisions
+PILLAR: P6
+TITLE: How to run a strategy review that leads to actual decisions
+CONTENT: Most [annual](/how-to/how-to-plan-an-annual-marketing-calendar-for-a-b2b-company) strategy sessions in Indian companies produce a presentation that gets filed and forgotten. The team spends two days in a hotel in Lonavala, the founder gets excited, ambitious targets are set, and by February everything is back to the same patterns. Here's why that happens and how to fix it.  The problem: strategy is treated as an event, not a system. A strategy review should produce 3–5 specific decisions, each w
+
+TYPE: guide
+SLUG: how-to-know-when-it-s-time-to-pivot-and-when-to-stay-the-course
+PILLAR: P7
+TITLE: How to know when it's time to pivot and when to stay the course
+CONTENT: Founders get pressure to pivot from every direction — investors, advisors, board members, failed quarters, exciting new opportunities. Knowing when to change direction and when to hold is one of the hardest strategic judgments in business, and it's almost never as obvious as it sounds in retrospect.  The signals that suggest something genuinely needs to change: you've been consistently at or below 50% of sales targets for three or more consecutive quarters, client feedback is consistently pointi
+
+TYPE: guide
+SLUG: how-to-enter-an-international-market-from-india
+PILLAR: P2
+TITLE: How to enter an international market from India
+CONTENT: Indian companies that want to serve international clients have a real structural advantage: English-language capability, competitive costs, and a growing global reputation for execution quality. The companies that fail internationally almost always make the same mistake: they try to replicate their India sales motion in a market they don't understand.  Choose your first market carefully. The easiest first international markets for Indian companies are typically: UAE/GCC (proximity, large Indian
+
+TYPE: guide
+SLUG: how-to-assess-and-manage-business-risk-as-you-scale
+PILLAR: P2
+TITLE: How to assess and manage business risk as you scale
+CONTENT: Growing companies face a paradox: the risks that could damage the [business](/how-to/how-to-use-case-studies-to-generate-new-business) grow faster than the systems to manage them. A risk that was manageable at 15 people — key person dependency, client concentration, single supplier — becomes existential at 80 people if it hasn't been addressed.  [Start](/how-to/how-to-start-exporting-from-india-without-a-dedicated-export-team) with a risk inventory. In one session, map the risks in four categori
+
+TYPE: guide
+SLUG: how-to-diversify-revenue-when-your-business-depends-on-one-client-or-product
+PILLAR: P5
+TITLE: How to diversify revenue when your business depends on one client or product
+CONTENT: Revenue concentration is the single most common strategic vulnerability for established Indian SMEs. The company grew on the back of one big client or one strong product, and it worked — until it becomes fragile. Diversification is not a growth strategy; it's a survival strategy that also happens to unlock growth.  The right time to diversify is when things are going well, not when the concentrated revenue is at risk. If your biggest client is 50% of revenue and things are fine right now, you ha
+
+TYPE: guide
+SLUG: how-to-build-strategic-partnerships-that-actually-generate-revenue
+PILLAR: P5
+TITLE: How to build strategic partnerships that actually generate revenue
+CONTENT: Most business partnerships in India are announced, celebrated, and then produce nothing. Both parties had good intentions, the MOU was signed, and then no one knew whose job it was to make it work. Partnerships that generate revenue are structured differently from the start.  Define the commercial mechanism first. Before signing anything, answer: how specifically will this partnership generate revenue? Is it referrals (you send them leads, they send you leads)? Is it bundled selling (you sell to
+

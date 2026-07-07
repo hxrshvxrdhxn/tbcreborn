@@ -1,0 +1,180 @@
+TYPE: guide
+SLUG: how-to-set-up-a-new-office-space-that-your-team-will-actually-want-to-work-in
+PILLAR: P3
+TITLE: How to set up a new office space that your team will actually want to work in
+CONTENT: The best office for a growing company is not the most impressive one — it's the one that makes your team productive and reflects your culture without over-committing capital you could deploy in the business.  Before you design anything, understand how your team actually works. Do they need focused individual work, collaborative team work, or a mix? Do clients visit regularly? Do you need conference rooms or casual meeting spaces? What does your team say when you ask them what would make them mor
+
+TYPE: guide
+SLUG: how-to-decide-between-buying-and-leasing-commercial-property-for-your-business
+PILLAR: P2
+TITLE: How to decide between buying and leasing commercial property for your business
+CONTENT: The buy-versus-lease decision for commercial property is one of the largest capital allocation decisions a growing business makes. Getting it wrong either locks up capital that could grow the business or leaves you exposed to landlord risk at a critical stage.  The case for leasing: it preserves capital for the business (capital deployed in property is not available for inventory, hiring, technology, or geographic expansion), gives you flexibility to move as the business grows or contracts, and
+
+TYPE: guide
+SLUG: how-to-manage-multiple-office-locations-without-losing-operational-cohesion
+PILLAR: P2
+TITLE: How to manage multiple office locations without losing operational cohesion
+CONTENT: Managing a company across two or more offices is operationally harder than most founders expect. The default outcome — without deliberate management — is that each location develops its own culture, its own [processes](/how-to/how-to-document-your-business-processes-before-they-live-only-in-people-s-heads), and its own relationship with the leadership, which gradually creates two different companies operating under the same name.  Communication architecture is the foundation. Every team member,
+
+TYPE: guide
+SLUG: how-to-evaluate-whether-your-business-needs-a-registered-office-versus-a-virtual-office
+PILLAR: P2
+TITLE: How to evaluate whether your business needs a registered office versus a virtual office
+CONTENT: The registered office address of your company is a legal requirement — all ROC correspondence, statutory notices, and official communications go there. The operational office where your team works is a separate decision. Many founders conflate the two and make suboptimal choices on both.  A virtual office for registered address purposes is legitimate and widely used. You pay ₹1,500–5,000 per month to a serviced office provider for the use of their address as your registered office. They receive
+
+TYPE: guide
+SLUG: how-to-manage-office-maintenance-without-a-dedicated-facilities-team
+PILLAR: P1
+TITLE: How to manage office maintenance without a dedicated facilities team
+CONTENT: For companies under 200 people, a dedicated facilities team is usually not justified. But without one, maintenance gets deferred until something breaks, vendor relationships are informal, and costs are uncontrolled. A part-time approach with clear ownership works well.  Assign an office manager or senior admin person as the facilities owner. This doesn't need to be their only responsibility — but someone needs to own the maintenance calendar, the vendor relationships, and the immediate response
+
+TYPE: guide
+SLUG: how-to-manage-security-for-your-office-or-facility
+PILLAR: P4
+TITLE: How to manage security for your office or facility
+CONTENT: Physical security for a growing company is not just about preventing theft — it's about protecting your people, your data, and your equipment from a range of risks that scale with your size and visibility.  Access control is the foundation. Know who is in your building at all times. For offices above 20 people, an electronic access control system — biometric or card-based entry — is worthwhile. It costs ₹50,000–2,00,000 to install (depending on coverage and quality) and eliminates the principal
+
+TYPE: guide
+SLUG: how-to-manage-your-office-lease-renewal-without-being-held-hostage-by-the-landlord
+PILLAR: P4
+TITLE: How to manage your office lease renewal without being held hostage by the landlord
+CONTENT: Lease renewal negotiations are where landlords have most of the leverage — because by renewal time, you've invested in the fit-out, your team is settled, and moving is genuinely disruptive and expensive. The landlord knows this and will price it in. Your job is to neutralise that leverage before the renewal conversation starts.  Start planning 12 months before the lease expiry. That's when you evaluate whether the current location still serves your needs, whether the rental is at market rate, an
+
+TYPE: guide
+SLUG: how-to-handle-a-workplace-safety-incident-correctly
+PILLAR: P4
+TITLE: How to handle a workplace safety incident correctly
+CONTENT: A workplace accident — even a minor one — sets off a compliance clock that most Indian employers don't know exists. Handling it incorrectly can turn a recoverable situation into a legal and reputational problem.  Immediate response: the [first](/how-to/how-to-hire-your-first-hr-manager-without-overpaying) priority is the injured person. Ensure they receive appropriate medical attention immediately. Don't let cost or paperwork delay medical care — your legal liability is far greater if inadequate
+
+TYPE: guide
+SLUG: how-to-set-up-a-disaster-recovery-plan-for-your-office-or-facility
+PILLAR: P4
+TITLE: How to set up a disaster recovery plan for your office or facility
+CONTENT: Most Indian SMEs have no documented plan for what happens if their primary office or facility is unavailable — due to fire, flood, power failure, or any other disruptive event. When the event happens, they improvise, lose critical time, and sometimes lose critical data.  A disaster recovery plan doesn't need to be complex. For most businesses, it needs to answer four questions: Where do we work if we can't access this building? How do we access our systems and data remotely? Who is responsible f
+
+TYPE: guide
+SLUG: how-to-prepare-your-company-for-a-bank-loan-application
+PILLAR: P2
+TITLE: How to prepare your company for a bank loan application
+CONTENT: Most Indian SME bank loan rejections are not because the business isn't creditworthy — they're because the application was poorly prepared. A well-prepared loan application significantly increases the probability of approval and the quality of terms you receive.  Get your financials in order. Banks want 3 years of audited financial statements (P&L, balance sheet, cash flow statement), the current year's provisional financials, and 12 months of bank statements for all business accounts. If your f
+
+TYPE: guide
+SLUG: how-to-choose-between-a-term-loan-overdraft-and-cash-credit-facility
+PILLAR: P7
+TITLE: How to choose between a term loan, overdraft, and cash credit facility
+CONTENT: Indian businesses have access to multiple forms of bank financing, each suited to different needs. Choosing the wrong product costs you money — either in unnecessary interest or in a facility that doesn't actually solve your cash flow problem.  Term loan: a fixed amount, disbursed upfront, repaid in EMIs over a defined period. Best suited for: capex (buying equipment, fit-out, vehicles), long-term working capital for a specific project, or a one-time need you can quantify. The interest rate is t
+
+TYPE: guide
+SLUG: how-to-approach-an-nbfc-when-your-bank-has-said-no
+PILLAR: P1
+TITLE: How to approach an NBFC when your bank has said no
+CONTENT: Bank rejections for SME loans are common — banks have conservative credit policies, collateral requirements that many SMEs can't meet, and a preference for established, large borrowers. NBFCs (Non-Banking Financial Companies) fill this gap, but they come with higher costs and require careful evaluation.  Why NBFCs say yes when banks say no: NBFCs have more flexible underwriting criteria, can lend against a wider range of collateral (or unsecured for smaller amounts), process faster, and can take
+
+TYPE: guide
+SLUG: how-to-use-your-msme-registration-to-access-better-financing
+PILLAR: P5
+TITLE: How to use your MSME registration to access better financing
+CONTENT: MSME registration (Udyam registration) unlocks a range of financing benefits that most registered companies don't fully utilise. If you're registered and not actively using these benefits, you're leaving money on the table.  Priority Sector Lending (PSL): banks are mandated by RBI to lend a portion of their credit to priority sectors, including MSMEs. This means banks are more motivated to lend to registered MSMEs than to non-registered businesses of similar size. When approaching a bank, presen
+
+TYPE: guide
+SLUG: how-to-get-a-business-loan-when-you-have-limited-collateral
+PILLAR: P7
+TITLE: How to get a business loan when you have limited collateral
+CONTENT: The Indian banking system's heavy reliance on property collateral shuts out many creditworthy businesses. But collateral-light financing options are more available than most founders realise — you just have to know where to look and how to present your case.  Cash flow-based lending is increasingly available. Several banks and NBFCs now underwrite loans based on cash flow analysis — your GST returns, bank statements, and business performance — rather than requiring property. If you have 3+ years
+
+TYPE: guide
+SLUG: how-to-build-a-13-week-cash-flow-forecast-that-keeps-you-ahead-of-cash-problems
+PILLAR: P4
+TITLE: How to build a 13-week cash flow forecast that keeps you ahead of cash problems
+CONTENT: A 13-week cash flow forecast is the most practical financial tool for managing business cash. It's long enough to see problems coming with enough time to act, short enough to be accurate, and granular enough to be actionable. Any business that has ever been surprised by a cash shortfall should be running this.  The structure: 13 weeks, one column per week. Three sections: cash in (collections from clients, any other inflows), cash out (payroll, vendor payments, rent, loan EMIs, tax payments, any
+
+TYPE: guide
+SLUG: how-to-reduce-your-debtors-days-outstanding
+PILLAR: P4
+TITLE: How to reduce your debtors days outstanding
+CONTENT: Debtors days outstanding (DDO) — the average number of days it takes your clients to pay you — is one of the most direct levers on your working capital. Reducing DDO by 10 days on ₹5Cr of annual revenue frees up approximately ₹14L of working capital. That's capital you can use to grow [without](/how-to/how-to-stay-gst-compliant-without-it-consuming-your-finance-team) borrowing.  The starting point is measurement. Calculate your current DDO: (accounts receivable / annual revenue) × 365. If your r
+
+TYPE: guide
+SLUG: how-to-extend-your-payables-without-damaging-supplier-relationships
+PILLAR: P4
+TITLE: How to extend your payables without damaging supplier relationships
+CONTENT: Just as you want your clients to pay you quickly, your suppliers want you to pay them quickly. The art is extending your payment cycle without damaging the relationships and trust that make your supply chain work.  The foundation: pay what you promise. If your agreed terms are 30 days and you're paying in 45, you're already in breach of trust. Before trying to extend terms, make sure you're meeting your current commitments. A supplier who trusts you to pay on time is far more willing to negotiat
+
+TYPE: guide
+SLUG: how-to-manage-your-working-capital-cycle-in-a-seasonal-business
+PILLAR: P4
+TITLE: How to manage your working capital cycle in a seasonal business
+CONTENT: Seasonal businesses — those where revenue is concentrated in specific months — face working capital challenges that non-seasonal businesses don't. You need capital to build inventory and fund operations before the revenue comes, and you need to manage surplus cash carefully in the off-season.  Map your working capital cycle accurately. For a seasonal business, your working capital need is not your average monthly burn — it's your peak working capital requirement, which occurs just before or at t
+
+TYPE: guide
+SLUG: how-to-evaluate-and-use-invoice-discounting-to-solve-cash-flow-problems
+PILLAR: P4
+TITLE: How to evaluate and use invoice discounting to solve cash flow problems
+CONTENT: Invoice discounting converts your [outstanding](/how-to/how-to-reduce-your-debtors-days-outstanding) invoices into immediate cash, solving the gap between when you invoice your clients and when they pay. It's one of the most useful working capital tools for Indian B2B businesses — and one of the most underused.  How it works: you submit an outstanding invoice (from a creditworthy client) to a bank, NBFC, or fintech lender. They advance 70–85% of the invoice value immediately. When your client pa
+
+TYPE: guide
+SLUG: how-to-build-a-working-capital-policy-for-your-business
+PILLAR: P4
+TITLE: How to build a working capital policy for your business
+CONTENT: Most Indian SMEs manage working capital reactively — chasing payments when cash runs low, delaying supplier payments when stretched, and generally managing by feel. A working capital policy converts this into a system with defined targets, responsibilities, and escalation triggers.  A working capital policy defines four things: inventory targets (maximum days of inventory to hold, by category), receivables targets (target DDO by customer segment, with escalation triggers if exceeded), payables t
+
+TYPE: guide
+SLUG: how-to-negotiate-better-payment-terms-with-your-customers
+PILLAR: P4
+TITLE: How to negotiate better payment terms with your customers
+CONTENT: Shortening the time your clients take to pay you is one of the most direct improvements to your working capital position — and it's negotiable more often than founders assume. Most clients pay in whatever cycle is convenient for them unless you ask for something different.  The time to negotiate payment terms is when you're winning the business, not after you've started delivering. Once a client is receiving your service and you're asking them to change from 45-day to 30-day terms, you're asking
+
+TYPE: guide
+SLUG: how-to-manage-petty-cash-and-small-expenses-without-losing-control
+PILLAR: P4
+TITLE: How to manage petty cash and small expenses without losing control
+CONTENT: Petty cash and small expenses are a common source of financial leakage in Indian companies — not because anyone is necessarily dishonest, but because the controls are minimal and the accountability is unclear. The total annual leakage from uncontrolled petty cash in a 50-person company can be surprisingly significant.  Define what petty cash is for. Petty cash should cover small, immediate cash expenses that can't be done by bank transfer or corporate card — typically below ₹1,000–2,000 per tran
+
+TYPE: guide
+SLUG: how-to-improve-your-company-s-credit-rating-and-borrowing-terms-over-time
+PILLAR: P4
+TITLE: How to improve your company's credit rating and borrowing terms over time
+CONTENT: Your company's creditworthiness is a business asset — it determines how much you can borrow, at what rate, and with what conditions. Most founders don't actively manage their credit profile; those who do find that their financing costs decline significantly over time.  Understand what determines your credit profile. For Indian SMEs, the key factors are: CIBIL commercial score (based on your company's credit history), your personal CIBIL score (since founders often guarantee business loans), fina
+
+TYPE: guide
+SLUG: how-to-use-a-line-of-credit-effectively-without-paying-interest-unnecessarily
+PILLAR: P4
+TITLE: How to use a line of credit effectively without paying interest unnecessarily
+CONTENT: A line of [credit](/how-to/how-to-improve-your-company-s-credit-rating-and-borrowing-terms-over-time) — whether an overdraft, cash credit, or revolving credit facility — is one of the most useful [business](/blog/business-diagnostic-structured-assessment-reveals) financing tools, but it costs money when drawn. Most companies either don't have a line of credit when they need one, or have one and draw it unnecessarily when cheaper alternatives exist.  Set up the line before you need it. This is th
+
+TYPE: guide
+SLUG: how-to-manage-a-commercial-property-dispute-with-your-landlord
+PILLAR: P7
+TITLE: How to manage a commercial property dispute with your landlord
+CONTENT: Commercial property disputes in India — over security deposit refunds, maintenance liability, illegal deductions, or forced early exits — are common and expensive. How you handle them determines whether you recover your money or your relationship, or sometimes neither.  Start with the agreement. Before any dispute escalates, read your leave and license agreement carefully. What does it say about security deposit refund timelines? Maintenance liability? What constitutes a breach? Most disputes ar
+
+TYPE: guide
+SLUG: how-to-plan-a-factory-or-warehouse-expansion-without-disrupting-current-operations
+PILLAR: P2
+TITLE: How to plan a factory or warehouse expansion without disrupting current operations
+CONTENT: Expanding your production or warehousing footprint while keeping current operations running is one of the most operationally complex things a growing company does. Done well, you expand capacity without disrupting customers. Done poorly, the expansion itself becomes the source of delivery problems.  Phase the expansion around your production calendar. If your business has seasonal peaks, plan the expansion during your slowest period. A construction project that starts in September and runs throu
+
+TYPE: guide
+SLUG: how-to-evaluate-and-set-up-a-second-production-location
+PILLAR: P2
+TITLE: How to evaluate and set up a second production location
+CONTENT: Opening a second manufacturing or production location is one of the most significant operational decisions a growing company makes. The pressure to expand is usually clear; the planning required to do it without destroying the operational discipline of the first location is less obvious.  Define why you're opening a second location before you define where. The reason should drive the location decision. If it's to serve customers in a different geography more cost-effectively, location near those
+
+TYPE: guide
+SLUG: how-to-restructure-your-business-debt-when-it-becomes-unmanageable
+PILLAR: P3
+TITLE: How to restructure your business debt when it becomes unmanageable
+CONTENT: Debt that was taken on in a growth phase can become unmanageable when revenue falls, costs rise, or the business model changes. Recognising this early and acting proactively gives you far more options than waiting until you're in default.  The moment you recognise that your current debt service (EMI payments) is straining your cash flow significantly — consuming more than 20–25% of your operating cash flow — it's time to review your debt structure, not wait for a missed payment.  Approach your l
+
+TYPE: guide
+SLUG: how-to-use-equipment-financing-to-upgrade-your-production-capability
+PILLAR: P5
+TITLE: How to use equipment financing to upgrade your production capability
+CONTENT: Equipment financing — loans or leases specifically for purchasing machinery, vehicles, or technology — is one of the most accessible and lowest-cost forms of SME financing in India. Yet many companies fund equipment from operating cash flow (suboptimal) or don't upgrade because they lack financing (even more suboptimal).  Equipment financing works by using the asset being purchased as the primary collateral. This means you can access financing without encumbering your property or business assets
+
+TYPE: guide
+SLUG: how-to-manage-working-capital-in-a-trading-or-distribution-business
+PILLAR: P4
+TITLE: How to manage working capital in a trading or distribution business
+CONTENT: Trading and distribution businesses have working capital dynamics that are different from service or manufacturing businesses — you're buying to hold and selling with payment terms, which means your working capital requirement is primarily driven by inventory levels and the difference between how long you hold stock and how long your customers take to pay you.  The working capital cycle in distribution: you pay your supplier (cash out), hold inventory (cash tied up), sell to a customer (inventor
+

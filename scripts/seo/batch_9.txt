@@ -1,0 +1,180 @@
+TYPE: guide
+SLUG: how-to-brief-a-designer-or-agency-so-you-get-what-you-actually-want
+PILLAR: P2
+TITLE: How to brief a designer or agency so you get what you actually want
+CONTENT: The gap between what founders want from design work and what they get from designers is almost always a briefing problem, not a talent problem. A well-briefed designer produces excellent work; a poorly briefed designer produces something that requires 5 rounds of revision and still doesn't feel right.  A good design brief covers: the objective (what is this piece of design for and what should it achieve?), the audience (who will see it and what do they need to feel?), the message (what is the si
+
+TYPE: guide
+SLUG: how-to-develop-a-messaging-framework-for-your-company
+PILLAR: P2
+TITLE: How to develop a messaging framework for your company
+CONTENT: A messaging framework is a structured set of statements that define how your company communicates what it does, why it matters, and why it's different. It's the foundation of your website copy, your sales conversations, your proposals, and your marketing content. Without one, every team member describes the company differently and the cumulative impression is confusion.  The core components of a messaging framework: positioning statement (one sentence that defines who you serve, what you solve,
+
+TYPE: guide
+SLUG: how-to-get-press-coverage-for-your-company-without-a-pr-agency
+PILLAR: P7
+TITLE: How to get press coverage for your company without a PR agency
+CONTENT: Press coverage — appearing in business media, industry publications, or mainstream news — builds credibility in a way that advertising cannot. It's also achievable for established Indian companies without a PR agency, if you understand how journalists actually work.  Journalists are looking for news, not promotion. The biggest mistake Indian companies make in PR is sending press releases about things that aren't news — 'Company XYZ Celebrates 5 Years in Business' is not a story. A story is somet
+
+TYPE: guide
+SLUG: how-to-write-a-press-release-that-journalists-will-actually-read
+PILLAR: P7
+TITLE: How to write a press release that journalists will actually read
+CONTENT: A press release is the document you send to journalists to inform them about something newsworthy. Most press releases in India are ignored because they're written like marketing brochures — about the company's excellence rather than about a story that serves the reader.  The format that works: headline (the story in one line, written like a newspaper headline — present tense, active voice, no jargon), subhead (one sentence that adds context), dateline (City, Date), opening paragraph (who, what,
+
+TYPE: guide
+SLUG: how-to-position-your-founder-as-a-thought-leader-in-your-industry
+PILLAR: P4
+TITLE: How to position your founder as a thought leader in your industry
+CONTENT: Thought leadership — being recognised as an authority and trusted voice in your field — is the most sustainable and highest-quality form of brand building available to a founder. It generates inbound business, improves pricing power, attracts better talent, and creates opportunities for speaking, media, and partnerships that a non-visible company never gets.  The foundation is genuine expertise expressed publicly. Thought leadership is not about marketing — it's about sharing real knowledge, rea
+
+TYPE: guide
+SLUG: how-to-handle-a-pr-crisis-or-negative-press-coverage
+PILLAR: P2
+TITLE: How to handle a PR crisis or negative press coverage
+CONTENT: Negative press coverage — a critical article, a bad review picked up by media, or a social media controversy — can damage a brand quickly if handled poorly, and have minimal lasting impact if handled well. The principles of good crisis response are consistent across situations.  Speed and transparency matter more than perfection. The worst responses to negative press are: ignoring it (it grows [without](/how-to/how-to-reduce-operational-costs-without-cutting-team-or-quality) your perspective), r
+
+TYPE: guide
+SLUG: how-to-make-business-events-and-conferences-worth-the-time-and-money
+PILLAR: P2
+TITLE: How to make business events and conferences worth the time and money
+CONTENT: Most Indian founders who attend conferences come back with a stack of business cards, no follow-ups, and an unclear sense of whether it was worth the time. A conference is worth attending if you treat it as a business development project with preparation, execution, and follow-up — not as a break from the office.  Prepare before you go. Who else is attending? Most events publish an attendee or speaker list. Identify 5–10 people you specifically want to meet — clients, partners, investors, or pee
+
+TYPE: guide
+SLUG: how-to-host-a-client-event-that-builds-relationships-and-generates-referrals
+PILLAR: P2
+TITLE: How to host a client event that builds relationships and generates referrals
+CONTENT: A well-run client event — a dinner, a roundtable, a workshop — is one of the most effective relationship-building tools available to a B2B company. It deepens existing relationships, creates connections between clients (making you the hub of a network they value), and generates referrals that conference presentations and content marketing can't replicate.  Define the purpose before the format. Is this event for deepening relationships with existing clients, creating an opportunity to invite pros
+
+TYPE: guide
+SLUG: how-to-speak-at-industry-conferences-and-use-it-to-generate-business
+PILLAR: P7
+TITLE: How to speak at industry conferences and use it to generate business
+CONTENT: Speaking at conferences is one of the most efficient lead generation tools for B2B service companies — a 30-minute presentation puts you in front of 100–500 qualified prospects simultaneously, positions you as an authority, and generates conversations that would take months of cold outreach to initiate.  Getting on the programme: most Indian industry conferences accept speaker proposals. Find the conference organiser or programme committee (usually listed on the conference website), and submit a
+
+TYPE: guide
+SLUG: how-to-build-a-professional-network-that-actually-helps-your-business
+PILLAR: P2
+TITLE: How to build a professional network that actually helps your business
+CONTENT: A professional network that helps your business is not the number of LinkedIn connections you have or the number of events you attend. It's the depth of a small number of relationships with people who have mutual trust, complementary expertise, and willingness to refer, advise, and introduce.  Quality over quantity. Most Indian founders with 3,000 LinkedIn connections have 15 relationships that actually deliver value. The time invested in building 15 deep relationships that generate referrals an
+
+TYPE: guide
+SLUG: how-to-identify-and-approach-potential-business-partners
+PILLAR: P2
+TITLE: How to identify and approach potential business partners
+CONTENT: A business partnership — where two companies combine reach, capability, or relationships to generate mutual value — can be a significant growth accelerator. Identifying the right partners and approaching them effectively requires a strategic framework, not opportunistic conversations.  Define what you're looking for in a partner before you approach anyone. What does the partner need to have — their client relationships, their capabilities, their geography, their reputation — to create value for
+
+TYPE: guide
+SLUG: how-to-structure-a-channel-partner-or-reseller-programme
+PILLAR: P3
+TITLE: How to structure a channel partner or reseller programme
+CONTENT: A channel partner or reseller programme allows other companies to sell your product or service to their existing clients — extending your reach without adding your own sales headcount. Done well, it multiplies your distribution significantly. Done poorly, it creates channel conflict, unhappy partners, and reputational damage from poor partner-delivered quality.  Define what you're asking partners to do: are they referring leads (introduction only), reselling (selling your product under your bran
+
+TYPE: guide
+SLUG: how-to-manage-a-joint-venture-with-another-indian-company
+PILLAR: P7
+TITLE: How to manage a joint venture with another Indian company
+CONTENT: A joint venture (JV) — where two or more companies create a shared entity to pursue a specific [business](/how-to/how-to-get-a-business-loan-when-you-have-limited-collateral) opportunity — is a powerful structure when the partners have genuinely complementary capabilities. It's also a structure that fails far more often than it succeeds, usually because the partnership was set up on optimism rather than explicit agreement.  Before structuring a JV, be honest about the alternative. Could you achi
+
+TYPE: guide
+SLUG: how-to-co-market-with-a-complementary-business-to-reach-new-clients
+PILLAR: P7
+TITLE: How to co-market with a complementary business to reach new clients
+CONTENT: Co-marketing — where two [businesses](/blog/ai-vendor-problem-businesses-buying-wrong-things) combine their marketing efforts to reach audiences neither could reach effectively alone — can double your marketing reach at half the cost. It's underused by Indian B2B companies, largely because it requires trust and coordination that most companies haven't built with their partners.  The right co-marketing partner: serves the same client profile as you (the same founder, the same industry, the same c
+
+TYPE: guide
+SLUG: how-to-evaluate-whether-a-strategic-partnership-is-worth-pursuing
+PILLAR: P2
+TITLE: How to evaluate whether a strategic partnership is worth pursuing
+CONTENT: Not every partnership opportunity deserves your time. Founders are approached constantly with partnership proposals — some genuine, some speculative, and some that benefit only one party. Evaluating them quickly and objectively prevents the common trap of investing time in partnerships that deliver nothing.  The four-question filter: Does their client base overlap significantly with our target market? Do they have a service or capability that genuinely complements ours (no overlap, no competitio
+
+TYPE: guide
+SLUG: how-to-run-linkedin-ads-for-b2b-lead-generation-in-india
+PILLAR: P6
+TITLE: How to run LinkedIn Ads for B2B lead generation in India
+CONTENT: LinkedIn Ads are the most targeted B2B advertising platform available — you can reach Indian founders by company size, industry, seniority, and job title with a precision that no other platform offers. The cost per click is higher than other platforms, but the targeting quality means the leads are significantly better qualified.  LinkedIn's most effective ad formats for B2B lead generation: Lead Gen Forms (the form appears directly in LinkedIn, pre-filled with the user's profile data — conversio
+
+TYPE: guide
+SLUG: how-to-use-email-marketing-to-nurture-b2b-leads-without-spamming-people
+PILLAR: P1
+TITLE: How to use email marketing to nurture B2B leads without spamming people
+CONTENT: Email marketing is the highest-ROI digital marketing channel for B2B companies — the challenge is doing it in a way that is genuinely useful to recipients rather than another addition to an overflowing inbox. The distinction is between email that serves the reader and email that serves the sender.  Build your list through consent, not purchase. A purchased email list will generate low open rates, high spam complaints, and damage your sender reputation. Build your list through: content downloads
+
+TYPE: guide
+SLUG: how-to-measure-whether-your-marketing-is-actually-generating-business
+PILLAR: P6
+TITLE: How to measure whether your marketing is actually generating business
+CONTENT: Marketing spend without measurement is hope, not strategy. For Indian B2B companies, measuring marketing effectiveness is both simpler and more important than most founders realise — simpler because the purchase journey is often traceable, more important because marketing budgets are limited and every rupee should be working.  The metrics that matter for B2B marketing: leads generated (enquiries from people who could become clients), lead quality (what percentage are genuinely qualified — right
+
+TYPE: guide
+SLUG: how-to-create-a-lead-magnet-that-attracts-your-ideal-b2b-client
+PILLAR: P6
+TITLE: How to create a lead magnet that attracts your ideal B2B client
+CONTENT: A lead magnet is a piece of valuable content you offer for free in exchange for a visitor's contact details. For B2B companies, the best lead magnets are not generic ebooks — they're specific, immediately useful tools that solve a real problem your target client has right now.  The formats that work for Indian B2B: a diagnostic checklist ('15-Point Operational Health Check for Manufacturing Companies at ₹20–100Cr [Revenue](/how-to/how-to-build-strategic-partnerships-that-actually-generate-revenu
+
+TYPE: guide
+SLUG: how-to-build-a-sales-funnel-for-a-b2b-service-company
+PILLAR: P6
+TITLE: How to build a sales funnel for a B2B service company
+CONTENT: A sales funnel describes the journey a prospect takes from first becoming aware of you to becoming a paying client. For B2B service companies, this journey typically has 5–7 stages and takes weeks to months. Understanding and managing each stage deliberately is what separates companies with predictable [revenue](/how-to/how-to-build-strategic-partnerships-that-actually-generate-revenue) from those that live on referral luck.  The stages for a typical Indian B2B service company: Awareness (they f
+
+TYPE: guide
+SLUG: how-to-set-up-a-referral-tracking-system-so-you-can-thank-and-reward-referrers
+PILLAR: P6
+TITLE: How to set up a referral tracking system so you can thank and reward referrers
+CONTENT: Most B2B companies receive referrals [without](/how-to/how-to-negotiate-with-a-strategic-investor-without-losing-control) any system for tracking where they came from, acknowledging the referrer, or measuring which relationships generate the most business. A referral tracking system converts accidental referrals into a managed programme.  The minimum system: when any new enquiry comes in, ask one question — 'How did you first hear about us?' Record the answer in your CRM or a simple spreadsheet.
+
+TYPE: guide
+SLUG: how-to-differentiate-your-company-when-you-re-in-a-crowded-market
+PILLAR: P2
+TITLE: How to differentiate your company when you're in a crowded market
+CONTENT: In most Indian B2B markets — consulting, technology, manufacturing, financial services — the market looks crowded because most companies position themselves identically. 'Quality service, competitive pricing, experienced team' is not differentiation — it's what everyone says. Real differentiation is specific, provable, and valued by your ideal client.  The three types of differentiation that actually work: specialisation (you're the expert in a specific vertical, problem, or client type — and yo
+
+TYPE: guide
+SLUG: how-to-build-a-company-culture-that-becomes-a-competitive-advantage
+PILLAR: P3
+TITLE: How to build a company culture that becomes a competitive advantage
+CONTENT: Company culture is either your strongest competitive advantage or your biggest operational liability — there's rarely a neutral. A culture that attracts excellent people, retains them, drives high performance, and generates client loyalty compounds over time into a genuinely difficult-to-replicate asset.  Culture is not what you declare — it's what your team experiences every day. A values statement on a wall that doesn't match how decisions are made, how people are treated, and what behaviours
+
+TYPE: guide
+SLUG: how-to-manage-your-company-s-brand-across-multiple-channels-consistently
+PILLAR: P2
+TITLE: How to manage your company's brand across multiple channels consistently
+CONTENT: Brand consistency across channels — your website, social media, email communications, proposals, presentations, and physical materials — is the foundation of professional brand perception. Inconsistency signals a lack of organisational discipline that sophisticated clients notice.  The most common inconsistencies: different logo versions used in different places (a low-resolution logo on social media, a different version in presentations), different colour interpretations (your blue looks differ
+
+TYPE: guide
+SLUG: how-to-use-case-studies-to-generate-new-business
+PILLAR: P2
+TITLE: How to use case studies to generate new business
+CONTENT: A well-written case study is the most persuasive sales tool available to a B2B service company. It shows potential clients exactly what you do, for whom, with what result — without requiring them to take your word for it. Most Indian companies have case studies that are either nonexistent or so vague as to be useless.  The anatomy of a case study that converts: client context (who was the client — industry, size, situation — enough to be relatable without violating confidentiality), the challeng
+
+TYPE: guide
+SLUG: how-to-use-awards-and-rankings-to-build-credibility
+PILLAR: P7
+TITLE: How to use awards and rankings to build credibility
+CONTENT: Industry awards and business rankings — when they're from credible sources and genuinely earned — build credibility with clients, recruits, and partners in a way that self-promotion cannot. An award from a respected industry body or a listing in a credible business ranking is third-party validation that carries real weight.  Identify the credible awards in your industry and geography. For Indian B2B companies, relevant awards include: Great Place to Work certification (widely recognised for empl
+
+TYPE: guide
+SLUG: how-to-build-a-speaker-profile-and-apply-for-conference-talks
+PILLAR: P2
+TITLE: How to build a speaker profile and apply for conference talks
+CONTENT: Conference speaking is one of the most effective thought leadership channels — but getting on the programme of significant conferences requires a systematic approach, not just expertise. The founders who speak regularly have built a speaker profile and an application system; those who don't speak regularly assume they haven't been invited.  Build your speaker profile first. A speaker profile includes: a professional headshot (recent, good quality), a short bio (100 words: who you are, what you d
+
+TYPE: guide
+SLUG: how-to-run-a-webinar-that-generates-genuine-leads
+PILLAR: P2
+TITLE: How to run a webinar that generates genuine leads
+CONTENT: Webinars are the digital equivalent of a seminar — they build authority, educate prospects, and generate leads at a fraction of the cost of in-person events. The difference between a webinar that generates 20 qualified leads and one that generates 200 registrations and 3 leads is almost entirely in the topic selection, the content quality, and the follow-up.  Topic selection determines registrant quality. 'How to Improve Your Business' attracts everyone and no one specifically. 'How Indian Manuf
+
+TYPE: guide
+SLUG: how-to-network-effectively-in-online-communities-and-forums
+PILLAR: P7
+TITLE: How to network effectively in online communities and forums
+CONTENT: Online communities — LinkedIn groups, WhatsApp groups, Slack communities, and forums specific to your industry — are where your target clients are having conversations. Being visibly useful in these communities is one of the most time-efficient ways to [build](/how-to/how-to-use-awards-and-rankings-to-build-credibility) professional reputation and generate inbound interest.  Choose communities where your target clients actually are, not where business owners in general congregate. A manufacturin
+
+TYPE: guide
+SLUG: how-to-build-a-partner-ecosystem-around-your-product-or-service
+PILLAR: P2
+TITLE: How to build a partner ecosystem around your product or service
+CONTENT: A partner ecosystem — a network of complementary companies that refer, integrate with, or extend your offering — multiplies your reach and creates competitive moats that individual company relationships can't replicate. Companies like Zoho, Tata Consultancy, and Infosys have built significant competitive advantage through their partner ecosystems; the same principle applies at the SME scale.  Start with a map of the ecosystem around your clients. For every significant client you have, who else d
+

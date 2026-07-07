@@ -1,0 +1,180 @@
+TYPE: blog
+SLUG: ai-implementation-checklist-before-you-build
+PILLAR: P1
+TITLE: The AI Implementation Checklist: What to Verify Before You Build Anything
+CONTENT: The majority of AI implementations that disappoint do so for reasons that could have been identified and addressed before the [build](/how-to/how-to-use-awards-and-rankings-to-build-credibility) began. The technical execution is rarely [where](/blog/ai-for-operations-where-intelligence-moves-the-needle) things go wrong. The problems are almost always upstream: an unclear objective, data that is not in the state assumed, a team that is not prepared to adopt what is deployed, or an infrastructure
+
+TYPE: blog
+SLUG: org-chart-not-the-organisation-how-work-gets-done
+PILLAR: P2
+TITLE: The Org Chart Is Not the Organisation: Understanding How Work Actually Gets Done
+CONTENT: Every organisation has two structures. The formal one is the org chart: the reported lines, the titles, the hierarchy that describes how authority is distributed on paper. The informal one is how work actually gets done: the relationships through which information actually travels, the people whose opinions actually shape decisions regardless of their position, the channels through which problems actually get resolved. These two structures are never identical, and the gap between them is where m
+
+TYPE: blog
+SLUG: generative-ai-vs-predictive-ai-business-decisions
+PILLAR: P1
+TITLE: Generative AI vs Predictive AI: What the Difference Means for Business Decisions
+CONTENT: The public conversation about AI has been dominated, for the past two years, by generative AI — the category of models that produce text, images, code, and other content in response to natural language prompts. This dominance in public discourse has created a blind spot: the impression that AI and generative AI are synonymous, and that the question of whether to use AI is essentially the question of whether to deploy a large language model. For [business](/blog/boosting-business-with-it-solution
+
+TYPE: blog
+SLUG: senior-hire-changes-everything-how-to-get-right
+PILLAR: P4
+TITLE: The Senior Hire That Changes Everything — And How to Make It Right
+CONTENT: At a certain stage of growth, there is a hire that changes the character of the business more than any other. It might be the first professional COO, the first head of sales who has [actually](/blog/executive-time-management-protecting-hours-that-matter) scaled a sales function before, the first CFO who can see around corners in a way the founding team cannot. This hire arrives at a moment when the business has outgrown what the existing team can manage alone, and the right person fills a gap th
+
+TYPE: blog
+SLUG: ai-ethics-business-practical-questions-leaders
+PILLAR: P1
+TITLE: AI Ethics for Business: The Practical Questions Leaders Need to Answer
+CONTENT: AI ethics in business tends to be discussed at a level of abstraction that makes it feel distant from the practical decisions leaders are actually making. Conversations about bias, fairness, and alignment are important, but for a business leader deciding whether and how to deploy an AI system inside their organisation, the more immediately relevant questions are concrete and answerable: who controls the data this system uses, how will people know when they are interacting with or being affected
+
+TYPE: blog
+SLUG: capacity-trap-businesses-stay-busy-without-growing
+PILLAR: P2
+TITLE: The Capacity Trap: Why Businesses Stay Busy Without Growing
+CONTENT: A business that is consistently at full capacity sounds like a success. Everyone is busy, the pipeline is full, the team is stretched. In practice, consistent full capacity is one of the most reliable indicators that something structural needs to change — and if it does not change, the business will stay busy while failing to grow. The capacity trap is the condition where an organisation's time and energy are almost entirely consumed by existing demands, leaving no room for the work that would m
+
+TYPE: blog
+SLUG: ai-data-privacy-every-business-must-understand
+PILLAR: P1
+TITLE: AI and Data Privacy: What Every Business Deploying AI Must Understand
+CONTENT: Data privacy and AI deployment are inseparable, and the relationship between them is more concrete than most general discussions of AI ethics suggest. For a business deploying an AI system, data privacy is not a regulatory abstraction — it is a set of specific decisions about what data the system uses, where it is stored, who can access it, and what happens to it over time. Getting these decisions right protects the business legally, operationally, and reputationally. Getting them wrong creates
+
+TYPE: blog
+SLUG: strategic-planning-mid-sized-businesses-framework
+PILLAR: P2
+TITLE: Strategic Planning for Mid-Sized Businesses: A Framework That Actually Works
+CONTENT: Strategic planning has a reputation for producing documents rather than direction, and the reputation is earned. The typical strategic planning process — a multi-day offsite, a slide deck that synthesises market analysis and internal assessment, a set of strategic pillars with supporting initiatives, a review six months later that finds the pillars unremarkable and the initiatives stalled — is so familiar that it has become a template for non-direction dressed as strategy. The failure is not in
+
+TYPE: blog
+SLUG: building-ai-first-culture-what-changes-what-stays
+PILLAR: P1
+TITLE: Building an AI-First Culture: What Changes and What Stays the Same
+CONTENT: The phrase AI-first culture is used loosely and often misleadingly — in ways that suggest it means replacing human work with automated systems, or that it is primarily a technology challenge rather than a human one. Neither is true. An AI-first culture is one in which people at every level of the organisation think naturally about where intelligence can support their work, use available AI tools as a standard part of how they operate, and expect systems to handle what systems handle well so that
+
+TYPE: blog
+SLUG: standard-operating-procedure-actually-gets-followed
+PILLAR: P2
+TITLE: The Standard Operating Procedure That Actually Gets Followed
+CONTENT: The standard operating procedure has a credibility problem. In most organisations, SOPs exist in large numbers, are updated infrequently, are difficult to navigate, and are referenced primarily during audits and onboarding, after which they return to the shared drive from which they were retrieved. The people doing the work the SOP describes often have a detailed working knowledge of how the job is actually done that diverges significantly from the documented procedure — divergences they could n
+
+TYPE: blog
+SLUG: ai-changes-economics-professional-services
+PILLAR: P1
+TITLE: How AI Changes the Economics of Professional Services
+CONTENT: Professional services — consulting, legal, accounting, advisory — have historically been priced on time. The fundamental economic equation has been straightforward: more hours equal more revenue, which means more people equal more scale. AI disrupts this equation in ways that are significant and, for firms that understand them, genuinely advantageous. The disruption is not primarily about replacing professionals with machines. It is about changing what a given number of professionals can produce
+
+TYPE: blog
+SLUG: first-90-days-new-leaders-should-and-should-not-do
+PILLAR: P4
+TITLE: The First 90 Days: What New Leaders Should and Should Not Do
+CONTENT: The first ninety days in a leadership role are disproportionately important. The impressions formed during this period — by the team, by peers, by the organisation above — are durable and influential. They shape how the new leader's early decisions are interpreted, how much latitude they are given when things are uncertain, and how quickly people commit to following them. Getting this period right is not simply about making a good impression. It is about building the foundation from which effect
+
+TYPE: blog
+SLUG: llms-enterprise-what-they-can-cannot-do-what-goes-wrong
+PILLAR: P1
+TITLE: LLMs in the Enterprise: What They Can Do, What They Cannot, and What Goes Wrong
+CONTENT: Large language models have attracted more business attention than any AI technology since the spreadsheet, and with it a level of both hype and anxiety that makes it difficult to form a clear-eyed view of what they actually offer enterprises. The honest picture is neither as exciting as the advocates suggest nor as threatening as the critics warn. LLMs are powerful tools with specific strengths, specific limitations, and a consistent set of deployment failure modes. Understanding all three is th
+
+TYPE: blog
+SLUG: scaling-without-breaking-grow-operations-without-losing-control
+PILLAR: P2
+TITLE: Scaling Without Breaking: How to Grow Your Operations Without Losing Control
+CONTENT: Most businesses that hit operational trouble during a growth phase do not break because they grew too fast. They break because they grew without redesigning. The processes, structures, and systems that worked well at twenty people are often the same ones being stretched past their limits at sixty, with accumulated patches and workarounds that make the strain invisible until it is acute. Scaling without breaking is not a question of how fast you grow. It is a question of how deliberately you rede
+
+TYPE: blog
+SLUG: ai-customer-service-what-changes-intelligence-handles-inbox
+PILLAR: P1
+TITLE: AI for Customer Service: What Changes When Intelligence Handles the Inbox
+CONTENT: Customer service is one of the most discussed applications of AI in business, and one of the most misunderstood. The public conversation tends to frame it as a replacement story: chatbots replacing agents, AI handling calls instead of people. The more accurate and more commercially relevant frame is a redirection story: AI handling the categories of interaction that do not require human presence, so that human agents concentrate entirely on the interactions where their judgement, empathy, and au
+
+TYPE: blog
+SLUG: communicating-strategy-team-that-does-not-read-the-deck
+PILLAR: P3
+TITLE: Communicating Strategy to a Team That Does Not Read the Deck
+CONTENT: Strategic communication is one of the most consistently underperformed leadership functions in growing organisations. Leaders invest significant effort in developing strategy, producing strategy decks, and presenting those decks to leadership teams and all-hands meetings. The strategy is announced, questions are invited, the deck is shared via email, and three weeks later most of the organisation is working in almost exactly the way it was working before. The strategy has been communicated in th
+
+TYPE: blog
+SLUG: ai-vendor-problem-businesses-buying-wrong-things
+PILLAR: P1
+TITLE: The AI Vendor Problem: Why Most Businesses Are Buying the Wrong Things
+CONTENT: The AI vendor market has expanded faster than the ability of most buyers to evaluate it. There are hundreds of AI products competing for enterprise budgets, each positioned as transformative, each capable of generating impressive demonstrations, and most either delivering substantially less than promised or delivering well in contexts that differ significantly from the buyer's own. The vendor problem in AI is not that the products are fraudulent — most of them do what they claim in some context.
+
+TYPE: blog
+SLUG: meeting-should-have-been-email-email-should-not-exist
+PILLAR: P1
+TITLE: The Meeting That Should Have Been an Email — And the Email That Should Not Have Existed
+CONTENT: The complaint that a meeting should have been an email is so common it has become a genre of workplace humour. Less commonly discussed is the inverse: the email that should not have existed at all, because what it was attempting to accomplish through asynchronous text was something better handled in a brief synchronous conversation or handled by a system rather than a person. Both failures are expensive, and both are symptoms of the same underlying problem: organisations that have not deliberate
+
+TYPE: blog
+SLUG: ai-healthcare-wellness-businesses-opportunity-constraint
+PILLAR: P1
+TITLE: AI in Healthcare and Wellness Businesses: The Opportunity and the Constraint
+CONTENT: Healthcare and wellness businesses occupy a distinctive position in the AI landscape: they sit at the intersection of significant operational complexity, rich accumulated data, stringent privacy requirements, and — in the Indian context — a patient base that is increasingly sophisticated about the care it receives and the experience surrounding it. The AI opportunity in this sector is real and, for many organisations, largely untapped. The constraints are also real and must be understood rather
+
+TYPE: blog
+SLUG: when-to-pivot-when-to-persist-business-decision
+PILLAR: P2
+TITLE: When to Pivot and When to Persist: A Framework for the Hardest Business Decision
+CONTENT: The decision of whether to change direction or stay the course is one of the most consequential and most difficult a [business](/how-to/how-to-make-business-events-and-conferences-worth-the-time-and-money) leader makes. Changing direction too early — abandoning a strategy that would have worked with more time — is a failure of persistence. Staying too long — persisting with a strategy that will not work no matter how much time it is given — is a failure of adaptability. The difficulty is that fr
+
+TYPE: blog
+SLUG: ai-real-estate-property-management-what-works
+PILLAR: P1
+TITLE: AI in Real Estate and Property Management: What Actually Works
+CONTENT: Real estate and property management is a sector where AI has attracted substantial promotional energy and produced uneven results. The promotional energy comes from the volume and variety of data the sector generates — property listings, transaction histories, market comparables, tenant records, maintenance logs — and the genuine AI potential that this data represents. The uneven results come from the consistent gap between what AI can theoretically do with rich data and what organisations actua
+
+TYPE: blog
+SLUG: handoff-problem-work-gets-lost-between-people-teams
+PILLAR: P2
+TITLE: The Handoff Problem: Why Work Gets Lost Between People and Teams
+CONTENT: If you want to find where [quality](/how-to/how-to-implement-quality-control-without-a-dedicated-qc-department) problems originate in a growing organisation, follow the handoffs. The moment work moves from one person to another, from one team to another, from one stage of a process to the next — that is where information gets lost, assumptions get made, and errors get introduced. Handoff failures are so consistent and so significant that most operational quality problems can be traced back to th
+
+TYPE: blog
+SLUG: future-of-work-not-jobless-taskless
+PILLAR: P1
+TITLE: The Future of Work Is Not Jobless — It Is Taskless
+CONTENT: The most widely discussed consequence of AI on work is job displacement — the scenario in which AI systems replace human workers at sufficient scale to produce structural unemployment. This scenario attracts understandable concern and generates significant media attention. It is also, for most organisations thinking about the next five to ten years, less immediately relevant than a different and less-discussed shift: the taskless future of work. Jobs will largely persist. The tasks within those
+
+TYPE: blog
+SLUG: feedback-changes-behaviour-practical-guide-leaders
+PILLAR: P4
+TITLE: Feedback That Changes Behaviour: A Practical Guide for Leaders
+CONTENT: Feedback is one of the most discussed and least effectively practised leadership capabilities. Most leaders have received training on how to give feedback, can describe the frameworks they were taught, and still find that the feedback they give does not reliably produce the behaviour change they intended. The gap between knowing how feedback should work and being able to give feedback that actually works is wide and real. Understanding why it is wide is the starting point for closing it.    Feed
+
+TYPE: blog
+SLUG: ai-education-training-businesses-personalisation-scale
+PILLAR: P1
+TITLE: AI for Education and Training Businesses: Personalisation at Scale
+CONTENT: The education and training sector has an inherent tension that AI is positioned to address more directly than any previous technology: the tension between scale and personalisation. Effective learning is personalised — it meets learners where they are, adjusts to their pace, addresses their specific gaps, and connects content to their particular context. But personalisation is expensive to deliver at scale. A human instructor can personalise meaningfully for a group of twenty. Across a cohort of
+
+TYPE: blog
+SLUG: pricing-strategy-service-businesses-mistakes
+PILLAR: P5
+TITLE: Pricing Strategy for Service Businesses: The Mistakes That Cost the Most
+CONTENT: Pricing is the highest-leverage variable in a service [business](/how-to/how-to-build-a-business-that-can-be-sold-in-5-years)'s economics, and it is the one that is most consistently set wrong. The direction of the error is almost always the same: service businesses undercharge. Not modestly, but significantly — in ways that constrain cash flow, limit the quality of the work they can deliver, and undermine the perception of value they create in the market. Understanding why this happens, and wha
+
+TYPE: blog
+SLUG: building-first-ai-system-non-technical-leaders
+PILLAR: P1
+TITLE: Building Your First AI System: A Step-by-Step Guide for Non-Technical Leaders
+CONTENT: The assumption that AI systems can only be built by technical people is one of the most significant barriers to AI adoption in mid-sized businesses. Most organisations with the highest potential to benefit from AI do not have data scientists on staff and are not planning to hire them. Waiting for technical expertise that is not coming is how businesses fall behind while the gap between AI-enabled and non-AI-enabled competitors widens. The practical reality is that a business leader [without](/ho
+
+TYPE: blog
+SLUG: supply-chain-visibility-ai-whole-picture
+PILLAR: P1
+TITLE: Supply Chain Visibility: What AI Adds When You Can Finally See the Whole Picture
+CONTENT: Supply chain visibility has been a chronic challenge for businesses of almost every size: knowing where inventory is, where orders are, what lead times to expect from suppliers, and where the vulnerabilities in the supply network lie. For large enterprises, billion-dollar software investments address this partially. For mid-sized businesses, the reality has typically been a patchwork of spreadsheets, email chains, and supplier phone calls that provides incomplete, delayed, and manually-assembled
+
+TYPE: blog
+SLUG: accountability-deficit-organisations-cannot-create
+PILLAR: P3
+TITLE: The Accountability Deficit: Why Organisations Talk About It and Cannot Create It
+CONTENT: Accountability is among the most frequently cited cultural objectives in organisations and among the most rarely achieved. Leaders say they want more of it, consultants recommend frameworks for creating it, and organisations announce initiatives to build it — and the average level of accountability in most organisations changes very little as a result. The failure is not from lack of effort or insufficient commitment to the principle. It is from a persistent misunderstanding of what accountabili
+
+TYPE: blog
+SLUG: measuring-ai-roi-investment-working
+PILLAR: P1
+TITLE: Measuring AI ROI: How to Know Whether Your AI Investment Is Working
+CONTENT: The most common response to the question of whether an AI investment has delivered return is a combination of anecdotal evidence and unmeasured optimism: people seem to be using it more, we think it is saving time, qualitatively it feels like an improvement. This response is understandable when measurement was not built into the deployment from the start, and it is commercially inadequate. An AI investment that cannot be measured is an AI investment that cannot be justified, scaled, or improved
+

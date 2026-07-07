@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
 import HowToSearch from './HowToSearch';
 import { Metadata } from 'next';
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export const revalidate = 3600; // Revalidate every hour
 
 async function getAllGuides() {
-  const prisma = new PrismaClient();
+  
   const guides = await prisma.howToGuide.findMany({
     select: {
       id: true,
@@ -23,7 +23,7 @@ async function getAllGuides() {
       title: 'asc',
     },
   });
-  await prisma.$disconnect();
+  
   return guides;
 }
 

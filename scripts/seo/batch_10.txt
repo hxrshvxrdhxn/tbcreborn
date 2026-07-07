@@ -1,0 +1,180 @@
+TYPE: guide
+SLUG: how-to-create-a-franchise-or-licensing-model-from-your-existing-business
+PILLAR: P2
+TITLE: How to create a franchise or licensing model from your existing business
+CONTENT: If your business has developed a system, a methodology, or a model that consistently produces results — and that system can be documented and transferred — franchising or licensing may be the most capital-efficient way to scale. Instead of opening company-owned locations or expanding headcount, you licence the system to others who do the work.  The prerequisite: your system must be documented and proven. Franchising works when there is a genuinely replicable system — a set of processes, training
+
+TYPE: guide
+SLUG: how-to-use-whatsapp-broadcast-lists-for-b2b-marketing-without-annoying-people
+PILLAR: P6
+TITLE: How to use WhatsApp broadcast lists for B2B marketing without annoying people
+CONTENT: WhatsApp broadcast lists allow you to send a message to multiple contacts simultaneously, [where](/blog/identifying-business-leakage-where-youre-losing-profit) each recipient receives it as a personal message (they don't see the other recipients). For Indian B2B companies, this is both an opportunity and a risk — used well, it's highly personal and high-engagement; used poorly, it's spam that damages relationships.  The rule that makes broadcast lists work: send content that the recipient would
+
+TYPE: guide
+SLUG: how-to-build-a-podcast-or-audio-content-strategy-for-your-business
+PILLAR: P6
+TITLE: How to build a podcast or audio content strategy for your business
+CONTENT: Podcasts are the fastest-growing content channel for [professional](/how-to/how-to-manage-office-cleaning-and-hygiene-to-a-professional-standard-without-a-large-facilities-budget) audiences in India. They work particularly well for thought leadership because they allow depth of content that written formats don't, they build personal connection between host and listener, and they're consumed during commutes, exercise, and other times when reading or watching isn't possible.  Should your [company]
+
+TYPE: guide
+SLUG: how-to-manage-your-digital-marketing-when-you-can-t-afford-a-dedicated-team
+PILLAR: P3
+TITLE: How to manage your digital marketing when you can't afford a dedicated team
+CONTENT: For companies under 50 people, a dedicated digital marketing team is often not justified. But ignoring digital marketing entirely means your competitors who are investing — even modestly — are building brand equity and lead generation capability that you're not. The solution is a focused, minimal-investment approach that delivers disproportionate returns.  The 5-hour-per-week digital marketing system: 2 hours for LinkedIn personal content (2 posts per week, written in 1 hour, scheduled for Tuesd
+
+TYPE: guide
+SLUG: how-to-protect-your-brand-and-domain-name-online
+PILLAR: P1
+TITLE: How to protect your brand and domain name online
+CONTENT: Your brand exists online before you formally claim it. Domain names, social media handles, and Google Business listings associated with your company name can be registered by competitors, squatters, or disgruntled former [employees](/how-to/how-to-manage-esic-claims-and-ensure-your-employees-can-access-benefits) before you secure them — creating confusion, reputational risk, and expensive recovery processes.  Domain names: register your primary domain (.com and .in at minimum) and defensively re
+
+TYPE: guide
+SLUG: how-to-create-a-company-newsletter-that-people-actually-read
+PILLAR: P2
+TITLE: How to create a company newsletter that people actually read
+CONTENT: A company newsletter — sent to clients, prospects, and partners — can be one of your most valuable marketing assets or a weekly exercise in digital pollution. The difference is entirely in the value you deliver to the reader versus the content you want to push.  The newsletters people read have one thing in common: they make the subscriber's life or work better, not the sender's. 'Company XYZ Monthly Update — Our New Offices and Team Expansion' is not a newsletter — it's a company announcement t
+
+TYPE: guide
+SLUG: how-to-plan-an-annual-marketing-calendar-for-a-b2b-company
+PILLAR: P6
+TITLE: How to plan an annual marketing calendar for a B2B company
+CONTENT: A marketing calendar converts marketing from a reactive activity — doing things when time or inspiration allows — into a planned programme with defined outputs, costs, and expected results. Companies that plan their marketing annually produce more, spend more efficiently, and [build](/how-to/how-to-build-a-keyword-strategy-for-your-industry-that-attracts-the-right-clients) more consistent brand presence than those that market ad hoc.  Build the calendar in three layers: content (what you'll prod
+
+TYPE: guide
+SLUG: how-to-build-a-marketing-team-as-your-company-grows
+PILLAR: P3
+TITLE: How to build a marketing team as your company grows
+CONTENT: The first marketing hire is one of the most consequential decisions a [growing](/blog/hiring-growing-business-mistakes-that-cost-most) company makes — get it wrong and you spend 12 months with someone who is either too junior to drive strategy or too senior to execute. The right hire depends on where your marketing is right now and what it needs to become.  The sequence matters. Before you hire a marketing person, you should have: a clear positioning (who you serve and why they should choose you
+
+TYPE: guide
+SLUG: how-to-comply-with-esop-regulations-under-indian-company-law
+PILLAR: P7
+TITLE: How to comply with ESOP regulations under Indian company law
+CONTENT: ESOPs for private Indian companies are governed primarily by the Companies Act 2013 and the rules made thereunder. Non-compliance creates legal risk that can complicate future fundraising, acquisitions, or public listing. Getting the compliance right from the start is far easier than cleaning it up later.  The legal requirements for a private company ESOP: a special resolution passed by shareholders approving the ESOP scheme (requires 75% approval), an ESOP scheme document that complies with Rul
+
+TYPE: guide
+SLUG: how-to-explain-esops-to-your-employees-so-they-understand-and-value-them
+PILLAR: P1
+TITLE: How to explain ESOPs to your employees so they understand and value them
+CONTENT: The most common ESOP failure is not the design — it's the communication. Employees receive a grant letter with unfamiliar terms, don't understand what they've been given, and assign it no value in their decision to stay or leave. A well-communicated ESOP is worth 10x a poorly communicated one.  The conversation to have at grant: sit with each grantee individually (not in a group announcement). Cover: what an option is (the right to buy a share at a specific price), what vesting means and their s
+
+TYPE: guide
+SLUG: how-to-handle-esops-when-an-employee-leaves
+PILLAR: P2
+TITLE: How to handle ESOPs when an employee leaves
+CONTENT: Employee departure with unvested or vested but unexercised options is one of the most common sources of ESOP disputes and complexity. Having clear policies and documented processes prevents conflict and ensures your cap table stays clean.  Unvested options: when an employee leaves (for any reason), unvested options lapse. This is standard and should be clearly stated in the grant letter and the ESOP scheme. The lapsed options return to the pool and can be regranted. This is the purpose of the cl
+
+TYPE: guide
+SLUG: how-to-set-up-pf-and-esic-correctly-when-you-cross-the-threshold
+PILLAR: P3
+TITLE: How to set up PF and ESIC correctly when you cross the threshold
+CONTENT: Provident Fund (PF) under the Employees' Provident Funds and Miscellaneous Provisions Act 1952 becomes mandatory when you employ 20 or more employees. ESIC (Employees' State Insurance) under the ESI Act 1948 becomes mandatory when you employ 10 or more employees (in most states) and your employees earn below ₹21,000 per month. Getting these set up correctly from the start prevents penalties, back payments, and compliance notices.  PF registration: register with the EPFO (Employees' Provident Fun
+
+TYPE: guide
+SLUG: how-to-handle-pf-for-employees-who-earn-above-the-threshold
+PILLAR: P3
+TITLE: How to handle PF for employees who earn above the threshold
+CONTENT: PF compliance for higher-earning employees is more nuanced than many Indian companies realise. The rules around the wage ceiling, voluntary higher contributions, and international worker PF create complexity that most payroll teams [handle](/how-to/how-to-handle-a-workplace-safety-incident-correctly) inconsistently.  The PF wage ceiling: PF contributions are mandatory on wages up to ₹15,000 per month (basic + DA). For employees earning above ₹15,000, the employer must contribute at minimum 12% o
+
+TYPE: guide
+SLUG: how-to-manage-esic-claims-and-ensure-your-employees-can-access-benefits
+PILLAR: P1
+TITLE: How to manage ESIC claims and ensure your employees can access benefits
+CONTENT: ESIC provides significant benefits to covered employees — medical treatment, hospitalisation, sickness benefits, maternity benefits, disability benefits, and dependant's benefit on death. But many employees don't know these benefits exist or how to access them, which means the employer is paying the contribution without the employees getting the value.  IP card (Insurance Person card): every ESIC-registered employee should have an IP card (now a biometric Aadhaar-linked card). This card is requi
+
+TYPE: guide
+SLUG: how-to-manage-pf-compliance-during-employee-transfers-and-restructuring
+PILLAR: P2
+TITLE: How to manage PF compliance during employee transfers and restructuring
+CONTENT: Corporate restructuring — mergers, demergers, entity changes, employee transfers between group companies — creates PF compliance complexity that many companies handle incorrectly, resulting in gaps in employee PF records and potential disputes at retirement.  Transfer of employees between group companies: when an employee moves from one company to another within the same group, their PF account should be transferred to the new establishment's PF code. The employee must submit Form 13 (Transfer C
+
+TYPE: guide
+SLUG: how-to-stay-compliant-with-labour-laws-as-your-headcount-grows
+PILLAR: P7
+TITLE: How to stay compliant with labour laws as your headcount grows
+CONTENT: Indian labour law compliance changes as your headcount crosses certain thresholds. Many growing companies are non-compliant not because they intend to be but because they don't know which laws apply at which size. A compliance calendar that tracks applicable laws at your current headcount — and flags when new laws will apply — is the minimum required system.  The key headcount thresholds and their compliance triggers: 10+ employees — ESIC registration mandatory; factories producing goods liable
+
+TYPE: guide
+SLUG: how-to-draft-employment-contracts-that-protect-your-company
+PILLAR: P2
+TITLE: How to draft employment contracts that protect your company
+CONTENT: The employment contract is the foundation of every employment relationship in India. A well-drafted contract defines the terms clearly, protects the company's legitimate interests, and reduces the risk of disputes. Most Indian SME employment contracts are either too short (missing critical clauses) or copied from a template that doesn't fit the company's situation.  The clauses every employment contract needs: designation and reporting relationship, basic [salary](/how-to/how-to-run-a-salary-ben
+
+TYPE: guide
+SLUG: how-to-conduct-a-retrenchment-or-layoff-in-compliance-with-indian-labour-law
+PILLAR: P7
+TITLE: How to conduct a retrenchment or layoff in compliance with Indian labour law
+CONTENT: Workforce reduction is one of the most legally sensitive actions a company can take in India. The law provides significant protection for workers, and the consequences of non-compliance range from court-ordered reinstatement to criminal liability for management. Getting the process right is not optional.  First, understand whether your employees are 'workmen' under the Industrial Disputes Act (IDA). The definition is broad — it covers most employees who are not in a managerial, supervisory, or a
+
+TYPE: guide
+SLUG: how-to-manage-contract-labour-in-compliance-with-the-contract-labour-act
+PILLAR: P7
+TITLE: How to manage contract labour in compliance with the Contract Labour Act
+CONTENT: Using contract labour — workers provided by a labour contractor or manpower agency rather than directly employed — is extremely common in Indian manufacturing and services. The Contract Labour (Regulation and Abolition) Act (CLRA) regulates this, and non-compliance creates liability for the principal employer (your company), not just the contractor.  Registration under CLRA: if you employ 20 or more contract workers on any day of the year, you must register as a principal employer under CLRA. Th
+
+TYPE: guide
+SLUG: how-to-handle-sexual-harassment-complaints-under-the-posh-act
+PILLAR: P1
+TITLE: How to handle sexual harassment complaints under the POSH Act
+CONTENT: The Prevention of Sexual Harassment (POSH) Act 2013 is mandatory for all employers in India with 10 or more employees. Non-compliance is both a legal risk and a reputational one — and most Indian companies are partially or fully non-compliant in ways they don't fully realise.  Mandatory requirements under POSH: establish an Internal Complaints Committee (ICC) with a minimum of 4 members — at least half must be women, and an external member must be included (typically an NGO representative or a l
+
+TYPE: guide
+SLUG: how-to-build-a-grievance-redressal-mechanism-your-employees-will-actually-use
+PILLAR: P2
+TITLE: How to build a grievance redressal mechanism your employees will actually use
+CONTENT: A grievance mechanism — a formal process through which employees can raise concerns, complaints, or disputes — is both a legal requirement under several labour laws and a practical tool for identifying and resolving problems before they escalate to attrition, legal action, or industrial disputes.  The mechanism only works if employees believe it's safe to use. If the company culture signals that raising concerns leads to retaliation, employees won't use the formal mechanism — they'll stay silent
+
+TYPE: guide
+SLUG: how-to-set-up-a-payroll-system-for-a-50-person-company
+PILLAR: P4
+TITLE: How to set up a payroll system for a 50-person company
+CONTENT: Payroll at 50 people is complex enough to need a system but not so complex as to require a large dedicated team. The right infrastructure — software, process, and controls — processes payroll accurately and on time every month with minimal [management](/blog/board-management-founder-led-businesses-what-changes) overhead.  Payroll software options for Indian companies at this stage: Greytip (strong compliance automation, popular in South India), Keka (modern UI, strong for mid-market companies),
+
+TYPE: guide
+SLUG: how-to-structure-ctc-to-minimise-employee-tax-liability-legally
+PILLAR: P3
+TITLE: How to structure CTC to minimise employee tax liability legally
+CONTENT: CTC structuring — designing the components of an employee's compensation to maximise their take-home pay by minimising TDS — is a legitimate and widely practised part of compensation design in India. [Employees](/how-to/how-to-manage-payroll-for-employees-in-multiple-states) who understand how their CTC is structured can save ₹30,000–1,00,000 per year in tax with no change in gross compensation.  The key tax-exempt or tax-advantaged components to include in CTC:  HRA (House Rent Allowance): empl
+
+TYPE: guide
+SLUG: how-to-handle-salary-increments-and-promotions-fairly-and-consistently
+PILLAR: P1
+TITLE: How to handle salary increments and promotions fairly and consistently
+CONTENT: The annual increment and promotion cycle is the moment when your compensation philosophy either builds trust or destroys it. Companies that run this process inconsistently — where outcomes feel arbitrary, favouritism-driven, or disconnected from performance — see attrition spikes in the months following increment communication.  Principles of a fair increment process: increments should be connected to performance (employees who contributed more should receive more — not necessarily linearly, but
+
+TYPE: guide
+SLUG: how-to-manage-payroll-for-employees-in-multiple-states
+PILLAR: P4
+TITLE: How to manage payroll for employees in multiple states
+CONTENT: As a company grows and opens offices or employs people in multiple states, payroll compliance [becomes](/how-to/how-to-restructure-your-business-debt-when-it-becomes-unmanageable) significantly more complex. Many statutory requirements are state-specific — professional tax rates, minimum wages, leave entitlement, and factory act compliances vary by state.  Professional Tax (PT): is levied by most Indian states on employed individuals. The rate, the threshold, the applicable income slabs, and the
+
+TYPE: guide
+SLUG: how-to-process-full-and-final-settlement-correctly-when-an-employee-leaves
+PILLAR: P2
+TITLE: How to process Full and Final Settlement correctly when an employee leaves
+CONTENT: Full and Final Settlement (FnF) is the process of calculating and paying everything owed to a departing employee — their last month's salary, leave encashment, gratuity (if eligible), any pending reimbursements, and deductions for notice period shortfall or company recoveries. Getting this wrong creates disputes, delayed EPFO transfers, and occasionally legal claims.  Components of a typical FnF: salary for days worked in the final month (calculated daily based on last drawn salary), earned leav
+
+TYPE: guide
+SLUG: how-to-decide-whether-to-hire-an-employee-or-engage-a-contractor
+PILLAR: P2
+TITLE: How to decide whether to hire an employee or engage a contractor
+CONTENT: The choice between hiring an employee and engaging a contractor is one of the most consequential staffing decisions a growing company makes — it affects cost, flexibility, control, compliance, and legal risk. Most companies default to one or the other [without](/how-to/how-to-manage-a-factory-shift-system-without-productivity-dropping-on-night-shifts) consciously evaluating the trade-offs.  The employee gives you: full-time commitment, the ability to direct how work is done (not just what work i
+
+TYPE: guide
+SLUG: how-to-draft-a-contractor-agreement-that-protects-your-company
+PILLAR: P2
+TITLE: How to draft a contractor agreement that protects your company
+CONTENT: A contractor agreement (or independent contractor agreement / consultant agreement) is a legally different document from an employment contract. The distinctions matter — a contractor agreement that looks like an employment contract can result in the contractor being reclassified as an employee.  The key clauses: scope of work (specific deliverables and outcomes, not a description of duties — this signals project-based work, not employment), payment terms (per project, per milestone, or per hour
+
+TYPE: guide
+SLUG: how-to-manage-a-team-of-freelancers-and-remote-contractors-effectively
+PILLAR: P3
+TITLE: How to manage a team of freelancers and remote contractors effectively
+CONTENT: A distributed team of freelancers and remote contractors can give you access to world-class talent at flexible cost — but managing them requires different skills and systems than managing full-time employees in an office. The companies that do this well treat contractors as professional partners, not as on-demand labour.  Onboarding matters even for short engagements. A contractor who understands your [company](/how-to/how-to-build-a-company-culture-that-becomes-a-competitive-advantage)'s contex
+
+TYPE: guide
+SLUG: how-to-convert-a-long-term-contractor-to-a-full-time-employee
+PILLAR: P2
+TITLE: How to convert a long-term contractor to a full-time employee
+CONTENT: When a contractor relationship has been working well for 6+ months and the work is ongoing, converting them to a full-time employee is often the right move — for relationship stability, for knowledge retention, and for legal risk management. But the conversion needs to be handled well to maintain the relationship and ensure the transition is commercially fair.  Have the conversation honestly: 'We've worked well together for the past 8 months. The work has become a permanent part of our operation
+

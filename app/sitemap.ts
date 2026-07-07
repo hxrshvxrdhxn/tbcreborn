@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/posts";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from '@/lib/prisma';
 
 const BASE = "https://turbobytesconsulting.com";
 
@@ -31,9 +31,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  const prisma = new PrismaClient();
+  
   const guides = await prisma.howToGuide.findMany({ select: { slug: true } });
-  await prisma.$disconnect();
+  
   
   const guideRoutes = guides.map(g => ({
     url: `${BASE}/how-to/${g.slug}`,

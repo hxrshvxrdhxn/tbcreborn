@@ -1,0 +1,180 @@
+TYPE: blog
+SLUG: founder-to-ceo-identity-shift-determines-whether-you-scale
+PILLAR: P4
+TITLE: From Founder to CEO: The Identity Shift That Determines Whether You Scale
+CONTENT: The hardest transition in a founder's leadership journey is not the move from startup to scale-up, or from small team to large organisation. It is the internal shift in how the founder understands their own role — from the person who built the thing to the person who leads the people who build the thing. This is a shift in identity, not just in job description, and it is the transition that most determines whether a founder-led business scales or plateaus at the ceiling of what one person can pe
+
+TYPE: blog
+SLUG: building-ai-into-new-products-what-best-product-teams-do-differently
+PILLAR: P1
+TITLE: Building AI Into New Products: What the Best Product Teams Do Differently
+CONTENT: There is a meaningful distinction between a product that has AI features and a product that is AI-native, and the distinction is not primarily technical. It is about whether AI is an add-on to a product conceived without it or whether [intelligence](/blog/ai-b2b-sales-what-changes-when-intelligence-enters-sales-process) is integral to how the product creates value from the first design decision. The products that deliver the most compelling AI experiences are almost always the latter — built fro
+
+TYPE: blog
+SLUG: hidden-bottleneck-slowest-process-sets-pace-everything
+PILLAR: P2
+TITLE: The Hidden Bottleneck: Why Your Slowest Process Is Setting the Pace for Everything
+CONTENT: The theory of constraints is one of the most practically useful ideas in operations management, and one of the most consistently underapplied. The core insight is simple: in any system of interdependent processes, the throughput of the entire system is determined by the capacity of its weakest link — the bottleneck. Improving the performance of any [process](/blog/when-to-fix-a-process-when-to-eliminate-it) other than the bottleneck does not increase the throughput of the system. Only improving
+
+TYPE: blog
+SLUG: next-five-years-ai-business-what-to-expect-how-to-prepare
+PILLAR: P1
+TITLE: The Next Five Years of AI in Business: What to Expect and How to Prepare
+CONTENT: Predicting the future of AI with precision is not possible. The technology is developing faster than forecasts can reliably track, and the applications that will prove most consequential in five years are not necessarily the ones that appear most significant today. What is possible is identifying the directional trends that are robust enough to plan around, and distinguishing them from the speculative developments that may or may not materialise on any particular timeline. What follows is an hon
+
+TYPE: blog
+SLUG: consulting-relationship-how-to-be-good-client
+PILLAR: P2
+TITLE: The Consulting Relationship That Actually Works: How to Be a Good Client
+CONTENT: The quality of a consulting engagement is not determined solely by the quality of the consultant. It is jointly determined by the consultant and the client, and the client's contribution is consistently the less-discussed half of the equation. The best consulting clients get substantially more from the same engagement than average clients working with the same consulting firm. Understanding what distinguishes them is useful both for organisations selecting and managing consulting relationships a
+
+TYPE: blog
+SLUG: ai-b2b-sales-what-changes-when-intelligence-enters-sales-process
+PILLAR: P1
+TITLE: AI for B2B Sales: What Changes When Intelligence Enters the Sales Process
+CONTENT: B2B sales is a domain where the impact of AI is often described in terms that miss what is actually significant. The common framing — AI will automate outreach, qualify leads at scale, and compress the sales cycle — is not wrong, but it focuses on efficiency at the expense of what AI actually changes in the nature of B2B selling. The more important change is in what salespeople spend their time on and what quality of preparation and insight they can bring to client interactions. This is a change
+
+TYPE: blog
+SLUG: performance-review-that-changes-something
+PILLAR: P4
+TITLE: The Performance Review That Changes Something
+CONTENT: The annual performance review is one of the most consistently underperforming management processes in most organisations. It consumes significant time — from managers in preparation, from HR in administration, from employees in anxiety — and produces, in most cases, very little change in how people work or how the organisation performs. The reviews happen. The forms are completed. The ratings are submitted. And the following year looks approximately like the year before. The process exists, but
+
+TYPE: blog
+SLUG: starting-ai-journey-practical-roadmap-businesses-beginning
+PILLAR: P1
+TITLE: Starting Your AI Journey: A Practical Roadmap for Businesses at the Beginning
+CONTENT: Most conversations [about](/blog/turbo-bytes-consulting-how-we-think-about-ai-strategy) AI assume a level of prior engagement that many businesses have not yet reached. The content directed at organisations already running AI programmes — about scaling, about governance, about advanced applications — is abundant. The conversation about where to [actually](/how-to/how-to-write-a-press-release-that-journalists-will-actually-read) start, for a business that has recognised AI is relevant and does no
+
+TYPE: blog
+SLUG: building-systems-outlast-individuals-operational-legacy-good-leadership
+PILLAR: P2
+TITLE: Building Systems That Outlast Individuals: The Operational Legacy of Good Leadership
+CONTENT: The test of operational leadership is not what the organisation can do when the leader is present. It is what the organisation can do when the leader is absent — on leave, in transition, or simply not in the room when the decision needs to be made. Most organisations fail this test more comprehensively than their leaders recognise, because the leader's presence compensates for structural gaps that become visible only when that presence is removed. Building systems that outlast individuals is the
+
+TYPE: blog
+SLUG: ai-manufacturing-where-intelligence-creates-leverage
+PILLAR: P1
+TITLE: AI for Manufacturing: Where Intelligence Creates the Most Leverage
+CONTENT: Manufacturing is one of the sectors [where](/how-to/how-to-handle-a-situation-where-a-contractor-claims-to-be-an-employee) AI has the longest track record and the clearest return profile — but also one where the gap [between](/how-to/how-to-choose-between-making-a-component-in-house-versus-buying-it) what AI can do and what most mid-sized manufacturers are actually doing is widest. The public conversation [about](/blog/turbo-bytes-consulting-how-we-think-about-ai-strategy) AI in manufacturing te
+
+TYPE: blog
+SLUG: executive-time-management-protecting-hours-that-matter
+PILLAR: P4
+TITLE: Executive Time Management: Protecting the Hours That Actually Matter
+CONTENT: Time is the one resource a senior leader cannot acquire more of. Every other constraint in a business — capital, talent, market position — can be improved given sufficient time and effort. Time itself cannot be replenished. Which makes the consistent misallocation of senior leadership time one of the most expensive problems in growing businesses, and one of the least acknowledged. The misallocation is almost never intentional. It accumulates through a series of individually reasonable decisions
+
+TYPE: blog
+SLUG: retrieval-augmented-generation-rag-business-ai
+PILLAR: P1
+TITLE: What Is Retrieval-Augmented Generation — And Why It Matters for Business AI
+CONTENT: When a business deploys a custom AI system trained on its own knowledge — its SOPs, its product documentation, its client records — the quality of that system depends almost entirely on one technical question: how does the system find and use the right information when answering a specific query? The answer to that question is Retrieval-Augmented Generation, or RAG. It is not a product or a platform. It is an architectural approach to building AI systems that is responsible for much of what make
+
+TYPE: blog
+SLUG: why-good-processes-break-under-growth-redesign-for-next-scale
+PILLAR: P2
+TITLE: Why Good Processes Break Under Growth — And How to Redesign for the Next Scale
+CONTENT: There is a moment in the growth of almost every business when things that used to work stop working — not catastrophically, but persistently. Decisions that used to be made quickly now take days. Quality that was consistent becomes variable. New hires that were effective in their first weeks take months to reach independence. Communication that kept everyone aligned starts to fragment. The instinctive response is to attribute these problems to the additional complexity of being bigger. The more
+
+TYPE: blog
+SLUG: ai-hype-cycle-where-indian-businesses-actually-are
+PILLAR: P1
+TITLE: The AI Hype Cycle and Where Indian Businesses Actually Are
+CONTENT: The conversation about AI in Indian [business](/how-to/how-to-design-a-leave-policy-that-balances-employee-needs-and-business-continuity) is, at this moment, simultaneously overstated and understated in ways that make useful decision-making difficult. Overstated: the impression, from media and conference coverage, that AI transformation is already widespread and that businesses not already deploying AI are dangerously behind. Understated: the actual capability of AI to deliver measurable value i
+
+TYPE: blog
+SLUG: what-management-consultant-actually-does-tuesday
+PILLAR: P4
+TITLE: What a Management Consultant Actually Does on a Tuesday
+CONTENT: Management consulting has an image problem, and the image is mostly its own fault. The caricature — a young person with an MBA and a laptop, producing slide decks for large fees and then disappearing — is both widely held and not entirely inaccurate as a description of a certain kind of consulting. It is almost entirely inaccurate as a description of what consulting that actually changes organisations looks like. The gap between the caricature and the reality is where most of the value of a cons
+
+TYPE: blog
+SLUG: ai-automation-what-should-be-automated-what-should-not
+PILLAR: P1
+TITLE: AI and Automation: Understanding What Should Be Automated and What Should Not
+CONTENT: The question of what to automate is more important than the question of how to automate, and it receives far less attention. Automation tools have become accessible enough that almost any business process can be automated in some form. This accessibility is valuable, but it creates a risk that did not previously exist: the risk of automating the wrong things and investing in systems that deliver efficiency on processes that should have been redesigned or eliminated, while leaving the highest-lev
+
+TYPE: blog
+SLUG: team-meeting-that-actually-works
+PILLAR: P3
+TITLE: The Team Meeting That Actually Works
+CONTENT: The team meeting is one of the most expensive regular events in an organisation and one of the most consistently underdesigned. The cost is easy to calculate: multiply the number of attendees by the average cost per hour of their time and by the meeting duration. The result is almost always surprising and almost always underestimated, because the cost of the preparation and recovery time surrounding the meeting is rarely included. The productivity generated by that investment is harder to measur
+
+TYPE: blog
+SLUG: turbo-bytes-consulting-how-we-think-about-ai-strategy
+PILLAR: P1
+TITLE: Turbo Bytes Consulting: How We Think About AI Strategy
+CONTENT: When we describe Turbo Bytes Consulting as AI-native, we are making a specific claim about how we work, not just what we work on. It is worth being precise about what that claim means — both because precision is more useful than positioning, and because the difference between a firm that does AI work and one that thinks natively about intelligence in everything it touches is the difference that determines whether an engagement produces lasting change or just an impressive deliverable.    Every e
+
+TYPE: blog
+SLUG: cost-of-complexity-how-businesses-accumulate-what-they-cannot-afford
+PILLAR: P2
+TITLE: The Cost of Complexity: How Businesses Accumulate What They Cannot Afford
+CONTENT: Complexity is the silent accumulator in most businesses. Unlike costs, which are tracked and reviewed, complexity arrives gradually — through sensible individual decisions, each reasonable in isolation — and accumulates into a burden that slows everything the organisation tries to do. By the time complexity is recognised as a problem, it is usually so deeply embedded in how the business operates that addressing it feels like performing surgery on a patient who cannot stop working. Understanding
+
+TYPE: blog
+SLUG: intelligence-advantage-how-smart-businesses-use-information-to-win
+PILLAR: P1
+TITLE: The Intelligence Advantage: How Smart Businesses Use Information to Win
+CONTENT: The word intelligence in a business context is overloaded — it means business intelligence, competitive intelligence, artificial intelligence, market intelligence, all simultaneously and often interchangeably. Beneath the terminology confusion there is a straightforward and important idea: some businesses make better decisions than their competitors because they have better information at the moment decisions are made. They are not necessarily smarter, better funded, or more experienced. They ar
+
+TYPE: blog
+SLUG: resilient-organisation-build-business-survives-disruption
+PILLAR: P3
+TITLE: The Resilient Organisation: How to Build a Business That Survives Disruption
+CONTENT: Resilience in a business context is discussed most often after something has gone wrong — a supply chain disruption, a key person departure, a market shock — and the [organisation](/blog/how-to-set-goals-organisation-actually-achieves) is in the process of recovering from it. The discussion at that point is about what the business should have done to prepare. The more useful discussion is before anything goes wrong, because resilience is not a response capability. It is a structural characterist
+
+TYPE: blog
+SLUG: ai-implementation-mistakes-organisations-make-twice
+PILLAR: P1
+TITLE: AI Implementation Mistakes That Organisations Make Twice
+CONTENT: AI implementation failures are more consistent than they appear. The industries differ, the technologies differ, and the organisations differ, but the failure modes repeat with remarkable regularity. Understanding what these failure modes are — not as cautionary tales but as structural patterns with structural causes — is the most practical preparation for an organisation about to undertake an AI deployment. Most of these failures are avoidable. Most of them are avoided only by the organisations
+
+TYPE: blog
+SLUG: growing-revenue-without-growing-headcount-leverage-question
+PILLAR: P5
+TITLE: Growing Revenue Without Growing Headcount: The Leverage Question
+CONTENT: The default model for revenue growth in most businesses is headcount growth: more clients require more people to serve them, more orders require more people to fulfil them, more complexity requires more people to manage it. This model is sometimes correct. A [business](/how-to/how-to-use-linkedin-effectively-to-build-business-relationships) whose constraints are genuinely about capacity — where there is more demand than the current team can handle — needs more people to serve that demand. But th
+
+TYPE: blog
+SLUG: ai-retail-what-indian-retailers-can-deploy-today
+PILLAR: P1
+TITLE: AI in Retail: What Indian Retailers Can Deploy Today
+CONTENT: Retail is one of the sectors where AI has both the widest range of potential applications and the widest range of actual deployment maturity. At one end, global retail giants are running sophisticated demand forecasting, personalisation engines, and autonomous checkout systems. At the other end, most Indian mid-sized retailers are operating largely as they always have, with AI at best present in the form of a chatbot that answers basic queries. The practical question for an Indian retailer of me
+
+TYPE: blog
+SLUG: lead-team-through-uncertainty-without-pretending-answers
+PILLAR: P1
+TITLE: How to Lead a Team Through Uncertainty Without Pretending You Have the Answers
+CONTENT: Leadership under uncertainty carries a specific and persistent temptation: to project more confidence than is warranted. The reasoning is intuitive — the team needs confidence, and confidence comes from leaders who seem to know where they are going. The problem with this reasoning is that it is both practically wrong and organisationally corrosive. Teams are not as reassured by projected certainty as leaders assume, and the discovery that the certainty was performed rather than genuine damages t
+
+TYPE: blog
+SLUG: difference-ai-pilots-ai-programmes-why-it-matters
+PILLAR: P1
+TITLE: The Difference Between AI Pilots and AI Programmes — And Why It Matters
+CONTENT: The AI pilot has become the dominant mode of AI engagement for organisations that are serious enough to invest but uncertain enough to limit their commitment. A pilot is time-bounded, scope-limited, and explicitly positioned as a test — a way to learn whether AI works in this specific context before committing to broader deployment. This caution is reasonable, and pilots serve a genuine purpose: they generate evidence, build [capability](/blog/ai-capability-building-training-your-team), and surf
+
+TYPE: blog
+SLUG: decision-fatigue-growing-businesses-leaders-get-worse-busier
+PILLAR: P2
+TITLE: Decision Fatigue in Growing Businesses: Why Leaders Get Worse as They Get Busier
+CONTENT: Decision fatigue is well-documented in individual psychology and consistently underappreciated as a structural problem in growing [businesses](/blog/capacity-trap-businesses-stay-busy-without-growing). The evidence is clear: the quality of decisions degrades as the number of decisions made increases, particularly as cognitive resources are depleted across a demanding day. Judges give less favourable rulings in the afternoon than in the morning. Doctors prescribe more heavily later in clinic sess
+
+TYPE: blog
+SLUG: custom-ai-vs-off-the-shelf-making-right-choice
+PILLAR: P1
+TITLE: Custom AI vs Off-the-Shelf: Making the Right Choice for Your Business
+CONTENT: The choice [between](/how-to/how-to-choose-between-making-a-component-in-house-versus-buying-it) custom AI and off-the-shelf tools is one of the most consequential decisions in any AI implementation, and one that is most commonly made on the wrong basis — either reflexive preference for one approach or cost comparison that ignores the full picture. Custom AI and off-the-shelf tools are not competing options that should always produce the same winner. They are different tools suited to different
+
+TYPE: blog
+SLUG: board-management-founder-led-businesses-what-changes
+PILLAR: P4
+TITLE: Board Management for Founder-Led Businesses: What Changes When You Have One
+CONTENT: The transition from a business run purely by its founders to one with a board of directors — whether imposed by investors, adopted voluntarily, or formed as an advisory structure — is one of the most significant governance changes a founder-led business undergoes. It changes not just who makes decisions but how decisions are made, how the founder's authority is exercised, and how the business is held accountable. Most founders approach their first board with some combination of mild resentment a
+
+TYPE: blog
+SLUG: ai-talent-question-hire-or-build-capability
+PILLAR: P1
+TITLE: The AI Talent Question: Do You Need to Hire or Can You Build Capability?
+CONTENT: When a business decides to take AI seriously, one of the first [questions](/blog/how-to-choose-an-ai-agency) is who will do the work. The instinctive answer is to hire: find someone with AI expertise, a data science background, or machine learning experience and bring them in to drive the programme. This answer is sometimes right. More often it produces a hiring disappointment or a capability mismatch that takes twelve months to identify and correct. Understanding when hiring is the right answer
+

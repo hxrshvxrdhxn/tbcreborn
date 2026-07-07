@@ -1,0 +1,180 @@
+TYPE: guide
+SLUG: how-to-evaluate-whether-to-offer-credit-to-your-customers
+PILLAR: P4
+TITLE: How to evaluate whether to offer credit to your customers
+CONTENT: Offering credit — selling on deferred payment terms — is a competitive tool that can grow your revenue, but it's also a risk management decision. The wrong credit decisions result in bad debts, strained working capital, and management distraction that can be more damaging than the revenue gained.  Start with the strategic question: does credit drive incremental revenue or just shift timing? If your competitors all offer 30-day credit and you don't, you're likely losing customers. If credit is ex
+
+TYPE: guide
+SLUG: how-to-recover-a-bad-debt-without-going-to-court
+PILLAR: P4
+TITLE: How to recover a bad debt without going to court
+CONTENT: A customer who owes you money and isn't paying is a business problem, a cash flow problem, and (if it's significant) an existential problem. Most bad debts in India are eventually recoverable without litigation — but the approach matters enormously.  The first escalation: personal engagement at a senior level. If your regular invoice follow-up has failed, the next step is a senior-to-senior conversation — founder to founder or MD to MD. Not accusatory, not threatening — 'I wanted to call persona
+
+TYPE: guide
+SLUG: how-to-manage-an-office-renovation-without-losing-productivity
+PILLAR: P4
+TITLE: How to manage an office renovation without losing productivity
+CONTENT: An office renovation — whether a full redesign or a significant expansion — disrupts the team's work environment, creates noise and dust, and diverts management attention from the business. The companies that manage renovations well treat them as projects with the same rigour as a client project.  Phase the renovation to keep a productive work area available throughout. If you're renovating a 5,000 sq ft office, phase it into sections so that half the team always has a clean, functional workspac
+
+TYPE: guide
+SLUG: how-to-manage-parking-and-commute-challenges-as-your-team-grows
+PILLAR: P3
+TITLE: How to manage parking and commute challenges as your team grows
+CONTENT: As your [company](/how-to/how-to-build-a-company-culture-that-becomes-a-competitive-advantage) grows to 50+ people, parking and commute become real team satisfaction and retention issues — especially in Delhi-NCR and other dense urban areas where commute times can be significant. Ignoring them is a slow attrition driver.  Assess the current situation before you design a solution. How far do your team members commute on average? What modes of transport do they use? What percentage drive versus us
+
+TYPE: guide
+SLUG: how-to-set-up-a-professional-client-facing-meeting-space-on-a-budget
+PILLAR: P7
+TITLE: How to set up a professional client-facing meeting space on a budget
+CONTENT: Your meeting room is the first physical impression your clients get of your company. It doesn't need to be expensive to be impressive — it needs to be clean, functional, well-lit, and equipped to run meetings [without](/how-to/how-to-choose-business-software-without-buying-things-you-don-t-need) technical friction.  The essentials: reliable AV (a large screen or TV monitor that connects reliably to laptops — wired HDMI and wireless casting both need to work, because clients come with different s
+
+TYPE: guide
+SLUG: how-to-set-up-a-remote-work-policy-that-actually-works
+PILLAR: P7
+TITLE: How to set up a remote work policy that actually works
+CONTENT: Remote or hybrid working is now expected at most knowledge-work companies in India. Companies that have no policy end up with inconsistency — some managers allow it freely, others don't, and the resulting inequity creates resentment. A clear policy applied consistently is better than flexibility applied unevenly.  Define the eligibility criteria. Not every role is suitable for remote work. Roles that require physical presence (production, client-facing service roles, facilities management) are n
+
+TYPE: guide
+SLUG: how-to-set-up-an-ergonomic-workspace-to-reduce-sick-days-and-improve-productivity
+PILLAR: P7
+TITLE: How to set up an ergonomic workspace to reduce sick days and improve productivity
+CONTENT: Musculoskeletal problems — back pain, neck strain, wrist injuries — are one of the most common causes of sick days and reduced productivity in Indian office environments. They're also almost entirely preventable with ergonomic workspace setup, most of which costs less than you'd expect.  The chair is the most important investment. A good ergonomic office chair — adjustable seat height, lumbar support, adjustable armrests — costs ₹6,000–15,000 for a commercial-grade model. A poor chair costs ₹2,0
+
+TYPE: guide
+SLUG: how-to-manage-working-capital-during-a-period-of-rapid-growth
+PILLAR: P4
+TITLE: How to manage working capital during a period of rapid growth
+CONTENT: Rapid growth — when your revenue is growing at 30–50%+ per year — actually creates working capital pressure, not relief. Your receivables, inventory, and operating costs grow before the cash from higher revenue arrives. Companies that don't anticipate this run out of cash at exactly the moment their business is succeeding.  Understand why growth consumes working capital. If your revenue doubles, your receivables (at the same DDO) double. Your inventory (to support higher production) increases. Y
+
+TYPE: guide
+SLUG: how-to-build-an-expense-management-system-that-doesn-t-slow-down-your-team
+PILLAR: P3
+TITLE: How to build an expense management system that doesn't slow down your team
+CONTENT: Expense management — the process of recording, approving, and reimbursing business expenses incurred by employees — is a source of significant friction in most [growing](/blog/the-architecture-of-culture-in-a-rapidly-growing-team) companies. Employees resent slow reimbursements; finance teams resent missing receipts and late submissions; founders resent unauthorized spending. A well-designed system resolves all three.  The problem with most Indian SME expense systems: expenses are submitted on p
+
+TYPE: guide
+SLUG: how-to-negotiate-with-internet-service-providers-for-better-business-broadband
+PILLAR: P7
+TITLE: How to negotiate with internet service providers for better business broadband
+CONTENT: Internet connectivity is as critical as electricity for most modern businesses — and yet most companies accept their ISP's initial proposal without negotiation, pay above-market rates, and have inadequate redundancy. A 30-minute conversation with your ISP (and an alternative) can save significant money and improve reliability.  First, know what you actually need. Bandwidth requirement depends on your team size and work type. A 50-person company doing primarily email, browsing, and light cloud ap
+
+TYPE: guide
+SLUG: how-to-set-up-a-server-room-or-it-closet-safely-and-correctly
+PILLAR: P7
+TITLE: How to set up a server room or IT closet safely and correctly
+CONTENT: If your company runs any on-premise technology — a server, a NAS (Network Attached Storage), a network switch, or a PABX system — that equipment needs a proper home. Servers sitting on desks, in open office areas, or in poorly ventilated closets are liabilities: equipment failures, overheating, and security vulnerabilities are all consequences.  Location requirements: the server room or IT closet needs stable electrical supply (preferably on its own circuit, with UPS backup), controlled temperat
+
+TYPE: guide
+SLUG: how-to-manage-office-stationery-and-consumables-procurement-cost-effectively
+PILLAR: P5
+TITLE: How to manage office stationery and consumables procurement cost-effectively
+CONTENT: Office stationery and consumables are a small but universally poorly managed expense category in Indian companies. The inefficiency is rarely in individual item prices — it's in fragmented purchasing, duplication, waste, and the management time spent on small procurement decisions.  Centralize procurement. In most Indian offices, stationery is purchased by whoever happens to run out of something, from whatever shop is nearby, without comparison or bulk buying. Centralizing to one person — the of
+
+TYPE: guide
+SLUG: how-to-implement-an-access-control-and-employee-identity-system-as-you-scale
+PILLAR: P7
+TITLE: How to implement an access control and employee identity system as you scale
+CONTENT: As a company grows past 50 people, managing who has access to which spaces, systems, and [information](/blog/intelligence-advantage-how-smart-businesses-use-information-to-win) becomes a genuine operational and security challenge. An identity management system — from physical access cards to digital access credentials — is the infrastructure that makes this manageable.  Physical access control: biometric or card-based entry systems at the main entrance and sensitive areas (server room, finance d
+
+TYPE: guide
+SLUG: how-to-plan-and-manage-your-company-s-annual-maintenance-budget
+PILLAR: P1
+TITLE: How to plan and manage your company's annual maintenance budget
+CONTENT: Annual maintenance costs for a growing company — covering office, IT, vehicles, production equipment, and facilities — are often underbudgeted and then overspent reactively. A planned maintenance budget prevents the chaos of unexpected repair bills while keeping the business's physical assets in good condition.  Start with an asset register. List every significant asset you're responsible for maintaining: office space (AC, electrical, plumbing, civil), IT equipment (servers, network, computers),
+
+TYPE: guide
+SLUG: how-to-set-up-a-proper-treasury-function-for-a-mid-sized-company
+PILLAR: P5
+TITLE: How to set up a proper treasury function for a mid-sized company
+CONTENT: A treasury function — managing your company's cash, investments, foreign exchange, and banking relationships — is often handled informally (the founder or CFO makes decisions case by case) until the amounts involved make the informality costly. At ₹20Cr+ revenue, a structured approach to treasury pays for itself.  Cash management is the core. Your treasury function should know, at all times: your total cash position across all bank accounts, your committed outflows in the next 30 days, and your
+
+TYPE: guide
+SLUG: how-to-manage-company-vehicles-and-transport-costs-effectively
+PILLAR: P5
+TITLE: How to manage company vehicles and transport costs effectively
+CONTENT: Company vehicles — whether owned cars, a commercial fleet, or leased vehicles — represent a significant cost and liability that is often poorly managed in Indian SMEs. Fuel costs, maintenance, driver management, and depreciation add up quickly, and the ROI of the vehicle fleet is rarely calculated.  Start with fleet utilisation analysis. What percentage of the time are your vehicles being used for business purposes? A company car that drives 2,000 km per month for business and 1,500 km for perso
+
+TYPE: guide
+SLUG: how-to-evaluate-whether-to-move-to-a-larger-office-space-or-optimise-the-current-one
+PILLAR: P5
+TITLE: How to evaluate whether to move to a larger office space or optimise the current one
+CONTENT: The instinct when the office feels too small is to move to a bigger one. Before committing to that cost and disruption, it's worth asking whether [better](/how-to/how-to-use-your-msme-registration-to-access-better-financing) space utilisation could defer or eliminate the need to move.  Conduct a space utilisation audit first. Count the actual occupancy of your desks and meeting rooms at different times during the week. In most offices, peak occupancy is Tuesday through Thursday between 10 AM and
+
+TYPE: guide
+SLUG: how-to-manage-office-cleaning-and-hygiene-to-a-professional-standard-without-a-large-facilities-budget
+PILLAR: P5
+TITLE: How to manage office cleaning and hygiene to a professional standard without a large facilities budget
+CONTENT: Office cleanliness is a proxy that visitors, clients, and your own team use to judge your company's operational discipline. A dirty or poorly maintained office sends a signal that extends beyond the facilities — it suggests that attention to detail isn't a priority. And it's entirely avoidable.  The cleaning contractor is your most important facilities vendor. Quality varies enormously. When evaluating: check their EPFO/ESIC compliance (you're jointly liable for their workers' social security if
+
+TYPE: guide
+SLUG: how-to-build-an-office-culture-that-makes-people-want-to-come-in
+PILLAR: P3
+TITLE: How to build an office culture that makes people want to come in
+CONTENT: With hybrid and remote work now the default expectation at many companies, the office needs to earn its place in your team's week. Mandating attendance without making the office genuinely better than working from home creates resentment; creating an environment where coming in is genuinely preferable builds [culture](/blog/the-architecture-of-culture-in-a-rapidly-growing-team) organically.  People come to offices for things they can't get at home: collaboration with colleagues, social connection
+
+TYPE: guide
+SLUG: how-to-write-content-that-ranks-on-google-and-converts-readers-into-leads
+PILLAR: P6
+TITLE: How to write content that ranks on Google and converts readers into leads
+CONTENT: There's a difference between content that ranks and content that converts. Most Indian company blogs do neither — they rank for nothing because they're too generic, and they convert no one because they have no clear call to action. Good B2B content does both: it answers a specific question well enough to rank, then gives the reader a natural next step.  The structure that works for B2B how-to content: a specific title that matches the search query exactly (not 'Tips for Better Cash Flow' but 'Ho
+
+TYPE: guide
+SLUG: how-to-use-google-ads-to-generate-b2b-leads-without-wasting-your-budget
+PILLAR: P6
+TITLE: How to use Google Ads to generate B2B leads without wasting your budget
+CONTENT: Google Ads can be highly effective for B2B lead generation — or a fast way to burn ₹50,000 a month with nothing to show for it. The difference is almost always in the specificity of targeting and the quality of the landing page, not the size of the budget.  Start narrow, not broad. Most companies set up Google Ads campaigns targeting broad keywords ('business consulting', 'HR services') and wonder why the clicks don't convert. Broad keywords attract everyone, including people looking for jobs, s
+
+TYPE: guide
+SLUG: how-to-build-a-keyword-strategy-for-your-industry-that-attracts-the-right-clients
+PILLAR: P6
+TITLE: How to build a keyword strategy for your industry that attracts the right clients
+CONTENT: A keyword strategy is a list of the specific search phrases you want your website to rank for, organised by intent and priority. Without one, your content is random; with one, every article and page you publish is building toward a coherent position in search.  Organise keywords by intent. Informational keywords ('how to manage cash flow in a seasonal business') attract people researching a problem — they're not ready to buy but they're in your target audience. Commercial keywords ('outsourced C
+
+TYPE: guide
+SLUG: how-to-set-up-google-analytics-and-search-console-to-understand-your-website-traffic
+PILLAR: P6
+TITLE: How to set up Google Analytics and Search Console to understand your website traffic
+CONTENT: You cannot improve what you cannot measure. Google Analytics and Google Search Console together tell you: who visits your website, how they found it, what they do when they arrive, and how your site appears in search results. Both are free and take less than an hour to set up correctly.  Google Analytics 4 (GA4) setup: create a GA4 property at analytics.google.com, add the tracking code to your website (your web developer can do this in 10 minutes, or you can use Google Tag Manager), and configu
+
+TYPE: guide
+SLUG: how-to-build-a-linkedin-company-page-that-generates-business-enquiries
+PILLAR: P6
+TITLE: How to build a LinkedIn company page that generates business enquiries
+CONTENT: A LinkedIn [company](/how-to/how-to-set-up-a-proper-treasury-function-for-a-mid-sized-company) page that sits dormant with 200 followers and posts once a quarter is not a marketing asset — it's a missed opportunity. Done correctly, a LinkedIn company page builds credibility, reaches decision-makers, and generates enquiries. Done incorrectly, it wastes time.  The company page is secondary to the founder's personal profile. For most B2B companies under 200 people, the founder's personal LinkedIn p
+
+TYPE: guide
+SLUG: how-to-use-whatsapp-business-for-client-communication-without-losing-professionalism
+PILLAR: P6
+TITLE: How to use WhatsApp Business for client communication without losing professionalism
+CONTENT: WhatsApp is the default communication channel for most Indian business relationships — clients expect rapid responses, and the informality is both its strength and its risk. Managing WhatsApp professionally, at scale, requires systems that most companies don't have.  WhatsApp Business (the app) versus WhatsApp Business API (the platform) serve different needs. The app — free, for a single phone number — is sufficient for companies with fewer than 5 people handling client communication and fewer
+
+TYPE: guide
+SLUG: how-to-run-instagram-and-facebook-for-a-b2b-company-without-wasting-time
+PILLAR: P6
+TITLE: How to run Instagram and Facebook for a B2B company without wasting time
+CONTENT: The honest answer for most B2B companies: Instagram and Facebook should not be your primary [marketing](/how-to/how-to-use-whatsapp-broadcast-lists-for-b2b-marketing-without-annoying-people) investment. LinkedIn and Google are where your buyers are. But if your target clients are mid-sized business owners in India — many of whom are active on Facebook and Instagram personally — a strategic presence can generate brand awareness and occasionally direct enquiries.  The B2B use cases that work on In
+
+TYPE: guide
+SLUG: how-to-use-video-content-to-build-your-brand-without-a-production-budget
+PILLAR: P6
+TITLE: How to use video content to build your brand without a production budget
+CONTENT: Video is the highest-engagement content format available — and it has never been more accessible to produce. A founder with a smartphone, decent lighting, and something genuine to say can [build](/how-to/how-to-build-a-referral-programme-that-generates-consistent-leads) a meaningful audience and generate real business without a production budget.  The highest-performing B2B video format for Indian founders: short-form educational video (60–90 seconds on LinkedIn or YouTube) that answers one spec
+
+TYPE: guide
+SLUG: how-to-manage-your-company-s-online-reputation
+PILLAR: P6
+TITLE: How to manage your company's online reputation
+CONTENT: Your [company](/how-to/how-to-position-your-company-when-you-do-everything-for-everyone)'s online reputation — what appears when someone Googles your name or your company — is increasingly the first impression you make on potential clients, employees, and partners. For most Indian B2B companies, it's also largely unmanaged.  Audit your current online presence. Search your company name, your founder's name, and your company name plus 'reviews'. What appears? Is it accurate? Is it positive? Is it
+
+TYPE: guide
+SLUG: how-to-build-a-brand-identity-for-your-company-that-s-not-just-a-logo
+PILLAR: P7
+TITLE: How to build a brand identity for your company that's not just a logo
+CONTENT: Most Indian SMEs treat brand as a logo and some colours. Brand is actually the sum of every impression — visual, verbal, and experiential — that your company makes. A company with a beautiful logo and inconsistent everything else has weak brand. A company with a simple logo and consistently excellent client experience has strong brand.  Brand identity has four components: visual identity (logo, colours, typography, imagery style), verbal identity (what you say and how you say it — your tone, you
+
+TYPE: guide
+SLUG: how-to-create-a-brand-style-guide-your-team-will-actually-use
+PILLAR: P3
+TITLE: How to create a brand style guide your team will actually use
+CONTENT: A brand style guide documents the rules for how your brand is expressed visually and verbally. [Without](/how-to/how-to-hire-your-first-hr-manager-without-overpaying) one, every team member and every vendor who produces something for your company makes their own decisions — and the cumulative result is inconsistency that erodes brand value.  A practical style guide for an Indian SME doesn't need to be a 60-page document. It needs to cover: logo (approved versions, minimum size, clear space, what
+
