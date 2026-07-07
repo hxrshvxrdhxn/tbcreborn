@@ -10,6 +10,9 @@ export interface BlogPost {
   readTime: string;
   excerpt: string;
   content: string; // HTML
+  seoTitle?: string | null;
+  seoDescription?: string | null;
+  pillar?: string | null;
 }
 
 /** Converts plain-text scraped content into semantic HTML */

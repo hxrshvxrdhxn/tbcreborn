@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/posts";
+import { PrismaClient } from "@prisma/client";
 
 const BASE = "https://turbobytesconsulting.com";
 
@@ -14,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/services/slate`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/about`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/work`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${BASE}/blog`, priority: 0.7, changeFrequency: "weekly" as const },
+    { url: `${BASE}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE}/engagement`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/book-consultation`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE}/contact`, priority: 0.6, changeFrequency: "yearly" as const },
@@ -26,9 +27,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogRoutes = slugs.map((slug) => ({
     url: `${BASE}/blog/${slug}`,
     lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  const prisma = new PrismaClient();
+  const guides = await prisma.howToGuide.findMany({ select: { slug: true } });
+  await prisma.$disconnect();
+  
+  const guideRoutes = guides.map(g => ({
+    url: `${BASE}/how-to/${g.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...guideRoutes];
 }

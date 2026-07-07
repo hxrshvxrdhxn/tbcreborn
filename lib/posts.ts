@@ -16,6 +16,9 @@ export interface ManagedPost extends BlogPost {
   status: PostStatus;
   publishedAt: string | null;
   isManaged: boolean;
+  seoTitle?: string | null;
+  seoDescription?: string | null;
+  pillar?: string | null;
 }
 
 // ── File System Scanning ─────────────────────────────────────────────────────
@@ -102,6 +105,9 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         status: post.status as PostStatus,
         publishedAt: post.publishedAt,
         isManaged: true,
+        seoTitle: post.seoTitle,
+        seoDescription: post.seoDescription,
+        pillar: post.pillar,
       } as ManagedPost;
     })
   );
@@ -201,6 +207,9 @@ export async function getAdminPosts(): Promise<ManagedPost[]> {
         status: post.status as PostStatus,
         publishedAt: post.publishedAt,
         isManaged: true,
+        seoTitle: post.seoTitle,
+        seoDescription: post.seoDescription,
+        pillar: post.pillar,
       } as ManagedPost;
     })
   );

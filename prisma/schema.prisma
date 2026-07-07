@@ -18,6 +18,9 @@ model Post {
   content     String
   status      String   @default("published")
   publishedAt String?
+  seoTitle      String?
+  seoDescription String?
+  pillar        String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
@@ -42,6 +45,9 @@ model HowToGuide {
   content   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  seoTitle      String?
+  seoDescription String?
+  pillar        String?
 }
 
 model HowToRequest {

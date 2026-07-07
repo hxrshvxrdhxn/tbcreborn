@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.seoTitle || `${post.title} | TBC`,
+    description: post.seoDescription || post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: post.seoTitle || post.title,
+      description: post.seoDescription || post.excerpt,
       url: `https://turbobytesconsulting.com/blog/${post.slug}`,
       images: [{ url: "/og-default.png", width: 1200, height: 630 }],
     },
