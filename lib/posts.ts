@@ -155,8 +155,60 @@ export async function getAllPosts(): Promise<BlogPost[]> {
 export async function getPostBySlug(
   slug: string
 ): Promise<BlogPost | undefined> {
-  const all = await getAllPosts();
-  const post = all.find((p) => p.slug === slug);
+  let post: ManagedPost | undefined = undefined;
+  
+  // 1. Try DB first
+  const dbPost = await prisma.post.findUnique({
+    where: { slug },
+  });
+
+  if (dbPost) {
+    const now = new Date();
+    const isPublished = dbPost.status === "published";
+    const isScheduledAndReady =
+      dbPost.status === "scheduled" &&
+      dbPost.publishedAt &&
+      new Date(dbPost.publishedAt) <= now;
+
+    if (isPublished || isScheduledAndReady) {
+      post = {
+        id: dbPost.id,
+        slug: dbPost.slug,
+        title: dbPost.title,
+        date: dbPost.date,
+        category: dbPost.category,
+        readTime: dbPost.readTime,
+        excerpt: dbPost.excerpt,
+        content: dbPost.content,
+        status: dbPost.status as PostStatus,
+        publishedAt: dbPost.publishedAt,
+        isManaged: true,
+        seoTitle: dbPost.seoTitle,
+        seoDescription: dbPost.seoDescription,
+        pillar: dbPost.pillar,
+      } as ManagedPost;
+    }
+  }
+
+  // 2. If not in DB, try local MDX
+  if (!post) {
+    const local = await getLocalMdxPosts();
+    post = local.find(p => p.slug === slug);
+  }
+
+  // 3. If not local MDX, try static
+  if (!post) {
+    const staticPost = staticPosts.find(p => p.slug === slug);
+    if (staticPost) {
+      post = {
+        ...staticPost,
+        status: "published",
+        publishedAt: staticPost.date,
+        isManaged: false,
+      };
+    }
+  }
+
   if (!post) return undefined;
 
   const rawHtml = (
