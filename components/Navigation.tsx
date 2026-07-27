@@ -4,7 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
+interface NavLink {
+  href: string;
+  label: string;
+  target?: string;
+}
+
+const navLinks: NavLink[] = [
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
@@ -12,6 +18,7 @@ const navLinks = [
   { href: "/engagement", label: "Engagement" },
   { href: "/how-to", label: "How-To" },
   { href: "/contact", label: "Contact" },
+  { href: "/work/ai-knowledge-portal.html", label: "On-Prem LLMs", target: "_blank" },
 ];
 
 export default function Navigation() {
@@ -44,6 +51,8 @@ export default function Navigation() {
               <li key={link.href} className="relative group h-full flex items-center">
                 <Link
                   href={link.href}
+                  target={link.target || "_self"}
+                  rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                   className={`font-display font-medium text-sm tracking-wide transition-colors duration-150 py-5 ${
                     pathname.startsWith(link.href)
                       ? "text-gold"
@@ -125,6 +134,8 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
+                target={link.target || "_self"}
+                rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                 onClick={() => setOpen(false)}
                 className={`font-display font-medium text-sm py-3 border-b border-white/10 transition-colors ${
                   pathname.startsWith(link.href) ? "text-gold" : "text-white hover:text-gold"
