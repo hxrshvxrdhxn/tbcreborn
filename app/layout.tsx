@@ -59,6 +59,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-IN" className={`${inter.variable} ${dmSans.variable}`}>
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="Turbo Bytes Consulting blog" href="/feed.xml" />
+      </head>
       <body className="bg-ivory text-ink antialiased">
         <SmoothScrollProvider>
           {/* Skip-to-content — visible only on keyboard focus */}
