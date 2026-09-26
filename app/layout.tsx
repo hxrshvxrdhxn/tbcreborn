@@ -29,7 +29,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Consulting & Strategy | Turbo Bytes Consulting",
+    default: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting",
     template: "%s | Turbo Bytes Consulting",
   },
   description:
@@ -83,15 +83,6 @@ export default function RootLayout({
         <SpeedInsights />
         <GoogleTagManager gtmId="GTM-W6MCQF5V" />
         <GTMTracker />
-        <Script id="ms-clarity" strategy="afterInteractive">
-          {`
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "wy3ihoq9t1");
-          `}
-        </Script>
 
         {/* Content Protection Script */}
         <Script id="content-protection" strategy="afterInteractive">
