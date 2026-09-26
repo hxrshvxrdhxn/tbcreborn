@@ -43,7 +43,20 @@ jest.mock("@/lib/prisma", () => {
             publishedAt: new Date(Date.now() - 100000).toISOString(),
             createdAt: new Date(),
           }
-        ])
+        ]),
+        findUnique: jest.fn().mockImplementation(({ where }) => {
+          if (where.slug === "test-post") {
+            return Promise.resolve({
+              id: "1",
+              slug: "test-post",
+              title: "Test Post",
+              content: "Hello world",
+              status: "published",
+              createdAt: new Date(),
+            });
+          }
+          return Promise.resolve(null);
+        })
       }
     }
   }

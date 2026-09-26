@@ -35,3 +35,7 @@ prisma/dev.db
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+_handoff/
+
+scripts/drafts-export.md

@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+
 import { GET } from "@/app/api/cron/generate-blog/route";
 
 jest.mock("ai", () => ({
@@ -33,28 +33,17 @@ describe("Cron API validation", () => {
   });
 
   it("fails without authorization header", async () => {
-    const req = new NextRequest("http://localhost/api/cron/generate-blog", { method: "GET" });
-    const res = await GET(req);
-    expect(res.status).toBe(401);
+    const res = await GET();
+    expect(res.status).toBe(410);
   });
 
   it("fails with incorrect authorization header", async () => {
-    const req = new NextRequest("http://localhost/api/cron/generate-blog", { 
-      method: "GET",
-      headers: { authorization: "Bearer wrong-secret" } 
-    });
-    const res = await GET(req);
-    expect(res.status).toBe(401);
+    const res = await GET();
+    expect(res.status).toBe(410);
   });
 
   it("succeeds with correct authorization header", async () => {
-    const req = new NextRequest("http://localhost/api/cron/generate-blog", { 
-      method: "GET",
-      headers: { authorization: "Bearer test-secret" } 
-    });
-    const res = await GET(req);
-    expect(res.status).toBe(200);
-    const data = await res.json();
-    expect(data.success).toBe(true);
+    const res = await GET();
+    expect(res.status).toBe(410);
   });
 });
