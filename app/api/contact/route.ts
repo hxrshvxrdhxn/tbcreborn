@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
@@ -61,6 +62,8 @@ const schema = z.object({
   budget: z.string().max(50).optional(),
   message: z.string().min(10).max(5000),
   website: z.string().optional(), // honeypot
+  landingPage: z.string().nullable().optional(),
+  referrerPath: z.string().nullable().optional(),
 });
 
 export async function POST(req: NextRequest) {
@@ -150,11 +153,27 @@ export async function POST(req: NextRequest) {
           service: data.service,
           budget: data.budget || null,
           message: data.message,
+          landingPage: data.landingPage || null,
+          referrerPath: data.referrerPath || null,
         }
       });
-    } catch (dbErr) {
-      console.error("Failed to save query to DB:", dbErr);
-      // Non-fatal, we still sent the email.
+    } catch (dbErr: any) {
+      console.warn("Failed to save query with tracking columns, retrying without them:", dbErr.message);
+      try {
+        await prisma.contactQuery.create({
+          data: {
+            name: data.name,
+            company: data.company,
+            email: data.email,
+            phone: data.phone || null,
+            service: data.service,
+            budget: data.budget || null,
+            message: data.message,
+          } as any
+        });
+      } catch (fallbackErr) {
+        console.error("Failed to save query to DB even on fallback:", fallbackErr);
+      }
     }
 
     return NextResponse.json({ success: true });

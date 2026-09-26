@@ -1,3 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
@@ -53,13 +59,29 @@ export default function ContactClient() {
     setFormState("loading");
     setErrorMessage("");
     try {
+      let trackingData = {};
+      if (typeof window !== "undefined") {
+        trackingData = {
+          landingPage: sessionStorage.getItem("landingPage") || null,
+          referrerPath: sessionStorage.getItem("referrerPath") || null,
+        };
+      }
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, ...trackingData }),
       });
       if (res.ok) {
         setFormState("success");
+        if (typeof window !== "undefined") {
+          const dataLayer = (window as any).dataLayer || [];
+          dataLayer.push({
+            event: "generate_lead",
+            form_location: window.location.pathname,
+            service: data.service,
+          });
+        }
         reset();
       } else {
         const body = await res.json().catch(() => ({}));

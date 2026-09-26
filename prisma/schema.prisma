@@ -27,15 +27,17 @@ model Post {
 }
 
 model ContactQuery {
-  id        String   @id @default(cuid())
-  name      String
-  company   String
-  email     String
-  phone     String?
-  service   String
-  budget    String?
-  message   String
-  createdAt DateTime @default(now())
+  id           String   @id @default(cuid())
+  name         String
+  company      String
+  email        String
+  phone        String?
+  service      String
+  budget       String?
+  message      String
+  landingPage  String?
+  referrerPath String?
+  createdAt    DateTime @default(now())
 }
 
 model HowToGuide {
