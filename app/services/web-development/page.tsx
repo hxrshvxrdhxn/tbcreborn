@@ -7,22 +7,22 @@ import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
 
 export const metadata: Metadata = {
-  title: "Website & Web Application Development | Turbo Bytes Consulting",
+  title: "Web Application & Website Development Company | TBC",
   description:
-    "Architecturally sound. Conversion-optimised. Built to perform. Custom websites and enterprise web applications designed for commercial results. Turbo Bytes Consulting.",
+    "Web applications, client portals and B2B websites built on modern frameworks, with SEO and conversion tracking built in. Greater Noida, Delhi NCR.",
   alternates: { canonical: "/services/web-development" },
   openGraph: {
-    title: "Website & Web Application Development | Turbo Bytes Consulting",
+    title: "Web Application & Website Development Company | TBC",
     description:
-      "Architecturally sound. Conversion-optimised. Built to perform. Custom websites and enterprise web applications designed for commercial results. Turbo Bytes Consulting.",
+      "Web applications, client portals and B2B websites built on modern frameworks, with SEO and conversion tracking built in. Greater Noida, Delhi NCR.",
     url: "https://turbobytesconsulting.com/services/web-development",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Website & Web Application Development | Turbo Bytes Consulting",
+    title: "Web Application & Website Development Company | TBC",
     description:
-      "Architecturally sound. Conversion-optimised. Built to perform. Custom websites and enterprise web applications.",
+      "Web applications, client portals and B2B websites built on modern frameworks, with SEO and conversion tracking built in. Greater Noida, Delhi NCR.",
   },
 };
 
@@ -87,7 +87,7 @@ const includedFeatures = [
     ),
     items: [
       "Bespoke visual layouts designed from scratch — no templates used",
-      "Consistent typography, brand colors, motion system, and assets",
+      "Consistent typography, brand colours, motion system, and assets",
       "Mobile-first responsive design fully verified on all modern viewports",
       "Accessibility compliance matching WCAG 2.1 AA standards",
     ],

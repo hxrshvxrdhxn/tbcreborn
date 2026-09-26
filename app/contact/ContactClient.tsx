@@ -1,9 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
@@ -75,7 +69,7 @@ export default function ContactClient() {
       if (res.ok) {
         setFormState("success");
         if (typeof window !== "undefined") {
-          const dataLayer = (window as any).dataLayer || [];
+          const dataLayer = (window as Window & { dataLayer?: Record<string, unknown>[] }).dataLayer || [];
           dataLayer.push({
             event: "generate_lead",
             form_location: window.location.pathname,

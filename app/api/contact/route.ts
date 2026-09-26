@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
@@ -157,8 +156,8 @@ export async function POST(req: NextRequest) {
           referrerPath: data.referrerPath || null,
         }
       });
-    } catch (dbErr: any) {
-      console.warn("Failed to save query with tracking columns, retrying without them:", dbErr.message);
+    } catch (dbErr: unknown) {
+      console.warn("Failed to save query with tracking columns, retrying without them:", dbErr instanceof Error ? dbErr.message : dbErr);
       try {
         await prisma.contactQuery.create({
           data: {
@@ -169,7 +168,7 @@ export async function POST(req: NextRequest) {
             service: data.service,
             budget: data.budget || null,
             message: data.message,
-          } as any
+          } as Parameters<typeof prisma.contactQuery.create>[0]["data"]
         });
       } catch (fallbackErr) {
         console.error("Failed to save query to DB even on fallback:", fallbackErr);

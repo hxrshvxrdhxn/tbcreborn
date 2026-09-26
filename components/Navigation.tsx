@@ -67,29 +67,34 @@ export default function Navigation() {
                   <div className="absolute top-full left-0 hidden group-hover:block z-50 min-w-[240px] pt-1">
                     <ul className="bg-white border border-light-grey rounded-[6px] shadow-lg py-2 flex flex-col">
                       <li>
-                        <Link href="/services/custom-llm" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
-                          Custom LLM & AI
-                        </Link>
+                        <Link href="/services/custom-software-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Custom Software</Link>
                       </li>
                       <li>
-                        <Link href="/services/ai-training" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
-                          AI Capability Building
-                        </Link>
+                        <Link href="/services/mobile-app-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Mobile Apps</Link>
                       </li>
                       <li>
-                        <Link href="/services/web-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
-                          Web & App Development
-                        </Link>
+                        <Link href="/services/ai-applications" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">AI Applications</Link>
                       </li>
                       <li>
-                        <Link href="/services/smm" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
-                          Social Media Management
-                        </Link>
+                        <Link href="/services/business-automation" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Business Automation</Link>
                       </li>
                       <li>
-                        <Link href="/services/slate" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">
-                          Slate Executive Assistant
-                        </Link>
+                        <Link href="/services/mvp-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">MVP Development</Link>
+                      </li>
+                      <li>
+                        <Link href="/services/web-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Web Development</Link>
+                      </li>
+                      <li>
+                        <Link href="/services/custom-llm" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Custom LLM</Link>
+                      </li>
+                      <li>
+                        <Link href="/services/ai-training" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">AI Training</Link>
+                      </li>
+                      <li>
+                        <Link href="/services/slate" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Slate AI Assistant</Link>
+                      </li>
+                      <li>
+                        <Link href="/services/smm" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Social Media</Link>
                       </li>
                     </ul>
                   </div>

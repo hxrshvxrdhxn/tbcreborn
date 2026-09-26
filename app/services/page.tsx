@@ -6,106 +6,186 @@ import ServiceCard from "@/components/ServiceCard";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Our Services | AI Strategy, Web Development & More",
+  title: "Software Development & AI Services | Turbo Bytes Consulting",
   description:
-    "Five AI-powered practice areas: custom LLM deployment, AI capability building, web development, social media management, and Slate AI assistant. Turbo Bytes Consulting.",
+    "Custom software, mobile and web apps, AI applications, automation and consulting for growing Indian businesses.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Our Services | AI Strategy, Web Development & More",
+    title: "Software Development & AI Services | Turbo Bytes Consulting",
     description:
-      "Five AI-powered practice areas: custom LLM deployment, AI capability building, web development, social media management, and Slate AI assistant. Turbo Bytes Consulting.",
+      "Custom software, mobile and web apps, AI applications, automation and consulting for growing Indian businesses.",
     url: "https://turbobytesconsulting.com/services",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Our Services | AI Strategy, Web Development & More",
+    title: "Software Development & AI Services | Turbo Bytes Consulting",
     description:
-      "Five AI-powered practice areas: custom LLM deployment, AI capability building, web development, social media management, and Slate AI assistant. Turbo Bytes Consulting.",
+      "Custom software, mobile and web apps, AI applications, automation and consulting for growing Indian businesses.",
   },
 };
 
 const practices = [
   {
-    number: "01",
-    name: "Custom LLM & On-Premise AI",
-    description: "Your organisation's intelligence layer. Trained on your knowledge.",
-    timeline: "Setup 4–8 weeks · ROI in 60–90 days",
-    setupTime: "4–8 wks",
-    roi: "60–90 days",
-    deliverables: [
-      "On-premise or private cloud deployment",
+    "number": "01",
+    "name": "Custom Software Development",
+    "description": "Custom business software built around how your company works: workflows, approvals, portals and integrations.",
+    "timeline": "Phased delivery from 6 weeks",
+    "setupTime": "6–12 wks",
+    "roi": "Phase 1 launch",
+    "deliverables": [
+      "Workflow systems",
+      "Internal tools",
+      "Client and vendor portals",
+      "Integrations"
+    ],
+    "href": "/services/custom-software-development",
+    "imageSrc": "/img/hero-service-web-development.png"
+  },
+  {
+    "number": "02",
+    "name": "Mobile App Development",
+    "description": "iOS and Android apps that connect to the systems you already run and work on patchy networks.",
+    "timeline": "First version in 8 to 14 weeks",
+    "setupTime": "8–14 wks",
+    "roi": "Pilot phase",
+    "deliverables": [
+      "Field and sales apps",
+      "Customer apps",
+      "Employee apps",
+      "Offline support"
+    ],
+    "href": "/services/mobile-app-development",
+    "imageSrc": "/img/hero-service-web-development.png"
+  },
+  {
+    "number": "03",
+    "name": "AI Applications",
+    "description": "Chatbots, document processing and internal assistants trained on your own data.",
+    "timeline": "Pilot in 4 weeks",
+    "setupTime": "4–10 wks",
+    "roi": "90 days",
+    "deliverables": [
+      "Document chatbots",
+      "Customer assistants",
+      "Document processing",
+      "Private deployment"
+    ],
+    "href": "/services/ai-applications",
+    "imageSrc": "/img/hero-service-llm.png"
+  },
+  {
+    "number": "04",
+    "name": "Business Automation",
+    "description": "Custom CRM, ERP modules, approval workflows, dashboards and integrations.",
+    "timeline": "Phased rollout",
+    "setupTime": "4–8 wks",
+    "roi": "Switch-over",
+    "deliverables": [
+      "Custom CRM",
+      "ERP modules",
+      "Approval workflows",
+      "Dashboards"
+    ],
+    "href": "/services/business-automation",
+    "imageSrc": "/img/hero-service-web-development.png"
+  },
+  {
+    "number": "05",
+    "name": "MVP Development",
+    "description": "A working first version of your product scoped to what proves the idea.",
+    "timeline": "8 to 12 weeks",
+    "setupTime": "8–12 wks",
+    "roi": "Launch",
+    "deliverables": [
+      "Scoping workshop",
+      "Clickable prototype",
+      "Production-quality build",
+      "Analytics"
+    ],
+    "href": "/services/mvp-development",
+    "imageSrc": "/img/hero-service-web-development.png"
+  },
+  {
+    "number": "06",
+    "name": "Website & Application Development",
+    "description": "Architecturally sound. Conversion-optimised. Built to perform.",
+    "timeline": "Sites 2–3 weeks",
+    "setupTime": "6–12 wks",
+    "roi": "90 days",
+    "deliverables": [
+      "Custom business sites",
+      "Web applications",
+      "API integrations",
+      "Post-launch support"
+    ],
+    "href": "/services/web-development",
+    "imageSrc": "/img/hero-service-web-development.png"
+  },
+  {
+    "number": "07",
+    "name": "Custom LLM & On-Premise AI",
+    "description": "Your organisation's intelligence layer. Trained on your knowledge.",
+    "timeline": "Setup 4–8 weeks",
+    "setupTime": "4–8 wks",
+    "roi": "60–90 days",
+    "deliverables": [
+      "On-premise deployment",
       "Persistent AI knowledge base",
-      "New staff fully operational in hours",
-      "Live ROI dashboard",
+      "New staff operational fast",
+      "Live ROI"
     ],
-    href: "/services/custom-llm",
-    imageSrc: "/img/hero-service-llm.png",
+    "href": "/services/custom-llm",
+    "imageSrc": "/img/hero-service-llm.png"
   },
   {
-    number: "02",
-    name: "AI Capability Building",
-    description: "Organisations that understand AI use it better. We build that understanding.",
-    timeline: "Bookable with 5 business days notice",
-    setupTime: "2–4 wks",
-    roi: "Immediate",
-    deliverables: [
-      "In-person intensives and virtual cohorts",
-      "Curriculum mapped to your tools and stack",
-      "No-code AI workflow building",
-      "AI governance and responsible deployment",
+    "number": "08",
+    "name": "AI Capability Building",
+    "description": "Organisations that understand AI use it better. We build that understanding.",
+    "timeline": "Bookable with 5 days notice",
+    "setupTime": "2–4 wks",
+    "roi": "Immediate",
+    "deliverables": [
+      "In-person intensives",
+      "Curriculum mapped to tools",
+      "No-code AI building",
+      "AI governance"
     ],
-    href: "/services/ai-training",
-    imageSrc: "/img/hero-service-ai-training.png",
+    "href": "/services/ai-training",
+    "imageSrc": "/img/hero-service-ai-training.png"
   },
   {
-    number: "03",
-    name: "Website & Application Development",
-    description: "Architecturally sound. Conversion-optimised. Built to perform.",
-    timeline: "Sites 2–3 weeks · Apps 4–8 weeks",
-    setupTime: "6–12 wks",
-    roi: "90 days",
-    deliverables: [
-      "Custom business and e-commerce sites",
-      "Web applications and internal tools",
-      "API integrations and hosting architecture",
-      "Post-launch support retainers",
+    "number": "09",
+    "name": "Slate AI Executive Assistant",
+    "description": "Beyond scheduling. Beyond email. A second intelligence for leaders.",
+    "timeline": "Setup 48 hours",
+    "setupTime": "1 wk",
+    "roi": "Immediate",
+    "deliverables": [
+      "Inbox intelligence",
+      "Meeting preparation",
+      "Action item tracking",
+      "Email drafting"
     ],
-    href: "/services/web-development",
-    imageSrc: "/img/hero-service-web-development.png",
+    "href": "/services/slate",
+    "imageSrc": "/img/hero-service-slate.png"
   },
   {
-    number: "04",
-    name: "Social Media Management",
-    description: "Precision-engineered content. Platform-native strategy. AI-driven execution.",
-    timeline: "Onboarding 5 days · First calendar in 10 days",
-    setupTime: "2 wks",
-    roi: "Ongoing",
-    deliverables: [
-      "Full annual content strategy and calendar",
-      "AI-powered content creation across formats",
-      "Active management of every platform",
-      "Monthly analytics and strategy recalibration",
+    "number": "10",
+    "name": "Social Media Management",
+    "description": "Precision-engineered content. Platform-native strategy. AI-driven execution.",
+    "timeline": "First calendar in 10 days",
+    "setupTime": "2 wks",
+    "roi": "Ongoing",
+    "deliverables": [
+      "Full annual strategy",
+      "AI-powered creation",
+      "Active management",
+      "Monthly analytics"
     ],
-    href: "/services/smm",
-    imageSrc: "/img/hero-service-smm.png",
-  },
-  {
-    number: "05",
-    name: "Slate AI Executive Assistant",
-    description: "Beyond scheduling. Beyond email. A second intelligence for leaders.",
-    timeline: "Setup 48 hours · Full calibration 2–4 weeks",
-    setupTime: "1 wk",
-    roi: "Immediate",
-    deliverables: [
-      "Intelligent calendar and email management",
-      "Meeting prep, agendas, and briefings",
-      "Continuous research and daily briefings",
-      "Deep tool integration: Gmail, Slack, Notion, Asana",
-    ],
-    href: "/services/slate",
-    imageSrc: "/img/hero-service-slate.png",
-  },
+    "href": "/services/smm",
+    "imageSrc": "/img/hero-service-smm.png"
+  }
 ];
 
 export default function ServicesPage() {

@@ -1,11 +1,16 @@
 import Link from "next/link";
 
 const serviceLinks = [
-  { href: "/services/custom-llm", label: "Custom LLM & On-Prem AI" },
-  { href: "/services/ai-training", label: "AI Capability Building" },
-  { href: "/services/web-development", label: "Website & App Development" },
-  { href: "/services/smm", label: "Social Media Management" },
-  { href: "/services/slate", label: "Slate Executive Assistant" },
+  { href: "/services/custom-software-development", label: "Custom Software" },
+  { href: "/services/mobile-app-development", label: "Mobile Apps" },
+  { href: "/services/ai-applications", label: "AI Applications" },
+  { href: "/services/business-automation", label: "Business Automation" },
+  { href: "/services/mvp-development", label: "MVP Development" },
+  { href: "/services/web-development", label: "Web Development" },
+  { href: "/services/custom-llm", label: "Custom LLM" },
+  { href: "/services/ai-training", label: "AI Training" },
+  { href: "/services/slate", label: "Slate AI Assistant" },
+  { href: "/services/smm", label: "Social Media" },
 ];
 
 const companyLinks = [
@@ -18,11 +23,17 @@ const companyLinks = [
   { href: "/brand-guidelines", label: "Brand Guidelines" },
 ];
 
+const locationLinks = [
+  { href: "/software-development-company-greater-noida", label: "Greater Noida" },
+  { href: "/software-development-company-noida", label: "Noida" },
+  { href: "/software-development-company-delhi-ncr", label: "Delhi NCR" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-ink text-white">
       <div className="container-tbc py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
 
           {/* Col 1 — Brand */}
           <div>
@@ -86,7 +97,26 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Contact */}
+          {/* Col 4 — Locations */}
+          <div>
+            <h3 className="font-display font-semibold text-xs tracking-widest uppercase text-gold mb-5">
+              Locations
+            </h3>
+            <ul className="space-y-3">
+              {locationLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-white/60 text-sm hover:text-gold transition-colors duration-150"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 5 — Contact */}
           <div>
             <h3 className="font-display font-semibold text-xs tracking-widest uppercase text-gold mb-5">
               Contact
