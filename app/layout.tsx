@@ -11,6 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import BackToTop from "@/components/BackToTop";
 import { GoogleTagManager } from "@next/third-parties/google";
+import GTMTracker from "@/components/GTMTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,6 +47,11 @@ export const metadata: Metadata = {
     creator: "@social_TBC",
   },
   robots: { index: true, follow: true },
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -73,6 +79,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleTagManager gtmId="GTM-W6MCQF5V" />
+        <GTMTracker />
         <Script id="ms-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
