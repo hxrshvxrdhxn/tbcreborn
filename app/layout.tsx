@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
-import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
@@ -80,7 +79,7 @@ export default function RootLayout({
         <SpeedInsights />
         <GoogleTagManager gtmId="GTM-W6MCQF5V" />
         <GTMTracker />
-        <Script id="ms-clarity" strategy="afterInteractive">
+        <script id="ms-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -88,10 +87,10 @@ export default function RootLayout({
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "wy3ihoq9t1");
           `}
-        </Script>
+        </script>
 
         {/* Content Protection Script */}
-        <Script id="content-protection" strategy="afterInteractive">
+        <script id="content-protection" strategy="afterInteractive">
           {`
             document.addEventListener('contextmenu', event => event.preventDefault());
             document.addEventListener('keydown', event => {
@@ -100,10 +99,10 @@ export default function RootLayout({
               }
             });
           `}
-        </Script>
+        </script>
 
         {/* Global JSON-LD Schema for GEO/SEO */}
-        <Script id="schema-org" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
+        <script id="schema-org" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": ["Organization", "ProfessionalService"],
