@@ -19,6 +19,7 @@ export interface ManagedPost extends BlogPost {
   seoTitle?: string | null;
   seoDescription?: string | null;
   pillar?: string | null;
+  updatedAt?: Date | null;
 }
 
 // ── File System Scanning ─────────────────────────────────────────────────────
@@ -108,6 +109,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         seoTitle: post.seoTitle,
         seoDescription: post.seoDescription,
         pillar: post.pillar,
+        updatedAt: post.updatedAt,
       } as ManagedPost;
     })
   );
@@ -186,6 +188,7 @@ export async function getPostBySlug(
         seoTitle: dbPost.seoTitle,
         seoDescription: dbPost.seoDescription,
         pillar: dbPost.pillar,
+        updatedAt: dbPost.updatedAt,
       } as ManagedPost;
     }
   }
@@ -263,6 +266,7 @@ export async function getAdminPosts(): Promise<ManagedPost[]> {
         seoTitle: post.seoTitle,
         seoDescription: post.seoDescription,
         pillar: post.pillar,
+        updatedAt: post.updatedAt,
       } as ManagedPost;
     })
   );
