@@ -49,7 +49,7 @@ export default function CookieBanner() {
         onAccept={() => setHasConsent(true)}
       >
         <span className="text-[14px] text-ivory">
-          We use cookies to analyze site traffic and optimize your experience. By clicking &quot;Accept All&quot;, you consent to our use of analytics tools.
+          We use cookies to analyse site traffic and improve your experience. By clicking &quot;Accept All&quot;, you consent to our use of analytics tools.
         </span>
       </CookieConsent>
 

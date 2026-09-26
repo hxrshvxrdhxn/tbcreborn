@@ -5,17 +5,17 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Company in Noida | Turbo Bytes Consulting",
+  title: { absolute: "Mobile App Development Company in Noida | Turbo Bytes Consulting" },
   description: "iOS and Android apps for customers, field teams and operations. Cross-platform builds, offline support and integrations with your business systems.",
   alternates: { canonical: "/services/mobile-app-development" },
   openGraph: {
-    title: "Mobile App Development Company in Noida | Turbo Bytes Consulting",
+    title: { absolute: "Mobile App Development Company in Noida | Turbo Bytes Consulting" },
     description: "iOS and Android apps for customers, field teams and operations. Cross-platform builds, offline support and integrations with your business systems.",
     url: "https://turbobytesconsulting.com/services/mobile-app-development",
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Mobile App Development Company in Noida | Turbo Bytes Consulting",
+    title: { absolute: "Mobile App Development Company in Noida | Turbo Bytes Consulting" },
     description: "iOS and Android apps for customers, field teams and operations. Cross-platform builds, offline support and integrations with your business systems.",
   },
 };
@@ -100,7 +100,7 @@ export default function ServicePage() {
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li><Link href="/services" className="hover:text-ink transition-colors">Services</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
-            <li className="text-ink font-bold" aria-current="page">Mobile apps your customers and field teams will actually use</li>
+            <li className="text-ink font-bold" aria-current="page">Mobile Apps</li>
           </ol>
         </div>
       </nav>
@@ -188,13 +188,13 @@ export default function ServicePage() {
               <Reveal delay={0}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Field and sales apps:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Field and sales apps</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "visits, orders, GPS check-ins, photos and signatures, working offline." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Visits, orders, GPS check-ins, photos and signatures, working offline." }} />
                       </li>
                     
                   </ul>
@@ -204,13 +204,13 @@ export default function ServicePage() {
               <Reveal delay={0.06}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Customer apps:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Customer apps</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "ordering, tracking, service requests, payments and notifications." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Ordering, tracking, service requests, payments and notifications." }} />
                       </li>
                     
                   </ul>
@@ -220,13 +220,13 @@ export default function ServicePage() {
               <Reveal delay={0.12}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Employee apps:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Employee apps</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "attendance, approvals, announcements and training for distributed teams." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Attendance, approvals, announcements and training for distributed teams." }} />
                       </li>
                     
                   </ul>
@@ -236,13 +236,13 @@ export default function ServicePage() {
               <Reveal delay={0.18}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Admin panels and back ends:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Admin panels and back ends</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "the server, database and dashboard behind every app." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "The server, database and dashboard behind every app." }} />
                       </li>
                     
                   </ul>
@@ -252,13 +252,13 @@ export default function ServicePage() {
               <Reveal delay={0.24}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Integrations:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Integrations</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "your CRM, ERP, Tally, Razorpay, maps and WhatsApp." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Your CRM, ERP, Tally, Razorpay, maps and WhatsApp." }} />
                       </li>
                     
                   </ul>
@@ -268,7 +268,7 @@ export default function ServicePage() {
               <Reveal delay={0.3}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Launch and upkeep:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Launch and upkeep</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     

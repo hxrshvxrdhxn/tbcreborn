@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: guide.seoTitle || `${guide.title} | Turbo Bytes Consulting`,
+    title: { absolute: /Turbo Bytes Consulting|\| TBC$/.test(guide.seoTitle || "") ? guide.seoTitle! : `${guide.seoTitle || guide.title} | TBC` },
     description: guide.seoDescription || guide.content.substring(0, 160).replace(/\n/g, ' '),
   };
 }

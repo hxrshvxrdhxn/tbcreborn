@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Social Media Management | Turbo Bytes Consulting",
+  title: { absolute: "Social Media Management | Turbo Bytes Consulting" },
   description:
     "Precision-engineered content. Platform-native strategy. AI-driven execution. Enterprise-scale content operations.",
   alternates: { canonical: "/services/smm" },
   openGraph: {
-    title: "Social Media Management | Turbo Bytes Consulting",
+    title: { absolute: "Social Media Management | Turbo Bytes Consulting" },
     description:
       "Precision-engineered content. Platform-native strategy. AI-driven execution. Enterprise-scale content operations.",
     url: "https://turbobytesconsulting.com/services/smm",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Social Media Management | Turbo Bytes Consulting",
+    title: { absolute: "Social Media Management | Turbo Bytes Consulting" },
     description:
       "Precision-engineered content. Platform-native strategy. AI-driven execution.",
   },

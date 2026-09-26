@@ -6,12 +6,12 @@ import ServiceCard from "@/components/ServiceCard";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Software Development & AI Services | Turbo Bytes Consulting",
+  title: { absolute: "Software Development & AI Services | Turbo Bytes Consulting" },
   description:
     "Custom software, mobile and web apps, AI applications, automation and consulting for growing Indian businesses.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Software Development & AI Services | Turbo Bytes Consulting",
+    title: { absolute: "Software Development & AI Services | Turbo Bytes Consulting" },
     description:
       "Custom software, mobile and web apps, AI applications, automation and consulting for growing Indian businesses.",
     url: "https://turbobytesconsulting.com/services",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Software Development & AI Services | Turbo Bytes Consulting",
+    title: { absolute: "Software Development & AI Services | Turbo Bytes Consulting" },
     description:
       "Custom software, mobile and web apps, AI applications, automation and consulting for growing Indian businesses.",
   },

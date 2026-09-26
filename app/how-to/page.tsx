@@ -4,7 +4,7 @@ import HowToSearch from './HowToSearch';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'How-To Guides | Turbo Bytes Consulting',
+  title: { absolute: 'How-To Guides | Turbo Bytes Consulting' },
   description: 'Practical, actionable guides for Indian business owners and founders scaling their operations.',
 };
 

@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Software Development & AI Company in Delhi NCR | TBC",
+  title: { absolute: "Software Development & AI Company in Delhi NCR | TBC" },
   description: "Custom software, mobile apps, AI applications and automation for founder-led businesses across Delhi, Noida, Gurugram, Ghaziabad and Faridabad.",
   alternates: { canonical: "/software-development-company-delhi-ncr" }
 };

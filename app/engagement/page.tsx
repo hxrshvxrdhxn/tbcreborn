@@ -4,14 +4,14 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Engagement Model & Pricing | Turbo Bytes Consulting",
+  title: { absolute: "Engagement Model & Pricing | Turbo Bytes Consulting" },
   description:
     "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
   alternates: {
     canonical: "/engagement",
   },
   openGraph: {
-    title: "Engagement Model & Pricing | Turbo Bytes Consulting",
+    title: { absolute: "Engagement Model & Pricing | Turbo Bytes Consulting" },
     description:
       "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
     url: "https://turbobytesconsulting.com/engagement",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Engagement Model & Pricing | Turbo Bytes Consulting",
+    title: { absolute: "Engagement Model & Pricing | Turbo Bytes Consulting" },
     description:
       "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
   },

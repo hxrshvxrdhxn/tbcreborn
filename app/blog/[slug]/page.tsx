@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: post.seoTitle || `${post.title} | TBC`,
+    title: { absolute: `${post.seoTitle || post.title} | TBC` },
     description: post.seoDescription || post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {

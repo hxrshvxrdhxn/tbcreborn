@@ -7,12 +7,12 @@ import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
 
 export const metadata: Metadata = {
-  title: "Web Application & Website Development Company | TBC",
+  title: { absolute: "Web Application & Website Development Company | TBC" },
   description:
     "Web applications, client portals and B2B websites built on modern frameworks, with SEO and conversion tracking built in. Greater Noida, Delhi NCR.",
   alternates: { canonical: "/services/web-development" },
   openGraph: {
-    title: "Web Application & Website Development Company | TBC",
+    title: { absolute: "Web Application & Website Development Company | TBC" },
     description:
       "Web applications, client portals and B2B websites built on modern frameworks, with SEO and conversion tracking built in. Greater Noida, Delhi NCR.",
     url: "https://turbobytesconsulting.com/services/web-development",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Web Application & Website Development Company | TBC",
+    title: { absolute: "Web Application & Website Development Company | TBC" },
     description:
       "Web applications, client portals and B2B websites built on modern frameworks, with SEO and conversion tracking built in. Greater Noida, Delhi NCR.",
   },
@@ -44,7 +44,7 @@ const problems = [
   {
     title: "Your website loses clients silently",
     description:
-      "A page that loads in four seconds loses 25% of visitors before it renders. A page that loads in two seconds does not. This is not a design problem. It is an engineering problem.",
+      "Slow pages lose visitors before they read a word. Speed is an engineering decision, not a design one.",
   },
   {
     title: "Your team cannot update it without help",
@@ -200,7 +200,7 @@ const includedFeatures = [
     items: [
       "Two weeks of dedicated hypercare immediately following launch",
       "Bug correction guarantee included for 30 days post-launch",
-      "Maintenance options: monthly core updates, patches, optimizations",
+      "Maintenance options: monthly core updates, patches, optimisations",
       "Monthly reports: Core Web Vitals, uptime statistics, page performance",
     ],
   },

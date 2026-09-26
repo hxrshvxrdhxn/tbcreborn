@@ -9,12 +9,12 @@ import FreeAnalysisForm from "@/components/FreeAnalysisForm";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting",
+  title: { absolute: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting" },
   description:
     "Custom software, mobile apps, AI applications and business automation for founder-led companies. Based in Greater Noida, serving Delhi NCR and India.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting",
+    title: { absolute: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting" },
     description:
       "Custom software, mobile apps, AI applications and business automation for founder-led companies. Based in Greater Noida, serving Delhi NCR and India.",
     url: "https://turbobytesconsulting.com",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting",
+    title: { absolute: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting" },
     description:
       "Custom software, mobile apps, AI applications and business automation for founder-led companies.",
   },
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     question: "Do you work with startups or enterprises?",
-    answer: "Both. We scale our solutions to match the operational maturity of the organization. For startups, we build lean, fast systems. For enterprises, we ensure compliance, security, and integration with legacy infrastructure.",
+    answer: "Both. We scale our solutions to match the operational maturity of the organisation. For startups, we build lean, fast systems. For enterprises, we ensure compliance, security, and integration with legacy infrastructure.",
   },
   {
     question: "What is your pricing model?",

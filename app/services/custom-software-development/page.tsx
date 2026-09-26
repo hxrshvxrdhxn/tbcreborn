@@ -5,17 +5,17 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Company in Noida | Turbo Bytes Consulting",
+  title: { absolute: "Custom Software Development Company in Noida | Turbo Bytes Consulting" },
   description: "Custom business software built around how your company works: workflows, approvals, portals and integrations. Fixed-phase delivery from Greater Noida.",
   alternates: { canonical: "/services/custom-software-development" },
   openGraph: {
-    title: "Custom Software Development Company in Noida | Turbo Bytes Consulting",
+    title: { absolute: "Custom Software Development Company in Noida | Turbo Bytes Consulting" },
     description: "Custom business software built around how your company works: workflows, approvals, portals and integrations. Fixed-phase delivery from Greater Noida.",
     url: "https://turbobytesconsulting.com/services/custom-software-development",
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Custom Software Development Company in Noida | Turbo Bytes Consulting",
+    title: { absolute: "Custom Software Development Company in Noida | Turbo Bytes Consulting" },
     description: "Custom business software built around how your company works: workflows, approvals, portals and integrations. Fixed-phase delivery from Greater Noida.",
   },
 };
@@ -100,7 +100,7 @@ export default function ServicePage() {
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li><Link href="/services" className="hover:text-ink transition-colors">Services</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
-            <li className="text-ink font-bold" aria-current="page">Custom software built around how your business actually works</li>
+            <li className="text-ink font-bold" aria-current="page">Custom Software</li>
           </ol>
         </div>
       </nav>
@@ -188,13 +188,13 @@ export default function ServicePage() {
               <Reveal delay={0}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Workflow systems:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Workflow systems</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "purchase, sales, service and approval workflows with roles, limits and audit trails." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Purchase, sales, service and approval workflows with roles, limits and audit trails." }} />
                       </li>
                     
                   </ul>
@@ -204,13 +204,13 @@ export default function ServicePage() {
               <Reveal delay={0.06}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Internal tools:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Internal tools</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "the admin panels, trackers and calculators your team uses every day." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "The admin panels, trackers and calculators your team uses every day." }} />
                       </li>
                     
                   </ul>
@@ -220,13 +220,13 @@ export default function ServicePage() {
               <Reveal delay={0.12}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Client and vendor portals:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Client and vendor portals</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "self-service access to orders, documents, tickets and invoices." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Self-service access to orders, documents, tickets and invoices." }} />
                       </li>
                     
                   </ul>
@@ -236,13 +236,13 @@ export default function ServicePage() {
               <Reveal delay={0.18}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Dashboards and reporting:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Dashboards and reporting</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "live numbers from every system in one place, for leadership and teams." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Live numbers from every system in one place, for leadership and teams." }} />
                       </li>
                     
                   </ul>
@@ -252,7 +252,7 @@ export default function ServicePage() {
               <Reveal delay={0.24}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Integrations:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Integrations</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
@@ -268,13 +268,13 @@ export default function ServicePage() {
               <Reveal delay={0.3}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Modernisation:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Modernisation</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "replacing or wrapping ageing desktop software without stopping the business." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Replacing or wrapping ageing desktop software without stopping the business." }} />
                       </li>
                     
                   </ul>

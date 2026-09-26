@@ -11,6 +11,7 @@ import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import BackToTop from "@/components/BackToTop";
 import { GoogleTagManager } from "@next/third-parties/google";
 import GTMTracker from "@/components/GTMTracker";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -79,7 +80,7 @@ export default function RootLayout({
         <SpeedInsights />
         <GoogleTagManager gtmId="GTM-W6MCQF5V" />
         <GTMTracker />
-        <script id="ms-clarity" strategy="afterInteractive">
+        <Script id="ms-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -87,10 +88,10 @@ export default function RootLayout({
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "wy3ihoq9t1");
           `}
-        </script>
+        </Script>
 
         {/* Content Protection Script */}
-        <script id="content-protection" strategy="afterInteractive">
+        <Script id="content-protection" strategy="afterInteractive">
           {`
             document.addEventListener('contextmenu', event => event.preventDefault());
             document.addEventListener('keydown', event => {
@@ -99,10 +100,10 @@ export default function RootLayout({
               }
             });
           `}
-        </script>
+        </Script>
 
         {/* Global JSON-LD Schema for GEO/SEO */}
-        <script id="schema-org" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
+        <script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": ["Organization", "ProfessionalService"],

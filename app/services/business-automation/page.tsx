@@ -5,17 +5,17 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Business Process Automation, CRM & ERP Development | TBC",
+  title: { absolute: "Business Process Automation, CRM & ERP Development | TBC" },
   description: "Custom CRM, ERP modules, approval workflows, dashboards and integrations with Tally and WhatsApp for growing Indian businesses.",
   alternates: { canonical: "/services/business-automation" },
   openGraph: {
-    title: "Business Process Automation, CRM & ERP Development | TBC",
+    title: { absolute: "Business Process Automation, CRM & ERP Development | TBC" },
     description: "Custom CRM, ERP modules, approval workflows, dashboards and integrations with Tally and WhatsApp for growing Indian businesses.",
     url: "https://turbobytesconsulting.com/services/business-automation",
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Business Process Automation, CRM & ERP Development | TBC",
+    title: { absolute: "Business Process Automation, CRM & ERP Development | TBC" },
     description: "Custom CRM, ERP modules, approval workflows, dashboards and integrations with Tally and WhatsApp for growing Indian businesses.",
   },
 };
@@ -100,7 +100,7 @@ export default function ServicePage() {
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li><Link href="/services" className="hover:text-ink transition-colors">Services</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
-            <li className="text-ink font-bold" aria-current="page">Automate the work that slows your business down</li>
+            <li className="text-ink font-bold" aria-current="page">Business Automation</li>
           </ol>
         </div>
       </nav>
@@ -188,13 +188,13 @@ export default function ServicePage() {
               <Reveal delay={0}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Custom CRM:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Custom CRM</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "leads, accounts, quotations, follow-ups and dealer networks, built around how you sell." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Leads, accounts, quotations, follow-ups and dealer networks, built around how you sell." }} />
                       </li>
                     
                   </ul>
@@ -204,13 +204,13 @@ export default function ServicePage() {
               <Reveal delay={0.06}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">ERP modules:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">ERP modules</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "purchase, inventory, production planning, dispatch and service." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Purchase, inventory, production planning, dispatch and service." }} />
                       </li>
                     
                   </ul>
@@ -220,13 +220,13 @@ export default function ServicePage() {
               <Reveal delay={0.12}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Approval workflows:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Approval workflows</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "purchase, discount, expense and leave approvals with limits and audit trails." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Purchase, discount, expense and leave approvals with limits and audit trails." }} />
                       </li>
                     
                   </ul>
@@ -236,13 +236,13 @@ export default function ServicePage() {
               <Reveal delay={0.18}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Dashboards:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Dashboards</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "live leadership reporting from every system." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Live leadership reporting from every system." }} />
                       </li>
                     
                   </ul>
@@ -252,7 +252,7 @@ export default function ServicePage() {
               <Reveal delay={0.24}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Integrations:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Integrations</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
@@ -268,13 +268,13 @@ export default function ServicePage() {
               <Reveal delay={0.3}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Workflow automation:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Workflow automation</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "n8n, Make or custom code, whichever is simplest to maintain." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "N8n, Make or custom code, whichever is simplest to maintain." }} />
                       </li>
                     
                   </ul>

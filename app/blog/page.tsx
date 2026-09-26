@@ -6,12 +6,12 @@ import Reveal from "@/components/Reveal";
 export const dynamic = 'force-dynamic'; // Always render on request so scheduled blogs appear immediately
 
 export const metadata: Metadata = {
-  title: "Insight & Thinking | Turbo Bytes Consulting Blog",
+  title: { absolute: "Insight & Thinking | Turbo Bytes Consulting Blog" },
   description:
     "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Insight & Thinking | Turbo Bytes Consulting Blog",
+    title: { absolute: "Insight & Thinking | Turbo Bytes Consulting Blog" },
     description:
       "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
     url: "https://turbobytesconsulting.com/blog",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Insight & Thinking | Turbo Bytes Consulting Blog",
+    title: { absolute: "Insight & Thinking | Turbo Bytes Consulting Blog" },
     description:
       "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
   },

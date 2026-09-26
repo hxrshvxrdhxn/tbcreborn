@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Software Development Company in Noida | Turbo Bytes Consulting",
+  title: { absolute: "Software Development Company in Noida | Turbo Bytes Consulting" },
   description: "Custom software, mobile apps and AI applications for Noida businesses, from a team 30 minutes away in Greater Noida.",
   alternates: { canonical: "/software-development-company-noida" }
 };

@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Our Work & Client Outcomes | Turbo Bytes Consulting",
+  title: { absolute: "Our Work & Client Outcomes | Turbo Bytes Consulting" },
   description:
     "Selected client engagements. Names are anonymised where confidentiality is preserved by mandate. Every outcome is measured and verifiable.",
   alternates: {

@@ -8,12 +8,12 @@ import { PullStat } from "@/components/StatBlock";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting",
+  title: { absolute: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting" },
   description:
     "Your organisation's intelligence layer. Train a custom Large Language Model on your company data. Deployed on-premise or in your private cloud. Data never leaves your controlled environment.",
   alternates: { canonical: "/services/custom-llm" },
   openGraph: {
-    title: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting",
+    title: { absolute: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting" },
     description:
       "Your organisation's intelligence layer. Train a custom Large Language Model on your company data. Deployed on-premise or in your private cloud. Data never leaves your controlled environment.",
     url: "https://turbobytesconsulting.com/services/custom-llm",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting",
+    title: { absolute: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting" },
     description:
       "Your organisation's intelligence layer. Train a custom Large Language Model on your company data.",
   },

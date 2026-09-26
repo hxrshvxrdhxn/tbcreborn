@@ -5,17 +5,17 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "AI Application & Chatbot Development in India | Turbo Bytes Consulting",
+  title: { absolute: "AI Application & Chatbot Development in India | Turbo Bytes Consulting" },
   description: "AI chatbots, document processing and assistants trained on your own data. Private deployment options, tested for accuracy before launch.",
   alternates: { canonical: "/services/ai-applications" },
   openGraph: {
-    title: "AI Application & Chatbot Development in India | Turbo Bytes Consulting",
+    title: { absolute: "AI Application & Chatbot Development in India | Turbo Bytes Consulting" },
     description: "AI chatbots, document processing and assistants trained on your own data. Private deployment options, tested for accuracy before launch.",
     url: "https://turbobytesconsulting.com/services/ai-applications",
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "AI Application & Chatbot Development in India | Turbo Bytes Consulting",
+    title: { absolute: "AI Application & Chatbot Development in India | Turbo Bytes Consulting" },
     description: "AI chatbots, document processing and assistants trained on your own data. Private deployment options, tested for accuracy before launch.",
   },
 };
@@ -100,7 +100,7 @@ export default function ServicePage() {
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li><Link href="/services" className="hover:text-ink transition-colors">Services</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
-            <li className="text-ink font-bold" aria-current="page">AI applications that work on your own data</li>
+            <li className="text-ink font-bold" aria-current="page">AI Applications</li>
           </ol>
         </div>
       </nav>
@@ -188,13 +188,13 @@ export default function ServicePage() {
               <Reveal delay={0}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Document chatbots:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Document chatbots</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "answers from your policies, manuals and past work, with sources shown." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Answers from your policies, manuals and past work, with sources shown." }} />
                       </li>
                     
                   </ul>
@@ -204,13 +204,13 @@ export default function ServicePage() {
               <Reveal delay={0.06}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Customer assistants:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Customer assistants</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "website and WhatsApp assistants in English and Hindi, with handover to a person." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Website and WhatsApp assistants in English and Hindi, with handover to a person." }} />
                       </li>
                     
                   </ul>
@@ -220,13 +220,13 @@ export default function ServicePage() {
               <Reveal delay={0.12}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Document processing:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Document processing</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "reading invoices, purchase orders, contracts and forms into your systems." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Reading invoices, purchase orders, contracts and forms into your systems." }} />
                       </li>
                     
                   </ul>
@@ -236,13 +236,13 @@ export default function ServicePage() {
               <Reveal delay={0.18}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Proposal and quotation assistants:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Proposal and quotation assistants</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "drafting technical proposals from a verified library of past work." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Drafting technical proposals from a verified library of past work." }} />
                       </li>
                     
                   </ul>
@@ -252,13 +252,13 @@ export default function ServicePage() {
               <Reveal delay={0.24}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Internal copilots:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Internal copilots</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "assistants inside your CRM, ERP or custom software." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Assistants inside your CRM, ERP or custom software." }} />
                       </li>
                     
                   </ul>
@@ -268,13 +268,13 @@ export default function ServicePage() {
               <Reveal delay={0.3}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Private deployment:</h3>
+                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Private deployment</h3>
                   </div>
                   <ul className="space-y-3 flex-1">
                     
                       <li className="flex items-start gap-3">
                         <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "models in your cloud account or on your own servers. See <Link href=\"/services/custom-llm\" className=\"text-gold hover:underline\">Custom LLM</Link>." }} />
+                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Models in your cloud account or on your own servers. See <Link href=\"/services/custom-llm\" className=\"text-gold hover:underline\">Custom LLM</Link>." }} />
                       </li>
                     
                   </ul>
@@ -308,7 +308,7 @@ export default function ServicePage() {
                 Client Outcomes
               </h2>
               <hr className="gold-rule gold-rule--center" />
-              <p className="mt-4 font-sans text-[16px] text-mid-grey">Also try the <Link href="/ai-knowledge-portal.html" className="text-gold hover:underline">interactive knowledge portal demo</Link>.</p>
+              <p className="mt-4 font-sans text-[16px] text-mid-grey"><Link href="/ai-knowledge-portal.html" className="text-gold hover:underline">Try the knowledge portal demo</Link></p>
             </Reveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

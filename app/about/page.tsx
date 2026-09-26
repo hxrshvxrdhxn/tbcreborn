@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: "About Turbo Bytes Consulting | AI-Native Consultancy",
+  title: { absolute: "About Turbo Bytes Consulting | AI-Native Consultancy" },
   description:
     "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
   alternates: {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "About Turbo Bytes Consulting | AI-Native Consultancy",
+    title: { absolute: "About Turbo Bytes Consulting | AI-Native Consultancy" },
     description:
       "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
     url: "https://turbobytesconsulting.com/about",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "About Turbo Bytes Consulting | AI-Native Consultancy",
+    title: { absolute: "About Turbo Bytes Consulting | AI-Native Consultancy" },
     description:
       "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
   },

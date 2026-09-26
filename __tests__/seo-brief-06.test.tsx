@@ -29,7 +29,7 @@ beforeAll(() => {
 describe('Brief 06 SEO Requirements', () => {
   it('server-renders BlogPosting schema in plain script tag', async () => {
     // Await the async server component
-    const jsx = await BlogPostPage({ params: { slug: 'test-post' } });
+    const jsx = await BlogPostPage({ params: Promise.resolve({ slug: 'test-post' }) });
     const { container } = render(jsx);
     
     // Query for the script tag

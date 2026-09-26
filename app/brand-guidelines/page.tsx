@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Brand Guidelines | Turbo Bytes Consulting",
+  title: { absolute: "Brand Guidelines | Turbo Bytes Consulting" },
   description: "Official visual identity, typography, and color guidelines for Turbo Bytes Consulting.",
 };
 
@@ -106,7 +106,7 @@ export default function BrandGuidelinesPage() {
           <section className="mb-32">
             <div className="flex items-center gap-4 mb-12">
               <span className="gold-rule"></span>
-              <h2 className="section-heading">Color Palette</h2>
+              <h2 className="section-heading">Colour Palette</h2>
             </div>
             
             {/* Primary Colors */}
