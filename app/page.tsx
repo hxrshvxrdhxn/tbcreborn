@@ -443,6 +443,73 @@ export default async function HomePage() {
       {/* ── 9. FREE ANALYSIS LEAD MAGNET ── */}
       <FreeAnalysisForm />
 
+      {/* ── POPULAR GUIDES ── */}
+      <section className="bg-white py-s5 md:py-s7 border-t border-light-grey">
+        <div className="container-tbc">
+          <Reveal>
+            <span className="eyebrow">RESOURCES</span>
+            <hr className="gold-rule mb-6 md:mb-s5" />
+            <h2 className="section-heading mb-8">
+              Guides for business owners
+            </h2>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+            {[
+              {
+                href: "/blog/how-much-does-custom-software-development-cost-in-india-in-2026",
+                title: "What custom software costs in India",
+              },
+              {
+                href: "/blog/mobile-app-development-cost-in-india-what-drives-the-price",
+                title: "Mobile app development cost in India",
+              },
+              {
+                href: "/blog/how-to-build-an-ai-chatbot-trained-on-your-company-documents",
+                title: "Building an AI chatbot on your company documents",
+              },
+              {
+                href: "/blog/custom-crm-vs-zoho-vs-hubspot-for-indian-smes",
+                title: "Custom CRM vs Zoho vs HubSpot",
+              },
+              {
+                href: "/blog/business-process-automation-where-to-start",
+                title: "Where to start with business automation",
+              },
+              {
+                href: "/blog/how-to-choose-a-software-development-company-in-noida-12-questions-to-ask",
+                title: "Choosing a software company in Noida",
+              },
+              {
+                href: "/blog/build-buy-or-extend-choosing-software-for-a-100-person-company",
+                title: "Build, buy or extend",
+              },
+              {
+                href: "/blog/the-real-cost-of-a-bad-software-decision",
+                title: "The real cost of a bad software decision",
+              },
+            ].map((guide, i) => (
+              <Reveal key={guide.href} delay={i * 0.05}>
+                <Link
+                  href={guide.href}
+                  className="group flex items-center justify-between py-3 border-b border-light-grey text-ink hover:text-royal transition-colors duration-150"
+                >
+                  <span className="font-display font-medium text-[16px] group-hover:underline underline-offset-4">
+                    {guide.title}
+                  </span>
+                  <span
+                    className="text-gold text-lg group-hover:translate-x-1 transition-transform duration-150 ml-4 select-none"
+                    aria-hidden="true"
+                  >
+                    &rarr;
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 10. CTA BAND ── */}
       <section className="bg-royal py-s5 md:py-s7 text-center">
         <div className="container-tbc">

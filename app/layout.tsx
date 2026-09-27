@@ -61,6 +61,28 @@ export default function RootLayout({
     <html lang="en-IN" className={`${inter.variable} ${dmSans.variable}`}>
       <head>
         <link rel="alternate" type="application/rss+xml" title="Turbo Bytes Consulting blog" href="/feed.xml" />
+        <script
+          id="google-consent-mode"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                'wait_for_update': 500
+              });
+              if (document.cookie.indexOf('CookieConsent=true') !== -1) {
+                gtag('consent', 'update', {
+                  'analytics_storage': 'granted'
+                });
+              }
+            `,
+          }}
+        />
       </head>
       <body className="bg-ivory text-ink antialiased">
         <SmoothScrollProvider>
@@ -78,47 +100,79 @@ export default function RootLayout({
         <BackToTop />
         <CookieBanner />
 
-        {/* Analytics and Tracking for Email Campaigns */}
+        {/* Analytics and Tracking */}
         <Analytics />
         <SpeedInsights />
         <GoogleTagManager gtmId="GTM-W6MCQF5V" />
-        <GTMTracker />
-
-        {/* Content Protection Script */}
-        <Script id="content-protection" strategy="afterInteractive">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1H5E3Y9YRF"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
           {`
-            document.addEventListener('contextmenu', event => event.preventDefault());
-            document.addEventListener('keydown', event => {
-              if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'C' || event.key === 'J'))) {
-                event.preventDefault();
-              }
-            });
+            gtag('js', new Date());
+            gtag('config', 'G-1H5E3Y9YRF');
           `}
         </Script>
+        <GTMTracker />
 
-        {/* Global JSON-LD Schema for GEO/SEO */}
-        <script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": ["Organization", "ProfessionalService"],
-            "name": "Turbo Bytes Consulting",
-            "url": "https://turbobytesconsulting.com",
-            "logo": "https://turbobytesconsulting.com/og-default.png",
-            "telephone": "+919354784377",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
-              "addressLocality": "Greater Noida",
-              "addressRegion": "Uttar Pradesh",
-              "postalCode": "201310",
-              "addressCountry": "IN"
-            },
-            "sameAs": [
-              "https://x.com/social_TBC",
-              "https://instagram.com/turbobytesconsulting"
-            ]
-          })
-        }} />
+        {/* Global JSON-LD Schema Graph for GEO/SEO */}
+        <script
+          id="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": ["Organization", "ProfessionalService"],
+                  "@id": "https://turbobytesconsulting.com/#organization",
+                  "name": "Turbo Bytes Consulting",
+                  "url": "https://turbobytesconsulting.com",
+                  "logo": "https://turbobytesconsulting.com/og-default.png",
+                  "telephone": "+919354784377",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
+                    "addressLocality": "Greater Noida",
+                    "addressRegion": "Uttar Pradesh",
+                    "postalCode": "201310",
+                    "addressCountry": "IN"
+                  },
+                  "areaServed": ["Noida", "Greater Noida", "Delhi NCR", "India"],
+                  "founder": {
+                    "@id": "https://turbobytesconsulting.com/#harsh"
+                  },
+                  "sameAs": [
+                    "https://x.com/social_TBC",
+                    "https://instagram.com/turbobytesconsulting"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://turbobytesconsulting.com/#website",
+                  "url": "https://turbobytesconsulting.com",
+                  "name": "Turbo Bytes Consulting",
+                  "alternateName": "TBC",
+                  "publisher": {
+                    "@id": "https://turbobytesconsulting.com/#organization"
+                  },
+                  "inLanguage": "en-IN"
+                },
+                {
+                  "@type": "Person",
+                  "@id": "https://turbobytesconsulting.com/#harsh",
+                  "name": "Harshvardhan Chauhan",
+                  "jobTitle": "Founder",
+                  "worksFor": {
+                    "@id": "https://turbobytesconsulting.com/#organization"
+                  },
+                  "url": "https://turbobytesconsulting.com/about"
+                }
+              ]
+            })
+          }}
+        />
         </SmoothScrollProvider>
       </body>
     </html>

@@ -1,12 +1,26 @@
 "use client";
 
+import { useEffect } from "react";
 import Script from "next/script";
 import Link from "next/link";
+import { track } from "@/lib/track";
 
 const CALENDLY_URL =
   "https://calendly.com/harshvardhan-o-1z/tbc-quick-consultation";
 
 export default function BookConsultationClient() {
+  useEffect(() => {
+    const handleMessage = (e: MessageEvent) => {
+      if (e.origin === "https://calendly.com" && e.data?.event === "calendly.event_scheduled") {
+        track("calendly_booked", {
+          page_path: typeof window !== "undefined" ? window.location.pathname : "/book-consultation",
+        });
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
   return (
     <>
       <Script

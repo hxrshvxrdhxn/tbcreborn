@@ -1,13 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { track } from "@/lib/track";
 
 export default function GTMTracker() {
   const pathname = usePathname();
@@ -25,7 +20,7 @@ export default function GTMTracker() {
           if (refUrl.pathname.startsWith("/blog/")) {
             sessionStorage.setItem("referrerPath", refUrl.pathname);
           }
-        } catch (e) {
+        } catch {
           // ignore
         }
       }
@@ -42,14 +37,12 @@ export default function GTMTracker() {
       const href = link.getAttribute("href");
       if (!href) return;
 
-      const dataLayer = (window as any).dataLayer || [];
-
       if (href.startsWith("tel:")) {
-        dataLayer.push({ event: "click_phone" });
+        track("click_phone", { page_path: window.location.pathname });
       } else if (href.includes("wa.me")) {
-        dataLayer.push({ event: "click_whatsapp" });
+        track("click_whatsapp", { page_path: window.location.pathname });
       } else if (href.includes("/book-consultation")) {
-        dataLayer.push({ event: "book_consultation_click" });
+        track("book_consultation_click", { page_path: window.location.pathname });
       }
     };
 

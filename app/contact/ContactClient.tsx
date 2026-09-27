@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Reveal from "@/components/Reveal";
+import { track } from "@/lib/track";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -68,14 +69,11 @@ export default function ContactClient() {
       });
       if (res.ok) {
         setFormState("success");
-        if (typeof window !== "undefined") {
-          const dataLayer = (window as Window & { dataLayer?: Record<string, unknown>[] }).dataLayer || [];
-          dataLayer.push({
-            event: "generate_lead",
-            form_location: window.location.pathname,
-            service: data.service,
-          });
-        }
+        track("generate_lead", {
+          form_location: typeof window !== "undefined" ? window.location.pathname : "",
+          service: data.service,
+          page_path: typeof window !== "undefined" ? window.location.pathname : "",
+        });
         reset();
       } else {
         const body = await res.json().catch(() => ({}));

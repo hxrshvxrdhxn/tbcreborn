@@ -126,22 +126,12 @@ export default async function BlogPostPage({ params }: Props) {
     "datePublished": (post as any).publishedAt || new Date(post.date).toISOString(),
     "dateModified": (post as any).updatedAt ? new Date((post as any).updatedAt).toISOString() : ((post as any).publishedAt || new Date(post.date).toISOString()),
     "author": {
+      "@id": "https://turbobytesconsulting.com/#harsh",
       "@type": "Person",
-      "name": "Harshvardhan Chauhan",
-      "jobTitle": "Founder",
-      "url": "https://turbobytesconsulting.com/about",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Turbo Bytes Consulting"
-      }
+      "name": "Harshvardhan Chauhan"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "Turbo Bytes Consulting",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://turbobytesconsulting.com/og-default.png"
-      }
+      "@id": "https://turbobytesconsulting.com/#organization"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",

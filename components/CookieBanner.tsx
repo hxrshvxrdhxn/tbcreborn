@@ -46,7 +46,18 @@ export default function CookieBanner() {
           padding: "8px 16px"
         }}
         expires={365}
-        onAccept={() => setHasConsent(true)}
+        onAccept={() => {
+          setHasConsent(true);
+          if (typeof window !== "undefined") {
+            const win = window as unknown as { gtag?: (...args: unknown[]) => void };
+            if (typeof win.gtag === "function") {
+              win.gtag("consent", "update", { analytics_storage: "granted" });
+            }
+          }
+        }}
+        onDecline={() => {
+          // stays denied
+        }}
       >
         <span className="text-[14px] text-ivory">
           We use cookies to analyse site traffic and improve your experience. By clicking &quot;Accept All&quot;, you consent to our use of analytics tools.
@@ -54,26 +65,13 @@ export default function CookieBanner() {
       </CookieConsent>
 
       {hasConsent && (
-        <>
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-1H5E3Y9YRF"
-            strategy="afterInteractive"
-          />
-          <Script id="ga4" strategy="afterInteractive">{`
-            window.dataLayer=window.dataLayer||[];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js',new Date());
-            gtag('config','G-1H5E3Y9YRF');
-          `}</Script>
-
-          <Script id="clarity" strategy="afterInteractive">{`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window,document,"clarity","script","wy3ihoq9t1");
-          `}</Script>
-        </>
+        <Script id="clarity" strategy="afterInteractive">{`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window,document,"clarity","script","wy3ihoq9t1");
+        `}</Script>
       )}
     </>
   );
