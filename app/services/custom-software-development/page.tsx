@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "Custom Software Development Company in Noida | Turbo Bytes Consulting" },
@@ -502,6 +503,8 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
+
+      <CallProcess />
 
       {/* ── CTA ── */}
       <SectionInk className="text-center">

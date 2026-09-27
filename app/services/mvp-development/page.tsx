@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "MVP Development for Founders in India | Turbo Bytes Consulting" },
@@ -378,6 +379,8 @@ We build our own products this way. <Link href="/services/slate" className="text
           </div>
         </div>
       </section>
+
+      <CallProcess />
 
       {/* ── CTA ── */}
       <SectionInk className="text-center">

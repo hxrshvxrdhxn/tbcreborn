@@ -55,10 +55,14 @@ export default function CookieBanner() {
                 analytics_storage: "granted",
               });
             }
+            window.dispatchEvent(new Event("cookie-consent-change"));
           }
         }}
         onDecline={() => {
           // stays denied
+          if (typeof window !== "undefined") {
+            window.dispatchEvent(new Event("cookie-consent-change"));
+          }
         }}
       >
         <span className="text-[14px] text-ivory">

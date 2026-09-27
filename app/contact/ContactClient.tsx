@@ -9,30 +9,22 @@ import { track } from "@/lib/track";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  company: z.string().min(1, "Company name is required"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().optional(),
-  service: z.string().min(1, "Please select a service of interest"),
-  budget: z.string().optional(),
+  service: z.string().min(1, "Please select what you need"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-const services = [
-  "Social Media Management",
-  "Web & App Development",
-  "Custom LLM & AI",
-  "Slate Executive Assistant",
-  "AI Training",
-  "Other",
-];
-
-const budgetOptions = [
-  "Under ₹50,000",
-  "₹50,000–₹2,00,000",
-  "₹2,00,000–₹5,00,000",
-  "Above ₹5,00,000",
+const needOptions = [
+  "Custom software",
+  "Mobile app",
+  "AI application",
+  "Business automation",
+  "Website",
+  "MVP for a startup",
+  "Something else",
 ];
 
 export default function ContactClient() {
@@ -170,7 +162,7 @@ export default function ContactClient() {
                     <p className="font-display font-semibold text-[12px] text-mid-grey uppercase tracking-[1.5px] mb-1.5">
                       Address
                     </p>
-                    <address className="font-sans text-[16px] text-ink not-italic leading-relaxed mb-6">
+                    <address className="font-sans text-[16px] text-ink not-italic leading-relaxed mb-2">
                       Kasana Tower, Alfa Marg,
                       <br />
                       Alpha-I Commercial Belt, Block A,
@@ -179,6 +171,9 @@ export default function ContactClient() {
                       <br />
                       Uttar Pradesh, India
                     </address>
+                    <p className="font-sans text-[14px] text-mid-grey mb-6">
+                      Mon–Fri, 8:00–21:00 IST
+                    </p>
                     
                     {/* Mini Map */}
                     <div className="w-full mt-auto flex-1 min-h-[220px] rounded-[6px] overflow-hidden shadow-card border border-light-grey relative group">
@@ -279,28 +274,6 @@ export default function ContactClient() {
                       )}
                     </div>
 
-                    {/* Company */}
-                    <div>
-                      <label htmlFor="company" className={labelBase}>
-                        Company <span className="text-gold">*</span>
-                      </label>
-                      <input
-                        id="company"
-                        type="text"
-                        autoComplete="organization"
-                        placeholder="Your organisation"
-                        aria-required="true"
-                        aria-invalid={!!errors.company}
-                        {...register("company")}
-                        className={`${inputBase} ${errors.company ? inputError : ""}`}
-                      />
-                      {errors.company && (
-                        <p className={errorBase} role="alert">
-                          {errors.company.message}
-                        </p>
-                      )}
-                    </div>
-
                     {/* Email */}
                     <div>
                       <label htmlFor="email" className={labelBase}>
@@ -323,10 +296,10 @@ export default function ContactClient() {
                       )}
                     </div>
 
-                    {/* Phone (optional) */}
+                    {/* Phone or WhatsApp (optional) */}
                     <div>
                       <label htmlFor="phone" className={labelBase}>
-                        Phone <span className="text-mid-grey font-normal">(optional)</span>
+                        Phone or WhatsApp <span className="text-mid-grey font-normal">(optional)</span>
                       </label>
                       <input
                         id="phone"
@@ -338,10 +311,10 @@ export default function ContactClient() {
                       />
                     </div>
 
-                    {/* Service of Interest */}
+                    {/* What do you need? */}
                     <div>
                       <label htmlFor="service" className={labelBase}>
-                        Service of Interest <span className="text-gold">*</span>
+                        What do you need? <span className="text-gold">*</span>
                       </label>
                       <div className="relative">
                         <select
@@ -353,11 +326,11 @@ export default function ContactClient() {
                           defaultValue=""
                         >
                           <option value="" disabled>
-                            Select a service
+                            Select what you need
                           </option>
-                          {services.map((s) => (
-                            <option key={s} value={s}>
-                              {s}
+                          {needOptions.map((option) => (
+                            <option key={option} value={option}>
+                              {option}
                             </option>
                           ))}
                         </select>
@@ -374,40 +347,15 @@ export default function ContactClient() {
                       )}
                     </div>
 
-                    {/* Budget (optional) */}
-                    <div>
-                      <label htmlFor="budget" className={labelBase}>
-                        Budget Range <span className="text-mid-grey font-normal">(optional)</span>
-                      </label>
-                      <div className="relative">
-                        <select
-                          id="budget"
-                          {...register("budget")}
-                          className={`${inputBase} appearance-none`}
-                          defaultValue=""
-                        >
-                          <option value="">Select a range</option>
-                          {budgetOptions.map((b) => (
-                            <option key={b} value={b}>{b}</option>
-                          ))}
-                        </select>
-                        <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
-                          <svg className="w-4 h-4 text-mid-grey" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Message */}
+                    {/* A line or two about it */}
                     <div>
                       <label htmlFor="message" className={labelBase}>
-                        Message <span className="text-gold">*</span>
+                        A line or two about it <span className="text-gold">*</span>
                       </label>
                       <textarea
                         id="message"
-                        rows={5}
-                        placeholder="Tell us about your organisation, your challenges, and what you are hoping to achieve."
+                        rows={3}
+                        placeholder="e.g. We manage orders in Excel and want a system that connects to Tally."
                         aria-required="true"
                         aria-invalid={!!errors.message}
                         {...register("message")}
@@ -464,7 +412,7 @@ export default function ContactClient() {
                           Sending&hellip;
                         </span>
                       ) : (
-                        "Send Message"
+                        "Send message"
                       )}
                     </button>
                   </form>

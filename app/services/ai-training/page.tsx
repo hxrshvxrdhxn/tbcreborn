@@ -4,6 +4,7 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import ServiceFooter from "@/components/ServiceFooter";
 import SectionInk from "@/components/SectionInk";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: "AI Training & Automation Workshops",
@@ -266,6 +267,8 @@ export default function AITrainingPage() {
 
       {/* ── CTA Band ── */}
       <ServiceFooter />
+
+      <CallProcess />
 
       <SectionInk className="text-center" aria-labelledby="ai-training-cta-heading">
         <div className="container-tbc">

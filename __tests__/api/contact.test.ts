@@ -67,10 +67,10 @@ describe("Contact API validation", () => {
     expect(res.status).toBe(400);
   });
 
-  it("fails when company is missing", async () => {
+  it("succeeds when company is omitted", async () => {
     const { company, ...rest } = baseData;
     const req = new NextRequest("http://localhost", { method: "POST", body: JSON.stringify(rest), headers: { "x-forwarded-for": "10.0.0.6", origin: "http://localhost" } });
     const res = await POST(req);
-    expect(res.status).toBe(400);
+    expect(res.status).toBe(200);
   });
 });

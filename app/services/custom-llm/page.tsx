@@ -6,6 +6,7 @@ import ServiceFooter from "@/components/ServiceFooter";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import { PullStat } from "@/components/StatBlock";
 import SectionInk from "@/components/SectionInk";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting" },
@@ -592,6 +593,8 @@ export default function CustomLLMPage() {
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
       <ServiceFooter />
+
+      <CallProcess />
 
       <SectionInk className="text-center">
         <div className="container-tbc">

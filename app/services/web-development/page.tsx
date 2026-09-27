@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import ServiceFooter from "@/components/ServiceFooter";
 import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "Web Application & Website Development Company | TBC" },
@@ -681,6 +682,8 @@ export default function WebDevelopmentPage() {
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
       <ServiceFooter />
+
+      <CallProcess />
 
       <SectionInk className="text-center" aria-labelledby="web-cta-heading">
         <div className="container-tbc">

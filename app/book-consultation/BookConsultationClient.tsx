@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Script from "next/script";
 import Link from "next/link";
 import { track } from "@/lib/track";
+import CallProcess from "@/components/CallProcess";
 
 const CALENDLY_URL =
   "https://calendly.com/harshvardhan-o-1z/tbc-quick-consultation";
@@ -37,9 +38,7 @@ export default function BookConsultationClient() {
             Request a consultation.
           </h1>
           <p className="font-sans text-[17px] text-white/70 leading-relaxed max-w-2xl">
-            We will respond within one business day. No sales process. Just a
-            focused conversation about your organisation and where AI can have
-            the highest impact.
+            A focused 30-minute conversation about your software, automation or AI plans. We respond within one business day.
           </p>
         </div>
       </section>
@@ -48,34 +47,9 @@ export default function BookConsultationClient() {
       <section className="bg-ivory py-16">
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left: What to expect */}
-            <div>
-              <span className="eyebrow">WHAT TO EXPECT</span>
-              <hr className="gold-rule mb-6" />
-              <h2 className="font-display font-bold text-[26px] text-ink leading-[1.25] mb-8">
-                A structured 30-minute conversation.
-              </h2>
-
-              <ul className="space-y-5 mb-10">
-                {[
-                  "A 30-minute structured conversation",
-                  "We will ask about your organisation, your challenges, and your goals",
-                  "We will tell you, honestly, whether and how we can help",
-                  "No commitment required — just clarity",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span
-                      className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-gold flex items-center justify-center"
-                      aria-hidden="true"
-                    >
-                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-                        <path d="M1 4L3.5 6.5L9 1" stroke="#0D1B2A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <span className="font-sans text-[16px] text-ink leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Left: What happens on the call (on mobile: order-2, on desktop: order-1) */}
+            <div className="order-2 lg:order-1">
+              <CallProcess variant="compact" />
 
               <div className="border-t border-light-grey pt-8">
                 <h3 className="font-display font-semibold text-[16px] text-ink mb-5">
@@ -101,8 +75,8 @@ export default function BookConsultationClient() {
               </div>
             </div>
 
-            {/* Right: Calendly embed */}
-            <div>
+            {/* Right: Calendly embed (on mobile: order-1, on desktop: order-2) */}
+            <div className="order-1 lg:order-2">
               <span className="eyebrow">SCHEDULE ONLINE</span>
               <hr className="gold-rule mb-6" />
               <h2 className="font-display font-bold text-[26px] text-ink leading-[1.25] mb-6">
