@@ -1,0 +1,65 @@
+{
+  "slug": "ai-chatbot",
+  "title": "AI Chatbot Development Cost in India",
+  "category": "AI",
+  "seoTitle": "AI Chatbot Development Cost in India (2026)",
+  "seoDescription": "What an AI chatbot trained on your documents costs in India: website and WhatsApp bots, human handover, running costs. Cost bands, timelines and drivers.",
+  "summary": "An AI chatbot trained on your own documents typically costs ₹4 lakh to ₹10 lakh for an internal or website assistant on one document set, ₹10 lakh to ₹25 lakh for a customer-facing bot on website and WhatsApp with handover to staff and system integrations, plus monthly running costs for the model and messaging.",
+  "costBands": [
+    {
+      "tier": "Knowledge assistant",
+      "range": "₹4–10 lakh",
+      "timeline": "4–8 weeks",
+      "includes": "One document set, staff or website users, citations, admin to update documents"
+    },
+    {
+      "tier": "Customer assistant",
+      "range": "₹10–25 lakh",
+      "timeline": "2–4 months",
+      "includes": "Website and WhatsApp, human handover, CRM logging, order or booking lookups"
+    },
+    {
+      "tier": "Agent with actions",
+      "range": "₹15 lakh and above",
+      "timeline": "3–6 months",
+      "includes": "Takes actions in your systems with limits, approvals and audit logs"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Running costs",
+      "value": "Model usage per conversation plus WhatsApp message charges and hosting"
+    },
+    {
+      "label": "Accuracy levers",
+      "value": "Clean source documents, retrieval quality, citations, tested question sets"
+    },
+    {
+      "label": "Languages",
+      "value": "English, Hindi and mixed Hindi-English are practical today"
+    },
+    {
+      "label": "Must-have",
+      "value": "Easy route to a person and conversation logs"
+    }
+  ],
+  "body": "## What moves the price\n\n- Number and messiness of source documents.\n- Channels: website, WhatsApp, internal tools.\n- Integrations that let the bot look up orders, bookings or records.\n- Testing and accuracy targets.\n\nSee [how to build an AI chatbot on your company documents](/blog/how-to-build-an-ai-chatbot-trained-on-your-company-documents) and [what it costs to build an LLM application in India](/blog/what-it-costs-to-build-an-llm-powered-application-in-india).\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Can we try it before a full build?",
+      "a": "Yes. A four-week proof of concept on real questions shows the accuracy you can expect."
+    },
+    {
+      "q": "Will it make things up?",
+      "a": "Grounding in your documents, citations and permission to say \"I don't know\" keep errors rare and visible."
+    }
+  ],
+  "related": [
+    "document-processing-ai",
+    "customer-portal",
+    "school-erp"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}

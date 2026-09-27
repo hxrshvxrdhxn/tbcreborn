@@ -21,6 +21,10 @@ const companyLinks = [
   { href: "/how-to", label: "How-To Guides" },
   { href: "/glossary", label: "Glossary" },
   { href: "/integrations", label: "Integrations" },
+  { href: "/cost", label: "Cost Guides" },
+  { href: "/compare", label: "Comparisons" },
+  { href: "/solutions", label: "Solutions" },
+  { href: "/ai-use-cases", label: "AI Use Cases" },
   { href: "/engagement", label: "Engagement" },
   { href: "/contact", label: "Contact" },
   { href: "/brand-guidelines", label: "Brand Guidelines" },
@@ -205,6 +209,18 @@ export default function Footer() {
             </Link>
             <Link href="/integrations" className="text-white/40 hover:text-white/70 text-xs transition-colors">
               Integrations
+            </Link>
+            <Link href="/cost" className="text-white/40 hover:text-white/70 text-xs transition-colors">
+              Cost Guides
+            </Link>
+            <Link href="/compare" className="text-white/40 hover:text-white/70 text-xs transition-colors">
+              Comparisons
+            </Link>
+            <Link href="/solutions" className="text-white/40 hover:text-white/70 text-xs transition-colors">
+              Solutions
+            </Link>
+            <Link href="/ai-use-cases" className="text-white/40 hover:text-white/70 text-xs transition-colors">
+              AI Use Cases
             </Link>
             <Link href="/terms" className="text-white/40 hover:text-white/70 text-xs transition-colors">
               Terms

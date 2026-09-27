@@ -1,0 +1,65 @@
+{
+  "slug": "customer-portal",
+  "title": "Customer Portal Development Cost in India",
+  "category": "Software",
+  "seoTitle": "Customer Portal Development Cost in India (2026)",
+  "seoDescription": "What a B2B customer portal costs in India: orders, invoices, statements, documents, service requests, ERP integration. Cost bands, timelines and drivers.",
+  "summary": "A customer portal for a B2B business in India typically costs ₹5 lakh to ₹12 lakh for order status, invoices, statements and documents connected to your ERP or Tally, ₹12 lakh to ₹30 lakh with online ordering, payments, service requests and multiple user roles per client, and more for complex multi-system portals.",
+  "costBands": [
+    {
+      "tier": "Self-service portal",
+      "range": "₹5–12 lakh",
+      "timeline": "8–12 weeks",
+      "includes": "Order status, invoice and statement downloads, documents, WhatsApp links"
+    },
+    {
+      "tier": "Ordering and service portal",
+      "range": "₹12–30 lakh",
+      "timeline": "3–5 months",
+      "includes": "Reorders, payments, service requests, client roles, account manager visibility"
+    },
+    {
+      "tier": "Multi-system portal",
+      "range": "₹30 lakh and above",
+      "timeline": "5–8 months",
+      "includes": "Several source systems, custom pricing, analytics for clients"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Biggest cost driver",
+      "value": "Reliable integration with ERP, Tally and document storage"
+    },
+    {
+      "label": "Security",
+      "value": "Each client sees only its own data; OTP or SSO log-in; audit logs"
+    },
+    {
+      "label": "Adoption",
+      "value": "Links sent in every invoice and dispatch message"
+    },
+    {
+      "label": "Payback",
+      "value": "Fewer routine calls and faster collections"
+    }
+  ],
+  "body": "## What moves the price\n\n- Number of source systems and data freshness.\n- Online ordering with client-specific pricing.\n- Payments and reconciliation.\n\nSee [customer portals: self-service without losing the relationship](/blog/customer-portals-self-service-for-clients-without-losing-the-relationship) and [building a client portal into your website](/blog/building-a-client-portal-into-your-website).\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Will clients actually use it?",
+      "a": "Most do for routine needs when links arrive in messages they already get."
+    },
+    {
+      "q": "Can it show live stock and prices?",
+      "a": "Yes, if the ERP data is reliable and the integration refreshes often enough."
+    }
+  ],
+  "related": [
+    "crm-software",
+    "ecommerce-website",
+    "real-estate-crm"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "crm-software",
+  "title": "Custom CRM Software Cost in India",
+  "category": "Sales",
+  "seoTitle": "Custom CRM Development Cost in India (2026)",
+  "seoDescription": "What a custom CRM costs in India compared with Zoho or HubSpot: lead capture, pipeline, WhatsApp, Tally sync. Cost bands, timelines and when custom pays off.",
+  "summary": "A custom CRM in India typically costs ₹4 lakh to ₹10 lakh for a focused sales pipeline with lead capture and WhatsApp, ₹10 lakh to ₹25 lakh for a CRM integrated with accounts, operations and a field app, and more for multi-business platforms. Compare this with per-user subscription costs over three to five years.",
+  "costBands": [
+    {
+      "tier": "Focused sales CRM",
+      "range": "₹4–10 lakh",
+      "timeline": "8–12 weeks",
+      "includes": "Lead capture (website, IndiaMART, WhatsApp), pipeline, follow-ups, quotes, reports"
+    },
+    {
+      "tier": "Integrated CRM",
+      "range": "₹10–25 lakh",
+      "timeline": "3–5 months",
+      "includes": "Tally or ERP sync, field sales app, dealer or distributor management, approvals"
+    },
+    {
+      "tier": "Multi-business platform",
+      "range": "₹25 lakh and above",
+      "timeline": "5–9 months",
+      "includes": "Several business units, complex pricing, partner portals, analytics"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Break-even versus SaaS",
+      "value": "Often reached when 30+ users pay per-seat fees for several years, or when SaaS needs heavy workarounds"
+    },
+    {
+      "label": "India-specific features",
+      "value": "WhatsApp, GST-ready quotes, Tally sync, regional language templates"
+    },
+    {
+      "label": "Adoption driver",
+      "value": "Minimal typing: auto-captured leads and mobile-friendly screens"
+    },
+    {
+      "label": "Ownership",
+      "value": "Code and data owned by you, no per-user fees"
+    }
+  ],
+  "body": "## Custom or subscription\n\nZoho CRM or HubSpot cover most needs quickly. A custom CRM pays off when your sales process is unusual, when it must connect deeply to operations, or when per-user fees become significant. See [custom CRM vs Zoho vs HubSpot](/blog/custom-crm-vs-zoho-vs-hubspot-for-indian-smes).\n\n## What moves the price\n\n- Number of lead sources and assignment rules.\n- Quote and pricing complexity.\n- Integrations with Tally, ERP and WhatsApp.\n- A mobile app for field sales.\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Can we start with Zoho and move to custom later?",
+      "a": "Yes. Many businesses do; keep data clean so it can be migrated."
+    },
+    {
+      "q": "How long until the team uses it properly?",
+      "a": "Usually a month or two with good training and automatic lead capture."
+    }
+  ],
+  "related": [
+    "field-sales-app",
+    "real-estate-crm",
+    "customer-portal"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}

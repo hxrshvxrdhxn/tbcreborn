@@ -1,0 +1,65 @@
+{
+  "slug": "delivery-app",
+  "title": "Delivery App Development Cost in India",
+  "category": "Logistics",
+  "seoTitle": "Delivery App Development Cost in India (2026)",
+  "seoDescription": "What a custom delivery and logistics app costs in India: rider app, dispatch, live tracking, proof of delivery, COD. Cost bands, timelines and drivers.",
+  "summary": "A custom delivery app in India typically costs ₹6 lakh to ₹15 lakh for a rider app with dispatch, tracking and proof of delivery for your own fleet, ₹15 lakh to ₹35 lakh for a customer app, route optimisation and multi-hub operations, and more for on-demand marketplaces.",
+  "costBands": [
+    {
+      "tier": "Own-fleet delivery",
+      "range": "₹6–15 lakh",
+      "timeline": "8–14 weeks",
+      "includes": "Rider app, dispatch panel, live tracking, photo and OTP proof of delivery, COD records"
+    },
+    {
+      "tier": "Multi-hub operations",
+      "range": "₹15–35 lakh",
+      "timeline": "4–6 months",
+      "includes": "Customer app, route optimisation, hub transfers, returns, analytics"
+    },
+    {
+      "tier": "On-demand marketplace",
+      "range": "₹35 lakh and above",
+      "timeline": "6–12 months",
+      "includes": "Three-sided marketplace, payments and payouts, surge rules, support tools"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Biggest cost drivers",
+      "value": "Real-time tracking, route optimisation, number of apps (rider, customer, admin)"
+    },
+    {
+      "label": "Running costs",
+      "value": "Maps API usage, SMS/WhatsApp, hosting; maps can be significant at volume"
+    },
+    {
+      "label": "Must-haves",
+      "value": "Offline tolerance, battery-efficient location, proof of delivery"
+    },
+    {
+      "label": "Integrations",
+      "value": "Order systems, ERP, payment gateway, courier partners"
+    }
+  ],
+  "body": "## What moves the price\n\n- Live tracking and ETA accuracy.\n- Route optimisation across many stops.\n- COD reconciliation and rider payouts.\n\nSee [delivery and logistics apps: features that matter](/blog/delivery-and-logistics-apps-features-that-matter).\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Should we build or use a logistics SaaS?",
+      "a": "For standard last-mile needs, SaaS is faster. Custom suits unusual workflows or deep integration with your operations."
+    },
+    {
+      "q": "How much do maps cost?",
+      "a": "It depends on requests per delivery; design choices such as caching and batching reduce it a lot."
+    }
+  ],
+  "related": [
+    "field-sales-app",
+    "inventory-management-software",
+    "ecommerce-website"
+  ],
+  "service": "/services/mobile-app-development",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}

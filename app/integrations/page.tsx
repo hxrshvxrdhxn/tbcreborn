@@ -4,25 +4,31 @@ import { getHubEntries, IntegrationEntry } from "@/lib/hubs";
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: { absolute: "Business Software Integrations Guide | TBC" },
-  description:
-    "How to connect the tools Indian businesses run on: what syncs, how it works, effort and cost.",
-  alternates: { canonical: "/integrations" },
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  const entries = await getHubEntries<IntegrationEntry>("integrations");
+  const isEmpty = entries.length === 0;
+
+  return {
     title: { absolute: "Business Software Integrations Guide | TBC" },
     description:
       "How to connect the tools Indian businesses run on: what syncs, how it works, effort and cost.",
-    url: "https://turbobytesconsulting.com/integrations",
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image" as const,
-    title: { absolute: "Business Software Integrations Guide | TBC" },
-    description:
-      "How to connect the tools Indian businesses run on: what syncs, how it works, effort and cost.",
-  },
-};
+    alternates: { canonical: "/integrations" },
+    ...(isEmpty ? { robots: { index: false, follow: true } } : {}),
+    openGraph: {
+      title: { absolute: "Business Software Integrations Guide | TBC" },
+      description:
+        "How to connect the tools Indian businesses run on: what syncs, how it works, effort and cost.",
+      url: "https://turbobytesconsulting.com/integrations",
+      images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: { absolute: "Business Software Integrations Guide | TBC" },
+      description:
+        "How to connect the tools Indian businesses run on: what syncs, how it works, effort and cost.",
+    },
+  };
+}
 
 export default async function IntegrationsIndexPage() {
   const entries = await getHubEntries<IntegrationEntry>("integrations");

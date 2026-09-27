@@ -1,0 +1,65 @@
+{
+  "slug": "document-processing-ai",
+  "title": "AI Document Processing Cost in India",
+  "category": "AI",
+  "seoTitle": "AI Document Processing Cost in India (2026)",
+  "seoDescription": "What AI invoice and document processing costs in India: reading invoices, POs and forms into Tally or ERP, validation, review screens. Costs and timelines.",
+  "summary": "AI document processing that reads invoices, purchase orders or forms into your systems typically costs ₹6 lakh to ₹15 lakh for one or two document types posted to Tally or an ERP with a review screen, ₹15 lakh to ₹30 lakh for many document types and sources, plus running costs per document.",
+  "costBands": [
+    {
+      "tier": "One or two document types",
+      "range": "₹6–15 lakh",
+      "timeline": "6–10 weeks",
+      "includes": "Email or upload intake, field extraction, validation rules, review screen, posting to Tally or ERP"
+    },
+    {
+      "tier": "Multi-document platform",
+      "range": "₹15–30 lakh",
+      "timeline": "3–5 months",
+      "includes": "Many formats and suppliers, approvals, exception queues, analytics"
+    },
+    {
+      "tier": "On-premise or private model",
+      "range": "₹20 lakh and above",
+      "timeline": "3–6 months",
+      "includes": "Documents never leave your servers; GPU hardware or private cloud"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Accuracy to expect",
+      "value": "High on typed documents with good scans; lower on handwriting and poor photos"
+    },
+    {
+      "label": "Validation",
+      "value": "GSTIN format, totals and tax arithmetic, supplier master matching"
+    },
+    {
+      "label": "Running costs",
+      "value": "Model usage per page plus hosting"
+    },
+    {
+      "label": "Payback",
+      "value": "Hours of data entry saved and fewer posting errors"
+    }
+  ],
+  "body": "## How it works\n\n1. Documents arrive by email, upload or scanner.\n2. OCR and an AI model extract fields and line items.\n3. Rules validate the data; uncertain items go to a review screen.\n4. Approved data posts to Tally or your ERP.\n\nSee [AI document processing](/blog/ai-document-processing-automating-invoices-purchase-orders-and-contracts) and our glossary entry on [OCR](/glossary/ocr).\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Can it handle supplier invoices in any format?",
+      "a": "Yes, modern AI reads varied layouts, but test on your real invoices to measure accuracy."
+    },
+    {
+      "q": "Does data leave India?",
+      "a": "Choose providers with Indian regions or run models privately if policy requires."
+    }
+  ],
+  "related": [
+    "ai-chatbot",
+    "inventory-management-software",
+    "hrms"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}

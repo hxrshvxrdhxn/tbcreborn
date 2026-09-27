@@ -12,6 +12,13 @@ export interface FAQ {
   a: string;
 }
 
+export interface CostBand {
+  tier: string;
+  range: string;
+  timeline: string;
+  includes: string;
+}
+
 export interface HubEntry {
   slug: string;
   title: string;
@@ -27,6 +34,15 @@ export interface HubEntry {
   indexable: boolean;
   toolA?: string;
   toolB?: string;
+  category?: string;
+  costBands?: CostBand[];
+  optionA?: string;
+  optionB?: string;
+  verdict?: string;
+  industry?: string;
+  industrySlug?: string;
+  accuracy?: string;
+  timeToPilot?: string;
 }
 
 export type GlossaryEntry = HubEntry;
@@ -36,30 +52,60 @@ export interface IntegrationEntry extends HubEntry {
   toolB: string;
 }
 
+export interface CostEntry extends HubEntry {
+  category: string;
+  costBands: CostBand[];
+}
+
+export interface CompareEntry extends HubEntry {
+  category: string;
+  optionA: string;
+  optionB: string;
+  verdict: string;
+}
+
+export interface SolutionEntry extends HubEntry {
+  industry: string;
+  industrySlug: string;
+}
+
+export interface AIUseCaseEntry extends HubEntry {
+  category: string;
+  accuracy: string;
+  timeToPilot: string;
+}
+
 const hubsDirectory = path.join(process.cwd(), "content", "hubs");
 
 /**
  * Returns all raw hub entries for a given hub, regardless of publishedAt date.
+ * Supports both flat files (content/hubs/<hub>/<slug>.json) and nested directories (content/hubs/<hub>/<subfolder>/<slug>.json).
  */
 export async function getAllHubEntries<T extends HubEntry = HubEntry>(hub: string): Promise<T[]> {
   const dir = path.join(hubsDirectory, hub);
   if (!fs.existsSync(dir)) return [];
 
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".json"));
-  const entries: T[] = [];
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    try {
-      const raw = fs.readFileSync(filePath, "utf-8");
-      const parsed = JSON.parse(raw) as T;
-      entries.push(parsed);
-    } catch (err) {
-      console.error(`Error reading hub entry ${filePath}:`, err);
+  function readDirRecursive(currentDir: string): T[] {
+    const list: T[] = [];
+    const items = fs.readdirSync(currentDir, { withFileTypes: true });
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item.name);
+      if (item.isDirectory()) {
+        list.push(...readDirRecursive(fullPath));
+      } else if (item.isFile() && item.name.endsWith(".json")) {
+        try {
+          const raw = fs.readFileSync(fullPath, "utf-8");
+          const parsed = JSON.parse(raw) as T;
+          list.push(parsed);
+        } catch (err) {
+          console.error(`Error reading hub entry ${fullPath}:`, err);
+        }
+      }
     }
+    return list;
   }
 
-  return entries;
+  return readDirRecursive(dir);
 }
 
 /**
@@ -78,21 +124,31 @@ export async function getHubEntry<T extends HubEntry = HubEntry>(
   hub: string,
   slug: string
 ): Promise<T | null> {
-  const filePath = path.join(hubsDirectory, hub, `${slug}.json`);
-  if (!fs.existsSync(filePath)) return null;
-
-  try {
-    const raw = fs.readFileSync(filePath, "utf-8");
-    const parsed = JSON.parse(raw) as T;
-    const now = new Date();
-    if (new Date(parsed.publishedAt) > now) {
+  const directPath = path.join(hubsDirectory, hub, `${slug}.json`);
+  if (fs.existsSync(directPath)) {
+    try {
+      const raw = fs.readFileSync(directPath, "utf-8");
+      const parsed = JSON.parse(raw) as T;
+      const now = new Date();
+      if (new Date(parsed.publishedAt) > now) {
+        return null;
+      }
+      return parsed;
+    } catch (err) {
+      console.error(`Error reading hub entry ${directPath}:`, err);
       return null;
     }
-    return parsed;
-  } catch (err) {
-    console.error(`Error reading hub entry ${filePath}:`, err);
+  }
+
+  // Fallback to recursive search if not flat
+  const all = await getAllHubEntries<T>(hub);
+  const found = all.find((entry) => entry.slug === slug);
+  if (!found) return null;
+  const now = new Date();
+  if (new Date(found.publishedAt) > now) {
     return null;
   }
+  return found;
 }
 
 /**

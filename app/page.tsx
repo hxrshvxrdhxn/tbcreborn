@@ -28,31 +28,6 @@ export const metadata: Metadata = {
   },
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Turbo Bytes Consulting",
-  alternateName: "TBC",
-  description: "AI-Native Management & Technology Consultancy",
-  url: "https://turbobytesconsulting.com",
-  telephone: "+91-93547-84377",
-  email: "info@turbobytesconsulting.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
-    addressLocality: "Greater Noida",
-    addressRegion: "Uttar Pradesh",
-    addressCountry: "IN",
-  },
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Turbo Bytes Consulting",
-  url: "https://turbobytesconsulting.com",
-};
-
 const faqs = [
   {
     question: "What exactly does an AI-native consultancy do?",
@@ -186,7 +161,7 @@ export default async function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, websiteSchema, faqSchema]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* ── 1. HERO ── */}

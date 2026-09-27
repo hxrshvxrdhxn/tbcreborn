@@ -1,0 +1,65 @@
+{
+  "slug": "hrms",
+  "title": "HRMS Software Cost in India",
+  "category": "HR",
+  "seoTitle": "HRMS and Payroll Software Cost in India (2026)",
+  "seoDescription": "What custom HRMS and payroll software costs in India: attendance, leave, payroll with PF/ESI/TDS, employee app. Cost bands, timelines and when to build.",
+  "summary": "Custom HRMS software in India typically costs ₹5 lakh to ₹12 lakh for attendance, leave and employee records, ₹12 lakh to ₹25 lakh with payroll including PF, ESI and TDS, shift rosters and an employee app, and more for multi-entity groups. Many businesses are better served by payroll SaaS unless their rules are unusual.",
+  "costBands": [
+    {
+      "tier": "Core HR",
+      "range": "₹5–12 lakh",
+      "timeline": "8–12 weeks",
+      "includes": "Employee records, attendance (biometric or app), leave, approvals, documents"
+    },
+    {
+      "tier": "HR plus payroll",
+      "range": "₹12–25 lakh",
+      "timeline": "3–5 months",
+      "includes": "Payroll with PF, ESI, PT, TDS, payslips, shifts, employee app"
+    },
+    {
+      "tier": "Multi-entity group",
+      "range": "₹25 lakh and above",
+      "timeline": "5–9 months",
+      "includes": "Several companies and states, complex allowances, analytics"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Build only if",
+      "value": "Shift patterns, contractor workforces or approvals do not fit HR SaaS"
+    },
+    {
+      "label": "Compliance",
+      "value": "Statutory rules change; payroll logic needs regular updates"
+    },
+    {
+      "label": "Integrations",
+      "value": "Biometric devices, accounting, bank payout files"
+    },
+    {
+      "label": "Data protection",
+      "value": "Salary and personal data need strict access control"
+    }
+  ],
+  "body": "## Build or subscribe\n\nIndian payroll SaaS handles statutory compliance well for standard set-ups. Custom HRMS makes sense for large blue-collar or contract workforces, complex shifts, or deep integration with operations. See [HRMS: when a custom build makes sense](/blog/hrms-when-a-custom-build-makes-sense).\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Can attendance come from phones?",
+      "a": "Yes, with geofenced check-in and selfie verification, alongside or instead of biometric devices."
+    },
+    {
+      "q": "Who keeps payroll rules updated?",
+      "a": "Agree this in the support contract; statutory changes need timely updates."
+    }
+  ],
+  "related": [
+    "school-erp",
+    "document-processing-ai",
+    "field-sales-app"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}
