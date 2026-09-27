@@ -1,0 +1,56 @@
+{
+  "slug": "google-workspace-vs-microsoft-365",
+  "title": "Google Workspace vs Microsoft 365 for Indian SMEs",
+  "category": "Productivity",
+  "optionA": "Google Workspace",
+  "optionB": "Microsoft 365",
+  "verdict": "Choose Microsoft 365 if finance and operations depend on advanced Excel and Windows management. Choose Google Workspace if your team is mobile, browser-based and values simple collaboration.",
+  "seoTitle": "Google Workspace vs Microsoft 365 for Indian SMEs",
+  "seoDescription": "Google Workspace or Microsoft 365 for an Indian SME: email, documents, Excel vs Sheets, security, admin, integrations and total cost compared.",
+  "summary": "Google Workspace is browser-first, simple to administer and strong for real-time collaboration. Microsoft 365 centres on the desktop Office apps, especially Excel, with Teams and stronger device management on higher plans. Teams that live in Excel and Windows usually prefer Microsoft 365; teams that collaborate in the browser usually prefer Google Workspace.",
+  "dataPoints": [
+    {
+      "label": "Email and domain",
+      "value": "Both provide business email on your domain with spam and phishing protection"
+    },
+    {
+      "label": "Spreadsheets",
+      "value": "Excel is stronger for heavy models and macros; Sheets for live collaboration and simple automation"
+    },
+    {
+      "label": "Meetings",
+      "value": "Google Meet versus Microsoft Teams"
+    },
+    {
+      "label": "Security",
+      "value": "Both support two-factor authentication, device policies and data loss prevention on higher tiers"
+    },
+    {
+      "label": "Integrations",
+      "value": "Both have strong APIs; many Indian SME tools integrate with both"
+    },
+    {
+      "label": "AI features",
+      "value": "Both bundle AI assistants on certain plans; check what your plan includes"
+    }
+  ],
+  "body": "## What to check before deciding\n\n- Where your critical spreadsheets live and how complex they are.\n- Whether staff mostly use phones and browsers or Windows laptops.\n- Which one your other tools, such as CRM and accounting, integrate with best.\n\n## Security either way\n\nTurn on two-factor authentication for every account and keep at least two administrators. See [two-factor authentication](/glossary/two-factor-authentication).\n\nPrices and plan features change often; check the vendors' current Indian pricing before deciding.",
+  "faqs": [
+    {
+      "q": "Can we use both?",
+      "a": "Technically yes, but it splits files and identities; most SMEs are better with one."
+    },
+    {
+      "q": "How hard is switching?",
+      "a": "Email and files migrate with standard tools; plan a weekend cut-over and train staff."
+    }
+  ],
+  "related": [
+    "tally-vs-zoho-books",
+    "supabase-vs-firebase",
+    "postgresql-vs-mysql"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-20T03:30:00.000Z",
+  "indexable": true
+}

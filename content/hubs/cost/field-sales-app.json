@@ -1,0 +1,65 @@
+{
+  "slug": "field-sales-app",
+  "title": "Field Sales App Cost in India",
+  "category": "Sales",
+  "seoTitle": "Field Sales App Development Cost in India (2026)",
+  "seoDescription": "What a custom field sales app costs in India: beat plans, visits, orders, GPS, offline mode, CRM and Tally sync. Cost bands, timelines and cost drivers.",
+  "summary": "A custom field sales app in India typically costs ₹5 lakh to ₹12 lakh for visits, orders and attendance with offline support, ₹12 lakh to ₹25 lakh with beat planning, schemes, distributor management and ERP integration, and more for large sales forces with analytics and incentives.",
+  "costBands": [
+    {
+      "tier": "Core field app",
+      "range": "₹5–12 lakh",
+      "timeline": "8–12 weeks",
+      "includes": "Attendance, visits with photos and GPS, order booking, offline mode, manager dashboard"
+    },
+    {
+      "tier": "Sales force automation",
+      "range": "₹12–25 lakh",
+      "timeline": "3–5 months",
+      "includes": "Beat plans, schemes and discounts, distributor stock, collections, Tally or ERP sync"
+    },
+    {
+      "tier": "Enterprise SFA",
+      "range": "₹25 lakh and above",
+      "timeline": "5–9 months",
+      "includes": "Large teams, incentives, retail audits, advanced analytics"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Must-have for India",
+      "value": "Offline mode for poor connectivity, Hindi and regional language, low-end Android support"
+    },
+    {
+      "label": "Biggest cost drivers",
+      "value": "Scheme and pricing logic, offline sync, integrations"
+    },
+    {
+      "label": "Platform",
+      "value": "Usually React Native or Flutter, or a PWA for simpler needs"
+    },
+    {
+      "label": "Adoption",
+      "value": "Fast data entry and features that help salespeople, not just monitor them"
+    }
+  ],
+  "body": "## What moves the price\n\n- Offline-first design with reliable sync.\n- Pricing, schemes and credit checks at order time.\n- Integration with distributor and accounts systems.\n\nSee [building a field sales app for your team](/blog/building-a-field-sales-app-for-your-team) and [offline-first apps for field teams](/blog/offline-first-apps-for-field-teams-in-india).\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Android only, or iPhone too?",
+      "a": "Most Indian field teams use Android; cross-platform frameworks make iPhone support inexpensive if needed."
+    },
+    {
+      "q": "Can GPS tracking be limited to working hours?",
+      "a": "Yes, and it should be, with clear policy and consent."
+    }
+  ],
+  "related": [
+    "crm-software",
+    "inventory-management-software",
+    "delivery-app"
+  ],
+  "service": "/services/mobile-app-development",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}

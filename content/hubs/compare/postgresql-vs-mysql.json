@@ -1,0 +1,56 @@
+{
+  "slug": "postgresql-vs-mysql",
+  "title": "PostgreSQL vs MySQL for Business Applications",
+  "category": "Development",
+  "optionA": "PostgreSQL",
+  "optionB": "MySQL",
+  "verdict": "Use PostgreSQL for new business applications with reporting and complex data. MySQL remains a good choice when a platform expects it, such as WordPress, or your team knows it well.",
+  "seoTitle": "PostgreSQL vs MySQL for Business Applications",
+  "seoDescription": "PostgreSQL or MySQL for a business application: features, reporting, JSON, hosting options, performance and what to ask your developer.",
+  "summary": "PostgreSQL and MySQL are both reliable, free, widely hosted relational databases. PostgreSQL offers richer data types, stronger standards compliance and advanced features for reporting and JSON data. MySQL is simpler, very widely supported by shared hosting and common in PHP applications such as WordPress. For most new business applications, PostgreSQL is a sound default.",
+  "dataPoints": [
+    {
+      "label": "Licence",
+      "value": "Both free and open source (PostgreSQL licence; MySQL community edition under GPL)"
+    },
+    {
+      "label": "Strengths",
+      "value": "PostgreSQL: advanced queries, JSONB, extensions. MySQL: simplicity, ubiquity in PHP hosting"
+    },
+    {
+      "label": "Managed hosting",
+      "value": "Both on AWS, Azure and Google Cloud; PostgreSQL also via Supabase and Neon"
+    },
+    {
+      "label": "Reporting",
+      "value": "PostgreSQL window functions and CTEs suit analytics well"
+    },
+    {
+      "label": "Performance",
+      "value": "Both perform well when designed and indexed properly"
+    },
+    {
+      "label": "Ecosystem",
+      "value": "WordPress and many PHP apps use MySQL; many modern frameworks default to PostgreSQL"
+    }
+  ],
+  "body": "## What matters more than the choice\n\n- A clear data model and indexes.\n- Automated backups and tested restores.\n- Access control and encryption.\n\nSee our glossary entries on [databases](/glossary/database) and [data migration](/glossary/data-migration).\n\nPrices and plan features change often; check the vendors' current Indian pricing before deciding.",
+  "faqs": [
+    {
+      "q": "Can we switch later?",
+      "a": "Yes, with a planned migration, though it is easier to choose well at the start."
+    },
+    {
+      "q": "Does the database choice affect cost?",
+      "a": "Rarely much; hosting size and usage drive cost more than the engine."
+    }
+  ],
+  "related": [
+    "supabase-vs-firebase",
+    "vercel-vs-aws",
+    "odoo-vs-erpnext"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-20T03:30:00.000Z",
+  "indexable": true
+}

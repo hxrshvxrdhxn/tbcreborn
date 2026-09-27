@@ -4,25 +4,31 @@ import { getHubEntries, HubEntry } from "@/lib/hubs";
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: { absolute: "Software and AI Glossary for Business Owners | TBC" },
-  description:
-    "Plain-English definitions of software and AI terms for business owners.",
-  alternates: { canonical: "/glossary" },
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  const entries = await getHubEntries("glossary");
+  const isEmpty = entries.length === 0;
+
+  return {
     title: { absolute: "Software and AI Glossary for Business Owners | TBC" },
     description:
       "Plain-English definitions of software and AI terms for business owners.",
-    url: "https://turbobytesconsulting.com/glossary",
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image" as const,
-    title: { absolute: "Software and AI Glossary for Business Owners | TBC" },
-    description:
-      "Plain-English definitions of software and AI terms for business owners.",
-  },
-};
+    alternates: { canonical: "/glossary" },
+    ...(isEmpty ? { robots: { index: false, follow: true } } : {}),
+    openGraph: {
+      title: { absolute: "Software and AI Glossary for Business Owners | TBC" },
+      description:
+        "Plain-English definitions of software and AI terms for business owners.",
+      url: "https://turbobytesconsulting.com/glossary",
+      images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: { absolute: "Software and AI Glossary for Business Owners | TBC" },
+      description:
+        "Plain-English definitions of software and AI terms for business owners.",
+    },
+  };
+}
 
 export default async function GlossaryIndexPage() {
   const entries = await getHubEntries("glossary");

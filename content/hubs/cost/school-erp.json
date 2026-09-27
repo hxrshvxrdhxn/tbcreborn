@@ -1,0 +1,65 @@
+{
+  "slug": "school-erp",
+  "title": "School ERP Software Cost in India",
+  "category": "Education",
+  "seoTitle": "School ERP Software Cost in India (2026 Guide)",
+  "seoDescription": "What a custom school or college ERP costs in India: admissions, fees, attendance, exams, parent app. Cost bands, timelines, running costs and drivers.",
+  "summary": "A custom school ERP in India typically costs ₹5 lakh to ₹12 lakh for one school covering admissions, fees, attendance and exams, ₹12 lakh to ₹30 lakh for a group of schools or a college with a parent and student app, and more for universities with complex academic rules.",
+  "costBands": [
+    {
+      "tier": "Single school",
+      "range": "₹5–12 lakh",
+      "timeline": "10–14 weeks",
+      "includes": "Admissions, fees with online payment, attendance, timetable, exams and report cards"
+    },
+    {
+      "tier": "School group or college",
+      "range": "₹12–30 lakh",
+      "timeline": "4–6 months",
+      "includes": "Multiple campuses, parent and student app, transport, library, dashboards"
+    },
+    {
+      "tier": "University",
+      "range": "₹30 lakh and above",
+      "timeline": "6–12 months, phased",
+      "includes": "Credit systems, electives, research, hostels, accreditation reporting"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Biggest cost drivers",
+      "value": "Exam and grading rules, number of campuses, parent app, payment and SMS/WhatsApp integrations"
+    },
+    {
+      "label": "Peak load",
+      "value": "Admissions and results days need capacity planning"
+    },
+    {
+      "label": "Data",
+      "value": "Student data is personal data of minors; strict access control and parental consent handling"
+    },
+    {
+      "label": "Common add-on",
+      "value": "AI assistant for admission queries on website and WhatsApp"
+    }
+  ],
+  "body": "## What moves the price\n\n- Fee structures with concessions, instalments and late fees.\n- Exam patterns and report card formats per board.\n- Parent communication: app, WhatsApp, SMS.\n- Migration of existing student records.\n\nSee [software for schools, colleges and training institutes](/blog/software-for-schools-colleges-and-training-institutes) and [AI chatbots for universities](/blog/ai-chatbots-for-universities-and-colleges-admissions-queries-and-student-support).\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Is a school ERP better as SaaS?",
+      "a": "For standard needs, SaaS is quicker and cheaper. Custom suits groups with specific processes or integration needs."
+    },
+    {
+      "q": "Can parents pay fees by UPI?",
+      "a": "Yes, through a payment gateway such as Razorpay, with automatic receipts and reconciliation."
+    }
+  ],
+  "related": [
+    "ai-chatbot",
+    "customer-portal",
+    "hrms"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}

@@ -28,8 +28,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/about`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/work`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
-    { url: `${BASE}/glossary`, priority: 0.8, changeFrequency: "weekly" as const },
-    { url: `${BASE}/integrations`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE}/engagement`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/book-consultation`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE}/contact`, priority: 0.6, changeFrequency: "yearly" as const },
@@ -57,33 +55,55 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const guides = await prisma.howToGuide.findMany({ select: { slug: true, updatedAt: true } });
   
-  const guideRoutes = guides.map(g => ({
+  const guideRoutes = guides.map((g) => ({
     url: `${BASE}/how-to/${g.slug}`,
     lastModified: g.updatedAt ? new Date(g.updatedAt) : new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
-  // Hub entries (visible and indexable)
-  const glossaryEntries = await getHubEntries("glossary");
-  const glossaryRoutes = glossaryEntries
-    .filter((e) => e.indexable)
-    .map((e) => ({
-      url: `${BASE}/glossary/${e.slug}`,
-      lastModified: new Date(e.publishedAt),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    }));
+  // Hub entries (visible and indexable across all 6 content hubs)
+  const hubs = ["glossary", "integrations", "cost", "compare", "solutions", "ai-use-cases"] as const;
+  const hubRoutes: MetadataRoute.Sitemap = [];
 
-  const integrationEntries = await getHubEntries("integrations");
-  const integrationRoutes = integrationEntries
-    .filter((e) => e.indexable)
-    .map((e) => ({
-      url: `${BASE}/integrations/${e.slug}`,
-      lastModified: new Date(e.publishedAt),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    }));
+  for (const hub of hubs) {
+    const entries = await getHubEntries(hub);
+    if (entries.length > 0) {
+      hubRoutes.push({
+        url: `${BASE}/${hub}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+      });
 
-  return [...staticRoutes, ...blogRoutes, ...guideRoutes, ...glossaryRoutes, ...integrationRoutes];
+      if (hub === "solutions") {
+        const industrySlugs = Array.from(
+          new Set(entries.map((e) => e.industrySlug).filter((s): s is string => Boolean(s)))
+        ).sort();
+        for (const indSlug of industrySlugs) {
+          hubRoutes.push({
+            url: `${BASE}/solutions/${indSlug}`,
+            lastModified: new Date(),
+            changeFrequency: "weekly" as const,
+            priority: 0.8,
+          });
+        }
+      }
+    }
+
+    for (const e of entries) {
+      if (!e.indexable) continue;
+      const detailUrl = hub === "solutions" && e.industrySlug
+        ? `${BASE}/solutions/${e.industrySlug}/${e.slug}`
+        : `${BASE}/${hub}/${e.slug}`;
+      hubRoutes.push({
+        url: detailUrl,
+        lastModified: new Date(e.publishedAt),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      });
+    }
+  }
+
+  return [...staticRoutes, ...blogRoutes, ...guideRoutes, ...hubRoutes];
 }

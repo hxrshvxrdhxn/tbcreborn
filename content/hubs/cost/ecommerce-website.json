@@ -1,0 +1,65 @@
+{
+  "slug": "ecommerce-website",
+  "title": "E-commerce Website Cost in India",
+  "category": "Retail",
+  "seoTitle": "E-commerce Website Development Cost in India (2026)",
+  "seoDescription": "What an e-commerce website costs in India: Shopify vs custom, payments, GST invoices, Tally and courier integration. Cost bands, timelines and drivers.",
+  "summary": "An e-commerce website in India typically costs ₹1 lakh to ₹4 lakh on Shopify or WooCommerce with a customised theme, ₹4 lakh to ₹12 lakh with custom design and integrations such as Tally, couriers and WhatsApp, and ₹12 lakh or more for a fully custom store or B2B ordering portal.",
+  "costBands": [
+    {
+      "tier": "Platform store",
+      "range": "₹1–4 lakh",
+      "timeline": "3–6 weeks",
+      "includes": "Shopify or WooCommerce, customised theme, payments, shipping, basic SEO"
+    },
+    {
+      "tier": "Integrated D2C store",
+      "range": "₹4–12 lakh",
+      "timeline": "6–12 weeks",
+      "includes": "Custom design, Tally and courier integration, WhatsApp updates, analytics"
+    },
+    {
+      "tier": "Custom or B2B commerce",
+      "range": "₹12 lakh and above",
+      "timeline": "3–6 months",
+      "includes": "Dealer pricing, credit limits, bulk ordering, ERP integration"
+    }
+  ],
+  "dataPoints": [
+    {
+      "label": "Running costs",
+      "value": "Platform subscription, apps, payment gateway fees (around 2% on most methods), hosting"
+    },
+    {
+      "label": "Biggest cost drivers",
+      "value": "Custom design, integrations, catalogue size, B2B pricing rules"
+    },
+    {
+      "label": "Must-haves",
+      "value": "GST-correct invoices, COD handling, fast mobile pages"
+    },
+    {
+      "label": "Growth add-ons",
+      "value": "WhatsApp cart recovery, reviews, marketplace sync"
+    }
+  ],
+  "body": "## Platform or custom\n\nShopify and WooCommerce suit most D2C brands. Custom commerce makes sense for B2B ordering with dealer-specific pricing, credit limits and ERP integration. See [software for retail and D2C brands](/blog/software-for-retail-and-d2c-brands) and our [Tally and Shopify integration guide](/integrations/tally-shopify).\n\nThese ranges are indicative for 2026, based on the effort such projects typically take. Your quote depends on your scope, integrations and quality requirements; a short discovery phase turns this into a firm number.",
+  "faqs": [
+    {
+      "q": "Is Shopify good for Indian stores?",
+      "a": "Yes, with Indian payment gateways, COD and GST set-up; watch app subscription costs."
+    },
+    {
+      "q": "Do we need an app as well?",
+      "a": "Usually not at first; a fast mobile website converts well. Add an app when repeat customers justify it."
+    }
+  ],
+  "related": [
+    "inventory-management-software",
+    "delivery-app",
+    "customer-portal"
+  ],
+  "service": "/services/web-development",
+  "publishedAt": "2026-10-13T03:30:00.000Z",
+  "indexable": true
+}

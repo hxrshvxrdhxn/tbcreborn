@@ -77,8 +77,7 @@ export default function RootLayout({
               });
               if (document.cookie.indexOf('CookieConsent=true') !== -1) {
                 gtag('consent', 'update', {
-                  'analytics_storage': 'granted',
-                  'ad_storage': 'granted'
+                  'analytics_storage': 'granted'
                 });
               }
             `,
@@ -129,9 +128,11 @@ export default function RootLayout({
                   "@type": ["Organization", "ProfessionalService"],
                   "@id": "https://turbobytesconsulting.com/#organization",
                   "name": "Turbo Bytes Consulting",
+                  "description": "Software development, AI applications and business automation for businesses in Noida, Greater Noida and Delhi NCR",
                   "url": "https://turbobytesconsulting.com",
                   "logo": "https://turbobytesconsulting.com/og-default.png",
                   "telephone": "+919354784377",
+                  "email": "info@turbobytesconsulting.com",
                   "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",

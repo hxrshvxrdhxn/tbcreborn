@@ -39,6 +39,14 @@ export function validateHubEntry(
 
   if (hub === "integrations") {
     requiredFields.push("toolA", "toolB");
+  } else if (hub === "cost") {
+    requiredFields.push("category", "costBands");
+  } else if (hub === "compare") {
+    requiredFields.push("category", "optionA", "optionB", "verdict");
+  } else if (hub === "solutions") {
+    requiredFields.push("industry", "industrySlug");
+  } else if (hub === "ai-use-cases") {
+    requiredFields.push("category", "accuracy", "timeToPilot");
   }
 
   // 1. Lacks a field
@@ -50,6 +58,31 @@ export function validateHubEntry(
         field,
         message: `Missing required field: ${field}`,
       });
+    }
+  }
+
+  // Cost bands specific validation
+  if (hub === "cost" && Array.isArray(entry.costBands)) {
+    if (entry.costBands.length === 0) {
+      errors.push({
+        hub,
+        slug,
+        field: "costBands",
+        message: "Expected at least 1 costBand in costBands",
+      });
+    }
+    for (let i = 0; i < entry.costBands.length; i++) {
+      const band = entry.costBands[i];
+      for (const k of ["tier", "range", "timeline", "includes"]) {
+        if (!band || !band[k]) {
+          errors.push({
+            hub,
+            slug,
+            field: `costBands[${i}].${k}`,
+            message: `Missing costBand property: ${k}`,
+          });
+        }
+      }
     }
   }
 
@@ -138,10 +171,25 @@ export function validateHubEntry(
   return errors;
 }
 
+function getJsonFilesRecursive(dir: string): { file: string; fullPath: string }[] {
+  const results: { file: string; fullPath: string }[] = [];
+  if (!fs.existsSync(dir)) return results;
+  const items = fs.readdirSync(dir, { withFileTypes: true });
+  for (const item of items) {
+    const full = path.join(dir, item.name);
+    if (item.isDirectory()) {
+      results.push(...getJsonFilesRecursive(full));
+    } else if (item.isFile() && item.name.endsWith(".json")) {
+      results.push({ file: item.name, fullPath: full });
+    }
+  }
+  return results;
+}
+
 describe("Hubs Quality Gate — Files on Disk", () => {
   const hubsDir = path.join(process.cwd(), "content", "hubs");
 
-  it("validates that all content hub JSON files satisfy the quality gate rules", () => {
+  it("validates that all content hub JSON files satisfy the quality gate rules across all hubs", () => {
     expect(fs.existsSync(hubsDir)).toBe(true);
 
     const hubDirs = fs
@@ -151,19 +199,22 @@ describe("Hubs Quality Gate — Files on Disk", () => {
 
     expect(hubDirs).toContain("glossary");
     expect(hubDirs).toContain("integrations");
+    expect(hubDirs).toContain("cost");
+    expect(hubDirs).toContain("compare");
+    expect(hubDirs).toContain("solutions");
+    expect(hubDirs).toContain("ai-use-cases");
 
     const allHubEntriesMap: Record<string, string[]> = {};
     const entriesByHub: Record<string, { file: string; data: any }[]> = {};
 
     for (const hub of hubDirs) {
       const dirPath = path.join(hubsDir, hub);
-      const files = fs.readdirSync(dirPath).filter((f) => f.endsWith(".json"));
+      const jsonFiles = getJsonFilesRecursive(dirPath);
       allHubEntriesMap[hub] = [];
       entriesByHub[hub] = [];
 
-      for (const file of files) {
-        const filePath = path.join(dirPath, file);
-        const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      for (const { file, fullPath } of jsonFiles) {
+        const data = JSON.parse(fs.readFileSync(fullPath, "utf-8"));
         entriesByHub[hub].push({ file, data });
         allHubEntriesMap[hub].push(data.slug);
       }
@@ -228,6 +279,35 @@ describe("Hubs Quality Gate — Rule Failure Validations", () => {
     const errors = validateHubEntry(invalidIntegration, "integrations");
     expect(errors.some((e) => e.field === "toolA")).toBe(true);
     expect(errors.some((e) => e.field === "toolB")).toBe(true);
+  });
+
+  it("fails if a cost entry lacks category or costBands", () => {
+    const invalidCost = { ...validBaseEntry };
+    const errors = validateHubEntry(invalidCost, "cost");
+    expect(errors.some((e) => e.field === "category")).toBe(true);
+    expect(errors.some((e) => e.field === "costBands")).toBe(true);
+  });
+
+  it("fails if a compare entry lacks optionA, optionB, or verdict", () => {
+    const invalidCompare = { ...validBaseEntry, category: "ERP" };
+    const errors = validateHubEntry(invalidCompare, "compare");
+    expect(errors.some((e) => e.field === "optionA")).toBe(true);
+    expect(errors.some((e) => e.field === "optionB")).toBe(true);
+    expect(errors.some((e) => e.field === "verdict")).toBe(true);
+  });
+
+  it("fails if a solution entry lacks industry or industrySlug", () => {
+    const invalidSolution = { ...validBaseEntry };
+    const errors = validateHubEntry(invalidSolution, "solutions");
+    expect(errors.some((e) => e.field === "industry")).toBe(true);
+    expect(errors.some((e) => e.field === "industrySlug")).toBe(true);
+  });
+
+  it("fails if an ai-use-cases entry lacks accuracy or timeToPilot", () => {
+    const invalidAI = { ...validBaseEntry, category: "NLP" };
+    const errors = validateHubEntry(invalidAI, "ai-use-cases");
+    expect(errors.some((e) => e.field === "accuracy")).toBe(true);
+    expect(errors.some((e) => e.field === "timeToPilot")).toBe(true);
   });
 
   it("fails if an entry has fewer than 3 dataPoints", () => {
@@ -296,28 +376,40 @@ describe("Hubs Quality Gate — Rule Failure Validations", () => {
     expect(missingErrors.some((e) => e.field === "related" && e.message.includes("not present in the same hub"))).toBe(true);
   });
 
-  it("renders HubEntryTemplate with a fixture without errors", () => {
+  it("renders HubEntryTemplate with costBands and verdict without errors", () => {
     const fixtureEntry: HubEntry = {
       ...validBaseEntry,
-      slug: "fixture-term",
-      title: "Fixture Term",
-      toolA: undefined,
-      toolB: undefined,
+      slug: "crm-cost",
+      title: "CRM Development Cost",
+      category: "Software",
+      verdict: "Custom build pays off for 50+ users.",
+      costBands: [
+        {
+          tier: "Starter",
+          range: "₹3–6 lakh",
+          timeline: "4–6 weeks",
+          includes: "Core lead management and pipelines",
+        },
+      ],
     };
 
     const { getByText, getAllByText } = render(
       React.createElement(HubEntryTemplate, {
-        hub: "glossary",
-        hubTitle: "Glossary",
+        hub: "cost",
+        hubTitle: "Cost Guides",
         entry: fixtureEntry,
-        bodyHtml: "<p>Test body HTML</p>",
+        bodyHtml: "<p>Cost breakdown body</p>",
         visibleRelated: [{ slug: "fixture-related", title: "Fixture Related" }],
       })
     );
 
-    expect(getAllByText("Fixture Term").length).toBeGreaterThanOrEqual(1);
+    expect(getAllByText("CRM Development Cost").length).toBeGreaterThanOrEqual(1);
     expect(getByText("Key Facts")).toBeInTheDocument();
-    expect(getByText("Point 1")).toBeInTheDocument();
+    expect(getByText("Cost Bands")).toBeInTheDocument();
+    expect(getByText("Starter")).toBeInTheDocument();
+    expect(getByText("₹3–6 lakh")).toBeInTheDocument();
+    expect(getByText("Our verdict")).toBeInTheDocument();
+    expect(getByText("Custom build pays off for 50+ users.")).toBeInTheDocument();
     expect(getByText("Question 1?")).toBeInTheDocument();
     expect(getByText("Fixture Related")).toBeInTheDocument();
     expect(getByText("Book a 30-minute scoping call")).toBeInTheDocument();

@@ -53,7 +53,6 @@ export default function CookieBanner() {
             if (typeof win.gtag === "function") {
               win.gtag("consent", "update", {
                 analytics_storage: "granted",
-                ad_storage: "granted",
               });
             }
           }

@@ -5,10 +5,11 @@ import { HubEntry } from "@/lib/hubs";
 interface VisibleRelated {
   slug: string;
   title: string;
+  industrySlug?: string;
 }
 
 interface HubEntryTemplateProps {
-  hub: "glossary" | "integrations";
+  hub: "glossary" | "integrations" | "cost" | "compare" | "solutions" | "ai-use-cases";
   hubTitle: string;
   entry: HubEntry;
   bodyHtml: string;
@@ -22,34 +23,68 @@ export default function HubEntryTemplate({
   bodyHtml,
   visibleRelated,
 }: HubEntryTemplateProps) {
-  const url = `https://turbobytesconsulting.com/${hub}/${entry.slug}`;
+  const isSolutions = hub === "solutions" && !!entry.industrySlug;
+  const url = isSolutions
+    ? `https://turbobytesconsulting.com/solutions/${entry.industrySlug}/${entry.slug}`
+    : `https://turbobytesconsulting.com/${hub}/${entry.slug}`;
   const hubUrl = `https://turbobytesconsulting.com/${hub}`;
 
   // JSON-LD Schemas
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://turbobytesconsulting.com",
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": hubTitle,
-        "item": hubUrl,
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": entry.title,
-        "item": url,
-      },
-    ],
-  };
+  const breadcrumbSchema = isSolutions
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://turbobytesconsulting.com",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Solutions",
+            item: "https://turbobytesconsulting.com/solutions",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: entry.industry || "Industry",
+            item: `https://turbobytesconsulting.com/solutions/${entry.industrySlug}`,
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: entry.title,
+            item: url,
+          },
+        ],
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://turbobytesconsulting.com",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: hubTitle,
+            item: hubUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: entry.title,
+            item: url,
+          },
+        ],
+      };
 
   const faqSchema =
     entry.faqs && entry.faqs.length > 0
@@ -99,6 +134,27 @@ export default function HubEntryTemplate({
         }
       : null;
 
+  const articleSchema =
+    ["cost", "compare", "solutions", "ai-use-cases"].includes(hub)
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: entry.title,
+          description: entry.seoDescription || entry.summary,
+          author: {
+            "@id": "https://turbobytesconsulting.com/#harsh",
+          },
+          publisher: {
+            "@id": "https://turbobytesconsulting.com/#organization",
+          },
+          datePublished: entry.publishedAt,
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": url,
+          },
+        }
+      : null;
+
   return (
     <>
       {/* ── JSON-LD SCRIPTS ── */}
@@ -128,6 +184,13 @@ export default function HubEntryTemplate({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleSchema) }}
         />
       )}
+      {articleSchema && (
+        <script
+          id="article-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
 
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
@@ -144,6 +207,19 @@ export default function HubEntryTemplate({
                 {hubTitle}
               </Link>
             </li>
+            {isSolutions && (
+              <>
+                <li aria-hidden="true" className="text-light-grey select-none">/</li>
+                <li>
+                  <Link
+                    href={`/solutions/${entry.industrySlug}`}
+                    className="hover:text-royal transition-colors duration-150"
+                  >
+                    {entry.industry}
+                  </Link>
+                </li>
+              </>
+            )}
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li className="text-ink font-semibold truncate max-w-[280px]">
               {entry.title}
@@ -163,6 +239,16 @@ export default function HubEntryTemplate({
           <p className="font-sans text-[18px] text-white/90 leading-relaxed max-w-3xl">
             {entry.summary}
           </p>
+          {entry.verdict && (
+            <div className="mt-6 p-5 rounded-lg bg-white/10 border-l-4 border-gold text-white/95 max-w-3xl">
+              <span className="font-sans font-semibold text-gold block text-[13px] uppercase tracking-wider mb-1.5">
+                Our verdict
+              </span>
+              <p className="font-sans text-[16px] leading-relaxed">
+                {entry.verdict}
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -188,6 +274,43 @@ export default function HubEntryTemplate({
                         </th>
                         <td className="py-3.5 px-6 text-ink align-top">
                           {dp.value}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {/* ── COST BANDS TABLE (DIRECTLY UNDER KEY FACTS) ── */}
+            {entry.costBands && entry.costBands.length > 0 && (
+              <div className="mb-12 overflow-x-auto rounded-lg border border-light-grey bg-white shadow-sm">
+                <div className="bg-light-grey/30 px-6 py-4 border-b border-light-grey">
+                  <h2 className="font-display font-bold text-[18px] text-ink">Cost Bands</h2>
+                </div>
+                <table className="w-full text-left font-sans text-[15px]">
+                  <thead className="bg-light-grey/20 border-b border-light-grey text-ink font-semibold">
+                    <tr>
+                      <th className="py-3 px-6">Tier</th>
+                      <th className="py-3 px-6">Indicative range (INR)</th>
+                      <th className="py-3 px-6">Timeline</th>
+                      <th className="py-3 px-6">What is included</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-light-grey">
+                    {entry.costBands.map((band, idx) => (
+                      <tr key={idx} className="hover:bg-ivory/50 transition-colors">
+                        <td className="py-3.5 px-6 font-semibold text-ink/90 align-top">
+                          {band.tier}
+                        </td>
+                        <td className="py-3.5 px-6 text-royal font-semibold align-top whitespace-nowrap">
+                          {band.range}
+                        </td>
+                        <td className="py-3.5 px-6 text-ink/80 align-top whitespace-nowrap">
+                          {band.timeline}
+                        </td>
+                        <td className="py-3.5 px-6 text-ink/80 align-top">
+                          {band.includes}
                         </td>
                       </tr>
                     ))}
@@ -244,20 +367,26 @@ export default function HubEntryTemplate({
                   Related {hubTitle}
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  {visibleRelated.map((item) => (
-                    <Link
-                      key={item.slug}
-                      href={`/${hub}/${item.slug}`}
-                      className="block p-5 rounded-lg border border-light-grey bg-white hover:border-royal hover:shadow-sm transition-all group"
-                    >
-                      <h3 className="font-display font-semibold text-[16px] text-ink group-hover:text-royal transition-colors mb-1">
-                        {item.title}
-                      </h3>
-                      <span className="font-sans text-[13px] text-royal font-medium flex items-center gap-1">
-                        Read guide →
-                      </span>
-                    </Link>
-                  ))}
+                  {visibleRelated.map((item) => {
+                    const itemHref =
+                      hub === "solutions" && (item.industrySlug || entry.industrySlug)
+                        ? `/solutions/${item.industrySlug || entry.industrySlug}/${item.slug}`
+                        : `/${hub}/${item.slug}`;
+                    return (
+                      <Link
+                        key={item.slug}
+                        href={itemHref}
+                        className="block p-5 rounded-lg border border-light-grey bg-white hover:border-royal hover:shadow-sm transition-all group"
+                      >
+                        <h3 className="font-display font-semibold text-[16px] text-ink group-hover:text-royal transition-colors mb-1">
+                          {item.title}
+                        </h3>
+                        <span className="font-sans text-[13px] text-royal font-medium flex items-center gap-1">
+                          Read guide →
+                        </span>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}
