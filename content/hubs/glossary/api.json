@@ -1,0 +1,22 @@
+{
+  "slug": "api",
+  "title": "API (Application Programming Interface)",
+  "seoTitle": "What Is an API? A Plain Guide for Business Owners",
+  "seoDescription": "What an API is, where your business already uses one, what it costs to build or connect, and when you need a custom integration instead of a plug-in.",
+  "summary": "An API is a published set of rules that lets one piece of software ask another for data or ask it to do something, without a person copying information between them. When your billing system sends an invoice to WhatsApp, or your website checks stock in your ERP, an API is doing the work.",
+  "dataPoints": [
+    { "label": "Where SMEs meet it", "value": "Payment gateways (Razorpay), GST e-invoicing (IRP), WhatsApp Business, Tally, Shopify, Google Sheets" },
+    { "label": "Typical integration effort", "value": "1–3 weeks for one well-documented API; 4–8 weeks when the older system has none" },
+    { "label": "Common formats", "value": "REST with JSON (most modern tools), SOAP/XML (older systems, including Tally's XML interface)" },
+    { "label": "Main risks", "value": "Rate limits, expiring keys, changes by the provider, and silent failures without monitoring" }
+  ],
+  "body": "## How an API works, in business terms\n\nThink of an API as a counter with a menu. One system (the client) places an order in an agreed format, and the other system (the server) returns exactly what was asked for, or an error explaining why it could not. The menu is the API documentation: it lists what you can ask for, what you must send, and what you get back.\n\n## Where you already use APIs\n\n- Your payment gateway confirms a payment to your website through an API.\n- GST e-invoices are registered with the Invoice Registration Portal through an API, usually via your accounting software or a GSP.\n- WhatsApp Business messages sent from a CRM go through Meta's Cloud API.\n\n## When you need a custom integration\n\nOff-the-shelf connectors cover common pairs of tools. You need custom work when a system is old or heavily customised, when the business rules between systems are specific to you, or when volumes and reliability matter enough to need retries, logging and alerts. See [API integrations](/blog/api-integrations-making-your-business-tools-talk-to-each-other) for how to plan one.",
+  "faqs": [
+    { "q": "Is an API the same as an integration?", "a": "No. The API is the doorway one system offers. An integration is the working connection built between two systems, which uses one or more APIs plus the business rules that decide what moves, when, and what happens on errors." },
+    { "q": "What if my software has no API?", "a": "Options include the system's export and import features on a schedule, database-level connections where permitted, or replacing the part of the system that blocks you. Each has trade-offs in reliability and cost." }
+  ],
+  "related": ["webhook", "integration", "rest-api", "erp"],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

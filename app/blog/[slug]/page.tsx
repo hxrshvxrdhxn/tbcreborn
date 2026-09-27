@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { parse } from "node-html-parser";
+import { noindexPosts } from "@/lib/noindex-posts";
 
 export const revalidate = 3600;
 
@@ -21,10 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
+  const isNoindex = noindexPosts.has(slug);
   return {
     title: { absolute: `${(post.seoTitle || post.title).replace(/\s*\|\s*(TBC|Turbo Bytes Consulting)\s*$/i, "")} | TBC` },
     description: post.seoDescription || post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
+    ...(isNoindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: post.seoTitle || post.title,
       description: post.seoDescription || post.excerpt,

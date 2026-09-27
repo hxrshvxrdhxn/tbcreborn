@@ -18,6 +18,9 @@ const companyLinks = [
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
+  { href: "/how-to", label: "How-To Guides" },
+  { href: "/glossary", label: "Glossary" },
+  { href: "/integrations", label: "Integrations" },
   { href: "/engagement", label: "Engagement" },
   { href: "/contact", label: "Contact" },
   { href: "/brand-guidelines", label: "Brand Guidelines" },
@@ -196,6 +199,12 @@ export default function Footer() {
             </Link>
             <Link href="/how-to" className="text-white/40 hover:text-white/70 text-xs transition-colors">
               How-To Guides
+            </Link>
+            <Link href="/glossary" className="text-white/40 hover:text-white/70 text-xs transition-colors">
+              Glossary
+            </Link>
+            <Link href="/integrations" className="text-white/40 hover:text-white/70 text-xs transition-colors">
+              Integrations
             </Link>
             <Link href="/terms" className="text-white/40 hover:text-white/70 text-xs transition-colors">
               Terms

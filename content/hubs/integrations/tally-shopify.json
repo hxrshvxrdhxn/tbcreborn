@@ -1,0 +1,27 @@
+{
+  "slug": "tally-shopify",
+  "title": "Tally and Shopify Integration",
+  "toolA": "TallyPrime",
+  "toolB": "Shopify",
+  "seoTitle": "Tally Shopify Integration: How It Works and What It Costs",
+  "seoDescription": "Connect Shopify orders, customers and payouts to TallyPrime vouchers automatically. Methods, what syncs, effort, cost ranges and pitfalls for Indian D2C brands.",
+  "summary": "A Tally–Shopify integration posts each Shopify order as a sales voucher in TallyPrime, with the right ledgers, GST rates and inventory items, and records payouts and refunds without manual entry. Most D2C brands need it once they pass about 20 orders a day, when re-typing orders into Tally starts causing errors and delays.",
+  "dataPoints": [
+    { "label": "Tally side", "value": "TallyPrime XML over HTTP (port 9000 by default) or a TDL extension; Tally must be reachable, usually through a small connector on the Tally machine" },
+    { "label": "Shopify side", "value": "Admin API (GraphQL) plus order, refund and payout webhooks" },
+    { "label": "What syncs", "value": "Orders to sales vouchers, customers to ledgers, products to stock items, refunds to credit notes, payouts to receipts" },
+    { "label": "Direction", "value": "Mostly Shopify to Tally; stock levels optionally Tally to Shopify" },
+    { "label": "Typical effort", "value": "Ready-made connector: days. Custom integration with your ledger rules and GST mapping: 3–6 weeks" },
+    { "label": "Indicative cost", "value": "Connector subscriptions: a few thousand rupees a month. Custom build: roughly ₹1.5–4 lakh depending on rules and volume" }
+  ],
+  "body": "## How the integration works\n\n1. Shopify sends a webhook when an order is created, paid, refunded or fulfilled.\n2. The integration maps the order to a Tally sales voucher: customer ledger, sales ledger by GST rate, item-wise stock entries, shipping and discount ledgers.\n3. A connector on the Tally machine posts the voucher through Tally's XML interface and confirms success.\n4. Failures are logged and retried, and anything that cannot be posted is flagged for a person to review.\n\n## Ready-made connector or custom build\n\nConnectors work well for standard catalogues and simple GST. A custom integration suits you when you have multiple warehouses or GSTINs, marketplace and website orders together, bundle products, or specific ledger conventions your accountant relies on.\n\n## Common pitfalls\n\n- GST rate mismatches between Shopify product settings and Tally stock items.\n- Tally closed or offline at night, so the connector must queue and retry.\n- Payout reconciliation: Shopify payouts net off fees and refunds, so they need splitting into the right ledgers.\n\nRelated reading: [Tally integration](/blog/tally-integration-connecting-your-accounts-to-your-operations-software) and [software for retail and D2C brands](/blog/software-for-retail-and-d2c-brands).",
+  "faqs": [
+    { "q": "Does Tally need to be on the cloud for this to work?", "a": "No. A small connector running on the computer or server where TallyPrime runs is enough. Tally on a cloud server simply makes it available around the clock." },
+    { "q": "Can stock update from Tally back to Shopify?", "a": "Yes. Stock levels can be read from Tally on a schedule and pushed to Shopify, so the website does not sell items that are out of stock." },
+    { "q": "What about marketplace orders from Amazon or Flipkart?", "a": "They can flow into the same Tally company through the same integration, each with its own sales ledger, so reports separate channels cleanly." }
+  ],
+  "related": ["tally-razorpay", "tally-woocommerce", "shopify-whatsapp", "tally-zoho-crm"],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

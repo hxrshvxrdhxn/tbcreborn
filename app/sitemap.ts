@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
 import { prisma } from "@/lib/prisma";
+import { noindexPosts } from "@/lib/noindex-posts";
+import { getHubEntries } from "@/lib/hubs";
 
 export const revalidate = 3600;
 
@@ -26,6 +28,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/about`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/work`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
+    { url: `${BASE}/glossary`, priority: 0.8, changeFrequency: "weekly" as const },
+    { url: `${BASE}/integrations`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE}/engagement`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/book-consultation`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE}/contact`, priority: 0.6, changeFrequency: "yearly" as const },
@@ -34,20 +38,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ].map((r) => ({ ...r, lastModified: new Date() }));
 
   const posts = await getAllPosts();
-  const blogRoutes = posts.map((post) => {
-    let lastModified = new Date(post.date);
-    if ('updatedAt' in post && post.updatedAt) {
-      lastModified = new Date(post.updatedAt as string | Date);
-    } else if ('publishedAt' in post && post.publishedAt) {
-      lastModified = new Date(post.publishedAt as string | Date);
-    }
-    return {
-      url: `${BASE}/blog/${post.slug}`,
-      lastModified,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    };
-  });
+  const blogRoutes = posts
+    .filter((post) => !noindexPosts.has(post.slug))
+    .map((post) => {
+      let lastModified = new Date(post.date);
+      if ('updatedAt' in post && post.updatedAt) {
+        lastModified = new Date(post.updatedAt as string | Date);
+      } else if ('publishedAt' in post && post.publishedAt) {
+        lastModified = new Date(post.publishedAt as string | Date);
+      }
+      return {
+        url: `${BASE}/blog/${post.slug}`,
+        lastModified,
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+      };
+    });
 
   const guides = await prisma.howToGuide.findMany({ select: { slug: true, updatedAt: true } });
   
@@ -58,5 +64,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...guideRoutes];
+  // Hub entries (visible and indexable)
+  const glossaryEntries = await getHubEntries("glossary");
+  const glossaryRoutes = glossaryEntries
+    .filter((e) => e.indexable)
+    .map((e) => ({
+      url: `${BASE}/glossary/${e.slug}`,
+      lastModified: new Date(e.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
+
+  const integrationEntries = await getHubEntries("integrations");
+  const integrationRoutes = integrationEntries
+    .filter((e) => e.indexable)
+    .map((e) => ({
+      url: `${BASE}/integrations/${e.slug}`,
+      lastModified: new Date(e.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
+
+  return [...staticRoutes, ...blogRoutes, ...guideRoutes, ...glossaryRoutes, ...integrationRoutes];
 }
