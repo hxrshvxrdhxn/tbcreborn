@@ -51,7 +51,10 @@ export default function CookieBanner() {
           if (typeof window !== "undefined") {
             const win = window as unknown as { gtag?: (...args: unknown[]) => void };
             if (typeof win.gtag === "function") {
-              win.gtag("consent", "update", { analytics_storage: "granted" });
+              win.gtag("consent", "update", {
+                analytics_storage: "granted",
+                ad_storage: "granted",
+              });
             }
           }
         }}

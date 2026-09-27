@@ -77,7 +77,8 @@ export default function RootLayout({
               });
               if (document.cookie.indexOf('CookieConsent=true') !== -1) {
                 gtag('consent', 'update', {
-                  'analytics_storage': 'granted'
+                  'analytics_storage': 'granted',
+                  'ad_storage': 'granted'
                 });
               }
             `,
