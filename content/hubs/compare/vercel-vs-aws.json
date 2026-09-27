@@ -1,0 +1,56 @@
+{
+  "slug": "vercel-vs-aws",
+  "title": "Vercel vs AWS for Hosting Business Web Apps",
+  "category": "Hosting",
+  "optionA": "Vercel",
+  "optionB": "AWS",
+  "verdict": "Choose Vercel for websites and Next.js apps where speed of delivery and low operations effort matter. Choose AWS for complex back-end workloads, strict control over data location and networking, or large steady usage where fine-tuned infrastructure saves money.",
+  "seoTitle": "Vercel vs AWS for Hosting Business Web Applications",
+  "seoDescription": "Vercel or AWS for hosting a business website or web app: ease of use, scaling, pricing model, control, databases and when each makes sense.",
+  "summary": "Vercel is a managed platform that deploys websites and Next.js applications from Git with almost no server management, automatic previews and a global edge network. AWS is a full cloud with hundreds of services, maximum control and Indian regions, but needs more expertise. Many teams host the front end on Vercel and databases or heavy workloads on AWS or another provider.",
+  "dataPoints": [
+    {
+      "label": "Operations effort",
+      "value": "Vercel: minimal. AWS: significant unless using managed services"
+    },
+    {
+      "label": "Previews",
+      "value": "Vercel creates a preview URL for every branch automatically"
+    },
+    {
+      "label": "Data location",
+      "value": "AWS offers Mumbai and Hyderabad regions; check Vercel function and database regions"
+    },
+    {
+      "label": "Pricing model",
+      "value": "Vercel: plan plus usage. AWS: pay per service used"
+    },
+    {
+      "label": "Scaling",
+      "value": "Both scale; Vercel automatically for typical web traffic"
+    },
+    {
+      "label": "Lock-in",
+      "value": "Vercel is optimised for Next.js; AWS services vary in portability"
+    }
+  ],
+  "body": "## A common set-up\n\n- Website and web app front end on Vercel.\n- Database on a managed PostgreSQL service in an Indian region.\n- Background jobs and file processing on AWS or the database provider.\n\nSee [cloud hosting for Indian businesses](/blog/cloud-hosting-for-indian-businesses-aws-azure-google-cloud-or-vercel) and our glossary entry on [cloud hosting](/glossary/cloud-hosting).\n\nPrices and plan features change often; check the vendors' current Indian pricing before deciding.",
+  "faqs": [
+    {
+      "q": "Is Vercel only for Next.js?",
+      "a": "No, it hosts many frameworks, but it is especially tuned for Next.js."
+    },
+    {
+      "q": "Will Vercel get expensive?",
+      "a": "For high-traffic or compute-heavy apps it can; monitor usage and move heavy workloads elsewhere if needed."
+    }
+  ],
+  "related": [
+    "supabase-vs-firebase",
+    "postgresql-vs-mysql",
+    "google-workspace-vs-microsoft-365"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-20T03:30:00.000Z",
+  "indexable": true
+}

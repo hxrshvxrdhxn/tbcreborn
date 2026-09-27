@@ -1,0 +1,56 @@
+{
+  "slug": "odoo-vs-erpnext",
+  "title": "Odoo vs ERPNext for Indian SMEs",
+  "category": "ERP",
+  "optionA": "Odoo",
+  "optionB": "ERPNext",
+  "verdict": "Choose ERPNext for manufacturing or distribution when you want no licence fees and are comfortable with a leaner ecosystem. Choose Odoo when you need a wider range of modules and apps and will pay for Enterprise features and an experienced partner.",
+  "seoTitle": "Odoo vs ERPNext for Indian SMEs: A Practical Comparison",
+  "seoDescription": "Odoo or ERPNext for an Indian SME: licensing, GST localisation, manufacturing, customisation, hosting and implementation effort compared.",
+  "summary": "Odoo and ERPNext are both open-source-based ERPs popular with Indian SMEs. Odoo has a broader app ecosystem and polished interface, with key features in its paid Enterprise edition. ERPNext is fully open source under the GPL with no per-user licence, strong manufacturing and Indian GST support, and a smaller partner ecosystem. Implementation quality matters more than the choice.",
+  "dataPoints": [
+    {
+      "label": "Licensing",
+      "value": "Odoo: Community (free) and Enterprise (paid per user). ERPNext: GPL open source, no per-user licence"
+    },
+    {
+      "label": "Indian GST",
+      "value": "Both offer Indian localisation, including GST reports and e-invoicing support"
+    },
+    {
+      "label": "Manufacturing",
+      "value": "Both cover BOMs and work orders; ERPNext is often favoured by SME manufacturers"
+    },
+    {
+      "label": "Customisation",
+      "value": "Odoo: Python modules; ERPNext: Frappe framework with low-code customisation"
+    },
+    {
+      "label": "Hosting",
+      "value": "Both can be self-hosted or run on the vendor's cloud"
+    },
+    {
+      "label": "Typical rollout",
+      "value": "3–9 months for a mid-sized business with a capable partner"
+    }
+  ],
+  "body": "## What decides success\n\n- A partner who has implemented your industry before.\n- Clean master data: items, BOMs, customers, opening balances.\n- Keeping customisation small so upgrades stay possible.\n\n## When neither fits\n\nIf your process is unusual, a lighter core plus custom modules and integrations may serve better. See [ERP for manufacturing SMEs: build, buy or customise](/blog/erp-for-manufacturing-smes-build-buy-or-customise) and our glossary entry on [ERP](/glossary/erp).\n\nPrices and plan features change often; check the vendors' current Indian pricing before deciding.",
+  "faqs": [
+    {
+      "q": "Can either replace Tally?",
+      "a": "Yes, both include accounting. Many businesses still keep Tally for accounts initially and integrate."
+    },
+    {
+      "q": "Is open source free to run?",
+      "a": "The software may be free, but implementation, hosting, support and upgrades are real costs."
+    }
+  ],
+  "related": [
+    "tally-vs-zoho-books",
+    "shopify-vs-woocommerce",
+    "postgresql-vs-mysql"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-20T03:30:00.000Z",
+  "indexable": true
+}

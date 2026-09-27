@@ -1,0 +1,56 @@
+{
+  "slug": "custom-app-vs-whatsapp-bot",
+  "title": "Custom App vs WhatsApp Bot for Customer Service",
+  "category": "Customer experience",
+  "optionA": "Custom app",
+  "optionB": "WhatsApp bot",
+  "verdict": "Start with a WhatsApp bot for occasional customers and simple tasks. Build a custom app when customers use it several times a week, need rich catalogues or offline work, or when a web portal cannot serve them.",
+  "seoTitle": "Custom App or WhatsApp Bot for Customer Self-Service",
+  "seoDescription": "Should Indian businesses build a customer app or a WhatsApp bot for orders, status and support? Adoption, cost, features and when to use each.",
+  "summary": "For many Indian businesses, a WhatsApp bot reaches customers where they already are, with no download, while a custom app offers richer features, branding and offline use but must win installs. Most businesses should start with WhatsApp for status, reminders and simple orders, and build an app only when frequent, complex use justifies it.",
+  "dataPoints": [
+    {
+      "label": "Adoption",
+      "value": "WhatsApp: no install. App: needs downloads and updates"
+    },
+    {
+      "label": "Features",
+      "value": "App: rich screens, catalogues, offline. WhatsApp: templates, buttons, lists, links"
+    },
+    {
+      "label": "Cost",
+      "value": "WhatsApp bot: lower build cost, per-message charges. App: higher build and maintenance cost"
+    },
+    {
+      "label": "Branding and data",
+      "value": "App gives full control; WhatsApp operates within Meta's rules"
+    },
+    {
+      "label": "Typical uses",
+      "value": "WhatsApp: status, reminders, payments, simple reorders. App: dealer ordering, field teams, loyalty"
+    },
+    {
+      "label": "Middle ground",
+      "value": "A mobile web portal or PWA linked from WhatsApp messages"
+    }
+  ],
+  "body": "## A practical path\n\n1. Automate updates and reminders on WhatsApp.\n2. Add a web portal for richer tasks, linked from messages.\n3. Build an app when usage data shows frequent, complex use.\n\nSee [WhatsApp or a dedicated app](/blog/whatsapp-or-a-dedicated-app-choosing-the-right-channel), our glossary entry on the [WhatsApp Business API](/glossary/whatsapp-business-api) and the [customer portal cost guide](/cost/customer-portal).\n\nPrices and plan features change often; check the vendors' current Indian pricing before deciding.",
+  "faqs": [
+    {
+      "q": "Can a WhatsApp bot take orders?",
+      "a": "Yes, for simple repeat orders using lists and buttons, with payment links."
+    },
+    {
+      "q": "Is a PWA a good compromise?",
+      "a": "Often yes: installable, no app store, and cheaper than native apps."
+    }
+  ],
+  "related": [
+    "freshdesk-vs-zoho-desk",
+    "shopify-vs-woocommerce",
+    "supabase-vs-firebase"
+  ],
+  "service": "/services/mobile-app-development",
+  "publishedAt": "2026-10-20T03:30:00.000Z",
+  "indexable": true
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "freshdesk-vs-zoho-desk",
+  "title": "Freshdesk vs Zoho Desk for Customer Support",
+  "category": "Customer support",
+  "optionA": "Freshdesk",
+  "optionB": "Zoho Desk",
+  "verdict": "Choose Zoho Desk if you already run Zoho CRM or Zoho One. Choose Freshdesk if you want a standalone help desk with a simple interface, or already use Freshworks CRM.",
+  "seoTitle": "Freshdesk vs Zoho Desk for Indian Support Teams",
+  "seoDescription": "Freshdesk or Zoho Desk for customer support: ticketing, WhatsApp, automation, AI features, integrations with CRM and pricing model compared.",
+  "summary": "Freshdesk and Zoho Desk are both mature help desk tools from companies with large Indian customer bases. Freshdesk is known for an intuitive interface and a strong ticketing and automation core; Zoho Desk fits naturally if you already use Zoho CRM and other Zoho apps. Both support email, chat, phone and WhatsApp channels, with AI features on higher plans.",
+  "dataPoints": [
+    {
+      "label": "Channels",
+      "value": "Both: email, web forms, chat, phone; WhatsApp via their channel integrations"
+    },
+    {
+      "label": "CRM fit",
+      "value": "Zoho Desk with Zoho CRM; Freshdesk with Freshsales"
+    },
+    {
+      "label": "Automation",
+      "value": "Both: routing rules, SLAs, canned replies, workflows"
+    },
+    {
+      "label": "AI",
+      "value": "Both offer AI assistants for suggested replies and summaries on certain plans"
+    },
+    {
+      "label": "Pricing model",
+      "value": "Per agent per month, with a free or entry plan for small teams"
+    },
+    {
+      "label": "Custom needs",
+      "value": "Both have APIs for integrating order and account data"
+    }
+  ],
+  "body": "## What to decide first\n\n- Which channels customers actually use: in India, often WhatsApp and phone.\n- What the agent needs to see: order status, payments, past tickets.\n- SLA targets and escalation rules.\n\nSee [service ticketing and field service software](/blog/service-ticketing-and-field-service-software) and our glossary entry on [chatbots](/glossary/chatbot).\n\nPrices and plan features change often; check the vendors' current Indian pricing before deciding.",
+  "faqs": [
+    {
+      "q": "Can support tickets come from WhatsApp?",
+      "a": "Yes, both can connect a WhatsApp Business number so chats become tickets."
+    },
+    {
+      "q": "Do we need a help desk at all?",
+      "a": "Once more than two people handle support, or customers repeat themselves, a help desk usually pays off."
+    }
+  ],
+  "related": [
+    "google-workspace-vs-microsoft-365",
+    "zapier-vs-power-automate",
+    "tally-vs-zoho-books"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-20T03:30:00.000Z",
+  "indexable": true
+}
