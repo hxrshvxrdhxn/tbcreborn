@@ -4,6 +4,7 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import ServiceFooter from "@/components/ServiceFooter";
 import SectionInk from "@/components/SectionInk";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: "Slate — AI Executive Assistant",
@@ -233,6 +234,8 @@ export default function SlatePage() {
 
       {/* ── CTA Band ── */}
       <ServiceFooter />
+
+      <CallProcess />
 
       <SectionInk className="text-center" aria-labelledby="slate-cta-heading">
         <div className="container-tbc">

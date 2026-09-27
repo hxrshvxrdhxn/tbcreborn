@@ -54,7 +54,7 @@ async function isRateLimited(ip: string): Promise<boolean> {
 // ── Zod schema ────────────────────────────────────────────────────────────────
 const schema = z.object({
   name: z.string().min(2).max(100),
-  company: z.string().min(1).max(150),
+  company: z.string().max(150).optional(),
   email: z.string().email().max(254),
   phone: z.string().max(30).optional(),
   service: z.string().min(1).max(100),
@@ -114,14 +114,16 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    const subjectCompany = data.company ? ` — ${esc(data.company)}` : "";
+
     await transporter.sendMail({
       from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
       to: "harshvardhan@turbobytesconsulting.com",
-      subject: `New enquiry from ${esc(data.name)} — ${esc(data.company)}`,
+      subject: `New enquiry from ${esc(data.name)}${subjectCompany}`,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${esc(data.name)}</p>
-        <p><strong>Company:</strong> ${esc(data.company)}</p>
+        ${data.company ? `<p><strong>Company:</strong> ${esc(data.company)}</p>` : ""}
         <p><strong>Email:</strong> ${esc(data.email)}</p>
         ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
         <p><strong>Service of Interest:</strong> ${esc(data.service)}</p>
@@ -137,7 +139,10 @@ export async function POST(req: NextRequest) {
       fetch(sheetsWebhook, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          company: data.company || "Not specified",
+        }),
       }).catch(() => {/* non-fatal — log silently */});
     }
 
@@ -146,7 +151,7 @@ export async function POST(req: NextRequest) {
       await prisma.contactQuery.create({
         data: {
           name: data.name,
-          company: data.company,
+          company: data.company || "Not specified",
           email: data.email,
           phone: data.phone || null,
           service: data.service,
@@ -162,7 +167,7 @@ export async function POST(req: NextRequest) {
         await prisma.contactQuery.create({
           data: {
             name: data.name,
-            company: data.company,
+            company: data.company || "Not specified",
             email: data.email,
             phone: data.phone || null,
             service: data.service,

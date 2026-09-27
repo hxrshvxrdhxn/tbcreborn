@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "Software Development Company in Greater Noida | Turbo Bytes Consulting" },
@@ -218,6 +219,8 @@ export default function LocationPage() {
           </div>
         </div>
       </section>
+
+      <CallProcess />
 
       <SectionInk className="text-center">
         <div className="container-tbc">

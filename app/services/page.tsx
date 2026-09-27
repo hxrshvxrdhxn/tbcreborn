@@ -4,6 +4,7 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import ServiceCard from "@/components/ServiceCard";
 import SectionInk from "@/components/SectionInk";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "Software Development & AI Services | Turbo Bytes Consulting" },
@@ -264,6 +265,8 @@ export default function ServicesPage() {
           </Reveal>
         </div>
       </SectionInk>
+
+      <CallProcess />
 
       {/* ── CTA BAND ── */}
       <section className="bg-royal py-s7 text-center">

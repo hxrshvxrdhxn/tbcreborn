@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
+import StickyCta from "@/components/StickyCta";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
@@ -96,6 +97,7 @@ export default function RootLayout({
           <Navigation />
           <main id="main-content">{children}</main>
         <Footer />
+        <StickyCta />
         <WhatsAppButton />
         <BackToTop />
         <CookieBanner />
@@ -133,6 +135,7 @@ export default function RootLayout({
                   "logo": "https://turbobytesconsulting.com/og-default.png",
                   "telephone": "+919354784377",
                   "email": "info@turbobytesconsulting.com",
+                  "hasMap": "https://share.google/jp3MGXYa4u27I4bcq",
                   "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
@@ -142,12 +145,27 @@ export default function RootLayout({
                     "addressCountry": "IN"
                   },
                   "areaServed": ["Noida", "Greater Noida", "Delhi NCR", "India"],
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                      ],
+                      "opens": "08:00",
+                      "closes": "21:00"
+                    }
+                  ],
                   "founder": {
                     "@id": "https://turbobytesconsulting.com/#harsh"
                   },
                   "sameAs": [
                     "https://x.com/social_TBC",
-                    "https://instagram.com/turbobytesconsulting"
+                    "https://instagram.com/turbobytesconsulting",
+                    "https://share.google/jp3MGXYa4u27I4bcq"
                   ]
                 },
                 {
@@ -169,7 +187,10 @@ export default function RootLayout({
                   "worksFor": {
                     "@id": "https://turbobytesconsulting.com/#organization"
                   },
-                  "url": "https://turbobytesconsulting.com/about"
+                  "url": "https://turbobytesconsulting.com/about",
+                  "sameAs": [
+                    "https://www.linkedin.com/in/tbcofficial/"
+                  ]
                 }
               ]
             })

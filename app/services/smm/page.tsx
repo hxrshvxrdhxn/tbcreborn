@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "Social Media Management | Turbo Bytes Consulting" },
@@ -630,6 +631,8 @@ export default function SMMPage() {
           </div>
         </div>
       </section>
+
+      <CallProcess />
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
       <section className="bg-ink text-white py-20 text-center">
