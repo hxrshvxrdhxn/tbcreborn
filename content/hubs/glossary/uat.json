@@ -1,0 +1,44 @@
+{
+  "slug": "uat",
+  "title": "UAT (User Acceptance Testing)",
+  "seoTitle": "What Is UAT? User Acceptance Testing for Business Owners",
+  "seoDescription": "UAT is the stage where your own team tests new software on real tasks before sign-off. How to run it, who should test, and what to check before go-live.",
+  "summary": "UAT (User Acceptance Testing) is the final testing stage, where the people who will use new software test it on real tasks and real data before it goes live. It confirms the software supports the business, not just that the code works, and it is the point where the business formally signs off.",
+  "dataPoints": [
+    {
+      "label": "Who tests",
+      "value": "The staff who will use it daily, plus a decision-maker"
+    },
+    {
+      "label": "Typical duration",
+      "value": "1–3 weeks depending on scope"
+    },
+    {
+      "label": "Test with",
+      "value": "Real scenarios, realistic data, edge cases and month-end processes"
+    },
+    {
+      "label": "Exit criteria",
+      "value": "No critical issues open, agreed fixes scheduled, written sign-off"
+    }
+  ],
+  "body": "## How to run UAT well\n\n1. Write scenarios from real work: \"create a quote with a 12% discount for a new dealer\".\n2. Use realistic data, including awkward cases.\n3. Record issues with steps, screenshots and expected results.\n4. Classify issues as critical, major or minor, and agree what must be fixed before launch.\n\nSee [user acceptance testing: how business owners should sign off software](/blog/user-acceptance-testing-how-business-owners-should-sign-off-software).",
+  "faqs": [
+    {
+      "q": "Can the developer do UAT?",
+      "a": "No. Developers test that it works as built; UAT tests that it works for the business, so users must do it."
+    },
+    {
+      "q": "What if UAT finds many issues?",
+      "a": "That is UAT doing its job. Prioritise, fix the critical ones, and delay launch rather than go live with broken core flows."
+    }
+  ],
+  "related": [
+    "mvp",
+    "technical-debt",
+    "integration"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

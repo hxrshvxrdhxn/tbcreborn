@@ -1,0 +1,44 @@
+{
+  "slug": "webhook",
+  "title": "Webhook",
+  "seoTitle": "What Is a Webhook? Explained for Business Owners",
+  "seoDescription": "A webhook is an automatic message one system sends another the moment something happens. How webhooks work, where SMEs use them and what can go wrong.",
+  "summary": "A webhook is an automatic notification one system sends to another the moment an event happens, such as a payment succeeding or an order being placed. Instead of your software checking every few minutes for news, the news arrives on its own, which makes integrations faster and cheaper to run.",
+  "dataPoints": [
+    {
+      "label": "Typical events",
+      "value": "Payment captured, order created, form submitted, invoice paid, message delivered"
+    },
+    {
+      "label": "Speed",
+      "value": "Usually delivered within seconds of the event"
+    },
+    {
+      "label": "Used by",
+      "value": "Razorpay, Shopify, WhatsApp Cloud API, Calendly, Stripe, most modern SaaS tools"
+    },
+    {
+      "label": "Must-haves",
+      "value": "Signature verification, retries, logging, and handling duplicate deliveries"
+    }
+  ],
+  "body": "## Webhook versus API\n\nWith an API, your system asks another system for information. With a webhook, the other system tells yours as soon as something changes. Most integrations use both: a webhook announces an event, then an API call fetches the full details.\n\n## Where SMEs use webhooks\n\n- A Razorpay payment webhook marks an order as paid and triggers the invoice.\n- A Shopify order webhook creates the sales entry in accounting.\n- A Calendly booking webhook adds a lead to the CRM and alerts sales on WhatsApp.\n\n## What goes wrong without care\n\nWebhooks can arrive twice, out of order, or while your server is down. A reliable receiver checks the sender's signature, records every event, ignores duplicates and retries failed processing. See [API integrations](/blog/api-integrations-making-your-business-tools-talk-to-each-other).",
+  "faqs": [
+    {
+      "q": "Do webhooks replace APIs?",
+      "a": "No. Webhooks announce that something happened; APIs are used to read or change data. Reliable integrations combine them."
+    },
+    {
+      "q": "What happens if my server is down when a webhook is sent?",
+      "a": "Most providers retry for a period, but not forever. Your system should also reconcile periodically through the API so nothing is missed."
+    }
+  ],
+  "related": [
+    "api",
+    "integration",
+    "rest-api"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

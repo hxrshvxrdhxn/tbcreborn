@@ -1,0 +1,45 @@
+{
+  "slug": "integration",
+  "title": "Integration (Software Integration)",
+  "seoTitle": "What Is Software Integration? A Guide for Business Owners",
+  "seoDescription": "Software integration connects your business systems so data moves automatically. Types, costs, timelines and how to decide between connectors and custom builds.",
+  "summary": "Software integration is the work of connecting separate business systems, such as accounting, CRM, e-commerce and WhatsApp, so information moves between them automatically and correctly. It removes re-typing, speeds up processes and gives one reliable version of the numbers.",
+  "dataPoints": [
+    {
+      "label": "Common SME pairs",
+      "value": "Tally with Shopify or Razorpay, CRM with WhatsApp, website forms with CRM, ERP with e-invoicing"
+    },
+    {
+      "label": "Approaches",
+      "value": "Ready-made connectors, no-code tools (Zapier, Make, n8n), or custom code"
+    },
+    {
+      "label": "Typical timeline",
+      "value": "Days for a connector; 2–8 weeks for a custom integration"
+    },
+    {
+      "label": "Ongoing need",
+      "value": "Monitoring, error alerts and updates when either system changes"
+    }
+  ],
+  "body": "## Three ways to integrate\n\n1. **Ready-made connectors**: fast and inexpensive for standard needs, limited when your rules are specific.\n2. **No-code automation tools**: flexible for simple, low-volume flows. See [n8n, Make or custom code](/blog/workflow-automation-with-n8n-make-or-custom-code-how-to-choose).\n3. **Custom integration**: built around your business rules, with proper error handling and logs. Best for critical, high-volume flows.\n\n## What makes an integration reliable\n\n- Clear rules for what moves, in which direction, and which system is the source of truth.\n- Handling for failures: retries, alerts, and a way to fix and re-send records.\n- Monitoring, so a silent failure does not go unnoticed for weeks.\n\nBrowse our [integrations guides](/integrations) for specific tool pairs.",
+  "faqs": [
+    {
+      "q": "Is integration a one-time cost?",
+      "a": "Mostly, but budget for maintenance: APIs change, credentials expire and business rules evolve."
+    },
+    {
+      "q": "How do I know if I need integration?",
+      "a": "If staff re-type the same data into two systems every day, or reports disagree between systems, integration usually pays back quickly."
+    }
+  ],
+  "related": [
+    "api",
+    "webhook",
+    "erp",
+    "crm"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

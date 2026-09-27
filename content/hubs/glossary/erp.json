@@ -1,0 +1,45 @@
+{
+  "slug": "erp",
+  "title": "ERP (Enterprise Resource Planning)",
+  "seoTitle": "What Is ERP? A Guide for Indian SMEs",
+  "seoDescription": "ERP software runs purchasing, inventory, production, sales and accounts in one system. What it covers, costs in India, and when to buy or build.",
+  "summary": "ERP (Enterprise Resource Planning) software brings core operations such as purchasing, inventory, production, sales and accounting into one connected system, so every department works from the same data. For Indian SMEs it usually sits alongside, or replaces, Tally plus spreadsheets.",
+  "dataPoints": [
+    {
+      "label": "Core modules",
+      "value": "Purchase, inventory, production, sales, accounts, GST compliance, reports"
+    },
+    {
+      "label": "Common options in India",
+      "value": "SAP Business One, Microsoft Dynamics 365 Business Central, Odoo, ERPNext, Tally-based add-ons, custom builds"
+    },
+    {
+      "label": "Typical rollout",
+      "value": "3–9 months for a mid-sized business"
+    },
+    {
+      "label": "Biggest risk",
+      "value": "Forcing staff into processes that do not fit, leading to workarounds in Excel"
+    }
+  ],
+  "body": "## Signs you need an ERP\n\n- Stock figures in the warehouse and in accounts never match.\n- Month-end closing takes more than a week.\n- Several spreadsheets track the same orders.\n\n## Buy, customise or build\n\nPackaged ERP suits standard processes. Customisation fills gaps but raises upgrade costs. A custom build or a lighter core plus integrations suits businesses with unusual workflows. See [ERP for manufacturing SMEs](/blog/erp-for-manufacturing-smes-build-buy-or-customise).\n\n## Before you choose\n\nMap your processes first, decide which system will be the source of truth for each type of data, and plan data migration early.",
+  "faqs": [
+    {
+      "q": "Can Tally work as an ERP?",
+      "a": "Tally handles accounting and basic inventory well. Many SMEs outgrow it for production planning, multi-location operations and workflows, then integrate it with other systems rather than replace it."
+    },
+    {
+      "q": "How much does ERP cost in India?",
+      "a": "It varies widely: from low per-user subscriptions for cloud ERPs to tens of lakhs for large implementations. Implementation and data migration often cost more than licences."
+    }
+  ],
+  "related": [
+    "crm",
+    "integration",
+    "saas",
+    "e-invoicing"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

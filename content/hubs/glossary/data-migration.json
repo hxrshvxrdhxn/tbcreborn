@@ -1,0 +1,44 @@
+{
+  "slug": "data-migration",
+  "title": "Data Migration",
+  "seoTitle": "What Is Data Migration? Moving to New Software Safely",
+  "seoDescription": "Data migration moves your records from old systems or spreadsheets into new software. Steps, cleaning, testing, cut-over planning and common failures.",
+  "summary": "Data migration is the process of moving records such as customers, items, balances and history from old systems or spreadsheets into new software, cleaning and mapping them on the way. It is often the riskiest part of a software project and needs its own plan, tests and sign-off.",
+  "dataPoints": [
+    {
+      "label": "Typical sources",
+      "value": "Tally, Excel and Google Sheets, legacy desktop software, old CRMs"
+    },
+    {
+      "label": "Biggest effort",
+      "value": "Cleaning duplicates, fixing codes and deciding what history to move"
+    },
+    {
+      "label": "Testing",
+      "value": "Trial migrations with reconciliation of counts and totals"
+    },
+    {
+      "label": "Cut-over",
+      "value": "A planned date with a short freeze on changes in the old system"
+    }
+  ],
+  "body": "## A safe migration plan\n\n1. Inventory what data exists and where.\n2. Decide what to migrate: all history, open items only, or summaries.\n3. Clean and standardise codes, names and GSTINs.\n4. Run trial migrations and reconcile totals with the old system.\n5. Freeze, migrate, verify and go live.\n\n## Common failures\n\nMigrating dirty data, leaving migration to the last week, and no reconciliation of balances. See [moving from spreadsheets to a database](/blog/moving-from-spreadsheets-to-a-database-a-practical-plan).",
+  "faqs": [
+    {
+      "q": "Should we migrate all historical data?",
+      "a": "Not always. Many businesses migrate open items and opening balances, and keep the old system read-only for history."
+    },
+    {
+      "q": "How long does migration take?",
+      "a": "From a few days for simple lists to several weeks for ERP data with years of transactions."
+    }
+  ],
+  "related": [
+    "database",
+    "ocr",
+    "custom-software"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

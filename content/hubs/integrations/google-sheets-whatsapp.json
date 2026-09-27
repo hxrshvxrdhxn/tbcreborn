@@ -1,0 +1,50 @@
+{
+  "slug": "google-sheets-whatsapp",
+  "title": "Google Sheets and WhatsApp Integration",
+  "toolA": "Google Sheets",
+  "toolB": "WhatsApp Business",
+  "seoTitle": "Google Sheets to WhatsApp: Send Reminders From a Spreadsheet",
+  "seoDescription": "Send WhatsApp template messages from a Google Sheet: reminders, confirmations and updates, with status written back. Set-up, consent and limits.",
+  "summary": "A Google Sheets–WhatsApp integration sends approved WhatsApp template messages to rows in a sheet, such as fee reminders, appointment confirmations or dispatch updates, and writes the delivery status back to the sheet. It is a practical automation for teams already running a process in a spreadsheet.",
+  "dataPoints": [
+    {
+      "label": "Sheets side",
+      "value": "Google Sheets API with a fixed layout and a status column"
+    },
+    {
+      "label": "WhatsApp side",
+      "value": "Cloud API with approved templates and variables mapped to columns"
+    },
+    {
+      "label": "Status back",
+      "value": "Sent, delivered, read or failed, with timestamps"
+    },
+    {
+      "label": "Safeguards",
+      "value": "Opt-in column, daily sending limits, no duplicate sends"
+    },
+    {
+      "label": "Typical effort",
+      "value": "Days to 2 weeks"
+    }
+  ],
+  "body": "## How it works\n\n1. A row is marked ready, for example a due date reached.\n2. The integration sends the template with that row's values.\n3. Delivery status is written back to the row.\n4. Replies can be routed to a shared inbox.\n\n## When to move beyond a sheet\n\nIf several people edit the sheet and mistakes send wrong messages, a small internal tool with validation is safer. See [internal tools](/blog/internal-tools-the-highest-return-software-most-businesses-never-build).",
+  "faqs": [
+    {
+      "q": "Can I send to people who have not opted in?",
+      "a": "No. Keep an opt-in column and send only to those who agreed."
+    },
+    {
+      "q": "Is there a sending limit?",
+      "a": "Meta applies messaging limits that increase as your number builds a good quality rating."
+    }
+  ],
+  "related": [
+    "google-sheets-tally",
+    "razorpay-whatsapp",
+    "hubspot-whatsapp"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

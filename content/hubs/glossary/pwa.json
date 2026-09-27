@@ -1,0 +1,44 @@
+{
+  "slug": "pwa",
+  "title": "PWA (Progressive Web App)",
+  "seoTitle": "What Is a PWA? Progressive Web Apps Explained",
+  "seoDescription": "A PWA is a website that installs and behaves like an app. When a PWA can replace a native app, offline use, costs and limits on iPhone and Android.",
+  "summary": "A PWA (Progressive Web App) is a website built so it can be installed on a phone's home screen, open full-screen, work offline in part, and send notifications, without going through an app store. For many business tools it offers most of an app's benefits at a lower cost.",
+  "dataPoints": [
+    {
+      "label": "Installs from",
+      "value": "The browser, no app store needed"
+    },
+    {
+      "label": "Works offline",
+      "value": "Yes, for cached screens and queued data entry, when designed for it"
+    },
+    {
+      "label": "Cost versus native apps",
+      "value": "Usually lower: one codebase for web, Android and iPhone"
+    },
+    {
+      "label": "Limits",
+      "value": "Some device features and iPhone background behaviour are more restricted than native apps"
+    }
+  ],
+  "body": "## When a PWA is a good choice\n\n- Internal tools for staff: field sales, delivery, inspections.\n- Customer portals used occasionally.\n- Products that need fast updates without store approvals.\n\n## When a native app is better\n\n- Heavy use of device hardware such as Bluetooth or background location.\n- Consumer products where app-store presence matters.\n\nSee [progressive web apps](/blog/progressive-web-apps-when-a-website-can-replace-an-app) and [mobile app or mobile-friendly web app](/blog/do-you-need-a-mobile-app-or-a-mobile-friendly-web-app).",
+  "faqs": [
+    {
+      "q": "Can a PWA send push notifications on iPhone?",
+      "a": "Yes, on recent iOS versions once the user adds the PWA to the home screen, with some limits compared with native apps."
+    },
+    {
+      "q": "Can I publish a PWA on Google Play?",
+      "a": "Yes, it can be packaged for the Play Store if store presence is needed."
+    }
+  ],
+  "related": [
+    "mvp",
+    "saas",
+    "api"
+  ],
+  "service": "/services/mobile-app-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

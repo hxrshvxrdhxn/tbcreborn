@@ -1,0 +1,45 @@
+{
+  "slug": "llm",
+  "title": "LLM (Large Language Model)",
+  "seoTitle": "What Is an LLM? Large Language Models Explained Simply",
+  "seoDescription": "An LLM is the AI model behind tools like ChatGPT and Claude. What LLMs can and cannot do for a business, costs, data privacy and how they are put into software.",
+  "summary": "An LLM (Large Language Model) is an AI model trained on very large amounts of text so it can read, summarise, answer questions and write. It is the technology behind ChatGPT, Claude and Gemini, and it can be built into your own software to handle documents, emails and customer queries.",
+  "dataPoints": [
+    {
+      "label": "Good at",
+      "value": "Summarising, extracting fields from documents, drafting, classifying, answering from supplied material"
+    },
+    {
+      "label": "Weak at",
+      "value": "Exact calculations, facts it was not given, anything needing guaranteed accuracy without checks"
+    },
+    {
+      "label": "Deployment options",
+      "value": "Hosted APIs (OpenAI, Anthropic, Google) or open-weight models on your own servers"
+    },
+    {
+      "label": "Cost driver",
+      "value": "Volume of text processed, measured in tokens"
+    }
+  ],
+  "body": "## How businesses use LLMs\n\n- Reading invoices, purchase orders and contracts into structured data.\n- Answering staff or customer questions from company documents.\n- Drafting replies, proposals and summaries for a person to review.\n\n## Making LLM output reliable\n\nGive the model the right source material (see [RAG](/glossary/rag)), constrain what it may answer, validate outputs, and route uncertain cases to a person. See [controlling hallucination](/blog/controlling-hallucination-making-ai-output-safe-for-client-facing-use).",
+  "faqs": [
+    {
+      "q": "Will an LLM learn from my company data?",
+      "a": "Not unless you train or fine-tune it. Business API plans from major providers generally do not use your inputs for training; check the terms of the plan you use."
+    },
+    {
+      "q": "Can I run an LLM on my own servers?",
+      "a": "Yes, with open-weight models. It suits sensitive data or high volumes but needs GPU hardware and maintenance."
+    }
+  ],
+  "related": [
+    "rag",
+    "hallucination",
+    "fine-tuning",
+    "ai-agent"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "sla",
+  "title": "SLA (Service Level Agreement)",
+  "seoTitle": "What Is an SLA? Service Level Agreements Explained",
+  "seoDescription": "An SLA defines the service a vendor promises: uptime, response times and remedies. What to include in software and support SLAs, and common traps.",
+  "summary": "An SLA (Service Level Agreement) is the part of a contract that defines the level of service a vendor commits to, such as 99.9% uptime or a four-hour response to critical issues, how it is measured, and what happens when the vendor misses it.",
+  "dataPoints": [
+    {
+      "label": "Typical measures",
+      "value": "Uptime percentage, response time, resolution time, support hours"
+    },
+    {
+      "label": "Uptime in plain terms",
+      "value": "99.9% allows about 43 minutes of downtime a month; 99.5% about 3.6 hours"
+    },
+    {
+      "label": "Remedies",
+      "value": "Service credits, escalation, right to terminate after repeated misses"
+    },
+    {
+      "label": "Common trap",
+      "value": "Response time promised, but no commitment on resolution"
+    }
+  ],
+  "body": "## What a good software support SLA covers\n\n- Severity levels with examples: critical, high, medium, low.\n- Response and resolution targets for each.\n- Support hours and contact channels.\n- Exclusions, such as planned maintenance windows.\n- Monthly reporting against the targets.\n\nSee [software maintenance after launch](/blog/software-maintenance-after-launch-what-to-budget-for) and [security requirements for every software contract](/blog/security-requirements-to-put-in-every-software-contract).",
+  "faqs": [
+    {
+      "q": "What uptime should I ask for?",
+      "a": "99.5% to 99.9% is typical for business applications. Higher targets cost more to engineer and host."
+    },
+    {
+      "q": "Are service credits worth much?",
+      "a": "Usually small. The real value of an SLA is clear expectations and escalation."
+    }
+  ],
+  "related": [
+    "cloud-hosting",
+    "fixed-price-contract",
+    "custom-software"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

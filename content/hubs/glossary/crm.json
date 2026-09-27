@@ -1,0 +1,45 @@
+{
+  "slug": "crm",
+  "title": "CRM (Customer Relationship Management)",
+  "seoTitle": "What Is a CRM? A Guide for Indian Businesses",
+  "seoDescription": "A CRM tracks leads, customers, follow-ups and deals in one place. What it does, Zoho vs HubSpot vs custom, WhatsApp integration and costs for Indian SMEs.",
+  "summary": "A CRM (Customer Relationship Management) system records every lead, customer, conversation and deal in one place, so your team knows who to follow up with, what was promised, and which opportunities are likely to close. For Indian businesses, WhatsApp integration is often the deciding feature.",
+  "dataPoints": [
+    {
+      "label": "Core features",
+      "value": "Lead capture, pipeline, follow-up reminders, activity history, quotes, reports"
+    },
+    {
+      "label": "Popular in India",
+      "value": "Zoho CRM, HubSpot, Salesforce, LeadSquared, Freshsales, custom CRMs"
+    },
+    {
+      "label": "India-specific needs",
+      "value": "WhatsApp messaging, GST-ready quotes, Tally sync, Hindi and regional-language templates"
+    },
+    {
+      "label": "Adoption rate driver",
+      "value": "How little extra typing it asks of the sales team"
+    }
+  ],
+  "body": "## What a CRM changes\n\nWithout a CRM, leads live in phones, notebooks and inboxes, and they leave when a salesperson does. A CRM keeps the history with the company and makes follow-ups routine rather than memory-based.\n\n## Packaged or custom\n\nPackaged CRMs are quick to start and cover most needs. A custom CRM makes sense when your sales process is unusual, when it must connect deeply to operations, or when per-user fees become significant. See [custom CRM vs Zoho vs HubSpot](/blog/custom-crm-vs-zoho-vs-hubspot-for-indian-smes).\n\n## Make it stick\n\nCapture leads automatically from the website, WhatsApp and calls; keep required fields few; and review the pipeline weekly from the CRM itself.",
+  "faqs": [
+    {
+      "q": "Do small businesses need a CRM?",
+      "a": "Once more than one person handles leads, or leads are lost between enquiry and quote, a simple CRM usually pays for itself."
+    },
+    {
+      "q": "Can a CRM send WhatsApp messages?",
+      "a": "Yes, through the WhatsApp Business Platform (Cloud API), usually via the CRM's own integration or a provider."
+    }
+  ],
+  "related": [
+    "erp",
+    "integration",
+    "saas",
+    "api"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

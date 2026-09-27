@@ -1,0 +1,44 @@
+{
+  "slug": "headless-cms",
+  "title": "Headless CMS",
+  "seoTitle": "What Is a Headless CMS? Explained for Business Owners",
+  "seoDescription": "A headless CMS stores content separately from the website that displays it. Benefits for speed and multiple channels, trade-offs, costs and when it fits.",
+  "summary": "A headless CMS is a content system that stores and manages content but does not decide how it looks; developers fetch the content through an API and display it on a fast custom website, app or other channel. It trades some editing convenience for speed, security and flexibility.",
+  "dataPoints": [
+    {
+      "label": "Examples",
+      "value": "Sanity, Strapi, Contentful, Payload, Storyblok"
+    },
+    {
+      "label": "Benefits",
+      "value": "Faster sites, fewer security risks, one content source for web, app and more"
+    },
+    {
+      "label": "Trade-offs",
+      "value": "Page previews and layout changes need developer set-up"
+    },
+    {
+      "label": "Suits",
+      "value": "Growing companies with frequent content, multiple channels or performance targets"
+    }
+  ],
+  "body": "## How it differs from WordPress\n\nIn a traditional CMS, content and page templates live together. In a headless set-up, editors work in the CMS while the website, often built with a framework such as Next.js, fetches content through an [API](/glossary/api).\n\n## Is it right for you\n\nIf your site is small and rarely changes, a traditional CMS is simpler. If speed, several channels or a design system matter, headless is worth it. See [headless CMS for growing companies](/blog/headless-cms-for-growing-companies).",
+  "faqs": [
+    {
+      "q": "Do editors find headless CMSs harder?",
+      "a": "Slightly at first, especially for page layouts, but good set-ups include live previews and reusable blocks."
+    },
+    {
+      "q": "Is a headless site better for SEO?",
+      "a": "It can be faster, which helps, but SEO depends on content, structure and technical set-up, not the CMS alone."
+    }
+  ],
+  "related": [
+    "cms",
+    "core-web-vitals",
+    "api"
+  ],
+  "service": "/services/web-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

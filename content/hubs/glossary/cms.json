@@ -1,0 +1,44 @@
+{
+  "slug": "cms",
+  "title": "CMS (Content Management System)",
+  "seoTitle": "What Is a CMS? Content Management Systems Explained",
+  "seoDescription": "A CMS lets your team edit website content without a developer. WordPress vs headless CMS, what to look for, costs and security basics for businesses.",
+  "summary": "A CMS (Content Management System) is software that lets non-technical staff create and edit website pages, blog posts and images without changing code. WordPress is the best-known example; headless CMSs separate content editing from how the website is built.",
+  "dataPoints": [
+    {
+      "label": "Popular options",
+      "value": "WordPress, Webflow, Sanity, Strapi, Contentful, Payload"
+    },
+    {
+      "label": "Editors need",
+      "value": "Simple page editing, previews, image handling, roles and approvals"
+    },
+    {
+      "label": "Security",
+      "value": "Plugin and core updates, strong passwords and two-factor log-in"
+    },
+    {
+      "label": "SEO features",
+      "value": "Editable titles and descriptions, clean URLs, sitemaps, redirects"
+    }
+  ],
+  "body": "## Traditional or headless\n\nA traditional CMS such as WordPress manages both content and page design. A [headless CMS](/glossary/headless-cms) stores content and delivers it to a separately built, usually faster, website or app.\n\n## Choosing\n\nMatch the CMS to who will edit and how often, how much design freedom you need, and who will maintain it. See [Next.js vs WordPress](/blog/nextjs-vs-wordpress-for-a-business-website-in-2026).",
+  "faqs": [
+    {
+      "q": "Is WordPress still a good choice?",
+      "a": "For many business websites, yes, when kept updated and not overloaded with plugins."
+    },
+    {
+      "q": "Can I switch CMS later without losing rankings?",
+      "a": "Yes, with careful URL mapping and redirects. See our guide on website migration without losing rankings."
+    }
+  ],
+  "related": [
+    "headless-cms",
+    "core-web-vitals",
+    "database"
+  ],
+  "service": "/services/web-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

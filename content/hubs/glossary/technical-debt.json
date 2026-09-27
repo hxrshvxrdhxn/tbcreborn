@@ -1,0 +1,44 @@
+{
+  "slug": "technical-debt",
+  "title": "Technical Debt",
+  "seoTitle": "What Is Technical Debt? A Business Owner's Guide",
+  "seoDescription": "Technical debt is the future cost of shortcuts in software. How it builds up, how it slows your business, and how to decide when to pay it down.",
+  "summary": "Technical debt is the extra future cost created when software is built with shortcuts, such as copied code, missing tests or outdated components, to save time today. Like financial debt it accrues interest: each change takes longer and breaks more often until the shortcuts are fixed.",
+  "dataPoints": [
+    {
+      "label": "Symptoms",
+      "value": "Simple changes take weeks, frequent bugs after releases, only one developer understands the system"
+    },
+    {
+      "label": "Common causes",
+      "value": "Rushed deadlines, no code reviews, outdated frameworks, missing documentation"
+    },
+    {
+      "label": "Paying it down",
+      "value": "Refactoring, adding tests, upgrading dependencies, documenting"
+    },
+    {
+      "label": "Budget rule of thumb",
+      "value": "Many teams reserve 15–25% of development time for it"
+    }
+  ],
+  "body": "## Why it matters to the business\n\nTechnical debt shows up as slower delivery, outages and dependence on individuals. It is invisible on the balance sheet but real in lost time and missed opportunities.\n\n## When to pay it down\n\n- Before building major new features on a fragile part.\n- When a key developer is leaving.\n- When security updates can no longer be applied.\n\nSee [legacy system modernisation: rewrite, refactor or wrap](/blog/legacy-system-modernisation-rewrite-refactor-or-wrap).",
+  "faqs": [
+    {
+      "q": "Is all technical debt bad?",
+      "a": "No. Deliberate, recorded shortcuts to test an idea quickly can be sensible, as long as they are repaid."
+    },
+    {
+      "q": "How do I measure technical debt?",
+      "a": "Track delivery speed, bug rates after releases and the age of key dependencies; an independent code review gives a clearer picture."
+    }
+  ],
+  "related": [
+    "mvp",
+    "uat",
+    "saas"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "custom-software",
+  "title": "Custom Software",
+  "seoTitle": "What Is Custom Software? When It Beats Off-the-Shelf",
+  "seoDescription": "Custom software is built for your specific processes instead of bought ready-made. When it makes sense, costs in India, ownership and how to reduce risk.",
+  "summary": "Custom software is built specifically for one business's processes, users and systems, rather than bought as a ready-made product. It fits how you work and can connect deeply to your other tools, at the cost of higher upfront investment and the need for a reliable development partner.",
+  "dataPoints": [
+    {
+      "label": "Makes sense when",
+      "value": "Your process is a competitive advantage, packaged tools need heavy workarounds, or per-user fees grow large"
+    },
+    {
+      "label": "Typical first version",
+      "value": "8–16 weeks for a focused system"
+    },
+    {
+      "label": "Ownership",
+      "value": "Agree in writing that you own the code, data and hosting accounts"
+    },
+    {
+      "label": "Risk reducers",
+      "value": "Discovery phase, phased delivery, UAT, documentation, handover clause"
+    }
+  ],
+  "body": "## Build, buy or extend\n\nMany businesses do best with a mix: packaged tools for standard functions such as accounting, and custom software for the process that makes them different. See [build, buy or extend](/blog/build-buy-or-extend-choosing-software-for-a-100-person-company).\n\n## Costs\n\nCost depends on users, workflows, integrations and quality requirements. See [custom software development costs in India](/blog/how-much-does-custom-software-development-cost-in-india-in-2026).",
+  "faqs": [
+    {
+      "q": "Is custom software only for large companies?",
+      "a": "No. Small, focused internal tools are often the highest-return custom software for SMEs."
+    },
+    {
+      "q": "What happens if the developer leaves?",
+      "a": "With documented code in your own repository and a handover clause, another team can take over."
+    }
+  ],
+  "related": [
+    "low-code",
+    "fixed-price-contract",
+    "data-migration"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

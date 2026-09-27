@@ -1,0 +1,50 @@
+{
+  "slug": "hubspot-whatsapp",
+  "title": "HubSpot and WhatsApp Integration",
+  "toolA": "HubSpot",
+  "toolB": "WhatsApp Business",
+  "seoTitle": "HubSpot WhatsApp Integration: Chats, Templates and Workflows",
+  "seoDescription": "Connect WhatsApp to HubSpot to chat from the inbox, log conversations on contacts and send template messages from workflows. Options, plans and set-up.",
+  "summary": "A HubSpot–WhatsApp integration connects a WhatsApp Business number to HubSpot so teams can reply to WhatsApp chats from the HubSpot inbox, log every conversation on the contact record and send approved template messages from workflows, such as a follow-up after a demo.",
+  "dataPoints": [
+    {
+      "label": "Options",
+      "value": "HubSpot's native WhatsApp channel on eligible paid plans, or marketplace apps"
+    },
+    {
+      "label": "WhatsApp side",
+      "value": "WhatsApp Business Platform number with approved templates"
+    },
+    {
+      "label": "Logged in HubSpot",
+      "value": "Messages and replies on the contact timeline"
+    },
+    {
+      "label": "Automation",
+      "value": "Template messages triggered from HubSpot workflows"
+    },
+    {
+      "label": "Typical effort",
+      "value": "Days to set up; longer when templates and workflows are designed together"
+    }
+  ],
+  "body": "## Good first workflows\n\n1. Acknowledge new leads on WhatsApp within minutes.\n2. Remind contacts of booked meetings.\n3. Follow up after a quote with a helpful resource.\n\n## Consent and quality\n\nRecord opt-in, keep marketing templates relevant, and watch your number's quality rating. See [WhatsApp or a dedicated app](/blog/whatsapp-or-a-dedicated-app-choosing-the-right-channel).",
+  "faqs": [
+    {
+      "q": "Which HubSpot plans include WhatsApp?",
+      "a": "The native channel is limited to certain paid tiers; check HubSpot's current plan details or use a marketplace app."
+    },
+    {
+      "q": "Can multiple salespeople use one WhatsApp number?",
+      "a": "Yes, through the shared HubSpot inbox with conversations assigned to owners."
+    }
+  ],
+  "related": [
+    "zoho-crm-whatsapp",
+    "shopify-whatsapp",
+    "google-sheets-whatsapp"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

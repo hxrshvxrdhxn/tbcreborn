@@ -1,0 +1,44 @@
+{
+  "slug": "dpdp-act",
+  "title": "DPDP Act (Digital Personal Data Protection Act)",
+  "seoTitle": "DPDP Act Explained for Business Software",
+  "seoDescription": "India's DPDP Act governs how businesses collect and use personal data. What it means for your website, CRM and apps: consent, purpose, security and deletion.",
+  "summary": "The Digital Personal Data Protection Act, 2023 is India's main law on personal data. It requires businesses to collect personal data for clear purposes with valid consent or another lawful basis, keep it secure, and let people access, correct and erase their data. The rules were notified in November 2025 with a phased timeline.",
+  "dataPoints": [
+    {
+      "label": "Covers",
+      "value": "Digital personal data of individuals in India, collected online or digitised later"
+    },
+    {
+      "label": "Key duties",
+      "value": "Notice and consent, purpose limitation, security safeguards, breach reporting, erasure when no longer needed"
+    },
+    {
+      "label": "Software impact",
+      "value": "Consent records, access controls, audit logs, retention and deletion features"
+    },
+    {
+      "label": "Penalties",
+      "value": "Up to ₹250 crore for certain failures, such as inadequate security safeguards"
+    }
+  ],
+  "body": "## What to build into software\n\n- Clear notices and recorded consent where consent is the basis.\n- Role-based access so staff see only what they need.\n- Logs of who accessed or changed personal data.\n- Retention periods and automatic deletion.\n- A way to handle access, correction and erasure requests.\n\nSee [the DPDP Act and your software](/blog/the-dpdp-act-what-indian-businesses-must-build-into-their-software). This is general information, not legal advice; confirm obligations with a lawyer.",
+  "faqs": [
+    {
+      "q": "Does the DPDP Act apply to small businesses?",
+      "a": "Yes, it applies broadly, though some obligations are heavier for businesses designated as Significant Data Fiduciaries."
+    },
+    {
+      "q": "Do I need consent for every piece of data?",
+      "a": "Consent is one basis; the Act also allows certain legitimate uses. Map each data use to its basis with legal advice."
+    }
+  ],
+  "related": [
+    "crm",
+    "saas",
+    "integration"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

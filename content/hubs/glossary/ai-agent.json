@@ -1,0 +1,45 @@
+{
+  "slug": "ai-agent",
+  "title": "AI Agent",
+  "seoTitle": "What Is an AI Agent? Explained for Business Owners",
+  "seoDescription": "An AI agent is an AI system that can take actions in your software, not just answer. What agents can reliably do today, risks, guardrails and good first uses.",
+  "summary": "An AI agent is an AI system that works towards a goal by taking actions, such as reading an email, looking up an order, drafting a reply and updating the CRM, rather than only answering a question. Agents work best today on narrow, well-defined tasks with clear limits and human approval for important steps.",
+  "dataPoints": [
+    {
+      "label": "Reliable today",
+      "value": "Triage and routing, data entry from documents, drafting replies, looking up and summarising records"
+    },
+    {
+      "label": "Needs caution",
+      "value": "Payments, customer-facing commitments, deleting data, long multi-step plans"
+    },
+    {
+      "label": "Essential guardrails",
+      "value": "Limited permissions, action logs, approval steps, easy human override"
+    },
+    {
+      "label": "Good first pilot",
+      "value": "One repetitive back-office task with a clear definition of done"
+    }
+  ],
+  "body": "## Agents versus automation\n\nTraditional automation follows fixed rules. An agent can handle varied inputs, such as emails written in different ways, and decide which of a few allowed actions to take. That flexibility is useful, and it is why limits matter.\n\n## Designing a safe agent\n\n- Give it only the tools and permissions the task needs.\n- Log every action and the reason.\n- Require approval above set limits.\n- Measure accuracy on real cases before widening its scope.\n\nSee [AI agents for business operations](/blog/ai-agents-for-business-operations-what-works-today).",
+  "faqs": [
+    {
+      "q": "Will AI agents replace staff?",
+      "a": "For narrow tasks they remove repetitive work; people move to exceptions, judgement and customer relationships. See our post on redeploying people when work is automated."
+    },
+    {
+      "q": "How much does an AI agent cost to build?",
+      "a": "A focused agent for one task is usually a few weeks of work plus model usage costs, which scale with volume."
+    }
+  ],
+  "related": [
+    "llm",
+    "rag",
+    "hallucination",
+    "integration"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

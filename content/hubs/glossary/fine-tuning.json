@@ -1,0 +1,44 @@
+{
+  "slug": "fine-tuning",
+  "title": "Fine-Tuning",
+  "seoTitle": "What Is Fine-Tuning an AI Model? When Businesses Need It",
+  "seoDescription": "Fine-tuning trains an existing AI model on your examples to change how it behaves. When it helps, when RAG is better, data needed and typical costs.",
+  "summary": "Fine-tuning is further training of an existing AI model on your own examples, so it consistently follows a style, format or classification scheme. It changes how the model behaves; it is not the best way to give it up-to-date company knowledge, which is what retrieval (RAG) is for.",
+  "dataPoints": [
+    {
+      "label": "Good uses",
+      "value": "Consistent tone or format, domain classification, extracting fields in a fixed schema"
+    },
+    {
+      "label": "Data needed",
+      "value": "Hundreds to thousands of high-quality input and output examples"
+    },
+    {
+      "label": "Poor uses",
+      "value": "Keeping answers current with changing documents or prices"
+    },
+    {
+      "label": "Try first",
+      "value": "Better prompts and RAG, which are cheaper to change"
+    }
+  ],
+  "body": "## Fine-tuning versus RAG\n\n| Need | Better approach |\n| --- | --- |\n| Answers from current documents | RAG |\n| Consistent writing style | Fine-tuning or detailed prompts |\n| Classifying items into your categories | Fine-tuning, or prompts with examples |\n| Citing sources | RAG |\n\n## Before you fine-tune\n\nCollect clean examples, define how you will measure improvement, and compare against a strong prompt-only baseline. See [RAG or fine-tuning](/blog/rag-or-fine-tuning-choosing-the-right-approach-for-your-business-data).",
+  "faqs": [
+    {
+      "q": "Is fine-tuning expensive?",
+      "a": "Training costs have fallen, but preparing good examples and evaluating results is the main effort."
+    },
+    {
+      "q": "Can I fine-tune a model to run on my own servers?",
+      "a": "Yes, smaller open-weight models can be fine-tuned and run privately for narrow tasks."
+    }
+  ],
+  "related": [
+    "llm",
+    "rag",
+    "hallucination"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

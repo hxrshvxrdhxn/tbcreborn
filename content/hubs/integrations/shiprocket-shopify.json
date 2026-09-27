@@ -1,0 +1,50 @@
+{
+  "slug": "shiprocket-shopify",
+  "title": "Shiprocket and Shopify Integration",
+  "toolA": "Shiprocket",
+  "toolB": "Shopify",
+  "seoTitle": "Shiprocket Shopify Integration: Shipping and Tracking Sync",
+  "seoDescription": "Connect Shopify to Shiprocket to create shipments, pick couriers, sync tracking and handle COD and returns. What is automatic, what needs custom rules.",
+  "summary": "A Shiprocket–Shopify integration imports Shopify orders into Shiprocket, creates shipments with the chosen courier, and sends tracking numbers and delivery status back to Shopify so customers are notified automatically. Shiprocket offers a standard channel connection; custom work adds your own rules.",
+  "dataPoints": [
+    {
+      "label": "Standard connection",
+      "value": "Shiprocket's built-in Shopify channel"
+    },
+    {
+      "label": "What syncs",
+      "value": "Orders, weights and dimensions, tracking numbers, fulfilment status, COD remittance"
+    },
+    {
+      "label": "Custom rules",
+      "value": "Courier choice by pincode or weight, NDR handling, WhatsApp updates, returns flows"
+    },
+    {
+      "label": "Accounting link",
+      "value": "COD remittances and shipping charges can post to Tally"
+    },
+    {
+      "label": "Typical effort",
+      "value": "Hours for the standard channel; 1–3 weeks for custom rules"
+    }
+  ],
+  "body": "## Beyond the standard channel\n\n- Automatic courier selection based on cost and past delivery success by pincode.\n- Non-delivery reports (NDR) sent to customers on WhatsApp to reattempt delivery.\n- COD remittance reconciliation against orders.\n\nSee [delivery and logistics apps](/blog/delivery-and-logistics-apps-features-that-matter).",
+  "faqs": [
+    {
+      "q": "Do tracking updates reach customers automatically?",
+      "a": "Yes, fulfilment with tracking syncs back to Shopify, which notifies customers; WhatsApp updates need an extra step."
+    },
+    {
+      "q": "Can returns be managed too?",
+      "a": "Yes, Shiprocket supports return shipments; the refund in Shopify and accounts still needs a defined process."
+    }
+  ],
+  "related": [
+    "shopify-whatsapp",
+    "tally-shopify",
+    "tally-amazon"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

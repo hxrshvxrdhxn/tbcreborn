@@ -1,0 +1,44 @@
+{
+  "slug": "database",
+  "title": "Database",
+  "seoTitle": "What Is a Database? A Plain Guide for Business Owners",
+  "seoDescription": "A database stores your business data in a structured, reliable way. Databases vs spreadsheets, common types, backups and what to ask your developer.",
+  "summary": "A database is software that stores business data in an organised, reliable way, so many people and systems can read and update it at once without conflicts or loss. Most business applications keep customers, orders, stock and invoices in a relational database such as PostgreSQL or MySQL.",
+  "dataPoints": [
+    {
+      "label": "Common choices",
+      "value": "PostgreSQL, MySQL, Microsoft SQL Server; MongoDB for flexible documents"
+    },
+    {
+      "label": "Versus spreadsheets",
+      "value": "Enforces rules, handles many users at once, keeps history, scales to millions of rows"
+    },
+    {
+      "label": "Must-haves",
+      "value": "Automatic backups, tested restores, access control, encryption"
+    },
+    {
+      "label": "Ownership",
+      "value": "Your company should hold the account and credentials"
+    }
+  ],
+  "body": "## Signs you have outgrown spreadsheets\n\n- Several versions of the same file.\n- Formulas break when someone edits a column.\n- More than a few people need to update data at the same time.\n\nSee [moving from spreadsheets to a database](/blog/moving-from-spreadsheets-to-a-database-a-practical-plan).\n\n## Protect it\n\nDaily automated backups, one copy off-site, and a restore test every quarter. See [backups and disaster recovery](/blog/backups-disaster-recovery-and-uptime-a-founders-checklist).",
+  "faqs": [
+    {
+      "q": "Which database should my application use?",
+      "a": "For most business applications, PostgreSQL is a safe, well-supported default. Your developer should explain any different choice."
+    },
+    {
+      "q": "Can I access my own data directly?",
+      "a": "You should be able to, through reports, exports or read-only access. Agree this in the contract."
+    }
+  ],
+  "related": [
+    "data-migration",
+    "cloud-hosting",
+    "low-code"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

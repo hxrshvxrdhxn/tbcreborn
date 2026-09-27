@@ -1,0 +1,50 @@
+{
+  "slug": "indiamart-zoho-crm",
+  "title": "IndiaMART and Zoho CRM Integration",
+  "toolA": "IndiaMART",
+  "toolB": "Zoho CRM",
+  "seoTitle": "IndiaMART Zoho CRM Integration: Leads Into CRM Instantly",
+  "seoDescription": "Pull IndiaMART buy leads and enquiries into Zoho CRM automatically, assign them to sales and follow up faster. How it works, setup and common issues.",
+  "summary": "An IndiaMART–Zoho CRM integration pulls every IndiaMART enquiry and purchased buy lead into Zoho CRM automatically, assigns it to a salesperson and starts follow-up, instead of staff copying leads from the IndiaMART seller panel. Speed matters: buyers often contact several suppliers at once.",
+  "dataPoints": [
+    {
+      "label": "IndiaMART side",
+      "value": "Lead Manager CRM integration (pull API with a CRM key), available to paid sellers"
+    },
+    {
+      "label": "Zoho side",
+      "value": "Zoho CRM REST API or a marketplace extension"
+    },
+    {
+      "label": "What syncs",
+      "value": "Buyer name, company, phone, email, city, product enquired, message, lead source"
+    },
+    {
+      "label": "Duplicate handling",
+      "value": "Match on phone number to avoid repeat leads from the same buyer"
+    },
+    {
+      "label": "Typical effort",
+      "value": "Days with an extension; 1–2 weeks custom with assignment rules and WhatsApp follow-up"
+    }
+  ],
+  "body": "## How it works\n\n1. The integration calls IndiaMART's lead API every few minutes with your CRM key.\n2. New enquiries are created as Zoho leads, tagged with source and product.\n3. Assignment rules route leads by product, city or round-robin.\n4. An instant WhatsApp or email acknowledgement can go to the buyer.\n\n## Getting more from IndiaMART leads\n\nMeasure time to first response and conversion by product category; many sellers find a small number of categories produce most orders. See [automating sales follow-up](/blog/automating-sales-follow-up-with-ai-without-sounding-like-a-robot).",
+  "faqs": [
+    {
+      "q": "Does this work with free IndiaMART listings?",
+      "a": "The lead API is generally tied to paid seller plans; check your plan with IndiaMART."
+    },
+    {
+      "q": "Can the same set-up work for TradeIndia or Justdial?",
+      "a": "Similar integrations are possible where those platforms provide lead exports or APIs; each needs its own connector."
+    }
+  ],
+  "related": [
+    "zoho-crm-whatsapp",
+    "website-forms-zoho-crm",
+    "calendly-zoho-crm"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

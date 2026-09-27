@@ -1,0 +1,50 @@
+{
+  "slug": "shopify-whatsapp",
+  "title": "Shopify and WhatsApp Integration",
+  "toolA": "Shopify",
+  "toolB": "WhatsApp Business",
+  "seoTitle": "Shopify WhatsApp Integration: Order Updates and Carts",
+  "seoDescription": "Send order confirmations, shipping updates, COD confirmations and abandoned cart reminders from Shopify on WhatsApp. Setup, costs, templates and consent.",
+  "summary": "A Shopify–WhatsApp integration sends customers order confirmations, shipping updates, COD confirmation requests and abandoned-cart reminders on WhatsApp automatically, using the WhatsApp Business Platform. For Indian D2C brands it typically lifts COD confirmation rates and reduces \"where is my order\" calls.",
+  "dataPoints": [
+    {
+      "label": "WhatsApp side",
+      "value": "WhatsApp Business Platform (Cloud API) with approved message templates"
+    },
+    {
+      "label": "Shopify side",
+      "value": "Order, fulfilment and checkout webhooks"
+    },
+    {
+      "label": "Common messages",
+      "value": "Order confirmed, COD confirmation, shipped with tracking, delivered, abandoned cart"
+    },
+    {
+      "label": "Pricing",
+      "value": "Meta charges per template message by category (marketing, utility, authentication); utility messages cost less than marketing"
+    },
+    {
+      "label": "Consent",
+      "value": "Customers must opt in to receive WhatsApp messages"
+    }
+  ],
+  "body": "## What to automate first\n\n1. **COD confirmation**: ask the customer to confirm before dispatch; cancel unconfirmed orders to cut returns.\n2. **Shipping updates** with the tracking link.\n3. **Abandoned cart reminders** with a link back to checkout, for customers who opted in.\n\n## Build or use an app\n\nShopify apps from WhatsApp providers cover standard flows quickly. A custom integration suits you when messages depend on your own logistics, CRM or ERP data. See [WhatsApp Business API](/blog/whatsapp-business-api-automating-customer-communication).",
+  "faqs": [
+    {
+      "q": "Do I need a new phone number?",
+      "a": "The number used for the WhatsApp Business Platform cannot be used on the regular WhatsApp app at the same time, so many brands use a dedicated number."
+    },
+    {
+      "q": "Can customers reply?",
+      "a": "Yes. Replies arrive in a shared inbox or your CRM, and free-form replies are allowed within the 24-hour customer service window."
+    }
+  ],
+  "related": [
+    "zoho-crm-whatsapp",
+    "tally-shopify",
+    "tally-zoho-crm"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

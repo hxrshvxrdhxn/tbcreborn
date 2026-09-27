@@ -1,0 +1,50 @@
+{
+  "slug": "razorpay-whatsapp",
+  "title": "Razorpay and WhatsApp Integration",
+  "toolA": "Razorpay",
+  "toolB": "WhatsApp Business",
+  "seoTitle": "Razorpay WhatsApp Integration: Payment Links and Receipts",
+  "seoDescription": "Send Razorpay payment links, reminders and receipts on WhatsApp automatically. How it works, templates, pricing and collection results for Indian businesses.",
+  "summary": "A Razorpay–WhatsApp integration sends payment links, reminders before and after due dates, and receipts on WhatsApp, and updates your records the moment a payment succeeds. For businesses that invoice customers regularly, it usually shortens the time to get paid.",
+  "dataPoints": [
+    {
+      "label": "Razorpay side",
+      "value": "Payment Links API, payment and payment-link webhooks"
+    },
+    {
+      "label": "WhatsApp side",
+      "value": "Cloud API utility templates for reminders and receipts"
+    },
+    {
+      "label": "Typical flow",
+      "value": "Invoice issued, link sent, reminder at due date, receipt on payment"
+    },
+    {
+      "label": "Records",
+      "value": "Payment status written back to your billing system, CRM or Tally"
+    },
+    {
+      "label": "Typical effort",
+      "value": "1–3 weeks"
+    }
+  ],
+  "body": "## Why WhatsApp for collections\n\nCustomers open WhatsApp messages far more reliably than emails, and a link that opens UPI directly removes friction.\n\n## Design the reminders\n\n- A polite link on invoice day.\n- A reminder on the due date.\n- A follow-up a few days later, then hand over to a person.\n- Stop reminders instantly when the payment webhook arrives.\n\nSee [adding Razorpay payments and GST invoicing](/blog/adding-razorpay-payments-and-gst-invoicing-to-your-software).",
+  "faqs": [
+    {
+      "q": "Are payment reminders marketing messages?",
+      "a": "Reminders about an existing transaction are generally utility templates, which Meta prices lower than marketing. Template approval decides the category."
+    },
+    {
+      "q": "Can customers pay by UPI from the link?",
+      "a": "Yes, Razorpay payment links support UPI, cards, net banking and wallets, depending on your account settings."
+    }
+  ],
+  "related": [
+    "tally-razorpay",
+    "shopify-whatsapp",
+    "google-sheets-whatsapp"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

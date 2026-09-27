@@ -1,0 +1,44 @@
+{
+  "slug": "whatsapp-business-api",
+  "title": "WhatsApp Business API (Cloud API)",
+  "seoTitle": "What Is the WhatsApp Business API? Explained Simply",
+  "seoDescription": "The WhatsApp Business Platform lets software send and receive WhatsApp messages at scale. Templates, pricing, the 24-hour window, consent and uses.",
+  "summary": "The WhatsApp Business API, now the WhatsApp Business Platform with Meta's Cloud API, lets your software send and receive WhatsApp messages automatically: order updates, reminders, OTPs and support chats, from a business number that many staff and systems can share.",
+  "dataPoints": [
+    {
+      "label": "Starting conversations",
+      "value": "Only with Meta-approved message templates"
+    },
+    {
+      "label": "Replying",
+      "value": "Free-form replies allowed within 24 hours of the customer's last message"
+    },
+    {
+      "label": "Pricing",
+      "value": "Charged per template message, varying by category (marketing, utility, authentication)"
+    },
+    {
+      "label": "Consent",
+      "value": "Customers must opt in; opt-outs must be respected"
+    }
+  ],
+  "body": "## App, Business app, or Platform\n\nThe regular WhatsApp Business app suits one person on one phone. The Platform suits businesses that need automation, integrations with CRM or ERP, multiple agents and volume.\n\n## Common uses\n\n- Order and delivery updates, COD confirmation.\n- Appointment and payment reminders.\n- Support chats logged in a CRM.\n\nSee [WhatsApp Business API: automating customer communication](/blog/whatsapp-business-api-automating-customer-communication).",
+  "faqs": [
+    {
+      "q": "Do I need a provider?",
+      "a": "Not necessarily; the Cloud API is available directly from Meta. Providers add inboxes, templates and integrations for a fee."
+    },
+    {
+      "q": "Can I send bulk promotional messages?",
+      "a": "Only as approved marketing templates to customers who opted in, and quality ratings can limit sending if many users block or report you."
+    }
+  ],
+  "related": [
+    "chatbot",
+    "low-code",
+    "custom-software"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

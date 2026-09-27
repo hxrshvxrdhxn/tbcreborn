@@ -1,0 +1,50 @@
+{
+  "slug": "tally-zoho-crm",
+  "title": "Tally and Zoho CRM Integration",
+  "toolA": "TallyPrime",
+  "toolB": "Zoho CRM",
+  "seoTitle": "Tally Zoho CRM Integration: Customers, Quotes, Invoices",
+  "seoDescription": "Connect Zoho CRM and TallyPrime so won deals become invoices and sales teams see outstanding payments. What syncs, direction, effort and costs.",
+  "summary": "A Tally–Zoho CRM integration lets deals won in Zoho CRM become sales orders or invoices in TallyPrime, and shows sales teams each customer's outstanding balance and payment history from Tally inside the CRM. Sales and accounts stop working from different customer lists.",
+  "dataPoints": [
+    {
+      "label": "Zoho side",
+      "value": "Zoho CRM REST API with OAuth; API call limits depend on edition and licences"
+    },
+    {
+      "label": "Tally side",
+      "value": "TallyPrime XML interface via a connector on the Tally machine"
+    },
+    {
+      "label": "What syncs",
+      "value": "Accounts to ledgers, won deals to sales orders or invoices, outstanding and receipts back to CRM"
+    },
+    {
+      "label": "Source of truth",
+      "value": "Usually CRM for contacts and deals, Tally for invoices and balances"
+    },
+    {
+      "label": "Typical effort",
+      "value": "3–6 weeks custom"
+    }
+  ],
+  "body": "## Why sales and accounts need this\n\nSales promise delivery without knowing a customer is overdue; accounts chase payments without knowing a new order is pending. Showing Tally balances in Zoho CRM and creating invoices from won deals closes that gap.\n\n## Design decisions\n\n- Which system creates the customer, and how duplicates are prevented (match on GSTIN).\n- When a deal becomes a Tally voucher: on won, on approval, or on dispatch.\n- How often balances refresh in the CRM.\n\nSee [custom CRM vs Zoho vs HubSpot](/blog/custom-crm-vs-zoho-vs-hubspot-for-indian-smes).",
+  "faqs": [
+    {
+      "q": "Does Zoho Books make this unnecessary?",
+      "a": "If you move accounting to Zoho Books, the Zoho integration is built in. This integration is for businesses that keep Tally for accounts."
+    },
+    {
+      "q": "Can quotes created in Zoho CRM carry GST correctly?",
+      "a": "Yes, if products and tax rates are kept consistent between Zoho and Tally, which the integration can also sync."
+    }
+  ],
+  "related": [
+    "zoho-crm-whatsapp",
+    "tally-shopify",
+    "google-sheets-tally"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

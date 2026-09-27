@@ -1,0 +1,50 @@
+{
+  "slug": "website-forms-zoho-crm",
+  "title": "Website Forms and Zoho CRM Integration",
+  "toolA": "Website forms",
+  "toolB": "Zoho CRM",
+  "seoTitle": "Website Form to Zoho CRM: Capture Every Enquiry",
+  "seoDescription": "Send website contact and quote forms straight into Zoho CRM with source tracking, assignment and instant acknowledgement. Options, UTM capture and spam control.",
+  "summary": "A website form–Zoho CRM integration sends every contact, quote or demo request from your website straight into Zoho CRM as a lead, with the page it came from and its campaign source, so nothing waits in an inbox and marketing can see which pages bring enquiries.",
+  "dataPoints": [
+    {
+      "label": "Options",
+      "value": "Zoho web-to-lead forms, form plugins with Zoho connectors, or a custom API integration"
+    },
+    {
+      "label": "Capture",
+      "value": "Name, company, contact details, requirement, landing page, UTM source, medium and campaign"
+    },
+    {
+      "label": "Spam control",
+      "value": "Server-side validation, rate limits and a CAPTCHA or honeypot"
+    },
+    {
+      "label": "Follow-up",
+      "value": "Instant email or WhatsApp acknowledgement and owner assignment"
+    },
+    {
+      "label": "Typical effort",
+      "value": "A few days"
+    }
+  ],
+  "body": "## Why source tracking matters\n\nKnowing that a lead came from a Google search for \"custom CRM Noida\" through a specific page tells you which content earns business. Store the landing page and UTM parameters with the lead.\n\n## Keep forms short\n\nAsk only what you need to respond well. See [landing pages that convert for B2B services](/blog/landing-pages-that-convert-for-b2b-services).",
+  "faqs": [
+    {
+      "q": "Will Zoho web-to-lead forms match my site design?",
+      "a": "They can be styled, but a custom form posting to the Zoho API gives full control over design and validation."
+    },
+    {
+      "q": "Can the same lead go to Google Sheets as a backup?",
+      "a": "Yes, a parallel write to a sheet or database is a sensible safety net."
+    }
+  ],
+  "related": [
+    "indiamart-zoho-crm",
+    "calendly-zoho-crm",
+    "zoho-crm-whatsapp"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

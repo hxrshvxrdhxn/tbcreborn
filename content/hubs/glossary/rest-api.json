@@ -1,0 +1,44 @@
+{
+  "slug": "rest-api",
+  "title": "REST API",
+  "seoTitle": "What Is a REST API? Plain-English Explanation",
+  "seoDescription": "A REST API is the most common way modern software shares data over the web. What REST means and how it differs from older SOAP/XML APIs.",
+  "summary": "A REST API is a common style of API where each type of data, such as orders or customers, has its own web address, and standard web methods are used to read, create, update or delete it. Most modern business tools, including Razorpay, Shopify and Zoho, offer REST APIs, usually returning data as JSON.",
+  "dataPoints": [
+    {
+      "label": "Standard actions",
+      "value": "GET to read, POST to create, PUT or PATCH to update, DELETE to remove"
+    },
+    {
+      "label": "Usual data format",
+      "value": "JSON"
+    },
+    {
+      "label": "Older alternative",
+      "value": "SOAP with XML, still used by some ERPs, banks and Tally's XML interface"
+    },
+    {
+      "label": "Security",
+      "value": "API keys or OAuth tokens over HTTPS"
+    }
+  ],
+  "body": "## Why REST became the default\n\nREST uses the same building blocks as the web itself, so it is easy for developers to work with and test. A well-designed REST API is predictable: once you know how to fetch orders, fetching customers works the same way.\n\n## REST, GraphQL and SOAP\n\n- **REST**: one address per resource; simple and widespread.\n- **GraphQL**: one address where the caller asks for exactly the fields it needs; used by Shopify's Admin API.\n- **SOAP/XML**: older, more rigid; common in legacy systems.\n\n## What it means for your project\n\nIf both systems you want to connect have documented REST APIs, integration is usually straightforward. If one has only exports or an old XML interface, expect more effort. See [API](/glossary/api).",
+  "faqs": [
+    {
+      "q": "Is REST better than SOAP?",
+      "a": "For most new integrations, yes: simpler and better supported. SOAP remains in use where older systems require it."
+    },
+    {
+      "q": "Do I need to understand REST to buy software?",
+      "a": "No, but ask vendors whether their product has a documented API. It decides how easily it connects to everything else."
+    }
+  ],
+  "related": [
+    "api",
+    "webhook",
+    "integration"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

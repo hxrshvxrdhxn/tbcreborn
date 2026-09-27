@@ -1,0 +1,44 @@
+{
+  "slug": "two-factor-authentication",
+  "title": "Two-Factor Authentication (2FA)",
+  "seoTitle": "What Is Two-Factor Authentication? Why Businesses Need It",
+  "seoDescription": "Two-factor authentication adds a second check, such as a code on your phone, when logging in. How it works, which accounts need it first, and options.",
+  "summary": "Two-factor authentication (2FA) requires a second proof of identity, such as a code from an authenticator app or a security key, in addition to a password. It blocks most account takeovers that use stolen or guessed passwords, which makes it the single most effective security step for business accounts.",
+  "dataPoints": [
+    {
+      "label": "Methods",
+      "value": "Authenticator app codes, passkeys and security keys, SMS codes (weakest)"
+    },
+    {
+      "label": "Protect first",
+      "value": "Email, domain and DNS, cloud hosting, accounting, banking, admin panels"
+    },
+    {
+      "label": "Recovery",
+      "value": "Backup codes stored safely, and a second admin on critical accounts"
+    },
+    {
+      "label": "For your own software",
+      "value": "Build 2FA into admin and finance roles from the start"
+    }
+  ],
+  "body": "## Why it matters\n\nMost business breaches start with a compromised email or admin account. With 2FA, a stolen password alone is not enough.\n\n## Rolling it out\n\n1. Turn it on for email, domain registrar, cloud and banking accounts.\n2. Require it for admin users in your own applications.\n3. Store recovery codes securely.\n\nSee [cybersecurity basics for founder-led businesses](/blog/cybersecurity-basics-for-founder-led-businesses).",
+  "faqs": [
+    {
+      "q": "Is SMS-based 2FA good enough?",
+      "a": "Better than nothing, but authenticator apps and passkeys are more resistant to SIM-swap and phishing attacks."
+    },
+    {
+      "q": "Will 2FA slow my team down?",
+      "a": "Only slightly, and most apps remember trusted devices for a period."
+    }
+  ],
+  "related": [
+    "role-based-access-control",
+    "cloud-hosting",
+    "sla"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "e-invoicing",
+  "title": "GST E-Invoicing",
+  "seoTitle": "GST E-Invoicing Explained: What Businesses Must Build In",
+  "seoDescription": "GST e-invoicing requires eligible businesses to register B2B invoices with the IRP and print the IRN and QR code. Who it applies to and how software handles it.",
+  "summary": "GST e-invoicing is the system under which eligible businesses in India register each B2B invoice with the government's Invoice Registration Portal (IRP), receive an Invoice Reference Number (IRN) and signed QR code, and print them on the invoice. Accounting and ERP software usually handles this through an API or a GST Suvidha Provider.",
+  "dataPoints": [
+    {
+      "label": "Applies to",
+      "value": "Businesses above the notified aggregate turnover threshold (₹5 crore since August 2023)"
+    },
+    {
+      "label": "What you receive",
+      "value": "IRN, acknowledgement number and date, signed QR code"
+    },
+    {
+      "label": "How software connects",
+      "value": "Direct IRP API or via a GST Suvidha Provider (GSP)"
+    },
+    {
+      "label": "Common failures",
+      "value": "Invalid GSTINs, HSN mismatches, duplicate invoice numbers, portal downtime"
+    }
+  ],
+  "body": "## What software must do\n\n1. Generate the invoice in the prescribed JSON schema.\n2. Send it to the IRP and receive the IRN and QR code.\n3. Store the response and print the QR code on the invoice.\n4. Handle cancellations within the allowed window and retries when the portal is slow.\n\n## Build it in, not around\n\nE-invoicing works best when it is part of the invoicing workflow in your ERP or custom system, not a separate manual step. See [adding Razorpay payments and GST invoicing](/blog/adding-razorpay-payments-and-gst-invoicing-to-your-software).\n\nThresholds and rules change; confirm current requirements with your tax adviser.",
+  "faqs": [
+    {
+      "q": "Does Tally support e-invoicing?",
+      "a": "Yes, TallyPrime supports e-invoice generation for eligible businesses, subject to setup and connectivity."
+    },
+    {
+      "q": "Is e-invoicing needed for B2C invoices?",
+      "a": "Generally no; e-invoicing applies to B2B supplies. Separately, businesses with aggregate turnover above ₹500 crore must print a dynamic QR code on B2C invoices."
+    }
+  ],
+  "related": [
+    "erp",
+    "api",
+    "integration"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

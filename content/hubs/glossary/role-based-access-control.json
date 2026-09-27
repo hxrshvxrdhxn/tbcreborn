@@ -1,0 +1,44 @@
+{
+  "slug": "role-based-access-control",
+  "title": "Role-Based Access Control (RBAC)",
+  "seoTitle": "What Is Role-Based Access Control? Explained Simply",
+  "seoDescription": "Role-based access control gives each person access only to what their job needs. Why it matters for security and the DPDP Act, and how to design roles.",
+  "summary": "Role-based access control (RBAC) is a way of managing permissions where each user gets a role, such as sales, accounts or admin, and each role can see and do only what that job requires. It limits damage from mistakes or misuse and is a core safeguard for personal and financial data.",
+  "dataPoints": [
+    {
+      "label": "Typical roles",
+      "value": "Admin, manager, staff, read-only, external partner"
+    },
+    {
+      "label": "Controls",
+      "value": "Which screens, records, fields and actions each role can use"
+    },
+    {
+      "label": "Supports",
+      "value": "DPDP Act security safeguards, audit requirements, separation of duties"
+    },
+    {
+      "label": "Review cadence",
+      "value": "Quarterly, plus immediately when someone changes job or leaves"
+    }
+  ],
+  "body": "## Designing roles\n\n1. List what each job needs to see and do.\n2. Group into as few roles as practical.\n3. Give the minimum access by default.\n4. Log sensitive actions such as exports and deletions.\n\n## Common gaps\n\nShared log-ins, former staff still active, and everyone given admin \"for convenience\". See [cybersecurity basics for founder-led businesses](/blog/cybersecurity-basics-for-founder-led-businesses).",
+  "faqs": [
+    {
+      "q": "Is RBAC only for large companies?",
+      "a": "No. Even a 10-person team benefits from keeping salary, bank and customer data to the people who need it."
+    },
+    {
+      "q": "Can roles restrict individual fields?",
+      "a": "Yes, well-designed applications can hide fields such as cost price or phone numbers from certain roles."
+    }
+  ],
+  "related": [
+    "two-factor-authentication",
+    "database",
+    "sla"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

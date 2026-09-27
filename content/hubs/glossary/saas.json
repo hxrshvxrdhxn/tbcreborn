@@ -1,0 +1,45 @@
+{
+  "slug": "saas",
+  "title": "SaaS (Software as a Service)",
+  "seoTitle": "What Is SaaS? Software as a Service Explained",
+  "seoDescription": "SaaS is software you rent online instead of installing. Pricing models, pros and cons for SMEs, data ownership and when custom is better.",
+  "summary": "SaaS (Software as a Service) is software you use through the internet on a subscription, rather than buying and installing it yourself. The provider handles hosting, updates and security; you pay per user or per usage, usually monthly or yearly.",
+  "dataPoints": [
+    {
+      "label": "Examples",
+      "value": "Zoho, HubSpot, Google Workspace, Shopify, Freshdesk, Razorpay dashboard"
+    },
+    {
+      "label": "Pricing models",
+      "value": "Per user per month, per usage (messages, orders), or tiered plans"
+    },
+    {
+      "label": "Key contract points",
+      "value": "Data export, uptime commitment, price increases, where data is stored"
+    },
+    {
+      "label": "Hidden cost",
+      "value": "Spend grows quietly as users and tools accumulate"
+    }
+  ],
+  "body": "## Why SMEs choose SaaS\n\n- Quick to start, with no servers to manage.\n- Updates and security handled by the provider.\n- Predictable monthly cost.\n\n## The trade-offs\n\n- You fit your process to the product, not the other way round.\n- Costs rise with users; five tools at modest prices add up.\n- Your data lives with the vendor: check export options before you sign.\n\nSee [SaaS spend audit](/blog/saas-spend-audit-where-mid-sized-companies-overpay) and [build, buy or extend](/blog/build-buy-or-extend-choosing-software-for-a-100-person-company).",
+  "faqs": [
+    {
+      "q": "Is SaaS cheaper than custom software?",
+      "a": "Usually at the start. Over several years, with many users or heavy customisation, custom software can cost less and fit better."
+    },
+    {
+      "q": "Who owns data in a SaaS tool?",
+      "a": "Normally you do, but check the terms for export formats, retention after cancellation and where data is stored."
+    }
+  ],
+  "related": [
+    "crm",
+    "erp",
+    "mvp",
+    "api"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

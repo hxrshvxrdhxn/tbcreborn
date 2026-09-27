@@ -1,0 +1,49 @@
+{
+  "slug": "zoho-crm-whatsapp",
+  "title": "Zoho CRM and WhatsApp Integration",
+  "toolA": "Zoho CRM",
+  "toolB": "WhatsApp Business",
+  "seoTitle": "Zoho CRM WhatsApp Integration: Chats and Automation",
+  "seoDescription": "Send and receive WhatsApp messages from Zoho CRM, log chats against leads and automate follow-ups with approved templates. Options, costs and setup.",
+  "summary": "A Zoho CRM–WhatsApp integration lets sales teams send and receive WhatsApp messages from inside Zoho CRM, logs every chat against the lead or contact, and triggers template messages automatically, such as a follow-up after a quote. Conversations stop living only on individual phones.",
+  "dataPoints": [
+    {
+      "label": "Options",
+      "value": "Zoho's own WhatsApp integration, marketplace extensions, or a custom integration via the Cloud API"
+    },
+    {
+      "label": "Message rules",
+      "value": "Template messages to start conversations; free-form replies within the 24-hour window"
+    },
+    {
+      "label": "Logged in CRM",
+      "value": "Messages, delivery status and replies against the lead or contact"
+    },
+    {
+      "label": "Typical automations",
+      "value": "Welcome message on new lead, quote follow-up, meeting reminder, payment reminder"
+    },
+    {
+      "label": "Pricing",
+      "value": "Meta per-message charges plus any provider or extension fee"
+    }
+  ],
+  "body": "## What to set up first\n\n1. Capture WhatsApp enquiries as leads automatically.\n2. A template for the first response within minutes.\n3. Follow-up templates tied to deal stages.\n\n## Keep it compliant\n\nRecord opt-in, respect opt-out requests and keep marketing messages separate from service messages.\n\nSee [automating sales follow-up with AI](/blog/automating-sales-follow-up-with-ai-without-sounding-like-a-robot).",
+  "faqs": [
+    {
+      "q": "Can several salespeople share one WhatsApp number?",
+      "a": "Yes, through a shared inbox, with each chat assigned to an owner in the CRM."
+    },
+    {
+      "q": "Will old chats from personal phones move into the CRM?",
+      "a": "Not automatically. The integration logs conversations from the business number going forward."
+    }
+  ],
+  "related": [
+    "shopify-whatsapp",
+    "tally-zoho-crm"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

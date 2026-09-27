@@ -1,0 +1,50 @@
+{
+  "slug": "tally-razorpay",
+  "title": "Tally and Razorpay Integration",
+  "toolA": "TallyPrime",
+  "toolB": "Razorpay",
+  "seoTitle": "Tally Razorpay Integration: Automate Payment Entries",
+  "seoDescription": "Record Razorpay payments, fees, GST on fees and settlements in TallyPrime automatically. How it works, reconciliation, effort and cost for Indian businesses.",
+  "summary": "A Tally–Razorpay integration records every Razorpay payment as a receipt in TallyPrime, books the gateway fee and GST on the fee to the right ledgers, and matches each settlement to your bank entry. It removes the most tedious part of reconciling online payments.",
+  "dataPoints": [
+    {
+      "label": "Razorpay side",
+      "value": "Payments, refunds and settlements APIs, plus payment and settlement webhooks"
+    },
+    {
+      "label": "Tally side",
+      "value": "TallyPrime XML interface through a connector on the Tally machine"
+    },
+    {
+      "label": "What syncs",
+      "value": "Payments to receipts, fees and GST on fees to expense ledgers, refunds to payments, settlements to bank"
+    },
+    {
+      "label": "Why reconciliation is hard",
+      "value": "Settlements arrive net of fees and refunds, days after the payments"
+    },
+    {
+      "label": "Typical effort",
+      "value": "2–4 weeks for a custom integration with your ledger rules"
+    }
+  ],
+  "body": "## How the flow works\n\n1. A payment webhook records the customer receipt against the invoice or order.\n2. When Razorpay settles, the integration fetches the settlement breakdown.\n3. It books gross receipts, gateway fees, GST on fees and refunds separately, and posts the net amount against the bank ledger.\n4. Anything unmatched is listed for a person to resolve.\n\n## Why it pays back\n\nFinance teams often spend hours each week matching settlement amounts to individual payments. Automated posting with the fee split makes month-end close faster and GST input credit on fees easier to claim.\n\nSee [adding Razorpay payments and GST invoicing](/blog/adding-razorpay-payments-and-gst-invoicing-to-your-software).",
+  "faqs": [
+    {
+      "q": "Can it handle refunds and chargebacks?",
+      "a": "Yes. Refunds post as payments against the customer, and chargebacks can be flagged for manual review."
+    },
+    {
+      "q": "Does it work with Razorpay payment links and invoices?",
+      "a": "Yes, all payment types come through the same payments API and webhooks."
+    }
+  ],
+  "related": [
+    "tally-shopify",
+    "tally-woocommerce",
+    "google-sheets-tally"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

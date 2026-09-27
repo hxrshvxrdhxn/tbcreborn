@@ -1,0 +1,44 @@
+{
+  "slug": "chatbot",
+  "title": "Chatbot",
+  "seoTitle": "What Is a Business Chatbot? Types, Costs and Limits",
+  "seoDescription": "A chatbot answers customer or staff questions automatically on your website or WhatsApp. Rule-based vs AI chatbots, costs, accuracy and handover to people.",
+  "summary": "A chatbot is software that answers questions and completes simple tasks through chat, on a website, WhatsApp or an internal tool. Modern AI chatbots answer from your own documents and data, and hand the conversation to a person when they are unsure or the customer asks.",
+  "dataPoints": [
+    {
+      "label": "Types",
+      "value": "Rule-based menus, AI chatbots answering from documents (RAG), and AI agents that also take actions"
+    },
+    {
+      "label": "Channels",
+      "value": "Website widget, WhatsApp, Microsoft Teams, internal portals"
+    },
+    {
+      "label": "Typical first use",
+      "value": "Answering routine questions about orders, policies, admissions or products"
+    },
+    {
+      "label": "Must-have",
+      "value": "A clear route to a human and logs of every conversation"
+    }
+  ],
+  "body": "## Rule-based or AI\n\nRule-based bots follow fixed menus: predictable but rigid. AI chatbots understand free text and answer from your material, which handles far more questions but needs grounding and testing. See [how to build an AI chatbot trained on your company documents](/blog/how-to-build-an-ai-chatbot-trained-on-your-company-documents).\n\n## Measuring success\n\nTrack questions resolved without a person, handover rate, wrong answers found in review, and customer satisfaction.",
+  "faqs": [
+    {
+      "q": "Will a chatbot annoy customers?",
+      "a": "Not if it answers quickly, admits what it does not know and hands over to a person easily."
+    },
+    {
+      "q": "Can a chatbot answer in Hindi?",
+      "a": "Yes. AI chatbots can handle Hindi and mixed Hindi-English, though you should test with your real customer questions."
+    }
+  ],
+  "related": [
+    "whatsapp-business-api",
+    "ocr",
+    "custom-software"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

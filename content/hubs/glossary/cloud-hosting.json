@@ -1,0 +1,44 @@
+{
+  "slug": "cloud-hosting",
+  "title": "Cloud Hosting",
+  "seoTitle": "What Is Cloud Hosting? Options for Indian Businesses",
+  "seoDescription": "Cloud hosting runs your software on rented servers from AWS, Azure, Google Cloud or others. Costs, data location in India, reliability and how to choose.",
+  "summary": "Cloud hosting means running your website, application or database on computing capacity rented from providers such as AWS, Microsoft Azure, Google Cloud or Vercel, rather than on your own servers. You pay for what you use, scale up or down quickly, and can keep data in Indian regions.",
+  "dataPoints": [
+    {
+      "label": "Indian regions",
+      "value": "AWS Mumbai and Hyderabad, Azure Pune, Chennai and Mumbai, Google Cloud Mumbai and Delhi"
+    },
+    {
+      "label": "Cost model",
+      "value": "Pay per use: compute hours, storage, data transfer, managed services"
+    },
+    {
+      "label": "Common waste",
+      "value": "Oversized servers left running, forgotten test environments, unmonitored data transfer"
+    },
+    {
+      "label": "Must-haves",
+      "value": "Backups, monitoring, access control with two-factor authentication, cost alerts"
+    }
+  ],
+  "body": "## Choosing a provider\n\nFor most SME applications any major provider works. Choose based on your team's skills, managed services you need, and data residency requirements. See [cloud hosting for Indian businesses](/blog/cloud-hosting-for-indian-businesses-aws-azure-google-cloud-or-vercel).\n\n## Keep control\n\nThe accounts should be in your company's name, with your partner given access, not the other way round.",
+  "faqs": [
+    {
+      "q": "Is cloud cheaper than my own server?",
+      "a": "Often, once you count power, hardware refreshes, backups and staff time; but unmanaged cloud spend can grow quickly."
+    },
+    {
+      "q": "Can I keep data in India?",
+      "a": "Yes, all major providers have Indian regions. Choose them explicitly when setting up."
+    }
+  ],
+  "related": [
+    "database",
+    "sla",
+    "two-factor-authentication"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

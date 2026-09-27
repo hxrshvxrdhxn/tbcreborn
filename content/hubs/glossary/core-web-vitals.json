@@ -1,0 +1,44 @@
+{
+  "slug": "core-web-vitals",
+  "title": "Core Web Vitals",
+  "seoTitle": "What Are Core Web Vitals? Page Speed Metrics Explained",
+  "seoDescription": "Core Web Vitals are Google's measures of loading speed, responsiveness and visual stability. The three metrics, good thresholds and what affects them.",
+  "summary": "Core Web Vitals are three measurements Google uses to judge real users' page experience: how fast the main content loads (LCP), how quickly the page responds to taps and clicks (INP), and how much the layout jumps around while loading (CLS). They affect user experience and are part of Google's ranking signals.",
+  "dataPoints": [
+    {
+      "label": "LCP (loading)",
+      "value": "Good at 2.5 seconds or less"
+    },
+    {
+      "label": "INP (responsiveness)",
+      "value": "Good at 200 milliseconds or less"
+    },
+    {
+      "label": "CLS (visual stability)",
+      "value": "Good at 0.1 or less"
+    },
+    {
+      "label": "Measured on",
+      "value": "Real Chrome users over 28 days, shown in Search Console and PageSpeed Insights"
+    }
+  ],
+  "body": "## What usually hurts scores\n\n- Large, unoptimised images and heavy fonts (LCP).\n- Too much JavaScript, chat widgets and trackers (INP).\n- Images and ads without reserved space (CLS).\n\n## Where to check\n\nSearch Console's Core Web Vitals report shows real-user data by page group; PageSpeed Insights diagnoses individual pages. See [Core Web Vitals explained for business owners](/blog/core-web-vitals-explained-for-business-owners).",
+  "faqs": [
+    {
+      "q": "Do Core Web Vitals decide rankings?",
+      "a": "They are one of many signals. Relevant, helpful content matters more, but poor experience can hold a page back."
+    },
+    {
+      "q": "Why do lab and real-user scores differ?",
+      "a": "Lab tests use one device and connection; real-user data reflects your actual visitors, often on slower phones and networks."
+    }
+  ],
+  "related": [
+    "cms",
+    "headless-cms",
+    "cloud-hosting"
+  ],
+  "service": "/services/web-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "mvp",
+  "title": "MVP (Minimum Viable Product)",
+  "seoTitle": "What Is an MVP? Minimum Viable Product Explained",
+  "seoDescription": "An MVP is the smallest version of a product that real users can use to prove an idea. What to include, what to leave out, typical timelines and costs in India.",
+  "summary": "An MVP (Minimum Viable Product) is the smallest version of a product that lets real users complete one important job, so you can learn whether the idea works before investing in everything else. It is minimal in scope, not in quality: security, data and analytics still need to be done properly.",
+  "dataPoints": [
+    {
+      "label": "Typical timeline",
+      "value": "8–12 weeks for a focused first version"
+    },
+    {
+      "label": "Must include",
+      "value": "One core user journey end to end, log-in and security, analytics, a way to collect feedback"
+    },
+    {
+      "label": "Leave out",
+      "value": "Secondary user types, advanced settings, automation a person can do manually at first"
+    },
+    {
+      "label": "Success measure",
+      "value": "Agreed before launch: activation, retention and one business outcome"
+    }
+  ],
+  "body": "## What makes a good MVP\n\nA good MVP tests one clear question, such as \"will distributors reorder through an app instead of calling?\" Everything in it serves that test.\n\n## Common mistakes\n\n- Building for every user type at once.\n- Treating the MVP as throwaway and cutting security or data design.\n- Launching without a plan to reach real users.\n\nRead [how to scope an MVP that ships in ten weeks](/blog/mvp-development-how-to-scope-a-first-version-that-ships-in-ten-weeks).",
+  "faqs": [
+    {
+      "q": "Is an MVP the same as a prototype?",
+      "a": "No. A prototype shows how something might work, often without real data. An MVP is working software real users rely on."
+    },
+    {
+      "q": "Should the MVP be an app or a website?",
+      "a": "Whichever your core users already use for similar tasks. A web app is often faster to launch and change."
+    }
+  ],
+  "related": [
+    "saas",
+    "uat",
+    "technical-debt"
+  ],
+  "service": "/services/mvp-development",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

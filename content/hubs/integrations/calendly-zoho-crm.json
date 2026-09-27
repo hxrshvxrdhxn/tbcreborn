@@ -1,0 +1,50 @@
+{
+  "slug": "calendly-zoho-crm",
+  "title": "Calendly and Zoho CRM Integration",
+  "toolA": "Calendly",
+  "toolB": "Zoho CRM",
+  "seoTitle": "Calendly Zoho CRM Integration: Log Every Booked Meeting",
+  "seoDescription": "Create or update Zoho CRM leads and events when someone books on Calendly, with answers to your booking questions. Native options, webhooks and set-up.",
+  "summary": "A Calendly–Zoho CRM integration creates or updates the lead in Zoho CRM whenever someone books a meeting, records the meeting as an event with the answers to your booking questions, and can notify the owner on WhatsApp, so no booked call arrives unprepared.",
+  "dataPoints": [
+    {
+      "label": "Calendly side",
+      "value": "Native Zoho CRM integration on paid plans, or webhooks for invitee created and cancelled"
+    },
+    {
+      "label": "Zoho side",
+      "value": "Leads or contacts plus events, matched by email"
+    },
+    {
+      "label": "What syncs",
+      "value": "Invitee name, email, company, booking answers, meeting time, cancellations and reschedules"
+    },
+    {
+      "label": "Extras",
+      "value": "Owner assignment, WhatsApp alert, pre-meeting reminder"
+    },
+    {
+      "label": "Typical effort",
+      "value": "Hours with the native integration; days with custom rules"
+    }
+  ],
+  "body": "## Make booked calls count\n\nAsk two or three useful questions at booking, such as the problem to solve and the current tools, and put the answers in the CRM so the call starts informed.\n\n## Track the funnel\n\nRecord the page that led to the booking, so you know which content produces meetings. See [measuring whether a software investment is working](/blog/measuring-whether-a-software-investment-is-working).",
+  "faqs": [
+    {
+      "q": "Do cancellations update the CRM?",
+      "a": "Yes, with the native integration or webhooks, cancellations and reschedules update the event."
+    },
+    {
+      "q": "Does Calendly need a paid plan for this?",
+      "a": "Integrations and webhooks generally require a paid Calendly plan; check the current plan features."
+    }
+  ],
+  "related": [
+    "website-forms-zoho-crm",
+    "indiamart-zoho-crm",
+    "zoho-crm-whatsapp"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

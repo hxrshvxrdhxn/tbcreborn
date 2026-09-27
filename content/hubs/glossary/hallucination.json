@@ -1,0 +1,45 @@
+{
+  "slug": "hallucination",
+  "title": "Hallucination (AI)",
+  "seoTitle": "What Is AI Hallucination? Why AI Makes Things Up",
+  "seoDescription": "AI hallucination is when a model states something false with confidence. Why it happens and how to reduce it in business software.",
+  "summary": "An AI hallucination is when a language model produces information that sounds confident and plausible but is false, such as an invented policy clause, price or citation. It happens because models generate likely text, not verified facts, so business systems must be designed to prevent and catch it.",
+  "dataPoints": [
+    {
+      "label": "Most common causes",
+      "value": "Missing source material, vague prompts, questions outside the documents provided"
+    },
+    {
+      "label": "Main defences",
+      "value": "Grounding with RAG, citations, instructions to decline, output validation"
+    },
+    {
+      "label": "Where it matters most",
+      "value": "Customer-facing answers, pricing, legal and compliance content"
+    },
+    {
+      "label": "Measure it",
+      "value": "Test on real questions and track the rate of unsupported claims"
+    }
+  ],
+  "body": "## Why it happens\n\nLanguage models predict likely words. When they lack the right information, they still produce fluent text, which can be wrong.\n\n## How to reduce it\n\n1. Supply the facts: answer from retrieved documents ([RAG](/glossary/rag)).\n2. Require citations and check that each claim is supported.\n3. Allow and encourage \"I don't have that information\".\n4. Validate structured outputs such as numbers and dates against rules.\n5. Route low-confidence answers to a person.\n\nSee [testing AI accuracy before you launch](/blog/testing-ai-accuracy-before-you-launch).",
+  "faqs": [
+    {
+      "q": "Can hallucination be eliminated?",
+      "a": "Not entirely, but it can be reduced to rare, detectable cases with grounding, validation and human review where stakes are high."
+    },
+    {
+      "q": "Do newer models hallucinate less?",
+      "a": "Generally yes, but design safeguards still matter more than the choice of model."
+    }
+  ],
+  "related": [
+    "llm",
+    "rag",
+    "ai-agent",
+    "fine-tuning"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

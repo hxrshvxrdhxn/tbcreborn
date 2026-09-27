@@ -1,0 +1,44 @@
+{
+  "slug": "ocr",
+  "title": "OCR (Optical Character Recognition)",
+  "seoTitle": "What Is OCR? Reading Documents Automatically",
+  "seoDescription": "OCR turns scanned documents and photos into text software can use. Accuracy to expect, how AI improves it, and where Indian businesses use it.",
+  "summary": "OCR (Optical Character Recognition) converts scanned pages, PDFs and phone photos into machine-readable text. Combined with AI that understands document layout, it lets software read invoices, purchase orders and forms and pull out fields such as GSTIN, amounts and dates without manual typing.",
+  "dataPoints": [
+    {
+      "label": "Common documents",
+      "value": "Supplier invoices, purchase orders, delivery challans, KYC documents, handwritten forms"
+    },
+    {
+      "label": "Accuracy drivers",
+      "value": "Scan quality, fonts, handwriting, tables, language (English, Hindi, regional scripts)"
+    },
+    {
+      "label": "Modern approach",
+      "value": "OCR plus an LLM or layout model to understand fields, then validation rules"
+    },
+    {
+      "label": "Human review",
+      "value": "Needed for low-confidence fields and anything posted to accounts"
+    }
+  ],
+  "body": "## OCR versus document AI\n\nClassic OCR only turns an image into text. Document AI goes further: it identifies which number is the invoice total, which is the GST amount, and which line items belong together. See [AI document processing](/blog/ai-document-processing-automating-invoices-purchase-orders-and-contracts).\n\n## Getting reliable results\n\n1. Collect 50 to 100 real documents, including poor scans.\n2. Measure accuracy per field, not overall.\n3. Validate fields with rules: GSTIN format, totals that add up, dates in range.\n4. Send uncertain documents to a person.",
+  "faqs": [
+    {
+      "q": "Can OCR read handwriting?",
+      "a": "Printed text reads well; handwriting varies a lot. Test on your own samples before relying on it."
+    },
+    {
+      "q": "Does OCR work for Hindi documents?",
+      "a": "Yes, modern OCR supports Devanagari and several Indian scripts, with accuracy depending on print quality."
+    }
+  ],
+  "related": [
+    "chatbot",
+    "data-migration",
+    "custom-software"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "fixed-price-contract",
+  "title": "Fixed-Price Contract (Software)",
+  "seoTitle": "Fixed-Price vs Time-and-Materials Software Contracts",
+  "seoDescription": "A fixed-price software contract sets one price for an agreed scope. When it protects you, when time-and-materials is better, and clauses to check.",
+  "summary": "A fixed-price software contract sets one price for an agreed scope of work, so the vendor carries the risk of overruns within that scope. It suits well-defined projects; for evolving requirements, time-and-materials or phased fixed prices usually give better results.",
+  "dataPoints": [
+    {
+      "label": "Suits",
+      "value": "Clear scope, stable requirements, short to medium projects"
+    },
+    {
+      "label": "Alternative",
+      "value": "Time-and-materials: pay for hours used, with regular reviews"
+    },
+    {
+      "label": "Common middle ground",
+      "value": "Paid discovery, then fixed price per phase"
+    },
+    {
+      "label": "Watch for",
+      "value": "Vague scope, expensive change requests, quality cut to protect margin"
+    }
+  ],
+  "body": "## Protect yourself in either model\n\n- A written scope with acceptance criteria.\n- Milestones tied to working, tested features.\n- A change-request process with rates agreed upfront.\n- Code ownership and handover clauses.\n\nSee [fixed price vs time and materials](/blog/fixed-price-vs-time-and-materials-which-software-contract-protects-you) and [how to write a software brief that gets accurate quotes](/blog/how-to-write-a-software-brief-that-gets-accurate-quotes).",
+  "faqs": [
+    {
+      "q": "Is fixed price always cheaper?",
+      "a": "No. Vendors add buffers for risk, and change requests can add up. It is more predictable, not necessarily cheaper."
+    },
+    {
+      "q": "Can we switch models mid-project?",
+      "a": "Yes, if agreed. Many projects start fixed-price for a defined phase and move to time-and-materials for later improvements."
+    }
+  ],
+  "related": [
+    "custom-software",
+    "sla",
+    "data-migration"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "tally-woocommerce",
+  "title": "Tally and WooCommerce Integration",
+  "toolA": "TallyPrime",
+  "toolB": "WooCommerce",
+  "seoTitle": "Tally WooCommerce Integration: Orders to Tally Automatically",
+  "seoDescription": "Sync WooCommerce orders, customers, stock and GST into TallyPrime vouchers. Methods, what syncs, stock updates back to the store, effort and cost ranges.",
+  "summary": "A Tally–WooCommerce integration turns each WooCommerce order into a TallyPrime sales voucher with the right GST ledgers and stock items, and can push stock levels from Tally back to the store. It suits Indian businesses running their online store on WordPress.",
+  "dataPoints": [
+    {
+      "label": "WooCommerce side",
+      "value": "WooCommerce REST API (orders, products, customers) and order webhooks"
+    },
+    {
+      "label": "Tally side",
+      "value": "TallyPrime XML interface via a connector on the Tally machine"
+    },
+    {
+      "label": "What syncs",
+      "value": "Orders to sales vouchers, customers to ledgers, refunds to credit notes, stock back to products"
+    },
+    {
+      "label": "Watch-outs",
+      "value": "Plugins that change order totals (discounts, shipping, COD fees) must map to ledgers"
+    },
+    {
+      "label": "Typical effort",
+      "value": "2–5 weeks custom, depending on plugins and GST complexity"
+    }
+  ],
+  "body": "## How it works\n\n1. WooCommerce sends an order webhook when an order is placed or its status changes.\n2. The integration maps line items, tax, shipping and discounts to Tally ledgers and stock items.\n3. The voucher posts to Tally; failures queue for retry.\n4. Optionally, stock levels are read from Tally on a schedule and updated in WooCommerce.\n\n## Plugin-heavy stores\n\nWooCommerce stores often use plugins for GST invoices, COD fees and bundles. Each changes the order data, so the mapping must be tested on real orders before launch.\n\nSee [Tally integration](/blog/tally-integration-connecting-your-accounts-to-your-operations-software).",
+  "faqs": [
+    {
+      "q": "Which order status should create the Tally voucher?",
+      "a": "Most businesses post on \"processing\" or \"completed\", depending on when they treat the sale as confirmed; cancellations then reverse it."
+    },
+    {
+      "q": "Can COD orders be handled?",
+      "a": "Yes, typically as sales with a separate receivable until the courier remits the cash."
+    }
+  ],
+  "related": [
+    "tally-shopify",
+    "tally-razorpay",
+    "google-sheets-tally"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

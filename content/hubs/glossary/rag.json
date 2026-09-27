@@ -1,0 +1,45 @@
+{
+  "slug": "rag",
+  "title": "RAG (Retrieval-Augmented Generation)",
+  "seoTitle": "What Is RAG? Retrieval-Augmented Generation Explained",
+  "seoDescription": "RAG lets an AI model answer from your own documents instead of memory. How it works, when to use it instead of fine-tuning, accuracy and costs.",
+  "summary": "RAG (Retrieval-Augmented Generation) is a way of making an AI model answer from your own documents: the system first finds the most relevant passages, then gives them to the model with the question, and the model answers using only that material, ideally citing where each point came from.",
+  "dataPoints": [
+    {
+      "label": "Typical sources",
+      "value": "Manuals, policies, product catalogues, past proposals, SOPs, support tickets"
+    },
+    {
+      "label": "Main benefit",
+      "value": "Answers grounded in your material, updated as soon as documents change"
+    },
+    {
+      "label": "Accuracy levers",
+      "value": "Clean documents, good chunking, relevance ranking, citation checks"
+    },
+    {
+      "label": "Typical pilot",
+      "value": "4–8 weeks on one document set and one user group"
+    }
+  ],
+  "body": "## How RAG works\n\n1. Documents are split into passages and indexed for search.\n2. A question retrieves the most relevant passages.\n3. The model answers from those passages and cites them.\n\n## RAG or fine-tuning\n\nUse RAG when answers must reflect current documents and be traceable. Fine-tuning changes how a model writes or classifies, not what it knows today. See [RAG or fine-tuning](/blog/rag-or-fine-tuning-choosing-the-right-approach-for-your-business-data).\n\n## Where it fails\n\nPoor or contradictory source documents, scanned files without text recognition, and questions the documents do not answer.",
+  "faqs": [
+    {
+      "q": "Does RAG stop hallucination completely?",
+      "a": "It reduces it a lot, especially with citations and instructions to say \"I don't know\", but outputs should still be checked for high-stakes uses."
+    },
+    {
+      "q": "Can RAG work with Hindi documents?",
+      "a": "Yes, with models and search that handle Hindi well. Test on your real documents before committing."
+    }
+  ],
+  "related": [
+    "llm",
+    "hallucination",
+    "fine-tuning",
+    "ai-agent"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-09-29T03:30:00.000Z",
+  "indexable": true
+}

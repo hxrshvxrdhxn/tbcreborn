@@ -1,0 +1,44 @@
+{
+  "slug": "low-code",
+  "title": "Low-Code and No-Code",
+  "seoTitle": "Low-Code and No-Code Explained for Business Owners",
+  "seoDescription": "Low-code and no-code tools let you build apps and automations with little programming. What they suit, where they break, costs and when custom code wins.",
+  "summary": "Low-code and no-code platforms let people build apps, forms and automations mostly by configuring screens and drag-and-drop steps instead of writing code. They are fast for simple, low-risk workflows; custom code becomes the better choice as logic, volume, security needs or user numbers grow.",
+  "dataPoints": [
+    {
+      "label": "Examples",
+      "value": "Zapier, Make, n8n (automation); Zoho Creator, Microsoft Power Apps, Glide (apps)"
+    },
+    {
+      "label": "Good for",
+      "value": "Internal forms, simple approvals, notifications, prototypes"
+    },
+    {
+      "label": "Limits",
+      "value": "Complex rules, high volume, testing, version control, per-user or per-task pricing"
+    },
+    {
+      "label": "Hidden risk",
+      "value": "Critical processes built by one person that nobody else understands"
+    }
+  ],
+  "body": "## When to choose low-code\n\n- The workflow is simple and not business-critical.\n- A non-developer will maintain it.\n- You need something working this week.\n\n## When to move to custom code\n\n- Failures would lose orders or money.\n- Costs grow with every task or user.\n- You need proper testing, audit trails and security.\n\nSee [workflow automation with n8n, Make or custom code](/blog/workflow-automation-with-n8n-make-or-custom-code-how-to-choose).",
+  "faqs": [
+    {
+      "q": "Is n8n free?",
+      "a": "Its source is available to self-host under its licence terms, with a paid cloud version. Hosting and maintenance still cost time and money."
+    },
+    {
+      "q": "Can a low-code app grow into a full product?",
+      "a": "Sometimes, but many teams rebuild in custom code once usage grows, so keep business rules documented."
+    }
+  ],
+  "related": [
+    "custom-software",
+    "whatsapp-business-api",
+    "database"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

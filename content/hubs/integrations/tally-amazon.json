@@ -1,0 +1,50 @@
+{
+  "slug": "tally-amazon",
+  "title": "Tally and Amazon Seller Integration",
+  "toolA": "TallyPrime",
+  "toolB": "Amazon Seller Central",
+  "seoTitle": "Tally Amazon Integration: Orders, Fees and Settlements",
+  "seoDescription": "Post Amazon.in orders, returns, fees and settlements into TallyPrime automatically, with GST and TCS handled. Methods, what syncs, effort and pitfalls.",
+  "summary": "A Tally–Amazon integration posts Amazon.in orders, returns, Amazon fees, TCS and settlements into TallyPrime automatically, so marketplace sales reconcile with the bank without spreadsheets. It matters once Amazon becomes a meaningful share of sales.",
+  "dataPoints": [
+    {
+      "label": "Amazon side",
+      "value": "Selling Partner API (SP-API): orders, finances and settlement reports"
+    },
+    {
+      "label": "Tally side",
+      "value": "TallyPrime XML interface via a connector on the Tally machine"
+    },
+    {
+      "label": "What syncs",
+      "value": "Orders to sales, returns to credit notes, referral and shipping fees, TCS, settlements to bank"
+    },
+    {
+      "label": "Hard part",
+      "value": "Settlement reports mix many transaction types that must map to separate ledgers"
+    },
+    {
+      "label": "Typical effort",
+      "value": "4–6 weeks custom"
+    }
+  ],
+  "body": "## Why marketplace accounting is tricky\n\nAmazon settles net amounts after fees, returns, reimbursements and TCS, often across many orders. Posting only the net figure hides the true revenue and costs, and makes GST reconciliation hard.\n\n## A clean approach\n\n1. Post each order as a sale with correct GST.\n2. Post fees and TCS from the finance data to their own ledgers.\n3. Match each settlement to the bank statement.\n4. Flag reimbursements and adjustments for review.\n\nSee [Tally integration](/blog/tally-integration-connecting-your-accounts-to-your-operations-software).",
+  "faqs": [
+    {
+      "q": "Can Flipkart be added to the same integration?",
+      "a": "Yes, as a separate connector posting into the same Tally company with its own ledgers."
+    },
+    {
+      "q": "How is TCS handled?",
+      "a": "TCS collected by Amazon is recorded as a receivable to be claimed, using the marketplace's tax reports."
+    }
+  ],
+  "related": [
+    "tally-shopify",
+    "tally-power-bi",
+    "shiprocket-shopify"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}

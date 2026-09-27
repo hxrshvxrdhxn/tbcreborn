@@ -1,0 +1,50 @@
+{
+  "slug": "tally-power-bi",
+  "title": "Tally and Power BI Integration",
+  "toolA": "TallyPrime",
+  "toolB": "Microsoft Power BI",
+  "seoTitle": "Tally Power BI Integration: Live Dashboards From Tally Data",
+  "seoDescription": "Build Power BI dashboards on TallyPrime data: sales, receivables, stock and margins, refreshed automatically. Connection methods, set-up and limits.",
+  "summary": "A Tally–Power BI integration extracts sales, purchases, receivables, stock and ledger data from TallyPrime on a schedule and feeds Power BI dashboards, so owners see current figures by branch, product and customer without waiting for month-end reports.",
+  "dataPoints": [
+    {
+      "label": "Tally side",
+      "value": "ODBC or XML export via a connector, often into an intermediate database"
+    },
+    {
+      "label": "Power BI side",
+      "value": "Scheduled refresh through the on-premises data gateway or from a cloud database"
+    },
+    {
+      "label": "Typical dashboards",
+      "value": "Sales trend, receivables ageing, stock value and movement, margin by product"
+    },
+    {
+      "label": "Refresh",
+      "value": "Daily or several times a day, depending on licence and design"
+    },
+    {
+      "label": "Typical effort",
+      "value": "2–4 weeks"
+    }
+  ],
+  "body": "## Recommended design\n\nRather than connecting Power BI straight to Tally, copy Tally data into a small database on a schedule. Dashboards then load faster, history is kept, and Tally is not slowed down.\n\n## Start with decisions\n\nBuild dashboards around the decisions they support: what to chase, what to reorder, which products earn money. See [building a dashboard your leadership team will actually use](/blog/building-a-dashboard-your-leadership-team-will-actually-use).",
+  "faqs": [
+    {
+      "q": "Do I need Power BI Pro?",
+      "a": "Sharing dashboards with colleagues generally needs paid licences; check current Microsoft licensing."
+    },
+    {
+      "q": "Can this combine Tally with other systems?",
+      "a": "Yes, a central database can combine Tally with CRM, e-commerce and operations data."
+    }
+  ],
+  "related": [
+    "google-sheets-tally",
+    "tally-amazon",
+    "tally-zoho-crm"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-06T03:30:00.000Z",
+  "indexable": true
+}
