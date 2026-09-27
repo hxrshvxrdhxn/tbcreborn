@@ -1,0 +1,49 @@
+{
+  "slug": "student-fee-management",
+  "title": "Student Fee Management Software",
+  "seoTitle": "Student Fee Management Software for Indian Institutes",
+  "seoDescription": "Fee management software for schools, colleges and coaching institutes: fee structures, instalments, online payment, reminders, receipts and dues reports.",
+  "summary": "Fee management software handles fee structures, instalments, concessions, online payments and receipts, and sends automatic reminders for dues. For institutes that reconcile fees manually between bank statements and registers, it cuts accounts-office work and improves collection.",
+  "dataPoints": [
+    {
+      "label": "Replaces",
+      "value": "Manual receipts, bank statement matching and phone reminders"
+    },
+    {
+      "label": "Core features",
+      "value": "Fee heads, instalment plans, concessions, online payment links, auto-reconciliation, receipts"
+    },
+    {
+      "label": "Payments",
+      "value": "UPI, cards and net banking through a payment gateway such as Razorpay"
+    },
+    {
+      "label": "Integrations",
+      "value": "Tally for accounting; WhatsApp and SMS for reminders"
+    },
+    {
+      "label": "Typical first release",
+      "value": "6–8 weeks"
+    }
+  ],
+  "body": "## What it automates\n\n1. Generates demands per student from the fee structure.\n2. Sends payment links before due dates.\n3. Marks payments automatically when the gateway confirms them.\n4. Issues receipts and posts entries to Tally.\n5. Reports dues by class, course and ageing.\n\nSee the [school ERP cost guide](/cost/school-erp) and the [Tally and Razorpay integration](/integrations/tally-razorpay).\n\nWant to see what this would look like for your business? [Book a 30-minute scoping call](/book-consultation).",
+  "faqs": [
+    {
+      "q": "Can parents pay by UPI?",
+      "a": "Yes. Payment links support UPI along with cards and net banking."
+    },
+    {
+      "q": "Does it handle scholarships and concessions?",
+      "a": "Yes. Concessions can be applied per student with approval rules."
+    }
+  ],
+  "related": [
+    "admissions-crm",
+    "parent-communication-app"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "industry": "Education",
+  "industrySlug": "education"
+}

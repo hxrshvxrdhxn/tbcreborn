@@ -1,0 +1,50 @@
+{
+  "slug": "customer-support-assistant",
+  "title": "AI Customer Support Assistant on WhatsApp and Web",
+  "seoTitle": "AI Customer Support Assistant for Indian Businesses",
+  "seoDescription": "An AI support assistant that answers customer questions on WhatsApp and your website from your own documents and order data, and hands off to staff.",
+  "summary": "An AI customer support assistant answers routine questions on WhatsApp and your website using your own product documents, policies and order data, and hands complex or sensitive conversations to a person with the context attached. It gives customers instant answers at any hour while your team focuses on the conversations that need judgement.",
+  "dataPoints": [
+    {
+      "label": "Channels",
+      "value": "WhatsApp Business, website chat, email"
+    },
+    {
+      "label": "Knowledge sources",
+      "value": "Product manuals, FAQs, policies, order and delivery status"
+    },
+    {
+      "label": "Handoff",
+      "value": "To a human with the conversation history when confidence is low or the customer asks"
+    },
+    {
+      "label": "Languages",
+      "value": "English, Hindi and Hinglish"
+    },
+    {
+      "label": "Payback driver",
+      "value": "Faster responses, fewer repeat calls, support hours saved"
+    }
+  ],
+  "body": "## What makes it reliable\n\n- Answers come from your approved content using [retrieval](/glossary/rag), not the model's general knowledge.\n- It says when it does not know and hands off.\n- Order status comes from live system data, not guesses.\n- Every answer is logged for review.\n\n## Start narrow\n\nPick the ten questions customers ask most, measure accuracy on real past chats, then expand. See the [AI chatbot cost guide](/cost/ai-chatbot) and [how to build an AI chatbot trained on your company documents](/blog/how-to-build-an-ai-chatbot-trained-on-your-company-documents).",
+  "faqs": [
+    {
+      "q": "Will it make things up?",
+      "a": "Grounding in your documents and strict handoff rules keep this rare; testing measures it before launch."
+    },
+    {
+      "q": "Can it take actions like rescheduling?",
+      "a": "Yes, with carefully limited actions and confirmation steps."
+    }
+  ],
+  "related": [
+    "sales-enquiry-qualification",
+    "purchase-order-extraction"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "category": "Customer service",
+  "accuracy": "Typically resolves 40–70% of routine questions when grounded in good documentation",
+  "timeToPilot": "4–8 weeks"
+}

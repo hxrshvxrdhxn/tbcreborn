@@ -105,6 +105,27 @@ export default async function CostIndexPage() {
       {/* ── LISTING SECTION ── */}
       <section className="bg-ivory py-16">
         <div className="container-tbc">
+          {/* ── ESTIMATOR PROMO CARD ── */}
+          <div className="mb-12 rounded-lg border border-light-grey bg-white p-6 sm:p-8 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="max-w-2xl">
+              <span className="font-sans text-[12px] font-semibold uppercase tracking-wider text-royal">
+                Interactive Calculator
+              </span>
+              <h2 className="font-display font-bold text-[22px] sm:text-[24px] text-ink mt-1 mb-2">
+                Estimate your project in two minutes
+              </h2>
+              <p className="font-sans text-[15px] text-ink/80 leading-relaxed">
+                Answer five simple questions to get an indicative cost range and timeline for custom software, mobile apps, or web platforms.
+              </p>
+            </div>
+            <Link
+              href="/software-cost-calculator"
+              className="inline-flex items-center justify-center px-6 py-3 bg-royal text-white font-sans font-semibold text-[15px] rounded hover:bg-royal/90 transition-colors whitespace-nowrap self-start md:self-center"
+            >
+              Try the cost calculator →
+            </Link>
+          </div>
+
           {entries.length === 0 ? (
             <div className="py-12 text-center">
               <p className="font-sans text-[16px] text-mid-grey">

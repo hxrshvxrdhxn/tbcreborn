@@ -1,0 +1,49 @@
+{
+  "slug": "maintenance-management-software",
+  "title": "Maintenance Management Software for Plants",
+  "seoTitle": "Maintenance Management Software for Indian Plants",
+  "seoDescription": "Preventive maintenance software for Indian factories: machine registers, schedules, breakdown tickets, spare parts and downtime reports on mobile.",
+  "summary": "Maintenance management software keeps a register of every machine, schedules preventive maintenance, lets operators raise breakdown tickets from a phone and tracks spare parts and downtime. For plants that run on memory and registers, it turns maintenance from firefighting into a planned routine.",
+  "dataPoints": [
+    {
+      "label": "Replaces",
+      "value": "Maintenance registers, Excel schedules and verbal breakdown calls"
+    },
+    {
+      "label": "Core modules",
+      "value": "Asset register, preventive schedules, breakdown tickets, spares, downtime log"
+    },
+    {
+      "label": "Key measures",
+      "value": "Downtime hours, mean time between failures, mean time to repair, PM compliance"
+    },
+    {
+      "label": "Users",
+      "value": "Operators, maintenance technicians, maintenance head, stores"
+    },
+    {
+      "label": "Typical first release",
+      "value": "6–10 weeks"
+    }
+  ],
+  "body": "## What changes\n\n| Before | After |\n| --- | --- |\n| Breakdowns reported by phone call | Ticket raised with photo from the machine |\n| PM depends on one person's memory | Scheduled tasks with reminders |\n| Spares found missing during a breakdown | Minimum stock alerts for critical spares |\n| Downtime unknown | Downtime by machine and cause |\n\n## Start small\n\nBegin with critical machines only: the ones whose failure stops dispatch. Add the rest once the routine is working.\n\nWant to see what this would look like for your business? [Book a 30-minute scoping call](/book-consultation).",
+  "faqs": [
+    {
+      "q": "Can we use QR codes on machines?",
+      "a": "Yes. Scanning a QR code on a machine opens its history and lets the user raise a ticket."
+    },
+    {
+      "q": "Is an off-the-shelf CMMS enough?",
+      "a": "Often yes for standard needs; custom makes sense when you need tight integration with production and stores."
+    }
+  ],
+  "related": [
+    "quality-inspection-app",
+    "production-planning-software"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "industry": "Manufacturing",
+  "industrySlug": "manufacturing"
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "production-planning-software",
+  "title": "Production Planning Software for Manufacturers",
+  "seoTitle": "Production Planning Software for Indian Manufacturers",
+  "seoDescription": "How custom production planning software helps Indian SME manufacturers schedule jobs, balance machine capacity, track WIP and connect to Tally.",
+  "summary": "Production planning software turns sales orders into a realistic schedule: which job runs on which machine, when material must arrive and when the order will ship. For Indian SME manufacturers who plan on whiteboards and Excel, a focused planning system usually brings the biggest early gain in on-time delivery and visibility.",
+  "dataPoints": [
+    {
+      "label": "Replaces",
+      "value": "Whiteboards, Excel schedules and daily phone calls to the shop floor"
+    },
+    {
+      "label": "Core modules",
+      "value": "Order intake, bill of materials, machine capacity, job scheduling, work-in-progress tracking"
+    },
+    {
+      "label": "Integrations",
+      "value": "Tally or ERP for orders and stock; WhatsApp for supervisor updates"
+    },
+    {
+      "label": "Typical users",
+      "value": "Planning head, production supervisors, stores, sales coordinators"
+    },
+    {
+      "label": "Typical first release",
+      "value": "8–12 weeks for a single plant"
+    }
+  ],
+  "body": "## Problems it solves\n\n- Sales promises dates the plant cannot meet.\n- Machines sit idle while others are overloaded.\n- Material shortages are discovered on the day a job should start.\n- Nobody can answer \"where is my order?\" without walking the floor.\n\n## What a first version includes\n\n| Area | What it does |\n| --- | --- |\n| Orders | Pulls confirmed orders from Tally or entry screens |\n| Capacity | Hours available per machine and shift |\n| Schedule | Drag-and-drop plan with clash warnings |\n| Material check | Flags jobs whose inputs are not in stock |\n| Shop-floor updates | Supervisors mark start and finish on a phone |\n\n## Build or buy\n\nERP planning modules suit standard processes. Custom planning makes sense when your routing, changeovers or job-work steps do not fit the package. See [ERP for manufacturing SMEs: build, buy or customise](/blog/erp-for-manufacturing-smes-build-buy-or-customise).\n\nWant to see what this would look like for your business? [Book a 30-minute scoping call](/book-consultation).",
+  "faqs": [
+    {
+      "q": "Can it work with our existing ERP?",
+      "a": "Yes. Planning software can read orders and stock from your ERP or Tally and write back completions."
+    },
+    {
+      "q": "Do supervisors need computers?",
+      "a": "No. A simple mobile screen for start, finish and issues is usually enough."
+    }
+  ],
+  "related": [
+    "quality-inspection-app",
+    "dealer-ordering-portal"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "industry": "Manufacturing",
+  "industrySlug": "manufacturing"
+}

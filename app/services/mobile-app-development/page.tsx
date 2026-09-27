@@ -350,7 +350,7 @@ Most business apps are built cross-platform with React Native or Flutter, which 
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                     </span>
                   </summary>
-                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Simple internal apps usually start around ₹3 lakh to ₹8 lakh; customer and field apps with payments or maps fall around ₹8 lakh to ₹25 lakh. See <Link href=\"/blog/mobile-app-development-cost-in-india-what-drives-the-price\" className=\"text-gold hover:underline\">what drives mobile app cost in India</Link>." }} />
+                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Simple internal apps usually start around ₹3 lakh to ₹8 lakh; customer and field apps with payments or maps fall around ₹8 lakh to ₹25 lakh. See <a href=\"/blog/mobile-app-development-cost-in-india-what-drives-the-price\" className=\"text-gold hover:underline\">what drives mobile app cost in India</a>, or <a href=\"/software-cost-calculator\" className=\"text-gold hover:underline\">try the cost calculator</a> to estimate your app." }} />
                 </details>
               </Reveal>
             

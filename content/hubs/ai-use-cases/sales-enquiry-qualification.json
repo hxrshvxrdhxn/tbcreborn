@@ -1,0 +1,50 @@
+{
+  "slug": "sales-enquiry-qualification",
+  "title": "AI Sales Enquiry Qualification",
+  "seoTitle": "AI Sales Enquiry Qualification for B2B Businesses",
+  "seoDescription": "How AI reads incoming B2B enquiries from forms, email, IndiaMART and WhatsApp, extracts requirements, scores them and routes them to the right salesperson.",
+  "summary": "AI sales enquiry qualification reads every incoming enquiry from website forms, email, IndiaMART and WhatsApp, extracts the product, quantity, location and urgency, scores it against your ideal customer and routes it to the right salesperson in your CRM. Good leads get a response in minutes instead of days.",
+  "dataPoints": [
+    {
+      "label": "Sources",
+      "value": "Website forms, email, IndiaMART, TradeIndia, WhatsApp"
+    },
+    {
+      "label": "Extracts",
+      "value": "Product, quantity, location, timeline, company type"
+    },
+    {
+      "label": "Output",
+      "value": "Scored lead in the CRM, assigned owner, suggested first reply"
+    },
+    {
+      "label": "Human role",
+      "value": "Salespeople review the score and send or edit the reply"
+    },
+    {
+      "label": "Payback driver",
+      "value": "Faster first response, less time on poor-fit enquiries"
+    }
+  ],
+  "body": "## Why speed matters\n\nB2B buyers often contact several suppliers at once. The first credible, specific reply frequently wins the conversation.\n\n## How scoring works\n\n| Signal | Example |\n| --- | --- |\n| Fit | Product you make, quantity you serve |\n| Intent | Specific specs, timeline, delivery location |\n| Risk | Free email, vague ask, unserviceable region |\n\nSee the [IndiaMART and Zoho CRM integration](/integrations/indiamart-zoho-crm) and the [CRM software cost guide](/cost/crm-software).",
+  "faqs": [
+    {
+      "q": "Will it reject leads automatically?",
+      "a": "We recommend it prioritises rather than rejects; people still see every enquiry."
+    },
+    {
+      "q": "Which CRM does it work with?",
+      "a": "Zoho, HubSpot, Salesforce or a custom CRM, through their APIs."
+    }
+  ],
+  "related": [
+    "customer-support-assistant",
+    "meeting-notes-and-actions"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "category": "Sales",
+  "accuracy": "Typically 85–95% agreement with a sales manager on categorisation",
+  "timeToPilot": "3–5 weeks"
+}

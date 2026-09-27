@@ -22,6 +22,7 @@ const companyLinks = [
   { href: "/glossary", label: "Glossary" },
   { href: "/integrations", label: "Integrations" },
   { href: "/cost", label: "Cost Guides" },
+  { href: "/software-cost-calculator", label: "Cost Calculator" },
   { href: "/compare", label: "Comparisons" },
   { href: "/solutions", label: "Solutions" },
   { href: "/ai-use-cases", label: "AI Use Cases" },
