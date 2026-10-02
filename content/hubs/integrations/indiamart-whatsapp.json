@@ -1,0 +1,46 @@
+{
+  "slug": "indiamart-whatsapp",
+  "title": "IndiaMART Leads to WhatsApp",
+  "toolA": "IndiaMART",
+  "toolB": "WhatsApp Business API",
+  "seoTitle": "IndiaMART Leads to WhatsApp: Instant Response Setup",
+  "seoDescription": "Send an instant WhatsApp reply to every IndiaMART enquiry and alert the right salesperson. How it works, template approval and lead routing.",
+  "summary": "An IndiaMART–WhatsApp integration picks up each new IndiaMART enquiry, sends the buyer an approved WhatsApp message within minutes, and alerts the right salesperson with the buyer's requirement. Responding first often decides who wins an IndiaMART lead.",
+  "dataPoints": [
+    {
+      "label": "Lead source",
+      "value": "IndiaMART lead manager API or pull integration"
+    },
+    {
+      "label": "Message type",
+      "value": "Approved WhatsApp template with the product and a catalogue or call link"
+    },
+    {
+      "label": "Routing",
+      "value": "By product, city or round-robin to salespeople"
+    },
+    {
+      "label": "Typical effort",
+      "value": "2–3 weeks including template approval"
+    }
+  ],
+  "body": "## Why speed matters\n\nBuyers on IndiaMART contact several suppliers. An immediate, specific reply with a catalogue link stands out from a call three hours later.\n\n## Keep it in a CRM\n\nLog every lead and reply in a CRM so follow-ups are not lost. See [IndiaMART and Zoho CRM](/integrations/indiamart-zoho-crm) and the [WhatsApp Business API](/glossary/whatsapp-business-api).\n\nTool features and APIs change; confirm current capabilities before scoping.",
+  "faqs": [
+    {
+      "q": "Do buyers have to opt in?",
+      "a": "Follow WhatsApp's current business messaging and opt-in policies; use approved templates for first contact."
+    },
+    {
+      "q": "Can AI qualify the lead first?",
+      "a": "Yes. See AI sales enquiry qualification for scoring and routing."
+    }
+  ],
+  "related": [
+    "indiamart-zoho-crm",
+    "zoho-crm-whatsapp",
+    "razorpay-whatsapp"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

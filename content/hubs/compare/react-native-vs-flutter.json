@@ -1,0 +1,52 @@
+{
+  "slug": "react-native-vs-flutter",
+  "title": "React Native vs Flutter for Business Apps",
+  "category": "Mobile",
+  "optionA": "React Native",
+  "optionB": "Flutter",
+  "verdict": "Choose React Native when you have or plan a React web app and want shared skills. Choose Flutter when pixel-consistent UI across many Android devices matters and your team is comfortable with Dart. For most business apps either works; the team matters more.",
+  "seoTitle": "React Native vs Flutter for Business Apps (2026)",
+  "seoDescription": "React Native or Flutter for a business app in India: performance, developer availability, code sharing with web, long-term maintenance and cost.",
+  "summary": "React Native and Flutter both build Android and iOS apps from one codebase, cutting cost compared with two native apps. React Native uses JavaScript or TypeScript and shares skills and some code with React web apps. Flutter uses Dart and gives very consistent UI across devices. Both are mature choices for business apps.",
+  "dataPoints": [
+    {
+      "label": "Language",
+      "value": "React Native: JavaScript/TypeScript. Flutter: Dart"
+    },
+    {
+      "label": "Code sharing with web",
+      "value": "React Native shares more with React web apps"
+    },
+    {
+      "label": "UI consistency",
+      "value": "Flutter renders its own widgets, giving consistent look across devices"
+    },
+    {
+      "label": "Developer availability in India",
+      "value": "Both widely available; JavaScript developers are more numerous"
+    },
+    {
+      "label": "Offline and device features",
+      "value": "Both support offline storage, camera, GPS and notifications"
+    }
+  ],
+  "body": "## What matters more than the framework\n\n- Offline sync design for field use. See [offline-first apps](/blog/offline-first-apps-for-field-teams-in-india).\n- Clean API design to your back-end.\n- A plan for app store updates and OS changes.\n\nSee [React Native vs Flutter vs native](/blog/react-native-vs-flutter-vs-native-in-2026) and the [field sales app cost guide](/cost/field-sales-app).\n\nPrices and features change often; check current details before deciding.",
+  "faqs": [
+    {
+      "q": "Is native ever better?",
+      "a": "For heavy graphics, advanced device features or very high performance, native can still be the better choice."
+    },
+    {
+      "q": "Can we switch later?",
+      "a": "Switching means a rewrite of the app layer; choose with the long term in mind."
+    }
+  ],
+  "related": [
+    "custom-app-vs-whatsapp-bot",
+    "pwa-vs-native-app",
+    "supabase-vs-firebase"
+  ],
+  "service": "/services/mobile-app-development",
+  "publishedAt": "2026-11-10T03:30:00.000Z",
+  "indexable": true
+}

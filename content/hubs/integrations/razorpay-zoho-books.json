@@ -1,0 +1,46 @@
+{
+  "slug": "razorpay-zoho-books",
+  "title": "Razorpay and Zoho Books Integration",
+  "toolA": "Razorpay",
+  "toolB": "Zoho Books",
+  "seoTitle": "Razorpay Zoho Books Integration and Reconciliation",
+  "seoDescription": "Record Razorpay payments, fees and settlements in Zoho Books automatically and match them to invoices. Native options, limits and custom approaches.",
+  "summary": "A Razorpay–Zoho Books integration marks invoices paid when customers pay through Razorpay, records gateway fees and GST on fees, and matches settlements to bank deposits, so receivables stay accurate without manual matching.",
+  "dataPoints": [
+    {
+      "label": "What syncs",
+      "value": "Payments against invoices, gateway fees, refunds, settlements"
+    },
+    {
+      "label": "Native option",
+      "value": "Zoho Books supports Razorpay as a payment gateway for invoice payments"
+    },
+    {
+      "label": "When custom is needed",
+      "value": "Payments made outside Zoho invoices, such as website or app checkouts"
+    },
+    {
+      "label": "Typical effort",
+      "value": "Configuration for native use; 2–4 weeks for custom reconciliation"
+    }
+  ],
+  "body": "## Native versus custom\n\nIf customers pay from Zoho invoice links, the built-in gateway connection covers most needs. If payments come from a website, app or subscription system, a custom sync matches them to invoices using reference numbers.\n\nSee [TallyPrime vs Zoho Books](/compare/tally-vs-zoho-books) and the [Tally and Razorpay integration](/integrations/tally-razorpay).\n\nTool features and APIs change; confirm current capabilities before scoping.",
+  "faqs": [
+    {
+      "q": "Are Razorpay fees recorded with GST?",
+      "a": "They should be: fees and the GST charged on them go to separate ledgers for input credit."
+    },
+    {
+      "q": "What about partial payments?",
+      "a": "Custom matching can apply partial payments and flag mismatches for review."
+    }
+  ],
+  "related": [
+    "tally-razorpay",
+    "razorpay-whatsapp",
+    "tally-zoho-crm"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

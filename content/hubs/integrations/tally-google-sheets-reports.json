@@ -1,0 +1,46 @@
+{
+  "slug": "tally-google-sheets-reports",
+  "title": "Tally Reports to Google Sheets",
+  "toolA": "TallyPrime",
+  "toolB": "Google Sheets",
+  "seoTitle": "Automate Tally Reports into Google Sheets",
+  "seoDescription": "Send sales, outstanding and stock reports from TallyPrime to Google Sheets automatically every day, so managers see live numbers without exports.",
+  "summary": "Automated Tally reporting pushes sales, receivables, payables and stock figures from TallyPrime into Google Sheets on a schedule, so owners and managers see up-to-date numbers on any device without asking the accounts team for exports.",
+  "dataPoints": [
+    {
+      "label": "Typical reports",
+      "value": "Daily sales by customer and item, outstanding receivables with ageing, stock summary"
+    },
+    {
+      "label": "Frequency",
+      "value": "Hourly or daily, depending on need and Tally availability"
+    },
+    {
+      "label": "Requirement",
+      "value": "A small connector running on the machine or server where Tally runs"
+    },
+    {
+      "label": "Typical effort",
+      "value": "1–3 weeks"
+    }
+  ],
+  "body": "## Why Sheets first\n\nGoogle Sheets is familiar, shareable and easy to chart. When needs grow, the same data can feed a dashboard tool. See [Tally and Power BI](/integrations/tally-power-bi).\n\n## Access control\n\nShare only the sheets each person needs, and keep financial sheets in the company workspace, not personal drives.\n\nFor the reverse direction, see [Google Sheets to Tally](/integrations/google-sheets-tally).\n\nTool features and APIs change; confirm current capabilities before scoping.",
+  "faqs": [
+    {
+      "q": "Does Tally need to stay open?",
+      "a": "The connector needs Tally running with the company loaded at sync times, or Tally on a server."
+    },
+    {
+      "q": "Can we get WhatsApp alerts too?",
+      "a": "Yes. Thresholds such as overdue receivables can trigger WhatsApp messages."
+    }
+  ],
+  "related": [
+    "google-sheets-tally",
+    "tally-power-bi",
+    "google-sheets-whatsapp"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

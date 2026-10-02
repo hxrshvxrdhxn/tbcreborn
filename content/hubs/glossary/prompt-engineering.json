@@ -1,0 +1,44 @@
+{
+  "slug": "prompt-engineering",
+  "title": "Prompt Engineering",
+  "seoTitle": "What Is Prompt Engineering? A Guide for Businesses",
+  "seoDescription": "What prompt engineering means for business AI applications, why prompts need testing like code, and when it is enough versus RAG or fine-tuning.",
+  "summary": "Prompt engineering is the craft of writing the instructions, examples and context given to an LLM so it produces reliable, useful output. In business applications, prompts are part of the product: they are versioned, tested against real examples and changed carefully, just like code.",
+  "dataPoints": [
+    {
+      "label": "What a prompt contains",
+      "value": "Role and task, rules, examples of good output, the data to work on, the required output format"
+    },
+    {
+      "label": "Cheapest lever",
+      "value": "Better prompts often fix accuracy problems before any fine-tuning or extra infrastructure"
+    },
+    {
+      "label": "Main risk",
+      "value": "Small wording changes can shift results; untested edits cause silent regressions"
+    },
+    {
+      "label": "Good practice",
+      "value": "Keep a test set of real inputs and re-run it whenever a prompt changes"
+    }
+  ],
+  "body": "## Prompt engineering in practice\n\nFor a document-reading application, the prompt might say what fields to extract, how to format dates and amounts, what to do when a field is missing, and include two or three worked examples. Asking for structured output such as JSON makes results easier to check and pass to other systems.\n\n## When prompts are not enough\n\n| Problem | Better fix |\n| --- | --- |\n| The model lacks your company knowledge | [RAG](/glossary/rag) |\n| You need a very specific style or format at scale | [Fine-tuning](/glossary/fine-tuning) |\n| Answers are invented | Grounding and checks; see [hallucination](/glossary/hallucination) |\n\nSee our glossary entry on [LLMs](/glossary/llm).",
+  "faqs": [
+    {
+      "q": "Is prompt engineering a long-term skill?",
+      "a": "Models get better at following plain instructions, but clear specifications and testing remain essential."
+    },
+    {
+      "q": "Should prompts be kept secret?",
+      "a": "Treat them like source code: version them and keep them in your repository, not in someone's notes."
+    }
+  ],
+  "related": [
+    "llm",
+    "rag",
+    "fine-tuning"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

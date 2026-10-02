@@ -1,0 +1,52 @@
+{
+  "slug": "custom-crm-vs-off-the-shelf",
+  "title": "Custom CRM vs Off-the-Shelf CRM",
+  "category": "CRM",
+  "optionA": "Custom CRM",
+  "optionB": "Off-the-shelf CRM",
+  "verdict": "Start with an off-the-shelf CRM unless your process is genuinely unusual, you need deep integration with operations, or per-user fees across many users outweigh a one-time build.",
+  "seoTitle": "Custom CRM vs Off-the-Shelf CRM: How to Decide",
+  "seoDescription": "When an off-the-shelf CRM is enough and when a custom CRM pays off: process fit, integrations, user count, cost over five years and ownership.",
+  "summary": "Off-the-shelf CRMs such as Zoho, HubSpot and Salesforce are quick to start and suit standard sales processes. A custom CRM is built around your exact workflow and data, with no per-user fees, but needs a larger upfront investment and ongoing support. The deciding factors are process fit, integrations and user count.",
+  "dataPoints": [
+    {
+      "label": "Time to start",
+      "value": "Off-the-shelf: days to weeks. Custom: typically 8–12 weeks for a focused first release"
+    },
+    {
+      "label": "Cost shape",
+      "value": "Off-the-shelf: per user per month. Custom: upfront build plus maintenance"
+    },
+    {
+      "label": "Process fit",
+      "value": "Custom fits exactly; packaged CRMs need workarounds for unusual workflows"
+    },
+    {
+      "label": "Integrations",
+      "value": "Custom can connect deeply to ERP, Tally and production; packaged relies on connectors"
+    },
+    {
+      "label": "Ownership",
+      "value": "Custom: you own code and data. Packaged: you rent access, data exportable"
+    }
+  ],
+  "body": "## A simple test\n\n| Question | If yes, lean towards |\n| --- | --- |\n| Does a standard lead-to-deal pipeline describe your sales? | Off-the-shelf |\n| Do 50+ people need access, including dealers or field staff? | Custom |\n| Must the CRM trigger production, stock or service work? | Custom |\n| Do you need it working this month? | Off-the-shelf |\n\nSee the [CRM cost guide](/cost/crm-software) and [build, buy or extend](/blog/build-buy-or-extend-choosing-software-for-a-100-person-company).\n\nPrices and features change often; check current details before deciding.",
+  "faqs": [
+    {
+      "q": "Can we start packaged and go custom later?",
+      "a": "Yes, and it is a common path; clean data makes the move easier."
+    },
+    {
+      "q": "Is a custom CRM hard to maintain?",
+      "a": "It needs a support arrangement; agree it before building."
+    }
+  ],
+  "related": [
+    "zoho-crm-vs-hubspot",
+    "odoo-vs-erpnext",
+    "custom-app-vs-whatsapp-bot"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-11-10T03:30:00.000Z",
+  "indexable": true
+}

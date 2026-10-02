@@ -41,6 +41,12 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Old site pages still in search indexes (found 3 Oct 2026)
+      { source: "/faq", destination: "/", permanent: true },
+      { source: "/about-us", destination: "/about", permanent: true },
+      { source: "/services-1", destination: "/services", permanent: true },
+      { source: "/f/best-tech-stacks-for-non-tech-founders", destination: "/blog", permanent: true },
+      { source: "/blogs-1/f/best-tech-stacks-for-non-tech-founders", destination: "/blog", permanent: true },
       {
         source: "/blogs-1/f/:slug",
         destination: "/blog/:slug",

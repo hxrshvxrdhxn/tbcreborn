@@ -60,6 +60,7 @@ const schema = z.object({
   service: z.string().min(1).max(100),
   budget: z.string().max(50).optional(),
   message: z.string().min(10).max(5000),
+  foundVia: z.string().max(60).optional(),
   website: z.string().optional(), // honeypot
   landingPage: z.string().nullable().optional(),
   referrerPath: z.string().nullable().optional(),
@@ -127,6 +128,7 @@ export async function POST(req: NextRequest) {
         <p><strong>Email:</strong> ${esc(data.email)}</p>
         ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
         <p><strong>Service of Interest:</strong> ${esc(data.service)}</p>
+        ${data.foundVia ? `<p><strong>Found us via:</strong> ${esc(data.foundVia)}</p>` : ""}
         ${data.budget ? `<p><strong>Budget Range:</strong> ${esc(data.budget)}</p>` : ""}
         <p><strong>Message:</strong></p>
         <p style="white-space:pre-wrap">${esc(data.message)}</p>
@@ -156,7 +158,7 @@ export async function POST(req: NextRequest) {
           phone: data.phone || null,
           service: data.service,
           budget: data.budget || null,
-          message: data.message,
+          message: data.foundVia ? `${data.message}\n\nFound us via: ${data.foundVia}` : data.message,
           landingPage: data.landingPage || null,
           referrerPath: data.referrerPath || null,
         }
@@ -172,7 +174,7 @@ export async function POST(req: NextRequest) {
             phone: data.phone || null,
             service: data.service,
             budget: data.budget || null,
-            message: data.message,
+            message: data.foundVia ? `${data.message}\n\nFound us via: ${data.foundVia}` : data.message,
           } as Parameters<typeof prisma.contactQuery.create>[0]["data"]
         });
       } catch (fallbackErr) {

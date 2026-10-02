@@ -1,0 +1,44 @@
+{
+  "slug": "vector-database",
+  "title": "Vector Database",
+  "seoTitle": "What Is a Vector Database? Plain Guide for Business",
+  "seoDescription": "What a vector database is, why AI search and chatbots use one, options such as pgvector, and what it means for cost and data control.",
+  "summary": "A vector database stores text, images or other content as lists of numbers called embeddings, so software can find items with similar meaning rather than matching exact words. It is the search engine behind most AI assistants that answer from company documents.",
+  "dataPoints": [
+    {
+      "label": "Used for",
+      "value": "Semantic search, AI chatbots over company documents, recommendations, duplicate detection"
+    },
+    {
+      "label": "Common options",
+      "value": "pgvector inside PostgreSQL, plus dedicated services such as Pinecone, Weaviate and Qdrant"
+    },
+    {
+      "label": "For most SMEs",
+      "value": "pgvector in an existing PostgreSQL database is usually enough and keeps data in one place"
+    },
+    {
+      "label": "Cost drivers",
+      "value": "Number of documents, how often content changes, and query volume"
+    }
+  ],
+  "body": "## How it fits into an AI assistant\n\n1. Documents are split into passages.\n2. Each passage is converted into an embedding.\n3. A question is converted the same way.\n4. The vector database returns the passages closest in meaning.\n5. The LLM answers using those passages.\n\nThis is the retrieval step in [RAG](/glossary/rag).\n\n## Do you need a separate product\n\nOften not. If your application already uses [PostgreSQL](/compare/postgresql-vs-mysql), the pgvector extension handles hundreds of thousands of passages comfortably. Dedicated services make sense at very large scale or for special features.",
+  "faqs": [
+    {
+      "q": "Is my data safe in a vector database?",
+      "a": "It needs the same access control and encryption as any database. Embeddings can reveal content, so protect them accordingly."
+    },
+    {
+      "q": "Does it replace our normal database?",
+      "a": "No. It sits alongside it, often inside the same PostgreSQL instance."
+    }
+  ],
+  "related": [
+    "rag",
+    "database",
+    "llm"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

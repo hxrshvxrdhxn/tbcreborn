@@ -1,0 +1,44 @@
+{
+  "slug": "single-sign-on",
+  "title": "Single Sign-On (SSO)",
+  "seoTitle": "What Is Single Sign-On (SSO)? Guide for Businesses",
+  "seoDescription": "What single sign-on is, how staff log in to many apps with one Google or Microsoft account, security benefits and when custom software should support it.",
+  "summary": "Single sign-on lets staff log in to many applications with one company account, typically Google Workspace or Microsoft 365, instead of separate passwords for each. When someone leaves, disabling one account removes access everywhere, which is one of the simplest security improvements a growing business can make.",
+  "dataPoints": [
+    {
+      "label": "Common identity providers",
+      "value": "Google Workspace, Microsoft Entra ID (formerly Azure AD), Okta"
+    },
+    {
+      "label": "Standards",
+      "value": "SAML and OpenID Connect"
+    },
+    {
+      "label": "Main benefits",
+      "value": "Fewer passwords, faster onboarding and offboarding, central two-factor authentication"
+    },
+    {
+      "label": "For custom software",
+      "value": "Adding Google or Microsoft login is usually a modest piece of work"
+    }
+  ],
+  "body": "## Why it matters as you grow\n\nWith ten tools and thirty staff, separate passwords mean hundreds of accounts to manage. Former employees keeping access is a common and avoidable risk.\n\n## Pair it with\n\n- [Two-factor authentication](/glossary/two-factor-authentication) enforced at the identity provider.\n- [Role-based access control](/glossary/role-based-access-control) inside each application.\n\nSee [Google Workspace vs Microsoft 365](/compare/google-workspace-vs-microsoft-365).",
+  "faqs": [
+    {
+      "q": "Can customers use SSO too?",
+      "a": "Customer-facing apps usually offer social or OTP login instead; SSO is mainly for staff."
+    },
+    {
+      "q": "Is SSO expensive?",
+      "a": "Basic Google and Microsoft sign-in is included in their business plans; some SaaS tools charge more for SSO."
+    }
+  ],
+  "related": [
+    "two-factor-authentication",
+    "role-based-access-control",
+    "saas"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

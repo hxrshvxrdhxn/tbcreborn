@@ -1,0 +1,52 @@
+{
+  "slug": "in-house-team-vs-software-agency",
+  "title": "In-House Developers vs Software Agency",
+  "category": "Hiring",
+  "optionA": "In-house team",
+  "optionB": "Software development agency",
+  "verdict": "Use an agency for the first build or specialised work, with code and accounts owned by you. Hire in-house when software becomes a continuous core capability with steady work for at least two to three developers.",
+  "seoTitle": "In-House Developers vs Software Agency for SMEs",
+  "seoDescription": "Hire in-house developers or work with a software agency: cost, speed, skills coverage, continuity, ownership and the hybrid model many SMEs use.",
+  "summary": "An in-house team gives continuity and deep business knowledge but takes time to hire and needs technical leadership. An agency brings a ready team with design, development, testing and DevOps skills, starts quickly and scales up or down, but needs clear ownership terms and handover. Many SMEs use an agency to build and one in-house person to own the product.",
+  "dataPoints": [
+    {
+      "label": "Time to start",
+      "value": "Agency: weeks. In-house: months to hire and onboard"
+    },
+    {
+      "label": "Skills",
+      "value": "Agency: full mix. In-house: limited to who you hire"
+    },
+    {
+      "label": "Cost shape",
+      "value": "Agency: project or monthly fee. In-house: salaries, benefits, tools, management"
+    },
+    {
+      "label": "Continuity",
+      "value": "In-house is stronger; agencies need good documentation and handover"
+    },
+    {
+      "label": "Key protection",
+      "value": "Contract clauses on IP, source code and account ownership"
+    }
+  ],
+  "body": "## The hybrid model\n\nAn agency builds and maintains; an internal product owner sets priorities and keeps knowledge in the company. Over time, internal developers can take over with a structured handover.\n\nSee [who owns the code](/blog/who-owns-the-code-ip-source-code-and-handover-clauses-explained), [fixed price vs time and materials](/blog/fixed-price-vs-time-and-materials-which-software-contract-protects-you) and [12 questions to ask a software company](/blog/how-to-choose-a-software-development-company-in-noida-12-questions-to-ask).\n\nPrices and features change often; check current details before deciding.",
+  "faqs": [
+    {
+      "q": "Is a freelancer a middle option?",
+      "a": "For small, well-defined tasks yes; larger systems carry more continuity risk with one person."
+    },
+    {
+      "q": "How do we avoid lock-in with an agency?",
+      "a": "Own the repository, cloud accounts and domains from day one and require documentation."
+    }
+  ],
+  "related": [
+    "custom-crm-vs-off-the-shelf",
+    "nextjs-vs-wordpress",
+    "zapier-vs-power-automate"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-11-10T03:30:00.000Z",
+  "indexable": true
+}

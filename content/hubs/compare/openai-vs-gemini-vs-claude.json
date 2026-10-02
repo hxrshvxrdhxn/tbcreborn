@@ -1,0 +1,52 @@
+{
+  "slug": "openai-vs-gemini-vs-claude",
+  "title": "OpenAI vs Gemini vs Claude for Business Applications",
+  "category": "AI",
+  "optionA": "OpenAI GPT models",
+  "optionB": "Google Gemini and Anthropic Claude",
+  "verdict": "Do not pick on reputation. Test two or three models on a few hundred real examples, compare accuracy and cost per task, and build with a provider-neutral layer so you can change models as they improve.",
+  "seoTitle": "OpenAI vs Gemini vs Claude for Business AI Apps",
+  "seoDescription": "Choosing an LLM provider for a business application: quality on your tasks, cost, data handling, Indian data location and avoiding lock-in.",
+  "summary": "OpenAI, Google Gemini and Anthropic Claude all offer capable LLMs through APIs for chatbots, document reading and automation. Each leads on different tasks at different times, and prices change often. For business applications, the right choice comes from testing on your own data, checking data-handling terms, and designing so you can switch providers later.",
+  "dataPoints": [
+    {
+      "label": "Access",
+      "value": "APIs directly, or through cloud platforms such as Azure, Google Cloud and AWS Bedrock"
+    },
+    {
+      "label": "Data handling",
+      "value": "Business API terms generally exclude training on your data; confirm current terms"
+    },
+    {
+      "label": "Data location",
+      "value": "Check available regions if data residency matters"
+    },
+    {
+      "label": "Cost",
+      "value": "Charged per token; varies widely by model size"
+    },
+    {
+      "label": "Alternatives",
+      "value": "Open models such as Llama or Mistral can be self-hosted for private deployment"
+    }
+  ],
+  "body": "## How we choose for clients\n\n1. Build a test set from real documents or questions.\n2. Run each candidate model with the same prompts.\n3. Score accuracy, speed and cost per task.\n4. Check data terms and region.\n5. Keep the model behind an interface so switching is cheap.\n\nSee [LLM](/glossary/llm), [prompt engineering](/glossary/prompt-engineering) and the [AI chatbot cost guide](/cost/ai-chatbot).\n\nPrices and features change often; check current details before deciding.",
+  "faqs": [
+    {
+      "q": "Is one provider always best?",
+      "a": "No. Rankings change frequently and differ by task, which is why testing matters."
+    },
+    {
+      "q": "Can we run a model on our own servers?",
+      "a": "Yes, using open models, at the cost of hardware and maintenance. See [on-premise LLM hardware](/blog/on-premise-llm-hardware-what-you-actually-need)."
+    }
+  ],
+  "related": [
+    "rag-vs-fine-tuning",
+    "supabase-vs-firebase",
+    "custom-app-vs-whatsapp-bot"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-11-10T03:30:00.000Z",
+  "indexable": true
+}
