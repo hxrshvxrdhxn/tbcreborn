@@ -1,0 +1,44 @@
+{
+  "slug": "backup-and-disaster-recovery",
+  "title": "Backup and Disaster Recovery",
+  "seoTitle": "Backup and Disaster Recovery for Small Businesses",
+  "seoDescription": "What backup and disaster recovery mean for business software, RPO and RTO in plain words, the 3-2-1 rule, and how to test that restores work.",
+  "summary": "Backup is keeping copies of your data; disaster recovery is the plan and practice for getting systems working again after a failure, attack or mistake. For a business, the real test is not whether backups exist but whether you can restore them quickly and completely.",
+  "dataPoints": [
+    {
+      "label": "Two key numbers",
+      "value": "RPO: how much data you can afford to lose. RTO: how long you can afford to be down"
+    },
+    {
+      "label": "3-2-1 rule",
+      "value": "Three copies, on two different types of storage, one kept off-site or in a separate account"
+    },
+    {
+      "label": "Biggest threat today",
+      "value": "Ransomware that also encrypts reachable backups"
+    },
+    {
+      "label": "Most common failure",
+      "value": "Backups never test-restored until the day they are needed"
+    }
+  ],
+  "body": "## A sensible baseline for SMEs\n\n| Item | Baseline |\n| --- | --- |\n| Database backups | Automatic daily, with point-in-time recovery if available |\n| Copies | At least one in a separate cloud account or region |\n| Retention | 30 days or more |\n| Restore test | Quarterly, timed and written down |\n| Access | Backups not deletable from everyday admin accounts |\n\nAsk any software vendor how backups work and request a restore demonstration. See [cloud hosting](/glossary/cloud-hosting) and [data migration](/glossary/data-migration).",
+  "faqs": [
+    {
+      "q": "Does cloud hosting mean we are backed up?",
+      "a": "Not automatically. Check what the provider backs up, for how long, and who can restore it."
+    },
+    {
+      "q": "How often should we test restores?",
+      "a": "At least quarterly, and after any major change to the system."
+    }
+  ],
+  "related": [
+    "cloud-hosting",
+    "database",
+    "data-migration"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

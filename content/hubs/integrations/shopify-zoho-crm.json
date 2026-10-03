@@ -1,0 +1,46 @@
+{
+  "slug": "shopify-zoho-crm",
+  "title": "Shopify and Zoho CRM Integration",
+  "toolA": "Shopify",
+  "toolB": "Zoho CRM",
+  "seoTitle": "Shopify Zoho CRM Integration: Customers and Orders",
+  "seoDescription": "Sync Shopify customers and orders into Zoho CRM for segmentation, follow-ups and repeat-purchase campaigns. What to sync and how to avoid duplicates.",
+  "summary": "A Shopify–Zoho CRM integration creates or updates a contact in Zoho for every Shopify customer and records their orders, so sales and marketing teams can segment buyers, follow up on high-value orders and run repeat-purchase campaigns from one place.",
+  "dataPoints": [
+    {
+      "label": "What syncs",
+      "value": "Customers, orders, order value, products bought, abandoned carts (optional)"
+    },
+    {
+      "label": "Key rule",
+      "value": "Match customers by email or phone to prevent duplicates"
+    },
+    {
+      "label": "Typical uses",
+      "value": "B2B or high-value D2C follow-up, repeat-purchase reminders, VIP segments"
+    },
+    {
+      "label": "Typical effort",
+      "value": "2–4 weeks for a custom sync; marketplace connectors for simpler needs"
+    }
+  ],
+  "body": "## Duplicates are the main risk\n\nCustomers check out with different emails or phone formats. Normalise phone numbers to one format and decide which field is the unique key before syncing.\n\n## Pair with WhatsApp\n\nCRM segments become useful when followed by action. See [Zoho CRM and WhatsApp](/integrations/zoho-crm-whatsapp) and [Shopify and WhatsApp](/integrations/shopify-whatsapp).\n\nTool features and APIs change; confirm current capabilities before scoping.",
+  "faqs": [
+    {
+      "q": "Should every Shopify customer go into the CRM?",
+      "a": "Not always. Many brands sync only customers above an order value or with repeat purchases."
+    },
+    {
+      "q": "Can Zoho show live order status?",
+      "a": "Yes, if order updates are synced; otherwise link to the Shopify order."
+    }
+  ],
+  "related": [
+    "shopify-whatsapp",
+    "zoho-crm-whatsapp",
+    "tally-shopify"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

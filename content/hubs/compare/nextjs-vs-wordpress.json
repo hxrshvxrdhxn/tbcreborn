@@ -1,0 +1,52 @@
+{
+  "slug": "nextjs-vs-wordpress",
+  "title": "Next.js vs WordPress for a Business Website",
+  "category": "Web",
+  "optionA": "Next.js",
+  "optionB": "WordPress",
+  "verdict": "Choose WordPress when marketing must change layouts often without developers and budget is tight. Choose Next.js when speed, security and custom features such as calculators, portals or integrations matter.",
+  "seoTitle": "Next.js vs WordPress for Business Websites",
+  "seoDescription": "Next.js or WordPress for a business website: speed, SEO, security, editing experience, plugins, hosting and the cost of maintenance.",
+  "summary": "WordPress powers a large share of websites and lets non-technical teams edit pages easily with themes and plugins, but needs regular updates and can slow down with plugins. Next.js is a modern framework that produces very fast, secure sites, usually paired with a headless CMS for editing, and needs developers for structural changes.",
+  "dataPoints": [
+    {
+      "label": "Speed",
+      "value": "Next.js sites are typically faster out of the box; WordPress depends on theme and plugins"
+    },
+    {
+      "label": "Editing",
+      "value": "WordPress: built in. Next.js: through a headless CMS"
+    },
+    {
+      "label": "Security",
+      "value": "WordPress needs constant plugin and core updates; Next.js has a smaller attack surface"
+    },
+    {
+      "label": "Custom features",
+      "value": "Easier in Next.js; WordPress relies on plugins or custom PHP"
+    },
+    {
+      "label": "Hosting",
+      "value": "WordPress: PHP hosting. Next.js: Vercel or similar platforms"
+    }
+  ],
+  "body": "## SEO\n\nBoth can rank well. Speed and [Core Web Vitals](/glossary/core-web-vitals), structured content and good writing matter more than the platform.\n\nSee [Next.js vs WordPress in 2026](/blog/nextjs-vs-wordpress-for-a-business-website-in-2026) and the [headless CMS entry](/glossary/headless-cms).\n\nPrices and features change often; check current details before deciding.",
+  "faqs": [
+    {
+      "q": "Can we move from WordPress to Next.js?",
+      "a": "Yes. Content migrates and URL redirects protect rankings."
+    },
+    {
+      "q": "Is WordPress free?",
+      "a": "The software is free; themes, plugins, hosting and maintenance are not."
+    }
+  ],
+  "related": [
+    "shopify-vs-woocommerce",
+    "vercel-vs-aws",
+    "pwa-vs-native-app"
+  ],
+  "service": "/services/web-development",
+  "publishedAt": "2026-11-10T03:30:00.000Z",
+  "indexable": true
+}

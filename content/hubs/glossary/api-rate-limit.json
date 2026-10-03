@@ -1,0 +1,44 @@
+{
+  "slug": "api-rate-limit",
+  "title": "API Rate Limit",
+  "seoTitle": "What Is an API Rate Limit? Plain Guide for Business",
+  "seoDescription": "What API rate limits are, why integrations with Shopify, WhatsApp or Zoho hit them, and how well-built integrations queue and retry safely.",
+  "summary": "An API rate limit is the maximum number of requests a service allows in a period of time. When an integration sends too many requests, for example during a bulk stock sync, the service temporarily refuses them. Well-built integrations queue requests and retry, so nothing is lost.",
+  "dataPoints": [
+    {
+      "label": "Where you meet them",
+      "value": "Shopify, WhatsApp Business API, Zoho, Google APIs, payment gateways"
+    },
+    {
+      "label": "Typical symptom",
+      "value": "Syncs that work for ten records but fail for ten thousand"
+    },
+    {
+      "label": "Correct handling",
+      "value": "Queues, back-off and retry, batching, and alerting on persistent failures"
+    },
+    {
+      "label": "Wrong handling",
+      "value": "Ignoring errors, leaving records silently unsynced"
+    }
+  ],
+  "body": "## Why it matters\n\nAn order sync that silently drops records during a sale is worse than one that is slow. Ask any integration partner how they handle rate limits and failures, and whether you get alerted.\n\nSee our entries on [APIs](/glossary/api), [webhooks](/glossary/webhook) and [integration](/glossary/integration).",
+  "faqs": [
+    {
+      "q": "Can we pay for higher limits?",
+      "a": "Some providers offer higher limits on bigger plans; good design usually matters more."
+    },
+    {
+      "q": "Do no-code tools handle rate limits?",
+      "a": "Partly; at high volume, custom queuing is often more reliable."
+    }
+  ],
+  "related": [
+    "api",
+    "webhook",
+    "integration"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

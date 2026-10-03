@@ -13,6 +13,7 @@ const contactSchema = z.object({
   phone: z.string().optional(),
   service: z.string().min(1, "Please select what you need"),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  foundVia: z.string().optional(),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -25,6 +26,15 @@ const needOptions = [
   "Website",
   "MVP for a startup",
   "Something else",
+];
+
+const foundViaOptions = [
+  "Google search",
+  "ChatGPT or another AI assistant",
+  "LinkedIn",
+  "Instagram",
+  "Referral",
+  "Other",
 ];
 
 export default function ContactClient() {
@@ -64,6 +74,7 @@ export default function ContactClient() {
         track("generate_lead", {
           form_location: typeof window !== "undefined" ? window.location.pathname : "",
           service: data.service,
+          found_via: data.foundVia || "not given",
           page_path: typeof window !== "undefined" ? window.location.pathname : "",
         });
         reset();
@@ -345,6 +356,32 @@ export default function ContactClient() {
                           {errors.service.message}
                         </p>
                       )}
+                    </div>
+
+                    <div>
+                      <label htmlFor="foundVia" className={labelBase}>
+                        How did you find us? <span className="font-normal text-mid-grey">(optional)</span>
+                      </label>
+                      <div className="relative">
+                        <select
+                          id="foundVia"
+                          {...register("foundVia")}
+                          className={`${inputBase} appearance-none`}
+                          defaultValue=""
+                        >
+                          <option value="">Select one</option>
+                          {foundViaOptions.map((option) => (
+                            <option key={option} value={option}>
+                              {option}
+                            </option>
+                          ))}
+                        </select>
+                        <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
+                          <svg className="w-4 h-4 text-mid-grey" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
 
                     {/* A line or two about it */}

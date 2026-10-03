@@ -1,0 +1,44 @@
+{
+  "slug": "gst-e-way-bill",
+  "title": "E-Way Bill",
+  "seoTitle": "What Is an E-Way Bill? Software and Automation Guide",
+  "seoDescription": "What the GST e-way bill is, when it is required, and how businesses generate it automatically from Tally, ERP or custom software through the API.",
+  "summary": "An e-way bill is an electronic document generated on the government's e-way bill portal for the movement of goods above a set value under GST. Businesses that dispatch many consignments usually generate it automatically from their billing or ERP system instead of typing each one on the portal.",
+  "dataPoints": [
+    {
+      "label": "Required for",
+      "value": "Movement of goods above the notified value threshold, with some exemptions; check current rules"
+    },
+    {
+      "label": "Generated through",
+      "value": "The e-way bill portal directly, Tally, ERP software, or the e-way bill API via a GST Suvidha Provider"
+    },
+    {
+      "label": "Linked to",
+      "value": "E-invoicing: for e-invoiced documents, e-way bill details can be generated alongside the IRN"
+    },
+    {
+      "label": "Common errors",
+      "value": "Wrong vehicle number, distance or HSN codes; expired validity on long transits"
+    }
+  ],
+  "body": "## Automating e-way bills\n\n| Step | Manual | Automated |\n| --- | --- | --- |\n| Invoice data | Re-typed on portal | Taken from billing system |\n| Vehicle details | Entered later | Captured at dispatch screen |\n| Generation | One by one | In bulk through the API |\n| Extension | Remembered by staff | Alerts before expiry |\n\nSee our entry on [e-invoicing](/glossary/e-invoicing) and how [APIs](/glossary/api) connect your systems to government portals.\n\nRules and thresholds change; confirm current requirements with your tax adviser.",
+  "faqs": [
+    {
+      "q": "Can Tally generate e-way bills?",
+      "a": "Yes, TallyPrime supports e-way bill generation for eligible users; custom systems use the API through an authorised provider."
+    },
+    {
+      "q": "Do we need a separate provider for the API?",
+      "a": "API access is typically through a GST Suvidha Provider or similar authorised intermediary."
+    }
+  ],
+  "related": [
+    "e-invoicing",
+    "api",
+    "erp"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

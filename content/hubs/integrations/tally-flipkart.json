@@ -1,0 +1,46 @@
+{
+  "slug": "tally-flipkart",
+  "title": "Tally and Flipkart Integration",
+  "toolA": "TallyPrime",
+  "toolB": "Flipkart Seller Hub",
+  "seoTitle": "Tally Flipkart Integration for Indian Sellers",
+  "seoDescription": "Post Flipkart orders, returns, commissions and settlements into TallyPrime automatically. What syncs, how reconciliation works and typical effort.",
+  "summary": "A Tally–Flipkart integration records Flipkart sales, returns, commission and fee deductions and settlements in TallyPrime, so marketplace accounts reconcile without spreadsheets. It matters most for sellers whose settlement reports no longer match their books without hours of manual work.",
+  "dataPoints": [
+    {
+      "label": "What syncs",
+      "value": "Orders as sales vouchers, returns as credit notes, fees and commissions, settlements to bank"
+    },
+    {
+      "label": "Main challenge",
+      "value": "Settlements net off fees, TCS and returns, so one payout covers many orders"
+    },
+    {
+      "label": "Typical approach",
+      "value": "Import Flipkart reports or API data, map to ledgers, post vouchers through Tally's XML interface"
+    },
+    {
+      "label": "Typical effort",
+      "value": "3–6 weeks including ledger mapping and reconciliation testing"
+    }
+  ],
+  "body": "## The reconciliation problem\n\nFlipkart pays a net amount after commission, shipping fees, TCS and returns. Without automation, accountants rebuild each settlement by hand. An integration posts each component to the right ledger so the bank receipt matches.\n\n## GST points\n\nMarketplace TCS must be recorded correctly for credit in returns. Confirm treatment with your CA.\n\nSee the [Tally and Amazon integration](/integrations/tally-amazon) for the same pattern on Amazon.\n\nTool features and APIs change; confirm current capabilities before scoping.",
+  "faqs": [
+    {
+      "q": "Does it handle returns and RTO?",
+      "a": "Yes. Returns become credit notes and stock is adjusted when items come back."
+    },
+    {
+      "q": "Can we use one integration for Amazon and Flipkart?",
+      "a": "Yes. A single connector can handle several marketplaces with shared ledger rules."
+    }
+  ],
+  "related": [
+    "tally-amazon",
+    "tally-shopify",
+    "tally-razorpay"
+  ],
+  "service": "/services/business-automation",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

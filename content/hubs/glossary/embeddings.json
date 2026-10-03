@@ -1,0 +1,44 @@
+{
+  "slug": "embeddings",
+  "title": "Embeddings",
+  "seoTitle": "What Are Embeddings in AI? A Plain Explanation",
+  "seoDescription": "What embeddings are, how they let software compare meaning, where businesses use them in search and chatbots, and what to watch for.",
+  "summary": "Embeddings are lists of numbers that represent the meaning of a piece of text, an image or another item. Items with similar meaning get similar numbers, which lets software find related content even when the words differ, such as matching \"invoice not received\" with \"bill missing\".",
+  "dataPoints": [
+    {
+      "label": "Produced by",
+      "value": "Embedding models from OpenAI, Google, Cohere or open-source models you can host yourself"
+    },
+    {
+      "label": "Typical size",
+      "value": "A few hundred to a few thousand numbers per passage"
+    },
+    {
+      "label": "Business uses",
+      "value": "Semantic search, chatbot retrieval, grouping similar tickets, product matching"
+    },
+    {
+      "label": "Watch for",
+      "value": "Changing the embedding model means re-processing all stored content"
+    }
+  ],
+  "body": "## A simple example\n\nA distributor's customers describe the same product in many ways. Embeddings let the system match \"6 mm SS bolt\" and \"stainless steel bolt M6\" to the same item code, which keyword search would miss. This is how [purchase order extraction](/ai-use-cases/purchase-order-extraction) systems map customer descriptions to an item master.\n\n## Where they are stored\n\nEmbeddings live in a [vector database](/glossary/vector-database) and are searched during [RAG](/glossary/rag).",
+  "faqs": [
+    {
+      "q": "Do embeddings work for Hindi?",
+      "a": "Multilingual embedding models handle Hindi and mixed Hindi-English text; test on your own data."
+    },
+    {
+      "q": "Are embeddings expensive?",
+      "a": "Creating them is usually a small cost compared with LLM generation."
+    }
+  ],
+  "related": [
+    "vector-database",
+    "rag",
+    "llm"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}

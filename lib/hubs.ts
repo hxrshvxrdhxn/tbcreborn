@@ -154,13 +154,53 @@ export async function getHubEntry<T extends HubEntry = HubEntry>(
 /**
  * Render Markdown content to sanitized HTML matching the blog's renderer.
  */
+const HUB_NAMES = ["glossary", "integrations", "cost", "compare", "solutions", "ai-use-cases"] as const;
+
+/**
+ * Internal paths (blog posts and hub entries) that are visible right now.
+ * Returns null if the blog list cannot be loaded, so callers leave links untouched.
+ */
+export async function getVisibleInternalPaths(): Promise<Set<string> | null> {
+  const paths = new Set<string>();
+  for (const hub of HUB_NAMES) {
+    const entries = await getHubEntries(hub);
+    for (const e of entries) {
+      paths.add(hub === "solutions" && e.industrySlug ? `/solutions/${e.industrySlug}/${e.slug}` : `/${hub}/${e.slug}`);
+    }
+  }
+  try {
+    const { prisma } = await import("@/lib/prisma");
+    const now = new Date();
+    const posts = await prisma.post.findMany({ select: { slug: true, status: true, publishedAt: true } });
+    for (const p of posts) {
+      const live = p.status === "published" || (p.status === "scheduled" && p.publishedAt !== null && new Date(p.publishedAt) <= now);
+      if (live) paths.add(`/blog/${p.slug}`);
+    }
+  } catch {
+    return null;
+  }
+  return paths;
+}
+
+/**
+ * Turn links to blog posts or hub entries that are not yet published into plain text,
+ * so scheduled content never links to a page that would return 404.
+ */
+export function unlinkUnpublished(html: string, visible: Set<string> | null): string {
+  if (!visible) return html;
+  return html.replace(
+    /<a href="(\/(?:blog|glossary|integrations|cost|compare|ai-use-cases|solutions)\/[^"#?]+)"[^>]*>([\s\S]*?)<\/a>/g,
+    (match, href: string, inner: string) => (visible.has(href.replace(/\/$/, "")) ? match : inner)
+  );
+}
+
 export async function renderMarkdown(content: string): Promise<string> {
   const { remark } = await import("remark");
   const remarkHtmlModule = await import("remark-html");
   const remarkHtml = (remarkHtmlModule as unknown as { default?: Parameters<ReturnType<typeof remark>["use"]>[0] }).default || remarkHtmlModule;
   const rawHtml = (await remark().use(remarkHtml as Parameters<ReturnType<typeof remark>["use"]>[0]).process(content)).toString();
 
-  return sanitizeHtml(rawHtml, {
+  const clean = sanitizeHtml(rawHtml, {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat([
       "img",
       "h1",
@@ -172,4 +212,5 @@ export async function renderMarkdown(content: string): Promise<string> {
       "*": ["class", "id"],
     },
   });
+  return unlinkUnpublished(clean, await getVisibleInternalPaths());
 }

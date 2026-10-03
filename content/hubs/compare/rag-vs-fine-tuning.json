@@ -1,0 +1,52 @@
+{
+  "slug": "rag-vs-fine-tuning",
+  "title": "RAG vs Fine-Tuning for Business AI",
+  "category": "AI",
+  "optionA": "RAG",
+  "optionB": "Fine-tuning",
+  "verdict": "Start with RAG for answering from company knowledge. Consider fine-tuning only after RAG and good prompts are in place and you have hundreds of high-quality examples of the exact behaviour you want.",
+  "seoTitle": "RAG vs Fine-Tuning: Which Does Your AI App Need",
+  "seoDescription": "RAG or fine-tuning for a business AI application: keeping answers current, accuracy, cost, data needs and why most company chatbots start with RAG.",
+  "summary": "Retrieval-augmented generation gives an LLM the relevant passages from your documents at question time, so answers reflect current company knowledge. Fine-tuning trains a model further on examples, changing its style or behaviour. Most business assistants start with RAG; fine-tuning helps for consistent formats or specialised tasks at scale.",
+  "dataPoints": [
+    {
+      "label": "Best for",
+      "value": "RAG: answering from documents that change. Fine-tuning: consistent style, format or narrow tasks"
+    },
+    {
+      "label": "Keeping current",
+      "value": "RAG updates when documents change; fine-tuning needs retraining"
+    },
+    {
+      "label": "Data needed",
+      "value": "RAG: your documents. Fine-tuning: many labelled examples"
+    },
+    {
+      "label": "Traceability",
+      "value": "RAG can show source passages; fine-tuned answers cannot cite sources"
+    },
+    {
+      "label": "Cost",
+      "value": "RAG: storage and retrieval. Fine-tuning: training runs plus hosting"
+    }
+  ],
+  "body": "## They combine well\n\nSome systems use RAG for knowledge and a fine-tuned model for output format. But most SMEs get what they need from RAG, good prompts and testing.\n\nSee [RAG](/glossary/rag), [fine-tuning](/glossary/fine-tuning), [vector databases](/glossary/vector-database) and [RAG or fine-tuning](/blog/rag-or-fine-tuning-choosing-the-right-approach-for-your-business-data).\n\nPrices and features change often; check current details before deciding.",
+  "faqs": [
+    {
+      "q": "Will fine-tuning stop hallucination?",
+      "a": "No. Grounding answers in retrieved sources and testing does more to reduce invented answers."
+    },
+    {
+      "q": "How many documents can RAG handle?",
+      "a": "From a handful to millions, depending on design."
+    }
+  ],
+  "related": [
+    "openai-vs-gemini-vs-claude",
+    "supabase-vs-firebase",
+    "custom-app-vs-whatsapp-bot"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-11-10T03:30:00.000Z",
+  "indexable": true
+}

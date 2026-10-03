@@ -1,0 +1,44 @@
+{
+  "slug": "payment-gateway",
+  "title": "Payment Gateway",
+  "seoTitle": "What Is a Payment Gateway? Guide for Indian Businesses",
+  "seoDescription": "What a payment gateway does, how UPI, cards and net banking flow through it, fees to expect, and how to connect it to your website, app and Tally.",
+  "summary": "A payment gateway is the service that lets your website, app or invoice link accept UPI, card, net banking and wallet payments, and tells your software whether each payment succeeded. In India, Razorpay, Cashfree, PayU and others provide gateways along with payment links, subscriptions and settlement reports.",
+  "dataPoints": [
+    {
+      "label": "Payment methods",
+      "value": "UPI, debit and credit cards, net banking, wallets, EMI options"
+    },
+    {
+      "label": "Pricing model",
+      "value": "Per-transaction fee, varying by method and plan; check current rates with the provider"
+    },
+    {
+      "label": "Integration",
+      "value": "Checkout on website or app, payment links, and webhooks to confirm payments"
+    },
+    {
+      "label": "Reconciliation",
+      "value": "Settlement reports matched to invoices; can be automated into Tally"
+    }
+  ],
+  "body": "## Why webhooks matter\n\nA customer closing the browser after paying should not leave an order unpaid in your system. Gateways send a [webhook](/glossary/webhook) to your server when a payment succeeds, and your software marks the invoice paid automatically.\n\n## Connecting to accounts\n\nAutomated reconciliation posts receipts and gateway fees to Tally, removing manual matching. See the [Tally and Razorpay integration](/integrations/tally-razorpay).",
+  "faqs": [
+    {
+      "q": "Do we need a gateway for UPI only?",
+      "a": "Not necessarily for occasional payments, but a gateway gives automatic confirmation and reconciliation, which matters at volume."
+    },
+    {
+      "q": "How long does integration take?",
+      "a": "A standard checkout or payment links usually takes days to a couple of weeks, depending on the system."
+    }
+  ],
+  "related": [
+    "webhook",
+    "api",
+    "e-invoicing"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-11-03T03:30:00.000Z",
+  "indexable": true
+}
