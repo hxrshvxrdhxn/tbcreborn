@@ -1,0 +1,49 @@
+{
+  "slug": "quality-inspection-app",
+  "title": "Quality Inspection App for Manufacturing",
+  "seoTitle": "Quality Inspection App for Indian Manufacturers",
+  "seoDescription": "A mobile quality inspection app for Indian factories: checklists, photos, rejections, root-cause tracking and customer-ready reports without paper.",
+  "summary": "A quality inspection app replaces paper checklists with guided inspections on a phone or tablet: inspectors record measurements and photos, rejections trigger actions automatically, and managers see defect trends by line, shift and supplier. For factories supplying OEMs, it also produces the inspection reports customers ask for.",
+  "dataPoints": [
+    {
+      "label": "Replaces",
+      "value": "Paper checklists, Excel defect logs and photos lost in WhatsApp groups"
+    },
+    {
+      "label": "Core features",
+      "value": "Checklists by product, measurements with tolerances, photo capture, rejection workflow"
+    },
+    {
+      "label": "Reports",
+      "value": "Defect Pareto, first-pass yield, supplier rejection rate, customer inspection reports"
+    },
+    {
+      "label": "Works offline",
+      "value": "Yes, inspections sync when the device reconnects"
+    },
+    {
+      "label": "Typical first release",
+      "value": "6–10 weeks"
+    }
+  ],
+  "body": "## Why paper fails\n\nPaper records are filled in late, cannot be searched, and rarely lead to action. Trends such as one supplier's rising rejection rate stay hidden until a customer complains.\n\n## How the app works\n\n1. Inspector selects the part and stage (incoming, in-process, final).\n2. The checklist shows the right parameters and tolerances.\n3. Out-of-tolerance values are flagged immediately.\n4. A rejection creates an action for the responsible person.\n5. Dashboards show trends by line, shift, part and supplier.\n\nSee [offline-first apps for field teams in India](/blog/offline-first-apps-for-field-teams-in-india) for how offline sync works.\n\nWant to see what this would look like for your business? [Book a 30-minute scoping call](/book-consultation).",
+  "faqs": [
+    {
+      "q": "Can it connect to measuring instruments?",
+      "a": "Many digital gauges can export readings; integration depends on the instrument and is scoped case by case."
+    },
+    {
+      "q": "Does it help with ISO audits?",
+      "a": "Yes. Searchable, time-stamped records with photos make audit evidence much easier to produce."
+    }
+  ],
+  "related": [
+    "production-planning-software",
+    "maintenance-management-software"
+  ],
+  "service": "/services/mobile-app-development",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "industry": "Manufacturing",
+  "industrySlug": "manufacturing"
+}

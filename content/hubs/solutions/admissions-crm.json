@@ -1,0 +1,49 @@
+{
+  "slug": "admissions-crm",
+  "title": "Admissions CRM for Schools and Colleges",
+  "seoTitle": "Admissions CRM for Indian Schools and Colleges",
+  "seoDescription": "An admissions CRM for Indian schools, colleges and training institutes: enquiry capture, counsellor follow-up, WhatsApp, applications and conversion reports.",
+  "summary": "An admissions CRM captures every enquiry from the website, ads, walk-ins and phone, assigns it to a counsellor, schedules follow-ups and tracks each applicant through to admission and fee payment. Institutes that manage enquiries in registers and spreadsheets usually find many leads never receive a second follow-up.",
+  "dataPoints": [
+    {
+      "label": "Replaces",
+      "value": "Enquiry registers, spreadsheets and personal WhatsApp follow-ups"
+    },
+    {
+      "label": "Lead sources",
+      "value": "Website forms, social ads, portals, walk-ins, phone calls"
+    },
+    {
+      "label": "Core features",
+      "value": "Counsellor assignment, follow-up reminders, WhatsApp templates, application tracking, fee link"
+    },
+    {
+      "label": "Reports",
+      "value": "Enquiries by source, counsellor conversion, drop-off by stage"
+    },
+    {
+      "label": "Typical first release",
+      "value": "6–10 weeks"
+    }
+  ],
+  "body": "## The admission funnel\n\n| Stage | What the CRM tracks |\n| --- | --- |\n| Enquiry | Source, course, contact details |\n| Counselling | Calls, visits, notes, next follow-up |\n| Application | Form status and documents |\n| Admission | Fee payment and seat confirmation |\n\n## Where AI helps\n\nA chatbot on the website and WhatsApp can answer common questions about courses, fees and eligibility at any hour and pass qualified enquiries to counsellors. See [AI chatbots for universities and colleges](/blog/ai-chatbots-for-universities-and-colleges-admissions-queries-and-student-support).\n\nWant to see what this would look like for your business? [Book a 30-minute scoping call](/book-consultation).",
+  "faqs": [
+    {
+      "q": "Can it connect to our ERP?",
+      "a": "Yes. Admitted students can move into the student ERP without re-entry."
+    },
+    {
+      "q": "Is it suitable for coaching institutes?",
+      "a": "Yes. The same funnel applies to batches and courses."
+    }
+  ],
+  "related": [
+    "student-fee-management",
+    "parent-communication-app"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "industry": "Education",
+  "industrySlug": "education"
+}

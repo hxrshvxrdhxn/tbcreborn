@@ -1,0 +1,49 @@
+{
+  "slug": "parent-communication-app",
+  "title": "Parent Communication App for Schools",
+  "seoTitle": "Parent Communication App for Indian Schools",
+  "seoDescription": "A parent communication app or WhatsApp service for schools: attendance alerts, homework, circulars, fee reminders, report cards and two-way messages.",
+  "summary": "A parent communication system gives schools one reliable channel for attendance alerts, homework, circulars, fee reminders and report cards, instead of dozens of unmanaged WhatsApp groups. It can be a school app, a WhatsApp Business service, or both, and it keeps a record of what was sent to whom.",
+  "dataPoints": [
+    {
+      "label": "Replaces",
+      "value": "Class WhatsApp groups run from teachers' personal phones, paper circulars"
+    },
+    {
+      "label": "Messages",
+      "value": "Attendance, homework, circulars, events, fee dues, results"
+    },
+    {
+      "label": "Channel options",
+      "value": "Mobile app, official WhatsApp Business number, SMS fallback"
+    },
+    {
+      "label": "Controls",
+      "value": "Approval before broadcast, delivery and read tracking, opt-in records"
+    },
+    {
+      "label": "Typical first release",
+      "value": "6–10 weeks"
+    }
+  ],
+  "body": "## Why move off personal WhatsApp groups\n\n- Teachers' personal numbers are exposed.\n- Messages get lost in chatter.\n- There is no record of what was communicated.\n- Parent data sits on personal phones, a concern under the [DPDP Act](/glossary/dpdp-act).\n\n## App or WhatsApp\n\nMost parents already use WhatsApp, so an official WhatsApp service reaches everyone without an install. A school app adds richer features such as report cards and galleries. See [custom app vs WhatsApp bot](/compare/custom-app-vs-whatsapp-bot).\n\nWant to see what this would look like for your business? [Book a 30-minute scoping call](/book-consultation).",
+  "faqs": [
+    {
+      "q": "Can parents reply?",
+      "a": "Yes. Two-way messages can route to the class teacher or office with a record kept."
+    },
+    {
+      "q": "Does it work in Hindi?",
+      "a": "Yes. Templates and the app interface can be bilingual."
+    }
+  ],
+  "related": [
+    "admissions-crm",
+    "student-fee-management"
+  ],
+  "service": "/services/mobile-app-development",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "industry": "Education",
+  "industrySlug": "education"
+}

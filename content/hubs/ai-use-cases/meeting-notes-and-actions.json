@@ -1,0 +1,50 @@
+{
+  "slug": "meeting-notes-and-actions",
+  "title": "AI Meeting Notes and Action Tracking",
+  "seoTitle": "AI Meeting Notes and Action Tracking for Leadership Teams",
+  "seoDescription": "AI that turns management meetings into accurate notes, decisions and action items with owners and dates, then follows up until actions close.",
+  "summary": "AI meeting notes turn recorded management meetings into a short summary, a list of decisions and action items with owners and due dates, and then follow up on open actions. For leadership teams whose meetings end without clear records, it closes the gap between discussion and execution.",
+  "dataPoints": [
+    {
+      "label": "Input",
+      "value": "Recorded calls or meeting-room audio, in English, Hindi or both"
+    },
+    {
+      "label": "Output",
+      "value": "Summary, decisions, actions with owners and dates"
+    },
+    {
+      "label": "Follow-up",
+      "value": "Reminders on email or WhatsApp; weekly open-actions report"
+    },
+    {
+      "label": "Privacy",
+      "value": "Recording consent, access controls, retention limits"
+    },
+    {
+      "label": "Payback driver",
+      "value": "Fewer dropped actions, shorter follow-up meetings"
+    }
+  ],
+  "body": "## Beyond transcription\n\nTranscripts alone are rarely read. Value comes from extracting decisions and actions, assigning owners and tracking them to closure.\n\n## Privacy first\n\nTell participants when meetings are recorded, restrict who can read summaries, and set retention periods. See [AI data privacy every business must understand](/blog/ai-data-privacy-every-business-must-understand).",
+  "faqs": [
+    {
+      "q": "Does it handle Hinglish?",
+      "a": "Modern speech models handle mixed Hindi and English reasonably well; test on your own recordings."
+    },
+    {
+      "q": "Can it run on our own servers?",
+      "a": "Yes. Private deployment is possible where data sensitivity requires it."
+    }
+  ],
+  "related": [
+    "sales-enquiry-qualification",
+    "customer-support-assistant"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "category": "Productivity",
+  "accuracy": "Summaries are reliable for clear audio; names and numbers should be checked",
+  "timeToPilot": "2–4 weeks"
+}

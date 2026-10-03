@@ -1,0 +1,50 @@
+{
+  "slug": "purchase-order-extraction",
+  "title": "AI for Reading Purchase Orders",
+  "seoTitle": "AI Purchase Order Extraction for Indian Businesses",
+  "seoDescription": "How AI reads customer purchase orders from email and PDF, extracts items, quantities and prices, and creates sales orders in Tally or your ERP.",
+  "summary": "AI purchase order extraction reads incoming POs from email, PDF and scans, pulls out customer, items, quantities, rates and delivery dates, matches them to your item master and creates draft sales orders for review. It removes hours of re-typing for distributors and manufacturers that receive POs in many formats.",
+  "dataPoints": [
+    {
+      "label": "Input",
+      "value": "PO emails, PDFs, Excel sheets and scanned documents in many customer formats"
+    },
+    {
+      "label": "Output",
+      "value": "Draft sales orders in Tally or ERP, with low-confidence fields flagged"
+    },
+    {
+      "label": "Human review",
+      "value": "A person approves each order; uncertain fields are highlighted"
+    },
+    {
+      "label": "Main difficulty",
+      "value": "Mapping customer item descriptions to your own item codes"
+    },
+    {
+      "label": "Payback driver",
+      "value": "Order-entry hours saved and fewer wrong items shipped"
+    }
+  ],
+  "body": "## How it works\n\n1. POs arrive in a shared mailbox.\n2. An LLM-based extractor reads each document.\n3. Item descriptions are matched to your item master, learning from past corrections.\n4. A reviewer checks the draft and approves.\n5. The order is created in Tally or the ERP.\n\n## Measuring accuracy\n\nTest on a few hundred real POs from your top customers before deciding. See [the AI implementation checklist](/blog/ai-implementation-checklist-before-you-build) and the [document processing AI cost guide](/cost/document-processing-ai).",
+  "faqs": [
+    {
+      "q": "What about handwritten POs?",
+      "a": "Accuracy drops; they are usually routed to manual entry or reviewed more carefully."
+    },
+    {
+      "q": "Does our data train public models?",
+      "a": "It should not. Use providers and settings that do not train on your data, or a private model."
+    }
+  ],
+  "related": [
+    "invoice-processing",
+    "customer-support-assistant"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "category": "Documents",
+  "accuracy": "Typically 90–98% on clear typed documents, lower on handwriting and poor scans",
+  "timeToPilot": "4–6 weeks"
+}

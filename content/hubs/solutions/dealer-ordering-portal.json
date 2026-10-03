@@ -1,0 +1,49 @@
+{
+  "slug": "dealer-ordering-portal",
+  "title": "Dealer Ordering Portal for Manufacturers",
+  "seoTitle": "Dealer Ordering Portal for Indian Manufacturers",
+  "seoDescription": "A dealer and distributor ordering portal for manufacturers: catalogue, dealer-specific pricing, credit limits, order status, invoices and Tally sync.",
+  "summary": "A dealer ordering portal lets distributors and dealers place orders, check stock, see their own prices and credit, and track dispatch without calling the sales office. For manufacturers selling through a channel, it removes order-taking by phone and WhatsApp and gives the sales team time to grow accounts instead of typing orders.",
+  "dataPoints": [
+    {
+      "label": "Replaces",
+      "value": "Orders by phone, WhatsApp and email re-typed into Tally"
+    },
+    {
+      "label": "Core features",
+      "value": "Catalogue, dealer-specific price lists and schemes, credit check, order tracking, invoices and ledger"
+    },
+    {
+      "label": "Integrations",
+      "value": "Tally or ERP for stock, pricing, invoices and outstanding"
+    },
+    {
+      "label": "Access",
+      "value": "Web portal and mobile-friendly screens; WhatsApp notifications"
+    },
+    {
+      "label": "Typical first release",
+      "value": "8–12 weeks"
+    }
+  ],
+  "body": "## Why dealers adopt it\n\nDealers use a portal when it saves them effort: fast reordering of usual items, clear stock and dispatch dates, and their ledger on demand. Force-fitting a complex screen fails; a simple reorder flow succeeds.\n\n## Key design decisions\n\n- Pricing and schemes come from one source of truth.\n- Orders above the credit limit go to approval, not rejection.\n- Status updates go out on WhatsApp automatically.\n\nSee the [customer portal cost guide](/cost/customer-portal) and [custom app or WhatsApp bot](/compare/custom-app-vs-whatsapp-bot).\n\nWant to see what this would look like for your business? [Book a 30-minute scoping call](/book-consultation).",
+  "faqs": [
+    {
+      "q": "What if dealers still send WhatsApp orders?",
+      "a": "Staff can enter them in the portal on the dealer's behalf, so all orders flow through one system."
+    },
+    {
+      "q": "Can it show dealer outstanding from Tally?",
+      "a": "Yes, through a Tally integration that syncs ledger balances regularly."
+    }
+  ],
+  "related": [
+    "production-planning-software",
+    "quality-inspection-app"
+  ],
+  "service": "/services/custom-software-development",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "industry": "Manufacturing",
+  "industrySlug": "manufacturing"
+}

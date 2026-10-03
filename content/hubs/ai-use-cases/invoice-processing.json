@@ -1,0 +1,50 @@
+{
+  "slug": "invoice-processing",
+  "title": "AI Invoice Processing for Accounts Teams",
+  "seoTitle": "AI Invoice Processing for Indian Accounts Teams",
+  "seoDescription": "AI invoice processing for Indian businesses: read supplier invoices, check GSTIN and tax, match to POs and GRNs, and post purchase entries to Tally.",
+  "summary": "AI invoice processing reads supplier invoices, extracts GSTIN, invoice number, line items and tax, checks them against purchase orders and goods received, and prepares purchase entries for Tally or your ERP. Accounts teams spend their time on exceptions instead of typing.",
+  "dataPoints": [
+    {
+      "label": "Input",
+      "value": "Supplier invoices as PDF, email attachment or scan"
+    },
+    {
+      "label": "Checks",
+      "value": "GSTIN format, tax totals, duplicate invoice numbers, PO and GRN match"
+    },
+    {
+      "label": "Output",
+      "value": "Purchase voucher drafts in Tally or ERP with an exceptions list"
+    },
+    {
+      "label": "Human review",
+      "value": "Exceptions and low-confidence fields only"
+    },
+    {
+      "label": "Payback driver",
+      "value": "Accounts hours saved, fewer duplicate or wrong payments"
+    }
+  ],
+  "body": "## Three-way match\n\n| Document | What is compared |\n| --- | --- |\n| Purchase order | Items, rates, terms |\n| Goods received note | Quantities received |\n| Invoice | Items, quantities, rates, tax |\n\nMismatches go to the accounts team with the reason shown.\n\n## Before you start\n\nClean supplier masters and consistent PO numbers make a large difference to match rates. See [why data quality decides whether AI works](/blog/why-data-quality-decides-whether-ai-works) and the [OCR glossary entry](/glossary/ocr).",
+  "faqs": [
+    {
+      "q": "Does it file GST returns?",
+      "a": "No. It prepares accurate purchase entries; returns are filed through your usual process."
+    },
+    {
+      "q": "Can it handle many invoice layouts?",
+      "a": "Yes. LLM-based extraction adapts to new layouts better than fixed templates."
+    }
+  ],
+  "related": [
+    "purchase-order-extraction",
+    "customer-support-assistant"
+  ],
+  "service": "/services/ai-applications",
+  "publishedAt": "2026-10-27T03:30:00.000Z",
+  "indexable": true,
+  "category": "Finance",
+  "accuracy": "Typically 90–97% field-level on typed invoices with review of flagged fields",
+  "timeToPilot": "4–6 weeks"
+}
