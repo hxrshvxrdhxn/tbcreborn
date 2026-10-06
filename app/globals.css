@@ -8,6 +8,10 @@
   .bg-forest .text-mid-grey, .bg-royal .text-mid-grey { color: rgb(226 242 233 / 0.82); }
   .bg-forest .btn-primary { background-color: #A7EBC8; color: #0B1A12; }
   .bg-forest .btn-primary:hover { background-color: #CCF5DF; }
+  /* depth: darker green gradients on the big green bands, black for the closing CTA */
+  section.bg-forest { background-image: linear-gradient(135deg, #0A3826 0%, #12523A 52%, #1A6A47 100%); }
+  section.bg-royal { background-color: #0B1A12; background-image: linear-gradient(115deg, #0B1A12 0%, #0B1A12 58%, #0E3424 100%); --accent: 167 235 200; --accent-bright: 204 245 223; --on-accent: 11 26 18; }
+  footer.bg-forest { background-color: #0C3122; }
 
   :root {
     --background: #FAFAF8;

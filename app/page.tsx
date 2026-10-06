@@ -168,14 +168,27 @@ export default async function HomePage() {
       <section className="relative bg-forest overflow-hidden flex flex-col md:flex-row min-h-[600px]">
         {/* Mobile image band (shows below content on small screens, hidden on md+) */}
         <div className="md:hidden relative w-full h-[220px] order-last">
-          <Image src="/img/hero-home.png" alt="" fill className="object-cover object-top opacity-80" priority aria-hidden="true" />
+          <Image src="/video/hero-motion-poster.jpg" alt="" fill className="object-cover object-[90%_center]" priority aria-hidden="true" />
         </div>
 
         {/* Desktop full-bleed right half image (hidden on mobile) */}
         <div className="hidden md:block absolute right-0 top-0 w-1/2 h-full z-0">
-          <Image src="/img/hero-home.png" alt="" fill className="object-cover object-left opacity-90" priority aria-hidden="true" />
+          <video
+            className="absolute inset-0 w-full h-full object-cover object-[90%_center] motion-reduce:hidden"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            poster="/video/hero-motion-poster.jpg"
+            aria-hidden="true"
+          >
+            <source src="/video/hero-motion.webm" type="video/webm" />
+            <source src="/video/hero-motion.mp4" type="video/mp4" />
+          </video>
+          <Image src="/video/hero-motion-poster.jpg" alt="" fill className="hidden motion-reduce:block object-cover object-[90%_center]" aria-hidden="true" />
           {/* Gradient fade to blend image into the solid left side */}
-          <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#12523A] via-[#12523A]/40 to-transparent" />
         </div>
 
         <div className="container-tbc py-s5 md:py-s7 relative z-10 flex-1 flex flex-col justify-center order-first">
