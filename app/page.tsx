@@ -172,7 +172,7 @@ export default async function HomePage() {
         </div>
 
         {/* Desktop full-bleed right half image (hidden on mobile) */}
-        <div className="hidden md:block absolute right-0 top-0 w-1/2 h-full z-0">
+        <div className="hidden md:block absolute right-0 top-0 w-1/2 h-full z-0 [mask-image:linear-gradient(to_right,transparent,black_40%)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_40%)]">
           <video
             className="absolute inset-0 w-full h-full object-cover object-[90%_center] motion-reduce:hidden"
             autoPlay
@@ -187,8 +187,6 @@ export default async function HomePage() {
             <source src="/video/hero-motion.mp4" type="video/mp4" />
           </video>
           <Image src="/video/hero-motion-poster.jpg" alt="" fill className="hidden motion-reduce:block object-cover object-[90%_center]" aria-hidden="true" />
-          {/* Gradient fade to blend image into the solid left side */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#12523A] via-[#12523A]/40 to-transparent" />
         </div>
 
         <div className="container-tbc py-s5 md:py-s7 relative z-10 flex-1 flex flex-col justify-center order-first">
