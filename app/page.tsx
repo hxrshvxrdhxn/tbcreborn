@@ -205,7 +205,7 @@ export default async function HomePage() {
       {/* ── 2. TRUST BAR ── */}
       <section className="bg-ivory border-y border-light-grey">
         <div className="container-tbc py-4">
-          <ul className="flex flex-wrap items-center justify-center gap-x-0 gap-y-2 sm:gap-y-0">
+          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-0 sm:gap-y-0">
             {[
               "MSME Registered",
               "AI-Native",

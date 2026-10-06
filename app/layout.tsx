@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -14,18 +14,22 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import GTMTracker from "@/components/GTMTracker";
 import Script from "next/script";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "500", "600", "700"],
+// Self-hosted so every build ships identical font class names (no Google Fonts fetch at build time).
+// League Spartan matches the geometric letterforms of the TBC wordmark; DM Sans stays for body copy.
+const display = localFont({
+  src: "./fonts/LeagueSpartan-var.woff2",
+  variable: "--font-display",
+  weight: "100 900",
   display: "swap",
+  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
 });
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
+const dmSans = localFont({
+  src: "./fonts/DMSans-var.woff2",
   variable: "--font-dm-sans",
-  weight: ["400", "500", "600"],
+  weight: "100 900",
   display: "swap",
+  fallback: ["Arial", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -59,7 +63,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${dmSans.variable}`}>
+    <html lang="en-IN" className={`${display.variable} ${dmSans.variable}`}>
       <head>
         <link rel="alternate" type="application/rss+xml" title="Turbo Bytes Consulting blog" href="/feed.xml" />
         <script

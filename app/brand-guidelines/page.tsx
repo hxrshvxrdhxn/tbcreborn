@@ -49,7 +49,7 @@ export default function BrandGuidelinesPage() {
               {/* Display Font */}
               <div>
                 <div className="mb-6 flex justify-between items-baseline">
-                  <h3 className="font-display text-2xl font-semibold text-ink">Inter</h3>
+                  <h3 className="font-display text-2xl font-semibold text-ink">League Spartan</h3>
                   <span className="text-mid-grey text-sm tracking-widest uppercase">Display & Headings</span>
                 </div>
                 <div className="p-8 bg-white rounded-xl shadow-card border border-light-grey mb-6">

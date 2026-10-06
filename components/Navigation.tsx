@@ -30,18 +30,18 @@ export default function Navigation() {
       <div className="container-tbc">
         <nav className="flex items-center justify-between h-16" aria-label="Main navigation">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group" aria-label="Turbo Bytes Consulting — home">
+          <Link href="/" className="flex items-center gap-2.5 group" aria-label="Turbo Bytes Consulting — home">
             <span
-              className="font-display font-bold text-2xl text-white tracking-wider group-hover:text-gold transition-colors duration-150"
-              style={{ letterSpacing: "3px" }}
+              className="font-display font-black text-[30px] leading-none text-white"
+              style={{ letterSpacing: "-1.5px" }}
             >
               TBC
             </span>
             <span
-              className="hidden sm:block font-display font-semibold text-gold leading-tight"
-              style={{ fontSize: "9px", letterSpacing: "0.5px" }}
+              className="hidden sm:block font-display font-normal text-white/85"
+              style={{ fontSize: "8.5px", letterSpacing: "1px", lineHeight: 1.3 }}
             >
-              TURBO BYTES<br />CONSULTING
+              TURBO<br />BYTES<br />CONSULTING
             </span>
           </Link>
 

@@ -45,18 +45,18 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2.5 mb-4">
               <span
-                className="font-display font-bold text-2xl text-white"
-                style={{ letterSpacing: "3px" }}
+                className="font-display font-black text-[30px] leading-none text-white"
+                style={{ letterSpacing: "-1.5px" }}
               >
                 TBC
               </span>
               <span
-                className="font-display font-semibold text-gold leading-tight"
-                style={{ fontSize: "9px", letterSpacing: "0.5px" }}
+                className="font-display font-normal text-white/85"
+                style={{ fontSize: "8.5px", letterSpacing: "1px", lineHeight: 1.3 }}
               >
-                TURBO BYTES<br />CONSULTING
+                TURBO<br />BYTES<br />CONSULTING
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4" style={{ maxWidth: "220px" }}>

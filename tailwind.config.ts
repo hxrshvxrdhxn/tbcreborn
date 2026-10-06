@@ -34,7 +34,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-dm-sans)", "Source Sans Pro", "Arial", "sans-serif"],
-        display: ["var(--font-inter)", "Helvetica Neue", "Arial", "sans-serif"],
+        display: ["var(--font-display)", "Helvetica Neue", "Arial", "sans-serif"],
       },
       fontSize: {
         "display": ["60px", { lineHeight: "1.05", letterSpacing: "-1.2px" }],
