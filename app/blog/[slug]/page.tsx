@@ -194,7 +194,7 @@ export default async function BlogPostPage({ params }: Props) {
       </nav>
 
       {/* ── POST HERO ── */}
-      <section className="bg-ink py-16">
+      <section className="bg-forest py-16">
         <div className="container-tbc">
           <span className="eyebrow">{post.category}</span>
           <hr className="gold-rule mb-6" />

@@ -145,7 +145,7 @@ export default async function SoftwareCostCalculatorPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ink py-16 sm:py-20 text-white">
+      <section className="bg-forest py-16 sm:py-20 text-white">
         <div className="container-tbc">
           <span className="eyebrow">Interactive Estimator</span>
           <hr className="gold-rule mb-6" />

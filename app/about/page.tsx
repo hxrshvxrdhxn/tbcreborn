@@ -93,10 +93,10 @@ export default function AboutPage() {
   return (
     <>
       {/* ── PAGE HERO ── */}
-      <section className="relative bg-ink overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
+      <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
         {/* Full-bleed background abstract layer */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-ink via-ink to-royal/20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest to-royal/20" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
         </div>
 
@@ -171,7 +171,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── VALUES ── */}
-      <section className="bg-ink py-s7 border-b border-light-grey" aria-labelledby="values-heading">
+      <section className="bg-forest py-s7 border-b border-light-grey" aria-labelledby="values-heading">
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>

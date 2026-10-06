@@ -21,13 +21,13 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#1C1C1C',
+          backgroundColor: '#13563A',
           borderRadius: '34px',
         }}
       >
         <span
           style={{
-            color: '#D4AF37',
+            color: '#FFFFFF',
             fontSize: '52px',
             fontWeight: 900,
             fontFamily: 'sans-serif',

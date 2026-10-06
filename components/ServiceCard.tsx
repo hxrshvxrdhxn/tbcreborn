@@ -26,7 +26,7 @@ export default function ServiceCard({
   return (
     <Link href={href} className={`block bg-white rounded shadow-card hover:shadow-card-hover transition-all duration-tbc transform hover:-translate-y-1 overflow-hidden border border-light-grey group ${className}`}>
       {/* 16:9 Hero Image Cap */}
-      <div className="relative w-full aspect-video bg-ink overflow-hidden">
+      <div className="relative w-full aspect-video bg-forest overflow-hidden">
         <Image 
           src={imageSrc} 
           alt="" 

@@ -16,7 +16,7 @@ export default function GlobalError({
           <p className="text-mid-grey mb-8 max-w-md">
             A critical system error occurred. We are working to resolve this immediately.
           </p>
-          <button onClick={() => reset()} className="px-6 py-3 bg-ink text-white rounded font-medium">
+          <button onClick={() => reset()} className="px-6 py-3 bg-forest text-white rounded font-medium">
             Attempt Recovery
           </button>
         </div>

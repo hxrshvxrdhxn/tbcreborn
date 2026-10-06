@@ -117,9 +117,9 @@ export default function EngagementPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ink py-s7 relative overflow-hidden min-h-[350px] flex items-center border-b border-light-grey">
+      <section className="bg-forest py-s7 relative overflow-hidden min-h-[350px] flex items-center border-b border-light-grey">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-ink via-ink to-royal/20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest to-royal/20" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
         </div>
 
@@ -157,7 +157,7 @@ export default function EngagementPage() {
                 <article
                   className={`rounded-[8px] flex flex-col h-full ${
                     tier.featured
-                      ? "bg-ink text-white shadow-card-hover relative overflow-hidden"
+                      ? "bg-forest text-white shadow-card-hover relative overflow-hidden"
                       : "bg-white border border-light-grey text-ink shadow-card"
                   }`}
                 >

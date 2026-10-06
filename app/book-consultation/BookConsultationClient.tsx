@@ -30,7 +30,7 @@ export default function BookConsultationClient() {
       />
 
       {/* ── HERO ── */}
-      <section className="bg-ink py-20">
+      <section className="bg-forest py-20">
         <div className="container-tbc">
           <span className="eyebrow">BOOK A CONSULTATION</span>
           <hr className="gold-rule mb-6" />

@@ -165,7 +165,7 @@ export default async function HomePage() {
       />
 
       {/* ── 1. HERO ── */}
-      <section className="relative bg-ink overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+      <section className="relative bg-forest overflow-hidden flex flex-col md:flex-row min-h-[600px]">
         {/* Mobile image band (shows below content on small screens, hidden on md+) */}
         <div className="md:hidden relative w-full h-[220px] order-last">
           <Image src="/img/hero-home.png" alt="" fill className="object-cover object-top opacity-80" priority aria-hidden="true" />
@@ -175,7 +175,7 @@ export default async function HomePage() {
         <div className="hidden md:block absolute right-0 top-0 w-1/2 h-full z-0">
           <Image src="/img/hero-home.png" alt="" fill className="object-cover object-left opacity-90" priority aria-hidden="true" />
           {/* Gradient fade to blend image into the solid left side */}
-          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest/80 to-transparent" />
         </div>
 
         <div className="container-tbc py-s5 md:py-s7 relative z-10 flex-1 flex flex-col justify-center order-first">
@@ -395,7 +395,7 @@ export default async function HomePage() {
               <Reveal key={post.slug} delay={i * 0.1} className="flex">
                 <Link href={`/blog/${post.slug}`} className="bg-white rounded shadow-card border border-light-grey hover:shadow-card-hover hover:-translate-y-1 transition-all duration-tbc flex flex-col w-full overflow-hidden group/card block">
                   {/* Category swatch tile to avoid pure text card */}
-                  <div className="h-16 bg-ink flex items-center px-6 border-b-[3px] border-gold">
+                  <div className="h-16 bg-forest flex items-center px-6 border-b-[3px] border-gold">
                     <span className="font-display font-semibold text-caption text-white uppercase tracking-[1.5px]">
                       {post.category}
                     </span>

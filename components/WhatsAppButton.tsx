@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
       style={{ backgroundColor: "#25D366" }}
     >
       {/* Tooltip */}
-      <span className="pointer-events-none absolute right-16 whitespace-nowrap rounded-[6px] bg-ink px-3 py-1.5 text-xs font-display font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150 shadow-card">
+      <span className="pointer-events-none absolute right-16 whitespace-nowrap rounded-[6px] bg-forest px-3 py-1.5 text-xs font-display font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150 shadow-card">
         Chat with us
       </span>
       <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">

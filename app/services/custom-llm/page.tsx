@@ -291,11 +291,11 @@ export default function CustomLLMPage() {
       </nav>
 
       {/* ── PAGE HERO ── */}
-      <section className="relative bg-ink overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
+      <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
         {/* Full-bleed background image band */}
         <div className="absolute inset-0 z-0">
           <Image src="/img/hero-service-llm.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/60 to-transparent" />
         </div>
 
         <div className="container-tbc py-s6 relative z-10">

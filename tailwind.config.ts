@@ -10,15 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         royal: {
-          DEFAULT: "#1B3A8C",
-          mid: "#2952CC",
-          light: "#EEF2FF",
+          DEFAULT: "#167A4E",
+          mid: "#1F8A5B",
+          light: "#E6F4EC",
         },
         gold: {
-          DEFAULT: "#C8960C",
-          bright: "#E5AD0E",
-          light: "#FFF8E1",
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          bright: "rgb(var(--accent-bright) / <alpha-value>)",
+          light: "#E6F4EC",
         },
+        forest: "#13563A",
         tbc: {
           emerald: {
             DEFAULT: "#1A5C3A",
@@ -26,10 +27,10 @@ const config: Config = {
             light: "#E8F5EE",
           },
         },
-        ink: "#0D1B2A",
-        ivory: "#FAFAF8",
-        "mid-grey": "#6B7280",
-        "light-grey": "#F3F4F6",
+        ink: "#0B1A12",
+        ivory: "#F4F9F6",
+        "mid-grey": "#5B6B61",
+        "light-grey": "#E3EEE7",
       },
       fontFamily: {
         sans: ["var(--font-dm-sans)", "Source Sans Pro", "Arial", "sans-serif"],

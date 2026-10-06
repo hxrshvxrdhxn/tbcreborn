@@ -26,7 +26,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 bg-ink border-b-2 border-gold">
+    <header className="sticky top-0 z-50 bg-forest border-b-2 border-gold">
       <div className="container-tbc">
         <nav className="flex items-center justify-between h-16" aria-label="Main navigation">
           {/* Logo */}
@@ -133,7 +133,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-ink border-t border-white/10 menu-enter">
+        <div className="lg:hidden bg-forest border-t border-white/10 menu-enter">
           <div className="container-tbc py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link

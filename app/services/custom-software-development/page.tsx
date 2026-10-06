@@ -107,7 +107,7 @@ export default function ServicePage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ink overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
+      <section className="bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
@@ -304,7 +304,7 @@ export default function ServicePage() {
               <Reveal delay={0}>
                 <div className="flex gap-6 mb-8">
                   <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-ink text-gold flex items-center justify-center font-display font-bold text-[14px]">
+                    <div className="w-10 h-10 rounded-full bg-forest text-gold flex items-center justify-center font-display font-bold text-[14px]">
                       01
                     </div>
                     <div className="flex-1 w-px bg-light-grey my-2"></div>
@@ -319,7 +319,7 @@ export default function ServicePage() {
               <Reveal delay={0.1}>
                 <div className="flex gap-6 mb-8">
                   <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-ink text-gold flex items-center justify-center font-display font-bold text-[14px]">
+                    <div className="w-10 h-10 rounded-full bg-forest text-gold flex items-center justify-center font-display font-bold text-[14px]">
                       02
                     </div>
                     <div className="flex-1 w-px bg-light-grey my-2"></div>
@@ -334,7 +334,7 @@ export default function ServicePage() {
               <Reveal delay={0.2}>
                 <div className="flex gap-6 mb-8">
                   <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-ink text-gold flex items-center justify-center font-display font-bold text-[14px]">
+                    <div className="w-10 h-10 rounded-full bg-forest text-gold flex items-center justify-center font-display font-bold text-[14px]">
                       03
                     </div>
                     <div className="flex-1 w-px bg-light-grey my-2"></div>
@@ -349,7 +349,7 @@ export default function ServicePage() {
               <Reveal delay={0.30000000000000004}>
                 <div className="flex gap-6 mb-8">
                   <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-ink text-gold flex items-center justify-center font-display font-bold text-[14px]">
+                    <div className="w-10 h-10 rounded-full bg-forest text-gold flex items-center justify-center font-display font-bold text-[14px]">
                       04
                     </div>
                     <div className="flex-1 w-px bg-light-grey my-2"></div>
@@ -364,7 +364,7 @@ export default function ServicePage() {
               <Reveal delay={0.4}>
                 <div className="flex gap-6 mb-8">
                   <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-ink text-gold flex items-center justify-center font-display font-bold text-[14px]">
+                    <div className="w-10 h-10 rounded-full bg-forest text-gold flex items-center justify-center font-display font-bold text-[14px]">
                       05
                     </div>
                     

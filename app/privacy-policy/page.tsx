@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="bg-ink py-16">
+      <section className="bg-forest py-16">
         <div className="container-tbc">
           <h1 className="font-display font-bold text-white text-[clamp(32px,4vw,44px)] leading-[1.15] tracking-[-0.5px] mb-3">
             Privacy Policy

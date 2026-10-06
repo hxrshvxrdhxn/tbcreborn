@@ -89,7 +89,7 @@ export default async function AIUseCasesIndexPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ink py-16">
+      <section className="bg-forest py-16">
         <div className="container-tbc">
           <span className="eyebrow">Enterprise Intelligence</span>
           <hr className="gold-rule mb-6" />

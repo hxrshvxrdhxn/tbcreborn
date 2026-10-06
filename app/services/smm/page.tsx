@@ -499,7 +499,7 @@ export default function SMMPage() {
       </section>
 
       {/* ── PLATFORM STRATEGY ── */}
-      <section className="bg-ink text-white py-20 border-b-2 border-gold">
+      <section className="bg-forest text-white py-20 border-b-2 border-gold">
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
@@ -635,7 +635,7 @@ export default function SMMPage() {
       <CallProcess />
 
       {/* ── ENGAGEMENT MODEL & CTA ── */}
-      <section className="bg-ink text-white py-20 text-center">
+      <section className="bg-forest text-white py-20 text-center">
         <div className="container-tbc">
           <span className="eyebrow text-gold">ENGAGEMENT MODEL</span>
           <hr className="gold-rule gold-rule--center mb-8" />

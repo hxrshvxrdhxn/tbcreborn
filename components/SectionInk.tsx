@@ -9,7 +9,7 @@ interface SectionInkProps {
 
 export default function SectionInk({ children, className = "", id }: SectionInkProps) {
   return (
-    <section id={id} className={`relative bg-ink text-white overflow-hidden ${className}`}>
+    <section id={id} className={`relative bg-forest text-white overflow-hidden ${className}`}>
       {/* Texture Layer */}
       <div className="absolute inset-0 z-0 opacity-50 pointer-events-none">
         <Image 

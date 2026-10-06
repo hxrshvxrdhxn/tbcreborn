@@ -16,7 +16,7 @@ export default async function AdminPage() {
   return (
     <div className="min-h-screen bg-ivory">
       {/* ── Top bar ── */}
-      <header className="bg-ink border-b-2 border-gold sticky top-0 z-40">
+      <header className="bg-forest border-b-2 border-gold sticky top-0 z-40">
         <div className="container-tbc h-14 flex items-center justify-between">
           <div className="flex items-baseline gap-2">
             <Link href="/" className="font-display font-bold text-xl text-white" style={{ letterSpacing: "3px" }}>

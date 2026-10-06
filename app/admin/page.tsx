@@ -12,7 +12,7 @@ export default async function AdminPage() {
   return (
     <div className="min-h-screen bg-ivory">
       {/* ── Top bar ── */}
-      <header className="bg-ink border-b-2 border-gold sticky top-0 z-40">
+      <header className="bg-forest border-b-2 border-gold sticky top-0 z-40">
         <div className="container-tbc h-14 flex items-center justify-between">
           <div className="flex items-baseline gap-2">
             <Link href="/" className="font-display font-bold text-xl text-white" style={{ letterSpacing: "3px" }}>
@@ -65,7 +65,7 @@ export default async function AdminPage() {
           )}
           
           {/* Quick Stats Box */}
-          <div className="bg-ink p-6 rounded-[8px] text-white">
+          <div className="bg-forest p-6 rounded-[8px] text-white">
              <h3 className="font-display font-bold text-[18px] mb-2 text-gold">Analytics Hub</h3>
              <p className="font-sans text-[13px] text-light-grey mb-4">View deep visitor insights natively in your dashboard.</p>
              <a href="https://vercel.com/analytics" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block">

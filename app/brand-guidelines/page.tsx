@@ -112,7 +112,7 @@ export default function BrandGuidelinesPage() {
             {/* Primary Colors */}
             <h3 className="font-display text-xl font-semibold text-ink mb-6">Core Identity</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              <ColorSwatch name="TBC Ink" hex="#0D1B2A" className="bg-ink" />
+              <ColorSwatch name="TBC Ink" hex="#0D1B2A" className="bg-forest" />
               <ColorSwatch name="TBC Ivory" hex="#FAFAF8" className="bg-ivory border border-light-grey" textColor="text-ink" />
               <ColorSwatch name="Royal Blue" hex="#1B3A8C" className="bg-royal" />
               <ColorSwatch name="TBC Gold" hex="#C8960C" className="bg-gold" />
@@ -143,7 +143,7 @@ export default function BrandGuidelinesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Primary Logo (Dark) */}
-              <div className="bg-ink p-12 rounded-2xl flex items-center justify-center min-h-[300px]">
+              <div className="bg-forest p-12 rounded-2xl flex items-center justify-center min-h-[300px]">
                 <div className="flex items-center gap-4">
                   <span
                     className="font-display font-bold text-5xl text-white"
@@ -179,7 +179,7 @@ export default function BrandGuidelinesPage() {
               </div>
 
               {/* Monogram (Dark) */}
-              <div className="bg-ink p-12 rounded-2xl flex flex-col items-center justify-center min-h-[300px] gap-6">
+              <div className="bg-forest p-12 rounded-2xl flex flex-col items-center justify-center min-h-[300px] gap-6">
                 <div className="w-24 h-24 bg-[#1C1C1C] rounded-3xl flex items-center justify-center shadow-lg border border-white/5">
                   <span className="font-display font-black text-4xl text-gold" style={{ letterSpacing: "-1.5px" }}>TBC</span>
                 </div>
@@ -220,7 +220,7 @@ export default function BrandGuidelinesPage() {
                       <button className="btn-gold mb-3 block">Gold Button</button>
                       <p className="text-xs text-mid-grey">Used for high-contrast emphasis. Class: <code className="bg-light-grey px-1 py-0.5 rounded text-ink">.btn-gold</code></p>
                     </div>
-                    <div className="bg-ink p-6 rounded-xl -ml-6 w-[calc(100%+3rem)]">
+                    <div className="bg-forest p-6 rounded-xl -ml-6 w-[calc(100%+3rem)]">
                       <button className="btn-ghost-gold mb-3 block">Ghost Button</button>
                       <p className="text-xs text-white/50">Used on dark backgrounds. Class: <code className="bg-white/10 px-1 py-0.5 rounded text-white">.btn-ghost-gold</code></p>
                     </div>

@@ -103,9 +103,9 @@ export default function ContactClient() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="bg-ink py-s7 relative overflow-hidden min-h-[350px] flex items-center border-b border-light-grey">
+      <section className="bg-forest py-s7 relative overflow-hidden min-h-[350px] flex items-center border-b border-light-grey">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-ink via-ink to-royal/20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest to-royal/20" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
         </div>
 
@@ -188,7 +188,7 @@ export default function ContactClient() {
                     
                     {/* Mini Map */}
                     <div className="w-full mt-auto flex-1 min-h-[220px] rounded-[6px] overflow-hidden shadow-card border border-light-grey relative group">
-                      <div className="absolute inset-0 bg-ink/5 pointer-events-none group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                      <div className="absolute inset-0 bg-forest/5 pointer-events-none group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                       <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.757887711463!2d77.514013!3d28.48425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea7ab55191b9%3A0x6a2c3a5180f121d5!2sKasana%20Tower!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                         width="100%"
@@ -223,7 +223,7 @@ export default function ContactClient() {
                         height="22"
                         viewBox="0 0 24 24"
                         fill="none"
-                        stroke="#C8960C"
+                        stroke="#1F8A5B"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"

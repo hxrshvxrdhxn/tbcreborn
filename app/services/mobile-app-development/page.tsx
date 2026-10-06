@@ -107,7 +107,7 @@ export default function ServicePage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ink overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
+      <section className="bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">

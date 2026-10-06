@@ -149,7 +149,7 @@ export default function AdminPostEditor({
     return (
       <div className="min-h-screen bg-ivory">
         {/* ── Top bar ── */}
-        <header className="bg-ink border-b-2 border-gold sticky top-0 z-40">
+        <header className="bg-forest border-b-2 border-gold sticky top-0 z-40">
           <div className="container-tbc h-14 flex items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <Link href="/blog-admin" className="font-display font-semibold text-[13px] text-white/60 hover:text-white transition-colors">
@@ -232,7 +232,7 @@ export default function AdminPostEditor({
                         type="button"
                         onClick={() => setTab(t)}
                         className={`font-display font-semibold text-[12px] px-3 py-1.5 capitalize transition-colors ${
-                          tab === t ? "bg-ink text-white" : "bg-white text-mid-grey hover:text-ink"
+                          tab === t ? "bg-forest text-white" : "bg-white text-mid-grey hover:text-ink"
                         }`}
                       >
                         {t}

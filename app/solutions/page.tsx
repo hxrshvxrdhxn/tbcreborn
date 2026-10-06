@@ -92,7 +92,7 @@ export default async function SolutionsIndexPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ink py-16">
+      <section className="bg-forest py-16">
         <div className="container-tbc">
           <span className="eyebrow">Industry Architectures</span>
           <hr className="gold-rule mb-6" />

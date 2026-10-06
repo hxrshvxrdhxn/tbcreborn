@@ -229,7 +229,7 @@ export default function HubEntryTemplate({
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ink py-16">
+      <section className="bg-forest py-16">
         <div className="container-tbc">
           <span className="eyebrow">{hubTitle}</span>
           <hr className="gold-rule mb-6" />
@@ -392,7 +392,7 @@ export default function HubEntryTemplate({
             )}
 
             {/* ── SERVICE CTA BOX ── */}
-            <div className="mt-14 rounded-lg bg-ink p-8 text-white">
+            <div className="mt-14 rounded-lg bg-forest p-8 text-white">
               <span className="font-sans text-xs uppercase tracking-widest text-gold font-semibold">
                 Take the next step
               </span>

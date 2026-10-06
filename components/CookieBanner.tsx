@@ -23,15 +23,15 @@ export default function CookieBanner() {
         enableDeclineButton
         cookieName="CookieConsent"
         style={{ 
-          background: "#080C16", // ink
-          borderTop: "1px solid #D4AF37", // gold
+          background: "#13563A", // forest
+          borderTop: "1px solid #A7EBC8", // mint
           fontFamily: "var(--font-dm-sans, sans-serif)", 
           zIndex: 99999,
           padding: "10px"
         }}
         buttonStyle={{ 
-          backgroundColor: "#D4AF37", 
-          color: "#080C16", 
+          backgroundColor: "#A7EBC8", 
+          color: "#0B1A12", 
           fontSize: "14px", 
           fontWeight: "600", 
           borderRadius: "6px",

@@ -123,7 +123,7 @@ export default async function IndustrySolutionsPage({ params }: IndustryPageProp
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ink py-16">
+      <section className="bg-forest py-16">
         <div className="container-tbc">
           <span className="eyebrow">{industryName} Industry</span>
           <hr className="gold-rule mb-6" />
