@@ -26,9 +26,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Your first working product in 8 to 12 weeks",
   provider: {
-    "@type": "Organization",
-    name: "Turbo Bytes Consulting",
-    url: "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/mvp-development",
   description: "A working first version of your product in 8 to 12 weeks: scoped to what proves the idea, built to grow, with the code owned by you.",

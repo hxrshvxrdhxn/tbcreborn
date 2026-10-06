@@ -27,9 +27,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Social Media Management",
   provider: {
-    "@type": "Organization",
-    name: "Turbo Bytes Consulting",
-    url: "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/smm",
   description:

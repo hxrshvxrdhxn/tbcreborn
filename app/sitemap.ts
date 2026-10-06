@@ -9,7 +9,7 @@ export const revalidate = 3600;
 const BASE = "https://turbobytesconsulting.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = [
+  const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE, priority: 1.0, changeFrequency: "weekly" as const },
     { url: `${BASE}/services`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${BASE}/services/custom-software-development`, priority: 0.8, changeFrequency: "monthly" as const },
@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/contact`, priority: 0.6, changeFrequency: "yearly" as const },
     { url: `${BASE}/privacy-policy`, priority: 0.3, changeFrequency: "yearly" as const },
     { url: `${BASE}/terms`, priority: 0.3, changeFrequency: "yearly" as const },
-  ].map((r) => ({ ...r, lastModified: new Date() }));
+  ];
 
   const posts = await getAllPosts();
   const blogRoutes = posts
@@ -70,9 +70,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const hub of hubs) {
     const entries = await getHubEntries(hub);
     if (entries.length > 0) {
+      const latestDate = entries.reduce(
+        (acc, cur) => (cur.publishedAt > acc ? cur.publishedAt : acc),
+        entries[0].publishedAt
+      );
       hubRoutes.push({
         url: `${BASE}/${hub}`,
-        lastModified: new Date(),
+        lastModified: new Date(latestDate),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       });
@@ -82,9 +86,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           new Set(entries.map((e) => e.industrySlug).filter((s): s is string => Boolean(s)))
         ).sort();
         for (const indSlug of industrySlugs) {
+          const indEntries = entries.filter((e) => e.industrySlug === indSlug);
+          const indLatest = indEntries.reduce(
+            (acc, cur) => (cur.publishedAt > acc ? cur.publishedAt : acc),
+            indEntries[0]?.publishedAt || latestDate
+          );
           hubRoutes.push({
             url: `${BASE}/solutions/${indSlug}`,
-            lastModified: new Date(),
+            lastModified: new Date(indLatest),
             changeFrequency: "weekly" as const,
             priority: 0.8,
           });

@@ -26,9 +26,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "AI applications that work on your own data",
   provider: {
-    "@type": "Organization",
-    name: "Turbo Bytes Consulting",
-    url: "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/ai-applications",
   description: "AI chatbots, document processing and assistants trained on your own data. Private deployment options, tested for accuracy before launch.",

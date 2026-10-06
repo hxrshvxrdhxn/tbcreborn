@@ -6,7 +6,7 @@ import SectionInk from "@/components/SectionInk";
 import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
-  title: { absolute: "Software Development & AI Company in Delhi NCR | TBC" },
+  title: { absolute: "Software & AI Company in Delhi NCR | Turbo Bytes Consulting" },
   description: "Custom software, mobile apps, AI applications and automation for founder-led businesses across Delhi, Noida, Gurugram, Ghaziabad and Faridabad.",
   alternates: { canonical: "/software-development-company-delhi-ncr" }
 };
@@ -16,9 +16,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Software and AI development across Delhi NCR",
   provider: {
-    "@type": "Organization",
-    name: "Turbo Bytes Consulting",
-    url: "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/software-development-company-delhi-ncr",
   description: "Custom software, mobile apps, AI applications and automation for founder-led businesses across Delhi, Noida, Gurugram, Ghaziabad and Faridabad.",
@@ -27,14 +25,16 @@ const serviceSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://turbobytesconsulting.com/#organization",
   name: "Turbo Bytes Consulting",
-  telephone: "+91 93547 84377",
-  url: "https://turbobytesconsulting.com/software-development-company-delhi-ncr",
+  telephone: "+919354784377",
+  url: "https://turbobytesconsulting.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Kasana Tower, Alpha I",
+    streetAddress: "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
     addressLocality: "Greater Noida",
     addressRegion: "Uttar Pradesh",
+    postalCode: "201310",
     addressCountry: "IN"
   }
 };

@@ -113,6 +113,14 @@ export default function HubEntryTemplate({
         }
       : null;
 
+  const modifiedDate =
+    entry.updatedAt || entry.dateModified || entry.publishedAt;
+  const reviewedDate = new Date(modifiedDate).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+
   const techArticleSchema =
     hub === "integrations"
       ? {
@@ -127,6 +135,7 @@ export default function HubEntryTemplate({
             "@id": "https://turbobytesconsulting.com/#organization",
           },
           datePublished: entry.publishedAt,
+          dateModified: modifiedDate,
           mainEntityOfPage: {
             "@type": "WebPage",
             "@id": url,
@@ -148,6 +157,7 @@ export default function HubEntryTemplate({
             "@id": "https://turbobytesconsulting.com/#organization",
           },
           datePublished: entry.publishedAt,
+          dateModified: modifiedDate,
           mainEntityOfPage: {
             "@type": "WebPage",
             "@id": url,
@@ -233,9 +243,12 @@ export default function HubEntryTemplate({
         <div className="container-tbc">
           <span className="eyebrow">{hubTitle}</span>
           <hr className="gold-rule mb-6" />
-          <h1 className="font-display font-bold text-white text-[clamp(28px,4vw,44px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-6">
+          <h1 className="font-display font-bold text-white text-[clamp(28px,4vw,44px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-4">
             {entry.title}
           </h1>
+          <p className="font-sans text-sm text-mid-grey mb-6">
+            Last reviewed {reviewedDate}
+          </p>
           <p className="font-sans text-[18px] text-white/90 leading-relaxed max-w-3xl">
             {entry.summary}
           </p>

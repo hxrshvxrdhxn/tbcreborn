@@ -23,8 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPostBySlug(slug);
   if (!post) return {};
   const isNoindex = noindexPosts.has(slug);
+  const rawTitle = (post.seoTitle || post.title).replace(/\s*\|\s*(TBC|Turbo Bytes Consulting)\s*$/i, "").trim();
+  const maxBaseLen = 60 - " | Turbo Bytes Consulting".length;
+  const baseTitle = rawTitle.length > maxBaseLen ? rawTitle.slice(0, maxBaseLen).trimEnd() : rawTitle;
+  const pageTitle = `${baseTitle} | Turbo Bytes Consulting`;
   return {
-    title: { absolute: `${(post.seoTitle || post.title).replace(/\s*\|\s*(TBC|Turbo Bytes Consulting)\s*$/i, "")} | TBC` },
+    title: { absolute: pageTitle },
     description: post.seoDescription || post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
     ...(isNoindex ? { robots: { index: false, follow: true } } : {}),

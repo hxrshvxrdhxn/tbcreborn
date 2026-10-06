@@ -132,7 +132,7 @@ export default function RootLayout({
                   "name": "Turbo Bytes Consulting",
                   "description": "Software development, AI applications and business automation for businesses in Noida, Greater Noida and Delhi NCR",
                   "url": "https://turbobytesconsulting.com",
-                  "logo": "https://turbobytesconsulting.com/og-default.png",
+                  "logo": "https://turbobytesconsulting.com/logo-square.png",
                   "telephone": "+919354784377",
                   "email": "info@turbobytesconsulting.com",
                   "hasMap": "https://share.google/jp3MGXYa4u27I4bcq",

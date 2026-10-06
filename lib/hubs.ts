@@ -43,6 +43,8 @@ export interface HubEntry {
   industrySlug?: string;
   accuracy?: string;
   timeToPilot?: string;
+  updatedAt?: string;
+  dateModified?: string;
 }
 
 export type GlossaryEntry = HubEntry;

@@ -32,9 +32,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Website & Application Development",
   provider: {
-    "@type": "Organization",
-    name: "Turbo Bytes Consulting",
-    url: "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/web-development",
   description:
@@ -385,7 +383,7 @@ export default function WebDevelopmentPage() {
       <section className="relative bg-ink overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
         {/* Full-bleed background image band */}
         <div className="absolute inset-0 z-0">
-          <Image src="/img/hero-service-web.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
+          <Image src="/img/hero-service-web-development.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
         </div>
 

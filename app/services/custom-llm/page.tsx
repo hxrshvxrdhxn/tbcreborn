@@ -33,9 +33,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Custom LLM & On-Premise AI Deployment",
   provider: {
-    "@type": "Organization",
-    name: "Turbo Bytes Consulting",
-    url: "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/custom-llm",
   description:

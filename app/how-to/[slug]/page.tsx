@@ -6,30 +6,47 @@ import sanitizeHtml from 'sanitize-html';
 import { marked } from 'marked';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  
   const guide = await prisma.howToGuide.findUnique({
     where: { slug: params.slug },
   });
-  
 
   if (!guide) {
     return { title: 'Guide Not Found' };
   }
 
+  const rawTitle = (guide.seoTitle || guide.title).replace(/\s*\|\s*(TBC|Turbo Bytes Consulting)\s*$/i, "").trim();
+  const maxBaseLen = 60 - " | Turbo Bytes Consulting".length;
+  const baseTitle = rawTitle.length > maxBaseLen ? rawTitle.slice(0, maxBaseLen).trimEnd() : rawTitle;
+  const fullTitle = `${baseTitle} | Turbo Bytes Consulting`;
+  const description = guide.seoDescription || guide.content.substring(0, 160).replace(/\n/g, ' ');
+  const canonicalUrl = `https://turbobytesconsulting.com/how-to/${guide.slug}`;
+
   return {
-    title: { absolute: `${(guide.seoTitle || guide.title).replace(/\s*\|\s*(TBC|Turbo Bytes Consulting)\s*$/i, "")} | TBC` },
-    description: guide.seoDescription || guide.content.substring(0, 160).replace(/\n/g, ' '),
+    title: { absolute: fullTitle },
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: fullTitle,
+      description,
+      url: canonicalUrl,
+      images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: fullTitle,
+      description,
+    },
   };
 }
 
 export const revalidate = 3600;
 
 export default async function HowToGuidePage({ params }: { params: { slug: string } }) {
-  
   const guide = await prisma.howToGuide.findUnique({
     where: { slug: params.slug },
   });
-  
 
   if (!guide) {
     notFound();
@@ -51,8 +68,69 @@ export default async function HowToGuidePage({ params }: { params: { slug: strin
     },
   });
 
+  const canonicalUrl = `https://turbobytesconsulting.com/how-to/${guide.slug}`;
+  const updatedDate = new Date(guide.updatedAt || guide.createdAt).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": guide.title,
+    "description": guide.seoDescription || guide.content.substring(0, 160).replace(/\n/g, ' '),
+    "url": canonicalUrl,
+    "author": {
+      "@id": "https://turbobytesconsulting.com/#harsh"
+    },
+    "publisher": {
+      "@id": "https://turbobytesconsulting.com/#organization"
+    },
+    "datePublished": guide.createdAt.toISOString(),
+    "dateModified": guide.updatedAt ? guide.updatedAt.toISOString() : guide.createdAt.toISOString(),
+    "inLanguage": "en-IN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalUrl
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://turbobytesconsulting.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "How-To",
+        "item": "https://turbobytesconsulting.com/how-to"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": guide.title,
+        "item": canonicalUrl
+      }
+    ]
+  };
+
   return (
     <article className="bg-ivory min-h-screen pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="container-tbc max-w-3xl mx-auto">
         <Link 
           href="/how-to" 
@@ -71,6 +149,9 @@ export default async function HowToGuidePage({ params }: { params: { slug: strin
           <h1 className="font-display font-bold text-4xl sm:text-5xl text-ink leading-tight">
             {guide.title}
           </h1>
+          <p className="font-sans text-sm text-mid-grey mt-3">
+            By Harshvardhan Chauhan · Updated {updatedDate}
+          </p>
         </header>
 
         <div 
