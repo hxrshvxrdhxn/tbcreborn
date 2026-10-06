@@ -168,25 +168,26 @@ export default async function HomePage() {
       <section className="relative bg-forest overflow-hidden flex flex-col md:flex-row min-h-[600px]">
         {/* Mobile image band (shows below content on small screens, hidden on md+) */}
         <div className="md:hidden relative w-full h-[220px] order-last">
-          <Image src="/video/hero-motion-poster.jpg" alt="" fill className="object-cover object-[90%_center]" priority aria-hidden="true" />
+          <Image src="/video/hero-3d-poster.jpg" alt="" fill className="object-cover object-center" priority aria-hidden="true" />
         </div>
 
         {/* Desktop full-bleed right half image (hidden on mobile) */}
-        <div className="hidden md:block absolute right-0 top-0 w-1/2 h-full z-0 [mask-image:linear-gradient(to_right,transparent,black_40%)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_40%)]">
+        <div className="hidden md:block absolute inset-0 z-0">
           <video
-            className="absolute inset-0 w-full h-full object-cover object-[90%_center] motion-reduce:hidden"
+            className="absolute inset-0 w-full h-full object-cover object-center motion-reduce:hidden"
             autoPlay
             muted
             loop
             playsInline
             preload="none"
-            poster="/video/hero-motion-poster.jpg"
+            poster="/video/hero-3d-poster.jpg"
             aria-hidden="true"
           >
-            <source src="/video/hero-motion.webm" type="video/webm" />
-            <source src="/video/hero-motion.mp4" type="video/mp4" />
+            <source src="/video/hero-3d.webm" type="video/webm" />
+            <source src="/video/hero-3d.mp4" type="video/mp4" />
           </video>
-          <Image src="/video/hero-motion-poster.jpg" alt="" fill className="hidden motion-reduce:block object-cover object-[90%_center]" aria-hidden="true" />
+          <Image src="/video/hero-3d-poster.jpg" alt="" fill className="hidden motion-reduce:block object-cover object-center" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A3524]/90 via-[#0A3524]/45 to-transparent" />
         </div>
 
         <div className="container-tbc py-s5 md:py-s7 relative z-10 flex-1 flex flex-col justify-center order-first">
