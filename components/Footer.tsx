@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const serviceLinks = [
   { href: "/services/custom-software-development", label: "Custom Software" },
@@ -46,18 +47,14 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <span
-                className="font-display font-black text-[30px] leading-none text-white"
-                style={{ letterSpacing: "-1.5px" }}
-              >
-                TBC
-              </span>
-              <span
-                className="font-display font-normal text-white/85"
-                style={{ fontSize: "8.5px", letterSpacing: "1px", lineHeight: 1.3 }}
-              >
-                TURBO<br />BYTES<br />CONSULTING
-              </span>
+              <Image
+                src="/brand/tbc-logo-white.svg"
+                alt="Turbo Bytes Consulting"
+                width={139}
+                height={36}
+                className="h-9 w-auto"
+                unoptimized
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4" style={{ maxWidth: "220px" }}>
               Intelligence. Precision. Growth.

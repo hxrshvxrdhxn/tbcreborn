@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 interface NavLink {
@@ -31,18 +32,14 @@ export default function Navigation() {
         <nav className="flex items-center justify-between h-16" aria-label="Main navigation">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group" aria-label="Turbo Bytes Consulting — home">
-            <span
-              className="font-display font-black text-[30px] leading-none text-white"
-              style={{ letterSpacing: "-1.5px" }}
-            >
-              TBC
-            </span>
-            <span
-              className="hidden sm:block font-display font-normal text-white/85"
-              style={{ fontSize: "8.5px", letterSpacing: "1px", lineHeight: 1.3 }}
-            >
-              TURBO<br />BYTES<br />CONSULTING
-            </span>
+            <Image
+              src="/brand/tbc-logo-white.svg"
+              alt=""
+              width={139}
+              height={36}
+              className="h-9 w-auto"
+              unoptimized
+            />
           </Link>
 
           {/* Desktop nav */}

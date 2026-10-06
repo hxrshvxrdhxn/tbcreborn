@@ -209,3 +209,9 @@
     padding-right: 20px;
   }
 }
+
+/* Home hero line loop: video only on larger screens and when motion is welcome */
+.hero-lines-video { display: none; }
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .hero-lines-video { display: block; }
+}
