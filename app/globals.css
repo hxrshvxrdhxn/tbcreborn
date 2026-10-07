@@ -182,12 +182,15 @@
   to   { opacity: 1; transform: none; }
 }
 
-/* Hero entrance — staggered, CSS-only */
-.hero-1 { animation: fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) 0.05s both; }
-.hero-2 { animation: fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) 0.18s both; }
-.hero-3 { animation: fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) 0.30s both; }
-.hero-4 { animation: fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) 0.42s both; }
-.hero-5 { animation: fadeUp 0.8s cubic-bezier(0.22,0.61,0.36,1) 0.55s both; }
+/* Hero entrance — staggered, CSS-only. Desktop only: on phones the hero text is the LCP
+   element, so it must paint at once rather than wait out an opacity fade. */
+@media (min-width: 768px) {
+  .hero-1 { animation: fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) 0.05s both; }
+  .hero-2 { animation: fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) 0.18s both; }
+  .hero-3 { animation: fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) 0.30s both; }
+  .hero-4 { animation: fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) 0.42s both; }
+  .hero-5 { animation: fadeUp 0.8s cubic-bezier(0.22,0.61,0.36,1) 0.55s both; }
+}
 
 /* Mobile menu entrance */
 .menu-enter { animation: slideDown 0.2s cubic-bezier(0.22,0.61,0.36,1) both; }
