@@ -125,7 +125,6 @@ export default function EngagementPage() {
 
         <div className="container-tbc relative z-10">
           <Reveal>
-            <span className="eyebrow text-gold">ENGAGEMENT</span>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-white text-[clamp(32px,4.5vw,48px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-5">
               Structured around outcomes, not hours.
@@ -143,7 +142,6 @@ export default function EngagementPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">CONSULTING TIERS</span>
               <h2 id="consulting-tiers-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Three ways to engage.
               </h2>
@@ -220,8 +218,8 @@ export default function EngagementPage() {
           {/* Disclaimer */}
           <Reveal delay={0.15}>
             <p className="font-sans text-[14px] text-mid-grey text-center leading-relaxed max-w-3xl mx-auto mt-12 bg-white/50 px-6 py-4 rounded-[8px] border border-light-grey">
-              <strong>Note:</strong> All other service engagements (Social Media Management, Web
-              Development, Custom LLM, Slate, AI Training) are priced on a
+              <strong>Note:</strong> All other service engagements (consulting, Custom LLM, AI capability building and our
+              products) are priced on a
               project and retainer basis, scoped after an initial consultation. A
               detailed proposal is delivered within 48 hours of the discovery
               call.
@@ -234,7 +232,6 @@ export default function EngagementPage() {
       <section className="bg-white py-s7 border-b border-light-grey" aria-labelledby="process-heading">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow">HOW WE WORK</span>
             <h2 id="process-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
               From first conversation to final outcome.
             </h2>

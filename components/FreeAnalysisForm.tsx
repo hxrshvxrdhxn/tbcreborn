@@ -49,7 +49,6 @@ export default function FreeAnalysisForm() {
           
           <div className="lg:col-span-5">
             <Reveal>
-              <span className="eyebrow text-gold">FREE OF CHARGE</span>
               <hr className="gold-rule mb-6" />
               <h2 className="font-display font-bold text-[clamp(28px,3vw,40px)] text-ink leading-[1.1] mb-6 text-balance">
                 Get a custom business analysis delivered to your office.

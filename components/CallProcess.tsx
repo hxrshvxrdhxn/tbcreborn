@@ -44,7 +44,6 @@ export default function CallProcess({
   if (variant === "compact") {
     return (
       <div className={className}>
-        <span className="eyebrow">HOW WE WORK</span>
         <hr className="gold-rule mb-6" />
         <h2 className="font-display font-bold text-[26px] text-ink leading-[1.25] mb-8">
           What happens on the call
@@ -80,7 +79,6 @@ export default function CallProcess({
     >
       <div className="container-tbc">
         <div className="max-w-2xl mb-12">
-          <span className="eyebrow">HOW WE WORK</span>
           <hr className="gold-rule mb-6" />
           <h2 className="font-display font-bold text-[clamp(24px,3vw,36px)] text-ink leading-[1.2]">
             What happens on the call

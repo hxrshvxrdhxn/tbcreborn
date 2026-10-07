@@ -143,7 +143,6 @@ export default function LocationPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">FAQ</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">Frequently Asked Questions</h2>
               <hr className="gold-rule gold-rule--center" />
             </Reveal>

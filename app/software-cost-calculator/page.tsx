@@ -147,7 +147,6 @@ export default async function SoftwareCostCalculatorPage() {
       {/* ── HERO ── */}
       <section className="bg-forest py-16 sm:py-20 text-white">
         <div className="container-tbc">
-          <span className="eyebrow">Interactive Estimator</span>
           <hr className="gold-rule mb-6" />
           <h1 className="font-display font-bold text-white text-[clamp(28px,4vw,44px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-4">
             Software cost calculator
@@ -169,7 +168,6 @@ export default async function SoftwareCostCalculatorPage() {
       <section className="bg-white py-16 border-t border-light-grey">
         <div className="container-tbc max-w-4xl">
           <div className="mb-10 text-center sm:text-left">
-            <span className="eyebrow">Questions &amp; Clarity</span>
             <hr className="gold-rule mb-4" />
             <h2 className="font-display font-bold text-[26px] sm:text-[30px] text-ink">
               Frequently asked questions

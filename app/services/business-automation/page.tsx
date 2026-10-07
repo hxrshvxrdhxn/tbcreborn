@@ -126,7 +126,6 @@ export default function ServicePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <Reveal>
-                <span className="eyebrow">THE FRICTION</span>
                 <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
                   The Problem It Solves
                 </h2>
@@ -177,7 +176,6 @@ export default function ServicePage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">THE CAPABILITIES</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 What we build
               </h2>
@@ -304,7 +302,6 @@ export default function ServicePage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">PROOF</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Client Outcomes
               </h2>
@@ -338,7 +335,6 @@ export default function ServicePage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">FAQ</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Frequently Asked Questions
               </h2>

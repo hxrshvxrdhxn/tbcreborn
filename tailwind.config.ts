@@ -33,8 +33,8 @@ const config: Config = {
         "light-grey": "#E3EEE7",
       },
       fontFamily: {
-        sans: ["var(--font-dm-sans)", "Source Sans Pro", "Arial", "sans-serif"],
-        display: ["var(--font-display)", "Helvetica Neue", "Arial", "sans-serif"],
+        sans: ["var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Arial", "sans-serif"],
+        display: ["var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Arial", "sans-serif"],
       },
       fontSize: {
         "display": ["60px", { lineHeight: "1.05", letterSpacing: "-1.2px" }],

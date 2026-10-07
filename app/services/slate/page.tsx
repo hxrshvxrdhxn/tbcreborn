@@ -160,7 +160,6 @@ export default function SlatePage() {
       <section className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="what-slate-does-heading">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow">What Slate Does</span>
             <h2
               id="what-slate-does-heading"
               className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-12 max-w-2xl"
@@ -198,7 +197,6 @@ export default function SlatePage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">Who Is Slate For</span>
               <h2
                 id="who-slate-for-heading"
                 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6"

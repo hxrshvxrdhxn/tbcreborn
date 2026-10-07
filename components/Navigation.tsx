@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 
 interface NavLink {
   href: string;
@@ -13,13 +14,13 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { href: "/services", label: "Services" },
+  { href: "/products", label: "Products" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
   { href: "/engagement", label: "Engagement" },
   { href: "/how-to", label: "How-To" },
   { href: "/contact", label: "Contact" },
-  { href: "/work/ai-knowledge-portal.html", label: "On-Prem LLMs", target: "_blank" },
 ];
 
 export default function Navigation() {
@@ -62,38 +63,24 @@ export default function Navigation() {
                 {/* Services Dropdown */}
                 {link.label === "Services" && (
                   <div className="absolute top-full left-0 hidden group-hover:block z-50 min-w-[240px] pt-1">
-                    <ul className="bg-white border border-light-grey rounded-[6px] shadow-lg py-2 flex flex-col">
-                      <li>
-                        <Link href="/services/custom-software-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Custom Software</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/mobile-app-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Mobile Apps</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/ai-applications" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">AI Applications</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/business-automation" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Business Automation</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/mvp-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">MVP Development</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/web-development" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Web Development</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/custom-llm" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Custom LLM</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/ai-training" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">AI Training</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/slate" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Slate AI Assistant</Link>
-                      </li>
-                      <li>
-                        <Link href="/services/smm" className="block px-5 py-2.5 text-[14px] text-ink hover:bg-ivory hover:text-royal transition-colors">Social Media</Link>
-                      </li>
-                    </ul>
+                    <div className="bg-white border border-light-grey rounded-[8px] shadow-lg p-6 grid grid-cols-3 gap-8 w-[720px]">
+                      {[
+                        { heading: "AI practice", items: aiPractices },
+                        { heading: "Products", items: products },
+                        { heading: "Consulting", items: consultingLinks },
+                      ].map((col) => (
+                        <div key={col.heading}>
+                          <p className="text-[12px] font-semibold text-mid-grey mb-3">{col.heading}</p>
+                          <ul className="flex flex-col gap-1">
+                            {col.items.map((it) => (
+                              <li key={it.href}>
+                                <Link href={it.href} className="block py-1.5 text-[14px] leading-snug text-ink hover:text-royal transition-colors">{it.title}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </li>

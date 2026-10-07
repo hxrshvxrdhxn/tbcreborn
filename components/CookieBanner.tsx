@@ -25,7 +25,7 @@ export default function CookieBanner() {
         style={{ 
           background: "#13563A", // forest
           borderTop: "1px solid #A7EBC8", // mint
-          fontFamily: "var(--font-dm-sans, sans-serif)", 
+          fontFamily: "var(--font-inter, sans-serif)", 
           zIndex: 99999,
           padding: "10px"
         }}

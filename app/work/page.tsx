@@ -33,23 +33,6 @@ const caseStudies = [
   },
   {
     number: "02",
-    title: "Social Media Management",
-    subtitle: "Manufacturing company. Punjab. 200 employees.",
-    context: [
-      "A third-generation family-owned precision engineering business had strong offline reputation and zero digital presence. Their LinkedIn page had 43 followers. Their Instagram had not been updated in fourteen months. Their competitors — several of them smaller — were visibly active and winning talent and contracts they should not have been winning."
-    ],
-    solution: "We built a full social media strategy from scratch. The content architecture was designed to do two things simultaneously: attract engineering talent from Delhi NCR and establish commercial credibility with procurement heads at automotive OEMs. Content pillars included: factory floor process content, founder-facing thought leadership, precision engineering education, and client outcome case studies (anonymised). AI-native production allowed us to publish at a volume the in-house team could not have sustained manually.",
-    outcomes: [
-      "LinkedIn followers: 43 → 1,520 in 6 months (340% growth)",
-      "Engagement rate: 0.8% → 10.4% (12× improvement)",
-      "Inbound talent enquiries via LinkedIn: 0/month → 14/month",
-      "Two enterprise procurement conversations initiated directly via LinkedIn DM",
-      "Content output: 22 posts/month across LinkedIn and Instagram, sustained without internal resource"
-    ],
-    meta: ["Timeline: 6 months", "Practice: Social Media Management"]
-  },
-  {
-    number: "03",
     title: "Website Development",
     subtitle: "Financial services firm. Mumbai. 35 employees.",
     context: [
@@ -67,7 +50,7 @@ const caseStudies = [
     meta: ["Stack: Next.js, Sanity CMS, Calendly, Vercel", "Timeline: 18 days", "Practice: Website & Application Development"]
   },
   {
-    number: "04",
+    number: "03",
     title: "AI Executive Assistant (Slate)",
     subtitle: "Founder. E-commerce business. Bengaluru. 45 employees.",
     context: [
@@ -84,7 +67,7 @@ const caseStudies = [
     meta: ["Deployment: Private cloud", "Timeline: 2 weeks", "Practice: Slate — AI Executive Assistant"]
   },
   {
-    number: "05",
+    number: "04",
     title: "Business Diagnostic & Operational Restructure",
     subtitle: "B2B services firm. Delhi NCR. 37 employees.",
     context: [
@@ -102,7 +85,7 @@ const caseStudies = [
     meta: ["Timeline: 8 weeks", "Practice: Management Consulting & Diagnostics"]
   },
   {
-    number: "06",
+    number: "05",
     title: "Web Application Development",
     subtitle: "Logistics company. Gurugram. 120 employees.",
     context: [
@@ -119,24 +102,7 @@ const caseStudies = [
     meta: ["Stack: React, Node.js, PostgreSQL, AWS", "Timeline: 6 weeks", "Practice: Website & Application Development"]
   },
   {
-    number: "07",
-    title: "Social Media Management & Personal Brand",
-    subtitle: "Independent consultant. Mumbai.",
-    context: [
-      "A senior consultant with 22 years of experience in supply chain advisory was leaving a large firm to operate independently. She had deep expertise, a strong offline network, and no digital presence. Her first client needed to come within 90 days or the economics of independence would not work."
-    ],
-    solution: "We built her LinkedIn presence from zero — content strategy, posting cadence, thought leadership positioning, and engagement management. The strategy was built around one insight: her 22 years of experience contained more genuinely useful knowledge than most of her competitors had published in their entire careers. We made that knowledge visible, consistently, in her voice.",
-    outcomes: [
-      "LinkedIn followers: 0 → 1,840 in 90 days",
-      "First inbound client enquiry: day 34",
-      "First engagement signed: day 52",
-      "Monthly inbound enquiries by month 3: 6–8",
-      "Speaking invitation received from an industry conference: month 2"
-    ],
-    meta: ["Timeline: Ongoing retainer", "Practice: Social Media Management"]
-  },
-  {
-    number: "08",
+    number: "06",
     title: "Custom LLM — Retail & E-commerce",
     subtitle: "Consumer electronics retailer. Pan-India. 600 employees.",
     context: [
@@ -153,7 +119,7 @@ const caseStudies = [
     meta: ["Deployment: Private cloud, mobile", "Languages: Hindi and English", "Timeline: 8 weeks", "Practice: Custom LLM"]
   },
   {
-    number: "09",
+    number: "07",
     title: "Website Development & SEO",
     subtitle: "Healthcare services provider. Pune. Private clinic group.",
     context: [
@@ -170,7 +136,7 @@ const caseStudies = [
     meta: ["Stack: Next.js, Sanity CMS", "Timeline: 4 weeks", "Practice: Website Development"]
   },
   {
-    number: "10",
+    number: "08",
     title: "AI Training Programme",
     subtitle: "Financial services company. Mumbai. 180 employees.",
     context: [
@@ -214,7 +180,6 @@ export default function WorkPage() {
       <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow">Work</span>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-ink leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6">
               Outcomes, documented.
@@ -343,7 +308,6 @@ export default function WorkPage() {
       <SectionInk className="text-center">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow text-gold">NEXT STEPS</span>
             <hr className="gold-rule gold-rule--center mb-8" />
             <h2 className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] max-w-3xl mx-auto mb-6">
               Every engagement begins with a defined outcome.

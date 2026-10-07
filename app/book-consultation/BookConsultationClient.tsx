@@ -32,7 +32,6 @@ export default function BookConsultationClient() {
       {/* ── HERO ── */}
       <section className="bg-forest py-20">
         <div className="container-tbc">
-          <span className="eyebrow">BOOK A CONSULTATION</span>
           <hr className="gold-rule mb-6" />
           <h1 className="font-display font-bold text-white text-[clamp(32px,4.5vw,48px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-5">
             Request a consultation.
@@ -77,7 +76,6 @@ export default function BookConsultationClient() {
 
             {/* Right: Calendly embed (on mobile: order-1, on desktop: order-2) */}
             <div className="order-1 lg:order-2">
-              <span className="eyebrow">SCHEDULE ONLINE</span>
               <hr className="gold-rule mb-6" />
               <h2 className="font-display font-bold text-[26px] text-ink leading-[1.25] mb-6">
                 Pick a time that works for you.

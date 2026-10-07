@@ -102,7 +102,6 @@ export default function AboutPage() {
 
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
-            <span className="eyebrow text-gold">ABOUT TBC</span>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
               We help ambitious organisations use AI{" "}
@@ -121,7 +120,6 @@ export default function AboutPage() {
           <Reveal>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
               <div className="lg:col-span-4">
-                <span className="eyebrow">WHO WE ARE</span>
                 <h2 id="who-we-are-heading" className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
                   The Organisation
                 </h2>
@@ -152,7 +150,6 @@ export default function AboutPage() {
         <div className="container-tbc">
           <Reveal>
             <div className="max-w-4xl mx-auto text-center">
-              <span className="eyebrow">OUR POSITION</span>
               <h2 id="our-position-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 The intelligence and discipline of a top-tier consultancy, combined
                 with the speed of a world-class AI firm.
@@ -175,7 +172,6 @@ export default function AboutPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow text-gold">CORE VALUES</span>
               <h2 id="values-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-white leading-[1.2] mb-6">
                 Five values. Built into every engagement.
               </h2>
@@ -207,7 +203,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
               <Reveal>
-                <span className="eyebrow">COMPANY</span>
                 <h2 id="company-facts-heading" className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
                   The organisation behind the work.
                 </h2>

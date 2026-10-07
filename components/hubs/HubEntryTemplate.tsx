@@ -231,7 +231,6 @@ export default function HubEntryTemplate({
       {/* ── HERO ── */}
       <section className="bg-forest py-16">
         <div className="container-tbc">
-          <span className="eyebrow">{hubTitle}</span>
           <hr className="gold-rule mb-6" />
           <h1 className="font-display font-bold text-white text-[clamp(28px,4vw,44px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-6">
             {entry.title}

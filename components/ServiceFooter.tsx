@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Reveal from "@/components/Reveal";
+import { aiPractices, consultingLinks } from "@/lib/offerings";
 
 const services = [
-  { href: "/services/custom-llm", label: "Custom LLM & AI" },
-  { href: "/services/ai-training", label: "AI Capability Building" },
-  { href: "/services/web-development", label: "Web & App Development" },
-  { href: "/services/smm", label: "Social Media Management" },
-  { href: "/services/slate", label: "Slate Executive Assistant" },
+  ...aiPractices.map((l) => ({ href: l.href, label: l.title })),
+  { href: "/products", label: "Products" },
+  ...consultingLinks.map((l) => ({ href: l.href, label: l.title })),
 ];
 
 export default function ServiceFooter() {
@@ -19,7 +18,6 @@ export default function ServiceFooter() {
     <section className="bg-ivory py-s6 border-t border-light-grey">
       <div className="container-tbc">
         <Reveal>
-          <span className="eyebrow text-center mb-6">EXPLORE OTHER PRACTICES</span>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {services.map((service) => {
               const isActive = pathname === service.href;

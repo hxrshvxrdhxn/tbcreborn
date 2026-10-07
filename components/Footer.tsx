@@ -1,21 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
+import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 
 const serviceLinks = [
-  { href: "/services/custom-software-development", label: "Custom Software" },
-  { href: "/services/mobile-app-development", label: "Mobile Apps" },
-  { href: "/services/ai-applications", label: "AI Applications" },
-  { href: "/services/business-automation", label: "Business Automation" },
-  { href: "/services/mvp-development", label: "MVP Development" },
-  { href: "/services/web-development", label: "Web Development" },
-  { href: "/services/custom-llm", label: "Custom LLM" },
-  { href: "/services/ai-training", label: "AI Training" },
-  { href: "/services/slate", label: "Slate AI Assistant" },
-  { href: "/services/smm", label: "Social Media" },
+  ...aiPractices.map((l) => ({ href: l.href, label: l.title })),
+  ...products.map((l) => ({ href: l.href, label: l.title })),
+  ...consultingLinks.map((l) => ({ href: l.href, label: l.title })),
 ];
 
 const companyLinks = [
   { href: "/services", label: "Services" },
+  { href: "/products", label: "Products" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },

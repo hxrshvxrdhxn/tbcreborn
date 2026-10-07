@@ -15,21 +15,13 @@ import GTMTracker from "@/components/GTMTracker";
 import Script from "next/script";
 
 // Self-hosted so every build ships identical font class names (no Google Fonts fetch at build time).
-// League Spartan matches the geometric letterforms of the TBC wordmark; DM Sans stays for body copy.
-const display = localFont({
-  src: "./fonts/LeagueSpartan-var.woff2",
-  variable: "--font-display",
+// Inter is the closest open equivalent to Apple's San Francisco: tall x-height, open shapes, easy to read.
+const inter = localFont({
+  src: "./fonts/Inter-var.woff2",
+  variable: "--font-inter",
   weight: "100 900",
   display: "swap",
-  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
-});
-
-const dmSans = localFont({
-  src: "./fonts/DMSans-var.woff2",
-  variable: "--font-dm-sans",
-  weight: "100 900",
-  display: "swap",
-  fallback: ["Arial", "sans-serif"],
+  fallback: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -63,7 +55,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${display.variable} ${dmSans.variable}`}>
+    <html lang="en-IN" className={`${inter.variable}`}>
       <head>
         <link rel="alternate" type="application/rss+xml" title="Turbo Bytes Consulting blog" href="/feed.xml" />
         <script

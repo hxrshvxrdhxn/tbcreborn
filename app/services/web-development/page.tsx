@@ -391,7 +391,6 @@ export default function WebDevelopmentPage() {
 
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
-            <span className="eyebrow text-gold">PRACTICE 03</span>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
               Website &amp; Application Development
@@ -419,7 +418,6 @@ export default function WebDevelopmentPage() {
           <Reveal>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
               <div className="lg:col-span-4">
-                <span className="eyebrow">OVERVIEW</span>
                 <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
                   What This Is
                 </h2>
@@ -453,7 +451,6 @@ export default function WebDevelopmentPage() {
             <div className="lg:col-span-5 flex flex-col justify-between">
               <Reveal>
                 <div>
-                  <span className="eyebrow">THE FRICTION</span>
                   <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
                     The Problem It Solves
                   </h2>
@@ -493,7 +490,6 @@ export default function WebDevelopmentPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">THE CAPABILITIES</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 What&apos;s Included
               </h2>
@@ -533,7 +529,6 @@ export default function WebDevelopmentPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">PROCESS</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 How It Works
               </h2>
@@ -549,7 +544,6 @@ export default function WebDevelopmentPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">TECHNOLOGY STACK</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Technology We Work With
               </h2>
@@ -584,7 +578,6 @@ export default function WebDevelopmentPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
               <Reveal>
-                <span className="eyebrow text-gold">THE DIFFERENCE</span>
                 <h2 className="font-display font-bold text-[clamp(28px,3.5vw,38px)] text-white leading-[1.15] mb-6">
                   What Separates a TBC Build
                 </h2>
@@ -616,7 +609,6 @@ export default function WebDevelopmentPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">TARGET AUDIENCE</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Who This Is For
               </h2>
@@ -650,7 +642,6 @@ export default function WebDevelopmentPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">FAQ</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Frequently Asked Questions
               </h2>

@@ -300,7 +300,6 @@ export default function CustomLLMPage() {
 
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
-            <span className="eyebrow text-gold">PRACTICE 01</span>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
               Custom LLM &amp;<br />On-Premise AI Deployment
@@ -328,7 +327,6 @@ export default function CustomLLMPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div className="lg:col-span-4">
               <Reveal>
-                <span className="eyebrow">OVERVIEW</span>
                 <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
                   What This Is
                 </h2>
@@ -360,7 +358,6 @@ export default function CustomLLMPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5 flex flex-col justify-between">
               <Reveal>
-                <span className="eyebrow">THE FRICTION</span>
                 <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
                   The Problem It Solves
                 </h2>
@@ -399,7 +396,6 @@ export default function CustomLLMPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s5">
             <Reveal>
-              <span className="eyebrow">THE CAPABILITIES</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 What&apos;s Included
               </h2>
@@ -439,7 +435,6 @@ export default function CustomLLMPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">PROCESS</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 How It Works
               </h2>
@@ -461,7 +456,6 @@ export default function CustomLLMPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
               <Reveal>
-                <span className="eyebrow text-gold">SECURITY FIRST</span>
                 <h2 className="font-display font-bold text-[clamp(28px,3.5vw,38px)] text-white leading-[1.15] mb-6 text-balance">
                   Why On-Premise Matters
                 </h2>
@@ -500,7 +494,6 @@ export default function CustomLLMPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-s5">
               <Reveal>
-                <span className="eyebrow">OUTCOMES</span>
                 <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-4">
                   Results You Can Expect
                 </h2>
@@ -527,7 +520,6 @@ export default function CustomLLMPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s5">
             <Reveal>
-              <span className="eyebrow">TARGET AUDIENCE</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Who This Is For
               </h2>
@@ -561,7 +553,6 @@ export default function CustomLLMPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s5">
             <Reveal>
-              <span className="eyebrow">FAQ</span>
               <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Frequently Asked Questions
               </h2>
@@ -599,7 +590,6 @@ export default function CustomLLMPage() {
       <SectionInk className="text-center">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow text-gold">ENGAGEMENT MODEL</span>
             <hr className="gold-rule gold-rule--center mb-8" />
             <h2 className="font-display font-bold text-[clamp(26px,3.5vw,40px)] text-white leading-[1.2] max-w-3xl mx-auto mb-6 text-balance">
               Ready to deploy your organisation&apos;s intelligence layer?

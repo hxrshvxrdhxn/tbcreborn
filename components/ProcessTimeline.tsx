@@ -32,11 +32,11 @@ export default function ProcessTimeline({ steps }: { steps: TimelineStep[] }) {
             {/* Content */}
             <div className="ml-6 md:ml-0 md:text-center mt-2 md:mt-0 flex-1">
               {step.caption && (
-                <span className="font-display font-bold text-caption text-gold tracking-widest uppercase mb-1 block">
+                <span className="font-display font-bold text-caption text-gold mb-1 block">
                   {step.caption}
                 </span>
               )}
-              <h4 className="font-display font-bold text-[15px] text-ink uppercase tracking-[1.5px] mb-2 text-balance leading-snug">
+              <h4 className="font-display font-semibold text-[17px] text-ink mb-2 text-balance leading-snug">
                 {step.title}
               </h4>
               <p className="text-body text-mid-grey">

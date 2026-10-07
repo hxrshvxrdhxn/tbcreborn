@@ -140,7 +140,6 @@ export default function AITrainingPage() {
 
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
-            <span className="eyebrow text-gold">PRACTICE 02</span>
             <hr className="gold-rule mb-6" />
             <h1 id="ai-training-hero-heading" className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
               AI Capability Building &amp;<br />Automation Workshops
@@ -163,7 +162,6 @@ export default function AITrainingPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">What We Teach</span>
               <h2 id="curriculum-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 A curriculum built around your tools, your team, and your goals.
               </h2>
@@ -197,7 +195,6 @@ export default function AITrainingPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
-              <span className="eyebrow">Delivery Formats</span>
               <h2 id="delivery-formats-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
                 Training delivered the way your organisation works.
               </h2>
@@ -233,7 +230,6 @@ export default function AITrainingPage() {
               {/* Subtle gold accent line */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gold"></div>
               
-              <span className="eyebrow">Programme Deliverable</span>
               <h2 id="action-plan-heading" className="font-display font-bold text-[clamp(26px,3vw,32px)] text-ink mb-5 leading-[1.2] text-balance">
                 Every programme concludes with an AI Action Plan.
               </h2>

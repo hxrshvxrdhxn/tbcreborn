@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroLines from "@/components/HeroLines";
 import Reveal from "@/components/Reveal";
-import ServiceCard from "@/components/ServiceCard";
+import Image from "next/image";
+import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import FreeAnalysisForm from "@/components/FreeAnalysisForm";
@@ -60,51 +61,27 @@ const faqSchema = {
   }))
 };
 
-const services = [
+const groups = [
   {
-    number: "01",
-    title: "Custom LLM & On-Premise AI",
-    description: "Your organisation's intelligence layer. Trained on your knowledge.",
-    href: "/services/custom-llm",
-    setupTime: "4–8 wks",
-    roi: "60–90 days",
-    imageSrc: "/img/hero-service-llm.png",
+    heading: "AI practice",
+    lead: "LLMs and neural networks built into the way your business already works.",
+    image: "/img/hero-service-llm.png",
+    items: aiPractices,
+    more: { href: "/services", label: "About the AI practice" },
   },
   {
-    number: "02",
-    title: "AI Capability Building",
-    description: "Organisations that understand AI use it better. We build that understanding.",
-    href: "/services/ai-training",
-    setupTime: "2–4 wks",
-    roi: "Immediate",
-    imageSrc: "/img/hero-service-ai-training.png",
+    heading: "Consulting",
+    lead: "Independent, in-depth work on strategy, systems and operations.",
+    image: "/img/hero-service-consulting.png",
+    items: consultingLinks,
+    more: { href: "/services", label: "All consulting work" },
   },
   {
-    number: "03",
-    title: "Website & Application Development",
-    description: "Architecturally sound. Conversion-optimised. Built to perform.",
-    href: "/services/web-development",
-    setupTime: "6–12 wks",
-    roi: "90 days",
-    imageSrc: "/img/hero-service-web-development.png",
-  },
-  {
-    number: "04",
-    title: "Social Media Management",
-    description: "Precision-engineered content. Platform-native strategy. AI-driven execution.",
-    href: "/services/smm",
-    setupTime: "2 wks",
-    roi: "Ongoing",
-    imageSrc: "/img/hero-service-smm.png",
-  },
-  {
-    number: "05",
-    title: "Slate AI Executive Assistant",
-    description: "Beyond scheduling. Beyond email. A second intelligence for leaders.",
-    href: "/services/slate",
-    setupTime: "1 wk",
-    roi: "Immediate",
-    imageSrc: "/img/hero-service-slate.png",
+    heading: "Products",
+    lead: "Software we build and run ourselves.",
+    image: "/img/hero-service-products.png",
+    items: products,
+    more: { href: "/products", label: "See the products" },
   },
 ];
 
@@ -170,15 +147,14 @@ export default async function HomePage() {
 
         <div className="container-tbc py-s5 md:py-s7 relative z-10 flex-1 flex flex-col justify-center order-first">
           <div className="max-w-[620px]">
-            <span className="eyebrow text-gold hero-1">TURBO BYTES CONSULTING</span>
             <hr className="gold-rule mb-8 hero-1" />
             <h1 className="font-display font-bold text-white text-[clamp(32px,8vw,52px)] leading-[1.1] tracking-[-0.5px] mb-6 hero-2 text-balance">
               The intelligence layer your business has been missing.
             </h1>
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
-              Turbo Bytes Consulting is an AI-native consultancy. We integrate
-              artificial intelligence into your marketing, operations, and internal
-              systems — completely, not partially.
+              Turbo Bytes Consulting is a management and technology consultancy.
+              We build LLMs and neural networks into your operations, sales and
+              internal systems, and advise on the decisions around them.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 hero-4">
               <Link href="/book-consultation" className="btn-primary w-full sm:w-auto">
@@ -199,7 +175,7 @@ export default async function HomePage() {
             {[
               "MSME Registered",
               "AI-Native",
-              "5 Practice Areas",
+              "Greater Noida, India",
             ].map((item, i, arr) => (
               <li key={item} className="flex items-center">
                 <span className="font-display font-semibold text-caption tracking-[1px] text-ink uppercase text-center w-full sm:w-auto">
@@ -223,7 +199,6 @@ export default async function HomePage() {
       <section className="bg-ivory py-s5 md:py-s7">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow">WHO WE ARE</span>
             <hr className="gold-rule mb-8 md:mb-s5" />
             <h2 className="section-heading mb-6 text-balance">
               Not an agency. Not a software house.<br />A consultancy built for the AI era.
@@ -245,7 +220,7 @@ export default async function HomePage() {
               },
               {
                 label: "We Build",
-                body: "Custom LLMs, applications, internal tools, content engines.",
+                body: "Custom LLMs, applications, internal tools and our own products.",
               },
               {
                 label: "We Deploy",
@@ -267,22 +242,36 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. SERVICES ── */}
+      {/* ── 4. WHAT WE DO ── */}
       <section className="bg-white py-s5 md:py-s7 border-y border-light-grey">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow">WHAT WE DO</span>
-            <hr className="gold-rule mb-8 md:mb-s5" />
             <h2 className="section-heading mb-10 md:mb-12 text-balance">
-              Five practice areas.<br />One integrated capability.
+              Three ways we work with you.
             </h2>
           </Reveal>
 
-          {/* 5-card grid (2 up top, 3 below, auto-fits well) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <Reveal key={s.number} delay={i * 0.1} className={i < 2 ? "lg:col-span-1" : "lg:col-span-1"}>
-                <ServiceCard {...s} className="h-full" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            {groups.map((g, i) => (
+              <Reveal key={g.heading} delay={i * 0.08}>
+                <div className="flex flex-col h-full">
+                  <div className="relative aspect-[16/10] rounded overflow-hidden bg-forest mb-6">
+                    <Image src={g.image} alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-display font-semibold text-[24px] text-ink tracking-[-0.015em] mb-2">{g.heading}</h3>
+                  <p className="text-[16px] text-mid-grey leading-relaxed mb-5">{g.lead}</p>
+                  <ul className="border-t border-light-grey mb-5">
+                    {g.items.map((it) => (
+                      <li key={it.href} className="border-b border-light-grey">
+                        <Link href={it.href} className="flex items-center justify-between gap-4 py-3 text-[15px] text-ink hover:text-royal transition-colors">
+                          {it.title}
+                          <span aria-hidden="true" className="text-royal">→</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={g.more.href} className="mt-auto font-semibold text-[15px] text-royal hover:text-royal-mid">{g.more.label}</Link>
+                </div>
               </Reveal>
             ))}
           </div>
@@ -293,7 +282,6 @@ export default async function HomePage() {
       <SectionInk>
         <div className="container-tbc py-s5 md:py-s7">
           <Reveal>
-            <span className="eyebrow text-gold">WHY TBC</span>
             <hr className="gold-rule mb-8 md:mb-s5" />
             <h2 className="font-display font-bold text-[clamp(26px,3.5vw,36px)] text-white leading-[1.2] max-w-2xl mb-10 md:mb-12 text-balance">
               The rigour of a consultancy.<br />The speed of a technology firm.
@@ -321,7 +309,6 @@ export default async function HomePage() {
       <section className="bg-ivory py-s5 md:py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow">OUR PROCESS</span>
             <hr className="gold-rule mb-8 md:mb-s5" />
             <h2 className="section-heading mb-10 md:mb-14 text-balance">
               A process designed for outcomes,<br />not deliverables.
@@ -338,7 +325,6 @@ export default async function HomePage() {
       <section className="bg-white py-s5 md:py-s7 border-b border-light-grey">
         <div className="container-tbc max-w-3xl">
           <Reveal>
-            <span className="eyebrow text-center">FAQ</span>
             <hr className="gold-rule gold-rule--center mb-8 md:mb-s5" />
             <h2 className="section-heading text-center mb-10 md:mb-14 text-balance mx-auto">
               Common Questions
@@ -364,7 +350,6 @@ export default async function HomePage() {
           <Reveal>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
               <div>
-                <span className="eyebrow">INSIGHT</span>
                 <hr className="gold-rule mb-6 md:mb-s5" />
                 <h2 className="section-heading text-balance">
                   Thinking on AI, strategy, and what comes next.
@@ -412,7 +397,6 @@ export default async function HomePage() {
       <section className="bg-white py-s5 md:py-s7 border-t border-light-grey">
         <div className="container-tbc">
           <Reveal>
-            <span className="eyebrow">RESOURCES</span>
             <hr className="gold-rule mb-6 md:mb-s5" />
             <h2 className="section-heading mb-8">
               Guides for business owners

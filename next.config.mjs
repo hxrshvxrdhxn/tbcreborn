@@ -41,6 +41,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      { source: "/services/smm", destination: "/services", permanent: true },
       // Old site pages still in search indexes (found 3 Oct 2026)
       { source: "/faq", destination: "/", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },

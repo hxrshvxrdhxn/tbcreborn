@@ -58,7 +58,6 @@ export default async function BlogPage() {
 
         <div className="container-tbc relative z-10">
           <Reveal>
-            <span className="eyebrow text-gold">INSIGHT</span>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-white text-[clamp(32px,4.5vw,48px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-5">
               Thinking on AI, strategy, and what comes next.

@@ -111,7 +111,6 @@ export default function ContactClient() {
 
         <div className="container-tbc relative z-10">
           <Reveal>
-            <span className="eyebrow text-gold">CONTACT</span>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-white text-[clamp(32px,4.5vw,48px)] leading-[1.15] tracking-[-0.5px] max-w-2xl">
               Let&rsquo;s talk.
@@ -127,7 +126,6 @@ export default function ContactClient() {
             {/* Left: Contact details */}
             <div className="flex flex-col h-full">
               <Reveal>
-                <span className="eyebrow">REACH US</span>
                 <hr className="gold-rule mb-6" />
                 <h2 className="font-display font-bold text-[26px] text-ink leading-[1.25] mb-8">
                   We respond within one business day.
@@ -209,7 +207,6 @@ export default function ContactClient() {
             {/* Right: Contact form */}
             <div>
               <Reveal delay={0.20}>
-                <span className="eyebrow">SEND A MESSAGE</span>
                 <hr className="gold-rule mb-6" />
                 <h2 className="font-display font-bold text-[26px] text-ink leading-[1.25] mb-8">
                   Tell us about your organisation.
