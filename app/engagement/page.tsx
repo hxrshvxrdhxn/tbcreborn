@@ -4,30 +4,29 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: { absolute: "Engagement Model & Pricing | Turbo Bytes Consulting" },
+  title: { absolute: "Engagement Model | Turbo Bytes Consulting" },
   description:
-    "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
+    "How we work and how to begin: a business diagnostic, a full process redesign, or ongoing advisory. Every engagement is scoped after a first conversation.",
   alternates: {
     canonical: "/engagement",
   },
   openGraph: {
-    title: { absolute: "Engagement Model & Pricing | Turbo Bytes Consulting" },
+    title: { absolute: "Engagement Model | Turbo Bytes Consulting" },
     description:
-      "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
+      "How we work and how to begin: a business diagnostic, a full process redesign, or ongoing advisory. Every engagement is scoped after a first conversation.",
     url: "https://turbobytesconsulting.com/engagement",
     images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "Engagement Model & Pricing | Turbo Bytes Consulting" },
+    title: { absolute: "Engagement Model | Turbo Bytes Consulting" },
     description:
-      "How we work and how to begin. Consulting engagement tiers, project pricing, and ongoing advisory. TBC.",
+      "How we work and how to begin: a business diagnostic, a full process redesign, or ongoing advisory. Every engagement is scoped after a first conversation.",
   },
 };
 
 interface PricingTier {
   tier: string;
-  price: string;
   duration: string;
   body: string;
   cta: string;
@@ -37,7 +36,6 @@ interface PricingTier {
 const pricingTiers: PricingTier[] = [
   {
     tier: "Business Diagnostic",
-    price: "₹50,000 +",
     duration: "2 weeks",
     body: "Comprehensive audit of operations, structure, and execution gaps. Diagnostic report with prioritised findings and a 30–60–90 day action blueprint.",
     cta: "Request a Diagnostic",
@@ -45,7 +43,6 @@ const pricingTiers: PricingTier[] = [
   },
   {
     tier: "Restructuring & Redesign",
-    price: "₹1,50,000 +",
     duration: "4–8 weeks",
     body: "Full Diagnostic plus organisational redesign, decision rights framework, role mandates, leadership alignment, and structured implementation roadmap.",
     cta: "Request a Proposal",
@@ -53,7 +50,6 @@ const pricingTiers: PricingTier[] = [
   },
   {
     tier: "Ongoing Advisory",
-    price: "₹75,000 /month",
     duration: "Ongoing",
     body: "Monthly strategic and execution partnership. Weekly check-ins, decision support, and senior accountability across key initiatives.",
     cta: "Start a Conversation",
@@ -172,19 +168,11 @@ export default function EngagementPage() {
                       <hr className={tier.featured ? "gold-rule" : "w-12 border-light-grey mb-6"} />
                     </div>
 
-                    {/* Price + duration */}
+                    {/* Duration */}
                     <div>
                       <p
-                        className={`font-display font-bold leading-none mb-2 ${
+                        className={`font-display font-semibold text-[22px] leading-tight ${
                           tier.featured ? "text-white" : "text-ink"
-                        }`}
-                        style={{ fontSize: "36px" }}
-                      >
-                        {tier.price}
-                      </p>
-                      <p
-                        className={`font-sans text-[14px] ${
-                          tier.featured ? "text-white/60" : "text-mid-grey"
                         }`}
                       >
                         {tier.duration}
@@ -218,11 +206,9 @@ export default function EngagementPage() {
           {/* Disclaimer */}
           <Reveal delay={0.15}>
             <p className="font-sans text-[14px] text-mid-grey text-center leading-relaxed max-w-3xl mx-auto mt-12 bg-white/50 px-6 py-4 rounded-[8px] border border-light-grey">
-              <strong>Note:</strong> All other service engagements (consulting, Custom LLM, AI capability building and our
-              products) are priced on a
-              project and retainer basis, scoped after an initial consultation. A
-              detailed proposal is delivered within 48 hours of the discovery
-              call.
+              Every engagement is scoped after a first conversation. Within 48 hours of the
+              call you receive a written proposal covering scope, timeline, what the work
+              should deliver for the business, and the investment.
             </p>
           </Reveal>
         </div>
