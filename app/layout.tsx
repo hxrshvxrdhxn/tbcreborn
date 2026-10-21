@@ -26,11 +26,11 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting",
+    default: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting",
     template: "%s | Turbo Bytes Consulting",
   },
   description:
-    "Turbo Bytes Consulting is an AI-native management and technology consultancy. We integrate AI into your marketing, operations, and systems — completely.",
+    "AI and technology consultancy for founder-led firms: private LLMs, AI training, technology consulting and audits. Based in Greater Noida, serving Delhi NCR.",
   metadataBase: new URL("https://turbobytesconsulting.com"),
   openGraph: {
     type: "website",
@@ -126,7 +126,8 @@ export default function RootLayout({
                   "@type": ["Organization", "ProfessionalService"],
                   "@id": "https://turbobytesconsulting.com/#organization",
                   "name": "Turbo Bytes Consulting",
-                  "description": "Software development, AI applications and business automation for businesses in Noida, Greater Noida and Delhi NCR",
+                  "description": "AI-native management and technology consultancy in Greater Noida: custom and on-premise LLMs, AI capability building, technology consulting and audits, and its own products Slate, Distil, Vantage and Meridian.",
+                  "knowsAbout": ["Large language models", "On-premise AI", "AI training", "Technology strategy", "Technology audit", "AI readiness", "Business process improvement", "Custom software"],
                   "url": "https://turbobytesconsulting.com",
                   "logo": "https://turbobytesconsulting.com/logo-square.png",
                   "telephone": "+919354784377",
@@ -161,6 +162,7 @@ export default function RootLayout({
                   "sameAs": [
                     "https://x.com/social_TBC",
                     "https://instagram.com/turbobytesconsulting",
+                    "https://www.youtube.com/channel/UCXQy14KS46mSFyu1VzEUqXw",
                     "https://share.google/jp3MGXYa4u27I4bcq"
                   ]
                 },

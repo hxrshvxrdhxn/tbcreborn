@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "Terms of use for turbobytesconsulting.com",
+  description: "Terms of use for turbobytesconsulting.com: content ownership, permitted use, liability and the law that governs this website.",
   alternates: { canonical: "/terms" },
 };
 

@@ -10,22 +10,22 @@ import FreeAnalysisForm from "@/components/FreeAnalysisForm";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: { absolute: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting" },
+  title: { absolute: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting" },
   description:
-    "Custom software, mobile apps, AI applications and business automation for founder-led companies. Based in Greater Noida, serving Delhi NCR and India.",
+    "AI and technology consultancy for founder-led firms: private LLMs, AI training, technology consulting and audits. Based in Greater Noida, serving Delhi NCR.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: { absolute: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting" },
+    title: { absolute: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting" },
     description:
-      "Custom software, mobile apps, AI applications and business automation for founder-led companies. Based in Greater Noida, serving Delhi NCR and India.",
+      "AI and technology consultancy for founder-led firms: private LLMs, AI training, technology consulting and audits. Based in Greater Noida, serving Delhi NCR.",
     url: "https://turbobytesconsulting.com",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "Software Development & AI Consulting in Delhi NCR | Turbo Bytes Consulting" },
+    title: { absolute: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting" },
     description:
-      "Custom software, mobile apps, AI applications and business automation for founder-led companies.",
+      "AI and technology consultancy for founder-led firms in Delhi NCR.",
   },
 };
 

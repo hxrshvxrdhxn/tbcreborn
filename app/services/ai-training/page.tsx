@@ -110,9 +110,34 @@ const deliveryFormats = [
   },
 ];
 
+const SITE = "https://turbobytesconsulting.com";
+const trainingSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      name: "AI capability building",
+      serviceType: "AI training",
+      description: "Hands-on programmes that teach business teams to use LLMs and neural networks well in their own work.",
+      url: `${SITE}/services/ai-training`,
+      areaServed: "IN",
+      provider: { "@id": `${SITE}/#organization` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services` },
+        { "@type": "ListItem", position: 3, name: "AI capability building", item: `${SITE}/services/ai-training` },
+      ],
+    },
+  ],
+};
+
 export default function AITrainingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trainingSchema) }} />
       {/* ── Breadcrumb ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: { absolute: "Mobile App Development Company in Noida | Turbo Bytes Consulting" },
     description: "iOS and Android apps for customers, field teams and operations. Cross-platform builds, offline support and integrations with your business systems.",
     url: "https://turbobytesconsulting.com/services/mobile-app-development",
+    images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,

@@ -4,10 +4,10 @@ import Reveal from "@/components/Reveal";
 
 const SITE = "https://turbobytesconsulting.com";
 const DESC =
-  "Products built by Turbo Bytes Consulting: Slate, an executive assistant for leaders; Distil, a proposal engine; Vantage, a knowledge portal with sources; and Meridian, a connected operating system.";
+  "Our products: Slate, an executive assistant for leaders; Distil, a proposal engine; Vantage, a knowledge portal with sources; Meridian, a connected operating system.";
 
 export const metadata: Metadata = {
-  title: "Products: Slate, Distil, Vantage and Meridian",
+  title: { absolute: "Products: Slate, Distil, Vantage and Meridian | TBC" },
   description: DESC,
   alternates: { canonical: "/products" },
   openGraph: { title: "Products", description: DESC, url: `${SITE}/products`, images: [{ url: "/img/og-default.png", width: 1200, height: 630 }] },

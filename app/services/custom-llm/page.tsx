@@ -11,12 +11,12 @@ import CallProcess from "@/components/CallProcess";
 export const metadata: Metadata = {
   title: { absolute: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting" },
   description:
-    "Your organisation's intelligence layer. Train a custom Large Language Model on your company data. Deployed on-premise or in your private cloud. Data never leaves your controlled environment.",
+    "A private LLM trained on your company's knowledge, deployed on-premise or in your private cloud, so your data never leaves your control.",
   alternates: { canonical: "/services/custom-llm" },
   openGraph: {
     title: { absolute: "Custom LLM & Private AI Deployment | Turbo Bytes Consulting" },
     description:
-      "Your organisation's intelligence layer. Train a custom Large Language Model on your company data. Deployed on-premise or in your private cloud. Data never leaves your controlled environment.",
+      "A private LLM trained on your company's knowledge, deployed on-premise or in your private cloud, so your data never leaves your control.",
     url: "https://turbobytesconsulting.com/services/custom-llm",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },

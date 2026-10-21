@@ -3,7 +3,8 @@ import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: { absolute: "Brand Guidelines | Turbo Bytes Consulting" },
-  description: "Official visual identity, typography, and color guidelines for Turbo Bytes Consulting.",
+  description: "Official visual identity, typography, and colour guidelines for Turbo Bytes Consulting.",
+  alternates: { canonical: "/brand-guidelines" },
 };
 
 function ColorSwatch({ name, hex, className, textColor }: { name: string; hex: string; className: string; textColor?: string }) {

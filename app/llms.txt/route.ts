@@ -1,4 +1,5 @@
 import { getHubEntries, getHubEntry } from "@/lib/hubs";
+import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 
 export const revalidate = 3600;
 
@@ -33,9 +34,11 @@ export async function GET() {
     specificGuides.push(`- [RAG glossary guide](${BASE}/glossary/rag): Retrieval-Augmented Generation explained for enterprise data`);
   }
 
+  const line = (l: { title: string; href: string; blurb: string }) => `- [${l.title}](${BASE}${l.href}): ${l.blurb}`;
+
   const body = `# Turbo Bytes Consulting
 
-> Turbo Bytes Consulting (TBC) builds custom software, mobile apps, LLM and neural network applications and business automation for founder-led companies in Greater Noida, Noida and Delhi NCR, India.
+> Turbo Bytes Consulting (TBC) is an AI-native management and technology consultancy in Greater Noida, India. It builds private LLM and neural network systems, trains teams to use them, advises on technology decisions, and runs its own products.
 
 ## Key facts
 
@@ -43,19 +46,30 @@ export async function GET() {
 - Founder: Harshvardhan Chauhan
 - Location: Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Greater Noida, Uttar Pradesh 201310, India
 - Service area: Greater Noida, Noida, Delhi NCR, and across India
-- Practice areas: Custom software development, mobile application development, AI and LLM applications, business automation, website development, MVP development
+- Practice areas: custom and on-premise LLMs, AI capability building, technology consulting, technology audits, AI readiness assessments, business diagnostics, and software products
 - Email: harsh@turbobytesconsulting.com / info@turbobytesconsulting.com
 - Telephone: +91 93547 84377
 - Operating hours: Monday to Friday, 08:00 to 21:00 IST
+- YouTube: https://www.youtube.com/channel/UCXQy14KS46mSFyu1VzEUqXw
 
-## Services
+## AI practice
+
+${aiPractices.map(line).join("\n")}
+
+## Consulting
+
+${consultingLinks.map(line).join("\n")}
+
+## Products
+
+${products.map(line).join("\n")}
+- [All products](${BASE}/products): overview of Slate, Distil, Vantage and Meridian
+
+## Engineering
 
 - [Custom software development](${BASE}/services/custom-software-development): business systems built around a company's own process
-- [Mobile app development](${BASE}/services/mobile-app-development): Android and iOS apps for field teams, dealers and customers
 - [AI applications](${BASE}/services/ai-applications): document reading, assistants trained on company documents, LLM features
 - [Business automation](${BASE}/services/business-automation): integrations between Tally, Zoho, Shopify, WhatsApp and other tools
-- [Web development](${BASE}/services/web-development): fast, search-friendly business websites and web applications
-- [MVP development](${BASE}/services/mvp-development): first versions of startup products
 
 ## Tools and guides
 

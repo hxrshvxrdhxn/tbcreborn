@@ -27,14 +27,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const maxBaseLen = 60 - " | Turbo Bytes Consulting".length;
   const baseTitle = rawTitle.length > maxBaseLen ? rawTitle.slice(0, maxBaseLen).trimEnd() : rawTitle;
   const pageTitle = `${baseTitle} | Turbo Bytes Consulting`;
+  const rawDesc = (post.seoDescription || post.excerpt || "").trim();
+  const desc = rawDesc.length > 160 ? rawDesc.slice(0, 157).replace(/\s+\S*$/, "") + "…" : rawDesc;
   return {
     title: { absolute: pageTitle },
-    description: post.seoDescription || post.excerpt,
+    description: desc,
     alternates: { canonical: `/blog/${post.slug}` },
     ...(isNoindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: post.seoTitle || post.title,
-      description: post.seoDescription || post.excerpt,
+      description: desc,
       url: `https://turbobytesconsulting.com/blog/${post.slug}`,
       images: [{ url: "/og-default.png", width: 1200, height: 630 }],
     },

@@ -6,17 +6,18 @@ import SectionInk from "@/components/SectionInk";
 import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
-  title: { absolute: "Custom Software Development Company in Noida | Turbo Bytes Consulting" },
+  title: { absolute: "Custom Software Development, Noida | Turbo Bytes Consulting" },
   description: "Custom business software built around how your company works: workflows, approvals, portals and integrations. Fixed-phase delivery from Greater Noida.",
   alternates: { canonical: "/services/custom-software-development" },
   openGraph: {
-    title: { absolute: "Custom Software Development Company in Noida | Turbo Bytes Consulting" },
+    title: { absolute: "Custom Software Development, Noida | Turbo Bytes Consulting" },
     description: "Custom business software built around how your company works: workflows, approvals, portals and integrations. Fixed-phase delivery from Greater Noida.",
     url: "https://turbobytesconsulting.com/services/custom-software-development",
+    images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "Custom Software Development Company in Noida | Turbo Bytes Consulting" },
+    title: { absolute: "Custom Software Development, Noida | Turbo Bytes Consulting" },
     description: "Custom business software built around how your company works: workflows, approvals, portals and integrations. Fixed-phase delivery from Greater Noida.",
   },
 };
