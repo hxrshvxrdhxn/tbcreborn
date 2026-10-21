@@ -81,9 +81,7 @@ const jsonLd = {
   "description":
     "Beyond scheduling. Beyond email. A second intelligence for founders, CEOs and senior partners operating at decision speed.",
   "provider": {
-    "@type": "Organization",
-    "name": "Turbo Bytes Consulting",
-    "url": "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   "serviceType": "AI Executive Assistant",
   "url": "https://turbobytesconsulting.com/services/slate",

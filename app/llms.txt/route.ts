@@ -1,4 +1,4 @@
-import { getHubEntries } from "@/lib/hubs";
+import { getHubEntries, getHubEntry } from "@/lib/hubs";
 
 export const revalidate = 3600;
 
@@ -20,11 +20,33 @@ export async function GET() {
     if (entries.length > 0) hubLines.push(`- [${label.split(":")[0]}](${BASE}/${hub}):${label.split(":")[1]}`);
   }
 
+  const llmEntry = await getHubEntry("glossary", "llm");
+  const ragEntry = await getHubEntry("glossary", "rag");
+
+  const specificGuides: string[] = [];
+  specificGuides.push(`- [How-to guides](${BASE}/how-to): step-by-step implementation guides on software, integrations and automation`);
+  specificGuides.push(`- [Blog](${BASE}/blog): practical articles on software engineering, business automation and applied AI`);
+  if (llmEntry && llmEntry.indexable) {
+    specificGuides.push(`- [LLM glossary guide](${BASE}/glossary/llm): Large Language Models explained for business owners`);
+  }
+  if (ragEntry && ragEntry.indexable) {
+    specificGuides.push(`- [RAG glossary guide](${BASE}/glossary/rag): Retrieval-Augmented Generation explained for enterprise data`);
+  }
+
   const body = `# Turbo Bytes Consulting
 
 > Turbo Bytes Consulting (TBC) builds custom software, mobile apps, LLM and neural network applications and business automation for founder-led companies in Greater Noida, Noida and Delhi NCR, India.
 
-Office: Kasana Tower, Alpha I, Greater Noida, Uttar Pradesh, India. Hours: Monday to Friday, 08:00 to 21:00 IST. Email: info@turbobytesconsulting.com. Phone: +91 93547 84377.
+## Key facts
+
+- Organisation: Turbo Bytes Consulting (TBC)
+- Founder: Harshvardhan Chauhan
+- Location: Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Greater Noida, Uttar Pradesh 201310, India
+- Service area: Greater Noida, Noida, Delhi NCR, and across India
+- Practice areas: Custom software development, mobile application development, AI and LLM applications, business automation, website development, MVP development
+- Email: harsh@turbobytesconsulting.com / info@turbobytesconsulting.com
+- Telephone: +91 93547 84377
+- Operating hours: Monday to Friday, 08:00 to 21:00 IST
 
 ## Services
 
@@ -38,8 +60,8 @@ Office: Kasana Tower, Alpha I, Greater Noida, Uttar Pradesh, India. Hours: Monda
 ## Tools and guides
 
 - [Software cost calculator](${BASE}/software-cost-calculator): indicative cost range and timeline for a project in India
+${specificGuides.join("\n")}
 ${hubLines.join("\n")}
-- [Blog](${BASE}/blog): articles on software, automation and applied AI for mid-sized businesses
 
 ## Company
 

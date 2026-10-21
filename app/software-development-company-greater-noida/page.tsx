@@ -16,9 +16,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "A software development team in Greater Noida",
   provider: {
-    "@type": "Organization",
-    name: "Turbo Bytes Consulting",
-    url: "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/software-development-company-greater-noida",
   description: "A software, AI and consulting team based at Kasana Tower, Alpha I, Greater Noida. Custom software, apps and automation for local businesses.",
@@ -27,14 +25,16 @@ const serviceSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://turbobytesconsulting.com/#organization",
   name: "Turbo Bytes Consulting",
-  telephone: "+91 93547 84377",
-  url: "https://turbobytesconsulting.com/software-development-company-greater-noida",
+  telephone: "+919354784377",
+  url: "https://turbobytesconsulting.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Kasana Tower, Alpha I",
+    streetAddress: "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
     addressLocality: "Greater Noida",
     addressRegion: "Uttar Pradesh",
+    postalCode: "201310",
     addressCountry: "IN"
   }
 };

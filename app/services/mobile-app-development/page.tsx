@@ -26,9 +26,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Mobile apps your customers and field teams will actually use",
   provider: {
-    "@type": "Organization",
-    name: "Turbo Bytes Consulting",
-    url: "https://turbobytesconsulting.com",
+    "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/mobile-app-development",
   description: "iOS and Android apps for customers, field teams and operations. Cross-platform builds, offline support and integrations with your business systems.",
