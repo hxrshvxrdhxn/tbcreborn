@@ -217,3 +217,10 @@
     padding-right: 20px;
   }
 }
+
+/* Cards in a row share one height. Grid/flex items stretch by default; the Reveal wrapper and the
+   single card inside it are told to fill that height too, so rows of cards line up everywhere. */
+:is(.grid, .flex) > [data-reveal] { display: flex; flex-direction: column; }
+:is(.grid, .flex) > [data-reveal] > div { flex: 1 1 auto; }
+:is(.grid, .flex) > [data-reveal] > div:has(> :only-child) { display: flex; flex-direction: column; }
+:is(.grid, .flex) > [data-reveal] > div > :only-child { flex: 1 1 auto; }

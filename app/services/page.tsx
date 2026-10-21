@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import PracticeArt from "@/components/PracticeArt";
 import Reveal from "@/components/Reveal";
 import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 import SectionInk from "@/components/SectionInk";
@@ -30,19 +31,19 @@ const groups = [
   {
     heading: "AI practice",
     lead: "LLMs and neural networks built into the way your business already works.",
-    image: "/img/hero-service-llm.png",
+    art: "ai" as const,
     items: aiPractices,
   },
   {
     heading: "Consulting",
     lead: "In-depth, independent work on strategy, systems and operations.",
-    image: "/img/hero-service-consulting.png",
+    art: "consulting" as const,
     items: consultingLinks,
   },
   {
     heading: "Products",
     lead: "Software we build and run ourselves.",
-    image: "/img/hero-service-products.png",
+    art: "products" as const,
     items: products,
   },
 ];
@@ -87,8 +88,8 @@ export default function ServicesPage() {
             <Reveal>
               <h2 className="font-display font-semibold text-[clamp(28px,3vw,38px)] text-ink leading-tight tracking-[-0.02em] mb-3">{g.heading}</h2>
               <p className="text-[17px] text-mid-grey leading-relaxed mb-6">{g.lead}</p>
-              <div className="relative aspect-[16/9] rounded overflow-hidden bg-forest">
-                <Image src={g.image} alt="" fill className="object-cover" aria-hidden="true" />
+              <div className="relative aspect-[16/10] rounded overflow-hidden bg-forest">
+                <PracticeArt kind={g.art} />
               </div>
             </Reveal>
             <Reveal delay={0.05}>

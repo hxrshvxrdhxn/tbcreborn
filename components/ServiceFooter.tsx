@@ -18,24 +18,26 @@ export default function ServiceFooter() {
     <section className="bg-ivory py-s6 border-t border-light-grey">
       <div className="container-tbc">
         <Reveal>
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          <p className="text-center font-display font-semibold text-[15px] text-mid-grey mb-5">Explore our other services</p>
+          <nav aria-label="Other services" className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {services.map((service) => {
               const isActive = pathname === service.href;
               return (
                 <Link
                   key={service.href}
                   href={service.href}
-                  className={`px-5 py-3 rounded-full font-display font-semibold text-[14px] transition-all duration-200 border ${
+                  aria-current={isActive ? "page" : undefined}
+                  className={`px-5 py-3 rounded-full font-display font-semibold text-[14px] border transition-[color,background-color,border-color,box-shadow,transform] duration-150 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-royal ${
                     isActive
-                      ? "bg-gold border-gold text-ink shadow-md"
-                      : "bg-white border-light-grey text-mid-grey hover:border-gold hover:text-ink hover:shadow-sm"
+                      ? "bg-royal border-royal text-white shadow-sm pointer-events-none"
+                      : "bg-white border-light-grey text-ink hover:border-royal hover:text-royal hover:-translate-y-px hover:shadow-sm active:translate-y-0"
                   }`}
                 >
                   {service.label}
                 </Link>
               );
             })}
-          </div>
+          </nav>
         </Reveal>
       </div>
     </section>

@@ -37,7 +37,7 @@ export default function Reveal({
   const hidden = armed && !inView;
 
   return (
-    <div style={{ position: "relative", width }} className={className}>
+    <div data-reveal style={{ position: "relative", width }} className={className}>
       <motion.div
         ref={ref}
         initial={false}

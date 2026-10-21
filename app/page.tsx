@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroLines from "@/components/HeroLines";
 import Reveal from "@/components/Reveal";
-import Image from "next/image";
+import PracticeArt from "@/components/PracticeArt";
 import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
@@ -31,21 +31,21 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "What exactly does an AI-native consultancy do?",
-    answer: "We don't just provide slide decks about AI. We integrate artificial intelligence into your core business — from custom Large Language Models (LLMs) and internal tools to training your team on how to actually use them. We design the strategy and build the technology.",
+    question: "What exactly do you do?",
+    answer: "We talk to the MD to find the process that costs the business most, sit with the team who runs it, and turn that process into software built around how they work. We use LLMs and neural networks where they genuinely help. After launch we stay: support, maintenance and the AMC are ours.",
   },
   {
-    question: "How long does an engagement typically take?",
-    answer: "We are built for speed. Most strategy and AI discovery phases conclude in 2-4 weeks. Full implementation of Custom LLMs or internal tools takes 6-12 weeks, depending on complexity.",
+    question: "How long does a project take?",
+    answer: "Most process projects go live in 6 to 12 weeks, depending on how many teams and systems are involved. The first step, understanding the process with your team, usually takes one to two weeks.",
   },
   {
-    question: "Do you work with startups or enterprises?",
-    answer: "Both. We scale our solutions to match the operational maturity of the organisation. For startups, we build lean, fast systems. For enterprises, we ensure compliance, security, and integration with legacy infrastructure.",
+    question: "What does it cost?",
+    answer: "We agree up front what the software should save you. Most projects start at about what one person costs you in a year, and that includes support and maintenance after launch.",
   },
   {
-    question: "What is your pricing model?",
-    answer: "We scope engagements around outcomes, not hourly rates. Every proposal includes a defined timeline, deliverable, and investment required. We also offer retained advisory services for long-term intelligence partnership.",
-  }
+    question: "Who looks after the software once it is live?",
+    answer: "We do. Updates, fixes, monitoring and changes as your process evolves are covered under an annual maintenance contract, so you are never left with software nobody can change.",
+  },
 ];
 
 const faqSchema = {
@@ -65,21 +65,21 @@ const groups = [
   {
     heading: "AI practice",
     lead: "LLMs and neural networks built into the way your business already works.",
-    image: "/img/hero-service-llm.png",
+    art: "ai" as const,
     items: aiPractices,
     more: { href: "/services", label: "About the AI practice" },
   },
   {
     heading: "Consulting",
     lead: "Independent, in-depth work on strategy, systems and operations.",
-    image: "/img/hero-service-consulting.png",
+    art: "consulting" as const,
     items: consultingLinks,
     more: { href: "/services", label: "All consulting work" },
   },
   {
     heading: "Products",
     lead: "Software we build and run ourselves.",
-    image: "/img/hero-service-products.png",
+    art: "products" as const,
     items: products,
     more: { href: "/products", label: "See the products" },
   },
@@ -152,9 +152,9 @@ export default async function HomePage() {
               The intelligence layer your business has been missing.
             </h1>
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
-              Turbo Bytes Consulting is a management and technology consultancy.
-              We build LLMs and neural networks into your operations, sales and
-              internal systems, and advise on the decisions around them.
+              We sit with your MD and your team, find the process that costs you
+              the most, and turn it into software we build, run and maintain, with
+              LLMs and neural networks where they earn their place.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 hero-4">
               <Link href="/book-consultation" className="btn-primary w-full sm:w-auto">
@@ -168,63 +168,37 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 2. TRUST BAR ── */}
-      <section className="bg-ivory border-y border-light-grey">
-        <div className="container-tbc py-4">
-          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-0 sm:gap-y-0">
-            {[
-              "MSME Registered",
-              "AI-Native",
-              "Greater Noida, India",
-            ].map((item, i, arr) => (
-              <li key={item} className="flex items-center">
-                <span className="font-display font-semibold text-caption tracking-[1px] text-ink uppercase text-center w-full sm:w-auto">
-                  {item}
-                </span>
-                {i < arr.length - 1 && (
-                  <span
-                    className="hidden sm:inline-block mx-4 text-gold font-bold text-lg leading-none select-none"
-                    aria-hidden="true"
-                  >
-                    ·
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* ── 3. WHO WE ARE ── */}
       <section className="bg-ivory py-s5 md:py-s7">
         <div className="container-tbc">
           <Reveal>
             <hr className="gold-rule mb-8 md:mb-s5" />
             <h2 className="section-heading mb-6 text-balance">
-              Not an agency. Not a software house.<br />A consultancy built for the AI era.
+              We fix the process first.<br />Then we build the software.
             </h2>
             <p className="text-body text-mid-grey measure-68 mb-10 md:mb-14 text-pretty">
-              Turbo Bytes Consulting sits at the intersection of strategic
-              management consulting and artificial intelligence. We design the
-              strategy. We build the technology. We deploy it. We measure it. Our
-              clients do not receive a strategy deck and a goodbye — they receive
-              a working, measurable competitive advantage.
+              We start with the person who runs the company and ask which process
+              hurts most. Then we sit with the team who does it, map how it really
+              works, and turn it into software built around it. After launch it
+              stays ours: support, maintenance and the AMC are part of the job. We
+              agree up front what the software should save you, and most projects
+              start at about what one person costs you in a year.
             </p>
           </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                label: "We Design",
-                body: "Strategy, decision frameworks, AI operating models.",
+                label: "We Listen",
+                body: "To the MD on what hurts, and to the team on how the work is really done.",
               },
               {
                 label: "We Build",
-                body: "Custom LLMs, applications, internal tools and our own products.",
+                body: "The process, turned into software that fits it, with AI where it helps.",
               },
               {
-                label: "We Deploy",
-                body: "Inside your team. Your systems. Your pace. We stay.",
+                label: "We Stay",
+                body: "AMC, maintenance and support, end to end. Measured on the value it delivers.",
               },
             ].map((pillar, i) => (
               <Reveal key={pillar.label} delay={i * 0.1}>
@@ -256,10 +230,10 @@ export default async function HomePage() {
               <Reveal key={g.heading} delay={i * 0.08}>
                 <div className="flex flex-col h-full">
                   <div className="relative aspect-[16/10] rounded overflow-hidden bg-forest mb-6">
-                    <Image src={g.image} alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" aria-hidden="true" />
+                    <PracticeArt kind={g.art} />
                   </div>
                   <h3 className="font-display font-semibold text-[24px] text-ink tracking-[-0.015em] mb-2">{g.heading}</h3>
-                  <p className="text-[16px] text-mid-grey leading-relaxed mb-5">{g.lead}</p>
+                  <p className="text-[16px] text-mid-grey leading-relaxed mb-5 md:min-h-[52px]">{g.lead}</p>
                   <ul className="border-t border-light-grey mb-5">
                     {g.items.map((it) => (
                       <li key={it.href} className="border-b border-light-grey">
