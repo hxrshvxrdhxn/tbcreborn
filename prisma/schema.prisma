@@ -59,3 +59,44 @@ model HowToRequest {
   email     String
   createdAt DateTime @default(now())
 }
+
+// ── Website visitor analytics (cookieless) ──
+// One row per visitor per day. `visitor` is a one-way hash of IP + user agent with a salt that
+// changes daily, so nobody can be followed across days and no IP address is stored.
+model SiteVisitor {
+  id        String   @id @default(cuid())
+  day       String   // YYYY-MM-DD, India time
+  visitor   String
+  isNew     Boolean  // first visit from this browser (localStorage flag, no cookie)
+  views     Int      @default(1)
+  landing   String
+  referrer  String?
+  country   String?
+  device    String?
+  firstSeen DateTime @default(now())
+  lastSeen  DateTime @updatedAt
+
+  @@unique([day, visitor])
+  @@index([day])
+}
+
+model SitePageDay {
+  day   String
+  path  String
+  views Int    @default(1)
+
+  @@id([day, path])
+}
+
+// Real-user Core Web Vitals samples (LCP, INP, CLS, FCP, TTFB), summarised in the daily email.
+model SiteVital {
+  id     String   @id @default(cuid())
+  day    String
+  metric String
+  value  Float
+  path   String
+  device String?
+  at     DateTime @default(now())
+
+  @@index([day, metric])
+}

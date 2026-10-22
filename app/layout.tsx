@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
+import VisitBeacon from "@/components/VisitBeacon";
 import StickyCta from "@/components/StickyCta";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -97,6 +98,7 @@ export default function RootLayout({
         <WhatsAppButton />
         <BackToTop />
         <CookieBanner />
+        <VisitBeacon />
 
         {/* Analytics and Tracking */}
         <Analytics />
