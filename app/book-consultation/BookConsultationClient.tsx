@@ -84,7 +84,7 @@ export default function BookConsultationClient() {
                 <div
                   className="calendly-inline-widget w-full"
                   data-url={CALENDLY_URL}
-                  style={{ minWidth: "320px", height: "700px" }}
+                  style={{ minWidth: "280px", height: "700px" }}
                 />
                 <noscript>
                   <div className="p-8 text-center">

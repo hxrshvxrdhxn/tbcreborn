@@ -8,6 +8,10 @@
   .bg-forest .text-mid-grey, .bg-royal .text-mid-grey { color: rgb(226 242 233 / 0.82); }
   .bg-forest .btn-primary { background-color: #A7EBC8; color: #0B1A12; }
   .bg-forest .btn-primary:hover { background-color: #CCF5DF; }
+  /* light panels inside a green band (header dropdown, white cards) go back to the light-surface palette */
+  :is(.bg-forest, .bg-royal, [class*="from-forest"]) :is(.bg-white, .bg-ivory) { --accent: 22 122 78; --accent-bright: 15 106 67; --on-accent: 255 255 255; }
+  :is(.bg-forest, .bg-royal) :is(.bg-white, .bg-ivory) .text-mid-grey { color: #5B6B61; }
+  :is(.bg-forest, .bg-royal) :is(.bg-white, .bg-ivory) .btn-primary { background-color: rgb(var(--accent)); color: #fff; }
   /* depth: darker green gradients on the big green bands, black for the closing CTA */
   section.bg-forest { background-image: linear-gradient(135deg, #0A3826 0%, #12523A 52%, #1A6A47 100%); }
   section.bg-royal { background-color: #0B1A12; background-image: linear-gradient(115deg, #0B1A12 0%, #0B1A12 58%, #0E3424 100%); --accent: 167 235 200; --accent-bright: 204 245 223; --on-accent: 11 26 18; }
