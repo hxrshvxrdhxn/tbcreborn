@@ -4,60 +4,60 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Turbo Bytes Consulting | AI-Native Consultancy" },
+  title: { absolute: "About Turbo Bytes Consulting | Process-First AI & Software" },
   description:
-    "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
+    "Turbo Bytes Consulting sits with your MD and team, finds the process that costs you most, and turns it into software we build, run and maintain. Delhi NCR.",
   alternates: {
     canonical: "/about",
   },
   robots: { index: true, follow: true },
   openGraph: {
-    title: { absolute: "About Turbo Bytes Consulting | AI-Native Consultancy" },
+    title: { absolute: "About Turbo Bytes Consulting | Process-First AI & Software" },
     description:
-      "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
+      "Turbo Bytes Consulting sits with your MD and team, finds the process that costs you most, and turns it into software we build, run and maintain. Delhi NCR.",
     url: "https://turbobytesconsulting.com/about",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "About Turbo Bytes Consulting | AI-Native Consultancy" },
+    title: { absolute: "About Turbo Bytes Consulting | Process-First AI & Software" },
     description:
-      "Turbo Bytes Consulting is an AI-native management and technology consultancy based in Greater Noida, India. Intelligence. Precision. Growth.",
+      "Turbo Bytes Consulting sits with your MD and team, finds the process that costs you most, and turns it into software we build, run and maintain. Delhi NCR.",
   },
 };
 
 const values = [
   {
-    title: "Precision",
+    title: "Process first",
     description:
-      "We do not guess. Every recommendation is grounded in analysis. Every system we build is designed to produce measurable outcomes.",
+      "We learn how the work is actually done before we write a line of code. Software built on a misunderstood process just makes the mistake faster.",
   },
   {
-    title: "Intelligence",
+    title: "Useful AI",
     description:
-      "Intelligence is not just what we sell — it is how we operate. AI is embedded in every process, every workflow, every client engagement.",
+      "LLMs and neural networks go in where they earn their place. Where a simple rule or a clean form does the job better, we use that instead.",
   },
   {
-    title: "Completeness",
+    title: "End to end",
     description:
-      "We do not hand over a strategy deck and walk away. We design, build, deploy, and measure.",
+      "We design, build, deploy and support. AMC and maintenance stay with us, so there is one team to call when something needs to change.",
   },
   {
-    title: "Partnership",
+    title: "Business value",
     description:
-      "We treat every client relationship as a long-term partnership. We succeed when our clients succeed.",
+      "We measure the work by hours saved, errors removed and decisions made faster, not by features shipped.",
   },
   {
-    title: "Rigour",
+    title: "Plain dealing",
     description:
-      "Our standards are non-negotiable. We hold our work — and our clients — to a high bar.",
+      "Clear scope, clear timelines, and a written proposal before any work begins. If we are not the right fit, we will say so.",
   },
 ];
 
 const companyFacts = [
   {
     label: "Category",
-    value: "AI-Native Management & Technology Consultancy",
+    value: "Process automation, AI and software consultancy",
   },
   {
     label: "Registration",
@@ -104,11 +104,8 @@ export default function AboutPage() {
           <Reveal>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
-              We help ambitious organisations use AI{" "}
-              <span className="text-gold">
-                as a structural competitive advantage
-              </span>{" "}
-              — not as an experiment.
+              We turn the process that slows your business down{" "}
+              <span className="text-gold">into software that runs it</span>.
             </h1>
           </Reveal>
         </div>
@@ -127,17 +124,17 @@ export default function AboutPage() {
               </div>
               <div className="lg:col-span-8 space-y-6">
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                  Turbo Bytes Consulting (TBC) is an AI-native management and
-                  technology consultancy. We work with leadership teams and
-                  organisations that are serious about using artificial intelligence
-                  not as an experiment, but as a structural competitive advantage.
+                  Turbo Bytes Consulting (TBC) starts with a conversation with your
+                  MD or founder, to find the one process that costs the business the
+                  most time, money or sleep. Then we sit with the team who run it
+                  every day and learn how it really works, exceptions included.
                 </p>
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                  We operate across two disciplines simultaneously: strategic
-                  management consulting and deep AI implementation. This
-                  combination — rare in the market — means our clients receive not
-                  just advice, but execution. Not just frameworks, but working
-                  systems.
+                  From there, our team turns that process into software, using LLMs
+                  and neural networks where they genuinely help. We deploy it, train
+                  your people, and keep looking after it through AMC and
+                  maintenance. Most projects start at about what one person costs
+                  you in a year.
                 </p>
               </div>
             </div>
@@ -151,16 +148,14 @@ export default function AboutPage() {
           <Reveal>
             <div className="max-w-4xl mx-auto text-center">
               <h2 id="our-position-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-                The intelligence and discipline of a top-tier consultancy, combined
-                with the speed of a world-class AI firm.
+                Consulting that ends in working software, not a slide deck.
               </h2>
               <hr className="gold-rule gold-rule--center mb-8" />
               <p className="text-body text-mid-grey leading-relaxed text-pretty max-w-3xl mx-auto">
-                TBC occupies a deliberate position: the intelligence and discipline
-                of a top-tier management consultancy, combined with the speed,
-                technology depth, and implementation capability of a world-class AI
-                firm. We are not a digital agency. We are not a software house. We
-                are a strategic partner.
+                A consultancy will tell you what to fix. A software house will build
+                what you specify. We do both: we find the problem with you, build
+                the fix, and stay accountable for it after go-live. One team, from
+                the first conversation to the hundredth support call.
               </p>
             </div>
           </Reveal>
@@ -173,7 +168,7 @@ export default function AboutPage() {
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
               <h2 id="values-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-white leading-[1.2] mb-6">
-                Five values. Built into every engagement.
+                How we work.
               </h2>
               <hr className="gold-rule gold-rule--center" />
             </Reveal>
@@ -258,8 +253,8 @@ export default function AboutPage() {
               Work with us.
             </h2>
             <p className="text-body text-white/70 max-w-lg mx-auto mb-10 text-pretty">
-              Every engagement begins with a conversation about your objectives.
-              No commitment required.
+              Tell us which process is costing you the most. The first
+              conversation is free and comes with no obligation.
             </p>
             <Link href="/book-consultation" className="btn-gold px-10 py-4.5 text-[16px]">
               Book a Consultation →
