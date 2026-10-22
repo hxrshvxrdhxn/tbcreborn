@@ -98,43 +98,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_HOST) {
-      return NextResponse.json(
-        { error: "Email service not configured." },
-        { status: 500 }
-      );
-    }
-
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    const subjectCompany = data.company ? ` — ${esc(data.company)}` : "";
-
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
-      to: "harshvardhan@turbobytesconsulting.com",
-      subject: `New enquiry from ${esc(data.name)}${subjectCompany}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${esc(data.name)}</p>
-        ${data.company ? `<p><strong>Company:</strong> ${esc(data.company)}</p>` : ""}
-        <p><strong>Email:</strong> ${esc(data.email)}</p>
-        ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
-        <p><strong>Service of Interest:</strong> ${esc(data.service)}</p>
-        ${data.foundVia ? `<p><strong>Found us via:</strong> ${esc(data.foundVia)}</p>` : ""}
-        ${data.budget ? `<p><strong>Budget Range:</strong> ${esc(data.budget)}</p>` : ""}
-        <p><strong>Message:</strong></p>
-        <p style="white-space:pre-wrap">${esc(data.message)}</p>
-      `,
-    });
-
     // ── Google Sheets CRM (fire-and-forget, never blocks the response) ──────
     const sheetsWebhook = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
     if (sheetsWebhook) {
@@ -182,6 +145,46 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // ── Email notification (after the enquiry is safely stored) ──────────────
+    // A mail outage must never lose an enquiry or show a server error to the visitor.
+    if (process.env.SMTP_USER && process.env.SMTP_PASS && process.env.SMTP_HOST) {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: process.env.SMTP_HOST,
+          port: 465,
+          secure: true,
+          auth: {
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS,
+          },
+        });
+
+        const subjectCompany = data.company ? ` — ${esc(data.company)}` : "";
+
+        await transporter.sendMail({
+          from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
+          to: "harshvardhan@turbobytesconsulting.com",
+          subject: `New enquiry from ${esc(data.name)}${subjectCompany}`,
+          html: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${esc(data.name)}</p>
+            ${data.company ? `<p><strong>Company:</strong> ${esc(data.company)}</p>` : ""}
+            <p><strong>Email:</strong> ${esc(data.email)}</p>
+            ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
+            <p><strong>Service of Interest:</strong> ${esc(data.service)}</p>
+            ${data.foundVia ? `<p><strong>Found us via:</strong> ${esc(data.foundVia)}</p>` : ""}
+            ${data.budget ? `<p><strong>Budget Range:</strong> ${esc(data.budget)}</p>` : ""}
+            <p><strong>Message:</strong></p>
+            <p style="white-space:pre-wrap">${esc(data.message)}</p>
+          `,
+        });
+      } catch (mailErr) {
+        console.error("Contact email notification failed (enquiry saved):", mailErr instanceof Error ? mailErr.message : mailErr);
+      }
+    } else {
+      console.error("Contact email notification skipped: SMTP not configured (enquiry saved).");
+    }
+
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Contact form error:", err);
@@ -189,7 +192,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid form data." }, { status: 400 });
     }
     return NextResponse.json(
-      { error: "Failed to send message. Reason: " + (err instanceof Error ? err.message : "Unknown error") },
+      { error: "Something went wrong. Please email harshvardhan@turbobytesconsulting.com or call +91 93547 84377." },
       { status: 500 }
     );
   }

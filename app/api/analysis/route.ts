@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { prisma } from "@/lib/prisma";
 import { z } from "zod";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
@@ -92,59 +93,72 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_HOST) {
-      return NextResponse.json(
-        { error: "Email service not configured." },
-        { status: 500 }
-      );
+    const message = `Free analysis request\n\nAddress: ${data.address}\n\nRequest: ${data.request || "None"}`;
+
+    // ── Save first, so a mail outage never loses a request ──────────────────
+    try {
+      await prisma.contactQuery.create({
+        data: {
+          name: data.name,
+          company: data.company,
+          email: data.email,
+          phone: data.phone || null,
+          service: "Free Analysis",
+          message,
+        },
+      });
+    } catch (dbErr) {
+      console.error("Failed to save free analysis request:", dbErr instanceof Error ? dbErr.message : dbErr);
     }
-
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
-      to: "harshvardhan@turbobytesconsulting.com",
-      subject: `Free Analysis Request: ${esc(data.company)}`,
-      html: `
-        <h2>New Free Analysis Request</h2>
-        <p><strong>Name:</strong> ${esc(data.name)}</p>
-        <p><strong>Company:</strong> ${esc(data.company)}</p>
-        <p><strong>Email:</strong> ${esc(data.email)}</p>
-        ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
-        <p><strong>Address:</strong> ${esc(data.address)}</p>
-        <p><strong>Specific Request:</strong></p>
-        <p style="white-space:pre-wrap">${esc(data.request || "None")}</p>
-      `,
-    });
 
     // ── Google Sheets CRM (fire-and-forget, never blocks the response) ──────
     const sheetsWebhook = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
     if (sheetsWebhook) {
-      // Create a specific payload for the free analysis, or generic data
-      const sheetsData = {
-        type: "FREE_ANALYSIS",
-        name: data.name,
-        company: data.company,
-        email: data.email,
-        phone: data.phone || "",
-        service: "Free Analysis",
-        budget: "",
-        message: `Address: ${data.address}\n\nRequest: ${data.request || "None"}`,
-      };
-      
       fetch(sheetsWebhook, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(sheetsData),
-      }).catch(() => {/* non-fatal — log silently */});
+        body: JSON.stringify({
+          type: "FREE_ANALYSIS",
+          name: data.name,
+          company: data.company,
+          email: data.email,
+          phone: data.phone || "",
+          service: "Free Analysis",
+          budget: "",
+          message: `Address: ${data.address}\n\nRequest: ${data.request || "None"}`,
+        }),
+      }).catch(() => {/* non-fatal */});
+    }
+
+    // ── Email notification ───────────────────────────────────────────────────
+    if (process.env.SMTP_USER && process.env.SMTP_PASS && process.env.SMTP_HOST) {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: process.env.SMTP_HOST,
+          port: 465,
+          secure: true,
+          auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+        });
+        await transporter.sendMail({
+          from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
+          to: "harshvardhan@turbobytesconsulting.com",
+          subject: `Free Analysis Request: ${esc(data.company)}`,
+          html: `
+            <h2>New Free Analysis Request</h2>
+            <p><strong>Name:</strong> ${esc(data.name)}</p>
+            <p><strong>Company:</strong> ${esc(data.company)}</p>
+            <p><strong>Email:</strong> ${esc(data.email)}</p>
+            ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
+            <p><strong>Address:</strong> ${esc(data.address)}</p>
+            <p><strong>Specific Request:</strong></p>
+            <p style="white-space:pre-wrap">${esc(data.request || "None")}</p>
+          `,
+        });
+      } catch (mailErr) {
+        console.error("Free analysis email failed (request saved):", mailErr instanceof Error ? mailErr.message : mailErr);
+      }
+    } else {
+      console.error("Free analysis email skipped: SMTP not configured (request saved).");
     }
 
     return NextResponse.json({ success: true });
@@ -154,7 +168,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid form data." }, { status: 400 });
     }
     return NextResponse.json(
-      { error: "Failed to send message. Reason: " + (err instanceof Error ? err.message : "Unknown error") },
+      { error: "Something went wrong. Please email harshvardhan@turbobytesconsulting.com or call +91 93547 84377." },
       { status: 500 }
     );
   }
