@@ -7,6 +7,7 @@ import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import FreeAnalysisForm from "@/components/FreeAnalysisForm";
+import InsightRail from "@/components/InsightRail";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
@@ -132,7 +133,7 @@ export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   const posts = await getAllPosts();
-  const insightPosts = posts.slice(0, 3);
+  const insightPosts = posts.slice(0, 8);
 
   return (
     <>
@@ -339,28 +340,9 @@ export default async function HomePage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {insightPosts.map((post, i) => (
-              <Reveal key={post.slug} delay={i * 0.1} className="flex">
-                <Link href={`/blog/${post.slug}`} className="bg-white rounded shadow-card border border-light-grey hover:shadow-card-hover hover:-translate-y-1 transition-all duration-tbc flex flex-col w-full overflow-hidden group/card block">
-                  {/* Category swatch tile to avoid pure text card */}
-                  <div className="h-16 bg-forest flex items-center px-6 border-b-[3px] border-gold">
-                    <span className="font-display font-semibold text-caption text-white uppercase tracking-[1.5px]">
-                      {post.category}
-                    </span>
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-auto group-hover/card:text-royal transition-colors text-balance">
-                      {post.title}
-                    </h3>
-                    <p className="font-sans text-caption text-mid-grey mt-6 uppercase tracking-[1px]">
-                      {post.date} · {post.readTime}
-                    </p>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
+          <InsightRail
+            posts={insightPosts.map((p) => ({ slug: p.slug, title: p.title, category: p.category, date: p.date, readTime: p.readTime, excerpt: p.excerpt }))}
+          />
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -25,10 +25,27 @@ const navLinks: NavLink[] = [
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  const [floating, setFloating] = useState(false);
   const pathname = usePathname();
 
+  // Once the reader scrolls, the bar lifts into a rounded, floating panel (desktop only).
+  // It moves with transform, so the header's height never changes and nothing below it jumps.
+  useEffect(() => {
+    const onScroll = () => setFloating(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-forest border-b-2 border-gold">
+    <header className="sticky top-0 z-50">
+      <div
+        className={`bg-forest border-b-2 border-gold transition-[margin,border-radius,box-shadow,transform,max-width] duration-300 ease-out ${
+          floating
+            ? "lg:mx-auto lg:max-w-[1232px] lg:rounded-2xl lg:border-b-0 lg:translate-y-3 lg:shadow-[0_12px_32px_rgba(8,38,24,0.28)]"
+            : "lg:max-w-full"
+        }`}
+      >
       <div className="container-tbc">
         <nav className="flex items-center justify-between h-16" aria-label="Main navigation">
           {/* Logo */}
@@ -113,6 +130,7 @@ export default function Navigation() {
             </button>
           </div>
         </nav>
+      </div>
       </div>
 
       {/* Mobile menu */}
