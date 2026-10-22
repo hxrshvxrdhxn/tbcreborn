@@ -122,7 +122,7 @@ export default function SlatePage() {
       <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey" aria-labelledby="slate-hero-heading">
         {/* Full-bleed background image band */}
         <div className="absolute inset-0 z-0">
-          <Image src="/img/hero-service-slate.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
+          <Image quality={90} sizes="100vw" src="/img/hero-service-slate.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/60 to-transparent" />
         </div>
 
