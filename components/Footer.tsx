@@ -28,6 +28,8 @@ const companyLinks = [
 ];
 
 const locationLinks = [
+  { href: "/industries/manufacturing", label: "Manufacturing" },
+  { href: "/industries/distribution", label: "Distribution" },
   { href: "/software-development-company-greater-noida", label: "Greater Noida" },
   { href: "/software-development-company-noida", label: "Noida" },
   { href: "/software-development-company-delhi-ncr", label: "Delhi NCR" },
@@ -55,7 +57,7 @@ export default function Footer() {
               Intelligence. Precision. Growth.
             </p>
             <p className="text-white/40 text-xs leading-relaxed" style={{ maxWidth: "220px" }}>
-              AI-Native Management &amp; Technology Consultancy
+              Process-first software, built, run and maintained.
             </p>
           </div>
 
@@ -97,10 +99,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Locations */}
+          {/* Col 4 — Industries and locations */}
           <div>
             <h3 className="font-display font-semibold text-xs tracking-widest uppercase text-gold mb-5">
-              Locations
+              Who we serve
             </h3>
             <ul className="space-y-3">
               {locationLinks.map((link) => (
@@ -210,7 +212,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <p className="text-white/40 text-xs">
-            © 2026 Turbo Bytes Consulting. All rights reserved. · MSME Registered.
+            © 2026 Turbo Bytes Consulting. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2 sm:justify-end">
             <Link href="/privacy-policy" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">

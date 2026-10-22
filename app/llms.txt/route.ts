@@ -1,5 +1,6 @@
 import { getHubEntries, getHubEntry } from "@/lib/hubs";
 import { aiPractices, products, consultingLinks } from "@/lib/offerings";
+import { industries } from "@/lib/industries";
 
 export const revalidate = 3600;
 
@@ -38,7 +39,7 @@ export async function GET() {
 
   const body = `# Turbo Bytes Consulting
 
-> Turbo Bytes Consulting (TBC) is an AI-native management and technology consultancy in Greater Noida, India. It builds private LLM and neural network systems, trains teams to use them, advises on technology decisions, and runs its own products.
+> Turbo Bytes Consulting (TBC) is a process-first consulting and software firm in Greater Noida, India. It finds the process that costs a business most and turns it into software it builds, runs and maintains. It builds private LLM and neural network systems, trains teams to use them, advises on technology decisions, and runs its own products.
 
 ## Key facts
 
@@ -71,8 +72,13 @@ ${products.map(line).join("\n")}
 - [AI applications](${BASE}/services/ai-applications): document reading, assistants trained on company documents, LLM features
 - [Business automation](${BASE}/services/business-automation): integrations between Tally, Zoho, Shopify, WhatsApp and other tools
 
+## Industries
+
+${industries.map((i) => `- [${i.name}](${BASE}/industries/${i.slug}): ${i.description}`).join("\n")}
+
 ## Tools and guides
 
+- [Process cost calculator](${BASE}/process-cost-calculator): what one manual process costs a business each year in time and mistakes
 - [Software cost calculator](${BASE}/software-cost-calculator): indicative cost range and timeline for a project in India
 ${specificGuides.join("\n")}
 ${hubLines.join("\n")}

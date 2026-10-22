@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MobileActionBar from "@/components/MobileActionBar";
 import CookieBanner from "@/components/CookieBanner";
 import VisitBeacon from "@/components/VisitBeacon";
 import StickyCta from "@/components/StickyCta";
@@ -96,6 +97,7 @@ export default function RootLayout({
         <Footer />
         <StickyCta />
         <WhatsAppButton />
+        <MobileActionBar />
         <BackToTop />
         <CookieBanner />
         <VisitBeacon />
@@ -128,7 +130,7 @@ export default function RootLayout({
                   "@type": ["Organization", "ProfessionalService"],
                   "@id": "https://turbobytesconsulting.com/#organization",
                   "name": "Turbo Bytes Consulting",
-                  "description": "AI-native management and technology consultancy in Greater Noida: custom and on-premise LLMs, AI capability building, technology consulting and audits, and its own products Slate, Distil, Vantage and Meridian.",
+                  "description": "Process-first consulting and software firm in Greater Noida: process automation, custom and on-premise LLMs, AI capability building, technology consulting and audits, and its own products Slate, Distil, Vantage and Meridian.",
                   "knowsAbout": ["Large language models", "On-premise AI", "AI training", "Technology strategy", "Technology audit", "AI readiness", "Business process improvement", "Custom software"],
                   "url": "https://turbobytesconsulting.com",
                   "logo": "https://turbobytesconsulting.com/logo-square.png",

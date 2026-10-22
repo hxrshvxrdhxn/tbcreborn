@@ -84,7 +84,7 @@ export default function PrivacyPolicyPage() {
         <div className="container-tbc">
           <div className="mx-auto max-w-[760px]">
             <p className="font-sans text-[16px] text-mid-grey leading-relaxed mb-10 border-l-4 border-gold pl-5 italic">
-              Turbo Bytes Consulting is an MSME-registered AI consultancy based
+              Turbo Bytes Consulting is a consultancy based
               in Greater Noida, Uttar Pradesh, India. We take the privacy of our
               clients and website visitors seriously.
             </p>

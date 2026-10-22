@@ -88,8 +88,8 @@ const groups = [
 
 const whyTbc = [
   {
-    title: "AI-Native",
-    body: "We do not add AI on top of traditional consulting. AI is how we operate — in every workflow, every engagement, every output.",
+    title: "Process First",
+    body: "We learn how the work really runs before we build anything, so the software fits your team instead of the other way round.",
   },
   {
     title: "Complete Delivery",

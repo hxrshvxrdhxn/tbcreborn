@@ -60,10 +60,6 @@ const companyFacts = [
     value: "Process automation, AI and software consultancy",
   },
   {
-    label: "Registration",
-    value: "MSME Registered — India (NIC Code: 62020)",
-  },
-  {
     label: "Established",
     value: "2022 (Business commencement: 04/03/2022)",
   },
