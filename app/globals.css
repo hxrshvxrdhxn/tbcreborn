@@ -228,3 +228,8 @@
 :is(.grid, .flex) > [data-reveal] > div { flex: 1 1 auto; }
 :is(.grid, .flex) > [data-reveal] > div:has(> :only-child) { display: flex; flex-direction: column; }
 :is(.grid, .flex) > [data-reveal] > div > :only-child { flex: 1 1 auto; }
+
+/* Moving dots in the illustrations stop for people who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  .tbc-flow { display: none; }
+}

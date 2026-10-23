@@ -9,6 +9,7 @@ import ProcessTimeline from "@/components/ProcessTimeline";
 import FreeAnalysisForm from "@/components/FreeAnalysisForm";
 import InsightRail from "@/components/InsightRail";
 import { getAllPosts } from "@/lib/posts";
+import { ProcessToday, ProcessWithSoftware, PillarIcon, WhyIcon, FactoryScene, DistributionScene, CostScene, GuideCover } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
   title: { absolute: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting" },
@@ -88,14 +89,17 @@ const groups = [
 
 const whyTbc = [
   {
+    icon: "process" as const,
     title: "Process First",
     body: "We learn how the work really runs before we build anything, so the software fits your team instead of the other way round.",
   },
   {
+    icon: "delivery" as const,
     title: "Complete Delivery",
     body: "We design strategy and we build systems. Clients do not manage handoffs between an advisor and an agency. We do both.",
   },
   {
+    icon: "outcome" as const,
     title: "Measurable Outcomes",
     body: "Every engagement begins with a defined outcome. Our work is assessed against it. We do not invoice for activity — we invoice for results.",
   },
@@ -170,46 +174,50 @@ export default async function HomePage() {
       </section>
 
       {/* ── 3. WHO WE ARE ── */}
-      <section className="bg-ivory py-s5 md:py-s7">
+      <section className="bg-ivory py-s6 md:py-s8">
         <div className="container-tbc">
           <Reveal>
             <hr className="gold-rule mb-8 md:mb-s5" />
             <h2 className="section-heading mb-6 text-balance">
               We fix the process first.<br />Then we build the software.
             </h2>
-            <p className="text-body text-mid-grey measure-68 mb-10 md:mb-14 text-pretty">
+            <p className="text-body text-mid-grey measure-68 mb-12 md:mb-s6 text-pretty">
               We start with the person who runs the company and ask which process
               hurts most. Then we sit with the team who does it, map how it really
               works, and turn it into software built around it. After launch it
-              stays ours: support, maintenance and the AMC are part of the job. We
-              agree up front what the software should save you, and most projects
-              start at about what one person costs you in a year.
+              stays ours: support, maintenance and the AMC are part of the job.
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+          <Reveal>
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-start gap-6 md:gap-8 mb-16 md:mb-s7">
+              <figure>
+                <ProcessToday />
+                <figcaption className="mt-4 text-[15px] text-mid-grey"><span className="font-display font-semibold text-ink">Today.</span> Chats, sheets, calls and paper, all waiting on one person.</figcaption>
+              </figure>
+              <div className="flex md:flex-col items-center justify-center text-royal md:self-center md:-mt-10" aria-hidden="true">
+                <svg viewBox="0 0 48 48" className="w-12 h-12 rotate-90 md:rotate-0"><circle cx="24" cy="24" r="23" fill="#fff" stroke="currentColor" strokeOpacity="0.25" /><path d="M16 24h16M26 17l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </div>
+              <figure>
+                <ProcessWithSoftware />
+                <figcaption className="mt-4 text-[15px] text-mid-grey"><span className="font-display font-semibold text-ink">With software.</span> Each step moves on its own, and the figures reach you by nine.</figcaption>
+              </figure>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-14">
             {[
-              {
-                label: "We Listen",
-                body: "To the MD on what hurts, and to the team on how the work is really done.",
-              },
-              {
-                label: "We Build",
-                body: "The process, turned into software that fits it, with AI where it helps.",
-              },
-              {
-                label: "We Stay",
-                body: "AMC, maintenance and support, end to end. Measured on the value it delivers.",
-              },
+              { icon: "listen" as const, label: "We listen", body: "To the MD on what hurts, and to the team on how the work is really done." },
+              { icon: "build" as const, label: "We build", body: "The process, turned into software that fits it, with AI where it helps." },
+              { icon: "stay" as const, label: "We stay", body: "AMC, maintenance and support, end to end. Measured on the value it delivers." },
             ].map((pillar, i) => (
               <Reveal key={pillar.label} delay={i * 0.1}>
-                <article className="bg-white p-6 rounded shadow-card border-t-[3px] border-t-gold border border-x-light-grey border-b-light-grey h-full">
-                  <h4 className="font-display font-bold text-[18px] text-ink mb-2">
-                    {pillar.label}
-                  </h4>
-                  <p className="text-body text-mid-grey">
-                    {pillar.body}
-                  </p>
+                <article className="flex flex-row sm:flex-col gap-5 sm:gap-4">
+                  <div className="shrink-0"><PillarIcon kind={pillar.icon} /></div>
+                  <div>
+                    <h3 className="font-display font-bold text-[20px] text-ink mb-2">{pillar.label}</h3>
+                    <p className="text-body text-mid-grey">{pillar.body}</p>
+                  </div>
                 </article>
               </Reveal>
             ))}
@@ -218,7 +226,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 4. WHAT WE DO ── */}
-      <section className="bg-white py-s5 md:py-s7 border-y border-light-grey">
+      <section className="bg-white py-s6 md:py-s8 border-y border-light-grey">
         <div className="container-tbc">
           <Reveal>
             <h2 className="section-heading mb-10 md:mb-12 text-balance">
@@ -253,6 +261,39 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── 4b. WHO WE SERVE ── */}
+      <section className="bg-ivory py-s6 md:py-s8" aria-labelledby="serve-heading">
+        <div className="container-tbc">
+          <Reveal>
+            <hr className="gold-rule mb-8 md:mb-s5" />
+            <h2 id="serve-heading" className="section-heading mb-12 md:mb-s6 text-balance">Who we work with.</h2>
+          </Reveal>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+            {[
+              { href: "/industries/manufacturing", eyebrow: "Industry", title: "Manufacturers", body: "Quotes, dispatch, stock and the morning report.", Art: FactoryScene, big: true },
+              { href: "/industries/distribution", eyebrow: "Industry", title: "Distributors and traders", body: "WhatsApp orders, stock that matches, money that comes in on time.", Art: DistributionScene, big: false },
+              { href: "/process-cost-calculator", eyebrow: "Tool", title: "What does your slowest process cost?", body: "Work it out in a minute.", Art: CostScene, big: false },
+            ].map(({ href, eyebrow, title, body, Art, big }) => (
+              <div key={href} className={big ? "lg:col-span-2 lg:row-span-2" : ""}>
+                <Link href={href} className="group flex flex-col h-full rounded-2xl overflow-hidden bg-[#0E3F2A] ring-1 ring-black/5">
+                  <div className={`relative ${big ? "aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-[320px]" : "aspect-[16/9]"}`}>
+                    <Art />
+                  </div>
+                  <div className="p-6 md:p-8 border-t border-white/10">
+                    <p className="text-[13px] font-semibold text-[#7FD1A6] mb-2">{eyebrow}</p>
+                    <h3 className={`font-display font-bold text-white leading-tight mb-2 text-balance ${big ? "text-[clamp(24px,3vw,34px)]" : "text-[21px]"}`}>{title}</h3>
+                    <p className="text-[15px] text-white/75 mb-4 max-w-md">{body}</p>
+                    <span className="inline-flex items-center gap-2 font-display font-semibold text-[15px] text-white">
+                      {eyebrow === "Tool" ? "Open the calculator" : "See what we fix"} <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                    </span>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 5. WHY TBC (Dark Section) ── */}
       <SectionInk>
         <div className="container-tbc py-s5 md:py-s7">
@@ -266,7 +307,8 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
             {whyTbc.map((card, i) => (
               <Reveal key={card.title} delay={i * 0.15}>
-                <article className="border-t-2 border-gold pt-6">
+                <article className="border-t-2 border-gold pt-8">
+                  <WhyIcon kind={card.icon} />
                   <h3 className="font-display font-bold text-[20px] text-white mb-3">
                     {card.title}
                   </h3>
@@ -281,7 +323,7 @@ export default async function HomePage() {
       </SectionInk>
 
       {/* ── 6. PROCESS ── */}
-      <section className="bg-ivory py-s5 md:py-s7 border-b border-light-grey">
+      <section className="bg-ivory py-s6 md:py-s8 border-b border-light-grey">
         <div className="container-tbc">
           <Reveal>
             <hr className="gold-rule mb-8 md:mb-s5" />
@@ -297,7 +339,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 7. FAQ ── */}
-      <section className="bg-white py-s5 md:py-s7 border-b border-light-grey">
+      <section className="bg-white py-s6 md:py-s8 border-b border-light-grey">
         <div className="container-tbc max-w-3xl">
           <Reveal>
             <hr className="gold-rule gold-rule--center mb-8 md:mb-s5" />
@@ -320,7 +362,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 8. INSIGHT ── */}
-      <section className="bg-white py-s5 md:py-s7">
+      <section className="bg-white py-s6 md:py-s8">
         <div className="container-tbc">
           <Reveal>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
@@ -350,7 +392,7 @@ export default async function HomePage() {
       <FreeAnalysisForm />
 
       {/* ── POPULAR GUIDES ── */}
-      <section className="bg-white py-s5 md:py-s7 border-t border-light-grey">
+      <section className="bg-white py-s6 md:py-s8 border-t border-light-grey">
         <div className="container-tbc">
           <Reveal>
             <hr className="gold-rule mb-6 md:mb-s5" />
@@ -359,7 +401,7 @@ export default async function HomePage() {
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               {
                 href: "/blog/how-much-does-custom-software-development-cost-in-india-in-2026",
@@ -394,20 +436,15 @@ export default async function HomePage() {
                 title: "The real cost of a bad software decision",
               },
             ].map((guide, i) => (
-              <Reveal key={guide.href} delay={i * 0.05}>
-                <Link
-                  href={guide.href}
-                  className="group flex items-center justify-between py-3 border-b border-light-grey text-ink hover:text-royal transition-colors duration-150"
-                >
-                  <span className="font-display font-medium text-[16px] group-hover:underline underline-offset-4">
+              <Reveal key={guide.href} delay={i * 0.04}>
+                <Link href={guide.href} className="group flex flex-col h-full">
+                  <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-4">
+                    <GuideCover variant={i} />
+                  </div>
+                  <span className="font-display font-semibold text-[17px] text-ink leading-snug group-hover:text-royal transition-colors text-balance">
                     {guide.title}
                   </span>
-                  <span
-                    className="text-gold text-lg group-hover:translate-x-1 transition-transform duration-150 ml-4 select-none"
-                    aria-hidden="true"
-                  >
-                    &rarr;
-                  </span>
+                  <span className="mt-2 text-[14px] text-royal font-semibold" aria-hidden="true">Read the guide →</span>
                 </Link>
               </Reveal>
             ))}
@@ -416,7 +453,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── 10. CTA BAND ── */}
-      <section className="bg-royal py-s5 md:py-s7 text-center">
+      <section className="bg-royal py-s6 md:py-s8 text-center">
         <div className="container-tbc">
           <Reveal>
             <hr className="gold-rule gold-rule--center mb-8" />

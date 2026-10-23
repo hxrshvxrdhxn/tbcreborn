@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 import { industries, industryBySlug } from "@/lib/industries";
+import { FactoryScene, DistributionScene } from "@/components/Illustrations";
 
 const BASE = "https://turbobytesconsulting.com";
 
@@ -61,7 +62,8 @@ export default function IndustryPage({ params }: { params: { industry: string } 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <section className="bg-forest overflow-hidden border-b border-light-grey">
-        <div className="container-tbc py-s6 md:py-s7 relative z-10">
+        <div className="container-tbc py-s6 md:py-s8 relative z-10 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-center">
+          <div>
           <p className="font-display font-semibold text-[14px] text-white/70 mb-4">{ind.name}</p>
           <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
             {ind.headline}
@@ -75,16 +77,20 @@ export default function IndustryPage({ params }: { params: { industry: string } 
               See what we fix
             </Link>
           </div>
+          </div>
+          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/10">
+            {ind.slug === "distribution" ? <DistributionScene /> : <FactoryScene />}
+          </div>
         </div>
       </section>
 
-      <section id="processes" className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="processes-heading">
+      <section id="processes" className="bg-ivory py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="processes-heading">
         <div className="container-tbc">
           <Reveal>
             <h2 id="processes-heading" className="section-heading text-balance mb-4">The processes we fix most often.</h2>
             <p className="text-body text-mid-grey max-w-2xl mb-10">Each one starts the same way: what it looks like today, and what it looks like once it runs in software. Not sure which costs you most? <Link href="/process-cost-calculator" className="text-royal underline underline-offset-2">Work out what one process costs a year</Link>.</p>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {ind.processes.map((p, i) => (
               <Reveal key={p.name} delay={Math.min(i * 0.05, 0.25)}>
                 <article className="bg-white border border-light-grey rounded-2xl p-7 h-full flex flex-col gap-4">
@@ -104,7 +110,7 @@ export default function IndustryPage({ params }: { params: { industry: string } 
         </div>
       </section>
 
-      <section className="bg-white py-s7 border-b border-light-grey" aria-labelledby="how-heading">
+      <section className="bg-white py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="how-heading">
         <div className="container-tbc">
           <Reveal>
             <h2 id="how-heading" className="section-heading text-balance mb-10">How a project runs.</h2>
@@ -125,7 +131,7 @@ export default function IndustryPage({ params }: { params: { industry: string } 
         </div>
       </section>
 
-      <section className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="faq-heading">
+      <section className="bg-ivory py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="faq-heading">
         <div className="container-tbc max-w-3xl">
           <Reveal>
             <h2 id="faq-heading" className="section-heading text-balance mb-8">Questions MDs ask us.</h2>
