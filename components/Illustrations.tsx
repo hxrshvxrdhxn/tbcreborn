@@ -216,7 +216,7 @@ export function WhyIcon({ kind }: { kind: "process" | "delivery" | "outcome" }) 
 
 function DarkFrame({ id, label, children }: { id: string; label: string; children: React.ReactNode }) {
   return (
-    <svg viewBox="0 0 640 400" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label={label}>
+    <svg viewBox="0 0 640 400" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" {...(label ? { role: "img", "aria-label": label } : { "aria-hidden": true })}>
       <defs>
         <linearGradient id={`g-${id}`} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor="#0E3F2A" />
@@ -369,5 +369,222 @@ export function GuideCover({ variant }: { variant: number }) {
       )}
       {v === 7 && [0, 1, 2].map((i) => <path key={i} d={`M40 ${60 + i * 30} h${200 - i * 50}`} {...s} strokeWidth={10} stroke={i === 0 ? ACCENT : "#fff"} />)}
     </svg>
+  );
+}
+
+/* ── About: the two halves of the job ───────────────────── */
+
+export function BothHalves() {
+  // Two overlapping circles: finding what to fix, and building the fix. TBC sits in the overlap,
+  // with a ring around both for staying accountable after launch.
+  return (
+    <svg viewBox="0 0 640 410" className="w-full h-auto" role="img" aria-label="A consultancy finds what to fix, a software house builds it; TBC does both and stays after launch">
+      <ellipse cx="320" cy="190" rx="300" ry="170" fill="none" stroke={ACCENT} strokeWidth="1.6" strokeDasharray="5 8" />
+      <circle cx="245" cy="190" r="125" fill={PALE} fillOpacity="0.7" stroke={FOREST} strokeOpacity="0.35" strokeWidth="1.6" />
+      <circle cx="395" cy="190" r="125" fill={PALE} fillOpacity="0.7" stroke={FOREST} strokeOpacity="0.35" strokeWidth="1.6" />
+      <path d="M320 92 A125 125 0 0 1 320 288 A125 125 0 0 1 320 92 Z" fill={ACCENT} />
+      <g fontFamily="Inter, system-ui, sans-serif" textAnchor="middle">
+        <text x="190" y="184" fontSize="17" fontWeight="600" fill={FOREST}>Find what</text>
+        <text x="190" y="206" fontSize="17" fontWeight="600" fill={FOREST}>to fix</text>
+        <text x="450" y="184" fontSize="17" fontWeight="600" fill={FOREST}>Build</text>
+        <text x="450" y="206" fontSize="17" fontWeight="600" fill={FOREST}>the fix</text>
+        <text x="320" y="197" fontSize="20" fontWeight="800" fill="#fff">TBC</text>
+        <text x="320" y="400" fontSize="15" fontWeight="600" fill={ACCENT}>…and stay after launch</text>
+      </g>
+    </svg>
+  );
+}
+
+/* ── About: value icons (dark band) ─────────────────────── */
+
+export function ValueIcon({ kind }: { kind: "process" | "ai" | "end" | "value" | "plain" }) {
+  return (
+    <svg viewBox="0 0 64 64" className="w-14 h-14" aria-hidden="true">
+      {kind === "process" && (
+        <>
+          <rect x="6" y="24" width="14" height="14" rx="3" {...ds} />
+          <rect x="26" y="24" width="14" height="14" rx="3" {...ds} />
+          <rect x="46" y="24" width="14" height="14" rx="3" fill={DACCENT} />
+          <path d="M20 31h6M40 31h6" {...ds} />
+        </>
+      )}
+      {kind === "ai" && (
+        <>
+          {[[14, 18], [14, 46], [32, 32], [50, 18], [50, 46]].map(([x, y], i) => (
+            <circle key={i} cx={x} cy={y} r={i === 2 ? 6 : 4} fill={i === 2 ? DACCENT : "none"} stroke={DLINE} strokeWidth="1.5" />
+          ))}
+          <path d="M17 20l10 9M17 44l10-9M37 29l10-9M37 35l10 9" {...ds} />
+        </>
+      )}
+      {kind === "end" && (
+        <>
+          <path d="M14 32a18 18 0 1 1 6 13.4" {...ds} />
+          <path d="M12 40l8 6 4-9" {...ds} stroke={DACCENT} strokeWidth={2} />
+        </>
+      )}
+      {kind === "value" && (
+        <>
+          <path d="M8 52h48" {...ds} />
+          {[[14, 36], [26, 28], [38, 20], [50, 10]].map(([x, y], i) => (
+            <rect key={i} x={x - 4} y={y} width="8" height={52 - y} rx="2" fill={i === 3 ? DACCENT : DLINE} opacity={i === 3 ? 1 : 0.35} />
+          ))}
+        </>
+      )}
+      {kind === "plain" && (
+        <>
+          <rect x="14" y="8" width="36" height="48" rx="4" {...ds} />
+          {[20, 28, 36].map((y) => <line key={y} x1="21" y1={y} x2="43" y2={y} {...ds} opacity={0.5} />)}
+          <path d="M22 46l5 5 10-10" {...ds} stroke={DACCENT} strokeWidth={2.2} />
+        </>
+      )}
+    </svg>
+  );
+}
+
+/* ── Work: one drawing per kind of case ─────────────────── */
+
+export type CaseKind = "llm" | "website" | "assistant" | "diagnostic" | "portal" | "retail" | "seo" | "training";
+
+export function CaseArt({ kind }: { kind: CaseKind }) {
+  return (
+    <DarkFrame id={`case-${kind}`} label="">
+      {kind === "llm" && (
+        <>
+          {[0, 1, 2].map((i) => (
+            <g key={i} transform={`translate(${110 + i * 26},${110 + i * 22})`}>
+              <rect width="150" height="190" rx="8" fill="#0E3F2A" stroke={DLINE} strokeOpacity="0.6" strokeWidth="1.5" />
+              {[30, 52, 74, 96].map((y) => <rect key={y} x="20" y={y} width={y === 96 ? 70 : 110} height="7" rx="3.5" fill={DLINE} opacity="0.3" />)}
+            </g>
+          ))}
+          <path d="M330 220h70" {...ds} stroke={DACCENT} strokeWidth={2.4} />
+          <path d="M392 212l9 8-9 8" {...ds} stroke={DACCENT} strokeWidth={2.4} />
+          <g transform="translate(420,150)">
+            <rect width="150" height="120" rx="14" fill="#0E3F2A" stroke={DACCENT} strokeWidth="2" />
+            <rect x="18" y="22" width="90" height="8" rx="4" fill={DLINE} opacity="0.6" />
+            <rect x="18" y="40" width="114" height="8" rx="4" fill={DLINE} opacity="0.35" />
+            <rect x="18" y="58" width="70" height="8" rx="4" fill={DLINE} opacity="0.35" />
+            <rect x="18" y="84" width="54" height="18" rx="9" fill={DACCENT} />
+          </g>
+        </>
+      )}
+      {kind === "website" && (
+        <>
+          <g transform="translate(90,80)">
+            <rect width="300" height="230" rx="12" fill="#0E3F2A" stroke={DLINE} strokeOpacity="0.6" strokeWidth="1.5" />
+            <path d="M0 30h300" {...ds} opacity={0.5} />
+            {[16, 32, 48].map((x) => <circle key={x} cx={x} cy="15" r="4" fill={DLINE} opacity="0.4" />)}
+            <rect x="24" y="54" width="160" height="14" rx="7" fill={DLINE} opacity="0.6" />
+            <rect x="24" y="80" width="230" height="8" rx="4" fill={DLINE} opacity="0.3" />
+            <rect x="24" y="96" width="200" height="8" rx="4" fill={DLINE} opacity="0.3" />
+            <rect x="24" y="126" width="110" height="30" rx="8" fill={DACCENT} />
+          </g>
+          <g transform="translate(470,200)">
+            <path d="M-80 0 A80 80 0 0 1 80 0" {...ds} strokeWidth={10} opacity={0.25} />
+            <path d="M-80 0 A80 80 0 0 1 72 -35" fill="none" stroke={DACCENT} strokeWidth="10" strokeLinecap="round" />
+            <text y="-10" textAnchor="middle" fontSize="34" fontWeight="700" fill="#fff" fontFamily="Inter, system-ui, sans-serif">97</text>
+          </g>
+        </>
+      )}
+      {kind === "assistant" && (
+        <>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <g key={i} transform={`translate(100,${80 + i * 50})`}>
+              <rect width="240" height="38" rx="8" fill="#0E3F2A" stroke={DLINE} strokeOpacity={i < 3 ? 0.25 : 0.6} strokeWidth="1.5" />
+              <rect x="16" y="15" width={120 - i * 10} height="8" rx="4" fill={DLINE} opacity="0.35" />
+              <circle cx="216" cy="19" r="7" fill={i < 3 ? DACCENT : "none"} stroke={DACCENT} strokeWidth="1.5" />
+              {i < 3 && <path d="M212 19l3 3 6-6" fill="none" stroke="#0E3F2A" strokeWidth="1.8" strokeLinecap="round" />}
+            </g>
+          ))}
+          <g transform="translate(400,110)">
+            <circle cx="80" cy="80" r="80" {...ds} opacity={0.4} />
+            <path d="M80 80V30" stroke="#fff" strokeWidth="4" strokeLinecap="round" />
+            <path d="M80 80l35 20" stroke={DACCENT} strokeWidth="4" strokeLinecap="round" />
+            <circle cx="80" cy="80" r="7" fill="#fff" />
+          </g>
+        </>
+      )}
+      {kind === "diagnostic" && (
+        <>
+          <g>
+            <rect x="275" y="60" width="90" height="44" rx="8" fill={DACCENT} />
+            {[130, 275, 420].map((x) => <rect key={x} x={x} y="170" width="90" height="40" rx="8" fill="#0E3F2A" stroke={DLINE} strokeWidth="1.5" />)}
+            <path d="M320 104v34H175v32M320 138v32M320 138h145v32" {...ds} />
+            {[100, 160, 245, 305, 390, 450].map((x) => <rect key={x} x={x} y="270" width="50" height="34" rx="6" fill="#0E3F2A" stroke={DLINE} strokeOpacity="0.5" strokeWidth="1.5" />)}
+            <path d="M175 210v30H125v30M175 240h10v30M320 210v30h-50v30M320 240h10v30M465 210v30h-50v30M465 240h10v30" {...ds} opacity={0.5} />
+          </g>
+        </>
+      )}
+      {kind === "portal" && (
+        <>
+          <g transform="translate(80,80)">
+            <rect width="320" height="220" rx="12" fill="#0E3F2A" stroke={DLINE} strokeOpacity="0.6" strokeWidth="1.5" />
+            {[0, 1, 2, 3].map((i) => (
+              <g key={i} transform={`translate(20,${30 + i * 44})`}>
+                <rect width="180" height="8" rx="4" fill={DLINE} opacity="0.35" />
+                <rect y="16" width="280" height="6" rx="3" fill={DLINE} opacity="0.12" />
+                <rect y="16" width={[280, 210, 140, 60][i]} height="6" rx="3" fill={DACCENT} />
+              </g>
+            ))}
+          </g>
+          <g transform="translate(440,200)">
+            <path d="M0 8h80v52H0z M80 26h28l18 18v16H80" {...ds} />
+            <circle cx="22" cy="62" r="9" {...ds} fill="#0E3F2A" />
+            <circle cx="104" cy="62" r="9" {...ds} fill="#0E3F2A" />
+          </g>
+          <path d="M500 180c0-30 20-50 50-60" {...ds} strokeDasharray="4 6" />
+          <circle cx="556" cy="118" r="8" fill={DACCENT} />
+        </>
+      )}
+      {kind === "retail" && (
+        <>
+          <g transform="translate(250,50)">
+            <rect width="150" height="290" rx="22" fill="#0E3F2A" stroke={DLINE} strokeWidth="1.6" />
+            <rect x="16" y="40" width="96" height="34" rx="12" fill={DLINE} opacity="0.25" />
+            <rect x="38" y="90" width="96" height="58" rx="12" fill={DACCENT} />
+            <rect x="16" y="164" width="80" height="34" rx="12" fill={DLINE} opacity="0.25" />
+            <text x="75" y="260" textAnchor="middle" fontSize="16" fontWeight="600" fill={DLINE} fontFamily="Inter, system-ui, sans-serif">हिं / EN</text>
+          </g>
+          {[[110, 120], [110, 230], [490, 140], [500, 260]].map(([x, y], i) => (
+            <g key={i} transform={`translate(${x},${y})`}>
+              <rect x="-34" y="-24" width="68" height="48" rx="6" {...ds} opacity={0.5} />
+              <rect x="-22" y="-10" width="44" height="20" rx="3" fill={DLINE} opacity="0.2" />
+            </g>
+          ))}
+        </>
+      )}
+      {kind === "seo" && (
+        <>
+          <g transform="translate(110,90)">
+            <rect width="420" height="50" rx="25" fill="#0E3F2A" stroke={DLINE} strokeWidth="1.6" />
+            <circle cx="30" cy="25" r="9" {...ds} />
+            <path d="M37 32l7 7" {...ds} strokeWidth={2.4} />
+            <rect x="60" y="21" width="180" height="8" rx="4" fill={DLINE} opacity="0.4" />
+          </g>
+          {[0, 1, 2, 3].map((i) => (
+            <g key={i} transform={`translate(110,${170 + i * 46})`}>
+              <rect width="420" height="34" rx="8" fill={i === 0 ? DACCENT : "#0E3F2A"} stroke={DLINE} strokeOpacity={i === 0 ? 0 : 0.35} strokeWidth="1.5" />
+              <rect x="16" y="13" width={[220, 260, 190, 230][i]} height="8" rx="4" fill={i === 0 ? "#0E3F2A" : DLINE} opacity={i === 0 ? 0.6 : 0.3} />
+            </g>
+          ))}
+        </>
+      )}
+      {kind === "training" && (
+        <>
+          <g transform="translate(140,70)">
+            <rect width="360" height="150" rx="10" fill="#0E3F2A" stroke={DLINE} strokeWidth="1.5" />
+            <path d="M30 110l60-40 50 25 70-50 60 30" {...ds} stroke={DACCENT} strokeWidth={2.4} />
+          </g>
+          {[0, 1, 2, 3, 4].map((i) => {
+            const x = 170 + i * 75;
+            return (
+              <g key={i} transform={`translate(${x},300)`}>
+                <circle cy="-22" r="13" fill="none" stroke={i === 2 ? DACCENT : DLINE} strokeWidth="1.8" />
+                <path d="M-22 18c0-18 44-18 44 0" fill="none" stroke={i === 2 ? DACCENT : DLINE} strokeWidth="1.8" strokeLinecap="round" />
+              </g>
+            );
+          })}
+        </>
+      )}
+    </DarkFrame>
   );
 }

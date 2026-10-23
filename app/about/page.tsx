@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
+import { BothHalves, ValueIcon, ProcessToday, ProcessWithSoftware } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
   title: { absolute: "About Turbo Bytes Consulting | Process-First AI & Software" },
@@ -28,26 +29,31 @@ export const metadata: Metadata = {
 
 const values = [
   {
+    icon: "process" as const,
     title: "Process first",
     description:
       "We learn how the work is actually done before we write a line of code. Software built on a misunderstood process just makes the mistake faster.",
   },
   {
+    icon: "ai" as const,
     title: "Useful AI",
     description:
       "LLMs and neural networks go in where they earn their place. Where a simple rule or a clean form does the job better, we use that instead.",
   },
   {
+    icon: "end" as const,
     title: "End to end",
     description:
       "We design, build, deploy and support. AMC and maintenance stay with us, so there is one team to call when something needs to change.",
   },
   {
+    icon: "value" as const,
     title: "Business value",
     description:
       "We measure the work by hours saved, errors removed and decisions made faster, not by features shipped.",
   },
   {
+    icon: "plain" as const,
     title: "Plain dealing",
     description:
       "Clear scope, clear timelines, and a written proposal before any work begins. If we are not the right fit, we will say so.",
@@ -108,7 +114,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHO WE ARE ── */}
-      <section className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="who-we-are-heading">
+      <section className="bg-ivory py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="who-we-are-heading">
         <div className="container-tbc">
           <Reveal>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -135,31 +141,46 @@ export default function AboutPage() {
               </div>
             </div>
           </Reveal>
+          <Reveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-12 md:mt-s7">
+              <figure>
+                <ProcessToday />
+                <figcaption className="mt-4 text-[15px] text-mid-grey"><span className="font-display font-semibold text-ink">Before.</span> The work waits on one person.</figcaption>
+              </figure>
+              <figure>
+                <ProcessWithSoftware />
+                <figcaption className="mt-4 text-[15px] text-mid-grey"><span className="font-display font-semibold text-ink">After.</span> The work runs, and you see it.</figcaption>
+              </figure>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── OUR POSITION ── */}
-      <section className="bg-white py-s7 border-b border-light-grey" aria-labelledby="our-position-heading">
+      <section className="bg-white py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="our-position-heading">
         <div className="container-tbc">
           <Reveal>
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 id="our-position-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <h2 id="our-position-heading" className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6 text-balance">
                 Consulting that ends in working software, not a slide deck.
               </h2>
-              <hr className="gold-rule gold-rule--center mb-8" />
-              <p className="text-body text-mid-grey leading-relaxed text-pretty max-w-3xl mx-auto">
+              <hr className="gold-rule mb-8" />
+              <p className="text-body text-mid-grey leading-relaxed text-pretty">
                 A consultancy will tell you what to fix. A software house will build
                 what you specify. We do both: we find the problem with you, build
                 the fix, and stay accountable for it after go-live. One team, from
                 the first conversation to the hundredth support call.
               </p>
             </div>
+            <BothHalves />
+            </div>
           </Reveal>
         </div>
       </section>
 
       {/* ── VALUES ── */}
-      <section className="bg-forest py-s7 border-b border-light-grey" aria-labelledby="values-heading">
+      <section className="bg-forest py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="values-heading">
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-s6">
             <Reveal>
@@ -174,7 +195,7 @@ export default function AboutPage() {
             {values.map((value, i) => (
               <Reveal key={value.title} delay={i * 0.06}>
                 <article className="flex flex-col gap-4">
-                  <div className="w-8 h-1 bg-gold mb-2"></div>
+                  <ValueIcon kind={value.icon} />
                   <h3 className="font-display font-bold text-[20px] text-white">
                     {value.title}
                   </h3>
@@ -189,7 +210,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── COMPANY FACTS ── */}
-      <section className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="company-facts-heading">
+      <section className="bg-ivory py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="company-facts-heading">
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">

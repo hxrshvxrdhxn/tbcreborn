@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
+import { CaseArt, type CaseKind } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
   title: { absolute: "Our Work & Client Outcomes | Turbo Bytes Consulting" },
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 const caseStudies = [
   {
     number: "01",
+    art: "llm" as CaseKind,
     title: "Custom LLM Deployment",
     subtitle: "Professional services firm. Delhi NCR. 80 employees.",
     context: [
@@ -33,6 +35,7 @@ const caseStudies = [
   },
   {
     number: "02",
+    art: "website" as CaseKind,
     title: "Website Development",
     subtitle: "Financial services firm. Mumbai. 35 employees.",
     context: [
@@ -51,6 +54,7 @@ const caseStudies = [
   },
   {
     number: "03",
+    art: "assistant" as CaseKind,
     title: "AI Executive Assistant (Slate)",
     subtitle: "Founder. E-commerce business. Bengaluru. 45 employees.",
     context: [
@@ -68,6 +72,7 @@ const caseStudies = [
   },
   {
     number: "04",
+    art: "diagnostic" as CaseKind,
     title: "Business Diagnostic & Operational Restructure",
     subtitle: "B2B services firm. Delhi NCR. 37 employees.",
     context: [
@@ -86,6 +91,7 @@ const caseStudies = [
   },
   {
     number: "05",
+    art: "portal" as CaseKind,
     title: "Web Application Development",
     subtitle: "Logistics company. Gurugram. 120 employees.",
     context: [
@@ -103,6 +109,7 @@ const caseStudies = [
   },
   {
     number: "06",
+    art: "retail" as CaseKind,
     title: "Custom LLM — Retail & E-commerce",
     subtitle: "Consumer electronics retailer. Pan-India. 600 employees.",
     context: [
@@ -120,6 +127,7 @@ const caseStudies = [
   },
   {
     number: "07",
+    art: "seo" as CaseKind,
     title: "Website Development & SEO",
     subtitle: "Healthcare services provider. Pune. Private clinic group.",
     context: [
@@ -137,6 +145,7 @@ const caseStudies = [
   },
   {
     number: "08",
+    art: "training" as CaseKind,
     title: "AI Training Programme",
     subtitle: "Financial services company. Mumbai. 180 employees.",
     context: [
@@ -153,6 +162,15 @@ const caseStudies = [
     meta: ["Format: 4-week programme, 60 participants", "Practice: AI Training & Enablement"]
   }
 ];
+
+// The first before-and-after outcome, split into label and "before → after" for the large figure.
+function headline(outcomes: string[]) {
+  const outcome = outcomes.find((o) => o.includes("→")) ?? outcomes[0];
+  const [label, ...rest] = outcome.split(":");
+  const value = rest.join(":").trim();
+  const [before, after] = value.split("→").map((s) => s.replace(/\s*\(.*?\)/g, "").trim());
+  return { label, before: after ? before : undefined, after: after ?? value.replace(/\s*\(.*?\)/g, "") };
+}
 
 export default function WorkPage() {
   return (
@@ -177,7 +195,7 @@ export default function WorkPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-ivory py-s7 border-b border-light-grey">
+      <section className="bg-ivory pt-s6 md:pt-s8 pb-s6">
         <div className="container-tbc">
           <Reveal>
             <hr className="gold-rule mb-6" />
@@ -191,17 +209,45 @@ export default function WorkPage() {
         </div>
       </section>
 
+      {/* ── CASE INDEX ── */}
+      <section className="bg-ivory pb-s6 md:pb-s8" aria-label="All cases">
+        <div className="container-tbc">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {caseStudies.map((study) => {
+              const h = headline(study.outcomes);
+              return (
+                <li key={study.number}>
+                  <a href={`#case-${study.number}`} className="group flex flex-col h-full rounded-2xl overflow-hidden bg-white border border-light-grey hover:shadow-card transition-shadow">
+                    <div className="relative aspect-[16/10]">
+                      <CaseArt kind={study.art} />
+                    </div>
+                    <div className="p-5 flex flex-col gap-2 flex-1">
+                      <span className="text-[12px] font-semibold text-royal">Case {study.number}</span>
+                      <span className="font-display font-semibold text-[17px] text-ink leading-snug group-hover:text-royal transition-colors">{study.title}</span>
+                      <span className="mt-auto pt-2 text-[14px] text-mid-grey">{h.label}: <span className="font-semibold text-ink">{h.after}</span></span>
+                    </div>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+
       {/* ── CASE STUDIES FEED ── */}
-      <section className="bg-white py-s7">
+      <section className="bg-white py-s6 md:py-s8">
         <div className="container-tbc">
           <div className="space-y-s8 max-w-6xl mx-auto">
             {caseStudies.map((study) => (
               <Reveal key={study.number}>
-                <article className="group relative border-t border-light-grey pt-12 lg:pt-16">
+                <article id={`case-${study.number}`} className="group relative border-t border-light-grey pt-12 lg:pt-16 scroll-mt-28">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
                     
                     {/* Left Column: Number, Title, Metadata */}
                     <div className="lg:col-span-4 flex flex-col">
+                      <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-8">
+                        <CaseArt kind={study.art} />
+                      </div>
                       <div className="mb-6">
                         <span className="font-display font-bold text-[14px] text-gold tracking-[1px] mb-3 block">
                           CASE {study.number}
@@ -247,6 +293,23 @@ export default function WorkPage() {
                           {study.solution}
                         </p>
                       </div>
+
+                      {/* Headline figure */}
+                      {(() => {
+                        const h = headline(study.outcomes);
+                        return (
+                          <div className="mb-8 flex flex-wrap items-end gap-x-5 gap-y-2">
+                            {h.before && (
+                              <>
+                                <span className="font-display font-bold text-[clamp(28px,3.5vw,40px)] leading-none text-mid-grey/60">{h.before}</span>
+                                <span className="font-display text-[28px] leading-none text-royal" aria-hidden="true">→</span>
+                              </>
+                            )}
+                            <span className="font-display font-bold text-[clamp(36px,5vw,56px)] leading-none text-royal">{h.after}</span>
+                            <span className="basis-full text-[14px] text-mid-grey">{h.label}</span>
+                          </div>
+                        );
+                      })()}
 
                       {/* The Outcomes */}
                       <div className="bg-ivory border border-light-grey rounded p-6 sm:p-8 shadow-card">
