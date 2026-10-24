@@ -14,6 +14,13 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+    if (
+      typeof query !== 'string' || typeof email !== 'string' ||
+      query.length > 300 || email.length > 254 ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    ) {
+      return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+    }
 
     const newRequest = await prisma.howToRequest.create({
       data: { query, email },

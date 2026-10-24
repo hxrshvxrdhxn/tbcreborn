@@ -6,7 +6,7 @@ export const maxDuration = 60; // We may trigger generation here
 export async function POST(req: NextRequest) {
   const authHeader = req.headers.get("authorization");
   if (
-    process.env.CRON_SECRET &&
+    !process.env.CRON_SECRET ||
     authHeader !== `Bearer ${process.env.CRON_SECRET}`
   ) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -36,9 +36,15 @@ export async function POST(req: NextRequest) {
 
       // Trigger the generation of a new post immediately
       // We can call our own cron endpoint internally
-      const host = req.headers.get("host");
-      const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-      const generateUrl = `${protocol}://${host}/api/cron/generate-blog`;
+      // Fixed origin: the production domain, this deployment's own Vercel URL, or localhost.
+      // Never the request's Host header, which the caller controls.
+      const origin =
+        process.env.VERCEL_ENV === "production"
+          ? "https://turbobytesconsulting.com"
+          : process.env.VERCEL_URL
+            ? `https://${process.env.VERCEL_URL}`
+            : "http://localhost:3000";
+      const generateUrl = `${origin}/api/cron/generate-blog`;
       
       const genReq = await fetch(generateUrl, {
         headers: {

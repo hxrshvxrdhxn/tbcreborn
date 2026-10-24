@@ -38,7 +38,7 @@ const nextConfig = {
           // Content Security Policy
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.clarity.ms https://*.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://vercel.live; style-src 'self' 'unsafe-inline'; frame-src https://calendly.com https://www.google.com https://www.googletagmanager.com https://vercel.live; img-src 'self' data: https: blob:; connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com https://vercel.live;"
+            value: "default-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.clarity.ms https://*.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://vercel.live; style-src 'self' 'unsafe-inline'; frame-src https://calendly.com https://www.google.com https://www.googletagmanager.com https://vercel.live; img-src 'self' data: https: blob:; connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com https://vercel.live;"
           },
         ],
       },
@@ -49,6 +49,7 @@ const nextConfig = {
       { source: "/services/smm", destination: "/services", permanent: true },
       // Old site pages still in search indexes (found 3 Oct 2026)
       { source: "/faq", destination: "/", permanent: true },
+      { source: "/privacy", destination: "/privacy-policy", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/services-1", destination: "/services", permanent: true },
       { source: "/f/best-tech-stacks-for-non-tech-founders", destination: "/blog", permanent: true },

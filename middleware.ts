@@ -24,7 +24,8 @@ export async function middleware(req: NextRequest) {
 
   // Protect admin API routes
   if (url.pathname.startsWith('/api/admin') || url.pathname.startsWith('/api/blog-admin')) {
-    if (url.pathname !== '/api/admin/login' && url.pathname !== '/api/blog-admin/login') {
+    // The login form posts to /api/admin/auth, which checks the password itself.
+    if (url.pathname !== '/api/admin/auth') {
       if (!(await checkAuth())) {
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
       }

@@ -6,10 +6,15 @@ if (!secretValue && process.env.NODE_ENV !== "test" && process.env.NODE_ENV !== 
 }
 const secret = new TextEncoder().encode(secretValue || "test-secret-fallback");
 
+// Redis sessions are random UUIDs. Anything else in the cookie is rejected before it reaches
+// the Upstash REST path, so a crafted value (for example one containing "../") cannot change
+// which command runs.
+const SESSION_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 export async function addSession(token: string): Promise<string> {
   if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
     try {
-      await fetch(`${process.env.UPSTASH_REDIS_REST_URL}/set/${token}/valid/EX/604800`, {
+      await fetch(`${process.env.UPSTASH_REDIS_REST_URL}/set/${encodeURIComponent(token)}/valid/EX/604800`, {
         headers: { Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}` },
       });
       return token; // Redis uses the raw UUID
@@ -28,8 +33,9 @@ export async function addSession(token: string): Promise<string> {
 
 export async function isValidSession(token: string): Promise<boolean> {
   if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+    if (!SESSION_ID.test(token)) return false;
     try {
-      const res = await fetch(`${process.env.UPSTASH_REDIS_REST_URL}/get/${token}`, {
+      const res = await fetch(`${process.env.UPSTASH_REDIS_REST_URL}/get/${encodeURIComponent(token)}`, {
         headers: { Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}` },
         cache: "no-store",
       });
@@ -51,9 +57,9 @@ export async function isValidSession(token: string): Promise<boolean> {
 }
 
 export async function removeSession(token: string): Promise<void> {
-  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN && SESSION_ID.test(token)) {
     try {
-      await fetch(`${process.env.UPSTASH_REDIS_REST_URL}/del/${token}`, {
+      await fetch(`${process.env.UPSTASH_REDIS_REST_URL}/del/${encodeURIComponent(token)}`, {
         headers: { Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}` },
       });
     } catch (e) {

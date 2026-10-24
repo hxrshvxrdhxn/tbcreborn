@@ -66,11 +66,27 @@ const schema = z.object({
   referrerPath: z.string().nullable().optional(),
 });
 
+// Lead forms may only be posted from our own pages: the live domain, this project's Vercel
+// previews, or local development. Hostnames are compared exactly, not by substring.
+function allowedOrigin(value: string): boolean {
+  try {
+    const host = new URL(value).hostname;
+    return (
+      host === "turbobytesconsulting.com" ||
+      host === "www.turbobytesconsulting.com" ||
+      host === "localhost" ||
+      (host.startsWith("tbcreborn") && host.endsWith("-hxrshvxrdhxns-projects.vercel.app"))
+    );
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     // Basic CSRF Protection: Validate Origin / Referer
     const origin = req.headers.get("origin") || req.headers.get("referer") || "";
-    if (!origin.includes("localhost") && !origin.includes("turbobytesconsulting.com") && !origin.includes("vercel.app")) {
+    if (!allowedOrigin(origin)) {
       console.error("CSRF Blocked: Invalid Origin", origin);
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
