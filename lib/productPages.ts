@@ -58,13 +58,14 @@ export const productPages: ProductPage[] = [
       "Teams working across several states, each with its own tariffs and metering rules",
       "EPCs expanding into new countries, with a settings pack per market",
     ],
-    status: "Sunscout is available now for a small number of EPCs on early access. We set it up with your own tariff and cost inputs and your target industrial areas.",
+    status: "Start with a free trial. Tell us one industrial area your team sells in and we run Sunscout on it, then walk you through the ranked site list. If it is useful, we set it up with your own tariff and cost inputs and your target areas.",
     faqs: [
       { q: "Where does the building data come from?", a: "From open datasets such as Overture Maps and OpenStreetMap, which may be stored and reused with attribution. We do not scrape Google Maps." },
       { q: "Why does it ask for our tariffs and costs?", a: "Because savings and payback should come from your numbers, not ours. If an input is missing, Sunscout tells you rather than guessing." },
       { q: "Does it contact prospects for us?", a: "No. It prepares the list and the numbers. Your team decides who to contact and sends every message itself." },
       { q: "Can it work outside India?", a: "Yes. Tariffs, metering rules and yields live in a settings pack per country, and new markets are added the same way." },
       { q: "Who can see our data?", a: "Only your organisation. Each company's data is separated at the database level, with access controlled by role." },
+      { q: "Is there a free trial?", a: "Yes. Name one industrial area and we run Sunscout on it for you at no cost, with the ranked site list and kWp sizes." },
     ],
   },
   {
@@ -103,12 +104,13 @@ export const productPages: ProductPage[] = [
       "Machine builders and packaging line suppliers",
       "Any firm where a proposal takes days and depends on a few senior people",
     ],
-    status: "Distil was built with a process-engineering firm and is now available to others. We set it up on your own approved content and rates; your data is never shared with anyone else.",
+    status: "Start with a free trial. Send us one recent enquiry and a past proposal for similar scope, and we show you the proposal Distil assembles. If it is useful, we set it up on your own approved content and rates; your data is never shared with anyone else.",
     faqs: [
       { q: "Does an LLM set our prices?", a: "No. Prices, quantities, specifications and makes come from your rules and rates. The model only reads enquiries and helps with wording." },
       { q: "Do we need to rewrite our proposals first?", a: "No. We start from your past proposals and approved content, and turn them into a library your team keeps up to date." },
       { q: "Is our data used for anyone else?", a: "Never. Each firm's library, rates and proposals are its own." },
       { q: "What formats does it produce?", a: "PDF and Word, in your layout, with a clean client version and an internal draft." },
+      { q: "Is there a free trial?", a: "Yes. Send one recent enquiry and a past proposal for similar scope, and we show you what Distil produces from it, at no cost." },
     ],
   },
 ];
