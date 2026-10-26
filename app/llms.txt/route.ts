@@ -64,7 +64,7 @@ ${consultingLinks.map(line).join("\n")}
 ## Products
 
 ${products.map(line).join("\n")}
-- [All products](${BASE}/products): overview of Slate, Distil, Vantage and Meridian
+- [All products](${BASE}/products): overview of Slate, Distil, Vantage, Meridian and Sunscout
 
 ## Engineering
 

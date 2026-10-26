@@ -588,3 +588,52 @@ export function CaseArt({ kind }: { kind: CaseKind }) {
     </DarkFrame>
   );
 }
+
+/* ── Sunscout: an industrial belt, a drawn area, roofs sized and ranked ── */
+
+export function SunscoutScene() {
+  // A grid of factory roofs; a dashed area the rep drew; the roofs inside it light up and the
+  // best ones carry a size. Positions are fixed so the drawing is the same on every render.
+  const roofs: [number, number, number, number][] = [
+    [60, 70, 70, 40], [150, 60, 90, 55], [260, 75, 55, 35], [340, 55, 80, 60], [440, 70, 60, 40],
+    [70, 150, 55, 70], [150, 145, 110, 60], [285, 150, 70, 45], [375, 140, 95, 70], [490, 150, 60, 45],
+    [60, 250, 85, 50], [170, 240, 60, 45], [255, 235, 105, 75], [385, 245, 70, 50], [480, 240, 80, 60],
+    [90, 320, 70, 40], [200, 320, 90, 40], [330, 330, 60, 35], [420, 320, 100, 45],
+  ];
+  const inArea = new Set([6, 7, 8, 11, 12, 13]);
+  const top: Record<number, string> = { 12: "640 kWp", 8: "410 kWp", 6: "380 kWp" };
+  return (
+    <DarkFrame id="sunscout" label="An industrial area on a map: the rep draws an area, Sunscout finds the factory roofs inside it and sizes the best ones">
+      {/* roads */}
+      <path d="M0 125 H640 M0 222 H640 M0 305 H640 M130 0 V400 M245 0 V400 M365 0 V400 M470 0 V400" stroke={DLINE} strokeOpacity="0.12" strokeWidth="10" />
+      {roofs.map(([x, y, w, h], i) => (
+        <rect key={i} x={x} y={y} width={w} height={h} rx="3"
+          fill={inArea.has(i) ? (top[i] ? DACCENT : "rgba(127,209,166,0.35)") : "rgba(207,232,218,0.10)"}
+          stroke={inArea.has(i) ? DACCENT : DLINE} strokeOpacity={inArea.has(i) ? 1 : 0.35} strokeWidth="1.4" />
+      ))}
+      {/* the area the rep drew */}
+      <path d="M140 132 L470 128 L478 318 L240 312 L150 300 Z" fill="none" stroke="#fff" strokeWidth="2" strokeDasharray="7 6" />
+      {[[140, 132], [470, 128], [478, 318], [150, 300]].map(([x, y]) => <circle key={x} cx={x} cy={y} r="5" fill="#fff" />)}
+      {/* size labels on the best roofs */}
+      {Object.entries(top).map(([k, label]) => {
+        const [x, y, w] = roofs[Number(k)];
+        return (
+          <g key={k} transform={`translate(${x + w / 2},${y - 10})`}>
+            <rect x="-38" y="-16" width="76" height="22" rx="11" fill="#0B1A12" opacity="0.85" />
+            <text y="0" textAnchor="middle" fontSize="12" fontWeight="700" fill="#fff" fontFamily="Inter, system-ui, sans-serif">{label}</text>
+          </g>
+        );
+      })}
+      {/* ranked list */}
+      <g transform="translate(520,20)">
+        <rect width="108" height="112" rx="10" fill="#0E3F2A" stroke={DLINE} strokeOpacity="0.4" />
+        {[0, 1, 2, 3].map((i) => (
+          <g key={i} transform={`translate(12,${18 + i * 23})`}>
+            <rect width="10" height="10" rx="2" fill={i < 3 ? DACCENT : DLINE} opacity={i < 3 ? 1 : 0.35} />
+            <rect x="18" y="1" width={[64, 56, 48, 40][i]} height="8" rx="4" fill={DLINE} opacity="0.4" />
+          </g>
+        ))}
+      </g>
+    </DarkFrame>
+  );
+}

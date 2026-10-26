@@ -4,10 +4,10 @@ import Reveal from "@/components/Reveal";
 
 const SITE = "https://turbobytesconsulting.com";
 const DESC =
-  "Our products: Slate, an executive assistant for leaders; Distil, a proposal engine; Vantage, a knowledge portal with sources; Meridian, a connected operating system.";
+  "Our products: Slate for leaders, Distil for engineering proposals, Vantage for knowledge with sources, Meridian for connected teams, Sunscout for rooftop solar prospecting.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Products: Slate, Distil, Vantage and Meridian | TBC" },
+  title: { absolute: "Products: Slate, Distil, Vantage, Meridian, Sunscout | TBC" },
   description: DESC,
   alternates: { canonical: "/products" },
   openGraph: { title: "Products", description: DESC, url: `${SITE}/products`, images: [{ url: "/img/og-default.png", width: 1200, height: 630 }] },
@@ -56,6 +56,19 @@ const ICONS: Record<string, JSX.Element> = {
       <circle cx="120" cy="120" r="14" {...stroke} fill="#1F8A5B" />
     </svg>
   ),
+  sunscout: (
+    <svg viewBox="0 0 240 240" className="w-full h-full" aria-hidden="true">
+      <circle cx="176" cy="62" r="20" {...stroke} />
+      {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => {
+        const a = (i * Math.PI) / 4;
+        return <path key={i} d={`M${176 + 28 * Math.cos(a)} ${62 + 28 * Math.sin(a)} L${176 + 38 * Math.cos(a)} ${62 + 38 * Math.sin(a)}`} {...stroke} opacity={0.6} />;
+      })}
+      {[[34, 120, 60, 40], [104, 110, 54, 50], [40, 172, 80, 34], [132, 172, 70, 40]].map(([x, y, w, h], i) => (
+        <rect key={i} x={x} y={y} width={w} height={h} rx="2" {...stroke} fill={i === 1 ? "#1F8A5B" : "none"} opacity={i === 1 ? 1 : 0.6} />
+      ))}
+      <path d="M24 100 L170 96 L214 214 L24 214 Z" {...stroke} strokeDasharray="6 6" opacity={0.8} />
+    </svg>
+  ),
 };
 
 const PRODUCTS = [
@@ -78,6 +91,8 @@ const PRODUCTS = [
       "Built for engineering and manufacturing firms that send detailed techno-commercial proposals.",
       "Distil builds each proposal from approved sections, traces every figure back to its source, and holds a proposal back when something does not add up. The LLM drafts the wording; it never sets a number.",
     ],
+    href: "/products/distil",
+    cta: "More about Distil",
   },
   {
     id: "vantage",
@@ -98,6 +113,17 @@ const PRODUCTS = [
       "Meridian connects the handoffs between departments, from enquiry to dispatch, so everyone can see where work is waiting and who it is waiting on.",
       "It is built around approvals and handoffs. It does not replace your accounting system; it makes the work around it visible.",
     ],
+  },
+  {
+    id: "sunscout",
+    name: "Sunscout",
+    line: "Find the rooftops worth a proposal.",
+    body: [
+      "A prospecting tool for rooftop solar companies that sell to factories and warehouses.",
+      "Draw an industrial area and Sunscout finds the buildings, groups them into customer sites, sizes them in kWp, works out savings from your own tariff and cost inputs, and ranks the list for your sales team.",
+    ],
+    href: "/products/sunscout",
+    cta: "More about Sunscout",
   },
 ];
 

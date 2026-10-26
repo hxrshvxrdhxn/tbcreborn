@@ -24,7 +24,7 @@ export const products: Link[] = [
   },
   {
     title: "Distil",
-    href: "/products#distil",
+    href: "/products/distil",
     blurb: "Complex proposals, assembled from verified parts.",
   },
   {
@@ -36,6 +36,11 @@ export const products: Link[] = [
     title: "Meridian",
     href: "/products#meridian",
     blurb: "One operating system that connects every team.",
+  },
+  {
+    title: "Sunscout",
+    href: "/products/sunscout",
+    blurb: "Rooftop solar prospecting for commercial and industrial EPCs.",
   },
 ];
 
