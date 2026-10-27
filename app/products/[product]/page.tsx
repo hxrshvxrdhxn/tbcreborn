@@ -24,7 +24,8 @@ export function generateMetadata({ params }: { params: { product: string } }): M
     title: { absolute: p.title },
     description: p.description,
     alternates: { canonical: `/products/${p.slug}` },
-    openGraph: { title: { absolute: p.title }, description: p.description, url: `${BASE}/products/${p.slug}`, images: [{ url: "/img/og-default.png", width: 1200, height: 630 }] },
+    openGraph: { title: { absolute: p.title }, description: p.description, url: `${BASE}/products/${p.slug}`, images: [{ url: `/img/og-${p.slug}.png`, width: 1200, height: 630, alt: p.title }] },
+    twitter: { card: "summary_large_image", images: [`/img/og-${p.slug}.png`] },
   };
 }
 
