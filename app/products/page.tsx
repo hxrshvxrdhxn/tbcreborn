@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import YouTubeLite from "@/components/YouTubeLite";
+import { liveVideos, videoSchema } from "@/lib/social";
+
+// Re-render every 15 minutes so a video appears on the site once it goes public on YouTube.
+export const revalidate = 900;
 
 const SITE = "https://turbobytesconsulting.com";
 const DESC =
@@ -128,6 +133,7 @@ const PRODUCTS = [
 ];
 
 export default function ProductsPage() {
+  const videos = liveVideos();
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -183,6 +189,30 @@ export default function ProductsPage() {
           </div>
         </section>
       ))}
+
+      {videos.length > 0 && (
+      <section className="bg-white py-s7 border-b border-light-grey" aria-labelledby="watch-heading">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videos.map(videoSchema)) }} />
+        <div className="container-tbc">
+          <Reveal>
+            <h2 id="watch-heading" className="section-heading text-balance mb-4">See them in action.</h2>
+            <p className="text-[17px] text-mid-grey leading-relaxed measure-68 mb-10">Short films on how our products work, from first click to finished result.</p>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {videos.map((v) => (
+              <div key={v.id} className="flex flex-col gap-4">
+                <YouTubeLite id={v.id} title={v.title} poster={v.poster} />
+                {v.product && (
+                  <Link href={`/products/${v.product}`} className="font-display font-semibold text-royal hover:text-royal-mid">
+                    More about {v.product === "sunscout" ? "Sunscout" : "Distil"} →
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      )}
     </>
   );
 }

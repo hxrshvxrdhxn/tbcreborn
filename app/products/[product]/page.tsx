@@ -5,8 +5,13 @@ import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 import { SunscoutScene, CaseArt } from "@/components/Illustrations";
 import { productPages, productPageBySlug } from "@/lib/productPages";
+import YouTubeLite from "@/components/YouTubeLite";
+import { videoForProduct, videoSchema } from "@/lib/social";
 
 const BASE = "https://turbobytesconsulting.com";
+
+// Re-render every 15 minutes so a product video appears once it goes public on YouTube.
+export const revalidate = 900;
 
 export function generateStaticParams() {
   return productPages.map((p) => ({ product: p.slug }));
@@ -27,7 +32,10 @@ export default function ProductLanding({ params }: { params: { product: string }
   const p = productPageBySlug(params.product);
   if (!p) notFound();
 
+  const video = videoForProduct(p.slug);
+
   const schema = [
+    ...(video ? [videoSchema(video)] : []),
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -75,6 +83,27 @@ export default function ProductLanding({ params }: { params: { product: string }
           </div>
         </div>
       </section>
+
+      {video && (
+        <section className="bg-white py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="watch-heading">
+          <div className="container-tbc grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-center">
+            <Reveal>
+              <h2 id="watch-heading" className="section-heading text-balance mb-5">See {p.name} in two minutes.</h2>
+              <p className="text-body text-mid-grey leading-relaxed mb-6 text-pretty">{video.description}</p>
+              <a
+                href="https://www.youtube.com/channel/UCXQy14KS46mSFyu1VzEUqXw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-display font-semibold text-royal hover:text-forest transition-colors"
+              >
+                More videos on our YouTube channel
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </a>
+            </Reveal>
+            <YouTubeLite id={video.id} title={video.title} poster={video.poster} />
+          </div>
+        </section>
+      )}
 
       <section className="bg-ivory py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="how-heading">
         <div className="container-tbc">

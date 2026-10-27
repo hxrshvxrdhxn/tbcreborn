@@ -3,6 +3,8 @@ import Link from "next/link";
 import HeroLines from "@/components/HeroLines";
 import Reveal from "@/components/Reveal";
 import PracticeArt from "@/components/PracticeArt";
+import YouTubeLite from "@/components/YouTubeLite";
+import { liveVideos, videoSchema } from "@/lib/social";
 import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
@@ -138,6 +140,7 @@ export const dynamic = 'force-dynamic';
 export default async function HomePage() {
   const posts = await getAllPosts();
   const insightPosts = posts.slice(0, 8);
+  const videos = liveVideos();
 
   return (
     <>
@@ -293,6 +296,31 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── 4c. PRODUCTS AT WORK (YouTube, click to play) ── */}
+      {videos.length > 0 && (
+        <section className="bg-white py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="watch-heading">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videos.map(videoSchema)) }} />
+          <div className="container-tbc">
+            <Reveal>
+              <h2 id="watch-heading" className="section-heading mb-4 text-balance">Our products at work.</h2>
+              <p className="text-[17px] text-mid-grey leading-relaxed measure-68 mb-10 md:mb-s5">Short films on how our products work, from first click to finished result.</p>
+            </Reveal>
+            <div className={`grid grid-cols-1 ${videos.length > 1 ? "md:grid-cols-2" : "max-w-3xl"} gap-8`}>
+              {videos.map((v) => (
+                <div key={v.id} className="flex flex-col gap-4">
+                  <YouTubeLite id={v.id} title={v.title} poster={v.poster} />
+                  {v.product && (
+                    <Link href={`/products/${v.product}`} className="font-display font-semibold text-royal hover:text-royal-mid">
+                      More about {v.product === "sunscout" ? "Sunscout" : "Distil"}, with a free trial →
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── 5. WHY TBC (Dark Section) ── */}
       <SectionInk>

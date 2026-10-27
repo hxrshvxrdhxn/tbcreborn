@@ -165,8 +165,10 @@ export default function RootLayout({
                   },
                   "sameAs": [
                     "https://x.com/social_TBC",
-                    "https://instagram.com/turbobytesconsulting",
+                    "https://www.instagram.com/turbobytesconsulting/",
                     "https://www.youtube.com/channel/UCXQy14KS46mSFyu1VzEUqXw",
+                    "https://www.facebook.com/profile.php?id=61587117418569",
+                    "https://www.linkedin.com/in/tbcofficial/",
                     "https://share.google/jp3MGXYa4u27I4bcq"
                   ]
                 },
