@@ -11,6 +11,7 @@ const customJestConfig = {
   testEnvironment: 'node',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
+    '^marked$': '<rootDir>/node_modules/marked/lib/marked.umd.js',
   },
   modulePathIgnorePatterns: ['<rootDir>/.next/'],
   transformIgnorePatterns: ['/node_modules/(?!(@exodus)/)'],

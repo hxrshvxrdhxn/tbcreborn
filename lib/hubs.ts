@@ -197,10 +197,8 @@ export function unlinkUnpublished(html: string, visible: Set<string> | null): st
 }
 
 export async function renderMarkdown(content: string): Promise<string> {
-  const { remark } = await import("remark");
-  const remarkHtmlModule = await import("remark-html");
-  const remarkHtml = (remarkHtmlModule as unknown as { default?: Parameters<ReturnType<typeof remark>["use"]>[0] }).default || remarkHtmlModule;
-  const rawHtml = (await remark().use(remarkHtml as Parameters<ReturnType<typeof remark>["use"]>[0]).process(content)).toString();
+  const { marked } = await import("marked");
+  const rawHtml = await marked.parse(content);
 
   const clean = sanitizeHtml(rawHtml, {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat([
@@ -212,7 +210,13 @@ export async function renderMarkdown(content: string): Promise<string> {
     allowedAttributes: {
       ...sanitizeHtml.defaults.allowedAttributes,
       "*": ["class", "id"],
+      th: ["align", "scope", "colspan", "rowspan"],
+      td: ["align", "colspan", "rowspan"],
     },
   });
-  return unlinkUnpublished(clean, await getVisibleInternalPaths());
+  const wrappedHtml = clean.replace(
+    /<table(\b[^>]*)>([\s\S]*?)<\/table>/g,
+    '<div class="table-container"><table$1>$2</table></div>'
+  );
+  return unlinkUnpublished(wrappedHtml, await getVisibleInternalPaths());
 }

@@ -1,8 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import remarkHtml from "remark-html";
+import { marked } from "marked";
 import sanitizeHtml from "sanitize-html";
 import { blogPosts as staticPosts, BlogPost } from "./content";
 import { prisma } from "./prisma";
@@ -215,9 +214,7 @@ export async function getPostBySlug(
 
   if (!post) return undefined;
 
-  const rawHtml = (
-    await remark().use(remarkHtml).process(post.content)
-  ).toString();
+  const rawHtml = await marked.parse(post.content);
   
   const html = sanitizeHtml(rawHtml, {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat([
@@ -227,12 +224,19 @@ export async function getPostBySlug(
       "iframe",
     ]),
     allowedAttributes: {
-        ...sanitizeHtml.defaults.allowedAttributes,
-        "*": ["class", "id"],
+      ...sanitizeHtml.defaults.allowedAttributes,
+      "*": ["class", "id"],
+      th: ["align", "scope", "colspan", "rowspan"],
+      td: ["align", "colspan", "rowspan"],
     },
   });
 
-  return { ...post, content: html };
+  const wrappedHtml = html.replace(
+    /<table(\b[^>]*)>([\s\S]*?)<\/table>/g,
+    '<div class="table-container"><table$1>$2</table></div>'
+  );
+
+  return { ...post, content: wrappedHtml };
 }
 
 export async function getAllSlugs(): Promise<string[]> {

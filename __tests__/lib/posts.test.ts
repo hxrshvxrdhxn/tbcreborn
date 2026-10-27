@@ -1,13 +1,5 @@
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 
-jest.mock("remark", () => ({
-  remark: () => ({
-    use: () => ({
-      process: async (content: string) => content,
-    }),
-  }),
-}));
-jest.mock("remark-html", () => ({}));
 jest.mock("isomorphic-dompurify", () => ({
   sanitize: (html: string) => html,
 }));
@@ -55,6 +47,16 @@ jest.mock("@/lib/prisma", () => {
               createdAt: new Date(),
             });
           }
+          if (where.slug === "table-post") {
+            return Promise.resolve({
+              id: "4",
+              slug: "table-post",
+              title: "Table Post",
+              content: "# Summary\n\n| Check | Example |\n| :--- | :--- |\n| Code | Example description |\n",
+              status: "published",
+              createdAt: new Date(),
+            });
+          }
           return Promise.resolve(null);
         })
       }
@@ -76,5 +78,16 @@ describe("Posts Library", () => {
     const post = await getPostBySlug("test-post");
     expect(post).toBeDefined();
     expect(post?.title).toBe("Test Post");
+  });
+
+  it("parses markdown tables into responsive HTML tables in getPostBySlug", async () => {
+    const post = await getPostBySlug("table-post");
+    expect(post).toBeDefined();
+    expect(post?.content).toContain('<div class="table-container">');
+    expect(post?.content).toContain("<table");
+    expect(post?.content).toContain("<th");
+    expect(post?.content).toContain("Check");
+    expect(post?.content).toContain("<td");
+    expect(post?.content).toContain("Example description");
   });
 });

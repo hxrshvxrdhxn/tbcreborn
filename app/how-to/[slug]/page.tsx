@@ -65,8 +65,15 @@ export default async function HowToGuidePage({ params }: { params: { slug: strin
     allowedAttributes: {
       ...sanitizeHtml.defaults.allowedAttributes,
       "*": ["class", "id"],
+      th: ["align", "scope", "colspan", "rowspan"],
+      td: ["align", "colspan", "rowspan"],
     },
   });
+
+  const wrappedHtml = html.replace(
+    /<table(\b[^>]*)>([\s\S]*?)<\/table>/g,
+    '<div class="table-container"><table$1>$2</table></div>'
+  );
 
   const canonicalUrl = `https://turbobytesconsulting.com/how-to/${guide.slug}`;
   const updatedDate = new Date(guide.updatedAt || guide.createdAt).toLocaleDateString('en-GB', {
@@ -167,8 +174,16 @@ export default async function HowToGuidePage({ params }: { params: { slug: strin
             [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-6 [&_ol_li]:mb-2
             [&_blockquote]:border-l-4 [&_blockquote]:border-gold [&_blockquote]:pl-5 [&_blockquote]:italic [&_blockquote]:text-mid-grey [&_blockquote]:my-8
             [&_hr]:border-light-grey [&_hr]:my-10
+            [&_.table-container]:my-8 [&_.table-container]:overflow-x-auto [&_.table-container]:rounded-lg [&_.table-container]:border [&_.table-container]:border-light-grey [&_.table-container]:bg-white
+            [&_table]:w-full [&_table]:border-collapse [&_table]:text-[15px]
+            [&_thead]:bg-ivory [&_thead]:border-b [&_thead]:border-light-grey
+            [&_th]:px-4 [&_th]:py-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-ink [&_th]:text-[14px] [&_th]:border-b [&_th]:border-light-grey
+            [&_td]:px-4 [&_td]:py-3 [&_td]:text-ink/90 [&_td]:border-b [&_td]:border-light-grey/60 [&_td]:align-top
+            [&_tbody_tr:last-child_td]:border-b-0
+            [&_tbody_tr:nth-child(even)]:bg-[#FAFAF8]
+            [&_tbody_tr:hover]:bg-ivory/60
           "
-          dangerouslySetInnerHTML={{ __html: html }} 
+          dangerouslySetInnerHTML={{ __html: wrappedHtml }} 
         />
       </div>
     </article>
