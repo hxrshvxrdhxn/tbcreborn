@@ -24,8 +24,8 @@ export function generateMetadata({ params }: { params: { product: string } }): M
     title: { absolute: p.title },
     description: p.description,
     alternates: { canonical: `/products/${p.slug}` },
-    openGraph: { title: { absolute: p.title }, description: p.description, url: `${BASE}/products/${p.slug}`, images: [{ url: `/img/og-${p.slug}.png`, width: 1200, height: 630, alt: p.title }] },
-    twitter: { card: "summary_large_image", images: [`/img/og-${p.slug}.png`] },
+    openGraph: { title: { absolute: p.title }, description: p.description, url: `${BASE}/products/${p.slug}`, images: [{ url: `/img/og-${p.base ?? p.slug}.png`, width: 1200, height: 630, alt: p.title }] },
+    twitter: { card: "summary_large_image", images: [`/img/og-${p.base ?? p.slug}.png`] },
   };
 }
 
@@ -33,7 +33,8 @@ export default function ProductLanding({ params }: { params: { product: string }
   const p = productPageBySlug(params.product);
   if (!p) notFound();
 
-  const video = videoForProduct(p.slug);
+  const art = p.base ?? p.slug;
+  const video = videoForProduct(art);
 
   const schema = [
     ...(video ? [videoSchema(video)] : []),
@@ -59,7 +60,7 @@ export default function ProductLanding({ params }: { params: { product: string }
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: BASE },
         { "@type": "ListItem", position: 2, name: "Products", item: `${BASE}/products` },
-        { "@type": "ListItem", position: 3, name: p.name, item: `${BASE}/products/${p.slug}` },
+        { "@type": "ListItem", position: 3, name: p.breadcrumb ?? p.name, item: `${BASE}/products/${p.slug}` },
       ],
     },
   ];
@@ -80,7 +81,7 @@ export default function ProductLanding({ params }: { params: { product: string }
             </div>
           </div>
           <div className="relative aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/10">
-            {p.slug === "sunscout" ? <SunscoutScene /> : <CaseArt kind="llm" />}
+            {art === "sunscout" ? <SunscoutScene /> : <CaseArt kind="llm" />}
           </div>
         </div>
       </section>
@@ -170,6 +171,11 @@ export default function ProductLanding({ params }: { params: { product: string }
             <h3 className="font-display font-bold text-[22px] text-ink mb-3">Getting started</h3>
             <p className="text-[16px] text-mid-grey leading-relaxed mb-6">{p.status}</p>
             <Link href="/book-consultation" className="btn-primary">Start a free trial</Link>
+            {p.related && (
+              <p className="mt-6 text-[15px]">
+                <Link href={p.related.href} className="font-display font-semibold text-royal hover:text-forest transition-colors">{p.related.label}</Link>
+              </p>
+            )}
           </div>
         </div>
       </section>

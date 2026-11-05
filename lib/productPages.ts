@@ -16,6 +16,9 @@ export type ProductPage = {
   forWho: string[];
   status: string;
   faqs: { q: string; a: string }[];
+  base?: string; // product this page is a market edition of: shares its artwork, video and link image
+  breadcrumb?: string; // short label when the page name is long
+  related?: { href: string; label: string };
 };
 
 export const productPages: ProductPage[] = [
@@ -58,6 +61,7 @@ export const productPages: ProductPage[] = [
       "Teams working across several states, each with its own tariffs and metering rules",
       "EPCs expanding into new countries, with a settings pack per market",
     ],
+    related: { href: "/products/sunscout-uk-europe", label: "Selling in the UK or Europe? See Sunscout for the UK and Europe" },
     status: "Start with a free trial. Tell us one industrial area your team sells in and we run Sunscout on it, then walk you through the ranked site list. If it is useful, we set it up with your own tariff and cost inputs and your target areas.",
     faqs: [
       { q: "Where does the building data come from?", a: "From open datasets such as Overture Maps and OpenStreetMap, which may be stored and reused with attribution. We do not scrape Google Maps." },
@@ -69,11 +73,62 @@ export const productPages: ProductPage[] = [
     ],
   },
   {
+    slug: "sunscout-uk-europe",
+    name: "Sunscout for the UK and Europe",
+    base: "sunscout",
+    breadcrumb: "Sunscout UK and Europe",
+    title: "Sunscout UK & Europe: Commercial Rooftop Prospecting | TBC",
+    description:
+      "Draw an industrial estate and Sunscout sizes every commercial roof in kWp and ranks the sites by likely savings, using open map data and your own tariffs.",
+    eyebrow: "For commercial rooftop solar teams in the UK and Europe",
+    headline: "Know which commercial roofs to call on first.",
+    lead:
+      "Sunscout is a prospecting tool for solar installers and developers who sell to warehouses, factories and business parks. Draw an industrial estate on the map. Sunscout finds every building, groups them into customer sites, sizes each roof in kWp, works out savings from your own tariff and cost inputs, and ranks the list, so your team spends its time on the sites most likely to buy.",
+    steps: [
+      { title: "Draw an area", body: "An industrial estate, a business park, a logistics corridor or a radius around a town." },
+      { title: "Find the sites", body: "Building footprints from open data are cleaned, de-duplicated and grouped into customer sites: one premises, or a cluster of units." },
+      { title: "Size and score", body: "Each site is sized in kWp, with savings and payback from your own tariffs, export rates and costs, then scored on factors you can see." },
+      { title: "Review and assign", body: "Your team confirms the occupant, marks roofs that already carry solar or are not a fit, and assigns the rest." },
+      { title: "Take it to sales", body: "Export the ranked list for your CRM, with the reasons each site ranks where it does." },
+    ],
+    capabilities: [
+      { title: "Footprints to customer sites", body: "Thousands of building outlines become a short list of real sites, grouped by premises, with duplicates across sources removed." },
+      { title: "Sizing in kWp", body: "Usable roof area and system size for each site, with the assumptions shown." },
+      { title: "Savings from your numbers", body: "Savings and payback use your import tariffs, export rates, cost per kWp, yield and self-consumption share, set per country and versioned." },
+      { title: "A score you can read", body: "Each site gets a score with its breakdown, so a sales manager can see why one warehouse ranks above another." },
+      { title: "Roofs that already have solar", body: "Existing arrays tagged in open data are flagged, so nobody calls a site that is already done." },
+      { title: "Several markets, one tool", body: "A settings pack per country, in pounds or euros, so a team selling in more than one market keeps the numbers right." },
+      { title: "A review queue built for speed", body: "Keyboard shortcuts, undo and a tablet-friendly layout, so one person can work through an estate in a sitting." },
+      { title: "Clean export", body: "A CSV export ready for your CRM, protected against spreadsheet formula injection." },
+    ],
+    principles: [
+      { title: "Gates, not guesses", body: "If a business input is missing, Sunscout says so and holds the savings back. It never fills a gap with a default. Every number is calculated by code." },
+      { title: "Licensed data only", body: "Open data such as Overture Maps and OpenStreetMap, with attribution. No scraping of Google Maps." },
+      { title: "People send, software prepares", body: "Sunscout does not email or message anyone. Your team decides who to contact, and how, under your own consent and marketing rules." },
+      { title: "Your data stays yours", body: "Each company's data is kept separate at the database level, built with GDPR and UK GDPR in mind." },
+    ],
+    forWho: [
+      "Commercial solar installers selling to warehouses, factories and business parks",
+      "Developers offering PPAs and leases on commercial roofs",
+      "Teams covering several regions or countries, each with its own tariffs and export rates",
+      "Distributors and wholesalers who want to point their installer network at the right sites",
+    ],
+    status: "Start with a free trial. Tell us one industrial estate or business park your team covers and we run Sunscout on it, then walk you through the ranked site list on a call. If it is useful, we set it up with your own tariffs, export rates and costs.",
+    faqs: [
+      { q: "Does it cover the UK and the Netherlands?", a: "Yes, and the rest of Europe. Building outlines come from open datasets with good European coverage, and tariffs and export rates are set per country." },
+      { q: "Why does it ask for our tariffs and costs?", a: "Because savings and payback should come from your numbers. If an input is missing, Sunscout tells you rather than guessing." },
+      { q: "Does it contact businesses for us?", a: "No. It prepares the list and the numbers. Your team decides who to contact and sends every message itself, under your own data protection and marketing rules." },
+      { q: "Where is our data held, and who can see it?", a: "Only your organisation can see it. Each company's data is separated at the database level, with access controlled by role, and we can agree where it is hosted." },
+      { q: "Can it price in pounds and euros?", a: "Yes. Each country has its own settings pack and currency, so a team selling in the UK and in Europe keeps both sets of numbers right." },
+      { q: "Is there a free trial?", a: "Yes. Name one industrial estate or business park and we run Sunscout on it for you at no cost, with the ranked site list and kWp sizes." },
+    ],
+  },
+  {
     slug: "distil",
     name: "Distil",
     title: "Distil: Proposal Engine for Engineering Firms | TBC",
     description:
-      "Distil assembles detailed techno-commercial proposals from your approved sections and rates, traces every figure to its source and stops when a number does not add up.",
+      "Distil assembles techno-commercial proposals from your approved sections and rates, traces every figure to its source and stops when a number does not add up.",
     eyebrow: "For engineering and manufacturing firms",
     headline: "Complex proposals, assembled from verified parts.",
     lead:

@@ -64,6 +64,7 @@ ${consultingLinks.map(line).join("\n")}
 ## Products
 
 ${products.map(line).join("\n")}
+- [Sunscout for the UK and Europe](${BASE}/products/sunscout-uk-europe): commercial rooftop prospecting for installers and developers in the UK and Europe, in pounds or euros
 - [All products](${BASE}/products): overview of Slate, Distil, Vantage, Meridian and Sunscout
 
 ## Engineering
