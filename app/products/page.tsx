@@ -9,7 +9,7 @@ export const revalidate = 900;
 
 const SITE = "https://turbobytesconsulting.com";
 const DESC =
-  "Our products: Slate for leaders, Distil for engineering proposals, Vantage for knowledge with sources, Meridian for connected teams, Sunscout for rooftop solar prospecting.";
+  "Slate for leaders, Distil for engineering proposals, Vantage for knowledge with sources, Meridian for connected teams and Sunscout for rooftop solar prospecting.";
 
 export const metadata: Metadata = {
   title: { absolute: "Products: Slate, Distil, Vantage, Meridian, Sunscout | TBC" },
