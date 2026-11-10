@@ -19,6 +19,7 @@ export type ProductPage = {
   base?: string; // product this page is a market edition of: shares its artwork, video and link image
   breadcrumb?: string; // short label when the page name is long
   related?: { href: string; label: string };
+  site?: { href: string; label: string; note: string }; // the product's own website, with videos and the free demo form
 };
 
 export const productPages: ProductPage[] = [
@@ -61,6 +62,7 @@ export const productPages: ProductPage[] = [
       "Teams working across several states, each with its own tariffs and metering rules",
       "EPCs expanding into new countries, with a settings pack per market",
     ],
+    site: { href: "https://sunscout.in/#trial", label: "Book a free demo on sunscout.in", note: "Videos, how it works and the free demo form are on sunscout.in." },
     related: { href: "/products/sunscout-uk-europe", label: "Selling in the UK or Europe? See Sunscout for the UK and Europe" },
     status: "Start with a free trial. Tell us one industrial area your team sells in and we run Sunscout on it, then walk you through the ranked site list. If it is useful, we set it up with your own tariff and cost inputs and your target areas.",
     faqs: [

@@ -76,7 +76,11 @@ export default function ProductLanding({ params }: { params: { product: string }
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,54px)] text-white leading-[1.08] tracking-[-0.5px] mb-6 text-balance">{p.headline}</h1>
             <p className="text-body text-white/80 leading-relaxed max-w-2xl mb-8 text-pretty">{p.lead}</p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/book-consultation" className="btn-primary px-7 py-3.5">Start a free trial</Link>
+              {p.site ? (
+                <a href={p.site.href} target="_blank" rel="noopener" className="btn-primary px-7 py-3.5">{p.site.label}</a>
+              ) : (
+                <Link href="/book-consultation" className="btn-primary px-7 py-3.5">Start a free trial</Link>
+              )}
               <a href="#capabilities" className="inline-flex items-center px-7 py-3.5 border border-white/40 text-white font-display font-semibold rounded hover:bg-white/10 transition-colors">See what it does</a>
             </div>
           </div>
@@ -170,7 +174,14 @@ export default function ProductLanding({ params }: { params: { product: string }
           <div className="bg-white rounded-2xl border border-light-grey p-8 self-start">
             <h3 className="font-display font-bold text-[22px] text-ink mb-3">Getting started</h3>
             <p className="text-[16px] text-mid-grey leading-relaxed mb-6">{p.status}</p>
-            <Link href="/book-consultation" className="btn-primary">Start a free trial</Link>
+            {p.site ? (
+              <>
+                <a href={p.site.href} target="_blank" rel="noopener" className="btn-primary">{p.site.label}</a>
+                <p className="mt-4 text-[15px] text-mid-grey leading-relaxed">{p.site.note}</p>
+              </>
+            ) : (
+              <Link href="/book-consultation" className="btn-primary">Start a free trial</Link>
+            )}
             {p.related && (
               <p className="mt-6 text-[15px]">
                 <Link href={p.related.href} className="font-display font-semibold text-royal hover:text-forest transition-colors">{p.related.label}</Link>
