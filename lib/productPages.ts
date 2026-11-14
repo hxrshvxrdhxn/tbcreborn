@@ -1,4 +1,4 @@
-// Product landing pages (Sunscout, Distil). Plain data so the page, sitemap and llms.txt read
+// Product landing pages (Sunscout, Distil, and the operations tools in productPagesTools.ts). Plain data so the page, sitemap and llms.txt read
 // from one source. Copy rules: British spelling, no exclamation marks, no client names or client
 // data, no figures we cannot stand behind.
 
@@ -22,7 +22,9 @@ export type ProductPage = {
   site?: { href: string; label: string; note: string }; // the product's own website, with videos and the free demo form
 };
 
-export const productPages: ProductPage[] = [
+import { toolPages } from "./productPagesTools";
+
+const corePages: ProductPage[] = [
   {
     slug: "sunscout",
     name: "Sunscout",
@@ -171,5 +173,7 @@ export const productPages: ProductPage[] = [
     ],
   },
 ];
+
+export const productPages: ProductPage[] = [...corePages, ...toolPages];
 
 export const productPageBySlug = (slug: string) => productPages.find((p) => p.slug === slug);

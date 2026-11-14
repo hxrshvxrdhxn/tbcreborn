@@ -9,10 +9,10 @@ export const revalidate = 900;
 
 const SITE = "https://turbobytesconsulting.com";
 const DESC =
-  "Slate for leaders, Distil for engineering proposals, Vantage for knowledge with sources, Meridian for connected teams and Sunscout for rooftop solar prospecting.";
+  "Software for founder-led businesses: Distil for proposals, Vantage for product answers, Cadence for orders, Assay for QC, Steward for service, Compass, Relay, Rapport and Sunscout.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Products: Slate, Distil, Vantage, Meridian, Sunscout | TBC" },
+  title: { absolute: "Products: Distil, Vantage, Cadence, Steward, Sunscout and more | TBC" },
   description: DESC,
   alternates: { canonical: "/products" },
   openGraph: { title: "Products", description: DESC, url: `${SITE}/products`, images: [{ url: "/img/og-default.png", width: 1200, height: 630 }] },
@@ -74,6 +74,62 @@ const ICONS: Record<string, JSX.Element> = {
       <path d="M24 100 L170 96 L214 214 L24 214 Z" {...stroke} strokeDasharray="6 6" opacity={0.8} />
     </svg>
   ),
+  cadence: (
+    <svg viewBox="0 0 240 240" className="w-full h-full" aria-hidden="true">
+      {[0, 1, 2, 3].map((i) => <rect key={i} x={30 + i * 48} y="70" width="36" height="100" rx="3" {...stroke} opacity={0.55} />)}
+      <rect x="36" y="82" width="24" height="18" rx="2" {...stroke} fill="#1F8A5B" />
+      <rect x="84" y="112" width="24" height="18" rx="2" {...stroke} />
+      <rect x="132" y="82" width="24" height="18" rx="2" {...stroke} />
+      <path d="M30 196 H210" {...stroke} />
+      <path d="M190 186 L210 196 L190 206" {...stroke} />
+    </svg>
+  ),
+  assay: (
+    <svg viewBox="0 0 240 240" className="w-full h-full" aria-hidden="true">
+      <path d="M96 36 V100 L56 186 a14 14 0 0 0 13 20 H171 a14 14 0 0 0 13 -20 L144 100 V36" {...stroke} />
+      <path d="M86 36 H154" {...stroke} />
+      <path d="M72 160 H168" {...stroke} opacity={0.5} />
+      <path d="M100 182 L114 196 L142 168" {...stroke} strokeWidth={4} />
+    </svg>
+  ),
+  steward: (
+    <svg viewBox="0 0 240 240" className="w-full h-full" aria-hidden="true">
+      <circle cx="120" cy="120" r="34" {...stroke} />
+      {Array.from({ length: 8 }).map((_, i) => {
+        const a = (i * Math.PI) / 4;
+        return <path key={i} d={`M${120 + 34 * Math.cos(a)} ${120 + 34 * Math.sin(a)} L${120 + 50 * Math.cos(a)} ${120 + 50 * Math.sin(a)}`} {...stroke} strokeWidth={6} />;
+      })}
+      <circle cx="120" cy="120" r="12" {...stroke} fill="#1F8A5B" />
+      <circle cx="120" cy="120" r="86" {...stroke} strokeDasharray="6 8" opacity={0.6} />
+    </svg>
+  ),
+  compass: (
+    <svg viewBox="0 0 240 240" className="w-full h-full" aria-hidden="true">
+      <circle cx="120" cy="120" r="84" {...stroke} />
+      <circle cx="120" cy="120" r="64" {...stroke} opacity={0.4} />
+      <path d="M120 60 L136 120 L120 180 L104 120 Z" {...stroke} />
+      <path d="M120 60 L136 120 L104 120 Z" {...stroke} fill="#1F8A5B" />
+    </svg>
+  ),
+  relay: (
+    <svg viewBox="0 0 240 240" className="w-full h-full" aria-hidden="true">
+      <circle cx="120" cy="120" r="22" {...stroke} fill="#1F8A5B" />
+      {[[50, 60], [190, 60], [40, 150], [200, 150], [120, 205]].map(([x, y], i) => (
+        <g key={i}>
+          <path d={`M120 120 L${x} ${y}`} {...stroke} opacity={0.5} />
+          <rect x={x - 14} y={y - 14} width="28" height="28" rx="3" {...stroke} fill="#0C3D2A" />
+        </g>
+      ))}
+    </svg>
+  ),
+  rapport: (
+    <svg viewBox="0 0 240 240" className="w-full h-full" aria-hidden="true">
+      <rect x="34" y="50" width="120" height="78" rx="10" {...stroke} />
+      <path d="M60 128 L54 150 L82 128" {...stroke} />
+      <rect x="96" y="110" width="110" height="70" rx="10" {...stroke} fill="#0C3D2A" />
+      <path d="M128 145 L142 159 L172 129" {...stroke} strokeWidth={4} />
+    </svg>
+  ),
 };
 
 const PRODUCTS = [
@@ -107,8 +163,8 @@ const PRODUCTS = [
       "A private knowledge portal over your catalogues, drawings, manuals and notes.",
       "Ask a question in plain language and get an answer with the page it came from, so your team can check it in seconds.",
     ],
-    href: "/work/ai-knowledge-portal.html",
-    cta: "See the case study",
+    href: "/products/vantage",
+    cta: "More about Vantage",
   },
   {
     id: "meridian",
@@ -129,6 +185,72 @@ const PRODUCTS = [
     ],
     href: "/products/sunscout",
     cta: "More about Sunscout",
+  },
+  {
+    id: "cadence",
+    name: "Cadence",
+    line: "Know where every order is, before the customer asks.",
+    body: [
+      "Every customer order from PO to dispatch on one board, with an owner and a date for each stage.",
+      "Delays show up when the first stage slips, not on the promised date, and a customer update goes out in one tap when you choose.",
+    ],
+    href: "/products/cadence",
+    cta: "More about Cadence",
+  },
+  {
+    id: "assay",
+    name: "Assay",
+    line: "Every batch, on record. Every COA, from the data.",
+    body: [
+      "Batch records, QC results, deviations and documents for food, chemical and nutraceutical manufacturers.",
+      "Pass or fail is worked out against your specification, and certificates of analysis are generated from the recorded results.",
+    ],
+    href: "/products/assay",
+    cta: "More about Assay",
+  },
+  {
+    id: "steward",
+    name: "Steward",
+    line: "Look after every machine you have sold.",
+    body: [
+      "One record for every machine in the field, with its contract, visits and parts.",
+      "Complaints get response clocks, preventive visits are scheduled from the contract, and renewals and spares are flagged ahead of time.",
+    ],
+    href: "/products/steward",
+    cta: "More about Steward",
+  },
+  {
+    id: "compass",
+    name: "Compass",
+    line: "Know which projects are slipping, and which are losing money.",
+    body: [
+      "Deliverables, client comments, timesheets and fee against hours for consultancies and design firms.",
+      "Progress reports are drafted from the period's data, and partners see every project's health on one screen.",
+    ],
+    href: "/products/compass",
+    cta: "More about Compass",
+  },
+  {
+    id: "relay",
+    name: "Relay",
+    line: "Let your dealers order without calling the office.",
+    body: [
+      "A phone app for dealers and distributors with their prices, schemes, stock and dues.",
+      "Schemes and credit are applied by rule as they order, and every order is tracked to delivery.",
+    ],
+    href: "/products/relay",
+    cta: "More about Relay",
+  },
+  {
+    id: "rapport",
+    name: "Rapport",
+    line: "No enquiry left waiting. No client document chased twice.",
+    body: [
+      "One inbox for every enquiry, with an owner, a response clock and a next step.",
+      "Proposals from your price list, client documents through a secure link, and renewals listed months ahead.",
+    ],
+    href: "/products/rapport",
+    cta: "More about Rapport",
   },
 ];
 

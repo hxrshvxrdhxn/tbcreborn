@@ -29,7 +29,7 @@ export const products: Link[] = [
   },
   {
     title: "Vantage",
-    href: "/products#vantage",
+    href: "/products/vantage",
     blurb: "Years of documents, turned into answers with sources.",
   },
   {
@@ -42,6 +42,12 @@ export const products: Link[] = [
     href: "/products/sunscout",
     blurb: "Rooftop solar prospecting for commercial and industrial EPCs.",
   },
+  { title: "Cadence", href: "/products/cadence", blurb: "Every order from PO to dispatch, on one board." },
+  { title: "Assay", href: "/products/assay", blurb: "Batch records, QC and COAs without retyping." },
+  { title: "Steward", href: "/products/steward", blurb: "Installed base, AMC and service for equipment makers." },
+  { title: "Compass", href: "/products/compass", blurb: "Projects, timesheets and reports for consultancies." },
+  { title: "Relay", href: "/products/relay", blurb: "Dealer ordering with your prices and schemes applied." },
+  { title: "Rapport", href: "/products/rapport", blurb: "Enquiries, follow-ups and client documents for service firms." },
 ];
 
 export type ConsultingService = {
