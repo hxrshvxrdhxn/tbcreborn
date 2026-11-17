@@ -20,6 +20,7 @@ const serviceLinks = [
 const companyLinks = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/agent-desk", label: "Agent Desk" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
