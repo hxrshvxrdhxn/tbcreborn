@@ -1,0 +1,13 @@
+{
+	email harshvardhan@turbobytesconsulting.com
+}
+
+turbobytesconsulting.com, www.turbobytesconsulting.com {
+	encode zstd gzip
+	reverse_proxy web:3000
+}
+
+# Plain-HTTP access by IP, for checks before DNS points here.
+http://129.121.168.29 {
+	reverse_proxy web:3000
+}

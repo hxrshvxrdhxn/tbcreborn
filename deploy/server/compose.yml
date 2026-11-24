@@ -1,0 +1,31 @@
+name: tbc
+services:
+  web:
+    build:
+      context: ./tbcreborn
+      dockerfile: deploy/server/Dockerfile
+      secrets: [siteenv]
+    image: tbc-web:latest
+    env_file: ./site.env
+    restart: unless-stopped
+    mem_limit: 1500m
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: ["80:80", "443:443", "443:443/udp"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: [web]
+volumes:
+  caddy-data:
+  caddy-config:
+secrets:
+  siteenv:
+    file: ./site.env
