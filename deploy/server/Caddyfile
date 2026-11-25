@@ -4,6 +4,7 @@
 
 turbobytesconsulting.com, www.turbobytesconsulting.com {
 	encode zstd gzip
+	header -Server
 	reverse_proxy 127.0.0.1:3000
 }
 

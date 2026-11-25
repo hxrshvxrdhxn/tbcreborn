@@ -6,6 +6,13 @@ import { isValidSession } from '@/lib/redis';
 export async function middleware(req: NextRequest) {
   const url = req.nextUrl;
   const hostname = req.headers.get('host') || '';
+  // Behind our reverse proxy req.url is the internal address (localhost:3000), so redirects are built
+  // from the public host the visitor actually used.
+  const fwdHost = req.headers.get('x-forwarded-host') || hostname;
+  // Only our own domains: a forged host header must never turn a redirect into an open redirect.
+  const publicBase = /^(www\.|admin\.|blog\.)?turbobytesconsulting\.(com|in)$/.test(fwdHost)
+    ? `https://${fwdHost}`
+    : 'https://turbobytesconsulting.com';
 
   // Bypass if it's a public API route or static asset
   if (
@@ -48,12 +55,12 @@ export async function middleware(req: NextRequest) {
   // 1. Direct path access protection
   if (url.pathname.startsWith('/admin') && url.pathname !== '/admin/login') {
     if (!(await checkAuth())) {
-      return NextResponse.redirect(new URL('/admin/login', req.url));
+      return NextResponse.redirect(new URL('/admin/login', publicBase));
     }
   }
   if (url.pathname.startsWith('/blog-admin') && url.pathname !== '/blog-admin/login') {
     if (!(await checkAuth())) {
-      return NextResponse.redirect(new URL('/blog-admin/login', req.url));
+      return NextResponse.redirect(new URL('/blog-admin/login', publicBase));
     }
   }
 
@@ -61,7 +68,7 @@ export async function middleware(req: NextRequest) {
   if (hostname.startsWith('admin.')) {
     if (!url.pathname.startsWith('/admin')) {
       if (url.pathname !== '/login' && !(await checkAuth())) {
-        return NextResponse.redirect(new URL('/login', req.url));
+        return NextResponse.redirect(new URL('/login', publicBase));
       }
       return NextResponse.rewrite(new URL(`/admin${url.pathname === '/' ? '' : url.pathname}`, req.url));
     }
@@ -69,7 +76,7 @@ export async function middleware(req: NextRequest) {
   else if (hostname.startsWith('blog.')) {
     if (!url.pathname.startsWith('/blog-admin')) {
       if (url.pathname !== '/login' && !(await checkAuth())) {
-        return NextResponse.redirect(new URL('/login', req.url));
+        return NextResponse.redirect(new URL('/login', publicBase));
       }
       return NextResponse.rewrite(new URL(`/blog-admin${url.pathname === '/' ? '' : url.pathname}`, req.url));
     }
