@@ -37,7 +37,7 @@ fi
 echo "== code"
 mkdir -p $BASE/logs
 [ -d $SITE/.git ] || git clone -q -b $BRANCH $REPO $SITE
-git -C $SITE pull -q --ff-only || true
+# Code updates are pulled by deploy.sh only, so it can tell what changed and rebuild.
 touch $BASE/site.env
 chmod 600 $BASE/site.env
 install -m 0644 $SITE/deploy/server/compose.yml $BASE/compose.yml
