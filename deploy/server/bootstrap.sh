@@ -38,6 +38,8 @@ install -m 0644 $SITE/deploy/server/compose.yml $BASE/compose.yml
 install -m 0644 $SITE/deploy/server/Caddyfile $BASE/Caddyfile
 install -m 0755 $SITE/deploy/server/deploy.sh $BASE/deploy.sh
 install -m 0755 $SITE/deploy/server/cron-call.sh $BASE/cron-call.sh
+install -m 0755 $SITE/deploy/server/db-init.sh $BASE/db-init.sh
+install -m 0755 $SITE/deploy/server/db-push.sh $BASE/db-push.sh
 install -m 0755 $SITE/deploy/server/set-secret.sh /usr/local/bin/set-secret
 install -m 0755 $SITE/deploy/server/env-status.sh /usr/local/bin/env-status
 

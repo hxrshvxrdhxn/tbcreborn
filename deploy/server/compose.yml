@@ -1,29 +1,50 @@
 name: tbc
+# Everything listens on the host network; only Caddy is reachable from outside (80/443, firewall allows them).
 services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      POSTGRES_USER: tbc
+      POSTGRES_DB: tbc
+      POSTGRES_PASSWORD_FILE: /run/secrets/pgpass
+    command: ["postgres", "-c", "listen_addresses=127.0.0.1", "-c", "port=5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./pgpass:/run/secrets/pgpass:ro
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-U", "tbc"]
+      interval: 10s
+      retries: 10
   web:
     build:
       context: ./tbcreborn
       dockerfile: deploy/server/Dockerfile
+      network: host
       secrets: [siteenv]
     image: tbc-web:latest
+    network_mode: host
     env_file: ./site.env
+    environment:
+      HOSTNAME: 127.0.0.1
+      PORT: "3000"
     restart: unless-stopped
     mem_limit: 1500m
-    healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+    depends_on:
+      db:
+        condition: service_healthy
   caddy:
     image: caddy:2-alpine
     restart: unless-stopped
-    ports: ["80:80", "443:443", "443:443/udp"]
+    network_mode: host
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy-data:/data
       - caddy-config:/config
     depends_on: [web]
 volumes:
+  pgdata:
   caddy-data:
   caddy-config:
 secrets:

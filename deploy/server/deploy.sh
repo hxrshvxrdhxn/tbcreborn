@@ -13,7 +13,10 @@ git reset -q --hard origin/master
 # Server files can change with the repo; refresh them before building.
 install -m 0644 deploy/server/compose.yml /opt/tbc/compose.yml
 install -m 0644 deploy/server/Caddyfile /opt/tbc/Caddyfile
+install -m 0755 deploy/server/db-push.sh /opt/tbc/db-push.sh
 cd /opt/tbc
+docker compose up -d db
+/opt/tbc/db-push.sh
 DOCKER_BUILDKIT=1 docker compose build web
 docker compose up -d
 docker compose exec -T caddy caddy reload --config /etc/caddy/Caddyfile >/dev/null 2>&1 || true
