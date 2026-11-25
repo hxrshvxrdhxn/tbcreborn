@@ -28,6 +28,12 @@ ufw allow 80/tcp >/dev/null
 ufw allow 443/tcp >/dev/null
 ufw --force enable
 
+echo "== docker log rotation"
+if [ ! -f /etc/docker/daemon.json ]; then
+  printf '{ "log-driver": "json-file", "log-opts": { "max-size": "20m", "max-file": "5" } }\n' > /etc/docker/daemon.json
+  systemctl restart docker
+fi
+
 echo "== code"
 mkdir -p $BASE/logs
 [ -d $SITE/.git ] || git clone -q -b $BRANCH $REPO $SITE
@@ -40,6 +46,8 @@ install -m 0755 $SITE/deploy/server/deploy.sh $BASE/deploy.sh
 install -m 0755 $SITE/deploy/server/cron-call.sh $BASE/cron-call.sh
 install -m 0755 $SITE/deploy/server/db-init.sh $BASE/db-init.sh
 install -m 0755 $SITE/deploy/server/db-push.sh $BASE/db-push.sh
+install -m 0755 $SITE/deploy/server/backup.sh $BASE/backup.sh
+install -m 0755 $SITE/deploy/server/health.sh $BASE/health.sh
 install -m 0755 $SITE/deploy/server/set-secret.sh /usr/local/bin/set-secret
 install -m 0755 $SITE/deploy/server/env-status.sh /usr/local/bin/env-status
 
@@ -51,6 +59,9 @@ cat > /etc/cron.d/tbc <<'CRON'
 30 3 * * * root /opt/tbc/cron-call.sh /api/cron/daily-visitors
 0 4 * * *  root /opt/tbc/cron-call.sh /api/cron/verify-blog
 15 4 * * * root /opt/tbc/cron-call.sh /api/cron/indexnow
+# Database backup (UTC 21:00 = 02:30 IST) and health check
+0 21 * * * root /opt/tbc/backup.sh
+*/5 * * * * root /opt/tbc/health.sh
 CRON
 
 echo

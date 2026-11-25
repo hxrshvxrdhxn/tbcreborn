@@ -14,6 +14,8 @@ git reset -q --hard origin/master
 install -m 0644 deploy/server/compose.yml /opt/tbc/compose.yml
 install -m 0644 deploy/server/Caddyfile /opt/tbc/Caddyfile
 install -m 0755 deploy/server/db-push.sh /opt/tbc/db-push.sh
+install -m 0755 deploy/server/backup.sh /opt/tbc/backup.sh
+install -m 0755 deploy/server/health.sh /opt/tbc/health.sh
 cd /opt/tbc
 docker compose up -d db
 /opt/tbc/db-push.sh
