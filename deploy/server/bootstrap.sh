@@ -19,8 +19,8 @@ fi
 
 echo "== packages"
 apt-get update -y
-apt-get install -y ca-certificates curl git ufw fail2ban unattended-upgrades docker.io docker-compose-v2 docker-buildx
-systemctl enable --now docker fail2ban
+apt-get install -y ca-certificates curl git cron ufw fail2ban unattended-upgrades docker.io docker-compose-v2 docker-buildx
+systemctl enable --now docker fail2ban cron
 
 echo "== firewall"
 ufw allow OpenSSH >/dev/null
