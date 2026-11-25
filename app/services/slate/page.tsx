@@ -7,24 +7,24 @@ import SectionInk from "@/components/SectionInk";
 import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
-  title: "Slate — AI Executive Assistant",
+  title: "Slate — Executive Assistant",
   description:
-    "Slate is an AI-powered executive assistant for founders and senior leaders. Calendar, email, research, decisions — intelligently managed.",
+    "Slate is an executive assistant for founders and business leaders: calendar, email triage, research briefings, and decisions handled reliably.",
   alternates: {
     canonical: "/services/slate",
   },
   openGraph: {
-    title: "Slate — AI Executive Assistant",
+    title: "Slate — Executive Assistant",
     description:
-      "Slate is an AI-powered executive assistant for founders and senior leaders. Calendar, email, research, decisions — intelligently managed.",
+      "Slate is an executive assistant for founders and business leaders: calendar, email triage, research briefings, and decisions handled reliably.",
     url: "https://turbobytesconsulting.com/services/slate",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Slate — AI Executive Assistant",
+    title: "Slate — Executive Assistant",
     description:
-      "Slate is an AI-powered executive assistant for founders and senior leaders. Calendar, email, research, decisions — intelligently managed.",
+      "Slate is an executive assistant for founders and business leaders: calendar, email triage, research briefings, and decisions handled reliably.",
   },
 };
 

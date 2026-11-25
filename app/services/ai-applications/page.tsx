@@ -7,18 +7,18 @@ import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "AI Apps & Chatbot Development | Turbo Bytes Consulting" },
-  description: "AI chatbots, document processing and assistants trained on your own data. Private deployment options, tested for accuracy before launch.",
+  description: "AI chatbots, document processing and intelligent assistants trained on your company data. Private deployment options, tested for accuracy before launch.",
   alternates: { canonical: "/services/ai-applications" },
   openGraph: {
     title: { absolute: "AI Apps & Chatbot Development | Turbo Bytes Consulting" },
-    description: "AI chatbots, document processing and assistants trained on your own data. Private deployment options, tested for accuracy before launch.",
+    description: "AI chatbots, document processing and intelligent assistants trained on your company data. Private deployment options, tested for accuracy before launch.",
     url: "https://turbobytesconsulting.com/services/ai-applications",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
     title: { absolute: "AI Apps & Chatbot Development | Turbo Bytes Consulting" },
-    description: "AI chatbots, document processing and assistants trained on your own data. Private deployment options, tested for accuracy before launch.",
+    description: "AI chatbots, document processing and intelligent assistants trained on your company data. Private deployment options, tested for accuracy before launch.",
   },
 };
 

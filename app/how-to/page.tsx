@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: { absolute: 'How-To Guides | Turbo Bytes Consulting' },
-  description: 'Practical, actionable guides for Indian business owners and founders scaling their operations.',
+  description: 'Step-by-step practical guides on automation, ERP workflows, software development, and AI implementation for Indian business owners and operations heads.',
   alternates: { canonical: '/how-to' },
 };
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     absolute: "Software Development Cost Calculator (India) | TBC",
   },
   description:
-    "Estimate the cost and timeline of custom software, a mobile app, an AI application or a website in India. Indicative ranges in minutes, then a free scoping call.",
+    "Estimate the cost and timeline of custom software, mobile apps, or AI systems in India. Indicative ranges in minutes, followed by a free scoping call.",
   alternates: {
     canonical: "/software-cost-calculator",
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       absolute: "Software Development Cost Calculator (India) | TBC",
     },
     description:
-      "Estimate the cost and timeline of custom software, a mobile app, an AI application or a website in India. Indicative ranges in minutes, then a free scoping call.",
+      "Estimate the cost and timeline of custom software, mobile apps, or AI systems in India. Indicative ranges in minutes, followed by a free scoping call.",
     url: "https://turbobytesconsulting.com/software-cost-calculator",
     images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       absolute: "Software Development Cost Calculator (India) | TBC",
     },
     description:
-      "Estimate the cost and timeline of custom software, a mobile app, an AI application or a website in India. Indicative ranges in minutes, then a free scoping call.",
+      "Estimate the cost and timeline of custom software, mobile apps, or AI systems in India. Indicative ranges in minutes, followed by a free scoping call.",
   },
 };
 

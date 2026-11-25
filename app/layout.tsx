@@ -45,6 +45,17 @@ export const metadata: Metadata = {
     site: "@social_TBC",
     creator: "@social_TBC",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   robots: { index: true, follow: true },
   alternates: {
     types: {

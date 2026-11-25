@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export default function FreeAnalysisForm() {
@@ -76,16 +77,37 @@ export default function FreeAnalysisForm() {
             <Reveal delay={0.2}>
               <div className="bg-white border border-light-grey rounded-[8px] p-8 shadow-card">
                 {status === "success" ? (
-                  <div className="text-center py-10">
+                  <div className="text-center py-8">
                     <div className="w-16 h-16 bg-ivory rounded-full flex items-center justify-center mx-auto mb-6">
                       <svg className="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <h3 className="font-display font-bold text-[24px] text-ink mb-3">Request Received</h3>
-                    <p className="text-body text-mid-grey">
+                    <p className="text-body text-mid-grey mb-6">
                       We&apos;re putting together your custom analysis. It will be delivered to the address provided shortly.
                     </p>
+                    <div className="border-t border-light-grey pt-6 text-left">
+                      <p className="font-display font-semibold text-[13px] text-ink mb-3 uppercase tracking-wide">
+                        Next steps while we review
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Link
+                          href="/products"
+                          className="flex-1 p-3 rounded border border-light-grey hover:border-forest/40 hover:bg-ivory transition-colors text-sm text-ink group"
+                        >
+                          <span className="font-semibold block text-forest group-hover:underline">Explore our products &rarr;</span>
+                          <span className="text-mid-grey text-xs">Software built for founder-led firms</span>
+                        </Link>
+                        <Link
+                          href="/work"
+                          className="flex-1 p-3 rounded border border-light-grey hover:border-forest/40 hover:bg-ivory transition-colors text-sm text-ink group"
+                        >
+                          <span className="font-semibold block text-forest group-hover:underline">Client case studies &rarr;</span>
+                          <span className="text-mid-grey text-xs">See problems we solve and results</span>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">

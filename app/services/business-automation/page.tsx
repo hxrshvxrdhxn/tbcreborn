@@ -7,18 +7,18 @@ import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
   title: { absolute: "Business Process Automation, CRM & ERP Development | TBC" },
-  description: "Custom CRM, ERP modules, approval workflows, dashboards and integrations with Tally and WhatsApp for growing Indian businesses.",
+  description: "Custom CRM, ERP modules, approval workflows, dashboards and reliable integrations with Tally and WhatsApp for growing founder-led Indian businesses.",
   alternates: { canonical: "/services/business-automation" },
   openGraph: {
     title: { absolute: "Business Process Automation, CRM & ERP Development | TBC" },
-    description: "Custom CRM, ERP modules, approval workflows, dashboards and integrations with Tally and WhatsApp for growing Indian businesses.",
+    description: "Custom CRM, ERP modules, approval workflows, dashboards and reliable integrations with Tally and WhatsApp for growing founder-led Indian businesses.",
     url: "https://turbobytesconsulting.com/services/business-automation",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
     title: { absolute: "Business Process Automation, CRM & ERP Development | TBC" },
-    description: "Custom CRM, ERP modules, approval workflows, dashboards and integrations with Tally and WhatsApp for growing Indian businesses.",
+    description: "Custom CRM, ERP modules, approval workflows, dashboards and reliable integrations with Tally and WhatsApp for growing founder-led Indian businesses.",
   },
 };
 

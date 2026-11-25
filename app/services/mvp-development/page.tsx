@@ -6,19 +6,19 @@ import SectionInk from "@/components/SectionInk";
 import CallProcess from "@/components/CallProcess";
 
 export const metadata: Metadata = {
-  title: { absolute: "MVP Development for Founders in India | Turbo Bytes Consulting" },
-  description: "A working first version of your product in 8 to 12 weeks: scoped to what proves the idea, built to grow, with the code owned by you.",
+  title: { absolute: "MVP Development for Founders | Turbo Bytes Consulting" },
+  description: "A working first version of your product in 8 to 12 weeks: scoped strictly to prove your idea, built to scale, with complete code ownership from day one.",
   alternates: { canonical: "/services/mvp-development" },
   openGraph: {
-    title: { absolute: "MVP Development for Founders in India | Turbo Bytes Consulting" },
-    description: "A working first version of your product in 8 to 12 weeks: scoped to what proves the idea, built to grow, with the code owned by you.",
+    title: { absolute: "MVP Development for Founders | Turbo Bytes Consulting" },
+    description: "A working first version of your product in 8 to 12 weeks: scoped strictly to prove your idea, built to scale, with complete code ownership from day one.",
     url: "https://turbobytesconsulting.com/services/mvp-development",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "MVP Development for Founders in India | Turbo Bytes Consulting" },
-    description: "A working first version of your product in 8 to 12 weeks: scoped to what proves the idea, built to grow, with the code owned by you.",
+    title: { absolute: "MVP Development for Founders | Turbo Bytes Consulting" },
+    description: "A working first version of your product in 8 to 12 weeks: scoped strictly to prove your idea, built to scale, with complete code ownership from day one.",
   },
 };
 

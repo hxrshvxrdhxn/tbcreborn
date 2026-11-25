@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -235,6 +236,27 @@ export default function ContactClient() {
                     <p className="font-sans text-[15px] text-mid-grey mb-6">
                       Thank you. We will be in touch within one business day.
                     </p>
+                    <div className="border-t border-light-grey pt-6 mb-6 text-left">
+                      <p className="font-display font-semibold text-[13px] text-ink mb-3 uppercase tracking-wide">
+                        Next steps while you wait
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Link
+                          href="/products"
+                          className="flex-1 p-3 rounded border border-light-grey hover:border-forest/40 hover:bg-ivory transition-colors text-sm text-ink group"
+                        >
+                          <span className="font-semibold block text-forest group-hover:underline">Explore our products &rarr;</span>
+                          <span className="text-mid-grey text-xs">Software built for founder-led firms</span>
+                        </Link>
+                        <Link
+                          href="/work"
+                          className="flex-1 p-3 rounded border border-light-grey hover:border-forest/40 hover:bg-ivory transition-colors text-sm text-ink group"
+                        >
+                          <span className="font-semibold block text-forest group-hover:underline">Client case studies &rarr;</span>
+                          <span className="text-mid-grey text-xs">See problems we solve and results</span>
+                        </Link>
+                      </div>
+                    </div>
                     <button
                       onClick={() => setFormState("idle")}
                       className="btn-ghost-gold"

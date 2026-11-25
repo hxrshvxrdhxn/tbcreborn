@@ -7,7 +7,7 @@ import { CaseArt, type CaseKind } from "@/components/Illustrations";
 export const metadata: Metadata = {
   title: { absolute: "Our Work & Client Outcomes | Turbo Bytes Consulting" },
   description:
-    "Selected client engagements. Names are anonymised where confidentiality is preserved by mandate. Every outcome is measured and verifiable.",
+    "Selected client engagements and case studies. Client names are anonymised for confidentiality. Every operational outcome is measured and verifiable.",
   alternates: {
     canonical: "/work",
   },

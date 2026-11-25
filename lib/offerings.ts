@@ -177,7 +177,7 @@ export const consulting: ConsultingService[] = [
     short: "Business diagnostic",
     lead: "A short, structured look at how work really flows through your business, and the one or two changes that would matter most.",
     metaDescription:
-      "Business diagnostic for founder-led companies: process mapping, bottleneck and rework analysis, reporting gaps, and a 90-day action plan.",
+      "Structured business diagnostic for founder-led firms: process mapping, bottleneck and rework analysis, reporting gaps, and a 90-day action plan.",
     covers: [
       "Process mapping for core workflows: sales, operations and finance",
       "Bottlenecks, rework and manual entry",

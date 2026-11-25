@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Turbo Bytes Consulting collects, uses and protects personal data shared through this website, forms and consultations.",
+  description: "How Turbo Bytes Consulting collects, uses and protects personal data shared through this website, contact forms, client engagements and consultations.",
   alternates: { canonical: "/privacy-policy" },
 };
 

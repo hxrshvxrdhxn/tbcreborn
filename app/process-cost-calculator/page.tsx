@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ProcessCostCalculator from "@/components/ProcessCostCalculator";
 
-const TITLE = "What Does Your Slowest Process Cost? | TBC";
+const TITLE = "Process Cost Calculator | Turbo Bytes Consulting";
 const DESC = "Work out what one manual process costs your business a year in people's time and mistakes, then get a plan to bring it down. Free, takes a minute.";
 
 export const metadata: Metadata = {

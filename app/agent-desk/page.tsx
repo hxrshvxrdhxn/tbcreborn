@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 const SITE = "https://turbobytesconsulting.com";
 const TITLE = "Agent Desk: we do the work, you approve it | TBC";
 const DESC =
-  "Agent Desk is a managed service from TBC. Software agents do routine jobs such as collections, tenders, leads and the monthly MIS, a named TBC operator checks the work, and you approve anything that goes out. Pick one desk, free for 30 days.";
+  "Managed software agents handle collections, tenders, leads and reporting. A named TBC operator checks the work before you approve. Try one desk free.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },

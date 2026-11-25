@@ -9,10 +9,10 @@ export const revalidate = 900;
 
 const SITE = "https://turbobytesconsulting.com";
 const DESC =
-  "Software for founder-led businesses: Distil for proposals, Vantage for product answers, Cadence for orders, Assay for QC, Steward for service, Compass, Relay, Rapport and Sunscout.";
+  "Software for founder-led businesses: Distil for proposals, Vantage for answers, Cadence for orders, Assay for QC, Steward for service, and Sunscout.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Products: Distil, Vantage, Cadence, Steward, Sunscout and more | TBC" },
+  title: { absolute: "Products: Distil, Vantage, Cadence & More | TBC" },
   description: DESC,
   alternates: { canonical: "/products" },
   openGraph: { title: "Products", description: DESC, url: `${SITE}/products`, images: [{ url: "/img/og-default.png", width: 1200, height: 630 }] },

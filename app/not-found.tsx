@@ -18,12 +18,16 @@ export default function NotFound() {
         <Link href="/" className="btn-primary">
           Return Home
         </Link>
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center mt-2">
-          <Link href="/services" className="text-royal hover:text-royal-mid hover:underline font-semibold text-sm">
+        <div className="flex flex-wrap gap-4 sm:gap-6 items-center justify-center mt-2">
+          <Link href="/services" className="text-forest hover:text-forest-light hover:underline font-semibold text-sm">
             View our services
           </Link>
           <span className="hidden sm:inline text-mid-grey text-sm">•</span>
-          <Link href="/book-consultation" className="text-royal hover:text-royal-mid hover:underline font-semibold text-sm">
+          <Link href="/contact" className="text-forest hover:text-forest-light hover:underline font-semibold text-sm">
+            Contact us
+          </Link>
+          <span className="hidden sm:inline text-mid-grey text-sm">•</span>
+          <Link href="/book-consultation" className="text-forest hover:text-forest-light hover:underline font-semibold text-sm">
             Book a 30-minute scoping call
           </Link>
         </div>

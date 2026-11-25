@@ -8,12 +8,12 @@ export const revalidate = 300; // Rebuilt at most every 5 minutes, not on every 
 export const metadata: Metadata = {
   title: { absolute: "Insight & Thinking | Turbo Bytes Consulting Blog" },
   description:
-    "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
+    "Practical AI strategy, systems architecture, automation guides, and industry perspectives for founders and engineering leaders from Turbo Bytes Consulting.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: { absolute: "Insight & Thinking | Turbo Bytes Consulting Blog" },
     description:
-      "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
+      "Practical AI strategy, systems architecture, automation guides, and industry perspectives for founders and engineering leaders from Turbo Bytes Consulting.",
     url: "https://turbobytesconsulting.com/blog",
     images: [{ url: "/og-default.png", width: 1200, height: 630 }],
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image" as const,
     title: { absolute: "Insight & Thinking | Turbo Bytes Consulting Blog" },
     description:
-      "AI strategy, business intelligence, and industry thinking from Turbo Bytes Consulting.",
+      "Practical AI strategy, systems architecture, automation guides, and industry perspectives for founders and engineering leaders from Turbo Bytes Consulting.",
   },
 };
 
