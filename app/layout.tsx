@@ -8,8 +8,6 @@ import MobileActionBar from "@/components/MobileActionBar";
 import CookieBanner from "@/components/CookieBanner";
 import VisitBeacon from "@/components/VisitBeacon";
 import StickyCta from "@/components/StickyCta";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import BackToTop from "@/components/BackToTop";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -114,14 +112,12 @@ export default function RootLayout({
         <VisitBeacon />
 
         {/* Analytics and Tracking */}
-        <Analytics />
-        <SpeedInsights />
         <GoogleTagManager gtmId="GTM-W6MCQF5V" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1H5E3Y9YRF"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4-init" strategy="afterInteractive">
+        <Script id="ga4-init" strategy="lazyOnload">
           {`
             gtag('js', new Date());
             gtag('config', 'G-1H5E3Y9YRF');

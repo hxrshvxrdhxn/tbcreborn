@@ -88,7 +88,7 @@ export default function FreeAnalysisForm() {
                       We&apos;re putting together your custom analysis. It will be delivered to the address provided shortly.
                     </p>
                     <div className="border-t border-light-grey pt-6 text-left">
-                      <p className="font-display font-semibold text-[13px] text-ink mb-3 uppercase tracking-wide">
+                      <p className="font-display font-semibold text-[15px] text-ink mb-3">
                         Next steps while we review
                       </p>
                       <div className="flex flex-col sm:flex-row gap-3">

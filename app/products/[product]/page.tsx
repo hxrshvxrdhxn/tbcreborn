@@ -77,11 +77,11 @@ export default function ProductLanding({ params }: { params: { product: string }
             <p className="text-body text-white/80 leading-relaxed max-w-2xl mb-8 text-pretty">{p.lead}</p>
             <div className="flex flex-wrap gap-4">
               {p.site ? (
-                <a href={p.site.href} target="_blank" rel="noopener" className="btn-primary px-7 py-3.5">{p.site.label}</a>
+                <a href={p.site.href} target="_blank" rel="noopener" className="btn-primary min-h-[48px] px-7 py-3 flex items-center justify-center">{p.site.label}</a>
               ) : (
-                <Link href="/book-consultation" className="btn-primary px-7 py-3.5">Start a free trial</Link>
+                <Link href="/book-consultation" className="btn-primary min-h-[48px] px-7 py-3 flex items-center justify-center">Start a free trial</Link>
               )}
-              <a href="#capabilities" className="inline-flex items-center px-7 py-3.5 border border-white/40 text-white font-display font-semibold rounded hover:bg-white/10 transition-colors">See what it does</a>
+              <a href="#capabilities" className="inline-flex items-center justify-center min-h-[48px] px-7 py-3 border border-white/40 text-white font-display font-semibold rounded hover:bg-white/10 transition-colors">See what it does</a>
             </div>
           </div>
           <div className="relative aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/10">
@@ -176,12 +176,17 @@ export default function ProductLanding({ params }: { params: { product: string }
             <p className="text-[16px] text-mid-grey leading-relaxed mb-6">{p.status}</p>
             {p.site ? (
               <>
-                <a href={p.site.href} target="_blank" rel="noopener" className="btn-primary">{p.site.label}</a>
+                <a href={p.site.href} target="_blank" rel="noopener" className="btn-primary min-h-[48px] inline-flex items-center justify-center">{p.site.label}</a>
                 <p className="mt-4 text-[15px] text-mid-grey leading-relaxed">{p.site.note}</p>
               </>
             ) : (
-              <Link href="/book-consultation" className="btn-primary">Start a free trial</Link>
+              <Link href="/book-consultation" className="btn-primary min-h-[48px] inline-flex items-center justify-center">Start a free trial</Link>
             )}
+            <ul className="mt-6 pt-6 border-t border-light-grey space-y-2 text-xs text-mid-grey">
+              <li className="flex items-center gap-2">✓ 30-day trial with full capability</li>
+              <li className="flex items-center gap-2">✓ Deployed on your infrastructure or private cloud</li>
+              <li className="flex items-center gap-2">✓ No upfront setup fee</li>
+            </ul>
             {p.related && (
               <p className="mt-6 text-[15px]">
                 <Link href={p.related.href} className="font-display font-semibold text-royal hover:text-forest transition-colors">{p.related.label}</Link>

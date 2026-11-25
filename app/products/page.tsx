@@ -279,9 +279,13 @@ export default function ProductsPage() {
           <p className="text-[19px] text-white/80 leading-relaxed max-w-2xl text-pretty">
             Alongside client work, we build our own products. Each one started as a real problem inside a real business.
           </p>
-          <nav aria-label="Products" className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+          <nav aria-label="Products" className="mt-10 flex flex-wrap gap-2.5">
             {PRODUCTS.map((p) => (
-              <a key={p.id} href={`#${p.id}`} className="text-white/90 hover:text-white text-[17px] font-medium underline-offset-4 hover:underline">
+              <a
+                key={p.id}
+                href={`#${p.id}`}
+                className="inline-flex items-center min-h-[44px] px-4 py-2 rounded-full border border-white/25 bg-white/10 text-white text-[15px] font-medium hover:bg-white/20 hover:border-white transition-colors"
+              >
                 {p.name}
               </a>
             ))}
@@ -298,10 +302,10 @@ export default function ProductsPage() {
               {p.body.map((b) => (
                 <p key={b} className="text-[17px] text-mid-grey leading-relaxed measure-68 mb-4">{b}</p>
               ))}
-              <div className="flex flex-wrap gap-4 mt-6">
-                <Link href="/book-consultation" className="btn-primary">Request a walkthrough</Link>
+              <div className="flex flex-wrap items-center gap-4 mt-6">
+                <Link href="/book-consultation" className="btn-primary min-h-[44px] flex items-center justify-center">Request a walkthrough</Link>
                 {p.href && (
-                  <Link href={p.href} className="inline-flex items-center font-semibold text-royal hover:text-royal-mid px-2">
+                  <Link href={p.href} className="inline-flex items-center min-h-[44px] font-semibold text-royal hover:text-royal-mid px-3 py-2 rounded hover:bg-forest/5 transition-colors">
                     {p.cta} →
                   </Link>
                 )}

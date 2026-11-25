@@ -114,13 +114,18 @@ export default function ServicesPage() {
       {/* ── ENGINEERING (delivered as part of the above) ── */}
       <section className="bg-white py-s6 border-b border-light-grey">
         <div className="container-tbc">
-          <p className="text-[16px] text-mid-grey max-w-3xl mb-4">
+          <p className="text-[16px] text-mid-grey max-w-3xl mb-5">
             When the answer is new software, we build it, as part of the work above:
           </p>
-          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+          <ul className="flex flex-wrap gap-3">
             {engineering.map((e) => (
               <li key={e.href}>
-                <Link href={e.href} className="text-[15px] text-ink underline underline-offset-4 decoration-light-grey hover:decoration-royal hover:text-royal">{e.label}</Link>
+                <Link
+                  href={e.href}
+                  className="inline-flex items-center min-h-[44px] px-5 py-2.5 rounded-full border border-light-grey bg-ivory text-[15px] font-medium text-ink hover:border-forest hover:text-forest transition-colors"
+                >
+                  {e.label} <span aria-hidden="true" className="ml-1.5 text-forest">&rarr;</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -153,9 +158,14 @@ export default function ServicesPage() {
           <p className="text-body text-white/80 mb-10 text-pretty max-w-2xl mx-auto">
             Request a consultation. We will respond within one business day.
           </p>
-          <Link href="/book-consultation" className="btn-gold">
+          <Link href="/book-consultation" className="btn-gold min-h-[48px] px-8 text-[16px]">
             Request a Consultation
           </Link>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-[14px] text-white/80 mt-6">
+            <span className="inline-flex items-center gap-1.5">✓ 30-minute scoping call</span>
+            <span className="inline-flex items-center gap-1.5">✓ Confidential & NDA-backed</span>
+            <span className="inline-flex items-center gap-1.5">✓ Response within 1 business day</span>
+          </div>
           <hr className="gold-rule gold-rule--center mt-10" />
         </div>
       </section>

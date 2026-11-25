@@ -237,7 +237,7 @@ export default function ContactClient() {
                       Thank you. We will be in touch within one business day.
                     </p>
                     <div className="border-t border-light-grey pt-6 mb-6 text-left">
-                      <p className="font-display font-semibold text-[13px] text-ink mb-3 uppercase tracking-wide">
+                      <p className="font-display font-semibold text-[15px] text-ink mb-3">
                         Next steps while you wait
                       </p>
                       <div className="flex flex-col sm:flex-row gap-3">

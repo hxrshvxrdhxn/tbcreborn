@@ -84,8 +84,8 @@ const groups = [
     heading: "Products",
     lead: "Software we build and run ourselves.",
     art: "products" as const,
-    items: products,
-    more: { href: "/products", label: "See the products" },
+    items: products.slice(0, 4),
+    more: { href: "/products", label: "See all 11 software products →" },
   },
 ];
 
@@ -164,12 +164,12 @@ export default async function HomePage() {
               the most, and turn it into software we build, run and maintain, with
               LLMs and neural networks where they earn their place.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 hero-4">
-              <Link href="/book-consultation" className="btn-primary w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 hero-4">
+              <Link href="/book-consultation" className="btn-primary min-h-[48px] px-8 text-center flex items-center justify-center text-[16px] shadow-sm">
                 Request a Consultation
               </Link>
-              <Link href="/services" className="btn-ghost-gold w-full sm:w-auto">
-                Explore Our Services
+              <Link href="/services" className="inline-flex items-center justify-center min-h-[48px] px-6 text-[15px] font-display font-semibold text-white/90 hover:text-white transition-colors gap-2">
+                Explore Our Services <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </div>
@@ -376,13 +376,18 @@ export default async function HomePage() {
             </h2>
           </Reveal>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <article className="bg-ivory p-6 rounded-[8px] border border-light-grey shadow-sm">
-                  <h3 className="font-display font-bold text-[18px] text-ink mb-3">{faq.question}</h3>
-                  <p className="text-body text-mid-grey">{faq.answer}</p>
-                </article>
+              <Reveal key={i} delay={i * 0.06}>
+                <details className="group bg-ivory rounded-[8px] border border-light-grey transition-colors open:bg-white open:shadow-sm">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none select-none font-display font-semibold text-[18px] text-ink">
+                    <span>{faq.question}</span>
+                    <span className="text-forest transition-transform duration-200 group-open:rotate-180 text-xl font-bold ml-4 shrink-0" aria-hidden="true">↓</span>
+                  </summary>
+                  <div className="px-6 pb-6 text-body text-mid-grey border-t border-light-grey/60 pt-4">
+                    {faq.answer}
+                  </div>
+                </details>
               </Reveal>
             ))}
           </div>

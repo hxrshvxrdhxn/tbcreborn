@@ -63,17 +63,17 @@ export default function Footer() {
                 unoptimized
               />
             </div>
-            <p className="text-white/60 text-sm leading-relaxed mb-4" style={{ maxWidth: "220px" }}>
+            <p className="text-white/75 text-sm leading-relaxed mb-4" style={{ maxWidth: "220px" }}>
               Intelligence. Precision. Growth.
             </p>
-            <p className="text-white/40 text-xs leading-relaxed" style={{ maxWidth: "220px" }}>
+            <p className="text-white/70 text-xs leading-relaxed" style={{ maxWidth: "220px" }}>
               Process-first software, built, run and maintained.
             </p>
           </div>
 
           {/* Col 2 — Services */}
           <div>
-            <h3 className="font-display font-semibold text-xs tracking-widest uppercase text-gold mb-5">
+            <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
               Services
             </h3>
             <ul className="space-y-3">
@@ -81,7 +81,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/60 text-sm hover:text-gold transition-colors duration-150"
+                    className="text-white/75 text-sm hover:text-gold transition-colors duration-150"
                   >
                     {link.label}
                   </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
 
           {/* Col 3 — Company */}
           <div>
-            <h3 className="font-display font-semibold text-xs tracking-widest uppercase text-gold mb-5">
+            <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
               Company
             </h3>
             <ul className="space-y-3">
@@ -100,7 +100,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/60 text-sm hover:text-gold transition-colors duration-150"
+                    className="text-white/75 text-sm hover:text-gold transition-colors duration-150"
                   >
                     {link.label}
                   </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
 
           {/* Col 4 — Industries and locations */}
           <div>
-            <h3 className="font-display font-semibold text-xs tracking-widest uppercase text-gold mb-5">
+            <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
               Who we serve
             </h3>
             <ul className="space-y-3">
@@ -119,7 +119,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/60 text-sm hover:text-gold transition-colors duration-150"
+                    className="text-white/75 text-sm hover:text-gold transition-colors duration-150"
                   >
                     {link.label}
                   </Link>
@@ -130,10 +130,10 @@ export default function Footer() {
 
           {/* Col 5 — Contact */}
           <div>
-            <h3 className="font-display font-semibold text-xs tracking-widest uppercase text-gold mb-5">
+            <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
               Contact
             </h3>
-            <ul className="space-y-3 text-sm text-white/60">
+            <ul className="space-y-3 text-sm text-white/75">
               <li>
                 <a
                   href="tel:+919354784377"
@@ -150,7 +150,7 @@ export default function Footer() {
                   info@turbobytesconsulting.com
                 </a>
               </li>
-              <li className="text-white/40 text-xs leading-relaxed" style={{ maxWidth: "200px" }}>
+              <li className="text-white/70 text-xs leading-relaxed" style={{ maxWidth: "200px" }}>
                 Kasana Tower, Alpha-I Commercial Belt,<br />
                 Greater Noida, UP, India
               </li>
@@ -195,35 +195,35 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <p className="text-white/40 text-xs">
+          <p className="text-white/70 text-xs">
             © 2026 Turbo Bytes Consulting. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2 sm:justify-end">
-            <Link href="/privacy-policy" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/privacy-policy" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Privacy Policy
             </Link>
-            <Link href="/how-to" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/how-to" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               How-To Guides
             </Link>
-            <Link href="/glossary" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/glossary" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Glossary
             </Link>
-            <Link href="/integrations" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/integrations" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Integrations
             </Link>
-            <Link href="/cost" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/cost" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Cost Guides
             </Link>
-            <Link href="/compare" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/compare" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Comparisons
             </Link>
-            <Link href="/solutions" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/solutions" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Solutions
             </Link>
-            <Link href="/ai-use-cases" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/ai-use-cases" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               AI Use Cases
             </Link>
-            <Link href="/terms" className="text-white/60 hover:text-white text-xs whitespace-nowrap transition-colors">
+            <Link href="/terms" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Terms
             </Link>
           </div>
