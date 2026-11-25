@@ -85,7 +85,7 @@ const groups = [
     lead: "Software we build and run ourselves.",
     art: "products" as const,
     items: products.slice(0, 4),
-    more: { href: "/products", label: "See all 11 software products →" },
+    more: { href: "/products", label: `See all ${products.length} software products →` },
   },
 ];
 
@@ -278,7 +278,7 @@ export default async function HomePage() {
               { href: "/process-cost-calculator", eyebrow: "Tool", title: "What does your slowest process cost?", body: "Work it out in a minute.", Art: CostScene, big: false },
             ].map(({ href, eyebrow, title, body, Art, big }) => (
               <div key={href} className={big ? "lg:col-span-2 lg:row-span-2" : ""}>
-                <Link href={href} className="group flex flex-col h-full rounded-2xl overflow-hidden bg-[#0E3F2A] ring-1 ring-black/5">
+                <Link href={href} className="group flex flex-col h-full rounded-2xl overflow-hidden bg-[#0E3F2A] ring-1 ring-black/5 card-depth">
                   <div className={`relative ${big ? "aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-[320px]" : "aspect-[16/9]"}`}>
                     <Art />
                   </div>
@@ -470,7 +470,7 @@ export default async function HomePage() {
               },
             ].map((guide, i) => (
               <Reveal key={guide.href} delay={i * 0.04}>
-                <Link href={guide.href} className="group flex flex-col h-full">
+                <Link href={guide.href} className="group flex flex-col h-full p-2 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-card card-depth">
                   <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-4">
                     <GuideCover variant={i} />
                   </div>

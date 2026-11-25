@@ -78,9 +78,9 @@ export default function FreeAnalysisForm() {
               <div className="bg-white border border-light-grey rounded-[8px] p-8 shadow-card">
                 {status === "success" ? (
                   <div className="text-center py-8">
-                    <div className="w-16 h-16 bg-ivory rounded-full flex items-center justify-center mx-auto mb-6">
-                      <svg className="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    <div className="w-16 h-16 bg-ivory rounded-full flex items-center justify-center mx-auto mb-6 success-badge-pop">
+                      <svg className="w-8 h-8 text-gold success-check-draw" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <h3 className="font-display font-bold text-[24px] text-ink mb-3">Request Received</h3>

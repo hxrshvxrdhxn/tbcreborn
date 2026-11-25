@@ -215,17 +215,18 @@ export default function ContactClient() {
 
                 {formState === "success" ? (
                   <div className="bg-white border border-light-grey rounded-[8px] shadow-card p-8 text-center">
-                    <div className="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center mx-auto mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center mx-auto mb-4 success-badge-pop">
                       <svg
-                        width="22"
-                        height="22"
+                        width="24"
+                        height="24"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="#1F8A5B"
-                        strokeWidth="2"
+                        strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         aria-hidden="true"
+                        className="success-check-draw"
                       >
                         <path d="M20 6 9 17l-5-5" />
                       </svg>

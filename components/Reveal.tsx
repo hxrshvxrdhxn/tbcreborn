@@ -53,7 +53,7 @@ export default function Reveal({
           transform: state === "shown" ? "none" : `translate3d(0, ${Math.min(yOffset, 24)}px, 0)`,
           transition:
             state === "shown"
-              ? `opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1) ${Math.min(delay, 0.3)}s, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) ${Math.min(delay, 0.3)}s`
+              ? `opacity 0.42s cubic-bezier(0.16, 1, 0.3, 1) ${Math.min(delay, 0.2)}s, transform 0.42s cubic-bezier(0.16, 1, 0.3, 1) ${Math.min(delay, 0.2)}s`
               : "none",
         };
 

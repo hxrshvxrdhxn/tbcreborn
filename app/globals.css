@@ -119,11 +119,18 @@
     border: none;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .btn-primary:hover {
     background-color: #0F6A43;
+    transform: translateY(-1.5px);
+    box-shadow: 0 4px 14px -2px rgba(22, 122, 78, 0.28);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0.5px) scale(0.99);
+    transition-duration: 90ms;
   }
 
   .btn-gold {
@@ -141,11 +148,18 @@
     border: none;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .btn-gold:hover {
     background-color: rgb(var(--accent-bright));
+    transform: translateY(-1.5px);
+    box-shadow: 0 4px 14px -2px rgba(11, 26, 18, 0.16);
+  }
+
+  .btn-gold:active {
+    transform: translateY(0.5px) scale(0.99);
+    transition-duration: 90ms;
   }
 
   .btn-ghost-gold {
@@ -163,11 +177,75 @@
     border: 1px solid rgb(var(--accent));
     cursor: pointer;
     text-decoration: none;
-    transition: all 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .btn-ghost-gold:hover {
     background-color: rgb(var(--accent) / 0.1);
+    transform: translateY(-1.5px);
+  }
+
+  .btn-ghost-gold:active {
+    transform: translateY(0.5px) scale(0.99);
+    transition-duration: 90ms;
+  }
+
+  /* Card depth on hover */
+  .card-depth {
+    transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1), border-color 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .card-depth:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px -6px rgba(11, 26, 18, 0.09);
+  }
+
+  /* Hit area expansion for small icons and links */
+  .hit-area-44 {
+    position: relative;
+  }
+  .hit-area-44::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 44px;
+    min-height: 44px;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Accordion disclosure smooth reveal */
+  details[open] > div,
+  details[open] > p {
+    animation: accordionFade 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes accordionFade {
+    from { opacity: 0; transform: translateY(-3px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Success state feedback animations (Peak-End & Secondary Action) */
+  @keyframes badgePop {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.12); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes drawCheck {
+    0% { stroke-dashoffset: 36; opacity: 0; }
+    35% { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+  }
+
+  .success-badge-pop {
+    animation: badgePop 420ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  .success-check-draw path {
+    stroke-dasharray: 36;
+    stroke-dashoffset: 36;
+    animation: drawCheck 420ms cubic-bezier(0.16, 1, 0.3, 1) 180ms both;
   }
 
   /* Responsive Tables for Blog, Guides, and Hubs */
@@ -257,7 +335,20 @@
 .menu-enter { animation: slideDown 0.2s cubic-bezier(0.22,0.61,0.36,1) both; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-1, .hero-2, .hero-3, .hero-4, .hero-5, .menu-enter { animation: none; }
+  .hero-1, .hero-2, .hero-3, .hero-4, .hero-5, .menu-enter,
+  .success-badge-pop, .success-check-draw path, details[open] > div, details[open] > p {
+    animation: none !important;
+    transition: none !important;
+  }
+  .success-check-draw path {
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+  }
+  .btn-primary:hover, .btn-gold:hover, .btn-ghost-gold:hover,
+  .btn-primary:active, .btn-gold:active, .btn-ghost-gold:active,
+  .card-depth:hover {
+    transform: none !important;
+  }
 }
 
 @media (max-width: 1024px) {

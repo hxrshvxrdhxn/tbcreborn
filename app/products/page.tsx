@@ -311,7 +311,7 @@ export default function ProductsPage() {
                 )}
               </div>
             </Reveal>
-            <div className="text-royal w-48 h-48 md:w-full md:h-auto md:aspect-square mx-auto">{ICONS[p.id]}</div>
+            <div className="text-royal w-48 h-48 md:w-full md:h-auto md:aspect-square mx-auto transition-transform duration-300 ease-out hover:scale-[1.03]">{ICONS[p.id]}</div>
           </div>
         </section>
       ))}
