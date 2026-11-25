@@ -11,3 +11,8 @@ turbobytesconsulting.com, www.turbobytesconsulting.com {
 http://129.121.168.29 {
 	reverse_proxy 127.0.0.1:3000
 }
+
+# Old .in domain: permanent redirect to the .com site.
+turbobytesconsulting.in, www.turbobytesconsulting.in {
+	redir https://turbobytesconsulting.com{uri} permanent
+}

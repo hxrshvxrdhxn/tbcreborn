@@ -135,7 +135,7 @@ const processSteps = [
   },
 ];
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300; // Rebuilt at most every 5 minutes, not on every visit (this was what used up the Vercel CPU quota)
 
 export default async function HomePage() {
   const posts = await getAllPosts();

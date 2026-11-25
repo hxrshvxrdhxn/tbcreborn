@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import Reveal from "@/components/Reveal";
 
-export const dynamic = 'force-dynamic'; // Always render on request so scheduled blogs appear immediately
+export const revalidate = 300; // Rebuilt at most every 5 minutes, not on every visit (this was what used up the Vercel CPU quota)
 
 export const metadata: Metadata = {
   title: { absolute: "Insight & Thinking | Turbo Bytes Consulting Blog" },
