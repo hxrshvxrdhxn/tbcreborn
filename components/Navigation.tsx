@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 
 interface NavLink {
   href: string;
@@ -15,11 +14,10 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
-  { href: "/about", label: "About" },
+  { href: "/services/aeo-seo-geo", label: "AEO & SEO" },
   { href: "/work", label: "Work" },
-  { href: "/blog", label: "Blog" },
-  { href: "/engagement", label: "Engagement" },
-  { href: "/how-to", label: "How-To" },
+  { href: "/blog", label: "Insights" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -82,9 +80,36 @@ export default function Navigation() {
                   <div className="absolute top-full left-0 hidden group-hover:block z-50 min-w-[240px] pt-1">
                     <div className="bg-white border border-light-grey rounded-[8px] shadow-lg p-6 grid grid-cols-3 gap-8 w-[720px]">
                       {[
-                        { heading: "AI practice", items: aiPractices },
-                        { heading: "Products", items: products },
-                        { heading: "Consulting", items: consultingLinks },
+                        {
+                          heading: "Consulting & Automation",
+                          items: [
+                            { title: "Technology strategy", href: "/services/technology-consulting" },
+                            { title: "Technology audit", href: "/services/technology-audit" },
+                            { title: "AI readiness assessment", href: "/services/ai-readiness-assessment" },
+                            { title: "Business diagnostic", href: "/services/business-diagnostic" },
+                            { title: "Business automation", href: "/services/business-automation" },
+                          ],
+                        },
+                        {
+                          heading: "Custom Software & Systems",
+                          items: [
+                            { title: "Custom software development", href: "/services/custom-software-development" },
+                            { title: "Digital transformation", href: "/digital-transformation" },
+                            { title: "Custom LLM & on-premise AI", href: "/services/custom-llm" },
+                            { title: "AI capability building", href: "/services/ai-training" },
+                          ],
+                        },
+                        {
+                          heading: "AEO, SEO & Products",
+                          items: [
+                            { title: "AEO, SEO & GEO readiness", href: "/services/aeo-seo-geo" },
+                            { title: "Free AI visibility check", href: "/free-ai-visibility-check" },
+                            { title: "Meridian platform", href: "/products/meridian" },
+                            { title: "Distil proposal engine", href: "/products/distil" },
+                            { title: "Sunscout solar prospecting", href: "/products/sunscout" },
+                            { title: "All software products →", href: "/products" },
+                          ],
+                        },
                       ].map((col) => (
                         <div key={col.heading}>
                           <p className="text-[12px] font-semibold text-mid-grey mb-3">{col.heading}</p>
@@ -100,6 +125,23 @@ export default function Navigation() {
                     </div>
                   </div>
                 )}
+
+                {/* Insights Dropdown */}
+                {link.label === "Insights" && (
+                  <div className="absolute top-full left-0 hidden group-hover:block z-50 min-w-[200px] pt-1">
+                    <div className="bg-white border border-light-grey rounded-[8px] shadow-lg p-4 w-[240px]">
+                      <p className="text-[12px] font-semibold text-mid-grey mb-2">Knowledge Base</p>
+                      <ul className="flex flex-col gap-1">
+                        <li>
+                          <Link href="/blog" className="block py-1.5 text-[14px] text-ink hover:text-royal transition-colors font-medium">Articles & Insights</Link>
+                        </li>
+                        <li>
+                          <Link href="/how-to" className="block py-1.5 text-[14px] text-ink hover:text-royal transition-colors font-medium">How-To Guides</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
@@ -110,7 +152,7 @@ export default function Navigation() {
               href="/book-consultation"
               className="btn-primary hidden sm:inline-flex text-sm py-2.5 px-5"
             >
-              Request a Consultation
+              Book a consultation
             </Link>
             <button
               className="lg:hidden text-white p-3 -mr-3"
@@ -156,7 +198,7 @@ export default function Navigation() {
               onClick={() => setOpen(false)}
               className="btn-primary mt-4 text-center"
             >
-              Request a Consultation
+              Book a consultation
             </Link>
           </div>
         </div>

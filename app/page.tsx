@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroLines from "@/components/HeroLines";
 import Reveal from "@/components/Reveal";
-import PracticeArt from "@/components/PracticeArt";
 import YouTubeLite from "@/components/YouTubeLite";
 import { liveVideos, videoSchema } from "@/lib/social";
-import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 import SectionInk from "@/components/SectionInk";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import FreeAnalysisForm from "@/components/FreeAnalysisForm";
@@ -14,41 +12,45 @@ import { getAllPosts } from "@/lib/posts";
 import { ProcessToday, ProcessWithSoftware, PillarIcon, WhyIcon, FactoryScene, DistributionScene, CostScene, GuideCover } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting" },
+  title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
   description:
-    "AI and technology consultancy for founder-led firms: private LLMs, AI training, technology consulting and audits. Based in Greater Noida, serving Delhi NCR.",
+    "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility across India, Middle East and Asia-Pacific.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: { absolute: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting" },
+    title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
     description:
-      "AI and technology consultancy for founder-led firms: private LLMs, AI training, technology consulting and audits. Based in Greater Noida, serving Delhi NCR.",
+      "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility across India, Middle East and Asia-Pacific.",
     url: "https://turbobytesconsulting.com",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting" },
+    title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
     description:
-      "AI and technology consultancy for founder-led firms in Delhi NCR.",
+      "Technology consultancy for mid-market and founder-led firms across India, Middle East and Asia-Pacific.",
   },
 };
 
 const faqs = [
   {
-    question: "What exactly do you do?",
-    answer: "We talk to the MD to find the process that costs the business most, sit with the team who runs it, and turn that process into software built around how they work. We use LLMs and neural networks where they genuinely help. After launch we stay: support, maintenance and the AMC are ours.",
+    question: "What does Turbo Bytes Consulting do?",
+    answer: "We are a technology consultancy. We sit with the MD and leadership team to identify the business processes costing the most in time and errors, and resolve them: through process automation, custom software engineered for that exact workflow, and full digital transformation. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
   },
   {
-    question: "How long does a project take?",
-    answer: "Most process projects go live in 6 to 12 weeks, depending on how many teams and systems are involved. The first step, understanding the process with your team, usually takes one to two weeks.",
+    question: "How does your team operate compared to a traditional technology firm?",
+    answer: "In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines. We start with process mapping and diagnostic clarity, eliminate unnecessary steps, and automate handoffs with purpose-built systems so lean senior teams achieve outsized results.",
   },
   {
-    question: "What does it cost?",
-    answer: "We agree up front what the software should save you. Most projects start at about what one person costs you in a year, and that includes support and maintenance after launch.",
+    question: "What is your approach to digital transformation?",
+    answer: "We run digital transformation end-to-end across five clear phases: Diagnose, Design, Build, Run, and Hand over. We do not stop at advisory slide decks; we engineer the systems, train your operators, and stay through ongoing maintenance.",
   },
   {
-    question: "Who looks after the software once it is live?",
-    answer: "We do. Updates, fixes, monitoring and changes as your process evolves are covered under an annual maintenance contract, so you are never left with software nobody can change.",
+    question: "What are AEO and GEO, and why do they matter now?",
+    answer: "SEO ranks websites in traditional search engines. AEO (Answer Engine Optimisation) ensures your brand is the direct answer for featured snippets and voice search. GEO (Generative Engine Optimisation) ensures your company is cited and recommended when buyers ask ChatGPT, Gemini, Perplexity, Copilot, or Google AI Overviews.",
+  },
+  {
+    question: "Who maintains the software and systems once launched?",
+    answer: "We do. Ongoing maintenance, monitoring, feature adaptation, and operational support are managed under our SLA agreements, so your business always has dedicated engineers to support and evolve your systems.",
   },
 ];
 
@@ -64,30 +66,6 @@ const faqSchema = {
     }
   }))
 };
-
-const groups = [
-  {
-    heading: "AI practice",
-    lead: "LLMs and neural networks built into the way your business already works.",
-    art: "ai" as const,
-    items: aiPractices,
-    more: { href: "/services", label: "About the AI practice" },
-  },
-  {
-    heading: "Consulting",
-    lead: "Independent, in-depth work on strategy, systems and operations.",
-    art: "consulting" as const,
-    items: consultingLinks,
-    more: { href: "/services", label: "All consulting work" },
-  },
-  {
-    heading: "Products",
-    lead: "Software we build and run ourselves.",
-    art: "products" as const,
-    items: products.slice(0, 4),
-    more: { href: "/products", label: `See all ${products.length} software products →` },
-  },
-];
 
 const whyTbc = [
   {
@@ -160,23 +138,48 @@ export default async function HomePage() {
               The intelligence layer your business has been missing.
             </h1>
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
-              We sit with your MD and your team, find the process that costs you
-              the most, and turn it into software we build, run and maintain, with
-              LLMs and neural networks where they earn their place.
+              We sit with the MD and your team, find the processes that cost the
+              business the most, and fix them: with process automation, custom software,
+              and full digital transformation. We also ensure your company is findable
+              in search and AI answers across India, the Middle East, and Asia-Pacific.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 hero-4">
               <Link href="/book-consultation" className="btn-primary min-h-[48px] px-8 text-center flex items-center justify-center text-[16px] shadow-sm">
-                Request a Consultation
+                Book a consultation
               </Link>
               <Link href="/services" className="inline-flex items-center justify-center min-h-[48px] px-6 text-[15px] font-display font-semibold text-white/90 hover:text-white transition-colors gap-2">
-                Explore Our Services <span aria-hidden="true">&rarr;</span>
+                Explore our advisory <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── 3. WHO WE ARE ── */}
+      {/* ── 2. PROOF POINT STAT BLOCK ── */}
+      <section className="bg-forest border-y border-white/10 py-10">
+        <div className="container-tbc">
+          <div className="bg-white/5 border border-white/15 rounded-[8px] p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div className="flex items-baseline gap-4 shrink-0">
+              <span className="font-display font-bold text-[clamp(44px,6vw,68px)] text-gold leading-none">
+                40 → 4
+              </span>
+              <span className="text-[14px] font-sans text-white/70 max-w-[140px] leading-tight">
+                Team leverage in pilot engagements
+              </span>
+            </div>
+            <div className="border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-10 max-w-2xl">
+              <p className="font-display font-semibold text-[20px] text-white leading-snug mb-2">
+                In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines.
+              </p>
+              <p className="font-sans text-[15px] text-white/75 leading-relaxed">
+                We sit with the MD and leadership team, map the workflows that cost the most, automate repetitive handoffs, and deploy bespoke systems so lean senior teams outperform sprawling departments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. WHO WE ARE: PROCESS AUTOMATION & CONSULTING ── */}
       <section className="bg-ivory py-s6 md:py-s8">
         <div className="container-tbc">
           <Reveal>
@@ -228,38 +231,210 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. WHAT WE DO ── */}
-      <section className="bg-white py-s6 md:py-s8 border-y border-light-grey">
+      {/* ── 4. CUSTOM SOFTWARE FOR ANY SPECIFIC NEED ── */}
+      <section className="bg-white py-s6 md:py-s8 border-y border-light-grey" aria-labelledby="custom-software-heading">
         <div className="container-tbc">
           <Reveal>
-            <h2 className="section-heading mb-10 md:mb-12 text-balance">
-              Three ways we work with you.
-            </h2>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
+              <div>
+                <hr className="gold-rule mb-6 md:mb-s5" />
+                <h2 id="custom-software-heading" className="section-heading text-balance mb-4">
+                  Custom software for any specific need.
+                </h2>
+                <p className="text-body text-mid-grey measure-68 text-pretty">
+                  We build what the process needs, not a template. When commercial off-the-shelf software forces compromise, we engineer exact web systems, mobile tools, and private LLMs.
+                </p>
+              </div>
+              <Link href="/services/custom-software-development" className="btn-primary min-h-[48px] px-6 flex items-center justify-center shrink-0">
+                Explore custom software →
+              </Link>
+            </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-            {groups.map((g, i) => (
-              <Reveal key={g.heading} delay={i * 0.08}>
-                <div className="flex flex-col h-full">
-                  <div className="relative aspect-[16/10] rounded overflow-hidden bg-forest mb-6">
-                    <PracticeArt kind={g.art} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-ivory p-8 rounded-[8px] border border-light-grey flex flex-col justify-between">
+              <div>
+                <h3 className="font-display font-bold text-[20px] text-ink mb-3">Operational Systems</h3>
+                <p className="text-[15px] text-mid-grey leading-relaxed mb-6">
+                  Order-to-dispatch tracking boards, quality assurance workflows, inventory synchronisation, and custom ERP connectors built for your exact floor rules.
+                </p>
+              </div>
+              <Link href="/services/custom-software-development" className="text-[14px] font-semibold text-royal hover:underline">
+                Read about operational systems →
+              </Link>
+            </div>
+            <div className="bg-ivory p-8 rounded-[8px] border border-light-grey flex flex-col justify-between">
+              <div>
+                <h3 className="font-display font-bold text-[20px] text-ink mb-3">Private On-Premise AI</h3>
+                <p className="text-[15px] text-mid-grey leading-relaxed mb-6">
+                  Custom LLMs trained on company documents, technical drawings, and catalogue specifications, hosted securely on your private cloud or premises.
+                </p>
+              </div>
+              <Link href="/services/custom-llm" className="text-[14px] font-semibold text-royal hover:underline">
+                Explore custom LLMs →
+              </Link>
+            </div>
+            <div className="bg-ivory p-8 rounded-[8px] border border-light-grey flex flex-col justify-between">
+              <div>
+                <h3 className="font-display font-bold text-[20px] text-ink mb-3">AI Capability Building</h3>
+                <p className="text-[15px] text-mid-grey leading-relaxed mb-6">
+                  Structured workforce enablement that trains engineers, estimators, and analysts to build machine intelligence directly into daily business operations.
+                </p>
+              </div>
+              <Link href="/services/ai-training" className="text-[14px] font-semibold text-royal hover:underline">
+                View training programmes →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. AEO, SEO & GEO READINESS BAND ── */}
+      <section className="bg-forest py-s6 md:py-s8 border-b border-light-grey text-white" aria-labelledby="aeo-band-heading">
+        <div className="container-tbc">
+          <Reveal>
+            <div className="max-w-3xl">
+              <hr className="gold-rule mb-6" />
+              <h2 id="aeo-band-heading" className="font-display font-bold text-[clamp(28px,3.8vw,44px)] leading-[1.15] mb-6 text-balance text-white">
+                Is your business visible in AI answers?
+              </h2>
+              <p className="text-[18px] text-white/85 leading-relaxed mb-8 text-pretty">
+                When prospective buyers ask ChatGPT, Gemini, Perplexity, Copilot, or Google AI Overviews for recommendations in your industry, is your company named and cited? We prepare B2B firms, manufacturers, and consultancies for discovery across traditional search engines and generative answer engines.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div className="bg-white/5 border border-white/10 rounded-[8px] p-6">
+                  <h3 className="font-display font-semibold text-[18px] text-gold mb-2">SEO (Search Engines)</h3>
+                  <p className="text-[14px] text-white/75 leading-relaxed">
+                    Technical indexing, site architecture, and top keyword positioning across Google and Bing.
+                  </p>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-[8px] p-6">
+                  <h3 className="font-display font-semibold text-[18px] text-gold mb-2">AEO (Answer Engines)</h3>
+                  <p className="text-[14px] text-white/75 leading-relaxed">
+                    Answer-first page structuring that earns featured snippets, People Also Ask, and voice search answers.
+                  </p>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-[8px] p-6">
+                  <h3 className="font-display font-semibold text-[18px] text-gold mb-2">GEO (Generative Engines)</h3>
+                  <p className="text-[14px] text-white/75 leading-relaxed">
+                    Entity authority, schema graphs, and verified third-party citations so LLMs cite your company directly.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <Link href="/services/aeo-seo-geo" className="btn-gold min-h-[48px] px-8 text-center flex items-center justify-center text-[15px]">
+                  Explore AEO, SEO & GEO Readiness →
+                </Link>
+                <Link href="/free-ai-visibility-check" className="btn-primary min-h-[48px] px-8 text-center flex items-center justify-center text-[15px] border border-white/30">
+                  Request a Free AI Visibility Check
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── 6. DIGITAL TRANSFORMATION ── */}
+      <section className="bg-ivory py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="transformation-heading">
+        <div className="container-tbc">
+          <Reveal>
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-end mb-12">
+              <div>
+                <hr className="gold-rule mb-6" />
+                <h2 id="transformation-heading" className="section-heading mb-4 text-balance">
+                  Full digital transformation: end-to-end.
+                </h2>
+                <p className="text-body text-mid-grey measure-68 text-pretty">
+                  We do not stop at advisory slide decks. We take responsibility from the first diagnostic to the day your team uses running software on the shop floor or office.
+                </p>
+              </div>
+              <Link href="/digital-transformation" className="btn-primary min-h-[48px] px-6 flex items-center justify-center shrink-0">
+                How transformation runs →
+              </Link>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              { phase: "01", name: "Diagnose", desc: "Process audit, bottleneck costing, and structural review with leadership." },
+              { phase: "02", name: "Design", desc: "Workflow architecture, integration mapping, and human approval rules." },
+              { phase: "03", name: "Build", desc: "Bespoke software and automated data pipelines engineered for your team." },
+              { phase: "04", name: "Run", desc: "Deployment, operational testing, and workforce training on live work." },
+              { phase: "05", name: "Hand over", desc: "Ongoing SLA maintenance, system monitoring, and complete operational autonomy." },
+            ].map((p, i) => (
+              <Reveal key={p.phase} delay={i * 0.08}>
+                <div className="bg-white p-6 rounded-[8px] border border-light-grey shadow-card h-full flex flex-col justify-between">
+                  <div>
+                    <span className="font-display font-bold text-royal text-[16px] block mb-2">{p.phase}</span>
+                    <h3 className="font-display font-bold text-ink text-[18px] mb-2">{p.name}</h3>
+                    <p className="text-[14px] text-mid-grey leading-relaxed">{p.desc}</p>
                   </div>
-                  <h3 className="font-display font-semibold text-[24px] text-ink tracking-[-0.015em] mb-2">{g.heading}</h3>
-                  <p className="text-[16px] text-mid-grey leading-relaxed mb-5 md:min-h-[52px]">{g.lead}</p>
-                  <ul className="border-t border-light-grey mb-5">
-                    {g.items.map((it) => (
-                      <li key={it.href} className="border-b border-light-grey">
-                        <Link href={it.href} className="flex items-center justify-between gap-4 py-3 text-[15px] text-ink hover:text-royal transition-colors">
-                          {it.title}
-                          <span aria-hidden="true" className="text-royal">→</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href={g.more.href} className="mt-auto font-semibold text-[15px] text-royal hover:text-royal-mid">{g.more.label}</Link>
                 </div>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 7. PRODUCTS (PROOF THAT WE SHIP) ── */}
+      <section className="bg-white py-s6 md:py-s8 border-b border-light-grey" aria-labelledby="products-heading">
+        <div className="container-tbc">
+          <Reveal>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
+              <div>
+                <hr className="gold-rule mb-6" />
+                <h2 id="products-heading" className="section-heading text-balance mb-3">
+                  Products are proof that we ship.
+                </h2>
+                <p className="text-[17px] text-mid-grey leading-relaxed max-w-2xl">
+                  Consulting leads our engagements. Alongside client work, we engineer and operate our own software platforms: battle-tested proof of our engineering standards.
+                </p>
+              </div>
+              <Link href="/products" className="font-display font-semibold text-[15px] text-royal hover:text-royal-mid shrink-0">
+                View all software products →
+              </Link>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-[8px] bg-ivory border border-light-grey flex flex-col justify-between">
+              <div>
+                <span className="text-[13px] font-semibold text-royal block mb-2">Proposal Engine</span>
+                <h3 className="font-display font-bold text-[22px] text-ink mb-3">Distil</h3>
+                <p className="text-[15px] text-mid-grey leading-relaxed mb-6">
+                  Complex techno-commercial proposals assembled from verified data components. Calculates exact pricing with zero spreadsheet formula errors.
+                </p>
+              </div>
+              <Link href="/products/distil" className="font-display font-semibold text-[15px] text-royal hover:underline">
+                Explore Distil →
+              </Link>
+            </div>
+
+            <div className="p-8 rounded-[8px] bg-ivory border border-light-grey flex flex-col justify-between">
+              <div>
+                <span className="text-[13px] font-semibold text-royal block mb-2">Solar Prospecting</span>
+                <h3 className="font-display font-bold text-[22px] text-ink mb-3">Sunscout</h3>
+                <p className="text-[15px] text-mid-grey leading-relaxed mb-6">
+                  Rooftop solar prospecting and sizing for commercial and industrial EPCs in India and Europe. Identifies factory roofs, sizes kWp, and ranks opportunities.
+                </p>
+              </div>
+              <Link href="/products/sunscout" className="font-display font-semibold text-[15px] text-royal hover:underline">
+                Explore Sunscout →
+              </Link>
+            </div>
+
+            <div className="p-8 rounded-[8px] bg-ivory border border-light-grey flex flex-col justify-between">
+              <div>
+                <span className="text-[13px] font-semibold text-royal block mb-2">All-in-One Operating System</span>
+                <h3 className="font-display font-bold text-[22px] text-ink mb-3">Meridian</h3>
+                <p className="text-[15px] text-mid-grey leading-relaxed mb-6">
+                  One unified edition connecting orders, QC, service, and inventory through a dedicated private company brain that keeps data strictly separate.
+                </p>
+              </div>
+              <Link href="/products/meridian" className="font-display font-semibold text-[15px] text-royal hover:underline">
+                Explore Meridian →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -19,22 +19,26 @@ const serviceLinks = [
 
 const companyLinks = [
   { href: "/services", label: "Services" },
+  { href: "/services/aeo-seo-geo", label: "AEO, SEO & GEO" },
+  { href: "/digital-transformation", label: "Digital Transformation" },
   { href: "/products", label: "Products" },
+  { href: "/products/meridian", label: "Meridian Platform" },
   { href: "/agent-desk", label: "Agent Desk" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
   { href: "/how-to", label: "How-To Guides" },
+  { href: "/free-ai-visibility-check", label: "AI Visibility Check" },
   { href: "/glossary", label: "Glossary" },
   { href: "/integrations", label: "Integrations" },
   { href: "/cost", label: "Cost Guides" },
   { href: "/software-cost-calculator", label: "Cost Calculator" },
+  { href: "/process-cost-calculator", label: "Process Cost Calculator" },
   { href: "/compare", label: "Comparisons" },
   { href: "/solutions", label: "Solutions" },
   { href: "/ai-use-cases", label: "AI Use Cases" },
   { href: "/engagement", label: "Engagement" },
   { href: "/contact", label: "Contact" },
-  { href: "/brand-guidelines", label: "Brand Guidelines" },
 ];
 
 const locationLinks = [
