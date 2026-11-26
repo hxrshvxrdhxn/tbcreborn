@@ -2,7 +2,32 @@
 	email harshvardhan@turbobytesconsulting.com
 }
 
+# Shared protection for the public site: blocks scraping tools and vulnerability probes,
+# and writes a JSON access log that fail2ban reads to ban abusive IPs at the firewall.
+(protect) {
+	log {
+		output file /var/log/caddy/access.log {
+			roll_size 50MiB
+			roll_keep 5
+		}
+		format json
+	}
+	@scrapers {
+		header_regexp ua User-Agent (?i)(python-requests|python-urllib|aiohttp|httpx|scrapy|httrack|wget|curl/|go-http-client|libwww|java/|okhttp|node-fetch|axios|headlesschrome|phantomjs|selenium|puppeteer|playwright|bytespider|semrushbot|ahrefsbot|mj12bot|dotbot|petalbot|dataforseo|serpstatbot|blexbot|megaindex|zoominfobot|ccbot|imagesiftbot|omgili|diffbot)
+		not remote_ip 127.0.0.1 ::1
+	}
+	@noua {
+		not header User-Agent *
+		not remote_ip 127.0.0.1 ::1
+	}
+	@probes path /.env* /.git* /.aws* /.ssh* /wp-admin* /wp-login.php /wp-content/* /xmlrpc.php /phpmyadmin* /pma* /vendor/phpunit* /cgi-bin/* /server-status /actuator* *.php *.asp *.aspx *.jsp
+	respond @scrapers 403
+	respond @noua 403
+	respond @probes 404
+}
+
 turbobytesconsulting.com, www.turbobytesconsulting.com {
+	import protect
 	encode zstd gzip
 	header -Server
 	reverse_proxy 127.0.0.1:3000
@@ -10,6 +35,7 @@ turbobytesconsulting.com, www.turbobytesconsulting.com {
 
 # Plain-HTTP access by IP, for checks before DNS points here.
 http://129.121.168.29 {
+	import protect
 	reverse_proxy 127.0.0.1:3000
 }
 

@@ -16,11 +16,19 @@ install -m 0644 deploy/server/Caddyfile /opt/tbc/Caddyfile
 install -m 0755 deploy/server/db-push.sh /opt/tbc/db-push.sh
 install -m 0755 deploy/server/backup.sh /opt/tbc/backup.sh
 install -m 0755 deploy/server/health.sh /opt/tbc/health.sh
+install -m 0755 deploy/server/security-scan.sh /opt/tbc/security-scan.sh
+mkdir -p /opt/tbc/logs/caddy && touch /opt/tbc/logs/caddy/access.log
+install -m 0644 deploy/server/fail2ban/tbc-flood.conf /etc/fail2ban/filter.d/tbc-flood.conf
+install -m 0644 deploy/server/fail2ban/tbc-abuse.conf /etc/fail2ban/filter.d/tbc-abuse.conf
+install -m 0644 deploy/server/fail2ban/tbc.local /etc/fail2ban/jail.d/tbc.local
 cd /opt/tbc
 docker compose up -d db
 /opt/tbc/db-push.sh
 DOCKER_BUILDKIT=1 docker compose build web
 docker compose up -d
 docker compose exec -T caddy caddy reload --config /etc/caddy/Caddyfile >/dev/null 2>&1 || true
+fail2ban-client reload >/dev/null 2>&1 || systemctl restart fail2ban || true
 docker image prune -f >/dev/null
+# deploy.sh keeps itself current for the next run
+install -m 0755 /opt/tbc/tbcreborn/deploy/server/deploy.sh /opt/tbc/deploy.sh
 echo "$(date -Is) live $REMOTE"

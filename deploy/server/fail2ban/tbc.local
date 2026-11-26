@@ -1,0 +1,20 @@
+# TBC site jails. Bans are firewall drops; they expire on their own.
+[tbc-flood]
+enabled  = true
+filter   = tbc-flood
+logpath  = /opt/tbc/logs/caddy/access.log
+backend  = auto
+# more than 300 requests in 60 seconds from one IP (about 5 per second sustained) -> 1 hour ban
+maxretry = 300
+findtime = 60
+bantime  = 3600
+
+[tbc-abuse]
+enabled  = true
+filter   = tbc-abuse
+logpath  = /opt/tbc/logs/caddy/access.log
+backend  = auto
+# 10 refused or probing requests in 10 minutes -> 1 day ban
+maxretry = 10
+findtime = 600
+bantime  = 86400

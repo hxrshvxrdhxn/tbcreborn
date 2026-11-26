@@ -40,6 +40,7 @@ services:
     network_mode: host
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./logs/caddy:/var/log/caddy
       - caddy-data:/data
       - caddy-config:/config
     depends_on: [web]
