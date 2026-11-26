@@ -72,6 +72,13 @@ Explain in plain words, with enough depth that a buyer and an AI assistant can b
 - FAQs (8+): "What is GEO?", "How is AEO different from SEO?", "How do I get my company mentioned by ChatGPT?",
   "How long does SEO take in India?", "Do you guarantee rankings?" (no), "What do you need from us?", etc.
 
+## Markets (owner correction, 26 Nov 09:10)
+
+TBC works worldwide, including the UK and the US. India, the Middle East and Asia-Pacific are only the current
+marketing focus (outreach, some keyword targeting). Site copy must never say or imply we serve only those regions:
+no regional line on the homepage; elsewhere say "clients in India, the Middle East, Asia-Pacific, the UK and the US"
+or leave region out. India-specific SEO landing pages may keep "India" in their title.
+
 ## Rules (unchanged)
 
 Green and white palette only; no small uppercase labels; banner animation untouched; British spelling; no
