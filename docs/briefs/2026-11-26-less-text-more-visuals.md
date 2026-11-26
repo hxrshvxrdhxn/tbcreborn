@@ -37,40 +37,37 @@ own YouTube videos throughout. Keep the hero banner and its animation exactly as
 - **Products**: lead with the product short, then a 3-step "how it works" flow, then folded detail.
 - **Blog/how-to**: leave text-led (they are articles), but add a related video where one exists.
 
-## Video library (our channel, @TurboBytesConsulting)
+## Video library (our channel, @TurboBytesConsulting) — UPDATED 26 Nov 09:12
 
-Long-form:
+Owner rule: only videos that match the site's green-and-white look go on the website. The dark-theme explainer
+videos and the dark "story" Shorts are NOT used anywhere on the site. Allowed are the light illustrated product
+videos and the colourful product-tool Shorts.
+
+Allowed, long-form (16:9):
 | ID | Title | Use on |
 |---|---|---|
-| LtEm_wP8Ubw | Turbo Bytes Consulting: who we are and what we do | Home, About |
-| Kqyajyw2YnI | How to Pick the First Process to Put Into Software | Consulting/automation, Digital transformation |
-| 2LVF44PlFo4 | Order to Invoice: Finding the Handovers That Cost You a Week | Business automation, Cadence |
-| NO_3xrJ8Y3M | Where LLMs Actually Help a Manufacturing Business (and Where They Don't) | Custom software, Manufacturing industry |
-| AeNl7CY3ES0 | Six Questions to Ask Before Any Software Project | Custom software, Technology consulting |
 | a2w512JHBOk | Distil: from client enquiry to full techno-commercial proposal | /products/distil |
 | EGbDr3hVZso | Sunscout: find the factory roofs worth a solar proposal | /products/sunscout |
 
-Shorts (9:16):
+Allowed, Shorts (9:16):
 | ID | Title | Use on |
 |---|---|---|
 | 2Jdxao-PJuE | Seven tools for growing businesses | Home product strip, /products |
-| uYaMWnzlR4U | Complex proposals, assembled from verified parts (Distil) | /products/distil |
-| mLCNwzJCIP0 | Most proposal mistakes are copy and paste | /products/distil |
 | -zvS0dC-i_g | Find the factory roofs worth calling first (Sunscout) | /products/sunscout |
-| caeVTTvIeBA | Know where every order is, before the customer asks (Cadence) | /products/cadence |
+| caeVTTvIeBA | Know where every order is, before the customer asks (Cadence) | /products/cadence, business automation |
+| oN6o2yVjj6s | Same call, ten times a day: where is my order? (Cadence) | /products/cadence |
 | vZhZx26WRfw | Certificates of analysis that cannot be wrong (Assay) | /products/assay |
+| JVQpsEoQj6I | One wrong digit on a certificate of analysis (Assay) | /products/assay |
 | pT75RslibHg | Every machine you have sold, looked after (Steward) | /products/steward |
+| qGHNSOB7XUg | You sold the machine. Where is it now? (Steward) | /products/steward |
 | 3CFiEcEUu2E | Know which projects are losing money, early (Compass) | /products/compass |
 | Q_zgKCKy78A | Let your dealers order without calling the office (Relay) | /products/relay |
 | TdFAafcYByM | No enquiry left waiting (Rapport) | /products/rapport |
 | AVOYy42CqBk | Every answer, with the page it came from (Vantage) | /products/vantage |
-| 7QUDMIqvXs4 | Work gets lost between departments | Business automation, Digital transformation |
-| icNNbuWIxHA | The dashboard nobody opens | Technology consulting |
-| yILtgvhpmt0 | The spreadsheet that ran out of rows | Custom software |
-| 2rZluNrMeLE | Copy-paste is a job | Business automation |
-| jTPgyN0Yf0Q | WhatsApp for business | Relay, Rapport, industries |
 
-Keep the library in one data file (e.g. `lib/videos.ts`) so pages pick from it.
+Removed (dark theme, do not use): LtEm_wP8Ubw, Kqyajyw2YnI, 2LVF44PlFo4, NO_3xrJ8Y3M, AeNl7CY3ES0, uYaMWnzlR4U,
+mLCNwzJCIP0, 7QUDMIqvXs4, icNNbuWIxHA, yILtgvhpmt0, 2rZluNrMeLE, jTPgyN0Yf0Q. Pages that lose a video get a diagram
+or step strip instead. Home: no "who we are" video; use the Seven tools Short in the product strip.
 
 ## Also
 
