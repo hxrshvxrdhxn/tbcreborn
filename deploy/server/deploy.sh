@@ -10,6 +10,10 @@ git fetch -q origin master
 LOCAL=$(cat /opt/tbc/.live-sha 2>/dev/null || echo none)
 REMOTE=$(git rev-parse origin/master)
 if [ "$LOCAL" = "$REMOTE" ] && [ "${1:-}" != "--force" ]; then exit 0; fi
+# After a failed build, wait 30 minutes before trying the same commit again (spares the CPU).
+if [ "${1:-}" != "--force" ] && [ "$(cat /opt/tbc/.failed-sha 2>/dev/null)" = "$REMOTE" ] && \
+   [ -n "$(find /opt/tbc/.failed-sha -mmin -30 2>/dev/null)" ]; then exit 0; fi
+echo "$REMOTE" > /opt/tbc/.failed-sha
 echo "$(date -Is) deploying $REMOTE"
 git reset -q --hard origin/master
 # Server files can change with the repo; refresh them before building.
@@ -34,4 +38,5 @@ docker image prune -f >/dev/null
 # deploy.sh keeps itself current for the next run
 install -m 0755 /opt/tbc/tbcreborn/deploy/server/deploy.sh /opt/tbc/deploy.sh
 echo "$REMOTE" > /opt/tbc/.live-sha
+rm -f /opt/tbc/.failed-sha
 echo "$(date -Is) live $REMOTE"
