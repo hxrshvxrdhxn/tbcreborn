@@ -21,12 +21,13 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { product: string } }): Metadata {
   const p = productPageBySlug(params.product);
   if (!p) return {};
+  const ogImage = p.slug === "meridian" ? "/img/og-default.png" : `/img/og-${p.base ?? p.slug}.png`;
   return {
     title: { absolute: p.title },
     description: p.description,
     alternates: { canonical: `/products/${p.slug}` },
-    openGraph: { title: { absolute: p.title }, description: p.description, url: `${BASE}/products/${p.slug}`, images: [{ url: `/img/og-${p.base ?? p.slug}.png`, width: 1200, height: 630, alt: p.title }] },
-    twitter: { card: "summary_large_image", images: [`/img/og-${p.base ?? p.slug}.png`] },
+    openGraph: { title: { absolute: p.title }, description: p.description, url: `${BASE}/products/${p.slug}`, images: [{ url: ogImage, width: 1200, height: 630, alt: p.title }] },
+    twitter: { card: "summary_large_image", images: [ogImage] },
   };
 }
 
@@ -57,6 +58,19 @@ function getRelatedServicesForProduct(productSlug: string) {
           title: "Business Process Automation",
           href: "/services/business-automation",
           blurb: "Automate manual calculations, document assembly, and approval routing across departments.",
+        },
+      ];
+    case "meridian":
+      return [
+        {
+          title: "Technology Consulting",
+          href: "/services/technology-consulting",
+          blurb: "Strategic diagnostic and systems architecture to map cross-department handoffs before platform rollout.",
+        },
+        {
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Bespoke operational modules and bi-directional ERP integrations tailored to your floor workflows.",
         },
       ];
     case "vantage":
@@ -225,6 +239,25 @@ export default function ProductLanding({ params }: { params: { product: string }
           <div className="relative aspect-[16/10] rounded-[8px] overflow-hidden ring-1 ring-white/10 bg-forest">
             {art === "sunscout" ? (
               <SunscoutScene />
+            ) : art === "meridian" ? (
+              <div className="w-full h-full flex items-center justify-center p-8 bg-forest text-white/90">
+                <svg viewBox="0 0 240 240" className="w-48 h-48 max-w-full" aria-hidden="true">
+                  {Array.from({ length: 6 }).map((_, i) => {
+                    const a = -Math.PI / 2 + (i * Math.PI) / 3;
+                    const b = -Math.PI / 2 + ((i + 1) * Math.PI) / 3;
+                    const pt = (t: number) => [120 + 90 * Math.cos(t), 120 + 90 * Math.sin(t)];
+                    const [x1, y1] = pt(a), [x2, y2] = pt(b);
+                    return (
+                      <g key={i}>
+                        <path d={`M${x1} ${y1} L${x2} ${y2}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity={0.55} />
+                        <path d={`M120 120 L${x1} ${y1}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity={0.35} />
+                        <circle cx={x1} cy={y1} r="10" fill="#0C3D2A" stroke="currentColor" strokeWidth="2" />
+                      </g>
+                    );
+                  })}
+                  <circle cx="120" cy="120" r="14" fill="#1F8A5B" stroke="currentColor" strokeWidth="2" />
+                </svg>
+              </div>
             ) : art === "distil" ? (
               <Image
                 src="/img/videos/distil-intro.jpg"

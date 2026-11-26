@@ -174,6 +174,8 @@ const PRODUCTS = [
       "Meridian connects the handoffs between departments, from enquiry to dispatch, so everyone can see where work is waiting and who it is waiting on.",
       "It is built around approvals and handoffs. It does not replace your accounting system; it makes the work around it visible.",
     ],
+    href: "/products/meridian",
+    cta: "More about Meridian",
   },
   {
     id: "sunscout",

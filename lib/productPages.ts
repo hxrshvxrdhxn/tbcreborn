@@ -172,6 +172,56 @@ const corePages: ProductPage[] = [
       { q: "Is there a free trial?", a: "Yes. Send one recent enquiry and a past proposal for similar scope, and we show you what Distil produces from it, at no cost." },
     ],
   },
+  {
+    slug: "meridian",
+    name: "Meridian",
+    title: "Meridian: Operations Platform & Company Brain | TBC",
+    description:
+      "Unify manufacturing orders, quality COAs, service lifecycle and dealer operations under one edition, connected by an isolated per-company intelligence layer.",
+    eyebrow: "For mid-market manufacturers and engineering firms",
+    headline: "One operating system for your entire business.",
+    lead:
+      "Meridian connects the handoffs between departments, from enquiry to dispatch, so everyone can see where work is waiting and who it is waiting on. It unifies our focused operational tools—Cadence for orders, Assay for QC, Steward for service, Compass for margins, Relay for dealers, Rapport for intake, and Vantage for manuals—into industry-tailored editions sharing a per-company intelligence layer. Brain data is never pooled across clients, remains exportable in full, and operates under strict human approval gates: it never sets a price, quantity, specification, delivery date, or test result by itself.",
+    steps: [
+      { title: "Diagnostic & handoff mapping", body: "We map the current handoffs, delays, and spreadsheet gaps across your sales, production, quality, and service teams." },
+      { title: "Edition & module selection", body: "Activate the modules your operations require today: Cadence for orders, Assay for COAs, Steward for field assets, and Vantage for documents." },
+      { title: "Grounding the company brain", body: "Load your approved specifications, past orders, test limits, and manuals into an isolated data store dedicated solely to your company." },
+      { title: "Approval gates & permissions", body: "Establish role-based controls. The brain assists with draft documents and bottleneck warnings, but humans approve every critical action." },
+      { title: "Phased rollout & live operations", body: "Deploy floor by floor with mobile-friendly interfaces, direct ERP linkages, and hands-on staff onboarding." },
+    ],
+    capabilities: [
+      { title: "Modular Operations Suite", body: "Run order tracking, quality certificates, installed base service, and dealer intake as interconnected modules of one edition." },
+      { title: "Dedicated Company Brain", body: "An isolated intelligence layer that understands your company's operational history, past jobs, and customer specifications." },
+      { title: "Zero Cross-Client Data Pooling", body: "Your operational data, drawings, and records are strictly segregated at the database level and never used to train shared models." },
+      { title: "Strict Human Gatekeeping", body: "The company brain suggests rules and prepares drafts, but a human approves every price, quantity, specification, delivery date, or test result." },
+      { title: "100% Data Exportability", body: "Export every record, document, table, and audit trail in standard open formats at any time with zero vendor lock-in." },
+      { title: "Floor-to-Management Visibility", body: "Shop floor workers update tasks in taps on their phones, while the MD and department heads see bottlenecks before deadlines are missed." },
+      { title: "Tally & ERP Integration", body: "Tracks the physical journey of orders and tests without disrupting financial ledgers or accounting in Tally." },
+      { title: "Audit-Ready Quality Traceability", body: "Every batch, raw material heat number, test reading, and dispatch challan linked in an immutable digital record." },
+    ],
+    principles: [
+      { title: "Brain data is per company, never pooled", body: "Your operational knowledge belongs to your firm alone. Data is segregated in your dedicated tenant and never mixed with any other client." },
+      { title: "Full data exportability", body: "You own every byte. Download your complete database, logs, and document stores in standard open formats whenever you choose." },
+      { title: "People approve, software prepares", body: "The company brain never sets a price, quantity, specification, delivery date, or test result on its own. Authorised personnel retain final approval." },
+      { title: "Modular adoption", body: "Start with the single process costing your business the most today, and activate additional modules as your team scales." },
+    ],
+    forWho: [
+      "Custom equipment and machinery manufacturers",
+      "Industrial packaging, metal fabrication, and plastics processors",
+      "Engineering EPC contractors with complex multi-stage delivery milestones",
+      "Multi-location manufacturers managing distributor and dealer networks",
+      "Mid-market enterprises needing an agile operating system without multi-year ERP overhead",
+    ],
+    status: "Start with an exploratory consultation. We sit down with your leadership team to map current handoffs, review data privacy requirements, and configure a working demo edition tailored to your specific industry workflow.",
+    faqs: [
+      { q: "What is Meridian?", a: "Meridian is an all-in-one operations platform that connects handoffs across departments. Our specialized tools—Cadence for order tracking, Assay for QC/COAs, Steward for equipment lifecycle, Compass for margins, Relay for dealer orders, Rapport for customer intake, and Vantage for manuals—run as modules of one unified edition sharing a private company brain." },
+      { q: "How does the Company Brain work?", a: "The Company Brain is a private intelligence layer dedicated to your company. It indexes your approved documentation, product catalogues, customer requirements, and historical records to assist staff with retrieval, drafting, and cross-department alerts. It is strictly isolated and never pooled across clients." },
+      { q: "Can the Company Brain make automated decisions like changing prices or passing test lots?", a: "No. By architectural design, the Company Brain never sets a price, quantity, technical specification, delivery date, or test result by itself. It prepares structured recommendations, flags discrepancies, and drafts records, but designated humans must review and approve every action." },
+      { q: "Is our data ever shared or used to train public AI models?", a: "Never. Every client organisation has segregated data storage. Brain embeddings and documents are stored privately in compliance with enterprise security standards and the DPDP Act. We never pool data or train public foundation models on client assets." },
+      { q: "Can we export our data if we decide to leave?", a: "Yes. You can export your entire operational database, master data, document library, and audit trails in standard open formats at any time. We enforce zero proprietary lock-in." },
+      { q: "Do we have to replace our accounting software or Tally?", a: "No. Meridian manages operational workflows, handoffs, quality assurance, and floor tracking. Invoices, tax ledgers, and accounts continue to run seamlessly in Tally or your existing ERP." },
+    ],
+  },
 ];
 
 export const productPages: ProductPage[] = [...corePages, ...toolPages];
