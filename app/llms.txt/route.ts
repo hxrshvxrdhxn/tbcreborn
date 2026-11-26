@@ -1,6 +1,5 @@
 import { getHubEntries, getHubEntry } from "@/lib/hubs";
 import { aiPractices, consultingLinks } from "@/lib/offerings";
-import { industries } from "@/lib/industries";
 
 export const revalidate = 3600;
 
@@ -39,19 +38,47 @@ export async function GET() {
 
   const body = `# Turbo Bytes Consulting
 
-> Turbo Bytes Consulting (TBC) is a process-first consulting and software firm in Greater Noida, India. It finds the process that costs a business most and turns it into software it builds, runs and maintains. It builds private LLM and neural network systems, trains teams to use them, advises on technology decisions, and runs its own products.
+> Turbo Bytes Consulting (TBC) is a technology consultancy serving mid-market enterprises across India, the Middle East, and Asia-Pacific. We sit with the managing director and frontline teams, measure where processes cost the business most, and fix them: with process automation, bespoke software, and end-to-end digital transformation. We also help organisations earn authoritative visibility in traditional search and conversational AI answers (SEO, AEO, GEO).
 
 ## Key facts
 
 - Organisation: Turbo Bytes Consulting (TBC)
 - Founder: Harshvardhan Chauhan
 - Location: Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Greater Noida, Uttar Pradesh 201310, India
-- Service area: Greater Noida, Noida, Delhi NCR, and across India
-- Practice areas: custom and on-premise LLMs, AI capability building, technology consulting, technology audits, AI readiness assessments, business diagnostics, and software products
-- Email: harsh@turbobytesconsulting.com / info@turbobytesconsulting.com
+- Geographic reach: India, Middle East (UAE, Saudi Arabia), and Asia-Pacific (Singapore, Australia)
+- Practice areas: Technology consulting, process automation, custom software development, digital transformation, AEO/SEO/GEO search visibility, and specialised software products
+- Proof point: In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines.
+- Email: info@turbobytesconsulting.com / harsh@turbobytesconsulting.com
 - Telephone: +91 93547 84377
 - Operating hours: Monday to Friday, 08:00 to 21:00 IST
-- YouTube: https://www.youtube.com/channel/UCXQy14KS46mSFyu1VzEUqXw
+- Website: https://turbobytesconsulting.com
+
+## Core service pillars
+
+- [Technology Consulting](${BASE}/services/technology-consulting): Diagnostic assessments, systems architecture, and process mapping before capital expenditure.
+- [Custom Software Development](${BASE}/services/custom-software-development): Bespoke business software, internal portals, approval workflows, and Tally/ERP integrations.
+- [AEO, SEO and GEO Consulting](${BASE}/services/aeo-seo-geo): Making your business findable in Google search and cited in AI answers across ChatGPT, Gemini, and Perplexity.
+- [SEO Services](${BASE}/services/seo): Technical crawl architecture, Core Web Vitals, canonical design, and Schema.org entity graphs.
+- [Answer Engine Optimisation (AEO)](${BASE}/services/answer-engine-optimisation): Featured snippets, People Also Ask answers, and voice search answer headers.
+- [Generative Engine Optimisation (GEO)](${BASE}/services/generative-engine-optimisation): Entity grounding, machine-readable llms.txt, and authority citations for AI models.
+- [Free AI Visibility Check](${BASE}/free-ai-visibility-check): Complimentary diagnostic testing if ChatGPT, Gemini, and Perplexity recommend your business.
+- [Digital Transformation](${BASE}/digital-transformation): End-to-end modernisations across five structured phases: Diagnose, Design, Build, Run, and Hand Over.
+- [Business Process Automation](${BASE}/services/business-automation): Removing repetitive data entry, paper sign-offs, and fragmented cross-department delays.
+
+## Products
+
+Proof that we ship. Consulting leads.
+
+- [Distil](${BASE}/products/distil): Technical proposal assembly engine for heavy engineering and EPC contractors.
+- [Sunscout](${BASE}/products/sunscout): Rooftop solar prospecting and site sizing for commercial and industrial EPCs.
+- [Meridian](${BASE}/products/meridian): All-in-one operations platform uniting order tracking, quality assurance COAs, and service lifecycles with an isolated per-company intelligence brain.
+- [Cadence](${BASE}/products/cadence): Order-to-dispatch tracking for make-to-order manufacturers.
+- [Assay](${BASE}/products/assay): Certificate of Analysis (COA) generation and laboratory quality tracking.
+- [Steward](${BASE}/products/steward): Installed base equipment lifecycle, maintenance contracts, and field service management.
+- [Compass](${BASE}/products/compass): Operational margin tracking and project health visibility for professional firms.
+- [Relay](${BASE}/products/relay): B2B mobile ordering and account management portal for dealer networks.
+- [Rapport](${BASE}/products/rapport): Omnichannel customer intake, enquiry routing, and response tracking.
+- [Vantage](${BASE}/products/vantage): Plain-text question answering grounded exclusively in your own catalogues and manuals.
 
 ## AI practice
 
@@ -61,44 +88,16 @@ ${aiPractices.map(line).join("\n")}
 
 ${consultingLinks.map(line).join("\n")}
 
-## Products
+## Research, guides and knowledge hubs
 
-- [Sunscout](${BASE}/products/sunscout): rooftop solar prospecting and sizing for commercial and industrial EPCs in India
-- [Sunscout for the UK and Europe](${BASE}/products/sunscout-europe): commercial rooftop prospecting for installers and developers in the UK and Europe
-- [Distil](${BASE}/products/distil): complex engineering proposals assembled from verified parts with zero calculation errors
-- [Vantage](${BASE}/products/vantage): years of technical catalogues, datasheets and manuals turned into answers with exact page citations
-- [Cadence](${BASE}/products/cadence): order-to-dispatch tracking board for industrial manufacturers and fabrication shops
-- [Assay](${BASE}/products/assay): Certificate of Analysis (COA) digitization, batch records and laboratory QC without retyping
-- [Steward](${BASE}/products/steward): installed base, warranty tracking, preventive maintenance and AMC management for equipment makers
-- [Compass](${BASE}/products/compass): project profitability, timesheets and milestone billing for professional consultancies
-- [Relay](${BASE}/products/relay): WhatsApp dealer and distributor ordering with custom tiered pricing and credit rules applied
-- [Rapport](${BASE}/products/rapport): service enquiry auto-triage, follow-ups and client document management for equipment firms
-- [Agent Desk](${BASE}/agent-desk): managed software agents for collections, tenders, compliance and operations, verified by human operators
-- [Slate](${BASE}/services/slate): executive operational intelligence assistant reading work routing and timing
-- [All products](${BASE}/products): overview of all software products and operational platforms built by TBC
-
-## Engineering
-
-- [Custom software development](${BASE}/services/custom-software-development): business systems built around a company's own process
-- [AI applications](${BASE}/services/ai-applications): document reading, assistants trained on company documents, LLM features
-- [Business automation](${BASE}/services/business-automation): integrations between Tally, Zoho, Shopify, WhatsApp and other tools
-
-## Industries
-
-${industries.map((i) => `- [${i.name}](${BASE}/industries/${i.slug}): ${i.description}`).join("\n")}
-
-## Tools and guides
-
-- [Process cost calculator](${BASE}/process-cost-calculator): what one manual process costs a business each year in time and mistakes
-- [Software cost calculator](${BASE}/software-cost-calculator): indicative cost range and timeline for a project in India
-${specificGuides.join("\n")}
 ${hubLines.join("\n")}
-
-## Company
-
-- [About](${BASE}/about)
-- [Work](${BASE}/work)
-- [Book a 30-minute scoping call](${BASE}/book-consultation)
+${specificGuides.join("\n")}
 `;
-  return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+
+  return new Response(body, {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, max-age=3600",
+    },
+  });
 }

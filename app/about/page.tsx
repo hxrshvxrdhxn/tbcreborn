@@ -5,25 +5,25 @@ import SectionInk from "@/components/SectionInk";
 import { BothHalves, ValueIcon, ProcessToday, ProcessWithSoftware } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Turbo Bytes Consulting | Process-First AI & Software" },
+  title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
   description:
-    "Turbo Bytes Consulting sits with your MD and team, finds the process that costs you most, and turns it into software we build, run and maintain. Delhi NCR.",
+    "TBC is a technology consultancy serving India, Middle East and APAC. We sit with your MD and team, measure what processes cost, fix them, and run them.",
   alternates: {
     canonical: "/about",
   },
   robots: { index: true, follow: true },
   openGraph: {
-    title: { absolute: "About Turbo Bytes Consulting | Process-First AI & Software" },
+    title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
     description:
-      "Turbo Bytes Consulting sits with your MD and team, finds the process that costs you most, and turns it into software we build, run and maintain. Delhi NCR.",
+      "TBC is a technology consultancy serving India, Middle East and APAC. We sit with your MD and team, measure what processes cost, fix them, and run them.",
     url: "https://turbobytesconsulting.com/about",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "About Turbo Bytes Consulting | Process-First AI & Software" },
+    title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
     description:
-      "Turbo Bytes Consulting sits with your MD and team, finds the process that costs you most, and turns it into software we build, run and maintain. Delhi NCR.",
+      "TBC is a technology consultancy serving India, Middle East and APAC. We sit with your MD and team, measure what processes cost, fix them, and run them.",
   },
 };
 
@@ -63,7 +63,7 @@ const values = [
 const companyFacts = [
   {
     label: "Category",
-    value: "Process automation, AI and software consultancy",
+    value: "Technology consultancy and process automation",
   },
   {
     label: "Established",
@@ -73,6 +73,10 @@ const companyFacts = [
     label: "Headquarters",
     value:
       "Kasana Tower, Alpha-I Commercial Belt, Greater Noida, Uttar Pradesh, India",
+  },
+  {
+    label: "Geographic scope",
+    value: "India, Middle East (UAE, Saudi Arabia), and Asia-Pacific (Singapore, Australia)",
   },
   {
     label: "Website",
@@ -91,6 +95,29 @@ const companyFacts = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What kind of organisation is Turbo Bytes Consulting?",
+    answer: "TBC is a technology consultancy. We sit with the managing director and frontline teams, find the processes that cost the business the most time and money, and fix them with automation, custom software, and full digital transformation. We also help companies establish authoritative visibility in search and AI answers across India, the Middle East, and Asia-Pacific."
+  },
+  {
+    question: "How do you work with client leadership?",
+    answer: "We begin with an in-person or structured scoping conversation with the MD or founder to identify friction points and bottlenecks. Then we shadow the operational teams who perform the work every day, quantify the cost of delay, build the software solution, and run and maintain it under ongoing SLA support."
+  },
+  {
+    question: "Do you replace our existing accounting or ERP systems?",
+    answer: "No. We believe in augmenting existing stable infrastructure rather than forcing high-risk replacements. Invoices, taxation, and ledgers remain in Tally or your ERP, while we build modern workflow, quality, and tracking layers that synchronise bi-directionally."
+  },
+  {
+    question: "What is your real-world proof of operational leverage?",
+    answer: "In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines. We achieve this by eliminating redundant data transfer, connecting departmental handoffs, and automating high-volume manual routines."
+  },
+  {
+    question: "Who owns the software and intellectual property created during an engagement?",
+    answer: "You do. All source code repositories, databases, automation scripts, and schemas are created in your accounts and belong entirely to your organisation from day one."
+  }
+];
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -99,7 +126,7 @@ const schema = {
       "@id": "https://turbobytesconsulting.com/about#webpage",
       url: "https://turbobytesconsulting.com/about",
       name: "About Turbo Bytes Consulting",
-      description: "Turbo Bytes Consulting sits with your MD and team, finds the process that costs you most, and turns it into software we build, run and maintain.",
+      description: "Turbo Bytes Consulting is a technology consultancy. We sit with your MD and team, find the process that costs you most, and turn it into software we build, run and maintain.",
       publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
     },
     {
@@ -109,6 +136,17 @@ const schema = {
         { "@type": "ListItem", position: 2, name: "About", item: "https://turbobytesconsulting.com/about" },
       ],
     },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map(f => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.answer
+        }
+      }))
+    }
   ],
 };
 
@@ -122,8 +160,11 @@ export default function AboutPage() {
           <Reveal>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
-              We turn the process that slows your business down into software that runs it.
+              We sit with your team, measure what processes cost, fix them, and run them.
             </h1>
+            <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed max-w-2xl text-pretty">
+              Turbo Bytes Consulting is a technology consultancy serving growing mid-market enterprises across India, the Middle East, and the Asia-Pacific region.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -141,18 +182,19 @@ export default function AboutPage() {
               </div>
               <div className="lg:col-span-8 space-y-6">
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                  Turbo Bytes Consulting (TBC) starts with a conversation with your
-                  MD or founder, to find the one process that costs the business the
-                  most time, money or sleep. Then we sit with the team who run it
-                  every day and learn how it really works, exceptions included.
+                  TBC is a technology consultancy. We sit with the managing director and the team, find the processes that cost the business the most time, money or sleep, and fix them: with process automation, with custom software built for that exact need, and with full digital transformation.
                 </p>
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                  From there, our team turns that process into software, using LLMs
-                  and neural networks where they genuinely help. We deploy it, train
-                  your people, and keep looking after it through AMC and
-                  maintenance. Most projects start at about what one person costs
-                  you in a year.
+                  We also make companies findable in traditional search and in conversational AI answers (SEO, AEO, GEO), for our clients and for ourselves. We build the systems, deploy them, train your staff, and run and maintain them through ongoing SLA support.
                 </p>
+                <div className="p-6 bg-white border-l-4 border-forest rounded-r-[8px] mt-6">
+                  <p className="font-display font-bold text-ink text-[18px] mb-2">
+                    In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines.
+                  </p>
+                  <p className="text-[14px] text-mid-grey">
+                    We achieve this through rigorous process mapping, removing spreadsheet bottlenecks, and applying targeted machine intelligence to routine administrative work.
+                  </p>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -182,10 +224,7 @@ export default function AboutPage() {
               </h2>
               <hr className="gold-rule mb-8" />
               <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                A consultancy will tell you what to fix. A software house will build
-                what you specify. We do both: we find the problem with you, build
-                the fix, and stay accountable for it after go-live. One team, from
-                the first conversation to the hundredth support call.
+                A traditional consultancy will tell you what to fix. A software house will build what you specify. We do both: we sit with you to diagnose the root operational bottlenecks, engineer the custom software and automations, and stay accountable for running and maintaining the systems in production. One team, from the initial diagnostic to years of live support.
               </p>
             </div>
             <BothHalves />
@@ -277,6 +316,33 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── FAQS ── */}
+      <section className="bg-white py-s6 md:py-s8 border-b border-light-grey">
+        <div className="container-tbc max-w-4xl">
+          <hr className="gold-rule mb-6" />
+          <h2 className="font-display font-bold text-[clamp(26px,2.5vw,36px)] text-ink leading-[1.2] mb-4">
+            Frequently asked questions about TBC.
+          </h2>
+          <p className="text-body text-mid-grey leading-relaxed max-w-2xl mb-12">
+            Clear facts on how we engage with enterprise clients, intellectual property ownership, and our service delivery model.
+          </p>
+
+          <div className="space-y-4">
+            {faqs.map((f, i) => (
+              <details key={i} className="group bg-ivory border border-light-grey rounded-[8px] p-6 open:shadow-card transition-all">
+                <summary className="font-display font-bold text-[18px] text-ink cursor-pointer list-none flex items-center justify-between">
+                  <span>{f.question}</span>
+                  <span className="text-mid-grey text-[20px] transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="text-body text-mid-grey leading-relaxed mt-4 pt-4 border-t border-light-grey text-pretty">
+                  {f.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA BAND ── */}
       <SectionInk className="text-center" aria-labelledby="about-cta-heading">
         <div className="container-tbc">
@@ -289,7 +355,7 @@ export default function AboutPage() {
               conversation is free and comes with no obligation.
             </p>
             <Link href="/book-consultation" className="btn-gold px-10 py-4.5 text-[16px]">
-              Book a Consultation →
+              Book a consultation
             </Link>
           </Reveal>
         </div>
