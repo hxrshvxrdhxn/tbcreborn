@@ -116,7 +116,7 @@ export default function AeoSeoGeoPage() {
               AEO, SEO and GEO: making your business findable in search and AI answers.
             </h1>
             <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed text-pretty mb-8">
-              Commercial buyers worldwide increasingly ask ChatGPT, Gemini, and Perplexity for vendor recommendations. We ensure your business is ranked on Google and cited by AI answer engines.
+              Commercial buyers worldwide increasingly ask ChatGPT, Gemini, and Perplexity for vendor recommendations. We help your business rank on Google and get cited by AI answer engines.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
