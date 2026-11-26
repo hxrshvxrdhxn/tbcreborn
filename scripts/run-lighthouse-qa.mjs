@@ -3,11 +3,11 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const pages = [
-  { name: 'Home', url: 'http://localhost:7000/', file: 'lh-home.json' },
-  { name: 'Services Overview', url: 'http://localhost:7000/services', file: 'lh-services.json' },
-  { name: 'AEO / SEO / GEO Pillar', url: 'http://localhost:7000/services/aeo-seo-geo', file: 'lh-aeo.json' },
-  { name: 'Distil Product', url: 'http://localhost:7000/products/distil', file: 'lh-distil.json' },
-  { name: 'Blog Post', url: 'http://localhost:7000/blog/automating-reports-from-multiple-data-sources', file: 'lh-blog.json' },
+  { name: 'Home', url: 'http://127.0.0.1:7000/', file: 'lh-home.json' },
+  { name: 'Services Overview', url: 'http://127.0.0.1:7000/services', file: 'lh-services.json' },
+  { name: 'AEO / SEO / GEO Pillar', url: 'http://127.0.0.1:7000/services/aeo-seo-geo', file: 'lh-aeo.json' },
+  { name: 'Distil Product', url: 'http://127.0.0.1:7000/products/distil', file: 'lh-distil.json' },
+  { name: 'Blog Post', url: 'http://127.0.0.1:7000/blog/automating-reports-from-multiple-data-sources', file: 'lh-blog.json' },
 ];
 
 const results = [];
@@ -17,7 +17,7 @@ for (const p of pages) {
   console.log(`Running Lighthouse on ${p.name} (${p.url})...`);
   try {
     execSync(
-      `npx --yes lighthouse "${p.url}" --output=json --output-path="${outPath}" --chrome-flags="--headless --no-sandbox" --only-categories=performance,accessibility,best-practices,seo --form-factor=mobile --throttling-method=devtools`,
+      `npx --yes lighthouse "${p.url}" --output=json --output-path="${outPath}" --chrome-flags="--headless=new --no-sandbox" --only-categories=performance,accessibility,best-practices,seo --form-factor=mobile`,
       { stdio: 'ignore' }
     );
     const data = JSON.parse(fs.readFileSync(outPath, 'utf8'));

@@ -186,7 +186,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="container-tbc py-3">
           <ol className="flex items-center gap-2 font-sans text-[13px] text-mid-grey">
             <li>
-              <Link href="/blog" className="hover:text-royal transition-colors duration-150">
+              <Link prefetch={false} href="/blog" className="hover:text-royal transition-colors duration-150">
                 Insight
               </Link>
             </li>
@@ -253,7 +253,7 @@ export default async function BlogPostPage({ params }: Props) {
               <p className="font-sans text-[15px] text-ink/80 leading-relaxed mb-3 text-balance">
                 Harshvardhan specialises in operational architecture and AI integration for mid-sized firms. He works directly with founders to remove friction and build systems that scale.
               </p>
-              <Link href="/about" className="font-sans text-[14px] text-royal font-semibold hover:text-royal-mid underline underline-offset-2">
+              <Link prefetch={false} href="/about" className="font-sans text-[14px] text-royal font-semibold hover:text-royal-mid underline underline-offset-2">
                 Read more about our approach
               </Link>
             </div>
@@ -268,14 +268,14 @@ export default async function BlogPostPage({ params }: Props) {
             <h2 className="font-display font-bold text-[24px] text-ink mb-8">Related {post.category} Insights</h2>
             <div className="grid md:grid-cols-3 gap-8 mb-10">
               {relatedPosts.map(rp => (
-                <Link key={rp.slug} href={`/blog/${rp.slug}`} className="block group">
+                <Link prefetch={false} key={rp.slug} href={`/blog/${rp.slug}`} className="block group">
                   <h3 className="font-display font-semibold text-[18px] text-ink group-hover:text-royal transition-colors mb-2">{rp.title}</h3>
                   <p className="font-sans text-[14px] text-mid-grey">{rp.date} · {rp.readTime}</p>
                 </Link>
               ))}
             </div>
             <div className="text-center">
-              <Link href={serviceLink} className="font-sans text-royal underline hover:text-royal-mid font-semibold">
+              <Link prefetch={false} href={serviceLink} className="font-sans text-royal underline hover:text-royal-mid font-semibold">
                 Explore our {post.category} services
               </Link>
             </div>
@@ -293,7 +293,7 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="font-sans text-[16px] text-white/80 mb-8">
             Request a consultation. We will respond within one business day.
           </p>
-          <Link href="/book-consultation" className="btn-gold">
+          <Link prefetch={false} href="/book-consultation" className="btn-gold">
             Request a Consultation
           </Link>
           <hr className="gold-rule gold-rule--center mt-10" />

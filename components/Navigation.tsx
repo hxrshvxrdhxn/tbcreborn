@@ -29,8 +29,17 @@ export default function Navigation() {
   // Once the reader scrolls, the bar lifts into a rounded, floating panel (desktop only).
   // It moves with transform, so the header's height never changes and nothing below it jumps.
   useEffect(() => {
-    const onScroll = () => setFloating(window.scrollY > 24);
-    onScroll();
+    if (typeof window !== "undefined" && window.innerWidth < 1024) return;
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setFloating(window.scrollY > 24);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -47,7 +56,7 @@ export default function Navigation() {
       <div className="container-tbc">
         <nav className="flex items-center justify-between h-16" aria-label="Main navigation">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group" aria-label="Turbo Bytes Consulting — home">
+          <Link href="/" prefetch={false} className="flex items-center gap-2.5 group" aria-label="Turbo Bytes Consulting — home">
             <Image
               src="/brand/tbc-logo-white.svg"
               alt=""
@@ -64,6 +73,7 @@ export default function Navigation() {
               <li key={link.href} className="relative group h-full flex items-center">
                 <Link
                   href={link.href}
+                  prefetch={false}
                   target={link.target || "_self"}
                   rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                   className={`font-display font-medium text-sm tracking-wide transition-colors duration-150 py-5 ${
@@ -116,7 +126,7 @@ export default function Navigation() {
                           <ul className="flex flex-col gap-1">
                             {col.items.map((it) => (
                               <li key={it.href}>
-                                <Link href={it.href} className="block py-1.5 text-[14px] leading-snug text-ink hover:text-royal transition-colors">{it.title}</Link>
+                                <Link href={it.href} prefetch={false} className="block py-1.5 text-[14px] leading-snug text-ink hover:text-royal transition-colors">{it.title}</Link>
                               </li>
                             ))}
                           </ul>
@@ -133,10 +143,10 @@ export default function Navigation() {
                       <p className="text-[12px] font-semibold text-mid-grey mb-2">Knowledge Base</p>
                       <ul className="flex flex-col gap-1">
                         <li>
-                          <Link href="/blog" className="block py-1.5 text-[14px] text-ink hover:text-royal transition-colors font-medium">Articles & Insights</Link>
+                          <Link href="/blog" prefetch={false} className="block py-1.5 text-[14px] text-ink hover:text-royal transition-colors font-medium">Articles & Insights</Link>
                         </li>
                         <li>
-                          <Link href="/how-to" className="block py-1.5 text-[14px] text-ink hover:text-royal transition-colors font-medium">How-To Guides</Link>
+                          <Link href="/how-to" prefetch={false} className="block py-1.5 text-[14px] text-ink hover:text-royal transition-colors font-medium">How-To Guides</Link>
                         </li>
                       </ul>
                     </div>
@@ -150,6 +160,7 @@ export default function Navigation() {
           <div className="flex items-center gap-4">
             <Link
               href="/book-consultation"
+              prefetch={false}
               className="btn-primary hidden sm:inline-flex text-sm py-2.5 px-5"
             >
               Book a consultation
@@ -183,6 +194,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 target={link.target || "_self"}
                 rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                 onClick={() => setOpen(false)}
@@ -195,6 +207,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/book-consultation"
+              prefetch={false}
               onClick={() => setOpen(false)}
               className="btn-primary mt-4 text-center"
             >

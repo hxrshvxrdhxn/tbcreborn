@@ -35,17 +35,22 @@ export default function VisitBeacon() {
 
   useEffect(() => {
     if (!pathname || pathname.startsWith("/admin")) return;
-    let isNew = false;
-    try {
-      isNew = !localStorage.getItem("tbc_seen");
-      if (isNew) localStorage.setItem("tbc_seen", "1");
-    } catch {
-      /* storage blocked: count as returning */
-    }
-    send({ t: "view", path: pathname, ref: document.referrer || undefined, isNew });
+    if (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) return;
+    const timer = setTimeout(() => {
+      let isNew = false;
+      try {
+        isNew = !localStorage.getItem("tbc_seen");
+        if (isNew) localStorage.setItem("tbc_seen", "1");
+      } catch {
+        /* storage blocked: count as returning */
+      }
+      send({ t: "view", path: pathname, ref: document.referrer || undefined, isNew });
+    }, 3000);
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   useReportWebVitals((m) => {
+    if (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) return;
     if (["LCP", "INP", "CLS", "FCP", "TTFB"].includes(m.name) && firstTime(`${Math.round(performance.timeOrigin)}_${m.name}`)) {
       send({ t: "vital", path: window.location.pathname, name: m.name, value: m.value });
     }

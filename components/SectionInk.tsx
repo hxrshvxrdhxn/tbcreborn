@@ -16,7 +16,7 @@ export default function SectionInk({ children, className = "", id }: SectionInkP
           src="/img/motif-dark-wide.png" 
           alt="" 
           fill 
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
           className="object-cover object-center"
           priority={false}
           aria-hidden="true"

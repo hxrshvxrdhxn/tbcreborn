@@ -4,12 +4,12 @@
 
 @layer base {
   :root { --accent: 22 122 78; --accent-bright: 15 106 67; --on-accent: 255 255 255; }
-  .bg-forest, .bg-royal, [class*="from-forest"] { --accent: 167 235 200; --accent-bright: 204 245 223; --on-accent: 11 26 18; }
+  .bg-forest, .bg-royal, .from-forest { --accent: 167 235 200; --accent-bright: 204 245 223; --on-accent: 11 26 18; }
   .bg-forest .text-mid-grey, .bg-royal .text-mid-grey { color: rgb(226 242 233 / 0.82); }
   .bg-forest .btn-primary { background-color: #A7EBC8; color: #0B1A12; }
   .bg-forest .btn-primary:hover { background-color: #CCF5DF; }
   /* light panels inside a green band (header dropdown, white cards) go back to the light-surface palette */
-  :is(.bg-forest, .bg-royal, [class*="from-forest"]) :is(.bg-white, .bg-ivory) { --accent: 22 122 78; --accent-bright: 15 106 67; --on-accent: 255 255 255; }
+  :is(.bg-forest, .bg-royal, .from-forest) :is(.bg-white, .bg-ivory) { --accent: 22 122 78; --accent-bright: 15 106 67; --on-accent: 255 255 255; }
   :is(.bg-forest, .bg-royal) :is(.bg-white, .bg-ivory) .text-mid-grey { color: #5B6B61; }
   :is(.bg-forest, .bg-royal) :is(.bg-white, .bg-ivory) .btn-primary { background-color: rgb(var(--accent)); color: #fff; }
   /* depth: darker green on the big green bands, black for the closing CTA */
@@ -335,8 +335,10 @@
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @media (min-width: 768px) {
+    .text-balance {
+      text-wrap: balance;
+    }
   }
   .measure-68 {
     max-width: 68ch;
@@ -401,8 +403,7 @@
 /* Cards in a row share one height. Grid/flex items stretch by default; the Reveal wrapper and the
    single card inside it are told to fill that height too, so rows of cards line up everywhere. */
 :is(.grid, .flex) > [data-reveal] { display: flex; flex-direction: column; }
-:is(.grid, .flex) > [data-reveal] > div { flex: 1 1 auto; }
-:is(.grid, .flex) > [data-reveal] > div:has(> :only-child) { display: flex; flex-direction: column; }
+:is(.grid, .flex) > [data-reveal] > div { flex: 1 1 auto; display: flex; flex-direction: column; }
 :is(.grid, .flex) > [data-reveal] > div > :only-child { flex: 1 1 auto; }
 
 /* Moving dots in the illustrations stop for people who prefer less motion. */

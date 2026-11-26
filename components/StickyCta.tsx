@@ -31,11 +31,17 @@ export default function StickyCta() {
     // Listen for cookie consent status changes
     window.addEventListener("cookie-consent-change", checkCookieConsent);
 
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 400);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 400);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
@@ -65,7 +71,7 @@ export default function StickyCta() {
   return (
     <aside
       aria-label="Quick contact actions"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-light-grey px-4 py-2.5 shadow-lg transition-transform duration-200"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-light-grey px-4 py-2.5 shadow-lg transition-transform duration-200"
       style={{
         paddingBottom: "max(10px, env(safe-area-inset-bottom))",
       }}
@@ -73,6 +79,7 @@ export default function StickyCta() {
       <div className="flex items-center gap-2.5">
         <Link
           href="/book-consultation"
+          prefetch={false}
           onClick={handleBookingClick}
           className="flex-1 bg-royal hover:bg-royal-mid text-white font-display font-semibold text-[14px] leading-tight py-3 px-3 rounded-lg text-center shadow-sm transition-colors duration-150 flex items-center justify-center"
         >

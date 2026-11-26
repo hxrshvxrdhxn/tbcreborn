@@ -10,9 +10,8 @@ import VisitBeacon from "@/components/VisitBeacon";
 import StickyCta from "@/components/StickyCta";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import BackToTop from "@/components/BackToTop";
-import { GoogleTagManager } from "@next/third-parties/google";
+import DeferredAnalytics from "@/components/DeferredAnalytics";
 import GTMTracker from "@/components/GTMTracker";
-import Script from "next/script";
 
 // Self-hosted so every build ships identical font class names (no Google Fonts fetch at build time).
 // Inter is the closest open equivalent to Apple's San Francisco: tall x-height, open shapes, easy to read.
@@ -80,8 +79,7 @@ export default function RootLayout({
                 'ad_storage': 'denied',
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
-                'analytics_storage': 'denied',
-                'wait_for_update': 500
+                'analytics_storage': 'denied'
               });
               if (document.cookie.indexOf('CookieConsent=true') !== -1) {
                 gtag('consent', 'update', {
@@ -111,18 +109,8 @@ export default function RootLayout({
         <CookieBanner />
         <VisitBeacon />
 
-        {/* Analytics and Tracking */}
-        <GoogleTagManager gtmId="GTM-W6MCQF5V" />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-1H5E3Y9YRF"
-          strategy="lazyOnload"
-        />
-        <Script id="ga4-init" strategy="lazyOnload">
-          {`
-            gtag('js', new Date());
-            gtag('config', 'G-1H5E3Y9YRF');
-          `}
-        </Script>
+        {/* Analytics and Tracking (Deferred until idle or first interaction to protect CWV & TBT) */}
+        <DeferredAnalytics />
         <GTMTracker />
 
         {/* Global JSON-LD Schema Graph for GEO/SEO */}

@@ -82,10 +82,10 @@ export default function HomePage() {
               custom software and full digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 hero-4">
-              <Link href="/book-consultation" className="btn-primary min-h-[48px] px-8 text-center flex items-center justify-center text-[16px] shadow-sm">
+              <Link href="/book-consultation" prefetch={false} className="btn-primary min-h-[48px] px-8 text-center flex items-center justify-center text-[16px] shadow-sm">
                 Book a consultation
               </Link>
-              <Link href="/services" className="inline-flex items-center justify-center min-h-[48px] px-6 text-[15px] font-display font-semibold text-white/90 hover:text-white transition-colors gap-2">
+              <Link href="/services" prefetch={false} className="inline-flex items-center justify-center min-h-[48px] px-6 text-[15px] font-display font-semibold text-white/90 hover:text-white transition-colors gap-2">
                 Explore our advisory <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
@@ -110,6 +110,7 @@ export default function HomePage() {
             {/* Offer 1 */}
             <Link
               href="/services/technology-consulting"
+              prefetch={false}
               className="group bg-ivory border border-light-grey rounded-[8px] p-6 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
             >
               <div>
@@ -134,6 +135,7 @@ export default function HomePage() {
             {/* Offer 2 */}
             <Link
               href="/services/custom-software-development"
+              prefetch={false}
               className="group bg-ivory border border-light-grey rounded-[8px] p-6 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
             >
               <div>
@@ -158,6 +160,7 @@ export default function HomePage() {
             {/* Offer 3 */}
             <Link
               href="/services/aeo-seo-geo"
+              prefetch={false}
               className="group bg-ivory border border-light-grey rounded-[8px] p-6 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
             >
               <div>
@@ -183,6 +186,7 @@ export default function HomePage() {
             {/* Offer 4 */}
             <Link
               href="/digital-transformation"
+              prefetch={false}
               className="group bg-ivory border border-light-grey rounded-[8px] p-6 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
             >
               <div>
@@ -290,10 +294,10 @@ export default function HomePage() {
                 See how we work with whole teams, diagnose operations and build software and automations in-house around how your business works — reducing outside dependencies so your data stays with you.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Link href="/about" className="text-[15px] font-semibold text-royal hover:underline inline-flex items-center gap-1.5">
+                <Link prefetch={false} href="/about" className="text-[15px] font-semibold text-royal hover:underline inline-flex items-center gap-1.5">
                   About our organisation &rarr;
                 </Link>
-                <Link href="/book-consultation" className="btn-gold min-h-[44px] px-6 text-[15px]">
+                <Link prefetch={false} href="/book-consultation" className="btn-gold min-h-[44px] px-6 text-[15px]">
                   Book a consultation
                 </Link>
               </div>
@@ -319,7 +323,7 @@ export default function HomePage() {
                 Focused operational software built for real client workflows, available as standalone tools or unified within Meridian.
               </p>
             </div>
-            <Link href="/products" className="text-[15px] font-semibold text-royal hover:underline shrink-0">
+            <Link prefetch={false} href="/products" className="text-[15px] font-semibold text-royal hover:underline shrink-0">
               View all 10 products &rarr;
             </Link>
           </div>
@@ -339,7 +343,7 @@ export default function HomePage() {
                   Turn complex technical enquiries into verified proposals and bills of materials in minutes.
                 </p>
               </div>
-              <Link href="/products/distil" className="text-[14px] font-semibold text-royal hover:underline">
+              <Link prefetch={false} href="/products/distil" className="text-[14px] font-semibold text-royal hover:underline">
                 Explore Distil &rarr;
               </Link>
             </div>
@@ -358,7 +362,7 @@ export default function HomePage() {
                   Identify and score commercial factory rooftops for solar EPCs from open satellite data.
                 </p>
               </div>
-              <Link href="/products/sunscout" className="text-[14px] font-semibold text-royal hover:underline">
+              <Link prefetch={false} href="/products/sunscout" className="text-[14px] font-semibold text-royal hover:underline">
                 Explore Sunscout &rarr;
               </Link>
             </div>
@@ -397,7 +401,7 @@ export default function HomePage() {
                   One operating system uniting orders, quality certificates and service with an isolated company brain.
                 </p>
               </div>
-              <Link href="/products/meridian" className="text-[14px] font-semibold text-royal hover:underline">
+              <Link prefetch={false} href="/products/meridian" className="text-[14px] font-semibold text-royal hover:underline">
                 Explore Meridian &rarr;
               </Link>
             </div>
@@ -414,22 +418,22 @@ export default function HomePage() {
                 <div>
                   <h4 className="font-bold text-ink">Cadence</h4>
                   <p className="text-mid-grey">Order-to-dispatch tracking for make-to-order manufacturing.</p>
-                  <Link href="/products/cadence" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+                  <Link prefetch={false} href="/products/cadence" className="text-royal font-semibold hover:underline">View &rarr;</Link>
                 </div>
                 <div>
                   <h4 className="font-bold text-ink">Assay</h4>
                   <p className="text-mid-grey">Certificate of Analysis (COA) generation and laboratory QA.</p>
-                  <Link href="/products/assay" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+                  <Link prefetch={false} href="/products/assay" className="text-royal font-semibold hover:underline">View &rarr;</Link>
                 </div>
                 <div>
                   <h4 className="font-bold text-ink">Steward</h4>
                   <p className="text-mid-grey">Installed base machine tracking, warranty and service tickets.</p>
-                  <Link href="/products/steward" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+                  <Link prefetch={false} href="/products/steward" className="text-royal font-semibold hover:underline">View &rarr;</Link>
                 </div>
                 <div>
                   <h4 className="font-bold text-ink">Vantage</h4>
                   <p className="text-mid-grey">Plain-text answers grounded strictly in your own catalogues.</p>
-                  <Link href="/products/vantage" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+                  <Link prefetch={false} href="/products/vantage" className="text-royal font-semibold hover:underline">View &rarr;</Link>
                 </div>
               </div>
               <div className="w-[180px] mx-auto">
@@ -484,10 +488,10 @@ export default function HomePage() {
             Book a 30-minute consultation. We will identify which process is costing you the most and outline how to fix it.
           </p>
           <div className="flex flex-col items-center justify-center gap-3">
-            <Link href="/book-consultation" className="btn-gold min-h-[48px] px-10 text-[16px]">
+            <Link prefetch={false} href="/book-consultation" className="btn-gold min-h-[48px] px-10 text-[16px]">
               Book a consultation
             </Link>
-            <Link href="/free-ai-visibility-check" className="text-white/80 hover:text-white text-[14px] underline underline-offset-4 transition-colors">
+            <Link prefetch={false} href="/free-ai-visibility-check" className="text-white/80 hover:text-white text-[14px] underline underline-offset-4 transition-colors">
               Or request a free AI visibility check &rarr;
             </Link>
           </div>

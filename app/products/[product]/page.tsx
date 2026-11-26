@@ -234,7 +234,7 @@ export default function ProductLanding({ params }: { params: { product: string }
               {p.site ? (
                 <a href={p.site.href} target="_blank" rel="noopener" className="btn-primary min-h-[48px] px-7 py-3 flex items-center justify-center">{p.site.label}</a>
               ) : (
-                <Link href="/book-consultation" className="btn-primary min-h-[48px] px-7 py-3 flex items-center justify-center">Start a free trial</Link>
+                <Link prefetch={false} href="/book-consultation" className="btn-primary min-h-[48px] px-7 py-3 flex items-center justify-center">Start a free trial</Link>
               )}
               <a href="#how-it-works" className="inline-flex items-center justify-center min-h-[48px] px-7 py-3 border border-white/40 text-white font-display font-semibold rounded-[6px] hover:bg-white/10 transition-colors">See how it works</a>
             </div>
@@ -439,7 +439,7 @@ export default function ProductLanding({ params }: { params: { product: string }
                 <p className="mt-3 text-[13px] text-mid-grey leading-relaxed">{p.site.note}</p>
               </>
             ) : (
-              <Link href="/book-consultation" className="btn-primary min-h-[44px] inline-flex items-center justify-center">Start a free trial</Link>
+              <Link prefetch={false} href="/book-consultation" className="btn-primary min-h-[44px] inline-flex items-center justify-center">Start a free trial</Link>
             )}
             <ul className="mt-6 pt-6 border-t border-light-grey space-y-2 text-[13px] text-mid-grey">
               <li className="flex items-center gap-2">
@@ -496,7 +496,7 @@ export default function ProductLanding({ params }: { params: { product: string }
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedServices.map((s) => (
-              <Link
+              <Link prefetch={false}
                 key={s.href}
                 href={s.href}
                 className="p-5 bg-white rounded-[8px] border border-light-grey hover:border-[#167A4E] hover:shadow-sm transition-all group block"
@@ -509,7 +509,7 @@ export default function ProductLanding({ params }: { params: { product: string }
                 </p>
               </Link>
             ))}
-            <Link
+            <Link prefetch={false}
               href="/"
               className="p-5 bg-white rounded-[8px] border border-light-grey hover:border-[#167A4E] hover:shadow-sm transition-all group block"
             >

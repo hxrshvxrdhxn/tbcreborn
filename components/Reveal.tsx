@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface RevealProps {
   children: React.ReactNode;
@@ -10,12 +10,9 @@ interface RevealProps {
   className?: string;
 }
 
-const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
-
 // Server HTML is always visible, so content in the first screen paints immediately (good LCP, and
 // readable without JavaScript). Blocks that start below the fold fade up once when scrolled into view.
-// Plain CSS transitions driven by one IntersectionObserver per block: GPU-composited, no animation
-// library on the main thread, so scrolling stays smooth on low-end laptops and phones.
+// Plain CSS transitions driven by IntersectionObserver: GPU-composited, zero forced reflow.
 export default function Reveal({
   children,
   width = "100%",
@@ -26,14 +23,29 @@ export default function Reveal({
   const ref = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<"static" | "hidden" | "shown">("static");
 
-  useIsoLayoutEffect(() => {
+  useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce || el.getBoundingClientRect().top <= window.innerHeight) return;
-    setState("hidden");
+    // On mobile devices and reduced motion, keep static (instant, zero main-thread CPU)
+    if (window.innerWidth < 768 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    let initial = true;
     const io = new IntersectionObserver(
       ([e]) => {
+        if (initial) {
+          initial = false;
+          // If already in view on first observation, leave as static
+          if (e.isIntersecting) {
+            io.disconnect();
+            return;
+          }
+          // Below the fold: hide so it can fade in when scrolled into view
+          setState("hidden");
+          return;
+        }
+
         if (e.isIntersecting) {
           setState("shown");
           io.disconnect();

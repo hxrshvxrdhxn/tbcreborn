@@ -209,7 +209,7 @@ export default function ServicesPage() {
                     {/* Primary visible service items (first 2) */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
                       {p.items.slice(0, 2).map((it) => (
-                        <Link
+                        <Link prefetch={false}
                           key={it.href}
                           href={it.href}
                           className="group block bg-white p-4 rounded border border-light-grey hover:border-[#167A4E] transition-colors"
@@ -232,7 +232,7 @@ export default function ServicesPage() {
                         </summary>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 pt-3 border-t border-light-grey/80">
                           {p.items.slice(2).map((it) => (
-                            <Link
+                            <Link prefetch={false}
                               key={it.href}
                               href={it.href}
                               className="group block bg-white p-4 rounded border border-light-grey hover:border-[#167A4E] transition-colors"
@@ -306,7 +306,7 @@ export default function ServicesPage() {
           <p className="text-body text-white/80 mb-10 text-pretty max-w-2xl mx-auto">
             Book a 30-minute consultation. We will respond within one business day.
           </p>
-          <Link href="/book-consultation" className="btn-gold min-h-[48px] px-8 text-[16px]">
+          <Link prefetch={false} href="/book-consultation" className="btn-gold min-h-[48px] px-8 text-[16px]">
             Book a consultation
           </Link>
           <div className="flex flex-wrap items-center justify-center gap-6 text-[14px] text-white/80 mt-6">

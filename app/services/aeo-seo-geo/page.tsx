@@ -103,9 +103,9 @@ export default function AeoSeoGeoPage() {
         <div className="container-tbc relative z-10">
           <nav aria-label="Breadcrumbs" className="mb-6">
             <ol className="flex items-center gap-2 text-[14px] text-white/60">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link prefetch={false} href="/" className="hover:text-white transition-colors">Home</Link></li>
               <li>/</li>
-              <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link prefetch={false} href="/services" className="hover:text-white transition-colors">Services</Link></li>
               <li>/</li>
               <li className="text-white font-medium">AEO, SEO &amp; GEO</li>
             </ol>
@@ -121,10 +121,10 @@ export default function AeoSeoGeoPage() {
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
-                <Link href="/free-ai-visibility-check" className="btn-gold min-h-[48px] px-8 text-[16px]">
+                <Link prefetch={false} href="/free-ai-visibility-check" className="btn-gold min-h-[48px] px-8 text-[16px]">
                   Free AI visibility check
                 </Link>
-                <Link href="/book-consultation" className="btn-ghost-white min-h-[48px] px-6 text-[16px]">
+                <Link prefetch={false} href="/book-consultation" className="btn-ghost-white min-h-[48px] px-6 text-[16px]">
                   Book a consultation
                 </Link>
               </div>
@@ -189,7 +189,7 @@ export default function AeoSeoGeoPage() {
                   First-page Google rankings through clean technical site health, fast performance, and keyword relevance.
                 </p>
               </div>
-              <Link href="/services/seo" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
+              <Link prefetch={false} href="/services/seo" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
                 Explore SEO services &rarr;
               </Link>
             </div>
@@ -202,7 +202,7 @@ export default function AeoSeoGeoPage() {
                   Securing featured snippets and direct answers through concise 40 to 60-word summaries.
                 </p>
               </div>
-              <Link href="/services/answer-engine-optimisation" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
+              <Link prefetch={false} href="/services/answer-engine-optimisation" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
                 Explore AEO services &rarr;
               </Link>
             </div>
@@ -215,7 +215,7 @@ export default function AeoSeoGeoPage() {
                   Being recommended when clients ask ChatGPT, Gemini, and Perplexity for business solutions.
                 </p>
               </div>
-              <Link href="/services/generative-engine-optimisation" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
+              <Link prefetch={false} href="/services/generative-engine-optimisation" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
                 Explore GEO services &rarr;
               </Link>
             </div>
@@ -293,7 +293,7 @@ export default function AeoSeoGeoPage() {
                 <h3 className="font-display font-semibold text-[22px] text-ink mb-1">How we work together.</h3>
                 <p className="text-[14px] text-mid-grey">Two clear phases: diagnostic visibility audit followed by monthly iteration.</p>
               </div>
-              <Link href="/free-ai-visibility-check" className="btn-gold flex-none text-center">
+              <Link prefetch={false} href="/free-ai-visibility-check" className="btn-gold flex-none text-center">
                 Run free visibility check
               </Link>
             </div>
@@ -356,10 +356,10 @@ export default function AeoSeoGeoPage() {
             Submit your company name and website for our complimentary AI visibility check. We will run an audit of your brand presence across major AI assistants and return a diagnostic report.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link href="/free-ai-visibility-check" className="btn-gold min-h-[48px] px-8 text-[16px]">
+            <Link prefetch={false} href="/free-ai-visibility-check" className="btn-gold min-h-[48px] px-8 text-[16px]">
               Request free AI visibility check
             </Link>
-            <Link href="/book-consultation" className="btn-ghost-white min-h-[48px] px-8 text-[16px]">
+            <Link prefetch={false} href="/book-consultation" className="btn-ghost-white min-h-[48px] px-8 text-[16px]">
               Book a consultation
             </Link>
           </div>

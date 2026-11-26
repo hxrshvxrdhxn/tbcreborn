@@ -78,6 +78,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    prefetch={false}
                     className="text-white/75 hover:text-gold transition-colors duration-150"
                   >
                     {link.label}
@@ -97,6 +98,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    prefetch={false}
                     className="text-white/75 hover:text-gold transition-colors duration-150"
                   >
                     {link.label}
@@ -116,6 +118,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    prefetch={false}
                     className="text-white/75 hover:text-gold transition-colors duration-150"
                   >
                     {link.label}
@@ -196,31 +199,31 @@ export default function Footer() {
             © 2026 Turbo Bytes Consulting. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2 sm:justify-end">
-            <Link href="/privacy-policy" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/privacy-policy" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Privacy Policy
             </Link>
-            <Link href="/how-to" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/how-to" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               How-To Guides
             </Link>
-            <Link href="/glossary" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/glossary" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Glossary
             </Link>
-            <Link href="/integrations" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/integrations" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Integrations
             </Link>
-            <Link href="/cost" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/cost" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Cost Guides
             </Link>
-            <Link href="/compare" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/compare" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Comparisons
             </Link>
-            <Link href="/solutions" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/solutions" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Solutions
             </Link>
-            <Link href="/ai-use-cases" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/ai-use-cases" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               AI Use Cases
             </Link>
-            <Link href="/terms" className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
+            <Link href="/terms" prefetch={false} className="text-white/75 hover:text-white text-xs whitespace-nowrap transition-colors py-1">
               Terms
             </Link>
           </div>
