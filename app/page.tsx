@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What does Turbo Bytes Consulting do?",
-    answer: "We are a technology consultancy. We sit with the MD and leadership team to identify the business processes costing the most in time and errors, and resolve them: through process automation, custom software engineered for that exact workflow, and full digital transformation. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
+    answer: "We are a technology consultancy. We sit with every team in the company, from leadership to the interns, gather every pain point and input we can, and fix the processes that cost the most: through process automation, custom software engineered for that exact workflow, and full digital transformation. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
   },
   {
     question: "What is your approach to digital transformation?",
@@ -77,9 +77,9 @@ export default function HomePage() {
               The intelligence layer your business has been missing.
             </h1>
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
-              We sit with the MD and your team, find the processes that cost the
-              business the most, and fix them: with process automation, custom software,
-              and full digital transformation.
+              We sit with every team in your company, from the MD to the interns,
+              learn where work gets stuck, and fix it: with process automation,
+              custom software and full digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 hero-4">
               <Link href="/book-consultation" className="btn-primary min-h-[48px] px-8 text-center flex items-center justify-center text-[16px] shadow-sm">
@@ -223,8 +223,8 @@ export default function HomePage() {
           <div className="bg-white border border-light-grey rounded-[8px] p-6 md:p-8 shadow-sm mb-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
               {[
-                { step: "01", title: "Sit with the MD", text: "Identify the single process costing the business most in time, money or errors." },
-                { step: "02", title: "Map the process", text: "Shadow the frontline team to record every step, exception and spreadsheet gap." },
+                { step: "01", title: "Listen to everyone", text: "Hear the pain points of every team, from leadership to the interns." },
+                { step: "02", title: "Map the processes", text: "Record how work really moves: every step, handover, exception and spreadsheet." },
                 { step: "03", title: "Build exact software", text: "Engineer custom tools and automated handoffs without forcing off-the-shelf compromises." },
                 { step: "04", title: "Run and maintain", text: "Deploy to production, onboard your operators, and support the systems long term." },
               ].map((s, idx) => (
@@ -287,7 +287,7 @@ export default function HomePage() {
                 Consulting that ends in working software, not a slide deck.
               </h2>
               <p className="text-body text-mid-grey leading-relaxed mb-6 text-pretty">
-                Hear directly how we engage with managing directors, diagnose operations, and build long-term technology partnerships.
+                See how we work with whole teams, diagnose operations and build long-term technology partnerships.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <Link href="/about" className="text-[15px] font-semibold text-royal hover:underline inline-flex items-center gap-1.5">

@@ -86,6 +86,12 @@ or leave region out. India-specific SEO landing pages may keep "India" in their 
 - Say that we build in-house wherever we can, to reduce outside dependencies (fewer third-party tools, data stays
   with the client).
 
+## How we work (owner, 26 Nov 09:11)
+
+Never say we "sit with the MD" or engage only with leadership. We sit with all teams, from the MD to the interns,
+hear everyone's pain points and take every input we can, then fix the processes. (The MD can still appear as a
+user of a product, e.g. "reports for the MD".)
+
 ## Rules (unchanged)
 
 Green and white palette only; no small uppercase labels; banner animation untouched; British spelling; no
