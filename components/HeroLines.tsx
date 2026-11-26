@@ -15,12 +15,11 @@ const RIBBONS: Ribbon[] = [
   { lines: 32, y: 0.58, amp: 0.14, freq: 0.85, speed: -0.05, spread: 0.13, twist: 1.3, alpha: 0.26 },
 ];
 
-function draw(ctx: CanvasRenderingContext2D, w: number, h: number, t: number, fade: CanvasGradient, isMobile = false) {
+function draw(ctx: CanvasRenderingContext2D, w: number, h: number, t: number, fade: CanvasGradient) {
   ctx.clearRect(0, 0, w, h);
   ctx.lineWidth = Math.max(0.6, w / 2400);
   ctx.strokeStyle = fade; // one shared left-to-right fade; per-line strength comes from globalAlpha
   // Phones draw one still frame, so they keep the full line count and smooth curves (the banner must look the same).
-  void isMobile;
   const step = Math.max(10, w / 110);
   for (const r of RIBBONS) {
     const lineCount = r.lines;
@@ -75,7 +74,7 @@ export default function HeroLines() {
       fade.addColorStop(0.4, `rgba(${LINE}, 0.12)`);
       fade.addColorStop(0.65, `rgba(${LINE}, 0.85)`);
       fade.addColorStop(1, `rgba(${LINE}, 1)`);
-      draw(ctx, w, h, at(performance.now()), fade, isMobile);
+      draw(ctx, w, h, at(performance.now()), fade);
     };
 
     // Adaptive quality: if a frame costs too much on this machine, drop to 1x, then to a still frame.
@@ -84,7 +83,7 @@ export default function HeroLines() {
       if (now - last < 33) return; // ~30 fps is plenty for slow motion and halves the work
       last = now;
       const t0 = performance.now();
-      draw(ctx, w, h, at(now), fade, isMobile);
+      draw(ctx, w, h, at(now), fade);
       if (sampled < 30) {
         sampled++;
         if (performance.now() - t0 > 8) slowFrames++;
