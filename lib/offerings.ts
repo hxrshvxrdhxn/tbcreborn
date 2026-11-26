@@ -186,7 +186,7 @@ export const consulting: ConsultingService[] = [
       "Quick wins and longer-term fixes",
     ],
     process: [
-      { title: "Listen", body: "Interviews with the founder and the people who do the work." },
+      { title: "Listen", body: "Interviews across every team, from leadership to frontline staff and interns." },
       { title: "Map", body: "The workflow as it really runs, not as the chart says it does." },
       { title: "Find the leaks", body: "Where time, money and information are lost." },
       { title: "Recommend", body: "Changes ranked by effort and impact, with an owner for each." },
@@ -199,7 +199,7 @@ export const consulting: ConsultingService[] = [
     faqs: [
       {
         q: "Who needs to be involved?",
-        a: "The founder or managing director, plus one or two people from each team we look at. Most interviews take under an hour.",
+        a: "Everyone from leadership to frontline staff and interns across each team we examine. We hear everyone's pain points and take every input we can. Most interviews take under an hour.",
       },
       {
         q: "Is this only about technology?",

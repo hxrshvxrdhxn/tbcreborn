@@ -11,7 +11,7 @@ const defaultPhases: PhaseData[] = [
   {
     phase: "Phase 01",
     name: "Diagnose",
-    short: "Sit with every team, from leadership to the interns, to hear every pain point and calculate friction costs.",
+    short: "Sit with every team, from the MD to the interns, hear everyone's pain points and take every input we can to calculate friction costs.",
     deliverables: [
       "Comprehensive visual process and handoff map",
       "Quantified cost-of-delay and bottleneck calculations",

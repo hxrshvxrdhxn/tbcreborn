@@ -32,7 +32,7 @@ const servicePillars = [
   {
     number: "01",
     heading: "Technology Consulting & Process Automation",
-    lead: "We sit with every team, from leadership to the interns, gather every input, map the workflows that cost the most, and eliminate operational bottlenecks through disciplined automation.",
+    lead: "We sit with every team, from the MD to the interns, hear everyone's pain points, take every input we can, and eliminate operational bottlenecks through disciplined automation.",
     items: [
       { title: "Business process automation", href: "/services/business-automation", blurb: "Automate manual entry, approvals, and handoffs between teams and systems." },
       { title: "Technology strategy & advisory", href: "/services/technology-consulting", blurb: "Independent roadmaps, build-or-buy decisions, and systems evaluation." },
@@ -88,7 +88,7 @@ const servicePillars = [
 const faqs = [
   {
     q: "How does Turbo Bytes Consulting engage with new clients?",
-    a: "We start with a focused discovery conversation to understand your business objectives and operational bottlenecks. For clients requiring thorough evaluation, we conduct an initial Business Diagnostic or Technology Audit before proposing an implementation roadmap.",
+    a: "We start with a structured discovery process across your organisation. We sit with every team, from the MD to the interns, hear everyone's pain points, and take every input we can to map the bottlenecks before proposing an implementation roadmap.",
   },
   {
     q: "Can we engage you for custom software without a full transformation programme?",

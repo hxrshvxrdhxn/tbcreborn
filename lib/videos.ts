@@ -15,7 +15,7 @@ export const longFormVideos: Record<string, VideoItem> = {
   LtEm_wP8Ubw: {
     id: "LtEm_wP8Ubw",
     title: "Turbo Bytes Consulting: who we are and what we do",
-    description: "An introduction to how we sit with every team from leadership to the interns, diagnose costly friction, and engineer custom systems in-house.",
+    description: "An introduction to how we sit with every team, from the MD to the interns, hear everyone's pain points, and engineer custom systems in-house.",
     kind: "video",
     pages: ["home", "about"],
   },

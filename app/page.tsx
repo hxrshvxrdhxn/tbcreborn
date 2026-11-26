@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What does Turbo Bytes Consulting do?",
-    answer: "We are a technology consultancy. We sit with every team in the company, from leadership to the interns, gather every pain point and input we can, and fix the processes that cost the most: through process automation, custom software, and full digital transformation. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools, no recurring licence fees, and client data stays strictly with you. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
+    answer: "We are a technology consultancy. We sit with every team in the company, from the MD to the interns, hear everyone's pain points and take every input we can, then fix the processes that cost the most: through process automation, custom software, and full digital transformation. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools, no recurring licence fees, and client data stays strictly with you. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
   },
   {
     question: "What is your approach to digital transformation?",
@@ -260,7 +260,7 @@ export default function HomePage() {
             </summary>
             <div className="mt-4 pt-4 border-t border-light-grey text-[14px] text-mid-grey space-y-4">
               <p>
-                A traditional consultancy delivers a slide deck and leaves implementation to third parties. A software house builds whatever you specify without assessing whether the underlying process is flawed. We do both: we sit with every team from leadership to the interns to measure the true cost of operational friction, engineer software and models in-house around how your business works, and stay through live production operations. Building in-house cuts outside dependencies so fewer third-party tools are needed and your data stays with you.
+                A traditional consultancy delivers a slide deck and leaves implementation to third parties. A software house builds whatever you specify without assessing whether the underlying process is flawed. We do both: we sit with every team, from the MD to the interns, hear everyone&apos;s pain points and take every input we can to measure the true cost of operational friction, engineer software and models in-house around how your business works, and stay through live production operations. Building in-house cuts outside dependencies so fewer third-party tools are needed and your data stays with you.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                 <figure>

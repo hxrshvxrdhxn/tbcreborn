@@ -47,7 +47,7 @@ const breadcrumbSchema = {
 const faqs = [
   {
     question: "What makes TBC's digital transformation approach different from big IT consultancies?",
-    answer: "Most traditional IT consultancies deliver multi-hundred-page strategy slide decks and leave execution to third-party sub-contractors. We sit with every team from leadership to the interns, gather every pain point, diagnose the costliest bottlenecks, build software, automations and models in-house around how your business works, run the systems in production, and hand over full source code ownership. Building in-house cuts outside tool dependencies and keeps client data in client custody.",
+    answer: "Most traditional IT consultancies deliver multi-hundred-page strategy slide decks and leave execution to third-party sub-contractors. We sit with every team, from the MD to the interns, hear everyone's pain points, take every input we can, diagnose the costliest bottlenecks, build software, automations and models in-house around how your business works, run the systems in production, and hand over full source code ownership. Building in-house cuts outside tool dependencies and keeps client data in client custody.",
   },
   {
     question: "Do we have to replace our existing ERP or accounting system like Tally?",
@@ -110,7 +110,7 @@ export default function DigitalTransformationPage() {
               Digital transformation: from diagnostic to running systems and trained teams.
             </h1>
             <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed text-pretty mb-8">
-              We do not write advisory slide decks and walk away. We sit with every team, from leadership to the interns, measure process friction, engineer software and models in-house around how your business works, reduce outside dependencies, and run systems in production.
+              We do not write advisory slide decks and walk away. We sit with every team, from the MD to the interns, hear everyone&apos;s pain points, take every input we can, engineer software and models in-house around how your business works, reduce outside dependencies, and run systems in production.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
