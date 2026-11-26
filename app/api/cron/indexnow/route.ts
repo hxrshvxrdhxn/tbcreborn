@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getAllHubEntries } from "@/lib/hubs";
+import { verifyBearerToken } from "@/lib/security";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -13,8 +14,7 @@ const BASE = `https://${HOST}`;
 const HUBS = ["glossary", "integrations", "cost", "compare", "solutions", "ai-use-cases"];
 
 export async function GET(req: NextRequest) {
-  const authHeader = req.headers.get("authorization");
-  if (!process.env.CRON_SECRET || authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+  if (!verifyBearerToken(req.headers.get("authorization"), process.env.CRON_SECRET)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 

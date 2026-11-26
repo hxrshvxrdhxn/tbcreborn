@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { verifyBearerToken } from "@/lib/security";
 
-export const maxDuration = 60; // We may trigger generation here
+export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
-  const authHeader = req.headers.get("authorization");
-  if (
-    !process.env.CRON_SECRET ||
-    authHeader !== `Bearer ${process.env.CRON_SECRET}`
-  ) {
+  if (!verifyBearerToken(req.headers.get("authorization"), process.env.CRON_SECRET)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -31,13 +28,8 @@ export async function POST(req: NextRequest) {
     }
 
     if (action === "reject") {
-      // Delete the rejected post
       await prisma.post.delete({ where: { slug } });
 
-      // Trigger the generation of a new post immediately
-      // We can call our own cron endpoint internally
-      // Fixed origin: the production domain, this deployment's own Vercel URL, or localhost.
-      // Never the request's Host header, which the caller controls.
       const origin =
         process.env.VERCEL_ENV === "production"
           ? "https://turbobytesconsulting.com"

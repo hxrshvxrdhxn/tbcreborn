@@ -1,70 +1,52 @@
 import { NextRequest, NextResponse } from "next/server";
-import { addSession, removeSession } from "@/lib/redis";
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
+import { addSession, removeSession } from "@/lib/session";
+import { authRateLimiter } from "@/lib/rate-limit";
+import { timingSafeStringEqual, getClientIp } from "@/lib/security";
+import { z } from "zod";
 
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
-const RATE_LIMIT = 5;
-const RATE_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
-
-let upstashRatelimit: Ratelimit | null = null;
-if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-  upstashRatelimit = new Ratelimit({
-    redis: Redis.fromEnv(),
-    limiter: Ratelimit.slidingWindow(5, "15 m"),
-  });
-}
-
-async function isRateLimited(ip: string): Promise<boolean> {
-  if (upstashRatelimit) {
-    try {
-      const { success } = await upstashRatelimit.limit(`auth_${ip}`);
-      return !success;
-    } catch (e) {
-      console.error("Upstash rate limit failed, falling back to local", e);
-    }
-  }
-
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
-    return false;
-  }
-  if (entry.count >= RATE_LIMIT) return true;
-  entry.count++;
-  return false;
-}
+const loginSchema = z.object({
+  password: z.string().min(1).max(256),
+});
 
 export async function POST(req: NextRequest) {
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
-    req.headers.get("x-real-ip") ??
-    "unknown";
+  const ip = getClientIp(req);
 
-  if (await isRateLimited(ip)) {
-    return NextResponse.json({ error: "Too many login attempts. Locked for 15 minutes." }, { status: 429 });
+  if (authRateLimiter.isRateLimited(`auth_${ip}`)) {
+    return NextResponse.json(
+      { error: "Too many login attempts. Locked for 15 minutes." },
+      { status: 429 }
+    );
   }
 
-  const { password } = await req.json();
-  const adminPwd = process.env.ADMIN_PASSWORD;
+  try {
+    const body = await req.json();
+    const parsed = loginSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json({ error: "Invalid credentials." }, { status: 401 });
+    }
 
-  if (!adminPwd || password !== adminPwd) {
-    return NextResponse.json({ error: "Invalid password." }, { status: 401 });
+    const { password } = parsed.data;
+    const adminPwd = process.env.ADMIN_PASSWORD;
+
+    if (!adminPwd || !timingSafeStringEqual(password, adminPwd)) {
+      return NextResponse.json({ error: "Invalid credentials." }, { status: 401 });
+    }
+
+    const sessionToken = await addSession();
+
+    const res = NextResponse.json({ success: true });
+    res.cookies.set("admin_session", sessionToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 60 * 60 * 12, // 12 hours
+      path: "/",
+    });
+    return res;
+  } catch (err) {
+    console.error("Admin auth error:", err);
+    return NextResponse.json({ error: "Invalid credentials." }, { status: 401 });
   }
-
-  const rawToken = crypto.randomUUID();
-  const sessionToken = await addSession(rawToken);
-
-  const res = NextResponse.json({ success: true });
-  res.cookies.set("admin_session", sessionToken, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 60 * 60 * 24 * 7, // 7 days
-    path: "/",
-  });
-  return res;
 }
 
 export async function DELETE(req: NextRequest) {

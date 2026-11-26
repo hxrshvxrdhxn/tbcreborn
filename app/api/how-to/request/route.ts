@@ -1,39 +1,42 @@
-import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
+import { z } from "zod";
+import { howToRequestLimiter } from "@/lib/rate-limit";
+import { getClientIp } from "@/lib/security";
 
+const schema = z.object({
+  query: z.string().trim().min(3, "Query must be at least 3 characters").max(300, "Query cannot exceed 300 characters"),
+  email: z.string().trim().email("Invalid email address").max(254, "Email cannot exceed 254 characters"),
+});
 
+export async function POST(req: NextRequest) {
+  const ip = getClientIp(req);
+  if (howToRequestLimiter.isRateLimited(`howto_req_${ip}`)) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
 
-export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { query, email } = body;
+    const body = await req.json();
+    const parsed = schema.safeParse(body);
 
-    if (!query || !email) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      );
+    if (!parsed.success) {
+      return NextResponse.json({ error: "Invalid request data." }, { status: 400 });
     }
-    if (
-      typeof query !== 'string' || typeof email !== 'string' ||
-      query.length > 300 || email.length > 254 ||
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-    ) {
-      return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
-    }
+
+    const { query, email } = parsed.data;
 
     const newRequest = await prisma.howToRequest.create({
       data: { query, email },
     });
 
-    // You could optionally send an email notification here using Resend or Nodemailer
-    // to alert the admin that a new How-To topic was requested.
-
     return NextResponse.json({ success: true, request: newRequest });
   } catch (error) {
-    console.error('Failed to submit request:', error);
+    console.error("Failed to submit how-to request:", error);
     return NextResponse.json(
-      { error: 'Failed to submit request' },
+      { error: "Failed to submit request" },
       { status: 500 }
     );
   }

@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import { analyticsDb, istDay } from "@/lib/visits";
+import { verifyBearerToken } from "@/lib/security";
+import { sendNotificationEmail } from "@/lib/mailer";
 
 // Daily website summary, emailed at 09:00 India time for the previous day.
-// Vercel calls this with the CRON_SECRET bearer token; ?day=YYYY-MM-DD lets an owner re-send a past day.
+// Called with the CRON_SECRET bearer token; ?day=YYYY-MM-DD lets an owner re-send a past day.
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-const TO = "harshvardhan@turbobytesconsulting.com";
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
 function p75(values: number[]): number | null {
@@ -26,7 +26,6 @@ function tally<T>(rows: T[], key: (r: T) => string | null, limit = 5): [string, 
   return [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
 }
 
-// Google's thresholds: good / needs improvement / poor
 const VITAL_INFO: Record<string, { label: string; good: number; poor: number; unit: "ms" | "" }> = {
   LCP: { label: "Largest content shown", good: 2500, poor: 4000, unit: "ms" },
   INP: { label: "Response to taps and clicks", good: 200, poor: 500, unit: "ms" },
@@ -36,7 +35,7 @@ const VITAL_INFO: Record<string, { label: string; good: number; poor: number; un
 };
 
 export async function GET(req: NextRequest) {
-  if (!process.env.CRON_SECRET || req.headers.get("authorization") !== `Bearer ${process.env.CRON_SECRET}`) {
+  if (!verifyBearerToken(req.headers.get("authorization"), process.env.CRON_SECRET)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -86,22 +85,19 @@ export async function GET(req: NextRequest) {
     <p style="margin-top:24px;color:#6B7280;font-size:12px">Counted without cookies, bots filtered out. Visitors are counted once per day per browser.</p>
   </div>`;
 
-  if (!process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_HOST) {
-    return NextResponse.json({ error: "Email service not configured.", day, total, fresh, views }, { status: 500 });
-  }
-
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: 465,
-    secure: true,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-  });
-  await transporter.sendMail({
-    from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
-    to: TO,
+  const mailResult = await sendNotificationEmail({
+    type: "cron",
     subject: `Website: ${total} visitors, ${fresh} new — ${dateLabel}`,
     html,
   });
 
-  return NextResponse.json({ success: true, day, total, fresh, views });
+  return NextResponse.json({
+    success: true,
+    day,
+    total,
+    fresh,
+    views,
+    emailSent: mailResult.sent,
+    emailSkipped: mailResult.skipped || false,
+  });
 }

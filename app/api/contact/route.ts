@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
+import { contactRateLimiter } from "@/lib/rate-limit";
+import { getClientIp } from "@/lib/security";
+import { sendNotificationEmail } from "@/lib/mailer";
+
 function esc(str: string): string {
   if (!str) return "";
   return str.replace(/[&<>"']/g, function(m) {
@@ -17,57 +18,21 @@ function esc(str: string): string {
   });
 }
 
-// ── Simple in-memory rate limiter: max 5 submissions per IP per 1 hour ────
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
-const RATE_LIMIT = 5;
-const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
-
-let upstashRatelimit: Ratelimit | null = null;
-if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-  upstashRatelimit = new Ratelimit({
-    redis: Redis.fromEnv(),
-    limiter: Ratelimit.slidingWindow(5, "1 h"),
-  });
-}
-
-async function isRateLimited(ip: string): Promise<boolean> {
-  if (upstashRatelimit) {
-    try {
-      const { success } = await upstashRatelimit.limit(`contact_${ip}`);
-      return !success;
-    } catch (e) {
-      console.error("Upstash rate limit failed, falling back to local", e);
-    }
-  }
-
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
-    return false;
-  }
-  if (entry.count >= RATE_LIMIT) return true;
-  entry.count++;
-  return false;
-}
-
-// ── Zod schema ────────────────────────────────────────────────────────────────
+// ── Strict Zod schema enforcing server-side length limits ─────────────────────
 const schema = z.object({
-  name: z.string().min(2).max(100),
-  company: z.string().max(150).optional(),
-  email: z.string().email().max(254),
-  phone: z.string().max(30).optional(),
-  service: z.string().min(1).max(100),
-  budget: z.string().max(50).optional(),
-  message: z.string().min(10).max(5000),
-  foundVia: z.string().max(60).optional(),
-  website: z.string().optional(), // honeypot
-  landingPage: z.string().nullable().optional(),
-  referrerPath: z.string().nullable().optional(),
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name cannot exceed 100 characters"),
+  company: z.string().trim().max(150, "Company cannot exceed 150 characters").optional(),
+  email: z.string().trim().email("Invalid email address").max(254, "Email cannot exceed 254 characters"),
+  phone: z.string().trim().max(30, "Phone cannot exceed 30 characters").optional(),
+  service: z.string().trim().min(1, "Service is required").max(100, "Service cannot exceed 100 characters"),
+  budget: z.string().trim().max(50, "Budget cannot exceed 50 characters").optional(),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000, "Message cannot exceed 5000 characters"),
+  foundVia: z.string().trim().max(60, "FoundVia cannot exceed 60 characters").optional(),
+  website: z.string().max(100).optional(), // Honeypot trap
+  landingPage: z.string().trim().max(500).nullable().optional(),
+  referrerPath: z.string().trim().max(500).nullable().optional(),
 });
 
-// Lead forms may only be posted from our own pages: the live domain, this project's Vercel
-// previews, or local development. Hostnames are compared exactly, not by substring.
 function allowedOrigin(value: string): boolean {
   try {
     const host = new URL(value).hostname;
@@ -84,7 +49,7 @@ function allowedOrigin(value: string): boolean {
 
 export async function POST(req: NextRequest) {
   try {
-    // Basic CSRF Protection: Validate Origin / Referer
+    // CSRF Protection: Validate Origin / Referer
     const origin = req.headers.get("origin") || req.headers.get("referer") || "";
     if (!allowedOrigin(origin)) {
       console.error("CSRF Blocked: Invalid Origin", origin);
@@ -94,27 +59,22 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const data = schema.parse(body);
 
-    // Honeypot check: If a bot fills out the visually hidden "website" field,
-    // silently drop the request but return a success to fool the bot.
+    // Honeypot check: If bot filled 'website', drop silently with 200 OK
     if (data.website) {
       console.log("Honeypot triggered, silently ignoring request.");
       return NextResponse.json({ success: true });
     }
 
-    // Rate limiting (only after honeypot check to save Redis hits from dumb bots)
-    const ip =
-      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
-      req.headers.get("x-real-ip") ??
-      "unknown";
-
-    if (await isRateLimited(ip)) {
+    // Per-IP rate limiting: 5 per hour
+    const ip = getClientIp(req);
+    if (contactRateLimiter.isRateLimited(`contact_${ip}`)) {
       return NextResponse.json(
         { error: "Too many requests. Please try again later." },
         { status: 429 }
       );
     }
 
-    // ── Google Sheets CRM (fire-and-forget, never blocks the response) ──────
+    // Google Sheets CRM (fire-and-forget, non-blocking)
     const sheetsWebhook = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
     if (sheetsWebhook) {
       fetch(sheetsWebhook, {
@@ -124,10 +84,10 @@ export async function POST(req: NextRequest) {
           ...data,
           company: data.company || "Not specified",
         }),
-      }).catch(() => {/* non-fatal — log silently */});
+      }).catch(() => {/* non-fatal */});
     }
 
-    // ── Save to Database ────────────────────────────────────────────────────
+    // ── Save to Database First ──────────────────────────────────────────────
     try {
       await prisma.contactQuery.create({
         data: {
@@ -161,45 +121,29 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // ── Email notification (after the enquiry is safely stored) ──────────────
-    // A mail outage must never lose an enquiry or show a server error to the visitor.
-    if (process.env.SMTP_USER && process.env.SMTP_PASS && process.env.SMTP_HOST) {
-      try {
-        const transporter = nodemailer.createTransport({
-          host: process.env.SMTP_HOST,
-          port: 465,
-          secure: true,
-          auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS,
-          },
-        });
+    // ── Shared Mail Helper with 100 emails/day cap ──────────────────────────
+    const isVisibilityCheck = data.service.toLowerCase().includes("visibility");
+    const emailType = isVisibilityCheck ? "visibility_check" : "contact";
+    const subjectCompany = data.company ? ` — ${esc(data.company)}` : "";
 
-        const subjectCompany = data.company ? ` — ${esc(data.company)}` : "";
-
-        await transporter.sendMail({
-          from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
-          to: "harshvardhan@turbobytesconsulting.com",
-          subject: `New enquiry from ${esc(data.name)}${subjectCompany}`,
-          html: `
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${esc(data.name)}</p>
-            ${data.company ? `<p><strong>Company:</strong> ${esc(data.company)}</p>` : ""}
-            <p><strong>Email:</strong> ${esc(data.email)}</p>
-            ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
-            <p><strong>Service of Interest:</strong> ${esc(data.service)}</p>
-            ${data.foundVia ? `<p><strong>Found us via:</strong> ${esc(data.foundVia)}</p>` : ""}
-            ${data.budget ? `<p><strong>Budget Range:</strong> ${esc(data.budget)}</p>` : ""}
-            <p><strong>Message:</strong></p>
-            <p style="white-space:pre-wrap">${esc(data.message)}</p>
-          `,
-        });
-      } catch (mailErr) {
-        console.error("Contact email notification failed (enquiry saved):", mailErr instanceof Error ? mailErr.message : mailErr);
-      }
-    } else {
-      console.error("Contact email notification skipped: SMTP not configured (enquiry saved).");
-    }
+    await sendNotificationEmail({
+      type: emailType,
+      subject: isVisibilityCheck
+        ? `Free AI Visibility Check: ${esc(data.company || data.name)}`
+        : `New enquiry from ${esc(data.name)}${subjectCompany}`,
+      html: `
+        <h2>${isVisibilityCheck ? "New AI Visibility Check Request" : "New Contact Form Submission"}</h2>
+        <p><strong>Name:</strong> ${esc(data.name)}</p>
+        ${data.company ? `<p><strong>Company:</strong> ${esc(data.company)}</p>` : ""}
+        <p><strong>Email:</strong> ${esc(data.email)}</p>
+        ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
+        <p><strong>Service of Interest:</strong> ${esc(data.service)}</p>
+        ${data.foundVia ? `<p><strong>Found us via:</strong> ${esc(data.foundVia)}</p>` : ""}
+        ${data.budget ? `<p><strong>Budget Range:</strong> ${esc(data.budget)}</p>` : ""}
+        <p><strong>Message / Queries:</strong></p>
+        <p style="white-space:pre-wrap">${esc(data.message)}</p>
+      `,
+    });
 
     return NextResponse.json({ success: true });
   } catch (err) {

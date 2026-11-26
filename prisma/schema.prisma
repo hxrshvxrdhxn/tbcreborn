@@ -100,3 +100,15 @@ model SiteVital {
 
   @@index([day, metric])
 }
+
+// Log of outbound notification emails with daily cap enforcement
+model SentEmailLog {
+  id        String   @id @default(cuid())
+  type      String   // contact | analysis | visibility_check | cron
+  recipient String   // strictly harshvardhan@turbobytesconsulting.com
+  subject   String
+  day       String   // YYYY-MM-DD
+  sentAt    DateTime @default(now())
+
+  @@index([day])
+}

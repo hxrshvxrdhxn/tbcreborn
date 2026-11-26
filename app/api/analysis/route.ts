@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import { prisma } from "@/lib/prisma";
 import { z } from "zod";
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
+import { analysisRateLimiter } from "@/lib/rate-limit";
+import { getClientIp } from "@/lib/security";
+import { sendNotificationEmail } from "@/lib/mailer";
 
 function esc(str: string): string {
   if (!str) return "";
@@ -18,53 +18,17 @@ function esc(str: string): string {
   });
 }
 
-// ── Simple in-memory rate limiter ────
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
-const RATE_LIMIT = 5;
-const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
-
-let upstashRatelimit: Ratelimit | null = null;
-if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-  upstashRatelimit = new Ratelimit({
-    redis: Redis.fromEnv(),
-    limiter: Ratelimit.slidingWindow(5, "1 h"),
-  });
-}
-
-async function isRateLimited(ip: string): Promise<boolean> {
-  if (upstashRatelimit) {
-    try {
-      const { success } = await upstashRatelimit.limit(`analysis_${ip}`);
-      return !success;
-    } catch (e) {
-      console.error("Upstash rate limit failed, falling back to local", e);
-    }
-  }
-
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
-    return false;
-  }
-  if (entry.count >= RATE_LIMIT) return true;
-  entry.count++;
-  return false;
-}
-
-// ── Zod schema ────────────────────────────────────────────────────────────────
+// ── Strict Zod schema enforcing server-side length limits ─────────────────────
 const schema = z.object({
-  name: z.string().min(2).max(100),
-  email: z.string().email().max(254),
-  phone: z.string().max(30).optional(),
-  company: z.string().min(1).max(150),
-  address: z.string().min(1).max(300),
-  request: z.string().max(5000).optional(),
-  website: z.string().optional(), // honeypot
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name cannot exceed 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(254, "Email cannot exceed 254 characters"),
+  phone: z.string().trim().max(30, "Phone cannot exceed 30 characters").optional(),
+  company: z.string().trim().min(1, "Company is required").max(150, "Company cannot exceed 150 characters"),
+  address: z.string().trim().min(1, "Address is required").max(300, "Address cannot exceed 300 characters"),
+  request: z.string().trim().max(5000, "Request cannot exceed 5000 characters").optional(),
+  website: z.string().max(100).optional(), // Honeypot trap
 });
 
-// Lead forms may only be posted from our own pages: the live domain, this project's Vercel
-// previews, or local development. Hostnames are compared exactly, not by substring.
 function allowedOrigin(value: string): boolean {
   try {
     const host = new URL(value).hostname;
@@ -81,7 +45,7 @@ function allowedOrigin(value: string): boolean {
 
 export async function POST(req: NextRequest) {
   try {
-    // Basic CSRF Protection: Validate Origin / Referer
+    // CSRF Protection: Validate Origin / Referer
     const origin = req.headers.get("origin") || req.headers.get("referer") || "";
     if (!allowedOrigin(origin)) {
       console.error("CSRF Blocked: Invalid Origin", origin);
@@ -97,12 +61,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: true });
     }
 
-    const ip =
-      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
-      req.headers.get("x-real-ip") ??
-      "unknown";
-
-    if (await isRateLimited(ip)) {
+    // Per-IP rate limiting: 5 per hour
+    const ip = getClientIp(req);
+    if (analysisRateLimiter.isRateLimited(`analysis_${ip}`)) {
       return NextResponse.json(
         { error: "Too many requests. Please try again later." },
         { status: 429 }
@@ -111,7 +72,7 @@ export async function POST(req: NextRequest) {
 
     const message = `Free analysis request\n\nAddress: ${data.address}\n\nRequest: ${data.request || "None"}`;
 
-    // ── Save first, so a mail outage never loses a request ──────────────────
+    // ── Save first, so a mail outage or limit never loses a request ─────────
     try {
       await prisma.contactQuery.create({
         data: {
@@ -127,7 +88,7 @@ export async function POST(req: NextRequest) {
       console.error("Failed to save free analysis request:", dbErr instanceof Error ? dbErr.message : dbErr);
     }
 
-    // ── Google Sheets CRM (fire-and-forget, never blocks the response) ──────
+    // Google Sheets CRM (fire-and-forget, non-blocking)
     const sheetsWebhook = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
     if (sheetsWebhook) {
       fetch(sheetsWebhook, {
@@ -146,36 +107,21 @@ export async function POST(req: NextRequest) {
       }).catch(() => {/* non-fatal */});
     }
 
-    // ── Email notification ───────────────────────────────────────────────────
-    if (process.env.SMTP_USER && process.env.SMTP_PASS && process.env.SMTP_HOST) {
-      try {
-        const transporter = nodemailer.createTransport({
-          host: process.env.SMTP_HOST,
-          port: 465,
-          secure: true,
-          auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-        });
-        await transporter.sendMail({
-          from: process.env.SMTP_FROM || '"TBC Website" <harshvardhan@turbobytesconsulting.com>',
-          to: "harshvardhan@turbobytesconsulting.com",
-          subject: `Free Analysis Request: ${esc(data.company)}`,
-          html: `
-            <h2>New Free Analysis Request</h2>
-            <p><strong>Name:</strong> ${esc(data.name)}</p>
-            <p><strong>Company:</strong> ${esc(data.company)}</p>
-            <p><strong>Email:</strong> ${esc(data.email)}</p>
-            ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
-            <p><strong>Address:</strong> ${esc(data.address)}</p>
-            <p><strong>Specific Request:</strong></p>
-            <p style="white-space:pre-wrap">${esc(data.request || "None")}</p>
-          `,
-        });
-      } catch (mailErr) {
-        console.error("Free analysis email failed (request saved):", mailErr instanceof Error ? mailErr.message : mailErr);
-      }
-    } else {
-      console.error("Free analysis email skipped: SMTP not configured (request saved).");
-    }
+    // ── Shared Mail Helper with 100 emails/day cap ──────────────────────────
+    await sendNotificationEmail({
+      type: "analysis",
+      subject: `Free Analysis Request: ${esc(data.company)}`,
+      html: `
+        <h2>New Free Analysis Request</h2>
+        <p><strong>Name:</strong> ${esc(data.name)}</p>
+        <p><strong>Company:</strong> ${esc(data.company)}</p>
+        <p><strong>Email:</strong> ${esc(data.email)}</p>
+        ${data.phone ? `<p><strong>Phone:</strong> ${esc(data.phone)}</p>` : ""}
+        <p><strong>Address:</strong> ${esc(data.address)}</p>
+        <p><strong>Specific Request:</strong></p>
+        <p style="white-space:pre-wrap">${esc(data.request || "None")}</p>
+      `,
+    });
 
     return NextResponse.json({ success: true });
   } catch (err) {

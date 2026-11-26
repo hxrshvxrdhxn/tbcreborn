@@ -1,20 +1,10 @@
 import { NextRequest } from "next/server";
-
-jest.mock("jose", () => ({
-  SignJWT: class {
-    setProtectedHeader() { return this; }
-    setIssuedAt() { return this; }
-    setExpirationTime() { return this; }
-    async sign() { return "mock_token"; }
-  },
-  jwtVerify: async () => ({ payload: { jti: "mock_token" } }),
-}));
-
 import { POST } from "@/app/api/admin/auth/route";
 
 describe("Admin Auth API", () => {
   beforeEach(() => {
     process.env.ADMIN_PASSWORD = "correct_password";
+    process.env.SESSION_SECRET = "test_session_secret_for_unit_tests_32_chars_long";
   });
 
   it("fails with incorrect password", async () => {
