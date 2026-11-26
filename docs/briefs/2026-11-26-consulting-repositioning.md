@@ -27,8 +27,8 @@ Products are proof that we ship. Consulting leads.
 ## Site changes
 
 1. **Home**: keep the hero H1 exactly ("The intelligence layer your business has been missing."), keep the banner
-   animation and layout. Update the sub-copy and the sections under the hero to the offer order above. Add the
-   40-to-4 proof point as one clear stat block. Add a "Is your business visible in AI answers?" band linking to the
+   animation and layout. Update the sub-copy and the sections under the hero to the offer order above. Do NOT put the 40-to-4 proof point on the
+   homepage (owner, 26 Nov); it belongs on /digital-transformation only. Add a "Is your business visible in AI answers?" band linking to the
    new AEO/SEO/GEO page.
 2. **Navigation**: Services | Products | AEO & SEO | Work | Insights (blog + how-to) | About | Contact. Keep
    "Book a consultation" as the CTA.

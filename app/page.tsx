@@ -37,10 +37,6 @@ const faqs = [
     answer: "We are a technology consultancy. We sit with the MD and leadership team to identify the business processes costing the most in time and errors, and resolve them: through process automation, custom software engineered for that exact workflow, and full digital transformation. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
   },
   {
-    question: "How does your team operate compared to a traditional technology firm?",
-    answer: "In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines. We start with process mapping and diagnostic clarity, eliminate unnecessary steps, and automate handoffs with purpose-built systems so lean senior teams achieve outsized results.",
-  },
-  {
     question: "What is your approach to digital transformation?",
     answer: "We run digital transformation end-to-end across five clear phases: Diagnose, Design, Build, Run, and Hand over. We do not stop at advisory slide decks; we engineer the systems, train your operators, and stay through ongoing maintenance.",
   },
@@ -150,30 +146,6 @@ export default async function HomePage() {
               <Link href="/services" className="inline-flex items-center justify-center min-h-[48px] px-6 text-[15px] font-display font-semibold text-white/90 hover:text-white transition-colors gap-2">
                 Explore our advisory <span aria-hidden="true">&rarr;</span>
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 2. PROOF POINT STAT BLOCK ── */}
-      <section className="bg-forest border-y border-white/10 py-10">
-        <div className="container-tbc">
-          <div className="bg-white/5 border border-white/15 rounded-[8px] p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-            <div className="flex items-baseline gap-4 shrink-0">
-              <span className="font-display font-bold text-[clamp(44px,6vw,68px)] text-gold leading-none">
-                40 → 4
-              </span>
-              <span className="text-[14px] font-sans text-white/70 max-w-[140px] leading-tight">
-                Team leverage in pilot engagements
-              </span>
-            </div>
-            <div className="border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-10 max-w-2xl">
-              <p className="font-display font-semibold text-[20px] text-white leading-snug mb-2">
-                In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines.
-              </p>
-              <p className="font-sans text-[15px] text-white/75 leading-relaxed">
-                We sit with the MD and leadership team, map the workflows that cost the most, automate repetitive handoffs, and deploy bespoke systems so lean senior teams outperform sprawling departments.
-              </p>
             </div>
           </div>
         </div>
