@@ -7,12 +7,12 @@ import { ProcessToday, ProcessWithSoftware } from "@/components/Illustrations";
 export const metadata: Metadata = {
   title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
   description:
-    "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility across India, Middle East and Asia-Pacific.",
+    "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility.",
   alternates: { canonical: "/" },
   openGraph: {
     title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
     description:
-      "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility across India, Middle East and Asia-Pacific.",
+      "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility.",
     url: "https://turbobytesconsulting.com",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image" as const,
     title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
     description:
-      "Technology consultancy for mid-market and founder-led firms across India, Middle East and Asia-Pacific.",
+      "Technology consultancy for mid-market and founder-led firms.",
   },
 };
 
@@ -79,7 +79,7 @@ export default function HomePage() {
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
               We sit with the MD and your team, find the processes that cost the
               business the most, and fix them: with process automation, custom software,
-              and full digital transformation. Across India, the Middle East, and Asia-Pacific.
+              and full digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 hero-4">
               <Link href="/book-consultation" className="btn-primary min-h-[48px] px-8 text-center flex items-center justify-center text-[16px] shadow-sm">
