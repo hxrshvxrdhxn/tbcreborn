@@ -87,7 +87,7 @@ export default function LocationPage() {
 
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
+          <ol className="flex items-center gap-2 font-display text-[13px] text-mid-grey">
             <li><Link href="/" className="hover:text-ink transition-colors">Home</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li className="text-ink font-bold" aria-current="page">Software and AI development across Delhi NCR</li>
@@ -110,6 +110,9 @@ export default function LocationPage() {
 
       <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
+          <h2 className="font-display font-semibold text-[clamp(24px,2.5vw,30px)] text-ink mb-8 text-center">
+            Our regional delivery approach
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
               <Reveal delay={0}>

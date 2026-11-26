@@ -91,9 +91,31 @@ const companyFacts = [
   },
 ];
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://turbobytesconsulting.com/about#webpage",
+      url: "https://turbobytesconsulting.com/about",
+      name: "About Turbo Bytes Consulting",
+      description: "Turbo Bytes Consulting sits with your MD and team, finds the process that costs you most, and turns it into software we build, run and maintain.",
+      publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "About", item: "https://turbobytesconsulting.com/about" },
+      ],
+    },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* ── PAGE HERO ── */}
       <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
         <div className="container-tbc py-s6 relative z-10">

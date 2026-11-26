@@ -66,11 +66,9 @@ export default async function AdminPage() {
           
           {/* Quick Stats Box */}
           <div className="bg-forest p-6 rounded-[8px] text-white">
-             <h3 className="font-display font-bold text-[18px] mb-2 text-gold">Analytics Hub</h3>
-             <p className="font-sans text-[13px] text-light-grey mb-4">View deep visitor insights natively in your dashboard.</p>
-             <a href="https://vercel.com/analytics" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block">
-               Open Vercel Analytics ↗
-             </a>
+             <h2 className="font-display font-bold text-[18px] mb-2 text-gold">Production Server</h2>
+             <p className="font-sans text-[13px] text-light-grey mb-4">Self-hosted Docker and Caddy instance on our dedicated host.</p>
+             <span className="text-[13px] text-white/80 font-medium">Auto-deployed on master push</span>
           </div>
         </div>
       </main>

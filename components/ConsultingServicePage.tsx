@@ -6,6 +6,55 @@ import { consultingLinks } from "@/lib/offerings";
 const SITE = "https://turbobytesconsulting.com";
 
 // Editorial two-column layout: the heading sits in a left rail, the content on the right.
+function getRelevantProductsForService(serviceSlug: string) {
+  switch (serviceSlug) {
+    case "custom-software-development":
+      return [
+        { title: "Distil", href: "/products/distil", blurb: "Complex engineering proposals assembled from verified data components." },
+        { title: "Cadence", href: "/products/cadence", blurb: "Every order from PO to dispatch on a single unified manufacturing board." },
+        { title: "Sunscout", href: "/products/sunscout", blurb: "Rooftop solar prospecting and sizing for commercial and industrial EPCs." },
+      ];
+    case "business-automation":
+      return [
+        { title: "Steward", href: "/products/steward", blurb: "Installed base, warranty tracking, and AMC service management for equipment makers." },
+        { title: "Relay", href: "/products/relay", blurb: "Dealer WhatsApp ordering with tier pricing, credit terms, and schemes applied automatically." },
+        { title: "Assay", href: "/products/assay", blurb: "Batch records, lab QC, and Certificate of Analysis digitization without retyping." },
+      ];
+    case "custom-llm":
+    case "ai-training":
+    case "ai-applications":
+      return [
+        { title: "Vantage", href: "/products/vantage", blurb: "Turn years of catalogues, datasheets, and manuals into verifiable cited answers." },
+        { title: "Distil", href: "/products/distil", blurb: "Proposal engine powered by verified product specifications and pricing rules." },
+        { title: "Rapport", href: "/products/rapport", blurb: "Enquiries, client follow-ups, and document triage for service and technical firms." },
+      ];
+    case "mobile-app-development":
+      return [
+        { title: "Relay", href: "/products/relay", blurb: "Dealer ordering with customized pricing and automated catalogue updates." },
+        { title: "Cadence", href: "/products/cadence", blurb: "Real-time production, order milestones, and dispatch tracking on mobile and tablet." },
+      ];
+    case "mvp-development":
+      return [
+        { title: "Compass", href: "/products/compass", blurb: "Project profitability, timesheets, and milestone billing for professional teams." },
+        { title: "Cadence", href: "/products/cadence", blurb: "Lightweight order tracking board deployed rapidly for growing operations." },
+      ];
+    case "technology-consulting":
+    case "technology-audit":
+    case "ai-readiness-assessment":
+    case "business-diagnostic":
+      return [
+        { title: "Compass", href: "/products/compass", blurb: "Project health, team utilisation, and milestone tracking for professional firms." },
+        { title: "Vantage", href: "/products/vantage", blurb: "Internal technical documentation search with citations for engineering teams." },
+        { title: "Distil", href: "/products/distil", blurb: "Complex proposal generation engine built around strict validation rules." },
+      ];
+    default:
+      return [
+        { title: "Distil", href: "/products/distil", blurb: "Complex proposals assembled from verified technical components." },
+        { title: "Vantage", href: "/products/vantage", blurb: "Instant answers with exact page citations from your own technical manuals." },
+      ];
+  }
+}
+
 export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
   const url = `${SITE}/services/${s.slug}`;
   const schema = {
@@ -39,6 +88,7 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
     ],
   };
   const others = consultingLinks.filter((l) => l.href !== `/services/${s.slug}`);
+  const relevantProducts = getRelevantProductsForService(s.slug);
 
   return (
     <>
@@ -131,6 +181,27 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
           </div>
         </section>
       ))}
+
+      {relevantProducts.length > 0 && (
+        <section className="bg-ivory py-s6 border-b border-light-grey">
+          <div className="container-tbc">
+            <h2 className="font-display font-semibold text-[22px] text-ink mb-2">
+              Software products built for this practice
+            </h2>
+            <p className="text-[15px] text-mid-grey max-w-2xl mb-6">
+              In addition to bespoke advisory, we build and run dedicated software products designed around these operational workflows.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relevantProducts.map((p) => (
+                <Link key={p.href} href={p.href} className="group block bg-white p-6 rounded-[8px] border border-light-grey hover:border-royal hover:shadow-sm transition-all">
+                  <span className="font-display font-semibold text-[17px] text-ink group-hover:text-royal transition-colors block mb-1">{p.title} →</span>
+                  <p className="text-[14px] text-mid-grey leading-relaxed">{p.blurb}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-white py-s6">
         <div className="container-tbc">

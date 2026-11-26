@@ -131,9 +131,33 @@ const rules = [
   "You can pause any desk from the approval screen, and it stops at once.",
 ];
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${SITE}/agent-desk#software`,
+      name: "Agent Desk",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      description: DESC,
+      url: `${SITE}/agent-desk`,
+      publisher: { "@id": `${SITE}/#organization` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        { "@type": "ListItem", position: 2, name: "Agent Desk", item: `${SITE}/agent-desk` },
+      ],
+    },
+  ],
+};
+
 export default function AgentDeskPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
           <ol className="flex items-center gap-2 font-sans text-[13px] text-mid-grey">

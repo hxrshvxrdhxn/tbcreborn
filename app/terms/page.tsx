@@ -48,9 +48,31 @@ const sections = [
   },
 ];
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://turbobytesconsulting.com/terms#webpage",
+      url: "https://turbobytesconsulting.com/terms",
+      name: "Terms of Use | Turbo Bytes Consulting",
+      description: "Terms of use for turbobytesconsulting.com: content ownership, permitted website use, liability limits, and governing law.",
+      publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "Terms of Use", item: "https://turbobytesconsulting.com/terms" },
+      ],
+    },
+  ],
+};
+
 export default function TermsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* ── HERO ── */}
       <section className="bg-forest py-16">
         <div className="container-tbc">

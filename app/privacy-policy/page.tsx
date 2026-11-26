@@ -64,9 +64,31 @@ const sections = [
   },
 ];
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://turbobytesconsulting.com/privacy-policy#webpage",
+      url: "https://turbobytesconsulting.com/privacy-policy",
+      name: "Privacy Policy | Turbo Bytes Consulting",
+      description: "How Turbo Bytes Consulting collects, uses and protects personal data shared through this website, contact forms, client engagements and consultations.",
+      publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://turbobytesconsulting.com/privacy-policy" },
+      ],
+    },
+  ],
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* ── HERO ── */}
       <section className="bg-forest py-16">
         <div className="container-tbc">

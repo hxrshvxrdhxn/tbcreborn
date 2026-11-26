@@ -14,14 +14,25 @@ export const metadata: Metadata = {
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  name: "Process cost calculator",
-  url: "https://turbobytesconsulting.com/process-cost-calculator",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Any",
-  offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
-  description: DESC,
-  provider: { "@id": "https://turbobytesconsulting.com/#organization" },
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      name: "Process cost calculator",
+      url: "https://turbobytesconsulting.com/process-cost-calculator",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Any",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
+      description: DESC,
+      provider: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "Process Cost Calculator", item: "https://turbobytesconsulting.com/process-cost-calculator" },
+      ],
+    },
+  ],
 };
 
 export default function ProcessCostCalculatorPage() {

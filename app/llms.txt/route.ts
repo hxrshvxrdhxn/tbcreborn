@@ -1,5 +1,5 @@
 import { getHubEntries, getHubEntry } from "@/lib/hubs";
-import { aiPractices, products, consultingLinks } from "@/lib/offerings";
+import { aiPractices, consultingLinks } from "@/lib/offerings";
 import { industries } from "@/lib/industries";
 
 export const revalidate = 3600;
@@ -63,9 +63,19 @@ ${consultingLinks.map(line).join("\n")}
 
 ## Products
 
-${products.map(line).join("\n")}
-- [Sunscout for the UK and Europe](${BASE}/products/sunscout-uk-europe): commercial rooftop prospecting for installers and developers in the UK and Europe, in pounds or euros
-- [All products](${BASE}/products): overview of Slate, Distil, Vantage, Meridian and Sunscout
+- [Sunscout](${BASE}/products/sunscout): rooftop solar prospecting and sizing for commercial and industrial EPCs in India
+- [Sunscout for the UK and Europe](${BASE}/products/sunscout-europe): commercial rooftop prospecting for installers and developers in the UK and Europe
+- [Distil](${BASE}/products/distil): complex engineering proposals assembled from verified parts with zero calculation errors
+- [Vantage](${BASE}/products/vantage): years of technical catalogues, datasheets and manuals turned into answers with exact page citations
+- [Cadence](${BASE}/products/cadence): order-to-dispatch tracking board for industrial manufacturers and fabrication shops
+- [Assay](${BASE}/products/assay): Certificate of Analysis (COA) digitization, batch records and laboratory QC without retyping
+- [Steward](${BASE}/products/steward): installed base, warranty tracking, preventive maintenance and AMC management for equipment makers
+- [Compass](${BASE}/products/compass): project profitability, timesheets and milestone billing for professional consultancies
+- [Relay](${BASE}/products/relay): WhatsApp dealer and distributor ordering with custom tiered pricing and credit rules applied
+- [Rapport](${BASE}/products/rapport): service enquiry auto-triage, follow-ups and client document management for equipment firms
+- [Agent Desk](${BASE}/agent-desk): managed software agents for collections, tenders, compliance and operations, verified by human operators
+- [Slate](${BASE}/services/slate): executive operational intelligence assistant reading work routing and timing
+- [All products](${BASE}/products): overview of all software products and operational platforms built by TBC
 
 ## Engineering
 

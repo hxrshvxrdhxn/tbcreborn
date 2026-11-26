@@ -56,9 +56,41 @@ const engineering = [
   { href: "/services/web-development", label: "Websites and web apps" },
 ];
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://turbobytesconsulting.com/services#webpage",
+      url: "https://turbobytesconsulting.com/services",
+      name: "Consulting Services and Technology Capabilities | Turbo Bytes Consulting",
+      description: "Custom LLM and on-premise AI, AI capability building, technology consulting and audit, and proprietary software products.",
+      publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "Services", item: "https://turbobytesconsulting.com/services" },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      name: "Consulting Services",
+      itemListElement: consultingLinks.map((item, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        name: item.title,
+        url: `https://turbobytesconsulting.com${item.href}`,
+      })),
+    },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* ── PAGE HERO ── */}
       <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
         <div className="container-tbc py-s6 relative z-10">

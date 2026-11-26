@@ -28,11 +28,34 @@ async function getAllGuides() {
   return guides;
 }
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://turbobytesconsulting.com/how-to#webpage",
+      url: "https://turbobytesconsulting.com/how-to",
+      name: "How-To Guides | Turbo Bytes Consulting",
+      description: "Step-by-step practical guides on automation, ERP workflows, software development, and AI implementation for Indian business owners and operations heads.",
+      publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "How-To Guides", item: "https://turbobytesconsulting.com/how-to" },
+      ],
+    },
+  ],
+};
+
 export default async function HowToLanding() {
   const guides = await getAllGuides();
 
   return (
-    <div className="bg-ivory min-h-screen pt-24 pb-20">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <div className="bg-ivory min-h-screen pt-24 pb-20">
       <div className="container-tbc max-w-4xl mx-auto">
         <header className="mb-16 text-center">
           <h1 className="font-display font-bold text-4xl sm:text-5xl text-ink mb-6">
@@ -46,6 +69,9 @@ export default async function HowToLanding() {
         </header>
 
         <div className="mt-20">
+          <h2 className="font-display font-semibold text-[24px] text-ink mb-8">
+            All step-by-step guides
+          </h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {guides.map((guide) => (
               <li key={guide.id}>
@@ -66,5 +92,6 @@ export default async function HowToLanding() {
         </div>
       </div>
     </div>
+    </>
   );
 }

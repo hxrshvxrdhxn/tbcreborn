@@ -145,7 +145,11 @@ export default async function IndustrySolutionsPage({ params }: IndustryPageProp
               </p>
             </div>
           ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <>
+              <h2 className="font-display font-semibold text-[24px] text-ink mb-8">
+                Available architectures and systems
+              </h2>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {items.map((entry) => (
                 <Link
                   key={entry.slug}
@@ -164,6 +168,7 @@ export default async function IndustrySolutionsPage({ params }: IndustryPageProp
                 </Link>
               ))}
             </div>
+            </>
           )}
         </div>
       </section>

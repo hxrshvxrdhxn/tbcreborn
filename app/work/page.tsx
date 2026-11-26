@@ -172,9 +172,31 @@ function headline(outcomes: string[]) {
   return { label, before: after ? before : undefined, after: after ?? value.replace(/\s*\(.*?\)/g, "") };
 }
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://turbobytesconsulting.com/work#webpage",
+      url: "https://turbobytesconsulting.com/work",
+      name: "Our Work & Client Outcomes | Turbo Bytes Consulting",
+      description: "Selected client engagements and case studies. Every operational outcome is measured and verifiable.",
+      publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "Work", item: "https://turbobytesconsulting.com/work" },
+      ],
+    },
+  ],
+};
+
 export default function WorkPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">

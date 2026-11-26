@@ -51,9 +51,9 @@ export default function BookConsultationClient() {
               <CallProcess variant="compact" />
 
               <div className="border-t border-light-grey pt-8">
-                <h3 className="font-display font-semibold text-[16px] text-ink mb-5">
+                <h2 className="font-display font-semibold text-[16px] text-ink mb-5">
                   Prefer to reach out directly?
-                </h3>
+                </h2>
                 <ul className="space-y-4">
                   {[
                     { href: "tel:+919354784377", icon: "phone", label: "+91 93547 84377" },

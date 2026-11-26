@@ -253,7 +253,7 @@ export default function HubEntryTemplate({
           </p>
           {entry.verdict && (
             <div className="mt-6 p-5 rounded-lg bg-white/10 border-l-4 border-gold text-white/95 max-w-3xl">
-              <span className="font-sans font-semibold text-gold block text-[13px] uppercase tracking-wider mb-1.5">
+              <span className="font-sans font-semibold text-gold block text-[13px] mb-1.5">
                 Our verdict
               </span>
               <p className="font-sans text-[16px] leading-relaxed">

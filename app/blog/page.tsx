@@ -25,11 +25,33 @@ export const metadata: Metadata = {
   },
 };
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://turbobytesconsulting.com/blog#blog",
+      url: "https://turbobytesconsulting.com/blog",
+      name: "Insight & Thinking | Turbo Bytes Consulting Blog",
+      description: "Practical AI strategy, systems architecture, automation guides, and industry perspectives for founders and engineering leaders.",
+      publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "Insight", item: "https://turbobytesconsulting.com/blog" },
+      ],
+    },
+  ],
+};
+
 export default async function BlogPage() {
   const posts = await getAllPosts();
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">

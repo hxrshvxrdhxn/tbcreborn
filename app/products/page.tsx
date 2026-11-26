@@ -258,13 +258,32 @@ export default function ProductsPage() {
   const videos = liveVideos();
   const schema = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Products by Turbo Bytes Consulting",
-    itemListElement: PRODUCTS.map((p, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      item: { "@type": "SoftwareApplication", name: p.name, description: p.line, applicationCategory: "BusinessApplication", url: `${SITE}/products#${p.id}`, publisher: { "@id": `${SITE}/#organization` } },
-    })),
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${SITE}/products#webpage`,
+        url: `${SITE}/products`,
+        name: "Software Products by Turbo Bytes Consulting",
+        description: DESC,
+        publisher: { "@id": `${SITE}/#organization` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+          { "@type": "ListItem", position: 2, name: "Products", item: `${SITE}/products` },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        name: "Products by Turbo Bytes Consulting",
+        itemListElement: PRODUCTS.map((p, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: { "@type": "SoftwareApplication", name: p.name, description: p.line, applicationCategory: "BusinessApplication", url: `${SITE}/products#${p.id}`, publisher: { "@id": `${SITE}/#organization` } },
+        })),
+      },
+    ],
   };
 
   return (

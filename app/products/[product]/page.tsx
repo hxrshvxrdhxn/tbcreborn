@@ -30,12 +30,149 @@ export function generateMetadata({ params }: { params: { product: string } }): M
   };
 }
 
+function getRelatedServicesForProduct(productSlug: string) {
+  switch (productSlug) {
+    case "sunscout":
+    case "sunscout-europe":
+      return [
+        {
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Bespoke internal systems, mapping tools, and operational workflows built for your team.",
+        },
+        {
+          title: "Technology Consulting",
+          href: "/services/technology-consulting",
+          blurb: "Independent assessment of systems architecture, scalability, and technical strategy.",
+        },
+      ];
+    case "distil":
+      return [
+        {
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Engineered web applications and proposal engines tailored to complex engineering pricing rules.",
+        },
+        {
+          title: "Business Process Automation",
+          href: "/services/business-automation",
+          blurb: "Automate manual calculations, document assembly, and approval routing across departments.",
+        },
+      ];
+    case "vantage":
+      return [
+        {
+          title: "Custom LLM & On-Premise AI",
+          href: "/services/custom-llm",
+          blurb: "Deploy private AI models on your own servers or secure private cloud without data leakage.",
+        },
+        {
+          title: "AI Capability Building",
+          href: "/services/ai-training",
+          blurb: "Hands-on programmes that train your engineering and technical teams to work effectively with AI.",
+        },
+      ];
+    case "cadence":
+      return [
+        {
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Tailored manufacturing execution, ERP connectors, and production scheduling boards.",
+        },
+        {
+          title: "Business Process Automation",
+          href: "/services/business-automation",
+          blurb: "Eliminate spreadsheet gaps between shop floor, sales order processing, and dispatch teams.",
+        },
+      ];
+    case "assay":
+      return [
+        {
+          title: "Business Process Automation",
+          href: "/services/business-automation",
+          blurb: "Replace paper logs and manual retyping with validated, digitised quality workflows.",
+        },
+        {
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Regulated laboratory data pipelines, batch tracing, and audit-ready report generation.",
+        },
+      ];
+    case "steward":
+      return [
+        {
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Comprehensive asset tracking, ticketing, and warranty management systems.",
+        },
+        {
+          title: "Business Process Automation",
+          href: "/services/business-automation",
+          blurb: "Automated renewal alerts, AMC scheduling, and technician dispatch pipelines.",
+        },
+      ];
+    case "compass":
+      return [
+        {
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Custom project accounting, client portal, and resource planning software.",
+        },
+        {
+          title: "Business Process Automation",
+          href: "/services/business-automation",
+          blurb: "Connect timesheets, milestone billing, and expense tracking directly with accounting.",
+        },
+      ];
+    case "relay":
+      return [
+        {
+          title: "Mobile App Development",
+          href: "/services/mobile-app-development",
+          blurb: "Native and web-based ordering apps for field sales, dealers, and distribution networks.",
+        },
+        {
+          title: "Business Process Automation",
+          href: "/services/business-automation",
+          blurb: "Connect WhatsApp dealer orders directly to your ERP, accounting, and warehouse dispatch.",
+        },
+      ];
+    case "rapport":
+      return [
+        {
+          title: "AI Applications",
+          href: "/services/ai-applications",
+          blurb: "Deploy conversational agents for client intake, enquiry classification, and instant replies.",
+        },
+        {
+          title: "Business Process Automation",
+          href: "/services/business-automation",
+          blurb: "Route inbound enquiries to the right subject-matter expert with zero manual sorting.",
+        },
+      ];
+    default:
+      return [
+        {
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Software designed around your actual business processes, built, run, and maintained by us.",
+        },
+        {
+          title: "Business Process Automation",
+          href: "/services/business-automation",
+          blurb: "Replace repetitive manual work and spreadsheet handoffs with reliable automated pipelines.",
+        },
+      ];
+  }
+}
+
 export default function ProductLanding({ params }: { params: { product: string } }) {
   const p = productPageBySlug(params.product);
   if (!p) notFound();
 
   const art = p.base ?? p.slug;
   const video = videoForProduct(art);
+  const relatedServices = getRelatedServicesForProduct(p.slug);
 
   const schema = [
     ...(video ? [videoSchema(video)] : []),
@@ -94,6 +231,7 @@ export default function ProductLanding({ params }: { params: { product: string }
                 alt="Distil proposal assembly system"
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-top"
               />
             ) : (
@@ -102,6 +240,7 @@ export default function ProductLanding({ params }: { params: { product: string }
                 alt={`${p.name} interface`}
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
             )}
@@ -239,6 +378,45 @@ export default function ProductLanding({ params }: { params: { product: string }
                 <p className="px-6 pb-6 text-[15px] text-mid-grey leading-relaxed">{f.a}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── RELATED CONSULTING SERVICES & HOME ── */}
+      <section className="bg-ivory py-s6 md:py-s8 border-b border-light-grey">
+        <div className="container-tbc">
+          <h2 className="font-display font-semibold text-[22px] text-ink mb-3">
+            Related consulting services & advisory
+          </h2>
+          <p className="text-[15px] text-mid-grey max-w-2xl mb-8">
+            Every software product we build originated from real client engagements. If you require custom workflows, tailored ERP integrations, or hands-on implementation, our consulting team can help.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {relatedServices.map((s) => (
+              <Link
+                key={s.href}
+                href={s.href}
+                className="p-6 bg-white rounded-[8px] border border-light-grey hover:border-royal hover:shadow-sm transition-all group block"
+              >
+                <span className="font-display font-semibold text-[17px] text-ink group-hover:text-royal transition-colors block mb-2">
+                  {s.title} →
+                </span>
+                <p className="text-[14px] text-mid-grey leading-relaxed">
+                  {s.blurb}
+                </p>
+              </Link>
+            ))}
+            <Link
+              href="/"
+              className="p-6 bg-white rounded-[8px] border border-light-grey hover:border-royal hover:shadow-sm transition-all group block"
+            >
+              <span className="font-display font-semibold text-[17px] text-ink group-hover:text-royal transition-colors block mb-2">
+                Turbo Bytes Consulting Overview →
+              </span>
+              <p className="text-[14px] text-mid-grey leading-relaxed">
+                Learn about our process-first approach, leadership, and full range of capabilities across India.
+              </p>
+            </Link>
           </div>
         </div>
       </section>

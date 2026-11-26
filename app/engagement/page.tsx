@@ -90,9 +90,31 @@ const processSteps = [
   },
 ];
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://turbobytesconsulting.com/engagement#webpage",
+      url: "https://turbobytesconsulting.com/engagement",
+      name: "Engagement Model | Turbo Bytes Consulting",
+      description: "How we work and how to begin: a business diagnostic, a full process redesign, or ongoing advisory.",
+      publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://turbobytesconsulting.com" },
+        { "@type": "ListItem", position: 2, name: "Engagement", item: "https://turbobytesconsulting.com/engagement" },
+      ],
+    },
+  ],
+};
+
 export default function EngagementPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">

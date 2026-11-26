@@ -137,13 +137,23 @@ export default function RootLayout({
                   "@type": ["Organization", "ProfessionalService"],
                   "@id": "https://turbobytesconsulting.com/#organization",
                   "name": "Turbo Bytes Consulting",
-                  "description": "Process-first consulting and software firm in Greater Noida: process automation, custom and on-premise LLMs, AI capability building, technology consulting and audits, and its own products Slate, Distil, Vantage and Meridian.",
+                  "description": "Management and technology consultancy for mid-market firms and enterprises. Process-first consulting, custom software development, business automation, AI systems, and our own proprietary software products.",
                   "knowsAbout": ["Large language models", "On-premise AI", "AI training", "Technology strategy", "Technology audit", "AI readiness", "Business process improvement", "Custom software"],
                   "url": "https://turbobytesconsulting.com",
                   "logo": "https://turbobytesconsulting.com/logo-square.png",
                   "telephone": "+919354784377",
                   "email": "info@turbobytesconsulting.com",
                   "hasMap": "https://share.google/jp3MGXYa4u27I4bcq",
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "telephone": "+919354784377",
+                      "contactType": "customer service",
+                      "email": "info@turbobytesconsulting.com",
+                      "areaServed": "IN",
+                      "availableLanguage": ["English", "Hindi"]
+                    }
+                  ],
                   "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Block A, Alpha I",
@@ -188,7 +198,12 @@ export default function RootLayout({
                   "publisher": {
                     "@id": "https://turbobytesconsulting.com/#organization"
                   },
-                  "inLanguage": "en-IN"
+                  "inLanguage": "en-IN",
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://turbobytesconsulting.com/how-to?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
                 },
                 {
                   "@type": "Person",

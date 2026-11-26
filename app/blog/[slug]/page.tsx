@@ -244,9 +244,9 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="container-tbc mt-12 pt-8 border-t border-light-grey">
           <div className="mx-auto max-w-[760px] flex items-start gap-4">
             <div className="flex-1">
-              <h3 className="font-display font-bold text-[18px] text-ink mb-1">
+              <p className="font-display font-bold text-[18px] text-ink mb-1">
                 Harshvardhan Chauhan
-              </h3>
+              </p>
               <p className="font-sans text-[14px] text-mid-grey font-medium mb-3">
                 Founder, Turbo Bytes Consulting
               </p>
