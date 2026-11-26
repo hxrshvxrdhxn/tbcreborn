@@ -74,7 +74,7 @@ export default function ProcessCostCalculator() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
-      <div className="bg-white border border-light-grey rounded-2xl p-6 md:p-8 flex flex-col gap-7">
+      <div className="bg-white border border-light-grey rounded-[8px] p-6 md:p-8 flex flex-col gap-7">
         <Field id="people" label="People who work on this process" hint="Everyone who touches it in a normal week." value={people} onChange={setPeople} min={1} max={30} />
         <Field id="hours" label="Hours each spends on it per week" hint="Typing, chasing, checking, re-doing." value={hours} onChange={setHours} min={1} max={40} />
         <Field id="salary" label="Their average monthly salary (₹)" hint="Cost to company per month, roughly." value={salary} onChange={setSalary} min={10000} max={200000} step={1000} />
@@ -83,7 +83,7 @@ export default function ProcessCostCalculator() {
       </div>
 
       <div className="flex flex-col gap-6 lg:sticky lg:top-28">
-        <div className="bg-forest text-white rounded-2xl p-7 md:p-8" aria-live="polite">
+        <div className="bg-forest text-white rounded-[8px] p-7 md:p-8" aria-live="polite">
           <p className="text-white/70 text-[14px] mb-2">This process costs you about</p>
           <p className="font-display font-bold text-[clamp(36px,5vw,52px)] leading-none tabular-nums">{inr(r.total)}</p>
           <p className="text-white/70 text-[14px] mt-2">a year</p>
@@ -96,7 +96,7 @@ export default function ProcessCostCalculator() {
           <p className="mt-6 text-[13px] text-white/60">Before counting the decisions that wait on one person, or the customers who quietly go elsewhere.</p>
         </div>
 
-        <div className="bg-white border border-light-grey rounded-2xl p-6 md:p-7">
+        <div className="bg-white border border-light-grey rounded-[8px] p-6 md:p-7">
           {state === "sent" ? (
             <div role="status">
               <p className="font-display font-bold text-[20px] text-ink mb-2">Thank you. We have your numbers.</p>

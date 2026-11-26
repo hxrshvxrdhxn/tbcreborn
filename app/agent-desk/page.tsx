@@ -147,13 +147,9 @@ export default function AgentDeskPage() {
       </nav>
 
       <section className="bg-forest py-s7 relative overflow-hidden min-h-[380px] flex items-center border-b border-light-grey">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest to-royal/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
-        </div>
         <div className="container-tbc relative z-10">
           <Reveal>
-            <p className="font-display font-bold text-[12px] tracking-[1.5px] uppercase mb-4 text-gold">Agent Desk by TBC</p>
+            <p className="font-display font-semibold text-[14px] text-white/80 mb-3">Agent Desk</p>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-white text-[clamp(32px,4.5vw,52px)] leading-[1.12] tracking-[-0.5px] max-w-3xl mb-5">
               We do the work. You approve it.

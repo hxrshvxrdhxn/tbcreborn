@@ -51,9 +51,9 @@ export default async function HowToLanding() {
               <li key={guide.id}>
                 <Link
                   href={`/how-to/${guide.slug}`}
-                  className="block p-6 h-full bg-white rounded-xl border border-light-grey hover:border-gold hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                  className="block p-6 h-full bg-white rounded-[8px] border border-light-grey hover:border-gold hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
                 >
-                  <div className="text-xs text-royal font-bold tracking-wider uppercase mb-3">
+                  <div className="text-xs text-royal font-semibold mb-2">
                     {guide.category}
                   </div>
                   <h3 className="font-display font-bold text-[18px] text-ink group-hover:text-royal leading-tight">

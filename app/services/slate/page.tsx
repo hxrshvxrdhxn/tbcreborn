@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import ServiceFooter from "@/components/ServiceFooter";
 import SectionInk from "@/components/SectionInk";
@@ -55,7 +54,7 @@ const audienceCards = [
   {
     title: "CEOs & MDs",
     description:
-      "The higher the seat, the higher the cost of distraction. Slate filters, prioritises, and prepares — so every hour you invest is at full leverage.",
+      "The higher the seat, the higher the cost of distraction. Slate filters, prioritises, and prepares — so every hour you invest moves the company forward.",
     icon: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
@@ -120,15 +119,9 @@ export default function SlatePage() {
 
       {/* ── Hero ── */}
       <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey" aria-labelledby="slate-hero-heading">
-        {/* Full-bleed background image band */}
-        <div className="absolute inset-0 z-0">
-          <Image quality={90} sizes="100vw" src="/img/hero-service-slate.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/60 to-transparent" />
-        </div>
-
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
-            <p className="font-display font-bold text-gold text-sm tracking-widest uppercase mb-4">
+            <p className="font-display font-semibold text-white/80 text-sm mb-3">
               Practice 05
             </p>
             <hr className="gold-rule mb-6" />
@@ -199,7 +192,7 @@ export default function SlatePage() {
                 id="who-slate-for-heading"
                 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6"
               >
-                Built for the leaders whose time has the highest leverage.
+                Built for the leaders whose time is the most expensive.
               </h2>
               <hr className="gold-rule gold-rule--center" />
             </Reveal>

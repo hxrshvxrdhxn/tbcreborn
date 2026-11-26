@@ -114,11 +114,6 @@ export default function EngagementPage() {
 
       {/* ── HERO ── */}
       <section className="bg-forest py-s7 relative overflow-hidden min-h-[350px] flex items-center border-b border-light-grey">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest to-royal/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
-        </div>
-
         <div className="container-tbc relative z-10">
           <Reveal>
             <hr className="gold-rule mb-6" />
@@ -155,14 +150,10 @@ export default function EngagementPage() {
                       : "bg-white border border-light-grey text-ink shadow-card"
                   }`}
                 >
-                  {tier.featured && (
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none" />
-                  )}
-
                   <div className={`p-8 flex flex-col gap-6 flex-1 relative z-10 ${tier.featured ? "border border-royal-light/20 rounded-[8px]" : ""}`}>
                     {/* Tier name */}
                     <div>
-                      <p className="font-display font-bold text-[12px] tracking-[1.5px] uppercase mb-4 text-gold">
+                      <p className="font-display font-semibold text-[14px] mb-3 text-gold">
                         {tier.tier}
                       </p>
                       <hr className={tier.featured ? "gold-rule" : "w-12 border-light-grey mb-6"} />

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import type { ConsultingService } from "@/lib/offerings";
 import { consultingLinks } from "@/lib/offerings";
@@ -58,10 +57,6 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
       </nav>
 
       <section className="relative bg-forest overflow-hidden min-h-[380px] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image src="/img/hero-service-consulting.png" alt="" fill priority className="object-cover object-center opacity-40 mix-blend-screen" aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/60 to-transparent" />
-        </div>
         <div className="container-tbc py-s6 relative z-10">
           <h1 className="font-display font-semibold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.08] tracking-[-0.02em] max-w-3xl mb-6 text-balance">
             {s.title}

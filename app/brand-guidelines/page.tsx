@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 function ColorSwatch({ name, hex, className, textColor }: { name: string; hex: string; className: string; textColor?: string }) {
   return (
     <div className="flex flex-col gap-3">
-      <div className={`h-32 w-full rounded-xl shadow-card flex items-end p-4 ${className}`}>
+      <div className={`h-32 w-full rounded-[8px] shadow-card flex items-end p-4 ${className}`}>
         <span className={`font-display font-semibold text-sm ${textColor || 'text-white'}`}>{hex}</span>
       </div>
       <div>
@@ -52,7 +52,7 @@ export default function BrandGuidelinesPage() {
                   <h3 className="font-display text-2xl font-semibold text-ink">Inter</h3>
                   <span className="text-mid-grey text-sm tracking-widest uppercase">Display & Headings</span>
                 </div>
-                <div className="p-8 bg-white rounded-xl shadow-card border border-light-grey mb-6">
+                <div className="p-8 bg-white rounded-[8px] shadow-card border border-light-grey mb-6">
                   <div className="font-display font-bold text-6xl text-ink mb-4 break-words">
                     Aa Bb Cc
                   </div>
@@ -79,7 +79,7 @@ export default function BrandGuidelinesPage() {
                   <h3 className="font-sans text-2xl font-semibold text-ink">DM Sans</h3>
                   <span className="text-mid-grey text-sm tracking-widest uppercase">Body Text</span>
                 </div>
-                <div className="p-8 bg-white rounded-xl shadow-card border border-light-grey mb-6">
+                <div className="p-8 bg-white rounded-[8px] shadow-card border border-light-grey mb-6">
                   <div className="font-sans font-bold text-6xl text-ink mb-4 break-words">
                     Aa Bb Cc
                   </div>
@@ -143,7 +143,7 @@ export default function BrandGuidelinesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Primary Logo (Dark) */}
-              <div className="bg-forest p-12 rounded-2xl flex items-center justify-center min-h-[300px]">
+              <div className="bg-forest p-12 rounded-[8px] flex items-center justify-center min-h-[300px]">
                 <div className="flex items-center gap-4">
                   <span
                     className="font-display font-bold text-5xl text-white"
@@ -161,7 +161,7 @@ export default function BrandGuidelinesPage() {
               </div>
 
               {/* Primary Logo (Light) */}
-              <div className="bg-white border border-light-grey shadow-sm p-12 rounded-2xl flex items-center justify-center min-h-[300px]">
+              <div className="bg-white border border-light-grey shadow-sm p-12 rounded-[8px] flex items-center justify-center min-h-[300px]">
                 <div className="flex items-center gap-4">
                   <span
                     className="font-display font-bold text-5xl text-ink"
@@ -179,16 +179,16 @@ export default function BrandGuidelinesPage() {
               </div>
 
               {/* Monogram (Dark) */}
-              <div className="bg-forest p-12 rounded-2xl flex flex-col items-center justify-center min-h-[300px] gap-6">
-                <div className="w-24 h-24 bg-[#1C1C1C] rounded-3xl flex items-center justify-center shadow-lg border border-white/5">
+              <div className="bg-forest p-12 rounded-[8px] flex flex-col items-center justify-center min-h-[300px] gap-6">
+                <div className="w-24 h-24 bg-[#1C1C1C] rounded-[8px] flex items-center justify-center shadow-lg border border-white/5">
                   <span className="font-display font-black text-4xl text-gold" style={{ letterSpacing: "-1.5px" }}>TBC</span>
                 </div>
                 <span className="text-white/40 text-sm font-display tracking-widest uppercase">Dark Icon</span>
               </div>
 
               {/* Monogram (Light) */}
-              <div className="bg-white border border-light-grey p-12 rounded-2xl flex flex-col items-center justify-center min-h-[300px] gap-6 hero-grid">
-                <div className="w-24 h-24 bg-white rounded-3xl flex items-center justify-center shadow-card border border-light-grey">
+              <div className="bg-white border border-light-grey p-12 rounded-[8px] flex flex-col items-center justify-center min-h-[300px] gap-6 hero-grid">
+                <div className="w-24 h-24 bg-white rounded-[8px] flex items-center justify-center shadow-card border border-light-grey">
                   <span className="font-display font-black text-4xl text-royal" style={{ letterSpacing: "-1.5px" }}>TBC</span>
                 </div>
                 <span className="text-mid-grey text-sm font-display tracking-widest uppercase bg-white px-3 py-1 rounded-full border border-light-grey">Light Icon</span>
@@ -205,7 +205,7 @@ export default function BrandGuidelinesPage() {
               <h2 className="section-heading">UI Elements</h2>
             </div>
 
-            <div className="bg-white border border-light-grey rounded-2xl p-12 shadow-card">
+            <div className="bg-white border border-light-grey rounded-[8px] p-12 shadow-card">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 
                 {/* Buttons */}
@@ -220,7 +220,7 @@ export default function BrandGuidelinesPage() {
                       <button className="btn-gold mb-3 block">Gold Button</button>
                       <p className="text-xs text-mid-grey">Used for high-contrast emphasis. Class: <code className="bg-light-grey px-1 py-0.5 rounded text-ink">.btn-gold</code></p>
                     </div>
-                    <div className="bg-forest p-6 rounded-xl -ml-6 w-[calc(100%+3rem)]">
+                    <div className="bg-forest p-6 rounded-[8px] -ml-6 w-[calc(100%+3rem)]">
                       <button className="btn-ghost-gold mb-3 block">Ghost Button</button>
                       <p className="text-xs text-white/50">Used on dark backgrounds. Class: <code className="bg-white/10 px-1 py-0.5 rounded text-white">.btn-ghost-gold</code></p>
                     </div>

@@ -9,7 +9,7 @@ export default function YouTubeLite({ id, title, poster }: { id: string; title: 
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="relative aspect-video w-full max-w-full overflow-hidden rounded-2xl bg-forest ring-1 ring-black/5 shadow-[0_20px_50px_-20px_rgba(11,26,18,0.35)]">
+    <div className="relative aspect-video w-full max-w-full overflow-hidden rounded-[8px] bg-forest ring-1 ring-black/5 shadow-[0_20px_50px_-20px_rgba(11,26,18,0.35)]">
       {playing ? (
         <iframe
           className="absolute inset-0 h-full w-full"

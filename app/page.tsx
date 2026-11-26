@@ -157,7 +157,7 @@ export default async function HomePage() {
           <div className="max-w-[620px]">
             <hr className="gold-rule mb-8 hero-1" />
             <h1 className="font-display font-bold text-white text-[clamp(32px,8vw,52px)] leading-[1.1] tracking-[-0.5px] mb-6 hero-2 text-balance">
-              The intelligence layer your business has been missing.
+              We find the process that costs you the most. Then we turn it into software.
             </h1>
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
               We sit with your MD and your team, find the process that costs you
@@ -278,7 +278,7 @@ export default async function HomePage() {
               { href: "/process-cost-calculator", eyebrow: "Tool", title: "What does your slowest process cost?", body: "Work it out in a minute.", Art: CostScene, big: false },
             ].map(({ href, eyebrow, title, body, Art, big }) => (
               <div key={href} className={big ? "lg:col-span-2 lg:row-span-2" : ""}>
-                <Link href={href} className="group flex flex-col h-full rounded-2xl overflow-hidden bg-[#0E3F2A] ring-1 ring-black/5 card-depth">
+                <Link href={href} className="group flex flex-col h-full rounded-[8px] overflow-hidden bg-[#0E3F2A] ring-1 ring-black/5 card-depth">
                   <div className={`relative ${big ? "aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-[320px]" : "aspect-[16/9]"}`}>
                     <Art />
                   </div>
@@ -470,8 +470,8 @@ export default async function HomePage() {
               },
             ].map((guide, i) => (
               <Reveal key={guide.href} delay={i * 0.04}>
-                <Link href={guide.href} className="group flex flex-col h-full p-2 rounded-xl transition-all duration-200 hover:bg-white hover:shadow-card card-depth">
-                  <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-4">
+                <Link href={guide.href} className="group flex flex-col h-full p-2 rounded-[8px] transition-all duration-200 hover:bg-white hover:shadow-card card-depth">
+                  <div className="relative aspect-[16/9] rounded-[8px] overflow-hidden mb-4">
                     <GuideCover variant={i} />
                   </div>
                   <span className="font-display font-semibold text-[17px] text-ink leading-snug group-hover:text-royal transition-colors text-balance">

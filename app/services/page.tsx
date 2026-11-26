@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import PracticeArt from "@/components/PracticeArt";
 import Reveal from "@/components/Reveal";
 import { aiPractices, products, consultingLinks } from "@/lib/offerings";
@@ -62,12 +61,6 @@ export default function ServicesPage() {
     <>
       {/* ── PAGE HERO ── */}
       <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
-        {/* Full-bleed background image band */}
-        <div className="absolute inset-0 z-0">
-          <Image src="/img/hero-home.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/60 to-transparent" />
-        </div>
-
         <div className="container-tbc py-s6 relative z-10">
           <hr className="gold-rule mb-6" />
           <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-3xl mb-6 text-balance">
@@ -162,9 +155,9 @@ export default function ServicesPage() {
             Request a Consultation
           </Link>
           <div className="flex flex-wrap items-center justify-center gap-6 text-[14px] text-white/80 mt-6">
-            <span className="inline-flex items-center gap-1.5">✓ 30-minute scoping call</span>
-            <span className="inline-flex items-center gap-1.5">✓ Confidential & NDA-backed</span>
-            <span className="inline-flex items-center gap-1.5">✓ Response within 1 business day</span>
+            <span className="inline-flex items-center gap-1.5"><svg className="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>30-minute scoping call</span>
+            <span className="inline-flex items-center gap-1.5"><svg className="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>Confidential & NDA-backed</span>
+            <span className="inline-flex items-center gap-1.5"><svg className="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>Response within 1 business day</span>
           </div>
           <hr className="gold-rule gold-rule--center mt-10" />
         </div>

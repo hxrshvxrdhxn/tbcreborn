@@ -27,7 +27,7 @@ export default function InsightRail({ posts }: { posts: Post[] }) {
           <li key={post.slug} className={`snap-start shrink-0 ${i === 0 ? "w-[86%] sm:w-[560px]" : "w-[78%] sm:w-[300px]"}`}>
             <Link
               href={`/blog/${post.slug}`}
-              className={`group/card flex h-full min-h-[300px] flex-col justify-between rounded-2xl p-6 transition-colors duration-200 ${
+              className={`group/card flex h-full min-h-[300px] flex-col justify-between rounded-[8px] p-6 transition-colors duration-200 ${
                 i === 0 ? "bg-forest text-white" : "bg-ivory border border-light-grey hover:border-royal"
               }`}
             >

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
-import { SunscoutScene, CaseArt } from "@/components/Illustrations";
+import { SunscoutScene } from "@/components/Illustrations";
 import { productPages, productPageBySlug } from "@/lib/productPages";
 import YouTubeLite from "@/components/YouTubeLite";
 import { videoForProduct, videoSchema } from "@/lib/social";
@@ -81,11 +82,29 @@ export default function ProductLanding({ params }: { params: { product: string }
               ) : (
                 <Link href="/book-consultation" className="btn-primary min-h-[48px] px-7 py-3 flex items-center justify-center">Start a free trial</Link>
               )}
-              <a href="#capabilities" className="inline-flex items-center justify-center min-h-[48px] px-7 py-3 border border-white/40 text-white font-display font-semibold rounded hover:bg-white/10 transition-colors">See what it does</a>
+              <a href="#capabilities" className="inline-flex items-center justify-center min-h-[48px] px-7 py-3 border border-white/40 text-white font-display font-semibold rounded-[6px] hover:bg-white/10 transition-colors">See what it does</a>
             </div>
           </div>
-          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/10">
-            {art === "sunscout" ? <SunscoutScene /> : <CaseArt kind="llm" />}
+          <div className="relative aspect-[16/10] rounded-[8px] overflow-hidden ring-1 ring-white/10 bg-forest">
+            {art === "sunscout" ? (
+              <SunscoutScene />
+            ) : art === "distil" ? (
+              <Image
+                src="/img/videos/distil-intro.jpg"
+                alt="Distil proposal assembly system"
+                fill
+                priority
+                className="object-cover object-top"
+              />
+            ) : (
+              <Image
+                src={`/img/og-${art}.png`}
+                alt={`${p.name} interface`}
+                fill
+                priority
+                className="object-cover object-center"
+              />
+            )}
           </div>
         </div>
       </section>
@@ -118,7 +137,7 @@ export default function ProductLanding({ params }: { params: { product: string }
           </Reveal>
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {p.steps.map((s, i) => (
-              <li key={s.title} className="bg-white rounded-2xl border border-light-grey p-6 flex flex-col gap-3">
+              <li key={s.title} className="bg-white rounded-[8px] border border-light-grey p-6 flex flex-col gap-3">
                 <span className="font-display font-bold text-[40px] leading-none text-royal">{i + 1}</span>
                 <h3 className="font-display font-bold text-[19px] text-ink">{s.title}</h3>
                 <p className="text-[15px] text-mid-grey leading-relaxed">{s.body}</p>
@@ -171,7 +190,7 @@ export default function ProductLanding({ params }: { params: { product: string }
               ))}
             </ul>
           </div>
-          <div className="bg-white rounded-2xl border border-light-grey p-8 self-start">
+          <div className="bg-white rounded-[8px] border border-light-grey p-8 self-start">
             <h3 className="font-display font-bold text-[22px] text-ink mb-3">Getting started</h3>
             <p className="text-[16px] text-mid-grey leading-relaxed mb-6">{p.status}</p>
             {p.site ? (
@@ -182,10 +201,19 @@ export default function ProductLanding({ params }: { params: { product: string }
             ) : (
               <Link href="/book-consultation" className="btn-primary min-h-[48px] inline-flex items-center justify-center">Start a free trial</Link>
             )}
-            <ul className="mt-6 pt-6 border-t border-light-grey space-y-2 text-xs text-mid-grey">
-              <li className="flex items-center gap-2">✓ 30-day trial with full capability</li>
-              <li className="flex items-center gap-2">✓ Deployed on your infrastructure or private cloud</li>
-              <li className="flex items-center gap-2">✓ No upfront setup fee</li>
+            <ul className="mt-6 pt-6 border-t border-light-grey space-y-2.5 text-xs text-mid-grey">
+              <li className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-royal flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>30-day trial with full capability</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-royal flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Deployed on your infrastructure or private cloud</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-royal flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>No upfront setup fee</span>
+              </li>
             </ul>
             {p.related && (
               <p className="mt-6 text-[15px]">
@@ -201,7 +229,7 @@ export default function ProductLanding({ params }: { params: { product: string }
           <h2 id="faq-heading" className="section-heading text-balance mb-8">Questions we are asked.</h2>
           <div className="space-y-3">
             {p.faqs.map((f) => (
-              <details key={f.q} className="group border border-light-grey rounded-xl bg-white [&_summary::-webkit-details-marker]:hidden">
+              <details key={f.q} className="group border border-light-grey rounded-[8px] bg-white [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] select-none">
                   <span>{f.q}</span>
                   <span className="text-royal group-open:rotate-180 transition-transform duration-300" aria-hidden="true">

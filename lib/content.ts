@@ -529,7 +529,7 @@ As the business scales, the founder's most valuable contribution typically shift
 
 The Path to Scale
 
-Organizations that successfully address founder bottlenecks unlock significant growth potential. Teams become more capable and independent. Decision-making accelerates. The founder gains freedom to focus on activities that drive the most value.
+Organizations that successfully address founder bottlenecks see significant growth. Teams become more capable and independent. Decision-making accelerates. The founder gains freedom to focus on activities that drive the most value.
 
 Turbo Bytes Consulting works with founders and leadership teams to identify bottlenecks, build organizational systems, and create the delegation frameworks required for sustainable scale.`),
   },

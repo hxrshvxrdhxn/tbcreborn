@@ -78,7 +78,7 @@ export default function IndustryPage({ params }: { params: { industry: string } 
             </Link>
           </div>
           </div>
-          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/10">
+          <div className="relative aspect-[16/10] rounded-[8px] overflow-hidden ring-1 ring-white/10">
             {ind.slug === "distribution" ? <DistributionScene /> : <FactoryScene />}
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function IndustryPage({ params }: { params: { industry: string } 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {ind.processes.map((p, i) => (
               <Reveal key={p.name} delay={Math.min(i * 0.05, 0.25)}>
-                <article className="bg-white border border-light-grey rounded-2xl p-7 h-full flex flex-col gap-4">
+                <article className="bg-white border border-light-grey rounded-[8px] p-7 h-full flex flex-col gap-4">
                   <h3 className="font-display font-bold text-[20px] text-ink leading-snug">{p.name}</h3>
                   <div>
                     <p className="text-[12px] font-semibold text-mid-grey mb-1">Today</p>
@@ -121,7 +121,7 @@ export default function IndustryPage({ params }: { params: { industry: string } 
               ["We learn", "Days with the people who run it, so the software fits the real work, exceptions included."],
               ["We build and stay", "We build it, deploy it, train the team and look after it through AMC and maintenance."],
             ].map(([t, d], i) => (
-              <li key={t} className="rounded-2xl border border-light-grey p-7">
+              <li key={t} className="rounded-[8px] border border-light-grey p-7">
                 <p className="font-display font-bold text-royal text-[15px] mb-2">Step {i + 1}</p>
                 <h3 className="font-display font-bold text-[20px] text-ink mb-2">{t}</h3>
                 <p className="text-[15px] text-mid-grey leading-relaxed">{d}</p>
@@ -138,7 +138,7 @@ export default function IndustryPage({ params }: { params: { industry: string } 
           </Reveal>
           <div className="space-y-3">
             {ind.faqs.map((f) => (
-              <details key={f.q} className="group border border-light-grey rounded-xl bg-white [&_summary::-webkit-details-marker]:hidden">
+              <details key={f.q} className="group border border-light-grey rounded-[8px] bg-white [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] select-none">
                   <span>{f.q}</span>
                   <span className="text-royal group-open:rotate-180 transition-transform duration-300" aria-hidden="true">

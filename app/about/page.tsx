@@ -96,18 +96,11 @@ export default function AboutPage() {
     <>
       {/* ── PAGE HERO ── */}
       <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
-        {/* Full-bleed background abstract layer */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest to-royal/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
-        </div>
-
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
-              We turn the process that slows your business down{" "}
-              <span className="text-gold">into software that runs it</span>.
+              We turn the process that slows your business down into software that runs it.
             </h1>
           </Reveal>
         </div>

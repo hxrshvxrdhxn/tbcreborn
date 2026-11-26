@@ -217,7 +217,7 @@ export default function WorkPage() {
               const h = headline(study.outcomes);
               return (
                 <li key={study.number}>
-                  <a href={`#case-${study.number}`} className="group flex flex-col h-full rounded-2xl overflow-hidden bg-white border border-light-grey hover:shadow-card transition-shadow">
+                  <a href={`#case-${study.number}`} className="group flex flex-col h-full rounded-[8px] overflow-hidden bg-white border border-light-grey hover:shadow-card transition-shadow">
                     <div className="relative aspect-[16/10]">
                       <CaseArt kind={study.art} />
                     </div>
@@ -245,12 +245,12 @@ export default function WorkPage() {
                     
                     {/* Left Column: Number, Title, Metadata */}
                     <div className="lg:col-span-4 flex flex-col">
-                      <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-8">
+                      <div className="relative aspect-[16/10] rounded-[8px] overflow-hidden mb-8">
                         <CaseArt kind={study.art} />
                       </div>
                       <div className="mb-6">
-                        <span className="font-display font-bold text-[14px] text-gold tracking-[1px] mb-3 block">
-                          CASE {study.number}
+                        <span className="font-display font-semibold text-[14px] text-gold mb-3 block">
+                          Case {study.number}
                         </span>
                         <h2 className="font-display font-bold text-[clamp(24px,2.5vw,32px)] text-ink leading-[1.2] mb-3">
                           {study.title}
@@ -312,11 +312,8 @@ export default function WorkPage() {
                       })()}
 
                       {/* The Outcomes */}
-                      <div className="bg-ivory border border-light-grey rounded p-6 sm:p-8 shadow-card">
-                        <h3 className="font-display font-bold text-[13px] text-gold tracking-widest uppercase mb-6 flex items-center gap-3">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                          </svg>
+                      <div className="bg-ivory border border-light-grey rounded-[8px] p-6 sm:p-8 shadow-card">
+                        <h3 className="font-display font-semibold text-[17px] text-ink mb-6">
                           Measured Outcomes
                         </h3>
                         <ul className="space-y-4">

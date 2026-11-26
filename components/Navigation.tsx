@@ -42,7 +42,7 @@ export default function Navigation() {
       <div
         className={`bg-forest border-b-2 border-gold transition-[margin,border-radius,box-shadow,transform,max-width] duration-300 ease-out ${
           floating
-            ? "lg:mx-auto lg:max-w-[1232px] lg:rounded-2xl lg:border-b-0 lg:translate-y-3 lg:shadow-[0_12px_32px_rgba(8,38,24,0.28)]"
+            ? "lg:mx-auto lg:max-w-[1232px] lg:rounded-[8px] lg:border-b-0 lg:translate-y-3 lg:shadow-[0_12px_32px_rgba(8,38,24,0.28)]"
             : "lg:max-w-full"
         }`}
       >

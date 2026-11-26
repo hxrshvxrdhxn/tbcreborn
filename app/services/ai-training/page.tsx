@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import ServiceFooter from "@/components/ServiceFooter";
 import SectionInk from "@/components/SectionInk";
@@ -33,7 +32,7 @@ const curriculumItems = [
     number: "01",
     title: "AI Fundamentals",
     description:
-      "For non-technical leaders and teams. What AI can and cannot do. Where it creates leverage.",
+      "For non-technical leaders and teams. What AI can and cannot do. Where it saves real time.",
   },
   {
     number: "02",
@@ -157,12 +156,6 @@ export default function AITrainingPage() {
 
       {/* ── PAGE HERO ── */}
       <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey" aria-labelledby="ai-training-hero-heading">
-        {/* Full-bleed background image band */}
-        <div className="absolute inset-0 z-0">
-          <Image quality={90} sizes="100vw" src="/img/hero-service-ai-training.png" alt="" fill className="object-cover object-center opacity-40 mix-blend-screen" priority aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/60 to-transparent" />
-        </div>
-
         <div className="container-tbc py-s6 relative z-10">
           <Reveal>
             <hr className="gold-rule mb-6" />
@@ -172,7 +165,7 @@ export default function AITrainingPage() {
             <p className="text-body text-white/70 leading-relaxed max-w-3xl mb-8 text-pretty">
               Organisations that understand AI use it better. We build that understanding.
             </p>
-            <div className="inline-flex flex-wrap items-center gap-3 bg-white/10 backdrop-blur border border-white/20 rounded px-4 py-3 shadow-sm">
+            <div className="inline-flex flex-wrap items-center gap-3 bg-white/10 border border-white/20 rounded-[6px] px-4 py-3 shadow-sm">
               <span className="w-2.5 h-2.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
               <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">
                 Sessions bookable with 5 business days notice

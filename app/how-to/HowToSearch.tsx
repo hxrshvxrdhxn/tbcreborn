@@ -55,7 +55,7 @@ export default function HowToSearch() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg border border-light-grey">
+    <div className="w-full max-w-2xl mx-auto bg-white p-6 md:p-8 rounded-[8px] shadow-lg border border-light-grey">
       <div className="relative">
         <svg
           className="absolute left-4 top-1/2 -translate-y-1/2 text-mid-grey"
