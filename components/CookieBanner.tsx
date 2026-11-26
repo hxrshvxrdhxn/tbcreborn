@@ -20,6 +20,8 @@ export default function CookieBanner() {
         location="bottom"
         buttonText="Accept All"
         declineButtonText="Essential Only"
+        ariaAcceptLabel="Accept All"
+        ariaDeclineLabel="Essential Only"
         enableDeclineButton
         cookieName="CookieConsent"
         style={{ 
