@@ -47,7 +47,7 @@ const breadcrumbSchema = {
 const faqs = [
   {
     question: "What makes TBC's digital transformation approach different from big IT consultancies?",
-    answer: "Most traditional IT consultancies deliver multi-hundred-page strategy slide decks and leave execution to third-party sub-contractors. We sit with the managing director and frontline staff, diagnose the costliest bottlenecks, build the exact software and automations needed, run the systems in production, and hand over full source code ownership.",
+    answer: "Most traditional IT consultancies deliver multi-hundred-page strategy slide decks and leave execution to third-party sub-contractors. We sit with every team from leadership to the interns, gather every pain point, diagnose the costliest bottlenecks, build software, automations and models in-house around how your business works, run the systems in production, and hand over full source code ownership. Building in-house cuts outside tool dependencies and keeps client data in client custody.",
   },
   {
     question: "Do we have to replace our existing ERP or accounting system like Tally?",
@@ -110,7 +110,7 @@ export default function DigitalTransformationPage() {
               Digital transformation: from diagnostic to running systems and trained teams.
             </h1>
             <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed text-pretty mb-8">
-              We do not write advisory slide decks and walk away. We sit with your team, measure process friction, engineer purpose-built software, run systems in production, and hand over full IP ownership.
+              We do not write advisory slide decks and walk away. We sit with every team, from leadership to the interns, measure process friction, engineer software and models in-house around how your business works, reduce outside dependencies, and run systems in production.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -163,8 +163,8 @@ export default function DigitalTransformationPage() {
             ]}
             afterTitle="With Turbo Bytes Consulting"
             afterItems={[
-              "End-to-end delivery: we diagnose, engineer, deploy, and maintain the production systems.",
-              "Modern workflow layers that wrap and sync with existing ERP and Tally installations.",
+              "End-to-end delivery: we diagnose, engineer in-house, deploy, and maintain the production systems.",
+              "Fewer outside dependencies: software and models built in-house with client data kept strictly in your custody.",
               "Fixed-phase milestones with 100% intellectual property and source code owned by you.",
             ]}
           />
@@ -229,10 +229,10 @@ export default function DigitalTransformationPage() {
             <div className="bg-ivory border border-light-grey rounded-[8px] p-6 flex flex-col justify-between hover:border-[#167A4E]/50 transition-colors">
               <div>
                 <h3 className="font-display font-semibold text-[18px] text-ink mb-2">
-                  Custom Software Development
+                  Custom Software & Automation
                 </h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
-                  Purpose-built applications, portals, and bi-directional ERP connectors.
+                  Software, automations and models built in-house around how your business works, keeping your data with you.
                 </p>
               </div>
               <Link href="/services/custom-software-development" className="text-[14px] font-semibold text-[#167A4E] hover:underline">

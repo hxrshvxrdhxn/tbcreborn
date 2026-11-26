@@ -10,7 +10,7 @@ const defaultSteps: FlowStep[] = [
   {
     number: "01",
     title: "Diagnostic",
-    summary: "Sit with the MD and team to map the single process where friction costs the most.",
+    summary: "Sit with every team, from leadership to the interns, to gather inputs and map the costliest process.",
   },
   {
     number: "02",

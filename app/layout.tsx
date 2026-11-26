@@ -26,11 +26,11 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI & Tech Consulting in Delhi NCR | Turbo Bytes Consulting",
+    default: "Technology Consulting & Process Automation | Turbo Bytes Consulting",
     template: "%s | Turbo Bytes Consulting",
   },
   description:
-    "AI and technology consultancy for founder-led firms: private LLMs, AI training, technology consulting and audits. Based in Greater Noida, serving Delhi NCR.",
+    "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility. Serving clients worldwide.",
   metadataBase: new URL("https://turbobytesconsulting.com"),
   openGraph: {
     type: "website",

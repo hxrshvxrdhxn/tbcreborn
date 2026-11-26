@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What does Turbo Bytes Consulting do?",
-    answer: "We are a technology consultancy. We sit with every team in the company, from leadership to the interns, gather every pain point and input we can, and fix the processes that cost the most: through process automation, custom software engineered for that exact workflow, and full digital transformation. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
+    answer: "We are a technology consultancy. We sit with every team in the company, from leadership to the interns, gather every pain point and input we can, and fix the processes that cost the most: through process automation, custom software, and full digital transformation. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools, no recurring licence fees, and client data stays strictly with you. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
   },
   {
     question: "What is your approach to digital transformation?",
@@ -225,7 +225,7 @@ export default function HomePage() {
               {[
                 { step: "01", title: "Listen to everyone", text: "Hear the pain points of every team, from leadership to the interns." },
                 { step: "02", title: "Map the processes", text: "Record how work really moves: every step, handover, exception and spreadsheet." },
-                { step: "03", title: "Build exact software", text: "Engineer custom tools and automated handoffs without forcing off-the-shelf compromises." },
+                { step: "03", title: "Build in-house", text: "Engineer software, automations and models in-house around how your business works, reducing outside dependencies." },
                 { step: "04", title: "Run and maintain", text: "Deploy to production, onboard your operators, and support the systems long term." },
               ].map((s, idx) => (
                 <div key={idx} className="relative flex flex-col justify-between p-4 rounded-[6px] bg-ivory/60 border border-light-grey/80">
@@ -260,7 +260,7 @@ export default function HomePage() {
             </summary>
             <div className="mt-4 pt-4 border-t border-light-grey text-[14px] text-mid-grey space-y-4">
               <p>
-                A traditional consultancy delivers a slide deck and leaves implementation to third parties. A software house builds whatever you specify without assessing whether the underlying process is flawed. We do both: we sit down with leadership to measure the true cost of operational friction, engineer the exact software required, and stay through live production operations.
+                A traditional consultancy delivers a slide deck and leaves implementation to third parties. A software house builds whatever you specify without assessing whether the underlying process is flawed. We do both: we sit with every team from leadership to the interns to measure the true cost of operational friction, engineer software and models in-house around how your business works, and stay through live production operations. Building in-house cuts outside dependencies so fewer third-party tools are needed and your data stays with you.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                 <figure>
@@ -287,7 +287,7 @@ export default function HomePage() {
                 Consulting that ends in working software, not a slide deck.
               </h2>
               <p className="text-body text-mid-grey leading-relaxed mb-6 text-pretty">
-                See how we work with whole teams, diagnose operations and build long-term technology partnerships.
+                See how we work with whole teams, diagnose operations and build software and automations in-house around how your business works — reducing outside dependencies so your data stays with you.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <Link href="/about" className="text-[15px] font-semibold text-royal hover:underline inline-flex items-center gap-1.5">

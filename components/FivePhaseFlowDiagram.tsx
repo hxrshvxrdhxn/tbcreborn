@@ -11,7 +11,7 @@ const defaultPhases: PhaseData[] = [
   {
     phase: "Phase 01",
     name: "Diagnose",
-    short: "Sit with the MD and team to observe how work moves and calculate friction costs.",
+    short: "Sit with every team, from leadership to the interns, to hear every pain point and calculate friction costs.",
     deliverables: [
       "Comprehensive visual process and handoff map",
       "Quantified cost-of-delay and bottleneck calculations",
@@ -33,12 +33,12 @@ const defaultPhases: PhaseData[] = [
   {
     phase: "Phase 03",
     name: "Build",
-    short: "Sprint-based delivery of custom software, automation, and bi-directional connectors.",
+    short: "Sprint-based in-house delivery of custom software, automation, and bi-directional connectors.",
     deliverables: [
-      "Bespoke software applications delivered in stage-gated milestones",
+      "In-house software, automations and models built around how your business works",
       "Bi-directional API connectors linking accounting and floor systems",
       "Automated notification triggers, approval chains, and document generators",
-      "Continuous sprint demos with your functional stakeholders",
+      "Fewer third-party dependencies so your operational data stays with you",
     ],
   },
   {

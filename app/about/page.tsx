@@ -7,7 +7,7 @@ import { BothHalves, ValueIcon, ProcessToday, ProcessWithSoftware } from "@/comp
 export const metadata: Metadata = {
   title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
   description:
-    "TBC is a technology consultancy. We sit with your MD and team, measure what processes cost, fix them, and run them.",
+    "TBC is a technology consultancy. We sit with every team from leadership to the interns, measure what processes cost, fix them, and run them.",
   alternates: {
     canonical: "/about",
   },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
     description:
-      "TBC is a technology consultancy. We sit with your MD and team, measure what processes cost, fix them, and run them.",
+      "TBC is a technology consultancy. We sit with every team from leadership to the interns, measure what processes cost, fix them, and run them.",
     url: "https://turbobytesconsulting.com/about",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image" as const,
     title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
     description:
-      "TBC is a technology consultancy. We sit with your MD and team, measure what processes cost, fix them, and run them.",
+      "TBC is a technology consultancy. We sit with every team from leadership to the interns, measure what processes cost, fix them, and run them.",
   },
 };
 
@@ -38,13 +38,13 @@ const values = [
     icon: "ai" as const,
     title: "Useful AI",
     description:
-      "LLMs and neural networks go in where they earn their place. Where a simple rule or a clean form does the job better, we use that instead.",
+      "Machine learning models and neural networks go in where they earn their place. Where a simple rule or a clean form does the job better, we use that instead.",
   },
   {
     icon: "end" as const,
     title: "End to end",
     description:
-      "We design, build, deploy and support. AMC and maintenance stay with us, so there is one team to call when something needs to change.",
+      "We design, build, deploy and support. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools and your data stays with you.",
   },
   {
     icon: "value" as const,
@@ -98,11 +98,11 @@ const companyFacts = [
 const faqs = [
   {
     question: "What kind of organisation is Turbo Bytes Consulting?",
-    answer: "TBC is a technology consultancy. We sit with the managing director and frontline teams, find the processes that cost the business the most time and money, and fix them with automation, custom software, and full digital transformation. We also help companies establish authoritative visibility in search and AI answers, with clients in India, the Middle East, Asia-Pacific, the UK and the US."
+    answer: "TBC is a technology consultancy. We sit with every team from leadership to the interns, gather every pain point, and fix the processes that cost the most: with process automation, custom software, and full digital transformation. We build in-house wherever we can to reduce outside dependencies, meaning fewer third-party tools and your data stays with you. We also help companies establish authoritative visibility in search and AI answers, with clients in India, the Middle East, Asia-Pacific, the UK and the US."
   },
   {
     question: "How do you work with client leadership?",
-    answer: "We begin with an in-person or structured scoping conversation with the MD or founder to identify friction points and bottlenecks. Then we shadow the operational teams who perform the work every day, quantify the cost of delay, build the software solution, and run and maintain it under ongoing SLA support."
+    answer: "We sit with every team across the company, from leadership to daily operators and interns, to hear every pain point and gather every input. Then we quantify the cost of delay, engineer software, automations and models in-house around how your business works, and run and maintain them under ongoing SLA support."
   },
   {
     question: "Do you replace our existing accounting or ERP systems?",
@@ -126,7 +126,7 @@ const schema = {
       "@id": "https://turbobytesconsulting.com/about#webpage",
       url: "https://turbobytesconsulting.com/about",
       name: "About Turbo Bytes Consulting",
-      description: "Turbo Bytes Consulting is a technology consultancy. We sit with your MD and team, find the process that costs you most, and turn it into software we build, run and maintain.",
+      description: "Turbo Bytes Consulting is a technology consultancy. We sit with every team from leadership to the interns, find the process that costs you most, and turn it into software we build in-house, run and maintain.",
       publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
     },
     {
@@ -182,7 +182,7 @@ export default function AboutPage() {
               </div>
               <div className="lg:col-span-8 space-y-6">
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                  TBC is a technology consultancy. We sit with the managing director and the team, find the processes that cost the business the most time, money or sleep, and fix them: with process automation, with custom software built for that exact need, and with full digital transformation.
+                  TBC is a technology consultancy. We sit with every team in the company, from the MD to the interns, hear everyone&apos;s pain points, gather every input we can, and fix the processes that cost the business the most time, money or sleep: with process automation, custom software, and full digital transformation. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools, no recurring licence fees, and your proprietary data stays strictly with you.
                 </p>
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
                   We also make companies findable in traditional search and in conversational AI answers (SEO, AEO, GEO), for our clients and for ourselves. We build the systems, deploy them, train your staff, and run and maintain them through ongoing SLA support.
@@ -224,7 +224,7 @@ export default function AboutPage() {
               </h2>
               <hr className="gold-rule mb-8" />
               <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                A traditional consultancy will tell you what to fix. A software house will build what you specify. We do both: we sit with you to diagnose the root operational bottlenecks, engineer the custom software and automations, and stay accountable for running and maintaining the systems in production. One team, from the initial diagnostic to years of live support.
+                A traditional consultancy will tell you what to fix. A software house will build what you specify. We do both: we sit with all your teams to diagnose the root operational bottlenecks, engineer software, automations and models in-house around how your business works, and stay accountable for running and maintaining the systems in production. One team, from the initial diagnostic to years of live support, keeping outside dependencies to a minimum.
               </p>
             </div>
             <BothHalves />

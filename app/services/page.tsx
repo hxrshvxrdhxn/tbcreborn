@@ -32,7 +32,7 @@ const servicePillars = [
   {
     number: "01",
     heading: "Technology Consulting & Process Automation",
-    lead: "We sit with the MD and team, map the workflows that cost the most, and eliminate operational bottlenecks through disciplined automation.",
+    lead: "We sit with every team, from leadership to the interns, gather every input, map the workflows that cost the most, and eliminate operational bottlenecks through disciplined automation.",
     items: [
       { title: "Business process automation", href: "/services/business-automation", blurb: "Automate manual entry, approvals, and handoffs between teams and systems." },
       { title: "Technology strategy & advisory", href: "/services/technology-consulting", blurb: "Independent roadmaps, build-or-buy decisions, and systems evaluation." },
@@ -44,7 +44,7 @@ const servicePillars = [
   {
     number: "02",
     heading: "Custom Software for Any Specific Need",
-    lead: "We build what the process needs, not a template. Purpose-engineered software architectures that fit your exact business logic.",
+    lead: "We build software, automated processes, and models in-house around how your business works — reducing outside dependencies so your data stays with you.",
     items: [
       { title: "Custom software development", href: "/services/custom-software-development", blurb: "Dedicated internal web platforms, mobile dispatch tools, and tailored systems." },
       { title: "Custom LLM & on-premise AI", href: "/services/custom-llm", blurb: "Private models trained on company documents with zero data leakage." },
@@ -147,7 +147,7 @@ export default function ServicesPage() {
             How we work with you.
           </h1>
           <p className="text-body text-white/75 leading-relaxed max-w-2xl text-pretty">
-            Five core offers: technology consulting and process automation, custom software engineered for your process, search and AI visibility (AEO/SEO/GEO), full digital transformation, and dedicated software products.
+            Five core offers: technology consulting and process automation, custom software built in-house around your business, search and AI visibility (AEO/SEO/GEO), full digital transformation, and dedicated software products.
           </p>
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function ServicesPage() {
             afterTitle="With TBC (Engineered resolution)"
             afterItems={[
               "Single verified operational software engineered directly for your business logic.",
-              "Zero per-seat taxes: full code ownership with direct database control.",
+              "In-house builds that cut outside dependencies so client data stays with you.",
               "Advice and software delivery from the same senior engineering team.",
             ]}
           />
@@ -286,7 +286,7 @@ export default function ServicesPage() {
               Advice and delivery from the same people.
             </h2>
             <p className="text-body text-white/70 max-w-2xl mx-auto text-pretty">
-              We do not hand over a strategy deck and leave. Where the answer needs building, we build it, train your team on it, and stay until it works.
+              We do not hand over a strategy deck and leave. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools, no recurring per-seat fees, and your proprietary data stays strictly with you.
             </p>
           </Reveal>
         </div>

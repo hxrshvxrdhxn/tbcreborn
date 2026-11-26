@@ -139,7 +139,7 @@ export const consulting: ConsultingService[] = [
     slug: "ai-readiness-assessment",
     title: "AI readiness assessment",
     short: "AI readiness",
-    lead: "Where LLMs and neural networks will genuinely help your business, where they will not, and what has to be true first.",
+    lead: "Where machine learning models and automated processes will genuinely help your business, where they will not, and what has to be true first.",
     metaDescription:
       "AI readiness assessment: use-case discovery, data readiness, risk and governance, and a pilot plan for the use cases most likely to pay off.",
     covers: [

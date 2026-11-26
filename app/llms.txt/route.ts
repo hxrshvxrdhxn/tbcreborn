@@ -38,7 +38,7 @@ export async function GET() {
 
   const body = `# Turbo Bytes Consulting
 
-> Turbo Bytes Consulting (TBC) is a technology consultancy serving mid-market enterprises worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US. We sit with the managing director and frontline teams, measure where processes cost the business most, and fix them: with process automation, bespoke software, and end-to-end digital transformation. We also help organisations earn authoritative visibility in traditional search and conversational AI answers (SEO, AEO, GEO).
+> Turbo Bytes Consulting (TBC) is a technology consultancy serving mid-market enterprises worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US. We sit with every team, from the managing director to the interns, gather every input, measure where processes cost the business most, and fix them: with process automation, bespoke software built in-house, and end-to-end digital transformation. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools and client data stays with them. We also help organisations earn authoritative visibility in traditional search and conversational AI answers (SEO, AEO, GEO).
 
 ## Key facts
 
