@@ -79,6 +79,13 @@ marketing focus (outreach, some keyword targeting). Site copy must never say or 
 no regional line on the homepage; elsewhere say "clients in India, the Middle East, Asia-Pacific, the UK and the US"
 or leave region out. India-specific SEO landing pages may keep "India" in their title.
 
+## Wording (owner, 26 Nov 09:11)
+
+- Do not say "LLMs built around your processes". Say software, automated processes, or models built (or trained)
+  around how the business works. Use "LLM" only where we literally mean a language model (the private LLM service).
+- Say that we build in-house wherever we can, to reduce outside dependencies (fewer third-party tools, data stays
+  with the client).
+
 ## Rules (unchanged)
 
 Green and white palette only; no small uppercase labels; banner animation untouched; British spelling; no

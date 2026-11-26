@@ -147,7 +147,7 @@ export default function HomePage() {
                   Custom Software
                 </h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed">
-                  Bespoke web applications, floor tracking tools, and private LLMs built around your workflow.
+                  Software, automated processes and models built in-house around how your business works, with fewer outside dependencies.
                 </p>
               </div>
               <span className="text-[13px] font-semibold text-royal mt-6 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
