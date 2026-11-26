@@ -19,9 +19,11 @@ function draw(ctx: CanvasRenderingContext2D, w: number, h: number, t: number, fa
   ctx.clearRect(0, 0, w, h);
   ctx.lineWidth = Math.max(0.6, w / 2400);
   ctx.strokeStyle = fade; // one shared left-to-right fade; per-line strength comes from globalAlpha
-  const step = isMobile ? Math.max(24, w / 40) : Math.max(10, w / 110);
+  // Phones draw one still frame, so they keep the full line count and smooth curves (the banner must look the same).
+  void isMobile;
+  const step = Math.max(10, w / 110);
   for (const r of RIBBONS) {
-    const lineCount = isMobile ? Math.max(8, Math.round(r.lines * 0.3)) : r.lines;
+    const lineCount = r.lines;
     for (let i = 0; i < lineCount; i++) {
       const k = i / (lineCount - 1) - 0.5; // -0.5 … 0.5 across the ribbon
       ctx.globalAlpha = r.alpha * (1.15 - Math.abs(k) * 1.4); // brighter towards the ribbon's centre
