@@ -157,7 +157,7 @@ export default async function HomePage() {
           <div className="max-w-[620px]">
             <hr className="gold-rule mb-8 hero-1" />
             <h1 className="font-display font-bold text-white text-[clamp(32px,8vw,52px)] leading-[1.1] tracking-[-0.5px] mb-6 hero-2 text-balance">
-              We find the process that costs you the most. Then we turn it into software.
+              The intelligence layer your business has been missing.
             </h1>
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
               We sit with your MD and your team, find the process that costs you
