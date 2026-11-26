@@ -26,8 +26,8 @@ const serviceSchema = {
     "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/generative-engine-optimisation",
-  description: "Generative engine optimisation (GEO) consulting to earn citations and recommendations across ChatGPT, Gemini, Perplexity, Copilot, and Google AI Overviews for businesses in India, the Middle East, and APAC.",
-  areaServed: ["IN", "AE", "SA", "SG", "AU"],
+  description: "Generative engine optimisation (GEO) consulting to earn citations and recommendations across ChatGPT, Gemini, Perplexity, Copilot, and Google AI Overviews for businesses worldwide.",
+  areaServed: ["Worldwide", "IN", "GB", "US", "AE", "SA", "SG", "AU"],
   serviceType: "Generative Engine Optimisation Consulting"
 };
 
@@ -112,7 +112,7 @@ export default function GeoServicePage() {
               Generative Engine Optimisation: being cited in AI search.
             </h1>
             <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed text-pretty mb-8">
-              Generative engine optimisation GEO consulting for B2B enterprises across India, the Middle East, and Asia-Pacific. When your target buyers prompt ChatGPT, Perplexity, or Gemini for trusted suppliers and partners, our GEO framework ensures your business is cited as an authoritative answer.
+              Generative engine optimisation GEO consulting for B2B enterprises worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US. When your target buyers prompt ChatGPT, Perplexity, or Gemini for trusted suppliers and partners, our GEO framework ensures your business is cited as an authoritative answer.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">

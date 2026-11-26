@@ -150,7 +150,7 @@ export default function RootLayout({
                       "telephone": "+919354784377",
                       "contactType": "customer service",
                       "email": "info@turbobytesconsulting.com",
-                      "areaServed": "IN",
+                      "areaServed": ["Worldwide", "IN", "GB", "US", "AE", "SA", "SG", "AU"],
                       "availableLanguage": ["English", "Hindi"]
                     }
                   ],
@@ -162,7 +162,7 @@ export default function RootLayout({
                     "postalCode": "201310",
                     "addressCountry": "IN"
                   },
-                  "areaServed": ["Noida", "Greater Noida", "Delhi NCR", "India"],
+                  "areaServed": ["Worldwide", "India", "United Kingdom", "United States", "United Arab Emirates", "Saudi Arabia", "Singapore", "Australia"],
                   "openingHoursSpecification": [
                     {
                       "@type": "OpeningHoursSpecification",

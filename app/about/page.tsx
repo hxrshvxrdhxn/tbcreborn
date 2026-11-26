@@ -7,7 +7,7 @@ import { BothHalves, ValueIcon, ProcessToday, ProcessWithSoftware } from "@/comp
 export const metadata: Metadata = {
   title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
   description:
-    "TBC is a technology consultancy serving India, Middle East and APAC. We sit with your MD and team, measure what processes cost, fix them, and run them.",
+    "TBC is a technology consultancy. We sit with your MD and team, measure what processes cost, fix them, and run them.",
   alternates: {
     canonical: "/about",
   },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
     description:
-      "TBC is a technology consultancy serving India, Middle East and APAC. We sit with your MD and team, measure what processes cost, fix them, and run them.",
+      "TBC is a technology consultancy. We sit with your MD and team, measure what processes cost, fix them, and run them.",
     url: "https://turbobytesconsulting.com/about",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image" as const,
     title: { absolute: "About Turbo Bytes Consulting | Technology Consultancy" },
     description:
-      "TBC is a technology consultancy serving India, Middle East and APAC. We sit with your MD and team, measure what processes cost, fix them, and run them.",
+      "TBC is a technology consultancy. We sit with your MD and team, measure what processes cost, fix them, and run them.",
   },
 };
 
@@ -76,7 +76,7 @@ const companyFacts = [
   },
   {
     label: "Geographic scope",
-    value: "India, Middle East (UAE, Saudi Arabia), and Asia-Pacific (Singapore, Australia)",
+    value: "Worldwide (serving clients in India, the Middle East, Asia-Pacific, the UK and the US)",
   },
   {
     label: "Website",
@@ -98,7 +98,7 @@ const companyFacts = [
 const faqs = [
   {
     question: "What kind of organisation is Turbo Bytes Consulting?",
-    answer: "TBC is a technology consultancy. We sit with the managing director and frontline teams, find the processes that cost the business the most time and money, and fix them with automation, custom software, and full digital transformation. We also help companies establish authoritative visibility in search and AI answers across India, the Middle East, and Asia-Pacific."
+    answer: "TBC is a technology consultancy. We sit with the managing director and frontline teams, find the processes that cost the business the most time and money, and fix them with automation, custom software, and full digital transformation. We also help companies establish authoritative visibility in search and AI answers, with clients in India, the Middle East, Asia-Pacific, the UK and the US."
   },
   {
     question: "How do you work with client leadership?",
@@ -163,7 +163,7 @@ export default function AboutPage() {
               We sit with your team, measure what processes cost, fix them, and run them.
             </h1>
             <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed max-w-2xl text-pretty">
-              Turbo Bytes Consulting is a technology consultancy serving growing mid-market enterprises across India, the Middle East, and the Asia-Pacific region.
+              Turbo Bytes Consulting is a technology consultancy serving growing mid-market enterprises, with clients in India, the Middle East, Asia-Pacific, the UK and the US.
             </p>
           </Reveal>
         </div>

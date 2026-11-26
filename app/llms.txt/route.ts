@@ -38,14 +38,14 @@ export async function GET() {
 
   const body = `# Turbo Bytes Consulting
 
-> Turbo Bytes Consulting (TBC) is a technology consultancy serving mid-market enterprises across India, the Middle East, and Asia-Pacific. We sit with the managing director and frontline teams, measure where processes cost the business most, and fix them: with process automation, bespoke software, and end-to-end digital transformation. We also help organisations earn authoritative visibility in traditional search and conversational AI answers (SEO, AEO, GEO).
+> Turbo Bytes Consulting (TBC) is a technology consultancy serving mid-market enterprises worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US. We sit with the managing director and frontline teams, measure where processes cost the business most, and fix them: with process automation, bespoke software, and end-to-end digital transformation. We also help organisations earn authoritative visibility in traditional search and conversational AI answers (SEO, AEO, GEO).
 
 ## Key facts
 
 - Organisation: Turbo Bytes Consulting (TBC)
 - Founder: Harshvardhan Chauhan
 - Location: Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Greater Noida, Uttar Pradesh 201310, India
-- Geographic reach: India, Middle East (UAE, Saudi Arabia), and Asia-Pacific (Singapore, Australia)
+- Geographic reach: Worldwide (with active client relationships in India, the Middle East, Asia-Pacific, the UK and the US)
 - Practice areas: Technology consulting, process automation, custom software development, digital transformation, AEO/SEO/GEO search visibility, and specialised software products
 - Proof point: In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines.
 - Email: info@turbobytesconsulting.com / harsh@turbobytesconsulting.com

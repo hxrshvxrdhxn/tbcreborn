@@ -17,7 +17,7 @@ export default function WhereBuyersLookDiagram() {
         <div className="bg-white border border-[#167A4E]/30 rounded-[8px] p-4 text-center max-w-md mx-auto mb-6 shadow-xs">
           <span className="text-[12px] font-semibold text-[#167A4E] block mb-0.5">Commercial Buyer Query</span>
           <p className="text-[14px] font-medium text-ink italic">
-            &ldquo;Which firms handle enterprise process automation in India and the Middle East?&rdquo;
+            &ldquo;Which firms handle enterprise process automation and custom software?&rdquo;
           </p>
         </div>
 

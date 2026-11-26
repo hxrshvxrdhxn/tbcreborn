@@ -11,12 +11,12 @@ import { getVideoById } from "@/lib/videos";
 export const metadata: Metadata = {
   title: { absolute: "Consulting Services & Solutions | Turbo Bytes Consulting" },
   description:
-    "Technology consulting, process automation, custom software development, digital transformation, and AEO/SEO/GEO visibility across India, Middle East, and Asia-Pacific.",
+    "Technology consulting, process automation, custom software development, digital transformation, and AEO/SEO/GEO visibility for mid-market and enterprise firms.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: { absolute: "Consulting Services & Solutions | Turbo Bytes Consulting" },
     description:
-      "Technology consulting, process automation, custom software development, digital transformation, and AEO/SEO/GEO visibility across India, Middle East, and Asia-Pacific.",
+      "Technology consulting, process automation, custom software development, digital transformation, and AEO/SEO/GEO visibility for mid-market and enterprise firms.",
     url: "https://turbobytesconsulting.com/services",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },

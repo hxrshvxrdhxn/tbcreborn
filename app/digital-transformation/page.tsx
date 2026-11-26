@@ -7,18 +7,18 @@ import { getVideoById } from "@/lib/videos";
 
 export const metadata: Metadata = {
   title: { absolute: "Digital Transformation Consulting | Turbo Bytes" },
-  description: "End-to-end digital transformation for mid-market firms across India, Middle East and APAC. From diagnostic and custom build to running systems and hand over.",
+  description: "End-to-end digital transformation for mid-market firms. From diagnostic and custom build to running systems and hand over.",
   alternates: { canonical: "/digital-transformation" },
   openGraph: {
     title: { absolute: "Digital Transformation Consulting | Turbo Bytes" },
-    description: "End-to-end digital transformation for mid-market firms across India, Middle East and APAC. From diagnostic and custom build to running systems and hand over.",
+    description: "End-to-end digital transformation for mid-market firms. From diagnostic and custom build to running systems and hand over.",
     url: "https://turbobytesconsulting.com/digital-transformation",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
     title: { absolute: "Digital Transformation Consulting | Turbo Bytes" },
-    description: "End-to-end digital transformation for mid-market firms across India, Middle East and APAC. From diagnostic and custom build to running systems and hand over.",
+    description: "End-to-end digital transformation for mid-market firms. From diagnostic and custom build to running systems and hand over.",
   },
 };
 
@@ -30,8 +30,8 @@ const serviceSchema = {
     "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/digital-transformation",
-  description: "End-to-end digital transformation consulting for mid-market enterprises across India, the Middle East, and Asia-Pacific. From operational diagnostic to bespoke build, operational management, and complete handover.",
-  areaServed: ["IN", "AE", "SA", "SG", "AU"],
+  description: "End-to-end digital transformation consulting for mid-market enterprises. From operational diagnostic to bespoke build, operational management, and complete handover.",
+  areaServed: ["Worldwide", "IN", "GB", "US", "AE", "SA", "SG", "AU"],
   serviceType: "Digital Transformation and Technology Modernisation Consulting",
 };
 
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     question: "What geographical regions do you support?",
-    answer: "We support mid-market enterprises, industrial manufacturers, and high-growth organisations across India, the United Arab Emirates, Saudi Arabia, Singapore, and Australia.",
+    answer: "We support mid-market enterprises, industrial manufacturers, and high-growth organisations worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US.",
   },
 ];
 

@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: { absolute: "SEO Services India, Middle East & APAC | Turbo Bytes" },
+  title: { absolute: "Technical & Entity-Driven SEO Services | Turbo Bytes" },
   description: "Technical and entity-driven search engine optimisation for B2B firms. Clean crawl paths, Core Web Vitals, canonical architecture, and structured data.",
   alternates: { canonical: "/services/seo" },
   openGraph: {
-    title: { absolute: "SEO Services India, Middle East & APAC | Turbo Bytes" },
+    title: { absolute: "Technical & Entity-Driven SEO Services | Turbo Bytes" },
     description: "Technical and entity-driven search engine optimisation for B2B firms. Clean crawl paths, Core Web Vitals, canonical architecture, and structured data.",
     url: "https://turbobytesconsulting.com/services/seo",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "SEO Services India, Middle East & APAC | Turbo Bytes" },
+    title: { absolute: "Technical & Entity-Driven SEO Services | Turbo Bytes" },
     description: "Technical and entity-driven search engine optimisation for B2B firms. Clean crawl paths, Core Web Vitals, canonical architecture, and structured data.",
   },
 };
@@ -26,8 +26,8 @@ const serviceSchema = {
     "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/seo",
-  description: "Enterprise technical SEO, canonical architecture, schema markup, and Core Web Vitals optimisation for B2B companies across India, the Middle East, and Asia-Pacific.",
-  areaServed: ["IN", "AE", "SA", "SG", "AU"],
+  description: "Enterprise technical SEO, canonical architecture, schema markup, and Core Web Vitals optimisation for B2B companies worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US.",
+  areaServed: ["Worldwide", "IN", "GB", "US", "AE", "SA", "SG", "AU"],
   serviceType: "Search Engine Optimisation Consulting"
 };
 
@@ -112,7 +112,7 @@ export default function SeoServicePage() {
               Technical and entity-driven search engine optimisation.
             </h1>
             <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed text-pretty mb-8">
-              Technical SEO services India, Middle East, and Asia-Pacific businesses rely on to establish sustained organic visibility. We eliminate crawl roadblocks, implement semantic schema graphs, optimize Core Web Vitals, and build topical authority that earns high-intent commercial search traffic.
+              Technical SEO services that growing businesses rely on to establish sustained organic visibility. We eliminate crawl roadblocks, implement semantic schema graphs, optimize Core Web Vitals, and build topical authority that earns high-intent commercial search traffic.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -154,7 +154,7 @@ export default function SeoServicePage() {
               },
               {
                 title: "Canonical & International SEO",
-                description: "Ensuring proper canonicalization across regional domains, hreflang implementations for multi-market reach across India, the GCC, and Southeast Asia, and HTTPS security compliance."
+                description: "Ensuring proper canonicalization across regional domains, hreflang implementations for global multi-market reach, and HTTPS security compliance."
               },
               {
                 title: "Topical Content Architecture",

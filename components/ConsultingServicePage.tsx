@@ -71,7 +71,7 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
         description: s.metaDescription,
         url,
         serviceType: "Consulting",
-        areaServed: "IN",
+        areaServed: "Worldwide",
         provider: { "@id": `${SITE}/#organization` },
       },
       {

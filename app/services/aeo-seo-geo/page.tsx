@@ -28,8 +28,8 @@ const serviceSchema = {
     "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/aeo-seo-geo",
-  description: "Search engine optimisation (SEO), answer engine optimisation (AEO) and generative engine optimisation (GEO) for mid-market and enterprise firms across India, the Middle East and Asia-Pacific.",
-  areaServed: ["IN", "AE", "SA", "SG", "AU"],
+  description: "Search engine optimisation (SEO), answer engine optimisation (AEO) and generative engine optimisation (GEO) for mid-market and enterprise firms worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US.",
+  areaServed: ["Worldwide", "IN", "GB", "US", "AE", "SA", "SG", "AU"],
   serviceType: "Digital Search and AI Visibility Consulting",
 };
 
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     question: "Who is this service designed for?",
-    answer: "Our AEO, SEO, and GEO programmes are designed for B2B enterprises, industrial manufacturers, specialised consultancies, healthcare providers, real estate firms, and established direct-to-consumer brands operating across India, the Middle East, and the Asia-Pacific region.",
+    answer: "Our AEO, SEO, and GEO programmes are designed for B2B enterprises, industrial manufacturers, specialised consultancies, healthcare providers, real estate firms, and established direct-to-consumer brands worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US.",
   },
   {
     question: "What proof do you have that this method works?",
@@ -116,7 +116,7 @@ export default function AeoSeoGeoPage() {
               AEO, SEO and GEO: making your business findable in search and AI answers.
             </h1>
             <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed text-pretty mb-8">
-              Commercial buyers in India, the Middle East, and Asia-Pacific increasingly ask ChatGPT, Gemini, and Perplexity for vendor recommendations. We ensure your business is ranked on Google and cited by AI answer engines.
+              Commercial buyers worldwide increasingly ask ChatGPT, Gemini, and Perplexity for vendor recommendations. We ensure your business is ranked on Google and cited by AI answer engines.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">

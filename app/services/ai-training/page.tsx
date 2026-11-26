@@ -119,7 +119,7 @@ const trainingSchema = {
       serviceType: "AI training",
       description: "Hands-on programmes that teach business teams to use LLMs and neural networks well in their own work.",
       url: `${SITE}/services/ai-training`,
-      areaServed: "IN",
+      areaServed: "Worldwide",
       provider: { "@id": `${SITE}/#organization` },
     },
     {

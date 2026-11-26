@@ -26,8 +26,8 @@ const serviceSchema = {
     "@id": "https://turbobytesconsulting.com/#organization",
   },
   url: "https://turbobytesconsulting.com/services/answer-engine-optimisation",
-  description: "Answer engine optimisation consulting to capture featured snippets, People Also Ask placements, and voice search answers across India, the Middle East, and Asia-Pacific.",
-  areaServed: ["IN", "AE", "SA", "SG", "AU"],
+  description: "Answer engine optimisation consulting to capture featured snippets, People Also Ask placements, and voice search answers for growing businesses worldwide.",
+  areaServed: ["Worldwide", "IN", "GB", "US", "AE", "SA", "SG", "AU"],
   serviceType: "Answer Engine Optimisation Consulting"
 };
 

@@ -517,7 +517,7 @@ export default function ProductLanding({ params }: { params: { product: string }
                 Turbo Bytes Consulting Overview →
               </span>
               <p className="text-[13px] text-mid-grey leading-relaxed">
-                Learn about our process-first approach, leadership, and full range of capabilities across India.
+                Learn about our process-first approach, leadership, and full range of capabilities.
               </p>
             </Link>
           </div>
