@@ -103,7 +103,7 @@ export default function SlatePage() {
       {/* ── Breadcrumb ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
+          <ol className="flex items-center gap-2 font-display text-[13px] text-mid-grey">
             <li>
               <Link href="/" className="hover:text-ink transition-colors">Home</Link>
             </li>
@@ -139,7 +139,7 @@ export default function SlatePage() {
             </p>
             <div className="inline-flex flex-wrap items-center gap-3 bg-white/10 backdrop-blur border border-white/20 rounded px-4 py-3 shadow-sm">
               <span className="w-2.5 h-2.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
-              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">
+              <span className="font-display font-semibold text-[13px] text-white">
                 Setup: 48 hours · Full calibration: 2–4 weeks
               </span>
             </div>

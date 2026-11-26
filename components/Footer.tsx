@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { aiPractices, products, consultingLinks } from "@/lib/offerings";
 import { socialProfiles } from "@/lib/social";
 
 const SOCIAL_ICONS: Record<string, string> = {
@@ -12,41 +11,35 @@ const SOCIAL_ICONS: Record<string, string> = {
 };
 
 const serviceLinks = [
-  ...aiPractices.map((l) => ({ href: l.href, label: l.title })),
-  ...products.map((l) => ({ href: l.href, label: l.title })),
-  ...consultingLinks.map((l) => ({ href: l.href, label: l.title })),
+  { href: "/services/business-automation", label: "Business automation" },
+  { href: "/services/custom-software-development", label: "Custom software" },
+  { href: "/services/aeo-seo-geo", label: "AEO, SEO & GEO" },
+  { href: "/digital-transformation", label: "Digital transformation" },
+  { href: "/services/technology-consulting", label: "Technology consulting" },
+  { href: "/services/custom-llm", label: "Private LLM" },
+  { href: "/services/ai-training", label: "AI capability building" },
+  { href: "/services", label: "All services" },
+];
+
+const productLinks = [
+  { href: "/products/meridian", label: "Meridian platform" },
+  { href: "/products/distil", label: "Distil proposal engine" },
+  { href: "/products/sunscout", label: "Sunscout solar intel" },
+  { href: "/products/cadence", label: "Cadence order board" },
+  { href: "/products/assay", label: "Assay QA & COAs" },
+  { href: "/products/steward", label: "Steward equipment AMC" },
+  { href: "/products/vantage", label: "Vantage document AI" },
+  { href: "/products", label: "All 10 products" },
 ];
 
 const companyLinks = [
-  { href: "/services", label: "Services" },
-  { href: "/services/aeo-seo-geo", label: "AEO, SEO & GEO" },
-  { href: "/digital-transformation", label: "Digital Transformation" },
-  { href: "/products", label: "Products" },
-  { href: "/products/meridian", label: "Meridian Platform" },
-  { href: "/agent-desk", label: "Agent Desk" },
   { href: "/about", label: "About" },
-  { href: "/work", label: "Work" },
-  { href: "/blog", label: "Blog" },
-  { href: "/how-to", label: "How-To Guides" },
-  { href: "/free-ai-visibility-check", label: "AI Visibility Check" },
-  { href: "/glossary", label: "Glossary" },
-  { href: "/integrations", label: "Integrations" },
-  { href: "/cost", label: "Cost Guides" },
-  { href: "/software-cost-calculator", label: "Cost Calculator" },
-  { href: "/process-cost-calculator", label: "Process Cost Calculator" },
-  { href: "/compare", label: "Comparisons" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/ai-use-cases", label: "AI Use Cases" },
-  { href: "/engagement", label: "Engagement" },
+  { href: "/work", label: "Work & case studies" },
+  { href: "/blog", label: "Insight & thinking" },
+  { href: "/how-to", label: "How-to guides" },
+  { href: "/free-ai-visibility-check", label: "Free AI visibility check" },
+  { href: "/book-consultation", label: "Book consultation" },
   { href: "/contact", label: "Contact" },
-];
-
-const locationLinks = [
-  { href: "/industries/manufacturing", label: "Manufacturing" },
-  { href: "/industries/distribution", label: "Distribution" },
-  { href: "/software-development-company-greater-noida", label: "Greater Noida" },
-  { href: "/software-development-company-noida", label: "Noida" },
-  { href: "/software-development-company-delhi-ncr", label: "Delhi NCR" },
 ];
 
 export default function Footer() {
@@ -80,12 +73,12 @@ export default function Footer() {
             <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
               Services
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5 text-sm">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/75 text-sm hover:text-gold transition-colors duration-150"
+                    className="text-white/75 hover:text-gold transition-colors duration-150"
                   >
                     {link.label}
                   </Link>
@@ -94,17 +87,36 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 — Company */}
+          {/* Col 3 — Products */}
+          <div>
+            <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
+              Products
+            </h3>
+            <ul className="space-y-2.5 text-sm">
+              {productLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-white/75 hover:text-gold transition-colors duration-150"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 4 — Company */}
           <div>
             <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
               Company
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5 text-sm">
               {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/75 text-sm hover:text-gold transition-colors duration-150"
+                    className="text-white/75 hover:text-gold transition-colors duration-150"
                   >
                     {link.label}
                   </Link>
@@ -113,31 +125,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Industries and locations */}
-          <div>
-            <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
-              Who we serve
-            </h3>
-            <ul className="space-y-3">
-              {locationLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/75 text-sm hover:text-gold transition-colors duration-150"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 5 — Contact */}
+          {/* Col 5 — Contact & Locations */}
           <div>
             <h3 className="font-display font-semibold text-[15px] text-gold mb-4">
               Contact
             </h3>
-            <ul className="space-y-3 text-sm text-white/75">
+            <ul className="space-y-2.5 text-sm text-white/75">
               <li>
                 <a
                   href="tel:+919354784377"
@@ -158,7 +151,7 @@ export default function Footer() {
                 Kasana Tower, Alpha-I Commercial Belt,<br />
                 Greater Noida, UP, India
               </li>
-              <li>
+              <li className="pt-1">
                 <a
                   href="https://wa.me/919354784377"
                   target="_blank"

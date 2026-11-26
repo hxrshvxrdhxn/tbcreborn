@@ -140,32 +140,32 @@ export default function GeoServicePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             <div className="bg-ivory border border-light-grey rounded-[8px] p-6">
-              <span className="font-mono text-[16px] font-bold text-forest block mb-2">01. Entity Graph</span>
-              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Schema Grounding</h3>
+              <span className="font-mono text-[16px] font-bold text-forest block mb-2">01. Entity graph</span>
+              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Schema grounding</h3>
               <p className="text-[14px] text-mid-grey leading-relaxed">
                 Clear Organization and Service JSON-LD schemas linking your business to verified industry registries and official company databases.
               </p>
             </div>
 
             <div className="bg-ivory border border-light-grey rounded-[8px] p-6">
-              <span className="font-mono text-[16px] font-bold text-forest block mb-2">02. Independent Consensus</span>
-              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Third-Party Verification</h3>
+              <span className="font-mono text-[16px] font-bold text-forest block mb-2">02. Independent consensus</span>
+              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Third-party verification</h3>
               <p className="text-[14px] text-mid-grey leading-relaxed">
                 Co-citations across established trade directories, partner portfolios, and industry publications confirming your operational capabilities.
               </p>
             </div>
 
             <div className="bg-ivory border border-light-grey rounded-[8px] p-6">
-              <span className="font-mono text-[16px] font-bold text-forest block mb-2">03. Machine Feeds</span>
-              <h3 className="font-display font-bold text-[18px] text-ink mb-2">llms.txt Standard</h3>
+              <span className="font-mono text-[16px] font-bold text-forest block mb-2">03. Machine feeds</span>
+              <h3 className="font-display font-bold text-[18px] text-ink mb-2">llms.txt standard</h3>
               <p className="text-[14px] text-mid-grey leading-relaxed">
                 Deploying markdown-formatted llms.txt files that allow AI retrieval agents to ingest your service specifications without HTML noise.
               </p>
             </div>
 
             <div className="bg-ivory border border-light-grey rounded-[8px] p-6">
-              <span className="font-mono text-[16px] font-bold text-forest block mb-2">04. Answer Content</span>
-              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Answer-First Depth</h3>
+              <span className="font-mono text-[16px] font-bold text-forest block mb-2">04. Answer content</span>
+              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Answer-first depth</h3>
               <p className="text-[14px] text-mid-grey leading-relaxed">
                 Detailed technical documentation that directly resolves complex buyer problems with verifiable data and unambiguous explanations.
               </p>

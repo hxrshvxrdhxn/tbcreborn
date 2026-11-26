@@ -7,7 +7,7 @@ export function PullStat({ value, label }: { value: string; label: string }) {
       <span className="font-display font-bold text-[40px] text-gold leading-none tracking-tight mb-2">
         {value}
       </span>
-      <span className="text-caption text-mid-grey uppercase tracking-[1.5px] font-semibold">
+      <span className="text-[13px] text-mid-grey font-medium">
         {label}
       </span>
     </div>
@@ -30,7 +30,7 @@ export function StatBlock({ rows, className = "" }: { rows: StatRow[], className
             idx !== rows.length - 1 ? 'border-b border-dashed border-light-grey' : ''
           }`}
         >
-          <span className="text-caption text-gold font-bold uppercase tracking-[1.5px] shrink-0">
+          <span className="text-[13px] text-gold font-semibold shrink-0">
             {row.label}
           </span>
           <span className="text-body font-semibold text-ink sm:text-right">

@@ -387,7 +387,7 @@ export default function AdminPostEditor({
 
               {/* Markdown cheatsheet */}
               <div>
-                <p className="font-display font-semibold text-[12px] text-mid-grey uppercase tracking-[1px] mb-3">
+                <p className="font-display font-semibold text-[13px] text-mid-grey mb-3">
                   Markdown Reference
                 </p>
                 <div className="space-y-1.5 font-mono text-[12px] text-mid-grey">

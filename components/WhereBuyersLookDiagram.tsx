@@ -5,7 +5,7 @@ export default function WhereBuyersLookDiagram() {
     <div className="w-full">
       <div className="text-center max-w-2xl mx-auto mb-8">
         <h3 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-2">
-          Where Commercial Buyers Look Now
+          Where commercial buyers look now.
         </h3>
         <p className="text-[15px] text-mid-grey">
           Search has fragmented into three distinct channels. Winning enterprise buyers requires coverage across all three.
@@ -15,7 +15,7 @@ export default function WhereBuyersLookDiagram() {
       <div className="bg-ivory border border-light-grey rounded-[12px] p-6 sm:p-8 max-w-4xl mx-auto shadow-sm">
         {/* Top Trigger: Buyer Enquiry */}
         <div className="bg-white border border-[#167A4E]/30 rounded-[8px] p-4 text-center max-w-md mx-auto mb-6 shadow-xs">
-          <span className="text-[12px] font-semibold text-[#167A4E] block mb-0.5">Commercial Buyer Query</span>
+          <span className="text-[12px] font-semibold text-[#167A4E] block mb-0.5">Commercial buyer query</span>
           <p className="text-[14px] font-medium text-ink italic">
             &ldquo;Which firms handle enterprise process automation and custom software?&rdquo;
           </p>
@@ -65,7 +65,7 @@ export default function WhereBuyersLookDiagram() {
               </p>
             </div>
             <div className="pt-2.5 border-t border-light-grey text-[12px] text-[#167A4E] font-medium">
-              Evaluates: Domain authority & crawl depth
+              Evaluates: Technical health and clear site structure
             </div>
           </div>
 
@@ -80,7 +80,7 @@ export default function WhereBuyersLookDiagram() {
                 AI Overviews & Snippets
               </h4>
               <p className="text-[13px] text-mid-grey leading-relaxed mb-3">
-                Featured snippets, zero-click answer cards, and voice search summaries extracted directly.
+                Featured snippets, direct answer boxes, and voice search summaries extracted directly.
               </p>
             </div>
             <div className="pt-2.5 border-t border-light-grey text-[12px] text-[#167A4E] font-medium">
@@ -103,7 +103,7 @@ export default function WhereBuyersLookDiagram() {
               </p>
             </div>
             <div className="pt-2.5 border-t border-light-grey text-[12px] text-[#167A4E] font-medium">
-              Evaluates: Entity consensus & llms.txt
+              Evaluates: Factual verification across the web and llms.txt
             </div>
           </div>
         </div>

@@ -89,7 +89,7 @@ export default function HowToSearch() {
         <div className="mt-6 text-left">
           {results.length > 0 ? (
             <div className="space-y-3">
-              <h3 className="text-sm font-bold text-mid-grey uppercase tracking-wider mb-2">Results</h3>
+              <h3 className="text-sm font-semibold text-mid-grey mb-2">Results</h3>
               <ul className="space-y-2">
                 {results.map((result) => (
                   <li key={result.id}>
@@ -97,7 +97,7 @@ export default function HowToSearch() {
                       href={`/how-to/${result.slug}`}
                       className="block p-4 rounded bg-ivory hover:bg-gold/10 border border-transparent hover:border-gold transition-colors"
                     >
-                      <div className="text-xs text-royal font-semibold mb-1 uppercase tracking-wider">{result.category}</div>
+                      <div className="text-xs text-royal font-semibold mb-1">{result.category}</div>
                       <div className="text-ink font-medium">{result.title}</div>
                     </Link>
                   </li>

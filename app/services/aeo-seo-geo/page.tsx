@@ -99,7 +99,7 @@ export default function AeoSeoGeoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ── HERO ── */}
-      <section className="bg-forest pt-s7 pb-s6 relative overflow-hidden">
+      <section className="bg-forest pt-s7 pb-s7 relative overflow-hidden">
         <div className="container-tbc relative z-10">
           <nav aria-label="Breadcrumbs" className="mb-6">
             <ol className="flex items-center gap-2 text-[14px] text-white/60">
@@ -107,25 +107,55 @@ export default function AeoSeoGeoPage() {
               <li>/</li>
               <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
               <li>/</li>
-              <li className="text-white font-medium">AEO, SEO & GEO</li>
+              <li className="text-white font-medium">AEO, SEO &amp; GEO</li>
             </ol>
           </nav>
 
-          <div className="max-w-3xl">
-            <h1 className="font-display font-bold text-[clamp(32px,4.5vw,54px)] text-white leading-[1.1] mb-6 text-balance">
-              AEO, SEO and GEO: making your business findable in search and AI answers.
-            </h1>
-            <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed text-pretty mb-8">
-              Commercial buyers worldwide increasingly ask ChatGPT, Gemini, and Perplexity for vendor recommendations. We help your business rank on Google and get cited by AI answer engines.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7">
+              <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] mb-6 text-balance">
+                AEO, SEO and GEO: making your business findable in search and AI answers.
+              </h1>
+              <p className="text-[clamp(16px,1.2vw,19px)] text-white/85 leading-relaxed text-pretty mb-8">
+                Commercial buyers worldwide increasingly ask ChatGPT, Gemini, and Perplexity for vendor recommendations. We help your business rank on Google and get cited by AI answer engines.
+              </p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <Link href="/free-ai-visibility-check" className="btn-gold min-h-[48px] px-8 text-[16px]">
-                Free AI visibility check
-              </Link>
-              <Link href="/book-consultation" className="btn-ghost-white min-h-[48px] px-6 text-[16px]">
-                Book a consultation
-              </Link>
+              <div className="flex flex-wrap items-center gap-4">
+                <Link href="/free-ai-visibility-check" className="btn-gold min-h-[48px] px-8 text-[16px]">
+                  Free AI visibility check
+                </Link>
+                <Link href="/book-consultation" className="btn-ghost-white min-h-[48px] px-6 text-[16px]">
+                  Book a consultation
+                </Link>
+              </div>
+            </div>
+
+            {/* Right-side visual: Search and AI answer preview card */}
+            <div className="lg:col-span-5">
+              <div className="bg-white/10 border border-white/20 rounded-[12px] p-6 shadow-xl backdrop-blur-sm text-white">
+                <div className="flex items-center gap-2 pb-4 mb-4 border-b border-white/15 text-[13px] text-white/70">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#A7EBC8]" />
+                  <span className="font-mono text-[12px] truncate">&quot;Commercial technology partner for manufacturing&quot;</span>
+                </div>
+                <div className="space-y-3.5">
+                  <div className="bg-black/25 rounded-[8px] p-3.5 border border-white/10">
+                    <div className="flex items-center justify-between text-[11px] text-white/60 mb-1">
+                      <span>Google search</span>
+                      <span className="text-[#A7EBC8] font-medium">Rank 1</span>
+                    </div>
+                    <p className="font-display font-semibold text-[14px] text-white mb-1">Your company name</p>
+                    <p className="text-[12px] text-white/70 leading-relaxed">Direct answers, schema-rich structured data, fast mobile pages.</p>
+                  </div>
+                  <div className="bg-black/25 rounded-[8px] p-3.5 border border-white/10">
+                    <div className="flex items-center justify-between text-[11px] text-white/60 mb-1">
+                      <span>Perplexity &amp; ChatGPT</span>
+                      <span className="text-[#A7EBC8] font-medium">Cited source</span>
+                    </div>
+                    <p className="font-display font-semibold text-[14px] text-white mb-1">Authoritative citation</p>
+                    <p className="text-[12px] text-white/70 leading-relaxed">&quot;Recommended for custom enterprise workflows based on verified registry records.&quot;</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -143,20 +173,20 @@ export default function AeoSeoGeoPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <h2 className="font-display font-semibold text-[clamp(24px,2.8vw,34px)] text-ink mb-2">
-              Three Distinct Channels
+              Three distinct channels.
             </h2>
             <p className="text-[15px] text-mid-grey">
-              Winning market share requires mastering traditional search rankings, direct answer snippets, and generative citations.
+              Winning market share requires mastering traditional search rankings, direct answer summaries, and generative citations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-light-grey rounded-[8px] p-6 shadow-sm flex flex-col justify-between hover:border-[#167A4E]/50 transition-colors">
               <div>
-                <span className="text-[12px] font-semibold text-[#167A4E] block mb-1">Channel 01</span>
-                <h3 className="font-display font-semibold text-[19px] text-ink mb-2">SEO (Search Engines)</h3>
+                <span className="text-[12px] font-semibold text-[#167A4E] block mb-1">Channel 1</span>
+                <h3 className="font-display font-semibold text-[19px] text-ink mb-2">SEO (Search engines)</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
-                  First-page Google rankings through technical crawl architecture, performance, and keyword relevance.
+                  First-page Google rankings through clean technical site health, fast performance, and keyword relevance.
                 </p>
               </div>
               <Link href="/services/seo" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
@@ -166,10 +196,10 @@ export default function AeoSeoGeoPage() {
 
             <div className="bg-white border border-light-grey rounded-[8px] p-6 shadow-sm flex flex-col justify-between hover:border-[#167A4E]/50 transition-colors">
               <div>
-                <span className="text-[12px] font-semibold text-[#167A4E] block mb-1">Channel 02</span>
-                <h3 className="font-display font-semibold text-[19px] text-ink mb-2">AEO (Answer Engines)</h3>
+                <span className="text-[12px] font-semibold text-[#167A4E] block mb-1">Channel 2</span>
+                <h3 className="font-display font-semibold text-[19px] text-ink mb-2">AEO (Answer engines)</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
-                  Securing featured snippets and zero-click answers through answer-first 40-60 word summaries.
+                  Securing featured snippets and direct answers through concise 40 to 60-word summaries.
                 </p>
               </div>
               <Link href="/services/answer-engine-optimisation" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
@@ -179,10 +209,10 @@ export default function AeoSeoGeoPage() {
 
             <div className="bg-white border border-light-grey rounded-[8px] p-6 shadow-sm flex flex-col justify-between hover:border-[#167A4E]/50 transition-colors">
               <div>
-                <span className="text-[12px] font-semibold text-[#167A4E] block mb-1">Channel 03</span>
+                <span className="text-[12px] font-semibold text-[#167A4E] block mb-1">Channel 3</span>
                 <h3 className="font-display font-semibold text-[19px] text-ink mb-2">GEO (Generative AI)</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
-                  Being recommended when clients ask ChatGPT, Gemini, and Perplexity for enterprise solutions.
+                  Being recommended when clients ask ChatGPT, Gemini, and Perplexity for business solutions.
                 </p>
               </div>
               <Link href="/services/generative-engine-optimisation" className="text-[14px] font-semibold text-[#167A4E] hover:underline inline-flex items-center gap-1">
@@ -222,7 +252,7 @@ export default function AeoSeoGeoPage() {
         <div className="container-tbc">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="font-display font-semibold text-[24px] text-ink mb-2">
-              Our Own Digital Estate as Live Proof
+              Our own website as live proof.
             </h2>
             <p className="text-[15px] text-mid-grey">
               We apply our exact search and AI visibility framework to our own business every day.
@@ -232,22 +262,22 @@ export default function AeoSeoGeoPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             <div className="bg-ivory border border-light-grey rounded-[8px] p-5 text-center">
               <span className="font-mono text-[32px] font-bold text-[#167A4E] block mb-1">600+</span>
-              <span className="font-display font-semibold text-ink text-[15px] block mb-1">Indexed Pages</span>
-              <p className="text-[13px] text-mid-grey">Clean technical crawl with zero index bloat.</p>
+              <span className="font-display font-semibold text-ink text-[15px] block mb-1">Indexed pages</span>
+              <p className="text-[13px] text-mid-grey">Clean technical health with fast load speeds.</p>
             </div>
             <div className="bg-ivory border border-light-grey rounded-[8px] p-5 text-center">
               <span className="font-mono text-[32px] font-bold text-[#167A4E] block mb-1">100%</span>
-              <span className="font-display font-semibold text-ink text-[15px] block mb-1">Schema Graph</span>
+              <span className="font-display font-semibold text-ink text-[15px] block mb-1">Structured schema</span>
               <p className="text-[13px] text-mid-grey">Organization, Service, FAQ, Breadcrumbs.</p>
             </div>
             <div className="bg-ivory border border-light-grey rounded-[8px] p-5 text-center">
               <span className="font-mono text-[32px] font-bold text-[#167A4E] block mb-1">llms.txt</span>
-              <span className="font-display font-semibold text-ink text-[15px] block mb-1">Machine Feeds</span>
-              <p className="text-[13px] text-mid-grey">Direct markdown summaries for LLM crawlers.</p>
+              <span className="font-display font-semibold text-ink text-[15px] block mb-1">Machine feeds</span>
+              <p className="text-[13px] text-mid-grey">Direct markdown summaries for AI assistants.</p>
             </div>
             <div className="bg-ivory border border-light-grey rounded-[8px] p-5 text-center">
               <span className="font-mono text-[32px] font-bold text-[#167A4E] block mb-1">40–60w</span>
-              <span className="font-display font-semibold text-ink text-[15px] block mb-1">Answer Blocks</span>
+              <span className="font-display font-semibold text-ink text-[15px] block mb-1">Answer blocks</span>
               <p className="text-[13px] text-mid-grey">Direct concise summaries under every question.</p>
             </div>
           </div>
@@ -260,8 +290,8 @@ export default function AeoSeoGeoPage() {
           <div className="bg-white border border-light-grey rounded-[8px] p-6 sm:p-8 shadow-sm">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-light-grey">
               <div>
-                <h3 className="font-display font-semibold text-[22px] text-ink mb-1">Engagement Structure</h3>
-                <p className="text-[14px] text-mid-grey">Two clear phases: Diagnostic Visibility Audit followed by Monthly Retainer.</p>
+                <h3 className="font-display font-semibold text-[22px] text-ink mb-1">How we work together.</h3>
+                <p className="text-[14px] text-mid-grey">Two clear phases: diagnostic visibility audit followed by monthly iteration.</p>
               </div>
               <Link href="/free-ai-visibility-check" className="btn-gold flex-none text-center">
                 Run free visibility check
@@ -293,7 +323,7 @@ export default function AeoSeoGeoPage() {
         <div className="container-tbc max-w-4xl">
           <div className="text-center mb-8">
             <h2 className="font-display font-semibold text-[clamp(24px,2.8vw,32px)] text-ink mb-2">
-              Questions About AEO, SEO, and GEO
+              Common questions about search and AI visibility.
             </h2>
             <p className="text-[15px] text-mid-grey">
               Straightforward answers about our search and artificial intelligence visibility programmes.

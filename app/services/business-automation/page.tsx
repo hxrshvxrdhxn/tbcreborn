@@ -182,11 +182,11 @@ export default function BusinessAutomationPage() {
         <div className="container-tbc max-w-5xl">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-8 items-center">
             <div>
-              <span className="font-mono text-[12px] font-semibold text-[#167A4E] uppercase tracking-wider block mb-2">
-                Operational Pipeline
+              <span className="font-mono text-[13px] font-semibold text-[#167A4E] block mb-2">
+                Operational pipeline
               </span>
               <h2 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-3">
-                Order to Dispatch Without Manual Chasing
+                Order to dispatch without manual chasing
               </h2>
               <p className="text-[15px] text-mid-grey mb-6 text-pretty">
                 Every customer enquiry, approval, and warehouse movement triggers the next step automatically.

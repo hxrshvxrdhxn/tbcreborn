@@ -131,33 +131,33 @@ export default function FreeAnalysisForm() {
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
-                        <label htmlFor="name" className="text-[13px] font-bold text-ink uppercase tracking-wide">Full Name</label>
+                        <label htmlFor="name" className="text-[14px] font-medium text-ink">Full name</label>
                         <input id="name" name="name" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="Jane Doe" />
                       </div>
                       <div className="space-y-1.5">
-                        <label htmlFor="email" className="text-[13px] font-bold text-ink uppercase tracking-wide">Work Email</label>
+                        <label htmlFor="email" className="text-[14px] font-medium text-ink">Work email</label>
                         <input id="email" name="email" type="email" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="jane@company.com" />
                       </div>
                     </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
-                        <label htmlFor="phone" className="text-[13px] font-bold text-ink uppercase tracking-wide">Phone Number</label>
+                        <label htmlFor="phone" className="text-[14px] font-medium text-ink">Phone number</label>
                         <input id="phone" name="phone" type="tel" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="+1 (555) 000-0000" />
                       </div>
                       <div className="space-y-1.5">
-                        <label htmlFor="company" className="text-[13px] font-bold text-ink uppercase tracking-wide">Company Name</label>
+                        <label htmlFor="company" className="text-[14px] font-medium text-ink">Company name</label>
                         <input id="company" name="company" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="Acme Corp" />
                       </div>
                     </div>
 
                     <div className="space-y-1.5">
-                      <label htmlFor="address" className="text-[13px] font-bold text-ink uppercase tracking-wide">Office Delivery Address</label>
+                      <label htmlFor="address" className="text-[14px] font-medium text-ink">Office delivery address</label>
                       <input id="address" name="address" required className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50" placeholder="123 Business Rd, Suite 100, City, Country" />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label htmlFor="request" className="text-[13px] font-bold text-ink uppercase tracking-wide">Any Specific Focus Areas?</label>
+                      <label htmlFor="request" className="text-[14px] font-medium text-ink">Any specific focus areas?</label>
                       <textarea id="request" name="request" rows={3} className="w-full bg-ivory border border-light-grey px-4 py-3 rounded focus:outline-none focus:border-gold transition-colors text-ink placeholder:text-mid-grey/50 resize-none" placeholder="e.g., We spend too much time on manual data entry..." />
                     </div>
 

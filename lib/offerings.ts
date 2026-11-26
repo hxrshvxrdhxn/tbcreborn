@@ -18,9 +18,9 @@ export const aiPractices: Link[] = [
 
 export const products: Link[] = [
   {
-    title: "Slate",
-    href: "/services/slate",
-    blurb: "An executive assistant for the people who lead.",
+    title: "Meridian",
+    href: "/products/meridian",
+    blurb: "One operating system that connects every team.",
   },
   {
     title: "Distil",
@@ -28,19 +28,14 @@ export const products: Link[] = [
     blurb: "Complex proposals, assembled from verified parts.",
   },
   {
-    title: "Vantage",
-    href: "/products/vantage",
-    blurb: "Years of documents, turned into answers with sources.",
-  },
-  {
-    title: "Meridian",
-    href: "/products#meridian",
-    blurb: "One operating system that connects every team.",
-  },
-  {
     title: "Sunscout",
     href: "/products/sunscout",
     blurb: "Rooftop solar prospecting for commercial and industrial EPCs.",
+  },
+  {
+    title: "Vantage",
+    href: "/products/vantage",
+    blurb: "Years of documents, turned into answers with sources.",
   },
   { title: "Cadence", href: "/products/cadence", blurb: "Every order from PO to dispatch, on one board." },
   { title: "Assay", href: "/products/assay", blurb: "Batch records, QC and COAs without retyping." },

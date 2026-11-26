@@ -150,7 +150,7 @@ export default async function HowToGuidePage({ params }: { params: { slug: strin
         </Link>
         
         <header className="mb-12">
-          <div className="text-sm font-bold text-gold tracking-widest uppercase mb-4">
+          <div className="text-sm font-semibold text-gold mb-4">
             {guide.category}
           </div>
           <h1 className="font-display font-bold text-4xl sm:text-5xl text-ink leading-tight">

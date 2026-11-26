@@ -36,10 +36,12 @@ const nextConfig = {
           { key: "X-DNS-Prefetch-Control", value: "on" },
           // HSTS
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          // Cross-Origin-Opener-Policy
+          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
           // Content Security Policy
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.clarity.ms https://*.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://calendly.com https://www.google.com https://www.googletagmanager.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com;"
+            value: "default-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://*.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://calendly.com https://www.google.com https://www.googletagmanager.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com;"
           },
         ],
       },

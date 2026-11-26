@@ -46,8 +46,18 @@ const schema = {
   ],
 };
 
-export default async function BlogPage() {
-  const posts = await getAllPosts();
+const POSTS_PER_PAGE = 24;
+
+interface BlogPageProps {
+  searchParams?: { page?: string };
+}
+
+export default async function BlogPage({ searchParams }: BlogPageProps) {
+  const allPosts = await getAllPosts();
+  const rawPage = parseInt(searchParams?.page || "1", 10) || 1;
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+  const currentPage = Math.max(1, Math.min(rawPage, totalPages || 1));
+  const posts = allPosts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
   return (
     <>
@@ -91,7 +101,7 @@ export default async function BlogPage() {
         <div className="container-tbc">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, i) => (
-              <Reveal key={post.slug} delay={i * 0.06}>
+              <Reveal key={post.slug} delay={i * 0.04}>
                 <article
                   className="bg-white border border-light-grey rounded-[8px] shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 ease-tbc flex flex-col h-full"
                 >
@@ -99,7 +109,7 @@ export default async function BlogPage() {
                     href={`/blog/${post.slug}`}
                     className="flex flex-col flex-1 p-7 group"
                   >
-                    <span className="font-display font-bold text-[12px] text-royal uppercase tracking-[1.5px] mb-4">
+                    <span className="font-display font-semibold text-[13px] text-royal mb-3">
                       {post.category}
                     </span>
                     <h2 className="font-display font-bold text-[19px] text-ink leading-snug mb-3 group-hover:text-royal transition-colors duration-150">
@@ -120,6 +130,41 @@ export default async function BlogPage() {
               </Reveal>
             ))}
           </div>
+
+          {/* Pagination Navigation */}
+          {totalPages > 1 && (
+            <nav aria-label="Blog pagination" className="mt-12 flex items-center justify-center gap-3">
+              {currentPage > 1 ? (
+                <Link
+                  href={currentPage === 2 ? "/blog" : `/blog?page=${currentPage - 1}`}
+                  className="px-4 py-2.5 text-[14px] font-medium text-ink bg-white border border-light-grey rounded-[6px] hover:border-[#167A4E] transition-colors shadow-xs"
+                >
+                  &larr; Previous
+                </Link>
+              ) : (
+                <span className="px-4 py-2.5 text-[14px] text-mid-grey/50 bg-white/50 border border-light-grey/50 rounded-[6px] cursor-not-allowed">
+                  &larr; Previous
+                </span>
+              )}
+
+              <div className="flex items-center gap-1.5 px-3 text-[14px] text-mid-grey">
+                Page <span className="font-semibold text-ink px-1">{currentPage}</span> of {totalPages}
+              </div>
+
+              {currentPage < totalPages ? (
+                <Link
+                  href={`/blog?page=${currentPage + 1}`}
+                  className="px-4 py-2.5 text-[14px] font-medium text-ink bg-white border border-light-grey rounded-[6px] hover:border-[#167A4E] transition-colors shadow-xs"
+                >
+                  Next &rarr;
+                </Link>
+              ) : (
+                <span className="px-4 py-2.5 text-[14px] text-mid-grey/50 bg-white/50 border border-light-grey/50 rounded-[6px] cursor-not-allowed">
+                  Next &rarr;
+                </span>
+              )}
+            </nav>
+          )}
         </div>
       </section>
     </>

@@ -205,7 +205,7 @@ export default function AgentDeskPage() {
             {desks.map((d, i) => (
               <Reveal key={d.name} delay={(i % 4) * 0.05}>
                 <article className="bg-white border border-light-grey rounded-[8px] shadow-card p-7 flex flex-col h-full">
-                  <p className="font-display font-bold text-[12px] tracking-[1.5px] uppercase text-gold mb-3">{d.name}</p>
+                  <p className="font-display font-semibold text-[13px] text-gold mb-3">{d.name}</p>
                   <h3 className="font-display font-semibold text-[21px] text-ink leading-snug mb-4">{d.hook}</h3>
                   <ul className="font-sans text-[14.5px] text-mid-grey leading-relaxed space-y-2 mb-5 flex-1">
                     {d.agent.map((a) => (
@@ -266,7 +266,7 @@ export default function AgentDeskPage() {
           </Reveal>
           <Reveal delay={0.08}>
             <div className="bg-white border border-light-grey rounded-[8px] shadow-card p-7">
-              <p className="font-display font-bold text-[12px] tracking-[1.5px] uppercase text-gold mb-4">The rules every desk follows</p>
+              <p className="font-display font-semibold text-[13px] text-gold mb-4">The rules every desk follows</p>
               <ul className="font-sans text-[14.5px] text-ink leading-relaxed space-y-3">
                 {rules.map((r) => (
                   <li key={r} className="flex gap-3">

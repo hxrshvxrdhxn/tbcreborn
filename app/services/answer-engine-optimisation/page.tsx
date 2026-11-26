@@ -141,7 +141,7 @@ export default function AeoServicePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="bg-ivory border border-light-grey rounded-[8px] p-6">
               <span className="font-mono text-[18px] font-bold text-forest mb-2 block">01</span>
-              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Natural Question Headings</h3>
+              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Natural question headings</h3>
               <p className="text-body text-mid-grey text-[15px] leading-relaxed">
                 H2 and H3 headings drafted exactly as prospective buyers formulate their technical queries in voice and text search.
               </p>
@@ -149,7 +149,7 @@ export default function AeoServicePage() {
 
             <div className="bg-ivory border border-light-grey rounded-[8px] p-6">
               <span className="font-mono text-[18px] font-bold text-forest mb-2 block">02</span>
-              <h3 className="font-display font-bold text-[18px] text-ink mb-2">40-60 Word Direct Answers</h3>
+              <h3 className="font-display font-bold text-[18px] text-ink mb-2">40-60 word direct answers</h3>
               <p className="text-body text-mid-grey text-[15px] leading-relaxed">
                 A tight, factual summary placed directly beneath the heading that search engine extraction algorithms can lift intact.
               </p>
@@ -157,7 +157,7 @@ export default function AeoServicePage() {
 
             <div className="bg-ivory border border-light-grey rounded-[8px] p-6">
               <span className="font-mono text-[18px] font-bold text-forest mb-2 block">03</span>
-              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Machine-Readable Schema</h3>
+              <h3 className="font-display font-bold text-[18px] text-ink mb-2">Machine-readable schema</h3>
               <p className="text-body text-mid-grey text-[15px] leading-relaxed">
                 Comprehensive FAQPage and HowTo JSON-LD structured data that confirms question-answer boundaries to search crawlers.
               </p>

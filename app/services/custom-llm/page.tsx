@@ -273,7 +273,7 @@ export default function CustomLLMPage() {
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
+          <ol className="flex items-center gap-2 font-display text-[13px] text-mid-grey">
             <li>
               <Link href="/" className="hover:text-ink transition-colors duration-150">Home</Link>
             </li>
@@ -302,11 +302,11 @@ export default function CustomLLMPage() {
             </p>
             <div className="inline-flex flex-wrap items-center gap-3 bg-white/10 backdrop-blur border border-white/20 rounded px-4 py-3 shadow-sm">
               <span className="w-2.5 h-2.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
-              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">Setup: 4–8 weeks</span>
+              <span className="font-display font-semibold text-[13px] text-white">Setup: 4–8 weeks</span>
               <span className="text-white/30">|</span>
-              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">ROI: 60–90 days</span>
+              <span className="font-display font-semibold text-[13px] text-white">ROI: 60–90 days</span>
               <span className="text-white/30">|</span>
-              <span className="font-display font-semibold text-caption text-white uppercase tracking-widest">Ongoing updates included</span>
+              <span className="font-display font-semibold text-[13px] text-white">Ongoing updates included</span>
             </div>
           </Reveal>
         </div>
@@ -521,7 +521,7 @@ export default function CustomLLMPage() {
             {targetAudience.map((audience, i) => (
               <Reveal key={audience.title} delay={i * 0.10}>
                 <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-shadow duration-200 h-full">
-                  <span className="font-display font-bold text-caption text-gold tracking-widest uppercase block mb-1">
+                  <span className="font-display font-semibold text-[13px] text-gold block mb-1">
                     {audience.subtitle}
                   </span>
                   <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3 text-balance">

@@ -328,21 +328,11 @@ export default function HomePage() {
             {/* Distil */}
             <div className="bg-white border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
               <div>
-                <div className="mb-4 p-4 rounded bg-ivory border border-light-grey">
-                  <div className="space-y-2 text-[12px]">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold text-[#167A4E] bg-[#167A4E]/10 px-1.5 py-0.5 rounded">01</span>
-                      <span className="font-semibold text-ink">Inbound Technical Enquiry</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold text-[#167A4E] bg-[#167A4E]/10 px-1.5 py-0.5 rounded">02</span>
-                      <span className="font-semibold text-ink">Verified Rule & BOM Engine</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold text-[#167A4E] bg-[#167A4E]/10 px-1.5 py-0.5 rounded">03</span>
-                      <span className="font-semibold text-ink">Commercial Proposal in Minutes</span>
-                    </div>
-                  </div>
+                <div className="mb-4 aspect-video rounded overflow-hidden bg-ivory border border-light-grey">
+                  <YouTubeLite
+                    id="a2w512JHBOk"
+                    title="Distil commercial proposal engine"
+                  />
                 </div>
                 <h3 className="font-display font-bold text-[18px] text-ink mb-1">Distil</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
@@ -357,11 +347,10 @@ export default function HomePage() {
             {/* Sunscout */}
             <div className="bg-white border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
               <div>
-                <div className="mb-4">
+                <div className="mb-4 aspect-video rounded overflow-hidden bg-ivory border border-light-grey">
                   <YouTubeLite
-                    id="-zvS0dC-i_g"
-                    title="Find the factory roofs worth calling first"
-                    isShort={true}
+                    id="EGbDr3hVZso"
+                    title="Sunscout commercial solar intelligence"
                   />
                 </div>
                 <h3 className="font-display font-bold text-[18px] text-ink mb-1">Sunscout</h3>
@@ -377,12 +366,31 @@ export default function HomePage() {
             {/* Meridian */}
             <div className="bg-white border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
               <div>
-                <div className="mb-4">
-                  <YouTubeLite
-                    id="2Jdxao-PJuE"
-                    title="Seven tools for growing businesses"
-                    isShort={true}
-                  />
+                <div className="mb-4 aspect-video rounded overflow-hidden bg-forest flex items-center justify-center p-4 border border-light-grey">
+                  <svg viewBox="0 0 280 150" className="w-full h-full text-white" aria-hidden="true">
+                    {/* Central Meridian Hub */}
+                    <circle cx="140" cy="75" r="32" fill="#0C3D2A" stroke="#A7EBC8" strokeWidth="2" />
+                    <text x="140" y="72" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold">Meridian</text>
+                    <text x="140" y="85" textAnchor="middle" fill="#A7EBC8" fontSize="8">Core Brain</text>
+                    
+                    {/* Orbiting nodes */}
+                    {/* Orders (Cadence) */}
+                    <circle cx="45" cy="45" r="22" fill="#08231A" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
+                    <text x="45" y="44" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="600">Orders</text>
+                    <text x="45" y="53" textAnchor="middle" fill="#A7EBC8" fontSize="7">Cadence</text>
+                    <line x1="67" y1="52" x2="110" y2="67" stroke="#A7EBC8" strokeWidth="1" strokeDasharray="3 3" />
+                    
+                    {/* QA Certs (Assay) */}
+                    <circle cx="235" cy="45" r="22" fill="#08231A" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
+                    <text x="235" y="44" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="600">Lab QA</text>
+                    <text x="235" y="53" textAnchor="middle" fill="#A7EBC8" fontSize="7">Assay</text>
+                    <line x1="213" y1="52" x2="170" y2="67" stroke="#A7EBC8" strokeWidth="1" strokeDasharray="3 3" />
+                    
+                    {/* Service (Steward) */}
+                    <circle cx="140" cy="132" r="16" fill="#08231A" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
+                    <text x="140" y="135" textAnchor="middle" fill="#A7EBC8" fontSize="7">Steward</text>
+                    <line x1="140" y1="107" x2="140" y2="116" stroke="#A7EBC8" strokeWidth="1" strokeDasharray="3 3" />
+                  </svg>
                 </div>
                 <h3 className="font-display font-bold text-[18px] text-ink mb-1">Meridian</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
@@ -395,32 +403,41 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Folded product suite details */}
+          {/* Folded product suite details with Seven tools short */}
           <details className="group bg-white border border-light-grey rounded-[8px] p-5 transition-all text-body">
             <summary className="font-display font-semibold text-[15px] text-ink cursor-pointer list-none flex items-center justify-between">
               <span>View additional operations tools in our suite (Cadence, Assay, Steward & more)</span>
               <span className="text-mid-grey text-[18px] transition-transform group-open:rotate-45">+</span>
             </summary>
-            <div className="mt-4 pt-4 border-t border-light-grey grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-[13px]">
-              <div>
-                <h4 className="font-bold text-ink">Cadence</h4>
-                <p className="text-mid-grey">Order-to-dispatch tracking for make-to-order manufacturing.</p>
-                <Link href="/products/cadence" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+            <div className="mt-4 pt-4 border-t border-light-grey grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-6 items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[13px]">
+                <div>
+                  <h4 className="font-bold text-ink">Cadence</h4>
+                  <p className="text-mid-grey">Order-to-dispatch tracking for make-to-order manufacturing.</p>
+                  <Link href="/products/cadence" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+                </div>
+                <div>
+                  <h4 className="font-bold text-ink">Assay</h4>
+                  <p className="text-mid-grey">Certificate of Analysis (COA) generation and laboratory QA.</p>
+                  <Link href="/products/assay" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+                </div>
+                <div>
+                  <h4 className="font-bold text-ink">Steward</h4>
+                  <p className="text-mid-grey">Installed base machine tracking, warranty and service tickets.</p>
+                  <Link href="/products/steward" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+                </div>
+                <div>
+                  <h4 className="font-bold text-ink">Vantage</h4>
+                  <p className="text-mid-grey">Plain-text answers grounded strictly in your own catalogues.</p>
+                  <Link href="/products/vantage" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+                </div>
               </div>
-              <div>
-                <h4 className="font-bold text-ink">Assay</h4>
-                <p className="text-mid-grey">Certificate of Analysis (COA) generation and laboratory QA.</p>
-                <Link href="/products/assay" className="text-royal font-semibold hover:underline">View &rarr;</Link>
-              </div>
-              <div>
-                <h4 className="font-bold text-ink">Steward</h4>
-                <p className="text-mid-grey">Installed base machine tracking, warranty and service tickets.</p>
-                <Link href="/products/steward" className="text-royal font-semibold hover:underline">View &rarr;</Link>
-              </div>
-              <div>
-                <h4 className="font-bold text-ink">Vantage</h4>
-                <p className="text-mid-grey">Plain-text answers grounded strictly in your own catalogues.</p>
-                <Link href="/products/vantage" className="text-royal font-semibold hover:underline">View &rarr;</Link>
+              <div className="w-[180px] mx-auto">
+                <YouTubeLite
+                  id="2Jdxao-PJuE"
+                  title="Seven tools for growing businesses"
+                  isShort={true}
+                />
               </div>
             </div>
           </details>
@@ -466,12 +483,12 @@ export default function HomePage() {
           <p className="text-body text-white/80 mb-8 text-pretty max-w-2xl mx-auto">
             Book a 30-minute consultation. We will identify which process is costing you the most and outline how to fix it.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link href="/book-consultation" className="btn-gold min-h-[48px] px-8 text-[16px]">
+          <div className="flex flex-col items-center justify-center gap-3">
+            <Link href="/book-consultation" className="btn-gold min-h-[48px] px-10 text-[16px]">
               Book a consultation
             </Link>
-            <Link href="/free-ai-visibility-check" className="btn-ghost-white min-h-[48px] px-8 text-[16px]">
-              Free AI visibility check
+            <Link href="/free-ai-visibility-check" className="text-white/80 hover:text-white text-[14px] underline underline-offset-4 transition-colors">
+              Or request a free AI visibility check &rarr;
             </Link>
           </div>
         </div>

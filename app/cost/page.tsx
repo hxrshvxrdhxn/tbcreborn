@@ -107,8 +107,8 @@ export default async function CostIndexPage() {
           {/* ── ESTIMATOR PROMO CARD ── */}
           <div className="mb-12 rounded-lg border border-light-grey bg-white p-6 sm:p-8 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="max-w-2xl">
-              <span className="font-sans text-[12px] font-semibold uppercase tracking-wider text-royal">
-                Interactive Calculator
+              <span className="font-sans text-[13px] font-semibold text-royal">
+                Interactive calculator
               </span>
               <h2 className="font-display font-bold text-[22px] sm:text-[24px] text-ink mt-1 mb-2">
                 Estimate your project in two minutes

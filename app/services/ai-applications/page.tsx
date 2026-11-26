@@ -95,7 +95,7 @@ export default function ServicePage() {
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
+          <ol className="flex items-center gap-2 font-display text-[13px] text-mid-grey">
             <li><Link href="/" className="hover:text-ink transition-colors">Home</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li><Link href="/services" className="hover:text-ink transition-colors">Services</Link></li>

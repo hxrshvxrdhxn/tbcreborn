@@ -10,33 +10,33 @@ export type StepItem = {
 const steps: StepItem[] = [
   {
     step: "01",
-    title: "Visibility Audit",
-    short: "Crawl health, canonical integrity, and baseline testing across ChatGPT, Gemini, and Perplexity.",
-    detail: "We audit your technical SEO (crawl budget, index status, canonical integrity, Core Web Vitals) alongside an AI answers test querying leading AI assistants with the top 20 questions your buyers ask.",
+    title: "Visibility audit",
+    short: "Checking site health and baseline recommendations across ChatGPT, Gemini and Perplexity.",
+    detail: "We audit your technical website performance and index status alongside tests querying leading AI assistants with the top 20 questions your buyers ask.",
   },
   {
     step: "02",
-    title: "Entity & Schema",
-    short: "Deploy rich Schema.org graphs, directory consensus, and machine-readable llms.txt.",
-    detail: "AI assistants require clear entity consensus to recommend a firm. We deploy rich Schema.org structured data (Organization, Service, FAQPage, BreadcrumbList) and establish machine-readable llms.txt discovery routes.",
+    title: "Structured data and schema",
+    short: "Deploying schema data across pages and machine-readable llms.txt discovery paths.",
+    detail: "AI assistants need clear confirmation across the web to recommend a firm. We deploy structured schema data (Organization, Service, FAQ, Breadcrumbs) and machine-readable llms.txt discovery routes.",
   },
   {
     step: "03",
-    title: "Answer Architecture",
-    short: "Structured 40-60 word definitive answer summaries placed directly beneath question headers.",
-    detail: "We re-architect your content around specific commercial questions. Every core page features an authoritative question heading followed by a tight 40 to 60-word direct summary supported by technical specifications.",
+    title: "Direct answer summaries",
+    short: "Concise 40 to 60-word clear answers placed directly beneath question headings.",
+    detail: "We organise key page content around specific commercial questions, giving each a concise 40 to 60-word summary followed by full technical details.",
   },
   {
     step: "04",
-    title: "Authoritative Citations",
-    short: "Third-party registry verification, partner mentions, and industry corroboration.",
-    detail: "Large language models evaluate third-party consensus. We curate relevant business registries, partner portfolios, and industry citations so assistants have independent sources that confirm your capabilities.",
+    title: "Industry mentions",
+    short: "Verified directory listings, partner mentions and independent corroboration.",
+    detail: "AI models verify credentials through independent sources. We ensure your business is listed in relevant industry registries and partner directories so assistants have reliable sources verifying what you do.",
   },
   {
     step: "05",
-    title: "Monthly Iteration",
-    short: "Track search console positions and proprietary AI Answer Share with monthly reports.",
-    detail: "We track organic impressions, click-through rates, and average search positions alongside our proprietary AI Answer Share metric across a predefined question set, tied to commercial leads.",
+    title: "Monthly review",
+    short: "Tracking search rankings and AI recommendations with clear monthly reports.",
+    detail: "We track organic traffic, search positions and how often your business appears in AI assistant responses to commercial buyer questions.",
   },
 ];
 
@@ -45,10 +45,10 @@ export default function AeoStepStrip() {
     <div className="w-full">
       <div className="text-center max-w-2xl mx-auto mb-8">
         <h3 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-2">
-          The Five-Step AI & Search Visibility Method
+          The five-step AI and search visibility method.
         </h3>
         <p className="text-[15px] text-mid-grey">
-          A systematic framework connecting crawl technicals directly to generative model citations.
+          A clear process connecting website performance directly to being recommended in AI answers.
         </p>
       </div>
 

@@ -298,7 +298,7 @@ export default function WorkPage() {
                     <div className="lg:col-span-8">
                       {/* The Context */}
                       <div className="mb-10">
-                        <h3 className="font-display font-bold text-[13px] text-mid-grey tracking-widest uppercase mb-4">The Context</h3>
+                        <h3 className="font-display font-semibold text-[14px] text-mid-grey mb-3">The context</h3>
                         <div className="space-y-4">
                           {study.context.map((para, idx) => (
                             <p key={idx} className="font-sans text-[17px] text-ink leading-relaxed">
@@ -310,7 +310,7 @@ export default function WorkPage() {
 
                       {/* The Work */}
                       <div className="mb-10">
-                        <h3 className="font-display font-bold text-[13px] text-mid-grey tracking-widest uppercase mb-4">The Work</h3>
+                        <h3 className="font-display font-semibold text-[14px] text-mid-grey mb-3">The work</h3>
                         <p className="font-sans text-[17px] text-ink leading-relaxed">
                           {study.solution}
                         </p>

@@ -150,7 +150,7 @@ export default function CostCalculator({
         {/* Card 1: Project Type */}
         <section className="bg-white border border-light-grey rounded-lg p-6 sm:p-7 shadow-sm">
           <div className="mb-4">
-            <span className="font-sans text-[12px] font-semibold uppercase tracking-wider text-royal">
+            <span className="font-sans text-[13px] font-semibold text-royal">
               Question 1 of 5
             </span>
             <h2 className="font-display font-bold text-[20px] text-ink mt-1">
@@ -191,7 +191,7 @@ export default function CostCalculator({
         {/* Card 2: User Types */}
         <section className="bg-white border border-light-grey rounded-lg p-6 sm:p-7 shadow-sm">
           <div className="mb-4">
-            <span className="font-sans text-[12px] font-semibold uppercase tracking-wider text-royal">
+            <span className="font-sans text-[13px] font-semibold text-royal">
               Question 2 of 5
             </span>
             <h2 className="font-display font-bold text-[20px] text-ink mt-1">
@@ -239,7 +239,7 @@ export default function CostCalculator({
         {/* Card 3: Integrations */}
         <section className="bg-white border border-light-grey rounded-lg p-6 sm:p-7 shadow-sm">
           <div className="mb-4">
-            <span className="font-sans text-[12px] font-semibold uppercase tracking-wider text-royal">
+            <span className="font-sans text-[13px] font-semibold text-royal">
               Question 3 of 5
             </span>
             <h2 className="font-display font-bold text-[20px] text-ink mt-1">
@@ -283,7 +283,7 @@ export default function CostCalculator({
         {/* Card 4: Extras */}
         <section className="bg-white border border-light-grey rounded-lg p-6 sm:p-7 shadow-sm">
           <div className="mb-4">
-            <span className="font-sans text-[12px] font-semibold uppercase tracking-wider text-royal">
+            <span className="font-sans text-[13px] font-semibold text-royal">
               Question 4 of 5
             </span>
             <h2 className="font-display font-bold text-[20px] text-ink mt-1">
@@ -335,7 +335,7 @@ export default function CostCalculator({
         {/* Card 5: Speed */}
         <section className="bg-white border border-light-grey rounded-lg p-6 sm:p-7 shadow-sm">
           <div className="mb-4">
-            <span className="font-sans text-[12px] font-semibold uppercase tracking-wider text-royal">
+            <span className="font-sans text-[13px] font-semibold text-royal">
               Question 5 of 5
             </span>
             <h2 className="font-display font-bold text-[20px] text-ink mt-1">
@@ -387,11 +387,11 @@ export default function CostCalculator({
       <div className="lg:col-span-5 lg:sticky lg:top-24">
         <aside className="bg-white border border-light-grey rounded-lg p-6 sm:p-8 shadow-sm space-y-6">
           <div>
-            <span className="font-sans text-[12px] font-semibold uppercase tracking-wider text-royal">
-              Estimated Investment
+            <span className="font-sans text-[13px] font-semibold text-royal">
+              Estimated investment
             </span>
             <div className="mt-2">
-              <span className="font-sans text-[13px] text-mid-grey uppercase tracking-wide block">
+              <span className="font-sans text-[13px] text-mid-grey block">
                 Indicative range
               </span>
               <div className="font-display font-bold text-[32px] sm:text-[36px] text-ink tracking-tight mt-0.5">
@@ -401,7 +401,7 @@ export default function CostCalculator({
 
             <div className="mt-4 pt-4 border-t border-light-grey/60 flex items-center justify-between">
               <div>
-                <span className="font-sans text-[13px] text-mid-grey uppercase tracking-wide block">
+                <span className="font-sans text-[13px] text-mid-grey block">
                   Typical timeline
                 </span>
                 <span className="font-display font-semibold text-[20px] text-ink">

@@ -244,7 +244,7 @@ export default function ProductLanding({ params }: { params: { product: string }
             {shortVid ? (
               <div className="w-[260px] sm:w-[280px] bg-white/5 p-3 rounded-[16px] border border-white/15 shadow-2xl backdrop-blur-sm">
                 <div className="text-center mb-2">
-                  <span className="text-[12px] font-semibold text-[#7FD1A6] uppercase tracking-wider block">Watch Product Short</span>
+                  <span className="text-[13px] font-semibold text-[#7FD1A6] block">Watch product summary</span>
                 </div>
                 <div className="w-full">
                   <YouTubeLite id={shortVid.id} title={shortVid.title} isShort />

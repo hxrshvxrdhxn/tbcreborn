@@ -413,7 +413,7 @@ export default function HubEntryTemplate({
 
             {/* ── SERVICE CTA BOX ── */}
             <div className="mt-14 rounded-lg bg-forest p-8 text-white">
-              <span className="font-sans text-xs uppercase tracking-widest text-gold font-semibold">
+              <span className="font-sans text-xs text-gold font-semibold">
                 Take the next step
               </span>
               <h2 className="font-display font-bold text-[24px] text-white mt-2 mb-3">
