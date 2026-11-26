@@ -12,6 +12,11 @@ and cron APIs answer 401; empty form posts answer 400; probes like /.env get not
 
 ## Fix list (do all of these)
 
+Done by Claude in the commit after b76bfd6 (do not redo): item 1 via 301 redirects in next.config.mjs (the links still
+live in the post bodies in the database; clean them in blog-admin later), item 2 on the contact page, and the root
+cause of items 3 and 7: `.btn-ghost-white` was used on 11 buttons but never defined, so those buttons rendered
+invisible. It is now defined in globals.css. Still check the rest of the site for other uppercase labels.
+
 1. **Broken internal links (3)**:
    - `/blog/the-hidden-cost-of-ai-readiness-why-your-data-strategy-comes-before-your-ai-strategy` (404), linked from
      `/blog/building-ai-first-culture-what-changes-what-stays`.

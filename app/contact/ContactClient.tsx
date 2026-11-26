@@ -129,7 +129,7 @@ export default function ContactClient() {
 
                 <ul className="space-y-6 flex-1 flex flex-col">
                   <li>
-                    <p className="font-display font-semibold text-[12px] text-mid-grey uppercase tracking-[1.5px] mb-1.5">
+                    <p className="font-display font-semibold text-[14px] text-mid-grey mb-1.5">
                       Phone
                     </p>
                     <a
@@ -140,7 +140,7 @@ export default function ContactClient() {
                     </a>
                   </li>
                   <li>
-                    <p className="font-display font-semibold text-[12px] text-mid-grey uppercase tracking-[1.5px] mb-1.5">
+                    <p className="font-display font-semibold text-[14px] text-mid-grey mb-1.5">
                       Email
                     </p>
                     <a
@@ -151,7 +151,7 @@ export default function ContactClient() {
                     </a>
                   </li>
                   <li>
-                    <p className="font-display font-semibold text-[12px] text-mid-grey uppercase tracking-[1.5px] mb-1.5">
+                    <p className="font-display font-semibold text-[14px] text-mid-grey mb-1.5">
                       WhatsApp
                     </p>
                     <a
@@ -164,7 +164,7 @@ export default function ContactClient() {
                     </a>
                   </li>
                   <li className="flex-1 flex flex-col">
-                    <p className="font-display font-semibold text-[12px] text-mid-grey uppercase tracking-[1.5px] mb-1.5">
+                    <p className="font-display font-semibold text-[14px] text-mid-grey mb-1.5">
                       Address
                     </p>
                     <address className="font-sans text-[16px] text-ink not-italic leading-relaxed mb-2">

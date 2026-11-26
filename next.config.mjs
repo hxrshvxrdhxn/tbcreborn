@@ -54,6 +54,10 @@ const nextConfig = {
       { source: "/services/smm", destination: "/services", permanent: true },
       // Old site pages still in search indexes (found 3 Oct 2026)
       { source: "/faq", destination: "/", permanent: true },
+      // Links inside older posts that point at posts which were never published (QA 26 Nov)
+      { source: "/blog/the-hidden-cost-of-ai-readiness-why-your-data-strategy-comes-before-your-ai-strategy", destination: "/services/ai-readiness-assessment", permanent: true },
+      { source: "/blog/agentic-ai-why-your-next-hire-might-not-be-human", destination: "/ai-use-cases", permanent: true },
+      { source: "/blog/test-draft-1", destination: "/how-to", permanent: true },
       { source: "/privacy", destination: "/privacy-policy", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/services-1", destination: "/services", permanent: true },
