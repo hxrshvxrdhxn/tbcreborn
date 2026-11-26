@@ -100,15 +100,15 @@ function getServiceLinkForCategory(category: string) {
   if (lowerCat.includes("software development")) return "/services/custom-software-development";
   if (lowerCat.includes("ai applications")) return "/services/ai-applications";
   if (lowerCat.includes("automation")) return "/services/business-automation";
-  if (lowerCat.includes("web development")) return "/services/web-development";
-  if (lowerCat.includes("mobile apps")) return "/services/mobile-app-development";
+  if (lowerCat.includes("web development")) return "/services/custom-software-development";
+  if (lowerCat.includes("mobile apps")) return "/services/custom-software-development";
   if (lowerCat.includes("industry guides")) return "/software-development-company-delhi-ncr";
   if (lowerCat.includes("leadership")) return "/services";
 
   // Existing mappings for old categories
   if (lowerCat.includes("ai") || lowerCat.includes("llm")) return "/services/custom-llm";
   if (lowerCat.includes("train")) return "/services/ai-training";
-  if (lowerCat.includes("web") || lowerCat.includes("dev")) return "/services/web-development";
+  if (lowerCat.includes("web") || lowerCat.includes("dev")) return "/services/custom-software-development";
   if (lowerCat.includes("slate")) return "/services/slate";
   return "/services";
 }

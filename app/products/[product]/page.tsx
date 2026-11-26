@@ -127,9 +127,9 @@ function getRelatedServicesForProduct(productSlug: string) {
     case "relay":
       return [
         {
-          title: "Mobile App Development",
-          href: "/services/mobile-app-development",
-          blurb: "Native and web-based ordering apps for field sales, dealers, and distribution networks.",
+          title: "Custom Software Development",
+          href: "/services/custom-software-development",
+          blurb: "Bespoke dealer ordering systems, mobile web tools, and distribution portals.",
         },
         {
           title: "Business Process Automation",

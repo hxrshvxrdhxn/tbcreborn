@@ -47,6 +47,10 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Folded service pages redirected to Custom Software Development
+      { source: "/services/web-development", destination: "/services/custom-software-development", permanent: true },
+      { source: "/services/mobile-app-development", destination: "/services/custom-software-development", permanent: true },
+      { source: "/services/mvp-development", destination: "/services/custom-software-development", permanent: true },
       { source: "/services/smm", destination: "/services", permanent: true },
       // Old site pages still in search indexes (found 3 Oct 2026)
       { source: "/faq", destination: "/", permanent: true },

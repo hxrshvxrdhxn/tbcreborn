@@ -132,7 +132,7 @@ export default function LocationPage() {
               <Reveal delay={0.2}>
                 <article className="bg-white border border-light-grey rounded p-8 shadow-card h-full">
                   <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-4">What we build.</h3>
-                  <p className="text-body text-mid-grey leading-relaxed" dangerouslySetInnerHTML={{ __html: "<Link href=\"/services/custom-software-development\" className=\"text-gold hover:underline\">Custom software</Link>, <Link href=\"/services/mobile-app-development\" className=\"text-gold hover:underline\">mobile apps</Link>, <Link href=\"/services/ai-applications\" className=\"text-gold hover:underline\">AI applications</Link> and <Link href=\"/services/business-automation\" className=\"text-gold hover:underline\">business automation</Link>." }} />
+                  <p className="text-body text-mid-grey leading-relaxed" dangerouslySetInnerHTML={{ __html: "<Link href=\"/services/custom-software-development\" className=\"text-gold hover:underline\">Custom software</Link>, <Link href=\"/services/ai-applications\" className=\"text-gold hover:underline\">AI applications</Link>, <Link href=\"/services/business-automation\" className=\"text-gold hover:underline\">business automation</Link> and <Link href=\"/digital-transformation\" className=\"text-gold hover:underline\">digital transformation</Link>." }} />
                 </article>
               </Reveal>
             

@@ -1,18 +1,14 @@
 /** @jest-environment jsdom */
 import { render } from '@testing-library/react';
 import CustomSoftwarePage, { metadata as csMeta } from '../app/services/custom-software-development/page';
-import MobileAppPage, { metadata as maMeta } from '../app/services/mobile-app-development/page';
 import AiAppPage, { metadata as aiMeta } from '../app/services/ai-applications/page';
 import BusAutoPage, { metadata as baMeta } from '../app/services/business-automation/page';
-import MvpPage, { metadata as mvpMeta } from '../app/services/mvp-development/page';
 import LocationGnPage, { metadata as lGnMeta } from '../app/software-development-company-greater-noida/page';
 
 const pages = [
   { Page: CustomSoftwarePage, meta: csMeta, path: '/services/custom-software-development' },
-  { Page: MobileAppPage, meta: maMeta, path: '/services/mobile-app-development' },
   { Page: AiAppPage, meta: aiMeta, path: '/services/ai-applications' },
   { Page: BusAutoPage, meta: baMeta, path: '/services/business-automation' },
-  { Page: MvpPage, meta: mvpMeta, path: '/services/mvp-development' },
   { Page: LocationGnPage, meta: lGnMeta, path: '/software-development-company-greater-noida' }
 ];
 

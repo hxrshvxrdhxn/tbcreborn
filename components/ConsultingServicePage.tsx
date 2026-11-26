@@ -28,16 +28,6 @@ function getRelevantProductsForService(serviceSlug: string) {
         { title: "Distil", href: "/products/distil", blurb: "Proposal engine powered by verified product specifications and pricing rules." },
         { title: "Rapport", href: "/products/rapport", blurb: "Enquiries, client follow-ups, and document triage for service and technical firms." },
       ];
-    case "mobile-app-development":
-      return [
-        { title: "Relay", href: "/products/relay", blurb: "Dealer ordering with customized pricing and automated catalogue updates." },
-        { title: "Cadence", href: "/products/cadence", blurb: "Real-time production, order milestones, and dispatch tracking on mobile and tablet." },
-      ];
-    case "mvp-development":
-      return [
-        { title: "Compass", href: "/products/compass", blurb: "Project profitability, timesheets, and milestone billing for professional teams." },
-        { title: "Cadence", href: "/products/cadence", blurb: "Lightweight order tracking board deployed rapidly for growing operations." },
-      ];
     case "technology-consulting":
     case "technology-audit":
     case "ai-readiness-assessment":

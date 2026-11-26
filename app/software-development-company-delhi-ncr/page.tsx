@@ -132,7 +132,7 @@ export default function LocationPage() {
               <Reveal delay={0.2}>
                 <article className="bg-white border border-light-grey rounded p-8 shadow-card h-full">
                   <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-4">Services.</h3>
-                  <p className="text-body text-mid-grey leading-relaxed" dangerouslySetInnerHTML={{ __html: "<Link href=\"/services/custom-software-development\" className=\"text-gold hover:underline\">Custom software</Link><br/><Link href=\"/services/mobile-app-development\" className=\"text-gold hover:underline\">Mobile apps</Link><br/><Link href=\"/services/ai-applications\" className=\"text-gold hover:underline\">AI applications</Link><br/><Link href=\"/services/business-automation\" className=\"text-gold hover:underline\">Business automation</Link><br/><Link href=\"/services/mvp-development\" className=\"text-gold hover:underline\">MVP development</Link>" }} />
+                  <p className="text-body text-mid-grey leading-relaxed" dangerouslySetInnerHTML={{ __html: "<Link href=\"/services/custom-software-development\" className=\"text-gold hover:underline\">Custom software</Link><br/><Link href=\"/services/custom-software-development\" className=\"text-gold hover:underline\">Web & mobile systems</Link><br/><Link href=\"/services/ai-applications\" className=\"text-gold hover:underline\">AI applications</Link><br/><Link href=\"/services/business-automation\" className=\"text-gold hover:underline\">Business automation</Link><br/><Link href=\"/digital-transformation\" className=\"text-gold hover:underline\">Digital transformation</Link>" }} />
                 </article>
               </Reveal>
             
@@ -184,7 +184,7 @@ export default function LocationPage() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                     </span>
                   </summary>
-                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Yes, through <Link href=\"/services/mvp-development\" className=\"text-gold hover:underline\">MVP development</Link>, though most clients are established businesses with 30 to 300 employees." }} />
+                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Yes, through <Link href=\"/services/custom-software-development\" className=\"text-gold hover:underline\">focused first phases</Link>, though most clients are established businesses with 30 to 300 employees." }} />
                 </details>
               </Reveal>
             

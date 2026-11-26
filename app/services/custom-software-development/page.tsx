@@ -39,10 +39,18 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does custom software cost?",
+      name: "How do you scope and price custom software projects?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most focused internal tools fall between ₹5 lakh and ₹12 lakh, and department systems between ₹12 lakh and ₹30 lakh. Discovery produces a fixed price for each phase. Read our guide: custom software costs in India."
+        text: "We scope projects in transparent, fixed phases tied to measurable business milestones. Following an initial diagnostic discovery, we define the exact scope, technical architecture, and timeline for the first release."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do you build web applications, mobile tools, and MVPs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Whether your operations require an internal cloud portal, a mobile field ordering application, or a focused initial MVP to validate a new operational workflow, we design and deliver custom software to your exact specifications."
       }
     },
     {
@@ -50,7 +58,7 @@ const faqSchema = {
       name: "How long does it take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A focused first phase usually goes live in 6 to 12 weeks. Larger systems are delivered in phases so value arrives early."
+        text: "A focused first phase usually goes live in 6 to 12 weeks. Larger systems are delivered in iterative phases so value arrives early."
       }
     },
     {
@@ -95,7 +103,7 @@ export default function ServicePage() {
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
+          <ol className="flex items-center gap-2 font-display text-[13px] text-mid-grey">
             <li><Link href="/" className="hover:text-ink transition-colors">Home</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li><Link href="/services" className="hover:text-ink transition-colors">Services</Link></li>
@@ -437,12 +445,24 @@ export default function ServicePage() {
               <Reveal delay={0}>
                 <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
-                    <span>How much does custom software cost?</span>
+                    <span>How do you scope and price custom software projects?</span>
                     <span className="text-gold group-open:rotate-180 transition-transform duration-300">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                     </span>
                   </summary>
-                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Most focused internal tools fall between ₹5 lakh and ₹12 lakh, and department systems between ₹12 lakh and ₹30 lakh. Discovery produces a fixed price for each phase. Read our guide: <a href=\"/blog/how-much-does-custom-software-development-cost-in-india-in-2026\" className=\"text-gold hover:underline\">custom software costs in India</a>, or <a href=\"/software-cost-calculator\" className=\"text-gold hover:underline\">try the cost calculator</a> to get an indicative range." }} />
+                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "We scope projects in transparent, fixed phases tied to measurable business milestones. Following an initial diagnostic discovery, we define the exact scope, technical architecture, and timeline for the first release. For indicative comparisons, explore our <a href=\"/software-cost-calculator\" className=\"text-gold hover:underline\">software cost calculator</a>." }} />
+                </details>
+              </Reveal>
+
+              <Reveal delay={0.04}>
+                <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
+                    <span>Do you build web applications, mobile tools, and MVPs?</span>
+                    <span className="text-gold group-open:rotate-180 transition-transform duration-300">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                    </span>
+                  </summary>
+                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Yes. Whether your operations require an internal cloud portal, a mobile field ordering application, or a focused initial MVP to validate a new operational workflow, we design and deliver custom software to your exact specifications." }} />
                 </details>
               </Reveal>
             
