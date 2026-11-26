@@ -1,9 +1,12 @@
-
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 import CallProcess from "@/components/CallProcess";
+import YouTubeLite from "@/components/YouTubeLite";
+import MethodFlowDiagram from "@/components/MethodFlowDiagram";
+import BeforeAfterComparison from "@/components/BeforeAfterComparison";
+import { getVideoById } from "@/lib/videos";
 
 export const metadata: Metadata = {
   title: { absolute: "Business Process Automation, CRM & ERP Development | TBC" },
@@ -33,375 +36,233 @@ const serviceSchema = {
   description: "Custom CRM, ERP modules, approval workflows, dashboards and integrations with Tally and WhatsApp for growing Indian businesses.",
 };
 
+const faqList = [
+  {
+    q: "Should we use Zoho or HubSpot instead?",
+    a: "If your process is standard, yes, and we will say so. We build custom when your process does not fit or licence costs outgrow a one-time build.",
+  },
+  {
+    q: "Can you integrate with Tally?",
+    a: "Yes. We sync customers, invoices and payment status between Tally and your operational systems automatically.",
+  },
+  {
+    q: "Can you extend our existing software instead of replacing it?",
+    a: "Often that is the best route. We build the missing piece and connect it by API.",
+  },
+  {
+    q: "How do you avoid disrupting operations?",
+    a: "New systems run alongside the old process until your team signs off.",
+  },
+  {
+    q: "What does automation cost?",
+    a: "Single workflows start small; multi-department systems are phased. Discovery gives a fixed price per phase.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Should we use Zoho or HubSpot instead?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "If your process is standard, yes, and we will say so. We build custom when your process does not fit or licence costs outgrow a one-time build. Read Custom CRM vs Zoho vs HubSpot."
-      }
+  mainEntity: faqList.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.a,
     },
-    {
-      "@type": "Question",
-      name: "Can you integrate with Tally?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We sync customers, invoices and payment status between Tally and your operational systems."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Can you extend our existing software instead of replacing it?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Often that is the best route. We build the missing piece and connect it by API."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "How do you avoid disrupting operations?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "New systems run alongside the old process until your team signs off."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "What does automation cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Single workflows start small; multi-department systems are phased. Discovery gives a fixed price per phase."
-      }
-    }
-  ]
+  })),
 };
 
-export default function ServicePage() {
+const automationAreas = [
+  {
+    title: "Custom CRM & Order Pipeline",
+    short: "Leads, accounts, quotations, follow-ups and dealer networks, built around how you sell.",
+    detail: "Direct WhatsApp lead capture, quote approvals, tiered discount permissions, and automatic dispatch notifications.",
+  },
+  {
+    title: "ERP & Inventory Modules",
+    short: "Purchase, inventory, production planning, dispatch and field service.",
+    detail: "Batch tracking, reorder thresholds, vendor purchase orders, and goods receipt notes linked to accounts.",
+  },
+  {
+    title: "Multi-Tier Approval Workflows",
+    short: "Purchase, discount, expense and leave approvals with limits and audit trails.",
+    detail: "Mobile approval links with instant notifications, preventing purchase orders from stalling in founder inboxes.",
+  },
+  {
+    title: "Leadership Dashboards",
+    short: "Live leadership reporting pulled automatically from every system.",
+    detail: "Real-time receivables, pipeline health, inventory aging, and production output on one clean screen.",
+  },
+  {
+    title: "Tally & API Integrations",
+    short: "Tally, Zoho, HubSpot, Razorpay, GST invoicing and WhatsApp Business API.",
+    detail: "Eliminates duplicate manual voucher entries between warehouse dispatch, billing, and accounting.",
+  },
+  {
+    title: "Workflow Engine Automation",
+    short: "N8n, Make or custom Python services, whichever is simplest to maintain.",
+    detail: "Event-driven webhooks connecting field activities, document generation, and email/WhatsApp dispatch.",
+  },
+];
+
+export default function BusinessAutomationPage() {
+  const video = getVideoById("2LVF44PlFo4");
+  const shortVid = getVideoById("2rZluNrMeLE");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
-          <ol className="flex items-center gap-2 font-display text-[13px] uppercase tracking-widest text-mid-grey">
+          <ol className="flex items-center gap-2 text-[13px] text-mid-grey">
             <li><Link href="/" className="hover:text-ink transition-colors">Home</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
             <li><Link href="/services" className="hover:text-ink transition-colors">Services</Link></li>
             <li aria-hidden="true" className="text-light-grey select-none">/</li>
-            <li className="text-ink font-bold" aria-current="page">Business Automation</li>
+            <li className="text-ink font-semibold" aria-current="page">Business Automation</li>
           </ol>
         </div>
       </nav>
 
       {/* ── HERO ── */}
-      <section className="bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
+      <section className="bg-forest overflow-hidden min-h-[380px] flex items-center border-b border-light-grey">
         <div className="container-tbc py-s6 relative z-10">
-          <Reveal>
-            <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
-              Automate the work that slows your business down
-            </h1>
-            <p className="text-body text-white/70 leading-relaxed max-w-3xl mb-8 text-pretty">
-              We replace manual steps, re-keying and chasing with connected systems: custom CRM and ERP modules, approvals, dashboards and integrations with the tools you already use.
+          <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
+            Automate the work that slows your business down
+          </h1>
+          <p className="text-body text-white/70 leading-relaxed max-w-3xl mb-8 text-pretty">
+            We replace manual steps, re-keying and chasing with connected systems: custom CRM and ERP modules, approvals, dashboards and integrations with the tools you already use.
+          </p>
+          <Link href="/book-consultation" className="btn-primary">Audit your automation opportunities</Link>
+        </div>
+      </section>
+
+      {/* ── METHOD FLOW DIAGRAM ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <MethodFlowDiagram
+            title="The Automation Pipeline"
+            subtitle="How we eliminate manual handoffs and bridge fragmented tools into automated flows."
+            steps={[
+              { number: "01", title: "Process Audit", summary: "Identify every handover, spreadsheet re-entry, and WhatsApp approval bottleneck." },
+              { number: "02", title: "Data Architecture", summary: "Design unified schemas and API triggers between accounting, sales, and operations." },
+              { number: "03", title: "Workflow Build", summary: "Engineered automation modules and connectors tested against edge cases." },
+              { number: "04", title: "Parallel Rollout", summary: "Run alongside legacy workflows until verified, followed by team training and SLA." },
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* ── BEFORE / AFTER CONTRAST ── */}
+      <section className="bg-white py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <BeforeAfterComparison
+            title="Manual Re-entry vs Connected Systems"
+            subtitle="The operational transformation when department handoffs happen via automated logic."
+            beforeTitle="Today (Fragmented operations)"
+            beforeItems={[
+              "Sales writes order in WhatsApp; accounts re-types it into Tally; dispatch copies into Excel.",
+              "Purchase approvals sit in senior manager inboxes for days, delaying factory production.",
+              "Month-end financial and inventory reports take three days to reconcile manually.",
+            ]}
+            afterTitle="With TBC Process Automation"
+            afterItems={[
+              "Single entry triggers automatic inventory allocation, Tally voucher sync, and dispatch notice.",
+              "One-click mobile approvals with policy limits, instant escalations, and full audit logs.",
+              "Live dashboards show cash, orders, and inventory updated instantly without manual compilation.",
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* ── VIDEO SECTION (Long-form + Short) ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey">
+        <div className="container-tbc max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 items-center">
+            {video && (
+              <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm">
+                <div className="mb-3">
+                  <h3 className="font-display font-semibold text-[18px] text-ink">{video.title}</h3>
+                  <p className="text-[13px] text-mid-grey">{video.description}</p>
+                </div>
+                <YouTubeLite id={video.id} title={video.title} />
+              </div>
+            )}
+            {shortVid && (
+              <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm flex flex-col items-center">
+                <div className="w-full mb-3 text-center">
+                  <span className="text-[12px] font-semibold text-[#167A4E] block">Watch Short</span>
+                  <h4 className="font-display font-semibold text-[15px] text-ink leading-tight">{shortVid.title}</h4>
+                </div>
+                <div className="w-[180px]">
+                  <YouTubeLite id={shortVid.id} title={shortVid.title} isShort />
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHAT WE BUILD (Folded Cards) ── */}
+      <section className="bg-white py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="font-display font-bold text-[clamp(26px,3vw,36px)] text-ink leading-[1.2] mb-3">
+              Automation Systems We Build
+            </h2>
+            <p className="text-[16px] text-mid-grey">
+              Targeted modules engineered to integrate seamlessly into your current operational tech stack.
             </p>
-          </Reveal>
-        </div>
-      </section>
+          </div>
 
-      {/* ── PROBLEMS ── */}
-      <section className="bg-ivory py-s7 border-b border-light-grey">
-        <div className="container-tbc">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-5">
-              <Reveal>
-                <h2 className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
-                  The Problem It Solves
-                </h2>
-                <hr className="gold-rule mb-8" />
-              </Reveal>
-            </div>
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              
-                <Reveal delay={0}>
-                  <div className="bg-white border border-light-grey rounded p-6 shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
-                    <span className="font-display font-bold text-[13px] text-gold tracking-widest mb-3 block">01</span>
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3">Data typed twice.</h3>
-                    <p className="text-body text-mid-grey">Sales enters an order, accounts enters it again in Tally, operations copies it into a spreadsheet.</p>
-                  </div>
-                </Reveal>
-              
-                <Reveal delay={0.1}>
-                  <div className="bg-white border border-light-grey rounded p-6 shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
-                    <span className="font-display font-bold text-[13px] text-gold tracking-widest mb-3 block">02</span>
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3">Approvals wait in inboxes.</h3>
-                    <p className="text-body text-mid-grey">Purchases, discounts and leave requests stall until someone chases.</p>
-                  </div>
-                </Reveal>
-              
-                <Reveal delay={0.2}>
-                  <div className="bg-white border border-light-grey rounded p-6 shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
-                    <span className="font-display font-bold text-[13px] text-gold tracking-widest mb-3 block">03</span>
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3">Reports take days.</h3>
-                    <p className="text-body text-mid-grey">Month-end numbers are assembled by hand from several sources.</p>
-                  </div>
-                </Reveal>
-              
-                <Reveal delay={0.30000000000000004}>
-                  <div className="bg-white border border-light-grey rounded p-6 shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
-                    <span className="font-display font-bold text-[13px] text-gold tracking-widest mb-3 block">04</span>
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug mb-3">Packaged software almost fits.</h3>
-                    <p className="text-body text-mid-grey">Standard CRM and ERP products cover most of the need, and your team works around the rest.</p>
-                  </div>
-                </Reveal>
-              
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {automationAreas.map((cat) => (
+              <div
+                key={cat.title}
+                className="bg-ivory border border-light-grey rounded-[8px] p-6 shadow-sm hover:border-[#167A4E]/50 transition-colors flex flex-col"
+              >
+                <h3 className="font-display font-semibold text-[18px] text-ink mb-2">{cat.title}</h3>
+                <p className="text-[14px] text-mid-grey leading-relaxed mb-4 flex-1">{cat.short}</p>
+                <details className="group [&_summary::-webkit-details-marker]:hidden border-t border-light-grey/80 pt-3">
+                  <summary className="cursor-pointer text-[13px] font-semibold text-[#167A4E] hover:underline flex items-center justify-between select-none">
+                    <span>Integration specs</span>
+                    <span className="group-open:rotate-180 transition-transform">↓</span>
+                  </summary>
+                  <p className="text-[13px] text-mid-grey mt-2 leading-relaxed bg-white p-2.5 rounded border border-light-grey">
+                    {cat.detail}
+                  </p>
+                </details>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── WHAT'S INCLUDED ── */}
-      <section className="bg-white py-s7 border-b border-light-grey">
-        <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-s6">
-            <Reveal>
-              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-                What we build
-              </h2>
-              <hr className="gold-rule gold-rule--center" />
-            </Reveal>
+      {/* ── FAQS ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey" aria-labelledby="faq-heading">
+        <div className="container-tbc max-w-3xl">
+          <div className="text-center mb-10">
+            <h2 id="faq-heading" className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-3">
+              Frequently Asked Questions
+            </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-              <Reveal delay={0}>
-                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
-                  <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Custom CRM</h3>
-                  </div>
-                  <ul className="space-y-3 flex-1">
-                    
-                      <li className="flex items-start gap-3">
-                        <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Leads, accounts, quotations, follow-ups and dealer networks, built around how you sell." }} />
-                      </li>
-                    
-                  </ul>
-                </article>
-              </Reveal>
-            
-              <Reveal delay={0.06}>
-                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
-                  <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">ERP modules</h3>
-                  </div>
-                  <ul className="space-y-3 flex-1">
-                    
-                      <li className="flex items-start gap-3">
-                        <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Purchase, inventory, production planning, dispatch and service." }} />
-                      </li>
-                    
-                  </ul>
-                </article>
-              </Reveal>
-            
-              <Reveal delay={0.12}>
-                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
-                  <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Approval workflows</h3>
-                  </div>
-                  <ul className="space-y-3 flex-1">
-                    
-                      <li className="flex items-start gap-3">
-                        <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Purchase, discount, expense and leave approvals with limits and audit trails." }} />
-                      </li>
-                    
-                  </ul>
-                </article>
-              </Reveal>
-            
-              <Reveal delay={0.18}>
-                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
-                  <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Dashboards</h3>
-                  </div>
-                  <ul className="space-y-3 flex-1">
-                    
-                      <li className="flex items-start gap-3">
-                        <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Live leadership reporting from every system." }} />
-                      </li>
-                    
-                  </ul>
-                </article>
-              </Reveal>
-            
-              <Reveal delay={0.24}>
-                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
-                  <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Integrations</h3>
-                  </div>
-                  <ul className="space-y-3 flex-1">
-                    
-                      <li className="flex items-start gap-3">
-                        <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "Tally, Zoho, HubSpot, Razorpay, GST invoicing and WhatsApp Business API." }} />
-                      </li>
-                    
-                  </ul>
-                </article>
-              </Reveal>
-            
-              <Reveal delay={0.3}>
-                <article className="bg-ivory border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col">
-                  <div className="flex items-center gap-3 mb-5">
-                    <h3 className="font-display font-bold text-[18px] text-ink leading-snug">Workflow automation</h3>
-                  </div>
-                  <ul className="space-y-3 flex-1">
-                    
-                      <li className="flex items-start gap-3">
-                        <span className="mt-[8px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
-                        <span className="text-body text-mid-grey text-pretty" dangerouslySetInnerHTML={{ __html: "N8n, Make or custom code, whichever is simplest to maintain." }} />
-                      </li>
-                    
-                  </ul>
-                </article>
-              </Reveal>
-            
-          </div>
-        </div>
-      </section>
-
-      
-      
-      <section className="bg-white py-s7 border-b border-light-grey">
-        <div className="container-tbc">
-          <div className="max-w-3xl mx-auto font-sans text-[17px] text-ink leading-relaxed space-y-4 text-center">
-            <Reveal>
-              <p>How we work: Process review first (we remove steps before automating them); scope and fixed phase price; build; parallel run with your old process; switch-over.</p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-    
-      
-      {/* ── PROOF ── */}
-      <section className="bg-ivory py-s7 border-b border-light-grey">
-        <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-s6">
-            <Reveal>
-              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-                Client Outcomes
-              </h2>
-              <hr className="gold-rule gold-rule--center" />
-              
-            </Reveal>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            
-              <Reveal>
-                <Link href="/work" className="block bg-white border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all h-full">
-                  <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-3">Business Diagnostic & Operational Restructure</h3>
-                  <p className="font-sans text-[15px] font-medium text-ink/80 border-l-2 border-gold pl-3">B2B services firm. Delhi NCR. 37 employees.</p>
-                </Link>
-              </Reveal>
-              
-              <Reveal>
-                <Link href="/work" className="block bg-white border border-light-grey rounded p-8 shadow-card hover:shadow-card-hover transition-all h-full">
-                  <h3 className="font-display font-bold text-[20px] text-ink leading-snug mb-3">Web Application Development</h3>
-                  <p className="font-sans text-[15px] font-medium text-ink/80 border-l-2 border-gold pl-3">Logistics company. Gurugram. 120 employees.</p>
-                </Link>
-              </Reveal>
-              
-          </div>
-        </div>
-      </section>
-    
-
-      {/* ── FAQ ── */}
-      <section className="bg-white py-s7 border-b border-light-grey">
-        <div className="container-tbc">
-          <div className="text-center max-w-2xl mx-auto mb-s6">
-            <Reveal>
-              <h2 className="font-display font-bold text-[clamp(28px,3vw,36px)] text-ink leading-[1.2] mb-6">
-                Frequently Asked Questions
-              </h2>
-              <hr className="gold-rule gold-rule--center" />
-            </Reveal>
-          </div>
-          <div className="max-w-3xl mx-auto space-y-3">
-            
-              <Reveal delay={0}>
-                <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
-                    <span>Should we use Zoho or HubSpot instead?</span>
-                    <span className="text-gold group-open:rotate-180 transition-transform duration-300">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </span>
-                  </summary>
-                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "If your process is standard, yes, and we will say so. We build custom when your process does not fit or licence costs outgrow a one-time build. Read <Link href=\"/blog/custom-crm-vs-zoho-vs-hubspot-for-indian-smes\" className=\"text-gold hover:underline\">Custom CRM vs Zoho vs HubSpot</Link>." }} />
-                </details>
-              </Reveal>
-            
-              <Reveal delay={0.06}>
-                <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
-                    <span>Can you integrate with Tally?</span>
-                    <span className="text-gold group-open:rotate-180 transition-transform duration-300">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </span>
-                  </summary>
-                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Yes. We sync customers, invoices and payment status between Tally and your operational systems." }} />
-                </details>
-              </Reveal>
-            
-              <Reveal delay={0.12}>
-                <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
-                    <span>Can you extend our existing software instead of replacing it?</span>
-                    <span className="text-gold group-open:rotate-180 transition-transform duration-300">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </span>
-                  </summary>
-                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Often that is the best route. We build the missing piece and connect it by API." }} />
-                </details>
-              </Reveal>
-            
-              <Reveal delay={0.18}>
-                <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
-                    <span>How do you avoid disrupting operations?</span>
-                    <span className="text-gold group-open:rotate-180 transition-transform duration-300">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </span>
-                  </summary>
-                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "New systems run alongside the old process until your team signs off." }} />
-                </details>
-              </Reveal>
-            
-              <Reveal delay={0.24}>
-                <details className="group border border-light-grey rounded bg-ivory/50 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-ink text-[17px] hover:bg-ivory select-none rounded transition-colors">
-                    <span>What does automation cost?</span>
-                    <span className="text-gold group-open:rotate-180 transition-transform duration-300">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </span>
-                  </summary>
-                  <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-ivory/50 rounded-b" dangerouslySetInnerHTML={{ __html: "Single workflows start small; multi-department systems are phased. Discovery gives a fixed price per phase." }} />
-                </details>
-              </Reveal>
-            
+          <div className="space-y-4">
+            {faqList.map((f) => (
+              <details key={f.q} className="group border border-light-grey rounded-[8px] bg-white [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer p-6 font-display font-semibold text-ink text-[17px] hover:bg-ivory/50 select-none rounded transition-colors">
+                  <span>{f.q}</span>
+                  <span className="text-[#167A4E] group-open:rotate-180 transition-transform duration-300">
+                    ↓
+                  </span>
+                </summary>
+                <div className="p-6 pt-0 font-sans text-[15px] text-mid-grey leading-relaxed bg-white rounded-b border-t border-light-grey/60 mt-1">
+                  {f.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

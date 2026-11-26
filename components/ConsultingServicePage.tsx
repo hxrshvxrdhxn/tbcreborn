@@ -1,11 +1,26 @@
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
 import type { ConsultingService } from "@/lib/offerings";
 import { consultingLinks } from "@/lib/offerings";
+import MethodFlowDiagram from "@/components/MethodFlowDiagram";
+import BeforeAfterComparison from "@/components/BeforeAfterComparison";
+import YouTubeLite from "@/components/YouTubeLite";
+import { getVideoById } from "@/lib/videos";
 
 const SITE = "https://turbobytesconsulting.com";
 
-// Editorial two-column layout: the heading sits in a left rail, the content on the right.
+function getVideoForService(serviceSlug: string) {
+  switch (serviceSlug) {
+    case "technology-consulting":
+      return getVideoById("AeNl7CY3ES0");
+    case "ai-readiness-assessment":
+      return getVideoById("NO_3xrJ8Y3M");
+    case "technology-audit":
+    case "business-diagnostic":
+    default:
+      return getVideoById("Kqyajyw2YnI");
+  }
+}
+
 function getRelevantProductsForService(serviceSlug: string) {
   switch (serviceSlug) {
     case "custom-software-development":
@@ -77,13 +92,16 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
       },
     ],
   };
+
   const others = consultingLinks.filter((l) => l.href !== `/services/${s.slug}`);
   const relevantProducts = getRelevantProductsForService(s.slug);
+  const video = getVideoForService(s.slug);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
+      {/* ── BREADCRUMB ── */}
       <nav aria-label="Breadcrumb" className="bg-ivory border-b border-light-grey">
         <div className="container-tbc py-3">
           <ol className="flex items-center gap-2 text-[13px] text-mid-grey">
@@ -96,6 +114,7 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
         </div>
       </nav>
 
+      {/* ── HERO ── */}
       <section className="relative bg-forest overflow-hidden min-h-[380px] flex items-center">
         <div className="container-tbc py-s6 relative z-10">
           <h1 className="font-display font-semibold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.08] tracking-[-0.02em] max-w-3xl mb-6 text-balance">
@@ -106,85 +125,176 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
         </div>
       </section>
 
-      {[
-        {
-          heading: "What it covers",
-          body: (
-            <ul className="divide-y divide-light-grey border-y border-light-grey">
-              {s.covers.map((c) => (
-                <li key={c} className="py-4 text-[17px] text-ink leading-snug">{c}</li>
-              ))}
-            </ul>
-          ),
-        },
-        {
-          heading: "How it runs",
-          body: (
-            <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
-              {s.process.map((p, i) => (
-                <li key={p.title} className="flex gap-4">
-                  <span className="flex-none w-9 h-9 rounded-full border border-royal text-royal font-semibold text-[15px] grid place-items-center" aria-hidden="true">
-                    {i + 1}
-                  </span>
-                  <div>
-                    <h3 className="font-display font-semibold text-[18px] text-ink mb-1">{p.title}</h3>
-                    <p className="text-[16px] text-mid-grey leading-relaxed">{p.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          ),
-        },
-        {
-          heading: "What you receive",
-          body: (
-            <ul className="space-y-3">
-              {s.deliverables.map((d) => (
-                <li key={d} className="flex gap-3 text-[17px] text-ink">
-                  <span className="mt-[9px] w-2 h-2 rounded-full bg-royal flex-none" aria-hidden="true" />
-                  {d}
-                </li>
-              ))}
-            </ul>
-          ),
-        },
-        {
-          heading: "Questions",
-          body: (
-            <div className="space-y-8">
-              {s.faqs.map((f) => (
-                <div key={f.q}>
-                  <h3 className="font-display font-semibold text-[18px] text-ink mb-2">{f.q}</h3>
-                  <p className="text-[16px] text-mid-grey leading-relaxed measure-68">{f.a}</p>
-                </div>
-              ))}
+      {/* ── METHOD FLOW DIAGRAM AT TOP ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <MethodFlowDiagram
+            title="The Advisory & Delivery Method"
+            subtitle={`How our ${s.short} engagement moves from diagnostic evaluation to production impact.`}
+          />
+        </div>
+      </section>
+
+      {/* ── BEFORE / AFTER COMPARISON BLOCK ── */}
+      <section className="bg-white py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <BeforeAfterComparison
+            title={`Operational Shift: ${s.short}`}
+            subtitle="The difference between unchecked legacy approaches and disciplined engineering."
+            beforeTitle="Typical situation (Before engagement)"
+            beforeItems={[
+              "Unclear system boundaries and recurring technical friction between departments.",
+              "Trial-and-error software purchases that fail to match your actual operating workflows.",
+              "Reliance on isolated individuals who hold undocumented operating knowledge.",
+            ]}
+            afterTitle="With Turbo Bytes Consulting"
+            afterItems={[
+              "Clear, auditable architecture with fixed milestone roadmaps and transparent costs.",
+              "Custom-engineered tools and integrations directly aligned to your business logic.",
+              "Documented operating systems, trained staff, and continuous production SLA coverage.",
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* ── RELEVANT VIDEO ── */}
+      {video && (
+        <section className="bg-ivory py-s7 border-b border-light-grey">
+          <div className="container-tbc max-w-4xl">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <h2 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-2">
+                {video.title}
+              </h2>
+              {video.description && (
+                <p className="text-[15px] text-mid-grey">{video.description}</p>
+              )}
             </div>
-          ),
-        },
-      ].map((row, i) => (
-        <section key={row.heading} className={`${i % 2 ? "bg-white" : "bg-ivory"} py-s6 border-b border-light-grey`}>
-          <div className="container-tbc grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 lg:gap-16">
-            <Reveal>
-              <h2 className="font-display font-semibold text-[clamp(24px,2.6vw,30px)] text-ink leading-tight tracking-[-0.015em]">{row.heading}</h2>
-            </Reveal>
-            <Reveal delay={0.05}>{row.body}</Reveal>
+            <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm">
+              <YouTubeLite id={video.id} title={video.title} />
+            </div>
           </div>
         </section>
-      ))}
+      )}
 
-      {relevantProducts.length > 0 && (
-        <section className="bg-ivory py-s6 border-b border-light-grey">
-          <div className="container-tbc">
-            <h2 className="font-display font-semibold text-[22px] text-ink mb-2">
-              Software products built for this practice
+      {/* ── FOLDED SERVICE DETAILS (What it covers, How it runs, What you receive) ── */}
+      <section className="bg-white py-s7 border-b border-light-grey">
+        <div className="container-tbc max-w-4xl space-y-6">
+          <div className="text-center mb-8">
+            <h2 className="font-display font-semibold text-[clamp(24px,2.8vw,32px)] text-ink mb-2">
+              Engagement Details & Scope
             </h2>
-            <p className="text-[15px] text-mid-grey max-w-2xl mb-6">
-              In addition to bespoke advisory, we build and run dedicated software products designed around these operational workflows.
+            <p className="text-[15px] text-mid-grey">
+              Everything included in the engagement, structured for transparency and fixed outcomes.
             </p>
+          </div>
+
+          {/* 1. What it covers */}
+          <details open className="group border border-light-grey rounded-[8px] bg-ivory/40 p-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-center justify-between cursor-pointer font-display font-semibold text-[20px] text-ink hover:text-[#167A4E] select-none">
+              <span>What it covers ({s.covers.length} areas)</span>
+              <span className="text-[#167A4E] text-sm font-sans flex items-center gap-1 group-open:rotate-180 transition-transform">
+                ↓
+              </span>
+            </summary>
+            <div className="mt-4 pt-4 border-t border-light-grey">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {s.covers.map((c) => (
+                  <li key={c} className="flex items-start gap-2.5 text-[15px] text-ink">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#167A4E] flex-none mt-2" aria-hidden="true" />
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </details>
+
+          {/* 2. How it runs */}
+          <details className="group border border-light-grey rounded-[8px] bg-ivory/40 p-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-center justify-between cursor-pointer font-display font-semibold text-[20px] text-ink hover:text-[#167A4E] select-none">
+              <span>How it runs ({s.process.length} phases)</span>
+              <span className="text-[#167A4E] text-sm font-sans flex items-center gap-1 group-open:rotate-180 transition-transform">
+                ↓
+              </span>
+            </summary>
+            <div className="mt-4 pt-4 border-t border-light-grey">
+              <ol className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {s.process.map((p, i) => (
+                  <li key={p.title} className="flex gap-3 bg-white p-4 rounded border border-light-grey">
+                    <span className="flex-none w-7 h-7 rounded-full bg-[#0C3D2A] text-white font-mono text-[13px] grid place-items-center">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h4 className="font-display font-semibold text-[16px] text-ink mb-1">{p.title}</h4>
+                      <p className="text-[14px] text-mid-grey leading-relaxed">{p.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </details>
+
+          {/* 3. What you receive */}
+          <details className="group border border-light-grey rounded-[8px] bg-ivory/40 p-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-center justify-between cursor-pointer font-display font-semibold text-[20px] text-ink hover:text-[#167A4E] select-none">
+              <span>What you receive ({s.deliverables.length} deliverables)</span>
+              <span className="text-[#167A4E] text-sm font-sans flex items-center gap-1 group-open:rotate-180 transition-transform">
+                ↓
+              </span>
+            </summary>
+            <div className="mt-4 pt-4 border-t border-light-grey">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {s.deliverables.map((d) => (
+                  <li key={d} className="flex items-start gap-2.5 text-[15px] text-ink">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#167A4E] flex-none mt-2" aria-hidden="true" />
+                    <span>{d}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      {/* ── FAQS (Preserved Accordions) ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey">
+        <div className="container-tbc max-w-3xl">
+          <div className="text-center mb-8">
+            <h2 className="font-display font-semibold text-[clamp(24px,2.8vw,32px)] text-ink mb-2">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {s.faqs.map((f) => (
+              <details key={f.q} className="group border border-light-grey rounded-[8px] bg-white p-5 [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer font-display font-semibold text-[17px] text-ink hover:text-[#167A4E] select-none">
+                  <span>{f.q}</span>
+                  <span className="text-[#167A4E] group-open:rotate-180 transition-transform duration-200">↓</span>
+                </summary>
+                <div className="mt-3 pt-3 border-t border-light-grey text-[15px] text-mid-grey leading-relaxed">
+                  {f.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── RELEVANT PRODUCTS ── */}
+      {relevantProducts.length > 0 && (
+        <section className="bg-white py-s7 border-b border-light-grey">
+          <div className="container-tbc">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <h2 className="font-display font-semibold text-[24px] text-ink mb-2">
+                Software products built for this practice
+              </h2>
+              <p className="text-[15px] text-mid-grey">
+                In addition to bespoke advisory, we build and run dedicated software products designed around these operational workflows.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relevantProducts.map((p) => (
-                <Link key={p.href} href={p.href} className="group block bg-white p-6 rounded-[8px] border border-light-grey hover:border-royal hover:shadow-sm transition-all">
-                  <span className="font-display font-semibold text-[17px] text-ink group-hover:text-royal transition-colors block mb-1">{p.title} →</span>
+                <Link key={p.href} href={p.href} className="group block bg-ivory p-6 rounded-[8px] border border-light-grey hover:border-[#167A4E] hover:shadow-sm transition-all">
+                  <span className="font-display font-semibold text-[17px] text-ink group-hover:text-[#167A4E] transition-colors block mb-1">{p.title} →</span>
                   <p className="text-[14px] text-mid-grey leading-relaxed">{p.blurb}</p>
                 </Link>
               ))}
@@ -193,21 +303,23 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
         </section>
       )}
 
-      <section className="bg-white py-s6">
+      {/* ── OTHER CONSULTING WORK ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
-          <h2 className="font-display font-semibold text-[22px] text-ink mb-6">Other consulting work</h2>
+          <h2 className="font-display font-semibold text-[22px] text-ink mb-6 text-center">Other consulting work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {others.map((o) => (
-              <Link key={o.href} href={o.href} className="group block border-t-2 border-royal pt-4">
-                <span className="font-display font-semibold text-[17px] text-ink group-hover:text-royal transition-colors">{o.title} →</span>
-                <p className="text-[15px] text-mid-grey mt-2 leading-relaxed">{o.blurb}</p>
+            {others.slice(0, 3).map((o) => (
+              <Link key={o.href} href={o.href} className="group block bg-white p-5 rounded-[8px] border border-light-grey hover:border-[#167A4E] transition-all">
+                <span className="font-display font-semibold text-[16px] text-ink group-hover:text-[#167A4E] transition-colors">{o.title} →</span>
+                <p className="text-[14px] text-mid-grey mt-1.5 leading-relaxed">{o.blurb}</p>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-royal py-s6 text-center">
+      {/* ── CTA ── */}
+      <section className="bg-royal py-s7 text-center">
         <div className="container-tbc">
           <h2 className="font-display font-semibold text-[clamp(24px,3vw,34px)] text-white leading-tight mb-4 text-balance">
             Start with a conversation.

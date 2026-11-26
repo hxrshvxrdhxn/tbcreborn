@@ -3,6 +3,10 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 import CallProcess from "@/components/CallProcess";
+import YouTubeLite from "@/components/YouTubeLite";
+import MethodFlowDiagram from "@/components/MethodFlowDiagram";
+import BeforeAfterComparison from "@/components/BeforeAfterComparison";
+import { getVideoById } from "@/lib/videos";
 
 export const metadata: Metadata = {
   title: { absolute: "Consulting Services & Solutions | Turbo Bytes Consulting" },
@@ -130,14 +134,15 @@ const schema = {
 };
 
 export default function ServicesPage() {
+  const serviceVideo = getVideoById("Kqyajyw2YnI");
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* ── PAGE HERO ── */}
-      <section className="relative bg-forest overflow-hidden min-h-[400px] flex items-center border-b border-light-grey">
+      <section className="relative bg-forest overflow-hidden min-h-[380px] flex items-center border-b border-light-grey">
         <div className="container-tbc py-s6 relative z-10">
-          <hr className="gold-rule mb-6" />
           <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-3xl mb-6 text-balance">
             How we work with you.
           </h1>
@@ -147,33 +152,131 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── 5 OFFER PILLARS ── */}
-      {servicePillars.map((p, pi) => (
-        <section key={p.heading} className={`${pi % 2 ? "bg-white" : "bg-ivory"} py-s7 border-b border-light-grey`}>
-          <div className="container-tbc grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-10 lg:gap-16">
-            <Reveal>
-              <span className="font-display font-bold text-royal text-[16px] block mb-2">{p.number}</span>
-              <h2 className="font-display font-semibold text-[clamp(26px,2.8vw,36px)] text-ink leading-tight tracking-[-0.02em] mb-3">{p.heading}</h2>
-              <p className="text-[16px] text-mid-grey leading-relaxed mb-6">{p.lead}</p>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <ul className="divide-y divide-light-grey border-y border-light-grey">
-                {p.items.map((it) => (
-                  <li key={it.href}>
-                    <Link href={it.href} className="group grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-2 py-5">
-                      <span>
-                        <span className="block font-display font-semibold text-[19px] text-ink group-hover:text-royal transition-colors">{it.title}</span>
-                        <span className="block text-[15px] text-mid-grey leading-relaxed mt-1 measure-68">{it.blurb}</span>
-                      </span>
-                      <span className="hidden sm:block self-center text-royal text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
+      {/* ── METHOD FLOW DIAGRAM AT TOP ── */}
+      <section className="bg-ivory py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <MethodFlowDiagram
+            title="The Engineering Method"
+            subtitle="Four disciplined stages connecting diagnosis directly to deployed software."
+          />
+        </div>
+      </section>
+
+      {/* ── BEFORE / AFTER CONTRAST ── */}
+      <section className="bg-white py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <BeforeAfterComparison
+            title="Operational Delivery: Today vs With TBC"
+            subtitle="Why founder-led firms move away from fragmented spreadsheets and opaque agency advice."
+            beforeTitle="Today (Common friction)"
+            beforeItems={[
+              "Spreadsheets and WhatsApp groups hold critical order, dispatch, and quote data.",
+              "Off-the-shelf software charges rising per-seat fees while forcing process compromises.",
+              "Consultants leave slide decks without engineering the actual software or integrations.",
+            ]}
+            afterTitle="With TBC (Engineered resolution)"
+            afterItems={[
+              "Single verified operational software engineered directly for your business logic.",
+              "Zero per-seat taxes: full code ownership with direct database control.",
+              "Advice and software delivery from the same senior engineering team.",
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* ── RELEVANT VIDEO ── */}
+      {serviceVideo && (
+        <section className="bg-ivory py-s7 border-b border-light-grey">
+          <div className="container-tbc max-w-4xl">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <h2 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-2">
+                {serviceVideo.title}
+              </h2>
+              <p className="text-[15px] text-mid-grey">
+                {serviceVideo.description || "A practical walkthrough on identifying where software and automation deliver genuine ROI."}
+              </p>
+            </div>
+            <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm">
+              <YouTubeLite id={serviceVideo.id} title={serviceVideo.title} />
+            </div>
           </div>
         </section>
-      ))}
+      )}
+
+      {/* ── 5 OFFER PILLARS (Clean Cards + Folded Detail) ── */}
+      <section className="bg-white py-s7 border-b border-light-grey">
+        <div className="container-tbc">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="font-display font-semibold text-[clamp(26px,3vw,36px)] text-ink mb-3">
+              Five Practice Areas
+            </h2>
+            <p className="text-[16px] text-mid-grey">
+              Engage for a single targeted operational fix, or partner for complete systems transformation.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {servicePillars.map((p) => (
+              <div
+                key={p.heading}
+                className="bg-ivory border border-light-grey rounded-[8px] p-6 lg:p-8 transition-colors hover:border-[#167A4E]/40"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 items-start">
+                  <div>
+                    <span className="font-mono font-bold text-[#167A4E] text-[15px] block mb-1">{p.number}</span>
+                    <h3 className="font-display font-semibold text-[22px] text-ink leading-snug mb-2">{p.heading}</h3>
+                    <p className="text-[14px] text-mid-grey leading-relaxed">{p.lead}</p>
+                  </div>
+
+                  <div>
+                    {/* Primary visible service items (first 2) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+                      {p.items.slice(0, 2).map((it) => (
+                        <Link
+                          key={it.href}
+                          href={it.href}
+                          className="group block bg-white p-4 rounded border border-light-grey hover:border-[#167A4E] transition-colors"
+                        >
+                          <span className="font-display font-semibold text-[16px] text-ink group-hover:text-[#167A4E] flex items-center justify-between">
+                            <span>{it.title}</span>
+                            <span className="text-[#167A4E] transition-transform group-hover:translate-x-0.5">→</span>
+                          </span>
+                          <span className="block text-[13px] text-mid-grey leading-snug mt-1">{it.blurb}</span>
+                        </Link>
+                      ))}
+                    </div>
+
+                    {/* Folded accordion for remaining sub-services */}
+                    {p.items.length > 2 && (
+                      <details className="group [&_summary::-webkit-details-marker]:hidden">
+                        <summary className="cursor-pointer text-[14px] font-semibold text-[#167A4E] hover:underline flex items-center gap-1.5 py-1 select-none">
+                          <span>View all {p.items.length} services in {p.heading}</span>
+                          <span className="group-open:rotate-180 transition-transform">↓</span>
+                        </summary>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 pt-3 border-t border-light-grey/80">
+                          {p.items.slice(2).map((it) => (
+                            <Link
+                              key={it.href}
+                              href={it.href}
+                              className="group block bg-white p-4 rounded border border-light-grey hover:border-[#167A4E] transition-colors"
+                            >
+                              <span className="font-display font-semibold text-[16px] text-ink group-hover:text-[#167A4E] flex items-center justify-between">
+                                <span>{it.title}</span>
+                                <span className="text-[#167A4E] transition-transform group-hover:translate-x-0.5">→</span>
+                              </span>
+                              <span className="block text-[13px] text-mid-grey leading-snug mt-1">{it.blurb}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </details>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── INTEGRATED CAPABILITY BAND (Dark Section) ── */}
       <SectionInk>
@@ -189,14 +292,13 @@ export default function ServicesPage() {
         </div>
       </SectionInk>
 
-      {/* ── FAQS ── */}
+      {/* ── FAQS (Preserved Accordions & Schema) ── */}
       <section className="bg-white py-s7 border-b border-light-grey" aria-labelledby="faq-heading">
         <div className="container-tbc max-w-3xl">
           <div className="text-center mb-10">
             <h2 id="faq-heading" className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-4">
               Frequently Asked Questions
             </h2>
-            <hr className="gold-rule gold-rule--center" />
           </div>
           <div className="space-y-4">
             {faqs.map((f) => (
@@ -221,7 +323,6 @@ export default function ServicesPage() {
       {/* ── CTA BAND ── */}
       <section className="bg-royal py-s7 text-center">
         <div className="container-tbc">
-          <hr className="gold-rule gold-rule--center mb-8" />
           <h2 className="font-display font-bold text-[clamp(24px,3vw,36px)] text-white leading-[1.2] mb-4 text-balance">
             Don&apos;t know where to start? Let&apos;s talk about your business.
           </h2>
@@ -236,10 +337,8 @@ export default function ServicesPage() {
             <span className="inline-flex items-center gap-1.5"><svg className="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>Confidential & NDA-backed</span>
             <span className="inline-flex items-center gap-1.5"><svg className="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>Response within 1 business day</span>
           </div>
-          <hr className="gold-rule gold-rule--center mt-10" />
         </div>
       </section>
     </>
   );
 }
-
