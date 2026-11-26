@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 7000",
-    "build": "node scripts/verify-internal-links.mjs && next build",
+    "build": "next build",
+    "check:links": "node scripts/verify-internal-links.mjs",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
