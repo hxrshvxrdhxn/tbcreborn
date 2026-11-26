@@ -106,8 +106,7 @@ const automationAreas = [
 ];
 
 export default function BusinessAutomationPage() {
-  const video = getVideoById("2LVF44PlFo4");
-  const shortVid = getVideoById("2rZluNrMeLE");
+  const shortVid = getVideoById("caeVTTvIeBA");
 
   return (
     <>
@@ -178,24 +177,40 @@ export default function BusinessAutomationPage() {
         </div>
       </section>
 
-      {/* ── VIDEO SECTION (Long-form + Short) ── */}
+      {/* ── AUTOMATION PIPELINE STEP STRIP ── */}
       <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc max-w-5xl">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 items-center">
-            {video && (
-              <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm">
-                <div className="mb-3">
-                  <h3 className="font-display font-semibold text-[18px] text-ink">{video.title}</h3>
-                  <p className="text-[13px] text-mid-grey">{video.description}</p>
-                </div>
-                <YouTubeLite id={video.id} title={video.title} />
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-8 items-center">
+            <div>
+              <span className="font-mono text-[12px] font-semibold text-[#167A4E] uppercase tracking-wider block mb-2">
+                Operational Pipeline
+              </span>
+              <h2 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-3">
+                Order to Dispatch Without Manual Chasing
+              </h2>
+              <p className="text-[15px] text-mid-grey mb-6 text-pretty">
+                Every customer enquiry, approval, and warehouse movement triggers the next step automatically.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { num: "01", title: "Enquiry & Quotation", desc: "Instant quote generation with pre-approved price lists and discount limits." },
+                  { num: "02", title: "One-Tap Approvals", desc: "Purchase and credit approvals resolved via mobile notifications." },
+                  { num: "03", title: "Tally & ERP Sync", desc: "Automated voucher creation with zero duplicate re-typing." },
+                  { num: "04", title: "Live Dispatch Board", desc: "Shop floor and logistics teams see real-time status and tracking links." },
+                ].map((s) => (
+                  <div key={s.num} className="bg-white p-4 rounded border border-light-grey">
+                    <span className="font-mono text-[12px] font-bold text-[#167A4E] bg-[#167A4E]/10 px-2 py-0.5 rounded inline-block mb-1.5">{s.num}</span>
+                    <h4 className="font-display font-semibold text-[15px] text-ink mb-1">{s.title}</h4>
+                    <p className="text-[13px] text-mid-grey leading-relaxed">{s.desc}</p>
+                  </div>
+                ))}
               </div>
-            )}
+            </div>
             {shortVid && (
               <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm flex flex-col items-center">
                 <div className="w-full mb-3 text-center">
                   <span className="text-[12px] font-semibold text-[#167A4E] block">Watch Short</span>
-                  <h4 className="font-display font-semibold text-[15px] text-ink leading-tight">{shortVid.title}</h4>
+                  <h4 className="font-display font-semibold text-[14px] text-ink leading-tight">{shortVid.title}</h4>
                 </div>
                 <div className="w-[180px]">
                   <YouTubeLite id={shortVid.id} title={shortVid.title} isShort />

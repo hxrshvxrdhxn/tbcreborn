@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FivePhaseFlowDiagram from "@/components/FivePhaseFlowDiagram";
 import BeforeAfterComparison from "@/components/BeforeAfterComparison";
-import YouTubeLite from "@/components/YouTubeLite";
-import { getVideoById } from "@/lib/videos";
 
 export const metadata: Metadata = {
   title: { absolute: "Digital Transformation Consulting | Turbo Bytes" },
@@ -85,9 +83,6 @@ const faqSchema = {
 };
 
 export default function DigitalTransformationPage() {
-  const video = getVideoById("Kqyajyw2YnI");
-  const shortVid = getVideoById("7QUDMIqvXs4");
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
@@ -171,30 +166,34 @@ export default function DigitalTransformationPage() {
         </div>
       </section>
 
-      {/* ── RELEVANT VIDEO & SHORT ── */}
+      {/* ── TRANSFORMATION GOVERNANCE & ARCHITECTURE ── */}
       <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc max-w-5xl">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 items-center">
-            {video && (
-              <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm">
-                <div className="mb-3">
-                  <h3 className="font-display font-semibold text-[18px] text-ink">{video.title}</h3>
-                  <p className="text-[13px] text-mid-grey">{video.description}</p>
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <h2 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-2">
+              How We Protect Your Timeline & Systems
+            </h2>
+            <p className="text-[15px] text-mid-grey">
+              Four governance commitments that ensure production stability and zero disruption to daily revenue.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { num: "01", title: "Zero Downtime Cutover", desc: "New software runs alongside legacy processes until operators sign off." },
+              { num: "02", title: "Direct IP Custody", desc: "All source code, schemas, and credentials sit in your company's own cloud." },
+              { num: "03", title: "Bi-Directional ERP Sync", desc: "Seamless connectors for Tally and accounting with complete audit logging." },
+              { num: "04", title: "Floor & Desk Onboarding", desc: "Role-based training sessions with recorded video SOPs for daily operators." },
+            ].map((item) => (
+              <div key={item.num} className="bg-white border border-light-grey rounded-[8px] p-5 shadow-sm flex flex-col justify-between">
+                <div>
+                  <span className="font-mono text-[13px] font-bold text-[#167A4E] bg-[#167A4E]/10 px-2 py-0.5 rounded inline-block mb-3">
+                    {item.num}
+                  </span>
+                  <h3 className="font-display font-semibold text-[16px] text-ink mb-1.5">{item.title}</h3>
+                  <p className="text-[13px] text-mid-grey leading-relaxed">{item.desc}</p>
                 </div>
-                <YouTubeLite id={video.id} title={video.title} />
               </div>
-            )}
-            {shortVid && (
-              <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm flex flex-col items-center">
-                <div className="w-full mb-3 text-center">
-                  <span className="text-[12px] font-semibold text-[#167A4E] block">Watch Short</span>
-                  <h4 className="font-display font-semibold text-[15px] text-ink leading-tight">{shortVid.title}</h4>
-                </div>
-                <div className="w-[180px]">
-                  <YouTubeLite id={shortVid.id} title={shortVid.title} isShort />
-                </div>
-              </div>
-            )}
+            ))}
           </div>
         </div>
       </section>

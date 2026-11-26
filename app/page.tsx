@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroLines from "@/components/HeroLines";
 import YouTubeLite from "@/components/YouTubeLite";
-import { ProcessToday, ProcessWithSoftware } from "@/components/Illustrations";
+import { ProcessToday, ProcessWithSoftware, BothHalves } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
   title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
@@ -277,13 +277,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. WHO WE ARE VIDEO ── */}
-      <section className="bg-white py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="video-heading">
+      {/* ── 4. CONSULTING THAT DELIVERS ── */}
+      <section className="bg-white py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="consulting-heading">
         <div className="container-tbc">
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-center">
             <div>
               <hr className="gold-rule mb-4" />
-              <h2 id="video-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-4 text-balance">
+              <h2 id="consulting-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-4 text-balance">
                 Consulting that ends in working software, not a slide deck.
               </h2>
               <p className="text-body text-mid-grey leading-relaxed mb-6 text-pretty">
@@ -299,12 +299,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="w-full">
-              <YouTubeLite
-                id="LtEm_wP8Ubw"
-                title="Turbo Bytes Consulting: who we are and what we do"
-                poster="/img/og-default.png"
-              />
+            <div className="w-full flex items-center justify-center p-6 bg-ivory rounded-[8px] border border-light-grey">
+              <BothHalves />
             </div>
           </div>
         </div>
@@ -332,12 +328,21 @@ export default function HomePage() {
             {/* Distil */}
             <div className="bg-white border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
               <div>
-                <div className="mb-4">
-                  <YouTubeLite
-                    id="uYaMWnzlR4U"
-                    title="Complex proposals, assembled from verified parts"
-                    isShort={true}
-                  />
+                <div className="mb-4 p-4 rounded bg-ivory border border-light-grey">
+                  <div className="space-y-2 text-[12px]">
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono font-bold text-[#167A4E] bg-[#167A4E]/10 px-1.5 py-0.5 rounded">01</span>
+                      <span className="font-semibold text-ink">Inbound Technical Enquiry</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono font-bold text-[#167A4E] bg-[#167A4E]/10 px-1.5 py-0.5 rounded">02</span>
+                      <span className="font-semibold text-ink">Verified Rule & BOM Engine</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono font-bold text-[#167A4E] bg-[#167A4E]/10 px-1.5 py-0.5 rounded">03</span>
+                      <span className="font-semibold text-ink">Commercial Proposal in Minutes</span>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="font-display font-bold text-[18px] text-ink mb-1">Distil</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">

@@ -3,10 +3,8 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionInk from "@/components/SectionInk";
 import CallProcess from "@/components/CallProcess";
-import YouTubeLite from "@/components/YouTubeLite";
 import MethodFlowDiagram from "@/components/MethodFlowDiagram";
 import BeforeAfterComparison from "@/components/BeforeAfterComparison";
-import { getVideoById } from "@/lib/videos";
 
 export const metadata: Metadata = {
   title: { absolute: "Consulting Services & Solutions | Turbo Bytes Consulting" },
@@ -134,8 +132,6 @@ const schema = {
 };
 
 export default function ServicesPage() {
-  const serviceVideo = getVideoById("Kqyajyw2YnI");
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
@@ -183,25 +179,6 @@ export default function ServicesPage() {
           />
         </div>
       </section>
-
-      {/* ── RELEVANT VIDEO ── */}
-      {serviceVideo && (
-        <section className="bg-ivory py-s7 border-b border-light-grey">
-          <div className="container-tbc max-w-4xl">
-            <div className="text-center max-w-2xl mx-auto mb-8">
-              <h2 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-2">
-                {serviceVideo.title}
-              </h2>
-              <p className="text-[15px] text-mid-grey">
-                {serviceVideo.description || "A practical walkthrough on identifying where software and automation deliver genuine ROI."}
-              </p>
-            </div>
-            <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm">
-              <YouTubeLite id={serviceVideo.id} title={serviceVideo.title} />
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ── 5 OFFER PILLARS (Clean Cards + Folded Detail) ── */}
       <section className="bg-white py-s7 border-b border-light-grey">

@@ -3,23 +3,8 @@ import type { ConsultingService } from "@/lib/offerings";
 import { consultingLinks } from "@/lib/offerings";
 import MethodFlowDiagram from "@/components/MethodFlowDiagram";
 import BeforeAfterComparison from "@/components/BeforeAfterComparison";
-import YouTubeLite from "@/components/YouTubeLite";
-import { getVideoById } from "@/lib/videos";
 
 const SITE = "https://turbobytesconsulting.com";
-
-function getVideoForService(serviceSlug: string) {
-  switch (serviceSlug) {
-    case "technology-consulting":
-      return getVideoById("AeNl7CY3ES0");
-    case "ai-readiness-assessment":
-      return getVideoById("NO_3xrJ8Y3M");
-    case "technology-audit":
-    case "business-diagnostic":
-    default:
-      return getVideoById("Kqyajyw2YnI");
-  }
-}
 
 function getRelevantProductsForService(serviceSlug: string) {
   switch (serviceSlug) {
@@ -95,7 +80,6 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
 
   const others = consultingLinks.filter((l) => l.href !== `/services/${s.slug}`);
   const relevantProducts = getRelevantProductsForService(s.slug);
-  const video = getVideoForService(s.slug);
 
   return (
     <>
@@ -156,25 +140,6 @@ export default function ConsultingServicePage({ s }: { s: ConsultingService }) {
           />
         </div>
       </section>
-
-      {/* ── RELEVANT VIDEO ── */}
-      {video && (
-        <section className="bg-ivory py-s7 border-b border-light-grey">
-          <div className="container-tbc max-w-4xl">
-            <div className="text-center max-w-2xl mx-auto mb-8">
-              <h2 className="font-display font-semibold text-[clamp(22px,2.6vw,30px)] text-ink mb-2">
-                {video.title}
-              </h2>
-              {video.description && (
-                <p className="text-[15px] text-mid-grey">{video.description}</p>
-              )}
-            </div>
-            <div className="bg-white p-4 rounded-[12px] border border-light-grey shadow-sm">
-              <YouTubeLite id={video.id} title={video.title} />
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ── FOLDED SERVICE DETAILS (What it covers, How it runs, What you receive) ── */}
       <section className="bg-white py-s7 border-b border-light-grey">

@@ -1,5 +1,6 @@
 // Centralized video library for Turbo Bytes Consulting YouTube channel (@TurboBytesConsulting).
-// Contains both long-form videos (16:9) and Shorts (9:16) for embedding via YouTubeLite.
+// Contains only green-and-white style videos matching the site's brand palette (updated 26 Nov).
+// All dark-theme videos have been removed.
 
 export type VideoItem = {
   id: string;
@@ -12,41 +13,6 @@ export type VideoItem = {
 };
 
 export const longFormVideos: Record<string, VideoItem> = {
-  LtEm_wP8Ubw: {
-    id: "LtEm_wP8Ubw",
-    title: "Turbo Bytes Consulting: who we are and what we do",
-    description: "An introduction to how we sit with every team, from the MD to the interns, hear everyone's pain points, and engineer custom systems in-house.",
-    kind: "video",
-    pages: ["home", "about"],
-  },
-  Kqyajyw2YnI: {
-    id: "Kqyajyw2YnI",
-    title: "How to Pick the First Process to Put Into Software",
-    description: "A framework for identifying the single operational process whose automation delivers immediate ROI.",
-    kind: "video",
-    pages: ["technology-consulting", "business-automation", "digital-transformation"],
-  },
-  "2LVF44PlFo4": {
-    id: "2LVF44PlFo4",
-    title: "Order to Invoice: Finding the Handovers That Cost You a Week",
-    description: "Mapping the hidden delays between sales orders, production floors, and dispatch invoices.",
-    kind: "video",
-    pages: ["business-automation", "cadence"],
-  },
-  NO_3xrJ8Y3M: {
-    id: "NO_3xrJ8Y3M",
-    title: "Where LLMs Actually Help a Manufacturing Business (and Where They Don't)",
-    description: "Practical reality check on deploying generative AI in industrial operations.",
-    kind: "video",
-    pages: ["custom-software-development", "custom-llm", "industries-manufacturing"],
-  },
-  AeNl7CY3ES0: {
-    id: "AeNl7CY3ES0",
-    title: "Six Questions to Ask Before Any Software Project",
-    description: "Essential scoping questions to protect business owners against project overrun and wasted capital.",
-    kind: "video",
-    pages: ["custom-software-development", "technology-consulting"],
-  },
   a2w512JHBOk: {
     id: "a2w512JHBOk",
     title: "Distil: from client enquiry to full techno-commercial proposal",
@@ -72,18 +38,6 @@ export const shortVideos: Record<string, VideoItem> = {
     kind: "short",
     pages: ["home", "products"],
   },
-  uYaMWnzlR4U: {
-    id: "uYaMWnzlR4U",
-    title: "Complex proposals, assembled from verified parts (Distil)",
-    kind: "short",
-    product: "distil",
-  },
-  mLCNwzJCIP0: {
-    id: "mLCNwzJCIP0",
-    title: "Most proposal mistakes are copy and paste",
-    kind: "short",
-    product: "distil",
-  },
   "-zvS0dC-i_g": {
     id: "-zvS0dC-i_g",
     title: "Find the factory roofs worth calling first (Sunscout)",
@@ -95,6 +49,13 @@ export const shortVideos: Record<string, VideoItem> = {
     title: "Know where every order is, before the customer asks (Cadence)",
     kind: "short",
     product: "cadence",
+    pages: ["products", "cadence", "business-automation"],
+  },
+  oN6o2yVjj6s: {
+    id: "oN6o2yVjj6s",
+    title: "Same call, ten times a day: where is my order? (Cadence)",
+    kind: "short",
+    product: "cadence",
   },
   vZhZx26WRfw: {
     id: "vZhZx26WRfw",
@@ -102,9 +63,21 @@ export const shortVideos: Record<string, VideoItem> = {
     kind: "short",
     product: "assay",
   },
+  JVQpsEoQj6I: {
+    id: "JVQpsEoQj6I",
+    title: "One wrong digit on a certificate of analysis (Assay)",
+    kind: "short",
+    product: "assay",
+  },
   pT75RslibHg: {
     id: "pT75RslibHg",
     title: "Every machine you have sold, looked after (Steward)",
+    kind: "short",
+    product: "steward",
+  },
+  qGHNSOB7XUg: {
+    id: "qGHNSOB7XUg",
+    title: "You sold the machine. Where is it now? (Steward)",
     kind: "short",
     product: "steward",
   },
@@ -131,36 +104,6 @@ export const shortVideos: Record<string, VideoItem> = {
     title: "Every answer, with the page it came from (Vantage)",
     kind: "short",
     product: "vantage",
-  },
-  "7QUDMIqvXs4": {
-    id: "7QUDMIqvXs4",
-    title: "Work gets lost between departments",
-    kind: "short",
-    pages: ["business-automation", "digital-transformation"],
-  },
-  icNNbuWIxHA: {
-    id: "icNNbuWIxHA",
-    title: "The dashboard nobody opens",
-    kind: "short",
-    pages: ["technology-consulting"],
-  },
-  yILtgvhpmt0: {
-    id: "yILtgvhpmt0",
-    title: "The spreadsheet that ran out of rows",
-    kind: "short",
-    pages: ["custom-software-development"],
-  },
-  "2rZluNrMeLE": {
-    id: "2rZluNrMeLE",
-    title: "Copy-paste is a job",
-    kind: "short",
-    pages: ["business-automation"],
-  },
-  jTPgyN0Yf0Q: {
-    id: "jTPgyN0Yf0Q",
-    title: "WhatsApp for business",
-    kind: "short",
-    pages: ["relay", "rapport"],
   },
 };
 
