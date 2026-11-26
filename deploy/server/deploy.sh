@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # Pull-based deploy: rebuilds only when master has a new commit, or with --force.
 set -euo pipefail
+trap 'echo "$(date -Is) ALERT deploy failed at line $LINENO" >> /opt/tbc/logs/health.log' ERR
 exec 9>/opt/tbc/.deploy.lock
 flock -n 9 || exit 0
 cd /opt/tbc/tbcreborn
 git fetch -q origin master
-LOCAL=$(git rev-parse HEAD)
+# Compare with the last commit that actually went live, so a failed build is retried on the next run.
+LOCAL=$(cat /opt/tbc/.live-sha 2>/dev/null || echo none)
 REMOTE=$(git rev-parse origin/master)
 if [ "$LOCAL" = "$REMOTE" ] && [ "${1:-}" != "--force" ]; then exit 0; fi
 echo "$(date -Is) deploying $REMOTE"
@@ -31,4 +33,5 @@ fail2ban-client reload >/dev/null 2>&1 || systemctl restart fail2ban || true
 docker image prune -f >/dev/null
 # deploy.sh keeps itself current for the next run
 install -m 0755 /opt/tbc/tbcreborn/deploy/server/deploy.sh /opt/tbc/deploy.sh
+echo "$REMOTE" > /opt/tbc/.live-sha
 echo "$(date -Is) live $REMOTE"
