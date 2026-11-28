@@ -176,23 +176,23 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
               <div className="lg:col-span-4">
                 <h2 id="who-we-are-heading" className="font-display font-bold text-[clamp(26px,3vw,34px)] text-ink leading-[1.2] mb-6">
-                  The Organisation
+                  Who we are.
                 </h2>
                 <hr className="gold-rule" />
               </div>
               <div className="lg:col-span-8 space-y-6">
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                  TBC is a technology consultancy. We sit with every team in the company, from the MD to the interns, hear everyone&apos;s pain points, take every input we can, and fix the processes that cost the business the most time, money or sleep: with process automation, custom software, and full digital transformation. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools, no recurring licence fees, and your proprietary data stays strictly with you.
+                  TBC builds companies their own LLM. We sit with every team in the company, from the MD to the interns, learn where the knowledge lives and where work gets stuck, and turn that into a private language model trained on the company&apos;s own documents, records and know-how. It runs on infrastructure the client controls, it never trains anyone else&apos;s model, and the client owns it.
                 </p>
                 <p className="text-body text-mid-grey leading-relaxed text-pretty">
-                  We also make companies findable in traditional search and in conversational AI answers (SEO, AEO, GEO), for our clients and for ourselves. We build the systems, deploy them, train your staff, and run and maintain them through ongoing SLA support.
+                  On top of that model we build agents and tools that do real work: drafting proposals, answering technical questions, following up orders, checking quality, reporting to leadership. Around it, the same team handles process automation, custom software, digital transformation and search and AI visibility (SEO, AEO, GEO). We build in-house wherever we can, so fewer outside tools touch your data, and we run and maintain what we build.
                 </p>
                 <div className="p-6 bg-white border-l-4 border-forest rounded-r-[8px] mt-6">
                   <p className="font-display font-bold text-ink text-[18px] mb-2">
                     In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines.
                   </p>
                   <p className="text-[14px] text-mid-grey">
-                    We achieve this through rigorous process mapping, removing spreadsheet bottlenecks, and applying targeted machine intelligence to routine administrative work.
+                    We achieve this by mapping the real process, removing spreadsheet bottlenecks, and putting a company&apos;s own model and agents on the routine work.
                   </p>
                 </div>
               </div>
