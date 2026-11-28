@@ -39,6 +39,12 @@ line "deploy (takes a few minutes)"
 if /opt/tbc/deploy.sh --force >> logs/deploy.log 2>&1; then echo "DEPLOY OK: $(tail -1 logs/deploy.log)"; else
   echo "DEPLOY FAILED. Last 40 lines:"; tail -n 40 logs/deploy.log; fi
 
+line "disk clean-up"
+docker rmi -f instrumentisto/nmap drwetter/testssl.sh projectdiscovery/nuclei:latest ghcr.io/zaproxy/zaproxy:stable >/dev/null 2>&1 || true
+docker builder prune -f --keep-storage 4GB 2>/dev/null | tail -1
+docker image prune -f 2>/dev/null | tail -1
+docker system df
+
 line "status"
 curl -s -o /dev/null -w "site via localhost: %{http_code}\n" http://127.0.0.1:3000/
 curl -s --resolve turbobytesconsulting.com:443:127.0.0.1 https://turbobytesconsulting.com/ | grep -q "General AI knows the internet" && echo "new homepage: LIVE" || echo "new homepage: NOT live"

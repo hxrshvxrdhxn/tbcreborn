@@ -35,6 +35,8 @@ docker compose up -d
 docker compose exec -T caddy caddy reload --config /etc/caddy/Caddyfile >/dev/null 2>&1 || true
 fail2ban-client reload >/dev/null 2>&1 || systemctl restart fail2ban || true
 docker image prune -f >/dev/null
+# Build cache grows with every deploy; keep only the most recent 4 GB.
+docker builder prune -f --keep-storage 4GB >/dev/null 2>&1 || true
 # deploy.sh keeps itself current for the next run
 install -m 0755 /opt/tbc/tbcreborn/deploy/server/deploy.sh /opt/tbc/deploy.sh
 echo "$REMOTE" > /opt/tbc/.live-sha

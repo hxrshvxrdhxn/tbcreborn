@@ -25,3 +25,5 @@ grep -E '^(WARN-NEW|FAIL-NEW)' "$OUT/zap.txt" || true
 grep -E '^FAIL-NEW|^WARN-NEW|^PASS' "$OUT/zap.txt" | awk '{print $1}' | sort | uniq -c
 echo
 echo "Full reports in $OUT"
+# The scanner images are large (ZAP alone is ~2 GB); remove them until the next scan.
+docker rmi -f instrumentisto/nmap drwetter/testssl.sh projectdiscovery/nuclei:latest ghcr.io/zaproxy/zaproxy:stable >/dev/null 2>&1 || true
