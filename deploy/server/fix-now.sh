@@ -41,7 +41,7 @@ if /opt/tbc/deploy.sh --force >> logs/deploy.log 2>&1; then echo "DEPLOY OK: $(t
 
 line "status"
 curl -s -o /dev/null -w "site via localhost: %{http_code}\n" http://127.0.0.1:3000/
-curl -s https://turbobytesconsulting.com/ | grep -q "General AI knows the internet" && echo "new homepage: LIVE" || echo "new homepage: NOT live"
+curl -s --resolve turbobytesconsulting.com:443:127.0.0.1 https://turbobytesconsulting.com/ | grep -q "General AI knows the internet" && echo "new homepage: LIVE" || echo "new homepage: NOT live"
 fail2ban-client status | tail -1
 env-status 2>/dev/null | grep -E "SESSION|SMTP|ADMIN" || true
 grep -qE '^SESSION_SECRET=.+' site.env && echo "SESSION_SECRET            set"
