@@ -2,61 +2,104 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroLines from "@/components/HeroLines";
 import YouTubeLite from "@/components/YouTubeLite";
-import { ProcessToday, ProcessWithSoftware, BothHalves } from "@/components/Illustrations";
+import LlmFlowDiagram from "@/components/LlmFlowDiagram";
+
+const TITLE = "Your Own Private LLM, Built on Your Company Data | Turbo Bytes Consulting";
+const DESCRIPTION =
+  "We train your company its own LLM on your documents, emails, orders and know-how, then build agents and automations that do real work for every team. Private, and owned by you.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
-  description:
-    "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility.",
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   alternates: { canonical: "/" },
   openGraph: {
-    title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
-    description:
-      "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility.",
+    title: { absolute: TITLE },
+    description: DESCRIPTION,
     url: "https://turbobytesconsulting.com",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "Technology Consulting & Process Automation | Turbo Bytes Consulting" },
-    description:
-      "Technology consultancy for mid-market and founder-led firms.",
+    title: { absolute: TITLE },
+    description: DESCRIPTION,
   },
 };
 
 const faqs = [
   {
-    question: "What does Turbo Bytes Consulting do?",
-    answer: "We are a technology consultancy. We sit with every team in the company, from the MD to the interns, hear everyone's pain points and take every input we can, then fix the processes that cost the most: through process automation, custom software, and full digital transformation. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools, no recurring licence fees, and client data stays strictly with you. We also build search and AI answer visibility (AEO, SEO, GEO) for clients.",
+    question: "What does \"your own LLM\" mean?",
+    answer:
+      "An LLM (large language model) is the kind of model behind ChatGPT. We set one up for your company alone: it learns from your documents, emails, orders, proposals and procedures, and it runs on a server you own or a private cloud account in your name. Your team asks it questions in plain language and gets answers from your own knowledge, with the source shown.",
   },
   {
-    question: "What is your approach to digital transformation?",
-    answer: "We run digital transformation end-to-end across five clear phases: Diagnose, Design, Build, Run, and Hand over. We do not stop at advisory slide decks; we engineer the systems, train your operators, and stay through ongoing maintenance.",
+    question: "Is our data safe? Will it train ChatGPT or anyone else's model?",
+    answer:
+      "No. Your data stays on infrastructure you control and is never used to train a public model or another client's model. Access is set by role, every answer shows where it came from, and you can export or delete everything at any time. We build in-house wherever we can, so fewer outside tools ever touch your data.",
   },
   {
-    question: "What are AEO and GEO, and why do they matter now?",
-    answer: "SEO ranks websites in traditional search engines. AEO (Answer Engine Optimisation) ensures your brand is the direct answer for featured snippets and voice search. GEO (Generative Engine Optimisation) ensures your company is cited and recommended when buyers ask ChatGPT, Gemini, Perplexity, Copilot, or Google AI Overviews.",
+    question: "What data do we need to start?",
+    answer:
+      "Whatever your teams already use: shared drives, PDFs and manuals, emails, spreadsheets, ERP or Tally exports, past proposals and SOPs. We sit with every team, from the MD to the interns, to find where the useful knowledge lives, then clean and organise it before anything is trained.",
   },
   {
-    question: "Who maintains the software and systems once launched?",
-    answer: "We do. Ongoing maintenance, monitoring, feature adaptation, and operational support are managed under our SLA agreements, so your business always has dedicated engineers to support and evolve your systems.",
+    question: "How long does it take?",
+    answer:
+      "We start with a pilot on one team's knowledge, so you see real answers in weeks rather than months. Once the pilot proves useful, we add more teams and data and build the automations around it.",
+  },
+  {
+    question: "Do we need to buy our own servers or GPUs?",
+    answer:
+      "Not necessarily. We size the setup to your data and usage: it can run on a server you already own, a new one we help you choose, or a private cloud account in your company's name. You own it either way.",
+  },
+  {
+    question: "What happens after launch?",
+    answer:
+      "We stay. We monitor answer quality, add new data as your business changes, build further automations and tools on top, and support your team, so the model keeps getting more useful.",
   },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faqs.map(faq => ({
+  mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer
-    }
-  }))
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
 };
 
 export const revalidate = 300;
+
+const TEAMS = [
+  { team: "Sales", text: "Draft quotes and proposals from your past winning ones, and answer product questions instantly." },
+  { team: "Operations", text: "Ask where an order stands or how a procedure works, and get the answer from your own records." },
+  { team: "Quality", text: "Check results against your specifications and pull audit evidence in minutes." },
+  { team: "Finance", text: "Answer invoice and payment queries and draft collection follow-ups from real ledger data." },
+  { team: "People & onboarding", text: "New joiners learn from the company's own knowledge instead of waiting for a senior colleague." },
+  { team: "Leadership", text: "Get the weekly picture drafted from live data, with every figure traceable to its source." },
+];
+
+const TRUST = [
+  { title: "Runs where you choose", text: "On a server you own or a private cloud account in your name." },
+  { title: "Never trains anyone else", text: "Your data is not used for public models or for other clients." },
+  { title: "Shows its source", text: "Every answer links to the document or record it came from, and access follows each person's role." },
+  { title: "Yours to keep", text: "Built in-house with few outside dependencies. Export or delete everything at any time." },
+];
+
+const STEPS = [
+  { step: "01", title: "Listen to every team", text: "From the MD to the interns: where knowledge lives and where work gets stuck." },
+  { step: "02", title: "Gather your data", text: "Collect, clean and organise documents, emails, records and history." },
+  { step: "03", title: "Build your LLM", text: "Train and ground the model on your data, then test it against real questions." },
+  { step: "04", title: "Build agents and tools", text: "Agents that do real work, plus the workflows and tools each team needs." },
+  { step: "05", title: "Run and improve", text: "Deploy, measure the results and keep teaching the model as your business changes." },
+];
+
+const ALSO = [
+  { href: "/services/business-automation", title: "Process automation", text: "Automate the handovers and manual entry that slow every team down." },
+  { href: "/services/custom-software-development", title: "Custom software", text: "Software built in-house around exactly how your business works." },
+  { href: "/services/aeo-seo-geo", title: "AEO, SEO & GEO", text: "Be found on Google and named in ChatGPT, Gemini and Perplexity answers." },
+  { href: "/digital-transformation", title: "Digital transformation", text: "End-to-end modernisation, from diagnosis to running systems and trained teams." },
+];
 
 export default function HomePage() {
   return (
@@ -77,270 +120,148 @@ export default function HomePage() {
               The intelligence layer your business has been missing.
             </h1>
             <p className="font-sans text-[18px] text-mid-grey leading-relaxed mb-10 hero-3 text-pretty">
-              We sit with every team in your company, from the MD to the interns,
-              learn where work gets stuck, and fix it: with process automation,
-              custom software and full digital transformation.
+              We train your company its own LLM on your documents, emails, orders
+              and know-how, then build agents that do real work for every team.
+              It runs on infrastructure you control, and you own all of it.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 hero-4">
               <Link href="/book-consultation" prefetch={false} className="btn-primary min-h-[48px] px-8 text-center flex items-center justify-center text-[16px] shadow-sm">
-                Book a consultation
+                Book an LLM readiness call
               </Link>
-              <Link href="/services" prefetch={false} className="inline-flex items-center justify-center min-h-[48px] px-6 text-[15px] font-display font-semibold text-white/90 hover:text-white transition-colors gap-2">
-                Explore our advisory <span aria-hidden="true">&rarr;</span>
+              <Link href="/services/custom-llm" prefetch={false} className="inline-flex items-center justify-center min-h-[48px] px-6 text-[15px] font-display font-semibold text-white/90 hover:text-white transition-colors gap-2">
+                See how it works <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── 2. FOUR OFFER CARDS ── */}
-      <section className="bg-white py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="offer-heading">
-        <div className="container-tbc">
-          <div className="max-w-2xl mb-10">
-            <hr className="gold-rule mb-4" />
-            <h2 id="offer-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-3">
-              What we do.
-            </h2>
-            <p className="text-body text-mid-grey text-pretty">
-              Four focused practices designed to eliminate operational friction and make your business findable.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Offer 1 */}
-            <Link
-              href="/services/technology-consulting"
-              prefetch={false}
-              className="group bg-ivory border border-light-grey rounded-[8px] p-6 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest mb-4 group-hover:bg-forest group-hover:text-white transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2v-.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                  </svg>
-                </div>
-                <h3 className="font-display font-bold text-[18px] text-ink mb-2">
-                  Consulting & Automation
-                </h3>
-                <p className="text-[14px] text-mid-grey leading-relaxed">
-                  We diagnose the processes costing your business the most and automate the handoffs.
-                </p>
-              </div>
-              <span className="text-[13px] font-semibold text-royal mt-6 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                Explore consulting &rarr;
-              </span>
-            </Link>
-
-            {/* Offer 2 */}
-            <Link
-              href="/services/custom-software-development"
-              prefetch={false}
-              className="group bg-ivory border border-light-grey rounded-[8px] p-6 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest mb-4 group-hover:bg-forest group-hover:text-white transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                  </svg>
-                </div>
-                <h3 className="font-display font-bold text-[18px] text-ink mb-2">
-                  Custom Software
-                </h3>
-                <p className="text-[14px] text-mid-grey leading-relaxed">
-                  Software, automated processes and models built in-house around how your business works, with fewer outside dependencies.
-                </p>
-              </div>
-              <span className="text-[13px] font-semibold text-royal mt-6 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                Explore software &rarr;
-              </span>
-            </Link>
-
-            {/* Offer 3 */}
-            <Link
-              href="/services/aeo-seo-geo"
-              prefetch={false}
-              className="group bg-ivory border border-light-grey rounded-[8px] p-6 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest mb-4 group-hover:bg-forest group-hover:text-white transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="11" cy="11" r="8" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    <path d="M11 8v6M8 11h6" />
-                  </svg>
-                </div>
-                <h3 className="font-display font-bold text-[18px] text-ink mb-2">
-                  AEO, SEO & GEO
-                </h3>
-                <p className="text-[14px] text-mid-grey leading-relaxed">
-                  Be found on Google and cited in AI answers across ChatGPT, Gemini, and Perplexity.
-                </p>
-              </div>
-              <span className="text-[13px] font-semibold text-royal mt-6 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                Explore search & AI &rarr;
-              </span>
-            </Link>
-
-            {/* Offer 4 */}
-            <Link
-              href="/digital-transformation"
-              prefetch={false}
-              className="group bg-ivory border border-light-grey rounded-[8px] p-6 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest mb-4 group-hover:bg-forest group-hover:text-white transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 20V10M12 20V4M6 20v-6" />
-                  </svg>
-                </div>
-                <h3 className="font-display font-bold text-[18px] text-ink mb-2">
-                  Digital Transformation
-                </h3>
-                <p className="text-[14px] text-mid-grey leading-relaxed">
-                  End-to-end modernisation from initial diagnostic to running systems and trained teams.
-                </p>
-              </div>
-              <span className="text-[13px] font-semibold text-royal mt-6 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                Explore transformation &rarr;
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 3. HOW WE WORK FLOW DIAGRAM ── */}
-      <section className="bg-ivory py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="how-we-work-heading">
+      {/* ── 1b. GENERAL AI VS YOUR OWN ── */}
+      <section className="bg-white pt-s6 md:pt-s7 pb-2" aria-labelledby="why-own-heading">
         <div className="container-tbc">
           <div className="max-w-2xl mb-8">
             <hr className="gold-rule mb-4" />
-            <h2 id="how-we-work-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-3">
-              How we work.
+            <h2 id="why-own-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-3 text-balance">
+              General AI knows the internet. Yours should know your company.
             </h2>
             <p className="text-body text-mid-grey text-pretty">
-              A structured four-step path from operational discovery to running systems.
+              Public chatbots give every business the same generic answers. The advantage comes from a model that has learned how your company actually works.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="rounded-[8px] border border-light-grey bg-ivory p-6">
+              <h3 className="font-display font-bold text-[17px] text-ink mb-3">A general chatbot</h3>
+              <ul className="space-y-2 text-[14px] text-mid-grey leading-relaxed list-disc pl-5">
+                <li>Knows nothing about your products, prices, customers or procedures</li>
+                <li>Your staff paste company data into someone else&apos;s service</li>
+                <li>Gives confident answers with no source you can check</li>
+                <li>Same tool your competitors use, so no edge</li>
+              </ul>
+            </div>
+            <div className="rounded-[8px] border border-forest bg-forest p-6">
+              <h3 className="font-display font-bold text-[17px] text-white mb-3">Your own LLM and agents</h3>
+              <ul className="space-y-2 text-[14px] text-white/85 leading-relaxed list-disc pl-5">
+                <li>Trained on your documents, records and the way your teams work</li>
+                <li>Runs on infrastructure you control; your data never leaves</li>
+                <li>Shows the document or record behind every answer</li>
+                <li>Agents that do real work, owned by you and improving over time</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2. YOUR OWN LLM IN THREE STEPS ── */}
+      <section id="how-it-works" className="bg-white py-s6 md:py-s7 border-b border-light-grey scroll-mt-24" aria-labelledby="llm-heading">
+        <div className="container-tbc">
+          <div className="max-w-2xl mb-8">
+            <hr className="gold-rule mb-4" />
+            <h2 id="llm-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-3 text-balance">
+              Your own LLM, in three steps.
+            </h2>
+            <p className="text-body text-mid-grey text-pretty">
+              The same kind of model that powers ChatGPT, set up for your company alone and taught by your own data.
             </p>
           </div>
 
-          {/* Responsive SVG Flow Diagram */}
-          <div className="bg-white border border-light-grey rounded-[8px] p-6 md:p-8 shadow-sm mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
-              {[
-                { step: "01", title: "Listen to everyone", text: "Hear the pain points of every team, from leadership to the interns." },
-                { step: "02", title: "Map the processes", text: "Record how work really moves: every step, handover, exception and spreadsheet." },
-                { step: "03", title: "Build in-house", text: "Engineer software, automations and models in-house around how your business works, reducing outside dependencies." },
-                { step: "04", title: "Run and maintain", text: "Deploy to production, onboard your operators, and support the systems long term." },
-              ].map((s, idx) => (
-                <div key={idx} className="relative flex flex-col justify-between p-4 rounded-[6px] bg-ivory/60 border border-light-grey/80">
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="font-mono text-[13px] font-bold text-forest bg-forest/10 px-2 py-0.5 rounded">
-                        {s.step}
-                      </span>
-                      {idx < 3 && (
-                        <span className="hidden md:inline-block text-forest/40 text-[18px]" aria-hidden="true">
-                          &rarr;
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="font-display font-bold text-[16px] text-ink mb-1.5">
-                      {s.title}
-                    </h3>
-                    <p className="text-[13px] text-mid-grey leading-relaxed">
-                      {s.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Folded detail accordion */}
-          <details className="group bg-white border border-light-grey rounded-[8px] p-5 transition-all text-body">
-            <summary className="font-display font-semibold text-[15px] text-ink cursor-pointer list-none flex items-center justify-between">
-              <span>Read more about our delivery methodology</span>
-              <span className="text-mid-grey text-[18px] transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <div className="mt-4 pt-4 border-t border-light-grey text-[14px] text-mid-grey space-y-4">
-              <p>
-                A traditional consultancy delivers a slide deck and leaves implementation to third parties. A software house builds whatever you specify without assessing whether the underlying process is flawed. We do both: we sit with every team, from the MD to the interns, hear everyone&apos;s pain points and take every input we can to measure the true cost of operational friction, engineer software and models in-house around how your business works, and stay through live production operations. Building in-house cuts outside dependencies so fewer third-party tools are needed and your data stays with you.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-                <figure>
-                  <ProcessToday />
-                  <figcaption className="mt-2 text-[13px] text-mid-grey"><strong>Today:</strong> Work waits on calls, sheets and single-person choke points.</figcaption>
-                </figure>
-                <figure>
-                  <ProcessWithSoftware />
-                  <figcaption className="mt-2 text-[13px] text-mid-grey"><strong>With TBC:</strong> Handoffs trigger automatically with complete management visibility.</figcaption>
-                </figure>
-              </div>
-            </div>
-          </details>
+          <LlmFlowDiagram />
         </div>
       </section>
 
-      {/* ── 4. CONSULTING THAT DELIVERS ── */}
-      <section className="bg-white py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="consulting-heading">
+      {/* ── 3. WHAT IT DOES FOR EACH TEAM ── */}
+      <section className="bg-ivory py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="teams-heading">
         <div className="container-tbc">
-          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-center">
-            <div>
-              <hr className="gold-rule mb-4" />
-              <h2 id="consulting-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-4 text-balance">
-                Consulting that ends in working software, not a slide deck.
-              </h2>
-              <p className="text-body text-mid-grey leading-relaxed mb-6 text-pretty">
-                See how we work with whole teams, diagnose operations and build software and automations in-house around how your business works — reducing outside dependencies so your data stays with you.
-              </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <Link prefetch={false} href="/about" className="text-[15px] font-semibold text-royal hover:underline inline-flex items-center gap-1.5">
-                  About our organisation &rarr;
-                </Link>
-                <Link prefetch={false} href="/book-consultation" className="btn-gold min-h-[44px] px-6 text-[15px]">
-                  Book a consultation
-                </Link>
-              </div>
-            </div>
+          <div className="max-w-2xl mb-8">
+            <hr className="gold-rule mb-4" />
+            <h2 id="teams-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-3 text-balance">
+              What it does for each team.
+            </h2>
+            <p className="text-body text-mid-grey text-pretty">
+              One model that knows your business, answering every department in plain language.
+            </p>
+          </div>
 
-            <div className="w-full flex items-center justify-center p-6 bg-ivory rounded-[8px] border border-light-grey">
-              <BothHalves />
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {TEAMS.map((t) => (
+              <div key={t.team} className="bg-white border border-light-grey rounded-[8px] p-5">
+                <h3 className="font-display font-bold text-[17px] text-ink mb-1.5">{t.team}</h3>
+                <p className="text-[14px] text-mid-grey leading-relaxed">{t.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── 5. PRODUCT STRIP (Distil, Sunscout, Meridian + Shorts) ── */}
-      <section className="bg-ivory py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="products-heading">
+      {/* ── 4. YOUR DATA STAYS YOURS ── */}
+      <section className="bg-forest py-s6 md:py-s7" aria-labelledby="trust-heading">
+        <div className="container-tbc">
+          <div className="max-w-2xl mb-8">
+            <hr className="gold-rule mb-4" />
+            <h2 id="trust-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-white leading-[1.2] mb-3 text-balance">
+              Your data stays yours.
+            </h2>
+            <p className="text-body text-white/80 text-pretty">
+              A private model is only worth having if it stays private. These are the rules every build follows.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {TRUST.map((t) => (
+              <div key={t.title} className="rounded-[8px] border border-white/20 bg-white/5 p-5">
+                <h3 className="font-display font-bold text-[16px] text-white mb-1.5">{t.title}</h3>
+                <p className="text-[14px] text-white/75 leading-relaxed">{t.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. TOOLS WE BUILD ON TOP ── */}
+      <section className="bg-white py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="tools-heading">
         <div className="container-tbc">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-            <div>
+            <div className="max-w-2xl">
               <hr className="gold-rule mb-4" />
-              <h2 id="products-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-2">
-                Proof that we ship.
+              <h2 id="tools-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-3 text-balance">
+                Then we build agents and tools around it.
               </h2>
               <p className="text-body text-mid-grey text-pretty">
-                Focused operational software built for real client workflows, available as standalone tools or unified within Meridian.
+                Once the model knows your business, we build agents that take on real work, plus the tools and workflows each team needs. These are some we have already shipped.
               </p>
             </div>
             <Link prefetch={false} href="/products" className="text-[15px] font-semibold text-royal hover:underline shrink-0">
-              View all 10 products &rarr;
+              See all our tools &rarr;
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            {/* Distil */}
-            <div className="bg-white border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-ivory border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
               <div>
-                <div className="mb-4 aspect-video rounded overflow-hidden bg-ivory border border-light-grey">
-                  <YouTubeLite
-                    id="a2w512JHBOk"
-                    title="Distil commercial proposal engine"
-                  />
+                <div className="mb-4 aspect-video rounded overflow-hidden bg-white border border-light-grey">
+                  <YouTubeLite id="a2w512JHBOk" title="Distil: from client enquiry to full proposal" />
                 </div>
                 <h3 className="font-display font-bold text-[18px] text-ink mb-1">Distil</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
-                  Turn complex technical enquiries into verified proposals and bills of materials in minutes.
+                  Turns a client enquiry into a full techno-commercial proposal from your own approved sections and rates. An engineer reviews every one.
                 </p>
               </div>
               <Link prefetch={false} href="/products/distil" className="text-[14px] font-semibold text-royal hover:underline">
@@ -348,27 +269,24 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Sunscout */}
-            <div className="bg-white border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
+            <div className="bg-ivory border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
               <div>
-                <div className="mb-4 aspect-video rounded overflow-hidden bg-ivory border border-light-grey">
-                  <YouTubeLite
-                    id="EGbDr3hVZso"
-                    title="Sunscout commercial solar intelligence"
-                  />
+                <div className="mb-4 aspect-video rounded overflow-hidden bg-white border border-light-grey flex items-center justify-center">
+                  <div className="w-[120px]">
+                    <YouTubeLite id="AVOYy42CqBk" title="Vantage: every answer, with the page it came from" isShort={true} />
+                  </div>
                 </div>
-                <h3 className="font-display font-bold text-[18px] text-ink mb-1">Sunscout</h3>
+                <h3 className="font-display font-bold text-[18px] text-ink mb-1">Vantage</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
-                  Identify and score commercial factory rooftops for solar EPCs from open satellite data.
+                  Answers technical questions from your own catalogues and manuals, and shows the page each answer came from.
                 </p>
               </div>
-              <Link prefetch={false} href="/products/sunscout" className="text-[14px] font-semibold text-royal hover:underline">
-                Explore Sunscout &rarr;
+              <Link prefetch={false} href="/products/vantage" className="text-[14px] font-semibold text-royal hover:underline">
+                Explore Vantage &rarr;
               </Link>
             </div>
 
-            {/* Meridian */}
-            <div className="bg-white border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
+            <div className="bg-ivory border border-light-grey rounded-[8px] p-5 flex flex-col justify-between">
               <div>
                 <div className="mb-4 aspect-video rounded overflow-hidden bg-forest flex items-center justify-center p-4 border border-light-grey">
                   <svg viewBox="0 0 280 150" className="w-full h-full text-white" aria-hidden="true">
@@ -398,7 +316,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-display font-bold text-[18px] text-ink mb-1">Meridian</h3>
                 <p className="text-[14px] text-mid-grey leading-relaxed mb-4">
-                  One operating system uniting orders, quality certificates and service with an isolated company brain.
+                  One platform where orders, quality and service share a single company brain, private to your business.
                 </p>
               </div>
               <Link prefetch={false} href="/products/meridian" className="text-[14px] font-semibold text-royal hover:underline">
@@ -406,69 +324,85 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-
-          {/* Folded product suite details with Seven tools short */}
-          <details className="group bg-white border border-light-grey rounded-[8px] p-5 transition-all text-body">
-            <summary className="font-display font-semibold text-[15px] text-ink cursor-pointer list-none flex items-center justify-between">
-              <span>View additional operations tools in our suite (Cadence, Assay, Steward & more)</span>
-              <span className="text-mid-grey text-[18px] transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <div className="mt-4 pt-4 border-t border-light-grey grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-6 items-center">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[13px]">
-                <div>
-                  <h4 className="font-bold text-ink">Cadence</h4>
-                  <p className="text-mid-grey">Order-to-dispatch tracking for make-to-order manufacturing.</p>
-                  <Link prefetch={false} href="/products/cadence" className="text-royal font-semibold hover:underline">View &rarr;</Link>
-                </div>
-                <div>
-                  <h4 className="font-bold text-ink">Assay</h4>
-                  <p className="text-mid-grey">Certificate of Analysis (COA) generation and laboratory QA.</p>
-                  <Link prefetch={false} href="/products/assay" className="text-royal font-semibold hover:underline">View &rarr;</Link>
-                </div>
-                <div>
-                  <h4 className="font-bold text-ink">Steward</h4>
-                  <p className="text-mid-grey">Installed base machine tracking, warranty and service tickets.</p>
-                  <Link prefetch={false} href="/products/steward" className="text-royal font-semibold hover:underline">View &rarr;</Link>
-                </div>
-                <div>
-                  <h4 className="font-bold text-ink">Vantage</h4>
-                  <p className="text-mid-grey">Plain-text answers grounded strictly in your own catalogues.</p>
-                  <Link prefetch={false} href="/products/vantage" className="text-royal font-semibold hover:underline">View &rarr;</Link>
-                </div>
-              </div>
-              <div className="w-[180px] mx-auto">
-                <YouTubeLite
-                  id="2Jdxao-PJuE"
-                  title="Seven tools for growing businesses"
-                  isShort={true}
-                />
-              </div>
-            </div>
-          </details>
         </div>
       </section>
 
-      {/* ── 6. FAQS (Folded for SEO/AEO without visual clutter) ── */}
-      <section className="bg-white py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="home-faq-heading">
+      {/* ── 6. HOW WE WORK ── */}
+      <section className="bg-ivory py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="how-we-work-heading">
+        <div className="container-tbc">
+          <div className="max-w-2xl mb-8">
+            <hr className="gold-rule mb-4" />
+            <h2 id="how-we-work-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-3 text-balance">
+              How we work.
+            </h2>
+            <p className="text-body text-mid-grey text-pretty">
+              Five steps from the first conversation to a model your whole company uses.
+            </p>
+          </div>
+
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {STEPS.map((s) => (
+              <li key={s.step} className="bg-white border border-light-grey rounded-[8px] p-4 flex flex-col">
+                <span className="font-mono text-[13px] font-bold text-forest bg-forest/10 px-2 py-0.5 rounded self-start mb-3">{s.step}</span>
+                <h3 className="font-display font-bold text-[16px] text-ink mb-1.5">{s.title}</h3>
+                <p className="text-[13px] text-mid-grey leading-relaxed">{s.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ── 7. ALSO FROM TBC ── */}
+      <section className="bg-white py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="also-heading">
+        <div className="container-tbc">
+          <div className="max-w-2xl mb-8">
+            <hr className="gold-rule mb-4" />
+            <h2 id="also-heading" className="font-display font-bold text-[clamp(26px,2.5vw,34px)] text-ink leading-[1.2] mb-3 text-balance">
+              Also from TBC.
+            </h2>
+            <p className="text-body text-mid-grey text-pretty">
+              The same team, for the rest of your technology.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {ALSO.map((a) => (
+              <Link
+                key={a.href}
+                href={a.href}
+                prefetch={false}
+                className="group bg-ivory border border-light-grey rounded-[8px] p-5 hover:border-forest/40 hover:shadow-card transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <h3 className="font-display font-bold text-[17px] text-ink mb-1.5">{a.title}</h3>
+                  <p className="text-[14px] text-mid-grey leading-relaxed">{a.text}</p>
+                </div>
+                <span className="text-[13px] font-semibold text-royal mt-5 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                  Learn more &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. FAQS ── */}
+      <section className="bg-ivory py-s6 md:py-s7 border-b border-light-grey" aria-labelledby="home-faq-heading">
         <div className="container-tbc max-w-4xl">
           <div className="mb-8">
             <hr className="gold-rule mb-4" />
             <h2 id="home-faq-heading" className="font-display font-bold text-[clamp(24px,2.5vw,32px)] text-ink leading-[1.2] mb-2">
               Frequently asked questions.
             </h2>
-            <p className="text-body text-mid-grey text-pretty">
-              Common questions about our advisory, delivery models, and technology support.
-            </p>
           </div>
-
           <div className="space-y-4">
             {faqs.map((f, i) => (
-              <details key={i} className="group bg-ivory border border-light-grey rounded-[8px] p-5 open:shadow-card transition-all">
-                <summary className="font-display font-bold text-[16px] text-ink cursor-pointer list-none flex items-center justify-between">
+              <details key={i} className="group bg-white border border-light-grey rounded-[8px] p-5 open:shadow-card transition-all">
+                <summary className="font-display font-bold text-[16px] text-ink cursor-pointer list-none flex items-center justify-between gap-4">
                   <span>{f.question}</span>
-                  <span className="text-mid-grey text-[18px] transition-transform group-open:rotate-45">+</span>
+                  <span className="text-mid-grey text-[18px] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
                 </summary>
-                <p className="text-body text-mid-grey leading-relaxed mt-3 pt-3 border-t border-light-grey text-pretty text-[14px]">
+                <p className="text-mid-grey leading-relaxed mt-3 pt-3 border-t border-light-grey text-pretty text-[14px]">
                   {f.answer}
                 </p>
               </details>
@@ -477,19 +411,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 7. CTA BAND ── */}
+      {/* ── 9. CTA BAND ── */}
       <section className="bg-royal py-s7 text-center">
         <div className="container-tbc">
           <hr className="gold-rule gold-rule--center mb-6" />
           <h2 className="font-display font-bold text-[clamp(24px,3vw,36px)] text-white leading-[1.2] mb-3 text-balance">
-            Talk to us about your business.
+            See what your own LLM could answer.
           </h2>
           <p className="text-body text-white/80 mb-8 text-pretty max-w-2xl mx-auto">
-            Book a 30-minute consultation. We will identify which process is costing you the most and outline how to fix it.
+            Book a 30-minute readiness call. We will look at where your company&apos;s knowledge lives and show you what a private model could do with it.
           </p>
           <div className="flex flex-col items-center justify-center gap-3">
             <Link prefetch={false} href="/book-consultation" className="btn-gold min-h-[48px] px-10 text-[16px]">
-              Book a consultation
+              Book an LLM readiness call
             </Link>
             <Link prefetch={false} href="/free-ai-visibility-check" className="text-white/80 hover:text-white text-[14px] underline underline-offset-4 transition-colors">
               Or request a free AI visibility check &rarr;

@@ -12,6 +12,7 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
+  { href: "/services/custom-llm", label: "Your own LLM" },
   { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
   { href: "/services/aeo-seo-geo", label: "AEO & SEO" },
@@ -20,6 +21,12 @@ const navLinks: NavLink[] = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
+
+// The most specific matching link wins, so /services/custom-llm lights up "Your own LLM", not "Services".
+function isActive(pathname: string, href: string) {
+  if (!(pathname === href || pathname.startsWith(href + "/"))) return false;
+  return !navLinks.some((l) => l.href !== href && l.href.startsWith(href + "/") && (pathname === l.href || pathname.startsWith(l.href + "/")));
+}
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
@@ -68,7 +75,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden lg:flex items-center gap-8 h-full">
+          <ul className="hidden lg:flex items-center gap-6 xl:gap-8 h-full">
             {navLinks.map((link) => (
               <li key={link.href} className="relative group h-full flex items-center">
                 <Link
@@ -77,7 +84,7 @@ export default function Navigation() {
                   target={link.target || "_self"}
                   rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                   className={`font-display font-medium text-sm tracking-wide transition-colors duration-150 py-5 ${
-                    pathname.startsWith(link.href)
+                    isActive(pathname, link.href)
                       ? "text-gold"
                       : "text-white hover:text-gold"
                   }`}
@@ -199,7 +206,7 @@ export default function Navigation() {
                 rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                 onClick={() => setOpen(false)}
                 className={`font-display font-medium text-sm py-3 border-b border-white/10 transition-colors ${
-                  pathname.startsWith(link.href) ? "text-gold" : "text-white hover:text-gold"
+                  isActive(pathname, link.href) ? "text-gold" : "text-white hover:text-gold"
                 }`}
               >
                 {link.label}

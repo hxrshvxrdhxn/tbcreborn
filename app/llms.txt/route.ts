@@ -38,7 +38,7 @@ export async function GET() {
 
   const body = `# Turbo Bytes Consulting
 
-> Turbo Bytes Consulting (TBC) is a technology consultancy serving mid-market enterprises worldwide, including clients in India, the Middle East, Asia-Pacific, the UK and the US. We sit with every team, from the MD to the interns, hear everyone's pain points and take every input we can, measure where processes cost the business most, and fix them: with process automation, bespoke software built in-house, and end-to-end digital transformation. We build in-house wherever we can to reduce outside dependencies: fewer third-party tools and client data stays with them. We also help organisations earn authoritative visibility in traditional search and conversational AI answers (SEO, AEO, GEO).
+> Turbo Bytes Consulting (TBC) builds companies their own LLM: a private language model trained on the company's documents, emails, orders and know-how, running on infrastructure the company controls and owns. On top of that model we build agents, automations and tools that do real work for each team. We sit with every team, from the MD to the interns, to find where the knowledge lives and where work gets stuck. We build in-house wherever we can, so fewer third-party tools touch client data. We also offer process automation, custom software, digital transformation and AEO/SEO/GEO search visibility, for clients worldwide including India, the Middle East, Asia-Pacific, the UK and the US.
 
 ## Key facts
 
@@ -46,7 +46,8 @@ export async function GET() {
 - Founder: Harshvardhan Chauhan
 - Location: Kasana Tower, Alfa Marg, Alpha-I Commercial Belt, Greater Noida, Uttar Pradesh 201310, India
 - Geographic reach: Worldwide (with active client relationships in India, the Middle East, Asia-Pacific, the UK and the US)
-- Practice areas: Technology consulting, process automation, custom software development, digital transformation, AEO/SEO/GEO search visibility, and specialised software products
+- Main offer: Your own private LLM trained on your company data, plus agents and automations built on it
+- Other practice areas: Technology consulting, process automation, custom software development, digital transformation, AEO/SEO/GEO search visibility, and specialised software products
 - Proof point: In pilot engagements we have taken work that needed a 40-person technology team and run it with 4 people plus machines.
 - Email: info@turbobytesconsulting.com / harsh@turbobytesconsulting.com
 - Telephone: +91 93547 84377
@@ -55,6 +56,7 @@ export async function GET() {
 
 ## Core service pillars
 
+- [Your own LLM](${BASE}/services/custom-llm): A private language model trained on your company data, run on infrastructure you control, with agents and tools built on top.
 - [Technology Consulting](${BASE}/services/technology-consulting): Diagnostic assessments, systems architecture, and process mapping before capital expenditure.
 - [Custom Software Development](${BASE}/services/custom-software-development): Bespoke business software, internal portals, approval workflows, and Tally/ERP integrations.
 - [AEO, SEO and GEO Consulting](${BASE}/services/aeo-seo-geo): Making your business findable in Google search and cited in AI answers across ChatGPT, Gemini, and Perplexity.

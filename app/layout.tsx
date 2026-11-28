@@ -25,11 +25,11 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Technology Consulting & Process Automation | Turbo Bytes Consulting",
+    default: "Your Own Private LLM, Built on Your Company Data | Turbo Bytes Consulting",
     template: "%s | Turbo Bytes Consulting",
   },
   description:
-    "Technology consultancy for mid-market and founder-led firms: process automation, custom software, digital transformation, and AEO/SEO/GEO visibility. Serving clients worldwide.",
+    "We train your company its own private LLM on your own data, then build the agents, automations and tools around it. Also: custom software, digital transformation and AEO/SEO/GEO. Serving clients worldwide.",
   metadataBase: new URL("https://turbobytesconsulting.com"),
   openGraph: {
     type: "website",
@@ -125,7 +125,7 @@ export default function RootLayout({
                   "@type": ["Organization", "ProfessionalService"],
                   "@id": "https://turbobytesconsulting.com/#organization",
                   "name": "Turbo Bytes Consulting",
-                  "description": "Management and technology consultancy for mid-market firms and enterprises. Process-first consulting, custom software development, business automation, AI systems, and our own proprietary software products.",
+                  "description": "Technology consultancy that builds companies their own private LLM trained on their data, plus the agents, automations and software around it.",
                   "knowsAbout": ["Large language models", "On-premise AI", "AI training", "Technology strategy", "Technology audit", "AI readiness", "Business process improvement", "Custom software"],
                   "url": "https://turbobytesconsulting.com",
                   "logo": "https://turbobytesconsulting.com/logo-square.png",

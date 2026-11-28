@@ -11,12 +11,12 @@ const SOCIAL_ICONS: Record<string, string> = {
 };
 
 const serviceLinks = [
+  { href: "/services/custom-llm", label: "Your own LLM" },
   { href: "/services/business-automation", label: "Business automation" },
   { href: "/services/custom-software-development", label: "Custom software" },
   { href: "/services/aeo-seo-geo", label: "AEO, SEO & GEO" },
   { href: "/digital-transformation", label: "Digital transformation" },
   { href: "/services/technology-consulting", label: "Technology consulting" },
-  { href: "/services/custom-llm", label: "Private LLM" },
   { href: "/services/ai-training", label: "AI capability building" },
   { href: "/services", label: "All services" },
 ];
