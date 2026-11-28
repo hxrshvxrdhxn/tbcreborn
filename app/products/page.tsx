@@ -313,7 +313,7 @@ export default function ProductsPage() {
             Products we build and run.
           </h1>
           <p className="text-[19px] text-white/80 leading-relaxed max-w-2xl text-pretty mb-8">
-            Alongside advisory work, we build purpose-engineered products. Each system originated from a real operational problem inside a growing business.
+            Tools that run on your own LLM. Each one started as a real problem inside a growing business, and each can work alone or share one private model of your company.
           </p>
           <nav aria-label="Products" className="flex flex-wrap gap-2.5">
             {PRODUCTS.map((p) => (

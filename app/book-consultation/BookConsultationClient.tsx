@@ -34,10 +34,10 @@ export default function BookConsultationClient() {
         <div className="container-tbc">
           <hr className="gold-rule mb-6" />
           <h1 className="font-display font-bold text-white text-[clamp(32px,4.5vw,48px)] leading-[1.15] tracking-[-0.5px] max-w-3xl mb-5">
-            Request a consultation.
+            Book a readiness call.
           </h1>
           <p className="font-sans text-[17px] text-white/70 leading-relaxed max-w-2xl">
-            A focused 30-minute conversation about your software, automation or AI plans. We respond within one business day.
+            A focused 30-minute conversation about your own LLM, the agents and automation you could build on it, or any other software plans. We respond within one business day.
           </p>
         </div>
       </section>

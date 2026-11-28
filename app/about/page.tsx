@@ -160,10 +160,10 @@ export default function AboutPage() {
           <Reveal>
             <hr className="gold-rule mb-6" />
             <h1 className="font-display font-bold text-[clamp(32px,4.5vw,52px)] text-white leading-[1.1] tracking-[-0.5px] max-w-4xl mb-6 text-balance">
-              We sit with every team, from the MD to the interns, measure what processes cost, fix them, and run them.
+              We build companies their own LLM, and the agents and tools that run on it.
             </h1>
             <p className="text-[clamp(17px,1.2vw,20px)] text-white/80 leading-relaxed max-w-2xl text-pretty">
-              Turbo Bytes Consulting is a technology consultancy serving growing mid-market enterprises, with clients in India, the Middle East, Asia-Pacific, the UK and the US.
+              We sit with every team, from the MD to the interns, learn how the company really works, and turn that knowledge into a private model your business owns. Clients in India, the Middle East, Asia-Pacific, the UK and the US.
             </p>
           </Reveal>
         </div>

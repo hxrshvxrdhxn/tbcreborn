@@ -20,6 +20,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const needOptions = [
+  "Your own LLM and agents",
   "Custom software",
   "Mobile app",
   "AI application",

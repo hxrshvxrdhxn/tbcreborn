@@ -7,52 +7,59 @@ import MethodFlowDiagram from "@/components/MethodFlowDiagram";
 import BeforeAfterComparison from "@/components/BeforeAfterComparison";
 
 export const metadata: Metadata = {
-  title: { absolute: "Consulting Services & Solutions | Turbo Bytes Consulting" },
+  title: { absolute: "Services: Your Own LLM, Agents and Automation | Turbo Bytes Consulting" },
   description:
-    "Technology consulting, process automation, custom software development, digital transformation, and AEO/SEO/GEO visibility for mid-market and enterprise firms.",
+    "Your own private LLM trained on your company data, with agents and automations built on it. Also process automation, custom software, digital transformation and AEO/SEO/GEO.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: { absolute: "Consulting Services & Solutions | Turbo Bytes Consulting" },
+    title: { absolute: "Services: Your Own LLM, Agents and Automation | Turbo Bytes Consulting" },
     description:
-      "Technology consulting, process automation, custom software development, digital transformation, and AEO/SEO/GEO visibility for mid-market and enterprise firms.",
+      "Your own private LLM trained on your company data, with agents and automations built on it. Also process automation, custom software, digital transformation and AEO/SEO/GEO.",
     url: "https://turbobytesconsulting.com/services",
     images: [{ url: "/img/og-default.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: { absolute: "Consulting Services & Solutions | Turbo Bytes Consulting" },
+    title: { absolute: "Services: Your Own LLM, Agents and Automation | Turbo Bytes Consulting" },
     description:
-      "Technology consulting, process automation, custom software development, digital transformation, and AEO/SEO/GEO visibility.",
+      "Your own private LLM trained on your company data, plus agents, automation, custom software and AEO/SEO/GEO.",
   },
 };
 
 const servicePillars = [
   {
     number: "01",
-    heading: "Technology Consulting & Process Automation",
+    heading: "Your own LLM and the agents built on it",
+    lead: "Our main offer. We train your company its own private language model on your documents, emails, orders and know-how, run it on infrastructure you control, and build agents that do real work for every team.",
+    items: [
+      { title: "Your own LLM", href: "/services/custom-llm", blurb: "A private model trained on your company data, running where you choose, owned by you." },
+      { title: "AI agents and applications", href: "/services/ai-applications", blurb: "Agents that draft, check, follow up and report, built on your own model and supervised by your team." },
+      { title: "AI readiness assessment", href: "/services/ai-readiness-assessment", blurb: "Find where your data is ready and where a private model will pay off first." },
+      { title: "AI capability building", href: "/services/ai-training", blurb: "Teach your teams to use and improve their own model in daily work." },
+    ],
+  },
+  {
+    number: "02",
+    heading: "Technology consulting and process automation",
     lead: "We sit with every team, from the MD to the interns, hear everyone's pain points, take every input we can, and eliminate operational bottlenecks through disciplined automation.",
     items: [
       { title: "Business process automation", href: "/services/business-automation", blurb: "Automate manual entry, approvals, and handoffs between teams and systems." },
       { title: "Technology strategy & advisory", href: "/services/technology-consulting", blurb: "Independent roadmaps, build-or-buy decisions, and systems evaluation." },
       { title: "Technology and systems audit", href: "/services/technology-audit", blurb: "Code quality, data flows, security access, and cloud cost optimisation." },
-      { title: "AI readiness assessment", href: "/services/ai-readiness-assessment", blurb: "Find where machine intelligence delivers genuine operational ROI." },
       { title: "Business diagnostic", href: "/services/business-diagnostic", blurb: "Structured operational reviews that uncover decision bottlenecks." },
     ],
   },
   {
-    number: "02",
-    heading: "Custom Software for Any Specific Need",
+    number: "03",
+    heading: "Custom software for any specific need",
     lead: "We build software, automated processes, and models in-house around how your business works — reducing outside dependencies so your data stays with you.",
     items: [
       { title: "Custom software development", href: "/services/custom-software-development", blurb: "Dedicated internal web platforms, mobile dispatch tools, and tailored systems." },
-      { title: "Custom LLM & on-premise AI", href: "/services/custom-llm", blurb: "Private models trained on company documents with zero data leakage." },
-      { title: "AI capability building", href: "/services/ai-training", blurb: "Workforce training programmes that teach teams to apply AI in daily operations." },
-      { title: "AI applications & agents", href: "/services/ai-applications", blurb: "Document processing, intelligent triage, and human-supervised operational agents." },
     ],
   },
   {
-    number: "03",
-    heading: "AEO, SEO & GEO Readiness",
+    number: "04",
+    heading: "AEO, SEO and GEO readiness",
     lead: "Ensure your company is found, cited, and recommended across classical search engines, voice assistants, and generative AI models.",
     items: [
       { title: "AEO, SEO & GEO readiness", href: "/services/aeo-seo-geo", blurb: "Being named and cited by Google, ChatGPT, Gemini, Perplexity and Copilot." },
@@ -63,16 +70,16 @@ const servicePillars = [
     ],
   },
   {
-    number: "04",
-    heading: "Digital Transformation",
+    number: "05",
+    heading: "Digital transformation",
     lead: "End-to-end transformation from diagnostic to running systems and trained teams. Five disciplined phases with clear deliverables.",
     items: [
       { title: "Full digital transformation programme", href: "/digital-transformation", blurb: "Diagnose, Design, Build, Run, and Hand over with ongoing SLA maintenance." },
     ],
   },
   {
-    number: "05",
-    heading: "Software Products",
+    number: "06",
+    heading: "Software products",
     lead: "Products are proof that we ship. Alongside advisory, we build and run dedicated software platforms for commercial operations.",
     items: [
       { title: "Distil", href: "/products/distil", blurb: "Complex proposal engine assembling verified quotes for engineering firms." },
@@ -110,7 +117,7 @@ const schema = {
       "@id": "https://turbobytesconsulting.com/services#webpage",
       url: "https://turbobytesconsulting.com/services",
       name: "Consulting Services and Technology Capabilities | Turbo Bytes Consulting",
-      description: "Technology consulting, process automation, custom software development, digital transformation, and AEO/SEO/GEO visibility.",
+      description: "Your own private LLM trained on your company data, plus agents, automation, custom software and AEO/SEO/GEO.",
       publisher: { "@id": "https://turbobytesconsulting.com/#organization" },
     },
     {
@@ -143,7 +150,9 @@ export default function ServicesPage() {
             How we work with you.
           </h1>
           <p className="text-body text-white/75 leading-relaxed max-w-2xl text-pretty">
-            Five core offers: technology consulting and process automation, custom software built in-house around your business, search and AI visibility (AEO/SEO/GEO), full digital transformation, and dedicated software products.
+            Our main offer is your own LLM: a private model trained on your company&apos;s data, with agents and tools built on it.
+            Around it, the same team handles process automation, custom software, search and AI visibility (AEO/SEO/GEO),
+            digital transformation and our own software products.
           </p>
         </div>
       </section>
@@ -152,7 +161,7 @@ export default function ServicesPage() {
       <section className="bg-ivory py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <MethodFlowDiagram
-            title="The Engineering Method"
+            title="Our method"
             subtitle="Four disciplined stages connecting diagnosis directly to deployed software."
           />
         </div>
@@ -162,7 +171,7 @@ export default function ServicesPage() {
       <section className="bg-white py-s7 border-b border-light-grey">
         <div className="container-tbc">
           <BeforeAfterComparison
-            title="Operational Delivery: Today vs With TBC"
+            title="Today, and with TBC"
             subtitle="Why founder-led firms move away from fragmented spreadsheets and opaque agency advice."
             beforeTitle="Today (Common friction)"
             beforeItems={[
